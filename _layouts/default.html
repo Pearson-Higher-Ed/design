@@ -71,8 +71,20 @@
 					<a href="{{ site.baseurl }}/docs/ui-components">UI Components</a>
 					{% if page.section == 'UI Components' %}
 					<ul class="o-techdocs-nav o-techdocs-nav--sub">
-						<li{% if page.title == 'Application Header' %} aria-selected="true"{% endif %}>
-							<a href="{{ site.baseurl }}/docs/ui-components/application-header">Application Header</a>
+						<li{% if page.title == 'Buttons' %} aria-selected="true"{% endif %}>
+							<a href="{{ site.baseurl }}/docs/ui-components/buttons">Buttons</a>
+						</li>
+						<li{% if page.title == 'Forms' %} aria-selected="true"{% endif %}>
+							<a href="{{ site.baseurl }}/docs/ui-components/forms">Forms</a>
+						</li>
+						<li{% if page.title == 'Navigation' %} aria-selected="true"{% endif %}>
+							<a href="{{ site.baseurl }}/docs/ui-components/navigation">Navigation</a>
+						</li>
+						<li{% if page.title == 'Progress Indicators' %} aria-selected="true"{% endif %}>
+							<a href="{{ site.baseurl }}/docs/ui-components/progress-indicators">Progress indicators</a>
+						</li>
+						<li{% if page.title == 'Side Drawer' %} aria-selected="true"{% endif %}>
+							<a href="{{ site.baseurl }}/docs/ui-components/side-drawer">Side drawer</a>
 						</li>
 					</ul>
 					{% endif %}
@@ -83,6 +95,9 @@
 					<a href="{{ site.baseurl }}/docs/patterns">Patterns</a>
 					{% if page.section == 'Patterns' %}
 					<ul class="o-techdocs-nav o-techdocs-nav--sub">
+						<li{% if page.title == 'Search' %} aria-selected="true"{% endif %}>
+							<a href="{{ site.baseurl }}/docs/patterns/search">Search</a>
+						</li>
 					</ul>
 					{% endif %}
 				</li>
