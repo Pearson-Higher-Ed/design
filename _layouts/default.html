@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html class="core">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>{{ page.title }} - {{ site.name }}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="/img/origami-logo.png" type="image/x-icon" />
+
+	<link rel="stylesheet" href="//build.origami.ft.com/bundles/css?modules=o-fonts@^1.6.7,o-techdocs@^4.0.1,o-ft-icons@^2.3.6" />
+	<link href="{{ site.baseurl }}/buildcache/bundle.css" rel="stylesheet" />
+
+	<script src="//polyfill.webservices.ft.com/v1/polyfill.min.js"></script>
+</head>
+<body class="o-techdocs">
+
+	<header data-o-component="o-header" class="o-header">
+		<div class="o-header__container">
+			<div class="o-header__inner">
+				<div class="o-header__primary">
+					<a class="o-header__primary__left" href="/">
+						<span class="origami-logo"></span>
+						<h1 class="o-header__title">{{site.name}}</h1>
+					</a>
+					<nav class="o-header__primary__right o-hierarchical-nav o-header__nav--primary-theme" data-o-component="o-hierarchical-nav">
+						<ul data-o-hierarchical-nav-level="1">
+							<li data-priority="1" aria-selected="true"><a href="/">Spec</a></li>
+							<li data-priority="1"><a href="//registry.origami.ft.com">Registry</a></li>
+							<li data-more class="o-hierarchical-nav__parent" aria-hidden="true"><a><span class="o-hierarchical-nav__more--if-some">More <i class="o-hierarchical-nav__parent__down-arrow"></i></span><span class="o-hierarchical-nav__more--if-all">Menu <i class="o-hierarchical-nav__parent__down-arrow"></i></span></a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="o-header__secondary"></div>
+			</div>
+		</div>
+	</header>
+
+	<div class="o-techdocs-layout">
+
+		<div class="o-techdocs-sidebar">
+			<ul class="o-techdocs-nav">
+
+				<!-- Principles -->
+				<li{% if page.title == 'Principles' %} aria-selected="true"{% endif %}>
+					<a href="{{ site.baseurl }}/docs/principles">Principles</a>
+				</li>
+
+				<!-- Foundations -->
+				<li {% if page.title == 'Foundations' %} aria-expanded="true" aria-selected="true"{% endif %}>
+					<a href="{{ site.baseurl }}/docs/foundations">Foundations</a>
+					{% if page.section == 'Foundations' %}
+					<ul class="o-techdocs-nav o-techdocs-nav--sub">
+						<li{% if page.title == 'Grid' %} aria-selected="true"{% endif %}>
+							<a href="{{ site.baseurl }}/docs/foundations/grid">Grid</a>
+						</li>
+						<li{% if page.title == 'Typography' %} aria-selected="true"{% endif %}>
+							<a href="{{ site.baseurl }}/docs/foundations/typography">Typography</a>
+						</li>
+						<li{% if page.title == 'Colors' %} aria-selected="true"{% endif %}>
+							<a href="{{ site.baseurl }}/docs/foundations/colors">Colors</a>
+						</li>
+						<li{% if page.title == 'Iconography' %} aria-selected="true"{% endif %}>
+							<a href="{{ site.baseurl }}/docs/foundations/iconography">Iconography</a>
+						</li>
+					</ul>
+					{% endif %}
+				</li>
+
+				<!-- UI Components -->
+				<li {% if page.title == 'UI Components' %} aria-expanded="true" aria-selected="true"{% endif %}>
+					<a href="{{ site.baseurl }}/docs/ui-components">UI Components</a>
+					{% if page.section == 'UI Components' %}
+					<ul class="o-techdocs-nav o-techdocs-nav--sub">
+						<li{% if page.title == 'Application Header' %} aria-selected="true"{% endif %}>
+							<a href="{{ site.baseurl }}/docs/ui-components/application-header">Application Header</a>
+						</li>
+					</ul>
+					{% endif %}
+				</li>
+
+				<!-- Patterns -->
+				<li {% if page.title == 'Patterns' %} aria-expanded="true" aria-selected="true"{% endif %}>
+					<a href="{{ site.baseurl }}/docs/patterns">Patterns</a>
+					{% if page.section == 'Patterns' %}
+					<ul class="o-techdocs-nav o-techdocs-nav--sub">
+					</ul>
+					{% endif %}
+				</li>
+
+			</ul>
+		</div>
+
+		<div class="o-techdocs-main o-techdocs-content">
+			{{ content }}
+		</div>
+
+	</div>
+
+	<footer class="o-techdocs-footer">
+		<div class="o-techdocs-footer__inner">
+			<div class="footer-logo">
+				<span class="origami-logo"></span>Design
+			</div>
+			<p>&copy; Pearson Education {{ site.time | date:'%Y' }}</p>
+		</div>
+	</footer>
+
+</body>
+</html>
