@@ -21,8 +21,8 @@ Explain to the reader the following:
 * Which characteristics define this component?
 
 #### Design Contacts
-Interaction Designer:  Bosco Albert Baracus [ubaraba@pearson.com]  
-Visual Designer:  H.M. Murdock [umurdhm@pearson.com]
+Interaction Designer:  Bosco Albert Baracus <ubaraba@pearson.com>  
+Visual Designer:  H.M. Murdock <umurdhm@pearson.com>
 
 #### Current Status
 [Link to JIRA issue tracking goes here][JIRA Link]
