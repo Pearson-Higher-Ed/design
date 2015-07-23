@@ -21,12 +21,15 @@ Explain to the reader the following:
 * Which characteristics define this component?
 
 #### Design Contacts
-Interaction Designer:  Bosco Albert Baracus <ubaraba@pearson.com>  
-Visual Designer:  H.M. Murdock <umurdhm@pearson.com>
+Interaction Design: Web [Bosco Albert Baracus](mailto:ubaraba@pearson.com) / Mobile [Arthur Templeton Peck](mailto:upeckart@pearson.com)  
+Visual Design: [H.M. Murdock](mailto:umurdhm@pearson.com)
 
 #### Current Status
 [Link to JIRA issue tracking goes here][JIRA Link]
 
+[tabpanel]
+
+[tabpage header="Responsive Web"]
 
 ## Contents
 * [Structure](#structure)
@@ -67,4 +70,11 @@ Well, the way they make shows is, they make one show. That show's called a pilot
 ### <a id="accessibility"></a>Accessibility
 Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
 
+[/tabpage]
+
+[tabpage header="Native Mobile"]
+Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+[/tabpage]
+
+[/tabpanel]
 
