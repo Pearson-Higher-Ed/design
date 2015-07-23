@@ -1,0 +1,76 @@
+---
+layout: default
+title: Component Documentation Template
+section: UI Components
+permalink: /docs/ui-components/template/
+---
+[JIRA link]: http://jira.pearsoncmg.com/
+
+
+# Component Documentation Template
+
+This document serves to provide an outline for component documentation so that each document is consistent in content and structure.
+
+---
+
+# Component Name Goes Here
+
+#### Description
+Explain to the reader the following:
+* What problem does this component solve?
+* What does this component do?
+* Which characteristics define this component?
+
+#### Design Contacts
+Interaction Designer:  Bosco Albert Baracus [ubaraba@pearson.com]
+Visual Designer:  H.M. Murdock [umurdhm@pearson.com]
+
+#### Current Status
+[Link to JIRA issue tracking goes here][JIRA Link]
+
+---
+
+> ## Contents
+> * [Structure](#structure) <!-- Describe the bits and pieces of the component.  What is it comprised of? -->
+> * [Interaction](#interaction) <!-- How does this component behave? -->
+> * [Visual Spec](#visual) <!-- What are the specifics on how it looks? -->
+> * [Prototype](#prototype)
+> * [User Assistance](#ua) <!-- Specific content related information -->
+
+> * [Screenshots](#screenshots)
+> * [Accessibility Audit](#accessibility)
+> * [Research Findings](#research) <!-- Links to research findings? -->
+
+---
+
+## Component Design
+
+### <a name="structure"></a>Structure
+Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people. Like pit bulls. The dog of dogs. Pit bull can be the right man's best friend... or the wrong man's worst enemy. You going to give me a dog for a pet, give me a pit bull. Give me... Raoul. Right, Omar? Give me Raoul.
+
+### <a name="interaction"></a>Interaction
+Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+
+### <a name="visual"></a>Visual
+Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people. Like pit bulls. The dog of dogs. Pit bull can be the right man's best friend... or the wrong man's worst enemy. You going to give me a dog for a pet, give me a pit bull. Give me... Raoul. Right, Omar? Give me Raoul.
+
+### <a name="prototype"></a>Prototype
+Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+
+### <a name="ua"></a>User Assistance
+Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people. Like pit bulls. The dog of dogs. Pit bull can be the right man's best friend... or the wrong man's worst enemy. You going to give me a dog for a pet, give me a pit bull. Give me... Raoul. Right, Omar? Give me Raoul.
+
+---
+
+### <a name="screenshots"></a>Screenshots
+Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+
+### <a name="research"></a>Research Findings
+Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+
+### <a name="accessibility"></a>Accessibility
+Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+
+---
+
+
