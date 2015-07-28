@@ -9,7 +9,7 @@ permalink: /docs/ui-components/template/
 # Component Documentation Template
 
 This document serves to provide an outline for component documentation so that each document is consistent in content and structure.
-
+TESTING
 ---
 
 # Component Name Goes Here
