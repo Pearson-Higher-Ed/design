@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Template
-permalink: /docs/ui-components/template/
+permalink: /docs/template/
 ---
 [JIRA link]: http://jira.pearsoncmg.com/
 
