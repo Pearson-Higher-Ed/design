@@ -1,7 +1,6 @@
 ---
 layout: default
-title: Component Documentation Template
-section: UI Components
+title: Template
 permalink: /docs/ui-components/template/
 ---
 [JIRA link]: http://jira.pearsoncmg.com/
