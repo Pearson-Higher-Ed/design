@@ -11,7 +11,7 @@ permalink: /docs/ui-components/application-header/
 The application header provides consistent navigation and user administration controls across all Pearson Higher Ed applications. It appears at the top of the page and contains **site-oriented** content. It *may* contain **page-oriented** content&mdash;for example, a search box&mdash;provided that such content has potential use in any product. The application header may also display page-oriented navigation that will be rendered in the mobile collapsible menu. In general, however, page-oriented content should be rendered outside of the application header.
 
 #### Design Contacts
-Interaction Design:  Web [Parker Malenke](mailto:parker.malenke@pearson.com)
+Interaction Design:  Web [Parker Malenke](mailto:parker.malenke@pearson.com)  
 Visual Design: [Meredith Williamson](meredith.williamson@pearson.com)
 
 #### Current Status
@@ -30,7 +30,7 @@ Visual Design: [Meredith Williamson](meredith.williamson@pearson.com)
 ## Component Design
 
 ### <a id="structure"></a>Structure
-![Application Header - Desktop]({{ site.baseurl }}/img/application-header/1-structure-desktop.png)
+![Application Header - Desktop]({{ site.baseurl }}/img/application-header/1-structure-desktop.png)  
 
 The application consists of four basic elements:
 
