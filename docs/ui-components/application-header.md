@@ -5,7 +5,7 @@ section: UI Components
 permalink: /docs/ui-components/application-header/
 ---
 
-# Application Header `(o-app-header)`
+# Application Header (o-app-header)
 
 #### Description
 The application header provides consistent navigation and user administration controls across all Pearson Higher Ed applications. It appears at the top of the page and contains **site-oriented** content. It *may* contain **page-oriented** content&mdash;for example, a search box&mdash;provided that such content has potential use in any product. The application header may also display page-oriented navigation that will be rendered in the mobile collapsible menu. In general, however, page-oriented content should be rendered outside of the application header.
@@ -31,19 +31,24 @@ Visual Design: [Meredith Williamson](meredith.williamson@pearson.com)
 
 ### <a id="structure"></a>Structure
 ![Application Header - Desktop]({{ site.baseurl }}/img/application-header/1-structure-desktop.png)
+
 The application consists of four basic elements:
+
 * Pearson Logo
 * Help
 * Username (when a user is not signed in, this will show the 'Sign In' text)
 * Help (optional depending on specific application needs)
 
 ![Application Header - Mobile]({{ site.baseurl }}/img/application-header/2-structure-mobile.png)
+
 The mobile version of the header is similar but has one distinct difference to account for smaller mobile screen widths.
+
 * 'Username' is replaced with 'Menu' and includes course related navigation, 'My Account', and 'Sign Out'
 
 ### <a id="interaction"></a>Interaction
 
 #### Breakpoints
+
 |   Size   |   Pixels   |
 |   ---   |   ---   |
 |   Large   |    > 1024px   |
