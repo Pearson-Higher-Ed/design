@@ -59,6 +59,7 @@ This is the default desktop header for screen widths greater than 1024px.  Beyon
 ![Application Header - Large]({{ site.baseurl }}/img/application-header/3-large.png)
 
 ### Medium Header (768px - 1023px)
+
 #### Default desktop header
 ![Application Header - Medium]({{ site.baseurl }}/img/application-header/4-medium.png)
 
@@ -78,6 +79,7 @@ This is the default desktop header for screen widths greater than 1024px.  Beyon
 * In REVEL this can open a dropdown on the relevant pages
 
 ### Small Header (480px - 767px)
+
 #### Default, closed header
 ![Application Header - Small]({{ site.baseurl }}/img/application-header/5-small.png)
 
@@ -87,6 +89,7 @@ This is the default desktop header for screen widths greater than 1024px.  Beyon
 * At this breakpoint we still use the full menu, but visually it doesn't span the full page width
 
 ### Extra Small Header (320px - 479px)
+
 #### Default, closed header
 ![Application Header - Extra Small]({{ site.baseurl }}/img/application-header/6-xsmall-signedout-default.png)
 
@@ -119,6 +122,7 @@ This is the default desktop header for screen widths greater than 1024px.  Beyon
 * At least one of these may be used by Exchange for the LMS pair course flow
 
 ## <a id="visual"></a>Visual Spec
+
 ### Desktop header
 ![Application Header - Desktop Redline]({{ site.baseurl }}/img/application-header/7-desktop-redline.png)
 
@@ -145,10 +149,12 @@ This is the default desktop header for screen widths greater than 1024px.  Beyon
 |   Menu item separating line   |   #3F3F3F   |
 |   Menu item font color   |   #AAAAAA   |
 
+
 Deprecated Menu Customization
 
 |   Custom menu item color   |    #FFFFFF   |
 |   Custom menu item separating line   |   #1E1E1E   |
+
 
 Deprecated Help Dropdown
 
@@ -183,6 +189,7 @@ Deprecated Help Dropdown
 |   Course item font color   |    #FFFFFF    |
 |   Course item separating line   |   #1E1E1E   |
 
+
 Deprecated Mobile Menu Customization
 
 ![Application Header - Mobile Deprecated Menu Redline]({{ site.baseurl }}/img/application-header/8-mobile-deprecated-menu-redline.png)
@@ -201,6 +208,7 @@ REVEL can activate a light colored variant for it's reader mode.
 
 #### Desktop Header Light
 ![Application Header - Desktop Light]({{ site.baseurl }}/img/application-header/9-desktop-light.png)
+
 |   Background   |   #F2F2F2   |
 |   Logo, label text, caret   |   #333333   |
 |   Vertical separating pipe   |   #333333   |
@@ -213,10 +221,12 @@ REVEL can activate a light colored variant for it's reader mode.
 |   Menu item separating line   |   #B3B3B3   |
 |   Menu item font color   |   #666666   |
 
+
 Deprecated Desktop Menu Light Customization
 
 |   Custom menu item color   |    #333333   |
 |   Custom menu item separating line   |   #B3B3B3   |
+
 
 Deprecated Help Dropdown
 
@@ -229,6 +239,7 @@ Deprecated Help Dropdown
 |   Logo, label text, caret   |   #333333   |
 |   Vertical separating pipe   |   #333333   |
 
+
 Mobile Menu Light
 
 ![Application Header - Mobile Menu Light]({{ site.baseurl }}/img/application-header/10-mobile-menu-light.png)
@@ -239,6 +250,7 @@ Mobile Menu Light
 |   Menu item font color   |   #666666   |
 |   Course item font color   |    #231F20    |
 |   Course item separating line   |   #B3B3B3   |
+
 
 Mobile Deprecated Menu Light
 
