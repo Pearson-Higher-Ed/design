@@ -11,7 +11,7 @@ permalink: /docs/ui-components/application-header/
 * [Signed Out Mode](#signed-out-mode)
 * [Basic Mode](#basic-mode)
 * [Course Mode](#course-mode)
-* [Focus Mode](#focus-mode)
+* [Integration Mode](#integration-mode)
 * [Redlines](#redlines)
 
 ## Overview
