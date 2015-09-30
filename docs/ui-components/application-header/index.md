@@ -128,10 +128,10 @@ REVEL can manually manipulate the dom for the header to include the search box a
 
 
 ## Integration Mode
-In this version of the header many options are removed that aren't relevant in cases where a product is integrated with a third party (e.g. BlackBoard, Canvas, or other LMSs). The Logo is no longer a link and the User Menu is removed. In the Mobile menu the "All Courses", "My Account", and "Sign Out" options are removed.
+In this version of the header many options are removed that aren't relevant in cases where a user is linking their account to a 3rd party (e.g. BlackBoard, Canvas, or other LMSs). The Logo is no longer a link and the right side of the header only contains a help link.
 
 > **Use when**  
-> The user's session is managed by a third party. Specifically, this applies to 3PL/LMS integration scenarios.
+> The user's session is managed by a third party and the user shouldn't have access to platform session features (e.g. sign out, My Account). Specifically, this applies to 3PL/LMS integration scenarios.
 
 
 
