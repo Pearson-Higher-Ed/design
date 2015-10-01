@@ -53,6 +53,26 @@ The header can be presented in four different modes depending on the context it'
 
 
 ## Signed Out Mode
+
+<div
+  style="border: 1px solid #eee; position: relative;">
+  <img
+    src="./assets/signed-out-mode-redlines.png"
+    style="
+      background-color: white;
+      width: 100%">
+  <img
+    src="./assets/signed-out-mode.png"
+    onMouseOver="this.style.opacity='0'"
+    onMouseOut="this.style.opacity='1'"
+    style="
+      background-color: white;
+      width: 100%;
+      position: absolute;
+      top:0;
+      left:0;">
+</div>
+
 This is the simplest version of the header, just displaying the Pearson logo (with no link interaction), the help link, and (optionally) a Sign In link. The help link is designed to trigger the [Contextual Help component]().
 
 > **Use this mode when**  
@@ -68,6 +88,45 @@ There is a single configuration option to remove the "Sign In" link.
 
 
 ## Basic Mode
+
+<div
+  style="border: 1px solid #eee; position: relative; margin-bottom:20px;">
+  <img
+    src="./assets/basic-mode-redlines.png"
+    style="
+      background-color: white;
+      width: 100%">
+  <img
+    src="./assets/basic-mode.png"
+    onMouseOver="this.style.opacity='0'"
+    onMouseOut="this.style.opacity='1'"
+    style="
+      background-color: white;
+      width: 100%;
+      position: absolute;
+      top:0;
+      left:0;">
+</div>
+
+<div
+  style="border: 1px solid #eee; position: relative;">
+  <img
+    src="./assets/basic-mode-course-list-redlines.png"
+    style="
+      background-color: white;
+      width: 100%">
+  <img
+    src="./assets/basic-mode-course-list.png"
+    onMouseOver="this.style.opacity='0'"
+    onMouseOut="this.style.opacity='1'"
+    style="
+      background-color: white;
+      width: 100%;
+      position: absolute;
+      top:0;
+      left:0;">
+</div>
+
 Represents the default signed in experience. Expands on the Signed Out Mode by making the Pearson Logo a home link (currently [www.console.pearson.com](http://console.pearson.com)) and including the *User Menu*.
 
 The User Menu is labelled with the user's first name and contains My Account and Sign Out options. At widths less than 768px it is condensed into the *Mobile Menu* which relabels the dropdown as "Menu" and extends it with a list of courses (if the consuming app has that information).
@@ -86,6 +145,26 @@ The Mobile Menu can display a list of Next Gen courses for the current user. If 
 
 
 ## Course Mode
+
+<div
+  style="border: 1px solid #eee; position: relative;">
+  <img
+    src="./assets/course-mode-redlines.png"
+    style="
+      background-color: white;
+      width: 100%">
+  <img
+    src="./assets/course-mode.png"
+    onMouseOver="this.style.opacity='0'"
+    onMouseOut="this.style.opacity='1'"
+    style="
+      background-color: white;
+      width: 100%;
+      position: absolute;
+      top:0;
+      left:0;">
+</div>
+
 At desktop sizes this is similar to the Basic Header. The Mobile Menu gains an "All Courses" link and any local navigation for the course. The Course Mode also offers the ability to enable a light theme.
 
 > **Use this mode when**  
@@ -128,6 +207,26 @@ REVEL can manually manipulate the dom for the header to include the search box a
 
 
 ## Integration Mode
+
+<div
+  style="border: 1px solid #eee; position: relative;">
+  <img
+    src="./assets/integration-mode-redlines.png"
+    style="
+      background-color: white;
+      width: 100%">
+  <img
+    src="./assets/integration-mode.png"
+    onMouseOver="this.style.opacity='0'"
+    onMouseOut="this.style.opacity='1'"
+    style="
+      background-color: white;
+      width: 100%;
+      position: absolute;
+      top:0;
+      left:0;">
+</div>
+
 In this version of the header many options are removed that aren't relevant in cases where a user is linking their account to a 3rd party (e.g. BlackBoard, Canvas, or other LMSs). The Logo is no longer a link and the right side of the header only contains a help link.
 
 > **Use when**  
