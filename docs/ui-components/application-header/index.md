@@ -35,13 +35,13 @@ The header can be presented in four different modes depending on the context it'
 
 |   Useful info          |                                       |
 |------------------------|---------------------------------------|
-|   Version              |    1.0-rc1                            |
+|   Version              |    1.0-rc2                            |
 |   Status               |    Active                             |
 |   Origami component    |    [Registry link][reg-entry]         |
 |   Product owner        |    [Joe Macaluso][jm-contact]         |
 |   Interaction Design   |    [Parker Malenke][pm-contact]       |
 |   Visual Design        |    [Meredith Williamson][mw-contact]  |
-|   Reference files      |    [Sketch][sk], [AI][ai]             |
+|   Reference files      |    [Sketch][sk]                       |
 
 [pm-contact]: mailto:parker.malenke@pearson.com
 [mw-contact]: mailto:meredith.williamson@pearson.com
