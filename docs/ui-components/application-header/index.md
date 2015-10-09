@@ -92,12 +92,12 @@ There is a single configuration option to remove the "Sign In" link.
 <div
   style="border: 1px solid #eee; position: relative; margin-bottom:20px;">
   <img
-    src="./assets/basic-mode-redlines.png"
+    src="./assets/basic-mode-1024-redlines.png"
     style="
       background-color: white;
       width: 100%">
   <img
-    src="./assets/basic-mode.png"
+    src="./assets/basic-mode-1024.png"
     onMouseOver="this.style.opacity='0'"
     onMouseOut="this.style.opacity='1'"
     style="
@@ -111,12 +111,12 @@ There is a single configuration option to remove the "Sign In" link.
 <div
   style="border: 1px solid #eee; position: relative;">
   <img
-    src="./assets/basic-mode-course-list-redlines.png"
+    src="./assets/basic-mode-480-redlines.png"
     style="
       background-color: white;
       width: 100%">
   <img
-    src="./assets/basic-mode-course-list.png"
+    src="./assets/basic-mode-480.png"
     onMouseOver="this.style.opacity='0'"
     onMouseOut="this.style.opacity='1'"
     style="
