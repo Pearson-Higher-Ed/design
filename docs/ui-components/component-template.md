@@ -2,6 +2,7 @@
 layout: default
 title: Template
 permalink: /docs/template/
+published: false
 ---
 [JIRA link]: http://jira.pearsoncmg.com/
 
