@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Application Header
-section: UI Components
+section: Components
 permalink: /docs/ui-components/application-header/
 ---
 
