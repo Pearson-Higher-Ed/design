@@ -1,7 +1,10 @@
 ---
 layout: default
 title: Introduction to Elemental Design
+permalink: /
 ---
+
+<aside>Under Construction :-)<br>We're still getting all the documentation together for this</aside>
 
 # What is Elemental Design?
 In a nutshell, Elemental Design defines a **unified visual voice** for Pearson’s applications and provides a library of components that **makes implementing the voice quick and easy**.
@@ -30,7 +33,7 @@ Three puzzle pieces fit together to achieve our goals:
 Modern software has been approached with a variety of design philosophies, resulting in an array of personalities. Our first step towards a consistent voice is to create a single design philosophy for Pearson. This will cover high level details such as color theory, animation principles, etc.
 
 ### Component Definitions
-Components form the heart of Elemental Design and allow for easy consistency and efficient development. A *Component Definition* represents a single member of the component library and includes all the information you need to incorporate it into your design or create an a new implementation of it. If you’re looking to include the underlying code in your project check out the corresponding *Component Implementation*.
+Components form the heart of Elemental Design and allow for easy consistency and efficient development. A *Component Definition* represents a single member of the component library and includes all the information you need to incorporate it into your design or create a new implementation of it. If you’re looking to include the underlying code in your project check out the corresponding *Component Implementation*.
 
 In general, a definition will document the style and behavior of a component. This covers information such as:
 
