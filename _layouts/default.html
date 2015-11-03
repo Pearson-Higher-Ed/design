@@ -40,80 +40,24 @@
 		<div class="o-techdocs-sidebar">
 			<ul class="o-techdocs-nav">
 
-				<!-- Principles -->
-				<li{% if page.title == 'Principles' %} aria-selected="true"{% endif %}>
-					<a href="{{ site.baseurl }}/docs/principles">Principles</a>
-				</li>
-
-				<!-- Foundations -->
-				<li {% if page.title == 'Foundations' %} aria-expanded="true" aria-selected="true"{% endif %}>
-					<a href="{{ site.baseurl }}/docs/foundations">Foundations</a>
-					{% if page.section == 'Foundations' %}
-					<ul class="o-techdocs-nav o-techdocs-nav--sub">
-						<li{% if page.title == 'Grid' %} aria-selected="true"{% endif %}>
-							<a href="{{ site.baseurl }}/docs/foundations/grid">Grid</a>
-						</li>
-						<li{% if page.title == 'Typography' %} aria-selected="true"{% endif %}>
-							<a href="{{ site.baseurl }}/docs/foundations/typography">Typography</a>
-						</li>
-						<li{% if page.title == 'Colors' %} aria-selected="true"{% endif %}>
-							<a href="{{ site.baseurl }}/docs/foundations/colors">Colors</a>
-						</li>
-						<li{% if page.title == 'Iconography' %} aria-selected="true"{% endif %}>
-							<a href="{{ site.baseurl }}/docs/foundations/iconography">Iconography</a>
-						</li>
-					</ul>
+				{% for nav_item in site.pages %}
+					{% if nav_item.section == null %}
+						<li {% if page.url == nav_item.url %} aria-selected="true" {% endif %}><a href="{{site.baseurl}}{{nav_item.url}}">{{nav_item.title}}</a></li>
 					{% endif %}
-				</li>
+				{% endfor %}
 
-				<!-- UI Components -->
-				<li {% if page.title == 'UI Components' %} aria-expanded="true" aria-selected="true"{% endif %}>
-					<a href="{{ site.baseurl }}/docs/ui-components">UI Components</a>
-					{% if page.section == 'UI Components' %}
-					<ul class="o-techdocs-nav o-techdocs-nav--sub">
-						<li{% if page.title == 'Buttons' %} aria-selected="true"{% endif %}>
-							<a href="{{ site.baseurl }}/docs/ui-components/buttons">Buttons</a>
-						</li>
-						<li{% if page.title == 'Forms' %} aria-selected="true"{% endif %}>
-							<a href="{{ site.baseurl }}/docs/ui-components/forms">Forms</a>
-						</li>
-<!--						<li{% if page.title == 'Navigation' %} aria-selected="true"{% endif %}>
-							<a href="{{ site.baseurl }}/docs/ui-components/navigation">Navigation</a>
-						</li>  -->
-						<li{% if page.title == 'Application Header' %} aria-selected="true"{% endif %}>
-							<a href="{{ site.baseurl }}/docs/ui-components/application-header">Application Header</a>
-						</li>
-						<li{% if page.title == 'Typography' %} aria-selected="true"{% endif %}>
-							<a href="{{ site.baseurl }}/docs/ui-components/typography">Typography</a>
-						</li>
-						<li{% if page.title == 'Colors' %} aria-selected="true"{% endif %}>
-							<a href="{{ site.baseurl }}/docs/ui-components/colors">Colors</a>
-						</li>
-						<li{% if page.title == 'Progress Indicators' %} aria-selected="true"{% endif %}>
-							<a href="{{ site.baseurl }}/docs/ui-components/progress-indicators">Progress indicators</a>
-						</li>
-						<li{% if page.title == 'Drawer' %} aria-selected="true"{% endif %}>
-							<a href="{{ site.baseurl }}/docs/ui-components/drawer">Drawer</a>
-						</li>
-					</ul>
-					{% endif %}
-				</li>
-
-				<!-- Patterns -->
-				<li {% if page.title == 'Patterns' %} aria-expanded="true" aria-selected="true"{% endif %}>
-					<a href="{{ site.baseurl }}/docs/patterns">Patterns</a>
-					{% if page.section == 'Patterns' %}
-					<ul class="o-techdocs-nav o-techdocs-nav--sub">
-						<li{% if page.title == 'Search' %} aria-selected="true"{% endif %}>
-							<a href="{{ site.baseurl }}/docs/patterns/search">Search</a>
-						</li>
-					</ul>
-					{% endif %}
-				</li>
-				<!-- Principles -->
-				<li{% if page.title == 'Template' %} aria-selected="true"{% endif %}>
-					<a href="{{ site.baseurl }}/docs/template">Documentation Template</a>
-				</li>
+				{% for section in site.sections %}
+					<li>
+						<a href="">{{section}}</a>
+						<ul class="o-techdocs-nav o-techdocs-nav--sub">
+							{% for nav_item in site.pages %}
+								{% if nav_item.section == section %}
+									<li {% if page.url == nav_item.url %} aria-selected="true" {% endif %}><a href="{{site.baseurl}}{{nav_item.url}}">{{nav_item.title}}</a></li>
+								{% endif %}
+							{% endfor %}
+						</ul>
+					</li>
+				{% endfor %}
 
 			</ul>
 		</div>

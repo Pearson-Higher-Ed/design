@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Typography
-section: UI Components
+section: Components
 permalink: /docs/ui-components/typography/
 ---
 

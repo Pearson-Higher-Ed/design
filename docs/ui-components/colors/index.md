@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Colors
-section: UI Components
+section: Components
 permalink: /docs/ui-components/colors/
 ---
 
