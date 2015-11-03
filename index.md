@@ -18,6 +18,7 @@ Consistency in our product experiences is a prerequisite for meeting the bar set
 ## Benefits
 A consistent and efficient foundation unlocks a variety of benefits which would be difficult or, in some cases, impossible to achieve otherwise.
 
+- Reduced duplication of effort from both design and development
 - Deployment of a revised and enhanced brand identity
 - Faster time to market for new products, with higher quality implementations
 - Leveling up our product experience to become truly desirable
