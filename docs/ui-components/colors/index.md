@@ -12,6 +12,7 @@ permalink: /docs/ui-components/colors/
 * [Overview](#overview)
 * [Light Palette](#light-palette)
 * [Dark Palette](#dark-palette)
+* [Blue Palette](#blue-palette)
 
 
 ## Overview
@@ -53,6 +54,8 @@ Colors are organized into *Palettes* which contain *Foreground*, *Background*, a
 |----------------|-----------|-------------------------------------------------|
 | Pitch          | `#231F20` | ![](http://dummyimage.com/200x40/231F20/231F20) |
 | Gray No. 1     | `#565656` | ![](http://dummyimage.com/200x40/565656/565656) |
+| Royal Navy     | `#094877` | ![](http://dummyimage.com/200x40/094877/094877) |
+| Hyperdrive     | `#0D65A6` | ![](http://dummyimage.com/200x40/0D65A6/0D65A6) |
 
 ### Background Colors
 
@@ -60,6 +63,7 @@ Colors are organized into *Palettes* which contain *Foreground*, *Background*, a
 |----------------|-----------|-------------------------------------------------|
 | Brightly Lit   | `#E6E6E6` | ![](http://dummyimage.com/200x40/E6E6E6/E6E6E6) |
 | Off White      | `#F2F2F2` | ![](http://dummyimage.com/200x40/F2F2F2/F2F2F2) |
+| Dirty Ice      | `#F8F8F8` | ![](http://dummyimage.com/200x40/F8F8F8/F8F8F8) |
 | White          | `#FFFFFF` | ![](http://dummyimage.com/200x40/FFFFFF/FFFFFF) |
 | Highlighter    | `#FDEC2E` | ![](http://dummyimage.com/200x40/FDEC2E/FDEC2E) |
 
@@ -67,8 +71,9 @@ Colors are organized into *Palettes* which contain *Foreground*, *Background*, a
 
 | Name           | Hex       | Swatch                                          |
 |----------------|-----------|-------------------------------------------------|
-|                | `#A6A8AB` | ![](http://dummyimage.com/200x40/A6A8AB/A6A8AB) |
-|                | `#B3B3B3` | ![](http://dummyimage.com/200x40/B3B3B3/B3B3B3) |
+| Boring         | `#A6A8AB` | ![](http://dummyimage.com/200x40/A6A8AB/A6A8AB) |
+| Sidewalk       | `#B3B3B3` | ![](http://dummyimage.com/200x40/B3B3B3/B3B3B3) |
+| Hairline Gray  | `#D0D0D0` | ![](http://dummyimage.com/200x40/D0D0D0/D0D0D0) |
 
 
 ## Dark Palette
@@ -92,5 +97,28 @@ Colors are organized into *Palettes* which contain *Foreground*, *Background*, a
 
 | Name           | Hex       | Swatch                                          |
 |----------------|-----------|-------------------------------------------------|
-|                | `#3F3F3F` | ![](http://dummyimage.com/200x40/3F3F3F/3F3F3F) |
-|                | `#545454` | ![](http://dummyimage.com/200x40/545454/545454) |
+| Asphalt        | `#3F3F3F` | ![](http://dummyimage.com/200x40/3F3F3F/3F3F3F) |
+| Smoke Gray     | `#545454` | ![](http://dummyimage.com/200x40/545454/545454) |
+
+
+## Blue Palette
+
+### Foreground Colors
+
+| Name           | Hex       | Swatch                                          |
+|----------------|-----------|-------------------------------------------------|
+| White          | `#FFFFFF` | ![](http://dummyimage.com/200x40/FFFFFF/FFFFFF) |
+
+### Background Colors
+
+| Name           | Hex       | Swatch                                          |
+|----------------|-----------|-------------------------------------------------|
+| Basic Blue     | `#107ACA` | ![](http://dummyimage.com/200x40/107ACA/107ACA) |
+| Sea            | `#0C5D99` | ![](http://dummyimage.com/200x40/0C5D99/0C5D99) |
+
+### Accent Colors
+
+| Name           | Hex       | Swatch                                          |
+|----------------|-----------|-------------------------------------------------|
+| Deep Sea       | `#0A4D80` | ![](http://dummyimage.com/200x40/0A4D80/0A4D80) |
+| Sky Blue       | `#9DC0DB` | ![](http://dummyimage.com/200x40/9DC0DB/9DC0DB) |
