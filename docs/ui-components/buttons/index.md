@@ -63,4 +63,4 @@ Buttons come in small, default, and large sizes. Prefer the default size but fee
 
 
 ## Redlines
-[Download the redline specification here](./assets/redlines.zip)
+[Download the redline specification here](./assets/redlines.png)
