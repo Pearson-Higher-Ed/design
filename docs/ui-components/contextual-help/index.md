@@ -44,6 +44,7 @@ This component presents help content and articles within the product experience 
 
 ## Help List  
 This displays a listing of help articles relevant to the current url. Every url in the next gen platform should offer a Help List which follows these guidelines:
+
 * A ‘Contact Us’ article must always be displayed at the bottom of the list.
 * A ‘Popular Resources’, ‘FAQ’, or similar article relevant to the current url must be displayed in the second to last position.
 * Between 0-5 custom articles specifically relevant to features/tools accessible at the current url should be displayed at the top of the list.
