@@ -2,6 +2,7 @@ name: Design
 highlighter: pygments
 relative_permalinks: false
 baseurl: /design
+permalink: pretty
 exclude: [scss, node_modules, bower.json, Gruntfile.js, package.json, README.md]
 markdown: kramdown
 sections:
