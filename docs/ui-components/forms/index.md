@@ -16,7 +16,7 @@ permalink: /docs/ui-components/forms/
 * [Select](#select)
 * [Fieldset Anatomy](#fieldset-anatomy)
 * [Fieldset Groups](#fieldset-groups)
-* [Radio & Checkbox](#radio & checkbox)
+* [Radio and Checkbox](#radio and checkbox)
 * [Redlines](#redlines)
 
 
@@ -115,7 +115,7 @@ An alternate visual treatment can be used for more explicit emphasis.
 
 ![](./assets/fieldset-group.png)
 
-## Radio & Checkbox 
+## Radio and Checkbox 
 
 ![](./assets/radio-checkbox.png)
 
