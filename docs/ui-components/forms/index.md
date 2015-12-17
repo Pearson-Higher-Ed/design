@@ -16,7 +16,7 @@ permalink: /docs/ui-components/forms/
 * [Select](#select)
 * [Fieldset Anatomy](#fieldset-anatomy)
 * [Fieldset Groups](#fieldset-groups)
-* [Radio and Checkbox](#radio and checkbox)
+* [Radio and Checkbox](#radio-and-checkbox)
 * [Redlines](#redlines)
 
 
