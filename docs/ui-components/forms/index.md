@@ -133,4 +133,4 @@ If there are only two mutually exclusive options, combine them into a single che
 Unlike radio buttons, where a group of radio buttons represents a single choice, each check box in a group represents a separate, independent choice. When there is more than one option but only one can be selected, use a radio button instead. 
 
 ## Redlines
-[Download the redline specification here](./assets/redlines.png)
+[Download the redline specification here](./assets/redlines-01.png)
