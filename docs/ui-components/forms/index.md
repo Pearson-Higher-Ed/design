@@ -16,7 +16,7 @@ permalink: /docs/ui-components/forms/
 * [Select](#select)
 * [Fieldset Anatomy](#fieldset-anatomy)
 * [Fieldset Groups](#fieldset-groups)
-* [Radio & Checkbox](#radio-checkbox)
+* [Radio & Checkbox](#radio & checkbox)
 * [Redlines](#redlines)
 
 
@@ -64,7 +64,7 @@ Text input form elements are to be used for single line text inputs.  Text input
 
 ## Text Area
 
-![](./assets/text-area.png)
+![](./assets/textarea.png)
 
 Text area form elements are to be used for multiple lines of text.  If the text <i>overflows</i> the set number of lines allotted for the text area, the text area component will gain a vertical scroll bar.  If the text area element is intended to be <i>resize</i>-able, the controls for this feature will be enabled.  Text areas can be resized vertically, horizontally, or both.
 
