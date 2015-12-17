@@ -119,7 +119,7 @@ An alternate visual treatment can be used for more explicit emphasis.
 
 ![](./assets/radio-checkbox.png)
 
-Use radio and checkbox form elements for instances where you want the user to carefully consider the options and need to expose all available options.
+Use radio and checkbox form elements for instances where you want the user to carefully consider the options and need to expose all available options.  Styling for Radio and Checkbox is browser default.
 
 > **Use Radio form element when**  
 > The user needs to make a single selection from two or more options.  
