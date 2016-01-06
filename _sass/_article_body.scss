@@ -1,0 +1,307 @@
+.article_container {
+  margin: 0 auto;
+  width: 90%;
+  @include for-device(sm) { width: 70%; }
+  @include for-device(md) { width: 90%; }
+
+// Header styles ///////////////////////////////////////////////////////////////
+  .article_header {
+    margin-top: 30px;
+
+    h1 {
+      font-size: 36px;
+      line-height: 36px;
+      margin: 0;
+
+      & + p {
+        margin-top: 0;
+      }
+    }
+
+    &:after {
+      content: "";
+      width: 100%;
+      display: inline-block;
+    }
+  }
+
+  .article_info {
+    float: left;
+    width: 100%;
+    @include for-device(lg) { width: 80%; }
+    @include for-device(xl) { width: 70%; }
+  }
+
+  .status {
+    text-transform: capitalize;
+  }
+
+  .people,
+  .implementations,
+  .downloads {
+      width: 48%;
+      float: left;
+    @include for-device(md) {
+      width: 23%;
+      margin-left: 4%;
+    }
+  }
+
+  .people {
+    width: 100%;
+    margin-bottom: 20px;
+    @include for-device(md) {
+      width: 48%;
+    }
+    margin-left: 0;
+  }
+
+  .implementations {
+    @include for-device(xs) {
+      clear: both;
+      width: 48%;
+    }
+    @include for-device(md) {
+      clear: none;
+      width: 22%;
+    }
+  }
+
+  .downloads {
+    margin-left: 2%;
+    @include for-device(md) {
+      margin-left: 0;
+    }
+  }
+
+  .title {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .downloads div + div {
+    margin-top: 4px;
+  }
+
+  .downloads .title {
+    margin-bottom: 4px;
+  }
+
+  .person {
+    width: 50%;
+    margin-bottom: 8px;
+    float: left;
+  }
+
+  a.button {
+    background-color: blue;
+    border-radius: 3px;
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  #markdown-toc {
+    clear: both;
+    float: left;
+    list-style-type: none;
+    padding: 0;
+    font-size: 20px;
+    margin-top: 20px;
+
+    li {
+      padding: 0;
+      margin: 0;
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    li > ul {
+      padding-left: 10px;
+
+      li:before {
+        content: "– ";
+      }
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+// Block structure /////////////////////////////////////////////////////////////
+h2 {
+  clear: both;
+}
+
+h2:before {
+  content: " ";
+  display: inline-block;
+  width: 100%;
+}
+
+// Overview blocks /////////////////////////////////////////////////////////////
+  .tagline p {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: lighter;
+    @include for-device(md) {
+      font-size: 28px;
+      line-height: 36px;
+      width: 100%;
+    }
+    @include for-device(lg) { width: 80%; }
+    @include for-device(xl) { width: 70%; }
+  }
+
+  .description {
+    margin-bottom: 20px;
+    @include for-device(md) {
+      margin-bottom: 40px;
+      width: 100%;
+    }
+    @include for-device(lg) { width: 80%; }
+    @include for-device(xl) { width: 70%; }
+
+    p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 24px;
+      @include for-device(md) {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+
+    p + p {
+      margin-top: 12px;
+    }
+  }
+
+  .feature_list {
+    width: 100%;
+    margin-bottom: 20px;
+    @include for-device(md) {
+      width: 48%;
+      margin-bottom: 0;
+    }
+    @include for-device(xl) { width: 28%; }
+    float: left;
+
+    &:before {
+      content: "Feature Summary";
+      font-weight: bold;
+      font-size: 18px;
+      display: block;
+      margin-bottom: 6px;
+    }
+  }
+
+  .usage {
+    width: 100%;
+    @include for-device(md) {
+      margin-left: 4%;
+      width: 48%;
+    }
+    @include for-device(xl) { width: 38%; }
+    float: left;
+
+    background-color: #f6f6f6;
+    border-top: 12px solid #aaa;
+    box-sizing: border-box;
+    padding: 10px 15px;
+
+    &:before {
+      content: "When to Use This Component";
+      font-weight: bold;
+      font-size: 18px;
+      display: block;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    p + p {
+      margin-top: 8px;
+    }
+  }
+
+// Content blocks //////////////////////////////////////////////////////////////
+  .section_text {
+    margin-bottom: 40px;
+    @include for-device(md) {
+      width: 70%;
+    }
+    @include for-device(lg) {
+      width: 48%;
+    }
+    @include for-device(xl) {
+      margin-bottom: 0;
+      float: left;
+      width: 28%;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 20px;
+    }
+  }
+
+  .images {
+    @include for-device(lg) { width: 80%; }
+    @include for-device(xl) {
+      float: left;
+      padding-left: 4%;
+      width: 68%;
+    }
+
+    p {
+      font-size: 13px;
+      line-height: 16px;
+      margin: 0;
+    }
+
+    p + p {
+      margin-top: 6px;
+    }
+
+    img {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .narrow_image {
+      float: left;
+      width: 100%;
+      @include for-device(md) { width: 48%; }
+      p {
+        width: 100%;
+      }
+    }
+
+    .narrow_image + .narrow_image {
+      @include for-device(md) { padding-left: 4%; }
+    }
+
+    .wide_image {
+      @include for-device(md) {
+        p {
+          width: 50%;
+        }
+        img {
+          width: 200%;
+        }
+      }
+    }
+
+    .wide_image,
+    .narrow_image {
+      margin-bottom: 50px;
+    }
+  }
+}

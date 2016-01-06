@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Library Membership Specification
+section: contribute
 ---
 # Library Membership Specification
 Version 0.1.0

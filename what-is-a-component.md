@@ -1,6 +1,7 @@
 ---
 layout: default
 title: What is a Component?
+section: learn
 ---
 
 <aside>Under Construction :-)<br>We're still getting all the documentation together for this</aside>

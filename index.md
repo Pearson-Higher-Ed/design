@@ -2,12 +2,21 @@
 layout: default
 title: Introduction to Elemental Design
 permalink: /
+section: learn
 ---
 
 <aside>Under Construction :-)<br>We're still getting all the documentation together for this</aside>
 
 # What is Elemental Design?
 In a nutshell, Elemental Design defines a **unified visual voice** for Pearson’s applications and provides a library of components that **makes implementing the voice quick and easy**.
+
+Hello world this is mobile stuff.
+
+| heading 1 | heading 2 |
+|-----------|-----------|
+| content   | content   |
+
+![](./img/origami-logo.png)
 
 ## Goals
 **Consistency** and **Efficiency** are the primary objectives of Elemental Design.

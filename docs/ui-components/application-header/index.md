@@ -1,8 +1,28 @@
 ---
-layout: default
+layout: component
 title: Application Header
 section: Components
 permalink: /docs/ui-components/application-header/
+version: 1.0
+status: active
+people:
+  - role: Product Owner
+    name: Joe Macaluso
+    email: joe.macaluso@pearson.com
+  - role: Interaction Design
+    name: Parker Malenke
+    email: parker.malenke@pearson.com
+  - role: Visual Design
+    name: Meredith Williamson
+    email: meredith.williamson@pearson.com
+implementations:
+  - type: origami
+    link: https://origami.pearsoned.com/registry/components/o-app-header
+downloads:
+  - name: .sketch mockup
+    link: ./assets/o-app-header.sketch
+  - name: .ai mockup
+    link: ./assets/o-app-header.ai
 ---
 
 # Application Header (o-app-header)
@@ -17,8 +37,12 @@ permalink: /docs/ui-components/application-header/
 ## Overview
 This component contains and displays global tools and navigation across the next gen platform. It offers a simple and consistent way to include standard behavior such as sign in/sign out, help content, and global navigation. For courses, it will present local navigation at mobile breakpoints.
 
-> **When to use this component**  
-> Every application that's a part of the next gen platform should display the relevant mode of this header in order to promote a consistent experience.
+<aside class="usage">
+  <div class="title">When to use this component</div>
+  <div class="message">
+    Every application that's a part of the next gen platform should display the relevant mode of this header in order to promote a consistent experience.
+  </div>
+</aside>
 
 The header can be presented in four different modes depending on the context it's in. A user's first interaction with the header will likely be the [Signed Out Mode](#anonymous-mode) which displays only the most basic information (usually including a sign in link). After signing in the [Basic Mode](#basic-mode) represents the 'default' header, offering functionality such as account management and sign out. Once the user launches a specific course the [Course Mode](#course-mode) adds a few features, most notably local navigation for mobile breakpoints. In situations where the user's session is managed by a third party (for example 3PL/LMS integration) the [Integration Mode](#focus-mode) will remove distracting/irrelevant navigation options.
 
@@ -31,25 +55,6 @@ The header can be presented in four different modes depending on the context it'
 - Local navigation for courses (at mobile breakpoints)
 - Accessibility best practices
 - Mobile ready responsive design
-
-
-|   Useful info          |                                       |
-|------------------------|---------------------------------------|
-|   Version              |    1.0-rc2                            |
-|   Status               |    Active                             |
-|   Origami component    |    [Registry link][reg-entry]         |
-|   Product owner        |    [Joe Macaluso][jm-contact]         |
-|   Interaction Design   |    [Parker Malenke][pm-contact]       |
-|   Visual Design        |    [Meredith Williamson][mw-contact]  |
-|   Reference files      |    [Sketch][sk]                       |
-
-[pm-contact]: mailto:parker.malenke@pearson.com
-[mw-contact]: mailto:meredith.williamson@pearson.com
-[jm-contact]: mailto:joe.macaluso@pearson.com
-[reg-entry]:  https://origami.pearsoned.com/registry/components/o-app-header
-[sk]:         ./assets/o-app-header.sketch
-[ai]:         ./assets/o-app-header.ai
-
 
 
 ## Signed Out Mode
