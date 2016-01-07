@@ -15,7 +15,7 @@
 			<ul>
 				{% assign learn = (site.pages | where: "section", "learn") %}
 				{% for page in learn %}
-					<li><a href="{{page.url}}">{{page.title}}</a></li>
+					<li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
 				{% endfor %}
 			</ul>
 		</div>
@@ -25,7 +25,7 @@
 			<ul>
 				{% assign use = (site.pages | where: "section", "use") %}
 				{% for page in use %}
-					<li><a href="{{page.url}}">{{page.title}}</a></li>
+					<li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
 				{% endfor %}
 			</ul>
 		</div>
