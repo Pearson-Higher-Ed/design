@@ -260,6 +260,12 @@ h2:before {
       width: 68%;
     }
 
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+    }
+
     p {
       font-size: 13px;
       line-height: 16px;
