@@ -4,6 +4,10 @@
 
 @import "responsive";
 @import "normalize";
-@import "people_block";
 @import "article_body";
 @import "article_typography";
+
+.article_body {
+  width: 50%;
+  margin: 0 auto;
+}
