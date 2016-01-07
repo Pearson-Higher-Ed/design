@@ -1,9 +1,9 @@
 ---
-layout: default
+layout: article
 title: Component Versioning
+section: contribute
 ---
 
-# Component Versioning
 Most aspects of Elemental Design are given version numbers in order to clearly communicate changes and support dependencies between components.
 
 ## Anatomy of a Version Number

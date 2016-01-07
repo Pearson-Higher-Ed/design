@@ -1,9 +1,8 @@
 ---
-layout: default
+layout: article
 title: Component Creation Guide
+section: contribute
 ---
-
-# Component Creation Guide
 
 * TOC here
 {:toc}

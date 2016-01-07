@@ -1,12 +1,9 @@
 ---
-layout: default
+layout: article
 title: What is a Component?
 section: learn
 ---
 
-<aside>Under Construction :-)<br>We're still getting all the documentation together for this</aside>
-
-# What is a Component?
 Components form the core idea of Elemental Design’s philosophy. Each component packages together a set of style or functionality into a reusable unit which is offered to consumers in two parts: a *definition* which describes the features and design of the component and then one or more *implementations*, which include all the code and development documentation to actually incorporate the component into an end product.
 
 ## Features of Components
