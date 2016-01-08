@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="core">
 {% include header.html %}
-<body>
+<body class="home">
 	{% include construction.html %}
 	<div class="hero">
 		<h1><span class="welcome">Welcome</span><br>
@@ -42,17 +42,14 @@
 	</div>
 
 	<div class="library">
-		{% assign components = (site.pages | where: "section", "Components") %}
+		<header>Library</header>
+		{% assign components = (site.pages | where: "section", "Components") | sort:"title" %}
 		{% for page in components %}
 			<a class="component" href="{{site.baseurl}}{{page.url}}">
-				<div>
-					<div class="left">
-						<span class="name">{{page.title}}</span>
-					</div>
-					<div class="right">
-						<span>Version {{page.version}}</span>
-						<span class="status">Status {{page.status}}</span>
-					</div>
+				<span class="name">{{page.title}}</span>
+				<div class="data">
+					<span>Version {{page.version}}</span>
+					<span class="status">{{page.status}}</span>
 				</div>
 			</a>
 		{% endfor %}
