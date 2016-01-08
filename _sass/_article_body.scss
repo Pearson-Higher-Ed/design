@@ -121,11 +121,12 @@
     }
 
     li > ul {
-      padding-left: 10px;
+      display: none;
+      // padding-left: 10px;
 
-      li:before {
-        content: "– ";
-      }
+      // li:before {
+      //   content: "– ";
+      // }
     }
 
     a {
