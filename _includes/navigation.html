@@ -28,5 +28,14 @@
         {% endfor %}
       </ul>
     </li>
+    <li>
+      Library
+      <ul>
+        {% assign learn = (site.pages | where: "section", "Components") | sort:"title" %}
+        {% for page in learn %}
+          <li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+        {% endfor %}
+      </ul>
+    </li>
   </ul>
 </div>
