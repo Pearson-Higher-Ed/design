@@ -2,9 +2,14 @@
 # So Jekyll sees this file
 ---
 
+body {
+  font-family: "open-sans";
+}
+
 @import "responsive";
 @import "normalize";
 @import "navigation";
+@import "alert";
 @import "home";
 @import "article_body";
 @import "article_typography";
