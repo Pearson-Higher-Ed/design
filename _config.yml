@@ -8,3 +8,5 @@ markdown: kramdown
 sass_dir: _sass
 sections:
   - Components
+gems:
+  - jekyll-redirect-from

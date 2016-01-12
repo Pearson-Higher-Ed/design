@@ -2,7 +2,7 @@
 layout: component
 title: Buttons
 section: Components
-permalink: /docs/ui-components/buttons/
+redirect_from: "/docs/ui-components/buttons/"
 version: 1.0
 status: active
 people:
@@ -37,10 +37,6 @@ downloads:
 This component defines the standard visual style for buttons.
 </div>
 
-<div markdown="1" class="description">
-The header can be presented in four different modes depending on the context it’s in. A user’s first interaction with the header will likely be the Signed Out Mode which displays only the most basic information (usually including a sign in link). After signing in the Basic Mode represents the ‘default’ header, offering functionality such as account management and sign out. Once the user launches a specific course the Course Mode adds a few features, most notably local navigation for mobile breakpoints. In situations where the user’s session is managed by a third party (for example 3PL/LMS integration) the Integration Mode will remove distracting/irrelevant navigation options.
-</div>
-
 <div markdown="1" class="feature_list">
 - Single collection of all button styles
 - Multiple button types including Primary, Default, and Link
@@ -52,7 +48,7 @@ The header can be presented in four different modes depending on the context it�
 Every instance of a button or button styled link should come from this component. See the sections below for information about when to ease each type of button.
 </div>
 
-## Stand Alone Articles
+## Button Types
 
 <div class="section_text" markdown="1">
 Buttons come in several different types. Each defines a normal, active/hover, and disabled state.
@@ -67,21 +63,7 @@ Buttons come in several different types. Each defines a normal, active/hover, an
 <div class="images">
 <div class="wide_image" markdown="1">
 ![](./assets/illustration.png)
-Here is an illustration of a lemon.
-
-But you really wanted an orange, I know.
-</div>
-
-<div class="narrow_image" markdown="1">
-![](./assets/sizes.png)
-Here is an illustration of a lemon.
-
-But you really wanted an orange, I know.
-</div>
-
-<div class="wide_image" markdown="1">
-![](./assets/illustration.png)
-Here is another duplicate!
+Each of the three button types in their various states.
 </div>
 </div>
 
@@ -91,26 +73,9 @@ Buttons come in small, default, and large sizes. Prefer the default size but fee
 </div>
 
 <div class="images">
-<div class="wide_image" markdown="1">
-![](./assets/illustration.png)
-Here is another duplicate!
-</div>
-
 <div class="narrow_image" markdown="1">
 ![](./assets/sizes.png)
-Here is an illustration of a lemon.
-
-But you really wanted an orange, I know.
-</div>
-
-<div class="narrow_image" markdown="1">
-![](./assets/sizes.png)
-Here is another duplicate!
-</div>
-
-<div class="wide_image" markdown="1">
-![](./assets/illustration.png)
-Here is another duplicate!
+Each button type in the two alternative sizes.
 </div>
 </div>
 
@@ -118,4 +83,42 @@ Here is another duplicate!
 
 
 ## Redlines
-[Download the redline specification here](./assets/redlines.png)
+<div class="section_text" markdown="1">
+Specifications for the primary button type.
+</div>
+
+<div class="images">
+<div class="wide_image" markdown="1">
+![](./assets/redlines.primary.png)
+</div>
+</div>
+
+<div class="section_text" markdown="1">
+Default buttons.
+</div>
+
+<div class="images">
+<div class="wide_image" markdown="1">
+![](./assets/redlines.default.png)
+</div>
+</div>
+
+<div class="section_text" markdown="1">
+Link style buttons.
+</div>
+
+<div class="images">
+<div class="wide_image" markdown="1">
+![](./assets/redlines.link.png)
+</div>
+</div>
+
+<div class="section_text" markdown="1">
+Sizing specifications. (See the primary button specifications for the standard button size.)
+</div>
+
+<div class="images">
+<div class="narrow_image" markdown="1">
+![](./assets/redlines.sizes.png)
+</div>
+</div>
