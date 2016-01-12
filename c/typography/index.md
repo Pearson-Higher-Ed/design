@@ -2,7 +2,7 @@
 layout: component
 title: Typography
 section: Components
-permalink: /docs/ui-components/typography/
+redirect_from: "/docs/ui-components/typography/"
 version: 1.0-beta.1
 status: active
 people:
@@ -70,7 +70,7 @@ Labels should primarily be used in single line scenarios. Make a particular effo
 
 <div class="images">
 <div class="narrow_image" markdown="1">
-![](./assets/labels_primary.png)
+![](./assets/labels.regular.png)
 
 The four label sizes
 </div>
@@ -78,39 +78,20 @@ The four label sizes
 
 ### Color Variants
 <div class="section_text" markdown="1">
-Labels come in two colors, *Primary* and *Secondary*:
+Labels come in two colors, *Primary* and *Secondary*. There is an inverse palette available as well.
 </div>
 
 <div class="images">
 <div class="narrow_image" markdown="1">
-![](./assets/labels_primary.png)
+![](./assets/labels.colors.png)
 
-Primary label color
+Standard colors
 </div>
 
 <div class="narrow_image" markdown="1">
-![](./assets/labels_secondary.png)
+![](./assets/labels.inverse.png)
 
-Secondary label color
-</div>
-</div>
-
-### Inverse Variants
-<div class="section_text" markdown="1">
-There is also an inverse variant which works on backgrounds from the dark color palette.
-</div>
-
-<div class="images">
-<div class="narrow_image" markdown="1">
-![](./assets/labels_inverse_primary.png)
-
-Inverse primary label color
-</div>
-
-<div class="narrow_image" markdown="1">
-![](./assets/labels_inverse_secondary.png)
-
-Inverse secondary label color
+Inverse colors
 </div>
 </div>
 
@@ -129,44 +110,11 @@ In general, labels should not be styled beyond the basic styles listed above. If
 ## Titles
 <div class="section_text" markdown="1">
 Titles are very similar to labels except they demarcate a logical section or container of content. In the previous example, the course name would be a title.
-</div>
-
-<div class="images">
-<div class="wide_image" markdown="1">
-![](./assets/title_example.png)
-
-An example of the title style used on the Console course tile
-</div>
-</div>
-
 
 ### Size variants
-<div class="section_text" markdown="1">
-There are three different sizes of title: *Basic*, *Large*, and *Extra Large*.
-</div>
-
-<div class="images">
-<div class="wide_image" markdown="1">
-![](./assets/titles.png)
-
-Three title sizes
-</div>
-</div>
-
-<div class="section_text" markdown="1">
-These sizes will automatically scale down in narrow viewports.
-</div>
-
-<div class="images">
-<div class="narrow_image" markdown="1">
-![](./assets/titles_narrow.png)
-
-Three title sizes
-</div>
-</div>
+There are three different sizes of title: *Basic*, *Large*, and *Extra Large*. These sizes will automatically scale down in narrow viewports.
 
 ### Allowed Inline Elements
-<div class="section_text" markdown="1">
 In general, titles should not be styled beyond the basic styles listed above. If necessary, stick to the following list of inline elements.
 
 * `<em>, <i>`
@@ -175,6 +123,13 @@ In general, titles should not be styled beyond the basic styles listed above. If
 * `<abbr>`
 </div>
 
+<div class="images">
+<div class="wide_image" markdown="1">
+![](./assets/titles.sizes.png)
+
+Standard title sizes, multiline versions, and the responsive sizes used when the viewport is narrower.
+</div>
+</div>
 
 
 ## Copy
@@ -184,7 +139,7 @@ When you have a chunk of content to display, use one of these styles. Most regul
 
 <div class="images">
 <div class="narrow_image" markdown="1">
-![](./assets/copy_basic.png)
+![](./assets/copy.basic.png)
 </div>
 </div>
 
@@ -193,24 +148,20 @@ When you have a chunk of content to display, use one of these styles. Most regul
 There is also a *Lead* variant which can be used for the first paragraph of a message or as part of a hero block for marketing materials.
 
 It will automatically scale down for narrow viewports as well.
+
+### Allowed Inline Elements
+Copy is more flexible in this regard that labels or titles. You can include any of the inline elements covered by this component.
 </div>
 
 <div class="images">
 <div class="wide_image" markdown="1">
-![](./assets/copy_lead.png)
+![](./assets/copy.lead.png)
 </div>
 
 <div class="narrow_image" markdown="1">
-![](./assets/copy_lead_narrow.png)
+![](./assets/copy.lead.narrow.png)
 </div>
 </div>
-
-
-### Allowed Inline Elements
-<div class="section_text" markdown="1">
-Copy is more flexible in this regard that labels or titles. You can include any of the inline elements covered by this component.
-</div>
-
 
 
 ## Inline Elements
@@ -232,7 +183,11 @@ There are a number of inline elements which can be used to modify the other type
 
 <div class="images">
 <div class="narrow_image" markdown="1">
-![](./assets/inline_elements.png)
+![](./assets/inline.1.png)
+</div>
+
+<div class="narrow_image" markdown="1">
+![](./assets/inline.2.png)
 </div>
 </div>
 
