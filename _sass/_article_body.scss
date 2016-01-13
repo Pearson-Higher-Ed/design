@@ -20,7 +20,7 @@
       margin: 0;
 
       & + p {
-        margin-top: 0;
+        margin-top: 6px;
       }
     }
 
@@ -256,6 +256,28 @@ h2:before {
     p {
       font-size: 15px;
       line-height: 20px;
+    }
+
+    h4 {
+      margin: 30px 0 0 0;
+
+      + p {
+        margin-top: 0;
+      }
+    }
+
+    .usage {
+      width: 100%;
+      margin: 0 0 20px 0;
+      border-top: none;
+      float: none;
+
+      &:before {
+        content: "Usage Guidelines";
+        font-size: 16px;
+        font-weight: normal;
+        font-style: italic;
+      }
     }
   }
 
