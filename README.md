@@ -9,7 +9,7 @@ Component definition articles have a few unique customizations which help presen
 - More details YAML front matter (including sections for version, people, implementations, and downloads)
 - Custom content sections (such as taglines, usage guidelines, wide and narrow images, etc.)
 
-Please see the [Component Definition Template](./_component_definition_template.md) for more details. If you have any questions feel free to [open an issue](https://github.com/Pearson-Higher-Ed/design/issues/new).
+Please see the [Component Definition Template](./_component_definition_template.txt) for more details. If you have any questions feel free to [open an issue](https://github.com/Pearson-Higher-Ed/design/issues/new).
 
 The following core YAML keys should always be included in the frontmatter:
 
