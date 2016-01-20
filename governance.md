@@ -1,9 +1,8 @@
 ---
-layout: default
+layout: article
 title: Component Governance
+section: contribute
 ---
-
-# Component Governance
 
 ## Review Board
 Elemental Design guarantees a high level of quality for components found in the library, as detailed in the [Library Membership Specification][spec]. A user of the component library should expect any member they find to fully meet each requirement listed in the spec. In order to make this guarantee a review board exists whose responsibility it is to assess each new component for compliance. This board is composed of representatives from Product, Development/Architecture, and design perspectives. Current members include:

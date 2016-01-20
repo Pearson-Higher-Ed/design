@@ -5,5 +5,8 @@ baseurl: /design
 permalink: pretty
 exclude: [scss, node_modules, bower.json, Gruntfile.js, package.json, README.md]
 markdown: kramdown
+sass_dir: _sass
 sections:
   - Components
+gems:
+  - jekyll-redirect-from

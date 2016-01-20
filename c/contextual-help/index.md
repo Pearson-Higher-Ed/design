@@ -1,44 +1,36 @@
 ---
-layout: default
+layout: component
 title: Contextual Help
 section: Components
-permalink: /docs/ui-components/contextual-help/
+redirect_from: /docs/ui-components/contextual-help/
+version: 1.0.0-beta.1
+status: active
+people:
+  - role: Product Owner
+    name: Joe Macaluso
+    email: joe.macaluso@pearson.com
+  - role: Designer
+    name: Parker Malenke
+    email: parker.malenke@pearson.com
+  - role: Designer
+    name: Mike Caskey
+    email: mike.caskey@pearson.com
+  - role: User Assistance
+    name: Annie Persson
+    email: ann.persson@pearson.com
 ---
 
-# Contextual Help (o-contextual-help)
+* TOC here
+{:toc}
 
-* [Overview](#overview)
-* [Help List](#help-list)
-* [Standalone Articles](#standalone-articles)
-* [Header Activation](#header-activation)
-* [Embedded Activation](#embedded-activation)
-* [Help Article Formatting](#help-article-formatting)
- * [Formatting Guidelines](#formatting-guidelines)
- 
 ## Overview
+<div markdown="1" class="tagline">
 This component presents help content and articles within the product experience so that users can answer their questions without the interruption of opening a separate help system in a new tab.
+</div>
 
-> **When to use this component**  
-> Every url in the next gen platform should use the Contextual Help component, at a minimum configuring the two default items in the Help List.
-
-
-|   Useful info          |                                       |
-|------------------------|---------------------------------------|
-|   Version              |    1.0-rc1                            |
-|   Status               |    Active                             |
-|   Origami component    |    [Registry link][reg-entry]         |
-|   Product owner        |    [Joe Macaluso][jm-contact]         |
-|   Interaction Design   |    [Parker Malenke][pm-contact], [Mike Caskey][mc-contact]       |
-|   User Assistance      |    [Annie Persson][ap-contact]        |
-
-
-[pm-contact]: mailto:parker.malenke@pearson.com
-[ap-contact]: mailto:ann.persson@pearson.com
-[mc-contact]: mailto:mike.caskey@pearson.com
-[jm-contact]: mailto:joe.macaluso@pearson.com
-[reg-entry]:  https://origami.pearsoned.com/registry/components/o-contextual-help
-[sk]:         ./assets/o-app-header.sketch
-[ai]:         ./assets/o-app-header.ai
+<aside class="usage" markdown="1">
+Every url in the next gen platform should use the Contextual Help component, at a minimum configuring the two default items in the Help List.
+</aside>
 
 
 

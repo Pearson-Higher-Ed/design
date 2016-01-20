@@ -1,0 +1,50 @@
+.article_content {
+  color: #333;
+
+  h2 {
+    border-bottom: 1px solid #ddd;
+    margin: 40px 0 10px;
+    font: bold 30px "open-sans";
+  }
+
+  h3 {
+    margin: 30px 0 10px;
+    font: bold 20px "open-sans";
+  }
+
+  p {
+    font: 16px/24px "open-sans";
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 0;
+    list-style-position: outside;
+
+    li {
+      margin-left: 1em;
+    }
+  }
+
+  li > ul {
+    padding-left: 10px;
+    list-style-type: none;
+  }
+
+  aside.usage {
+    background-color: #f6f6f6;
+    border-top: 12px solid #aaa;
+    box-sizing: border-box;
+    padding: 10px;
+
+    .title {
+      font: bold 16px/16px "open-sans";
+      margin-bottom: 8px;
+    }
+  }
+
+  img {
+    border: 1px solid #ddd;
+    // padding: 20px;
+  }
+}

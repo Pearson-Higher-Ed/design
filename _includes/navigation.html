@@ -1,0 +1,41 @@
+<div class="navigation">
+  <ul>
+    <li><a href="{{site.baseurl}}/">Home</a></li>
+    <li>
+      Learn
+      <ul>
+        {% assign learn = (site.pages | where: "section", "learn") %}
+				{% for page in learn %}
+					<li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+				{% endfor %}
+      </ul>
+    </li>
+    <li>
+      Use
+      <ul>
+        {% assign learn = (site.pages | where: "section", "use") %}
+        {% for page in learn %}
+          <li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+        {% endfor %}
+      </ul>
+    </li>
+    <li>
+      Contribute
+      <ul>
+        {% assign learn = (site.pages | where: "section", "contribute") %}
+        {% for page in learn %}
+          <li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+        {% endfor %}
+      </ul>
+    </li>
+    <li>
+      Library
+      <ul>
+        {% assign learn = (site.pages | where: "section", "Components") | sort:"title" %}
+        {% for page in learn %}
+          <li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+        {% endfor %}
+      </ul>
+    </li>
+  </ul>
+</div>

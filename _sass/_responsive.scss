@@ -1,0 +1,11 @@
+$resp-map: (
+  xs: 0,
+  sm: 480px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px
+);
+
+@mixin for-device($size) {
+  @media screen and (min-width: map-get($resp-map, $size)) { @content; }
+}

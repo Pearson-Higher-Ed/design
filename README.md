@@ -1,19 +1,47 @@
-## This is a gh-pages branch
+This is the source code for a Github pages site that documents Elemental Design. Visit https://pearson-higher-ed.github.io/design to read the documentation.
 
-Please visit https://pearson-higher-ed.github.io/design to view the site.
+## Contributing
+If you would like to add an article, component definition, or make another change you will need to check out the repository locally, make changes in a new branch, then push back to github and open a pull request to merge into the `gh-pages` branch.
 
-## Building
+### Component Definition Template
+Component definition articles have a few unique customizations which help present metadata and image in a more consumable fashion. These include:
 
-Since this is a GitHub pages site, the built CSS bundle must be committed to the repository.  We store it in `buildcache` to avoid any confusion - files in the `buildcache` directory should not be edited.  To regenerate them, use Grunt:
+- More details YAML front matter (including sections for version, people, implementations, and downloads)
+- Custom content sections (such as taglines, usage guidelines, wide and narrow images, etc.)
 
-1. Clone the repository
-2. Ensure `grunt-cli` is installed globally by checking it's listed with `grunt --version`.  If it's not, install with `npm install -g grunt-cli`.
-3. Run `npm install`
-4. Edit main.scss as desired
-5. Run `grunt`
+Please see the [Component Definition Template](./_component_definition_template.txt) for more details. If you have any questions feel free to [open an issue](https://github.com/Pearson-Higher-Ed/design/issues/new).
 
-## Viewing locally
+The following core YAML keys should always be included in the frontmatter:
 
-1. Install Jekyll `gem install jekyll`
-2. Run `jekyll serve --watch --baseurl=''` and view on http://localhost:4000/
-3. Run `grunt watch` in parallel if you're editing styles
+```YAML
+layout: component
+section: Components
+```
+
+Each component article will live in it's own subfolder of the `/c` directory. Name this subfolder with the desired URL fragment for the component. Within the component subfolder you will write the definition in an `index.md` file and can include any image, design files, or other resources in an `/assets` folder. The complete structure should look like:
+
+```
+root
+|_c
+  |_component-name
+  | |_index.md
+  | |_assets
+  |   |_redlines.png
+  |   |_mockup.psd
+  |
+  |_other-component
+  | |_...
+  |
+  ...
+```
+
+
+### General Articles
+
+Articles about Elemental Design in general (Intro, quickstart, etc.) follow a more standard jekyll format. Simply add them at the repository root level and include the following YAML frontmatter keys:
+
+```YAML
+layout: article
+title: {{ Article Title }}
+section: learn | use | contribute
+```

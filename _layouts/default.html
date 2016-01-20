@@ -1,81 +1,59 @@
 <!DOCTYPE html>
 <html class="core">
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<title>{{ page.title }} - {{ site.name }}</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="icon" href="/img/origami-logo.png" type="image/x-icon" />
+{% include header.html %}
+<body class="home">
+	{% include construction.html %}
+	<div class="hero">
+		<h1><span class="welcome">Welcome</span><br>
+			<span class="to">to</span><br>
+			<span class="name">Elemental Design</span></h1>
+	</div>
 
-	<link rel="stylesheet" href="//build.origami.ft.com/bundles/css?modules=o-fonts@^1.6.7,o-techdocs@^4.0.1,o-ft-icons@^2.3.6" />
-	<link href="{{ site.baseurl }}/buildcache/bundle.css" rel="stylesheet" />
-
-	<script src="//polyfill.webservices.ft.com/v1/polyfill.min.js"></script>
-</head>
-<body class="o-techdocs">
-
-	<header data-o-component="o-header" class="o-header">
-		<div class="o-header__container">
-			<div class="o-header__inner">
-				<div class="o-header__primary">
-					<a class="o-header__primary__left" href="/">
-						<span class="origami-logo"></span>
-						<h1 class="o-header__title">{{site.name}}</h1>
-					</a>
-					<nav class="o-header__primary__right o-hierarchical-nav o-header__nav--primary-theme" data-o-component="o-hierarchical-nav">
-						<ul data-o-hierarchical-nav-level="1">
-							<li data-priority="1" aria-selected="true"><a href="/">Spec</a></li>
-							<li data-priority="1"><a href="//registry.origami.ft.com">Registry</a></li>
-							<li data-more class="o-hierarchical-nav__parent" aria-hidden="true"><a><span class="o-hierarchical-nav__more--if-some">More <i class="o-hierarchical-nav__parent__down-arrow"></i></span><span class="o-hierarchical-nav__more--if-all">Menu <i class="o-hierarchical-nav__parent__down-arrow"></i></span></a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="o-header__secondary"></div>
-			</div>
-		</div>
-	</header>
-
-	<div class="o-techdocs-layout">
-
-		<div class="o-techdocs-sidebar">
-			<ul class="o-techdocs-nav">
-
-				{% for nav_item in site.pages %}
-					{% if nav_item.section == null %}
-						<li {% if page.url == nav_item.url %} aria-selected="true" {% endif %}><a href="{{site.baseurl}}{{nav_item.url}}">{{nav_item.title}}</a></li>
-					{% endif %}
+	<div class="contents">
+		<div class="section">
+			<header>Learn</header>
+			<ul>
+				{% assign learn = (site.pages | where: "section", "learn") %}
+				{% for page in learn %}
+					<li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
 				{% endfor %}
-
-				{% for section in site.sections %}
-					<li>
-						<a href="">{{section}}</a>
-						<ul class="o-techdocs-nav o-techdocs-nav--sub">
-							{% for nav_item in site.pages %}
-								{% if nav_item.section == section %}
-									<li {% if page.url == nav_item.url %} aria-selected="true" {% endif %}><a href="{{site.baseurl}}{{nav_item.url}}">{{nav_item.title}}</a></li>
-								{% endif %}
-							{% endfor %}
-						</ul>
-					</li>
-				{% endfor %}
-
 			</ul>
 		</div>
 
-		<div class="o-techdocs-main o-techdocs-content">
-			{{ content }}
+		<div class="section">
+			<header>Use</header>
+			<ul>
+				{% assign use = (site.pages | where: "section", "use") %}
+				{% for page in use %}
+					<li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+				{% endfor %}
+			</ul>
 		</div>
 
+		<div class="section">
+			<header>Contribute</header>
+			<ul>
+				{% assign contribute = (site.pages | where: "section", "contribute") %}
+				{% for page in contribute %}
+					<li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
 	</div>
 
-	<footer class="o-techdocs-footer">
-		<div class="o-techdocs-footer__inner">
-			<div class="footer-logo">
-				<span class="origami-logo"></span>Design
-			</div>
-			<p>&copy; Pearson Education {{ site.time | date:'%Y' }}</p>
-		</div>
-	</footer>
+	<div class="library">
+		<header>Library</header>
+		{% assign components = (site.pages | where: "section", "Components") | sort:"title" %}
+		{% for page in components %}
+			<a class="component" href="{{site.baseurl}}{{page.url}}">
+				<span class="name">{{page.title}}</span>
+				<div class="data">
+					<span>Version {{page.version}}</span>
+					<span class="status">{{page.status}}</span>
+				</div>
+			</a>
+		{% endfor %}
+	</div>
 
 </body>
 </html>

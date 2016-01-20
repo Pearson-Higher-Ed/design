@@ -1,0 +1,169 @@
+body.home {
+  background-color: #D4EAE4;
+}
+
+.hero {
+  background-color: #D2DB0E;
+  text-align: center;
+  padding: 50px 0;
+
+  h1 {
+    margin: 0;
+  }
+
+  .welcome {
+    font-family: lobster;
+    font-size: 64px;
+    color: #003057;
+  }
+
+  .to {
+    font-size: 30px;
+    font-weight: normal;
+    color: #003057;
+    margin: 10px 0 0 0;
+    display: inline-block;
+  }
+
+  .name {
+    font-size: 56px;
+    font-weight: 100;
+    color: #003057;
+  }
+}
+
+.contents {
+  width: 90%;
+  padding: 20px 5% 0;
+  @include for-device(sm) {
+    width: 80%;
+    padding: 30px 10% 0;
+  }
+  @include for-device(md) {
+    width: 70%;
+    padding: 40px 15% 0;
+  }
+  @include for-device(lg) {
+    width: 90%;
+    padding: 40px 5% 0;
+  }
+  @include for-device(xl) {
+    width: 80%;
+    padding: 50px 10% 0;
+  }
+  background-color: #D4EAE4;
+
+  &:after {
+    content: "";
+    width: 100%;
+    display: inline-block;
+  }
+
+  .section {
+    float: left;
+    width: 100%;
+    margin: 20px 1.5% 0;
+    @include for-device(lg) {
+      margin-top: 0;
+      width: 30.33333%;
+    }
+    vertical-align: top;
+    color: #003057;
+
+    header {
+      font-size: 24px;
+      color: #444;
+
+      border-bottom: 3px solid #003057;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    a {
+      color: #444;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.library {
+  width: 90%;
+  padding: 20px 5% 0;
+  @include for-device(sm) {
+    width: 80%;
+    padding: 30px 10% 0;
+  }
+  @include for-device(md) {
+    width: 70%;
+    padding: 40px 15% 0;
+  }
+  @include for-device(lg) {
+    width: 90%;
+    padding: 40px 5% 0;
+  }
+  @include for-device(xl) {
+    width: 80%;
+    padding: 50px 10% 0;
+  }
+  background-color: #D4EAE4;
+
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+  }
+
+  header {
+    font-size: 24px;
+    color: #444;
+    margin: 0 1.5% 20px;
+
+    border-bottom: 3px solid #003057;
+  }
+
+  .component {
+    width: 100%;
+    margin: 20px 1.5%;
+    @include for-device(md) {
+      width: 47%;
+    }
+    @include for-device(lg) {
+      width: 30.3333333%;
+    }
+
+    float: left;
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid #003057;
+    padding: 12px;
+    color: #003057;
+    text-decoration: none;
+    font-size: 14px;
+
+    .name {
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .data {
+      margin-top: 6px;
+    }
+
+    .status {
+      float: right;
+      text-transform: capitalize;
+    }
+  }
+}

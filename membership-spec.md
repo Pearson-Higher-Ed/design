@@ -1,9 +1,10 @@
 ---
-layout: default
+layout: article
 title: Library Membership Specification
+section: contribute
 ---
-# Library Membership Specification
-Version 0.1.0
+
+Version 1.0.0-beta.1
 
 All components listed in the Component Library must satisfy all the requirements contained in this document. To learn about submitting components for inclusion see the [Component Creation Guide][creation-guide].
 
@@ -17,7 +18,7 @@ All components listed in the Component Library must satisfy all the requirements
 
 ## Generality
 
-<aside>Elemental Design and the Component Library are tools mean to serve the entirety of Pearson's next gen educational ecosystem.</aside>
+<aside>Elemental Design and the Component Library are tools meant to serve the entirety of Pearson's next gen educational ecosystem.</aside>
 
 G1: Components must reflect the needs of Pearson as a whole rather than just the needs of one product.
 
