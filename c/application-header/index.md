@@ -21,8 +21,6 @@ implementations:
 downloads:
   - name: .sketch mockup
     link: ./assets/o-app-header.sketch
-  - name: .ai mockup
-    link: ./assets/o-app-header.ai
 ---
 
 

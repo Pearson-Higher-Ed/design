@@ -16,7 +16,7 @@ people:
     name: Ed Zee
 implementations:
   - type: Origami
-    link: \#
+    link: https://origami.pearsoned.com/registry/components/o-type
 ---
 
 * TOC here

@@ -19,13 +19,6 @@ people:
 implementations:
   - type: Origami
     link: https://origami.pearsoned.com/registry/components/o-buttons
-  - type: Angular
-    link: https://origami.pearsoned.com/registry/components/o-buttons
-downloads:
-  - name: .sketch mockup
-    link: ./assets/o-app-header.sketch
-  - name: .ai mockup
-    link: \#
 ---
 
 * TOC here
