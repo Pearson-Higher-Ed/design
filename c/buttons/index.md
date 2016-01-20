@@ -3,7 +3,7 @@ layout: component
 title: Buttons
 section: Components
 redirect_from: "/docs/ui-components/buttons/"
-version: 1.0
+version: 1.0.1
 status: active
 people:
   - role: Product Owner
@@ -122,3 +122,12 @@ Sizing specifications. (See the primary button specifications for the standard b
 ![](./assets/redlines.sizes.png)
 </div>
 </div>
+
+## Changelog
+
+### 1.0.1
+- TWEAKED: Font color on disabled secondary button to be more consistent with Colors component.
+- TWEAKED: Inner shadow in active/hover secondary button to more subtle.
+
+### 1.0.0
+Initial release
