@@ -15,7 +15,7 @@ people:
   - role: Designer
     name: Ed Zee
   - role: QA
-    name: Eajez
+    name: Eajaz
 implementations:
   - type: Origami
     link: https://origami.pearsoned.com/registry/components/o-buttons
