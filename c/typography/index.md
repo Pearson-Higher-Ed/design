@@ -55,7 +55,7 @@ Much of the typography used in a web application consists of short names, labels
 
 <div class="images">
 <div class="wide_image" markdown="1">
-![](./assets/label_example.png)
+![](./assets/label.example.png)
 
 An example of labels in use on the Console course tile
 </div>
@@ -110,8 +110,18 @@ In general, labels should not be styled beyond the basic styles listed above. If
 ## Titles
 <div class="section_text" markdown="1">
 Titles are very similar to labels except they demarcate a logical section or container of content. In the previous example, the course name would be a title.
+</div>
+
+<div class="images">
+<div class="wide_image" markdown="1">
+![](./assets/title.example.png)
+
+Example title in use on the Console course tile
+</div>
+</div>
 
 ### Size variants
+<div class="section_text" markdown="1">
 There are three different sizes of title: *Basic*, *Large*, and *Extra Large*. These sizes will automatically scale down in narrow viewports.
 
 ### Allowed Inline Elements
