@@ -239,6 +239,10 @@ h2:before {
   }
 
 // Content blocks //////////////////////////////////////////////////////////////
+  h2, h3, h4, h5 {
+    clear: both;
+  }
+
   .section_text {
     margin-bottom: 40px;
     @include for-device(md) {
@@ -259,11 +263,48 @@ h2:before {
     }
 
     h4 {
+      clear: both;
       margin: 30px 0 0 0;
+
+      &:first-of-type {
+        margin: 0;
+      }
 
       + p {
         margin-top: 0;
       }
+    }
+
+    dl:after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+    }
+
+    dt {
+      width: 40%;
+    }
+
+    dd {
+      width: 60%;
+    }
+
+    dt, dd {
+      float: left;
+      padding: 10px 0;
+      margin: 0;
+      font-size: 13px;
+      border-top: 1px solid #e6e6e6;
+    }
+
+    dt:first-of-type,
+    dd:first-of-type {
+      padding-top: 0;
+      border-top: none;
+    }
+
+    dd + dt {
+      clear: both;
     }
 
     .usage {
@@ -319,7 +360,7 @@ h2:before {
       }
     }
 
-    .narrow_image + .narrow_image {
+    .narrow_image:nth-of-type(2n) {
       @include for-device(md) { padding-left: 4%; }
     }
 
