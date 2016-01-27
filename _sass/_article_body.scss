@@ -360,7 +360,7 @@ h2:before {
       }
     }
 
-    .narrow_image:nth-of-type(2n) {
+    .narrow_image + .narrow_image:nth-of-type(2n) {
       @include for-device(md) { padding-left: 4%; }
     }
 
