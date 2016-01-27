@@ -1,0 +1,104 @@
+---
+layout: component
+title: Breakpoints
+section: Components
+version: 1.0.0-beta.1
+status: active
+people:
+  - role: Product Owner
+    name: Joe Macaluso
+    email: joe.macaluso@pearson.com
+  - role: Designer
+    name: Parker Malenke
+    email: parker.malenke@pearson.com
+---
+
+* TOC here
+{:toc}
+
+
+## Overview
+<div markdown="1" class="tagline">
+This component defines the standard breakpoints to use for responsive design.
+</div>
+
+<div markdown="1" class="feature_list">
+- Consistent set of breakpoints
+- Sizes for phones, small and large tablets, and desktop devices
+</div>
+
+<div markdown="1" class="usage">
+Anytime you want to change a design based on the viewport width (i.e. use a media query) use the predefined widths provided by this component.
+</div>
+
+## Widths
+<div class="section_text" markdown="1">
+The available sizes include:
+
+- Extra small
+- Small
+- Medium
+- Large
+- Extra large
+</div>
+
+<div class="large_table" markdown="1">
+
+| Size | >= Min | < Max   |
+|:----:|:------:|:-------:|
+| xs   | 320px  | 480px   |
+| sm   | 480px  | 768px   |
+| md   | 768px  | 1024px  |
+| lg   | 1024px | 1280px  |
+| xl   | 1280px | &infin; |
+
+</div>
+
+## Common Devices
+<div class="section_text" markdown="1">
+For reference, here are the breakpoints that correspond to common devices.
+</div>
+
+<div class="large_table" markdown="1">
+
+| Apple Devices                  | Viewport Width | Breakpoint  |
+|:-------------------------------|:--------------:|:-----------:|
+| iPhone 4S (Portrait)           | 320px          | Extra small |
+| iPhone 5S (Portrait)           | 320px          | Extra small |
+| iPhone 6S (Portrait)           | 375px          | Extra small |
+| iPhone 6S Plus (Portrait)      | 414px          | Extra small |
+| iPhone 4S (Landscape)          | 480px          | Small       |
+| iPhone 5S (Landscape)          | 568px          | Small       |
+| iPhone 6S (Landscape)          | 667px          | Small       |
+| iPhone 6S Plus (Landscape)     | 736px          | Small       |
+| iPad Mini/iPad Air (Portrait)  | 768px          | Medium      |
+| iPad Mini/iPad Air (Landscape) | 1024px         | Large       |
+| iPad Pro (Portrait)            | 1024px         | Large       |
+| iPad Pro (Landscape)           | 1366px         | Extra large |
+
+
+| Android Phones                 | Viewport Width | Breakpoint  |
+|:-------------------------------|:--------------:|:-----------:|
+| Moto G/Moto X (Portrait)       | 360px          | Extra small |
+| Galaxy S5/S6 (Portrait)        | 360px          | Extra small |
+| Nexus 4 (Portrait)             | 384px          | Extra small |
+| Nexus 6 (Portrait)             | 411px          | Extra small |
+| LG G3 (Portrait)               | 480px          | Small       |
+| Galaxy Note 4 (Portrait)       | 480px          | Small       |
+| Moto G/Moto X (Landscape)      | 640px          | Small       |
+| Galaxy S5/S6 (Landscape)       | 640px          | Small       |
+| Nexus 4 (Landscape)            | 640px          | Small       |
+| Nexus 6 (Landscape)            | 731px          | Small       |
+| LG G3 (Landscape)              | 853px          | Medium      |
+| Galaxy Note 4 (Landscape)      | 853px          | Medium      |
+
+| Android Tablets                | Viewport Width | Breakpoint  |
+|:-------------------------------|:--------------:|:-----------:|
+| Nexus 7 (Portrait)             | 600px          | Small       |
+| Nexus 9 (Portrait)             | 768px          | Medium      |
+| Galaxy Tab 10 (Portrait)       | 800px          | Medium      |
+| Nexus 7 (Landscape)            | 960px          | Medium      |
+| Nexus 9 (Landscape)            | 1024px         | Large       |
+| Galaxy Tab 10 (Landscape)      | 1280px         | Extra large |
+
+</div>
