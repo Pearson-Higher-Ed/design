@@ -45,13 +45,16 @@
 		<header>Library</header>
 		{% assign components = (site.pages | where: "section", "Components") | sort:"title" %}
 		{% for page in components %}
-			<a class="component" href="{{site.baseurl}}{{page.url}}">
-				<span class="name">{{page.title}}</span>
-				<div class="data">
-					<span>Version {{page.version}}</span>
-					<span class="status">{{page.status}}</span>
-				</div>
-			</a>
+			{% if page.url contains 'beta' %}
+			{% else %}
+				<a class="component" href="{{site.baseurl}}{{page.url}}">
+					<span class="name">{{page.title}}</span>
+					<div class="data">
+						<span>Version {{page.version}}</span>
+						<span class="status">{{page.status}}</span>
+					</div>
+				</a>
+			{% endif %}
 		{% endfor %}
 	</div>
 
