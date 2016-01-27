@@ -141,15 +141,15 @@
   }
 
 // Block structure /////////////////////////////////////////////////////////////
-h2 {
-  clear: both;
-}
+  h2 {
+    clear: both;
+  }
 
-h2:before {
-  content: " ";
-  display: inline-block;
-  width: 100%;
-}
+  h2:before {
+    content: " ";
+    display: inline-block;
+    width: 100%;
+  }
 
 // Overview blocks /////////////////////////////////////////////////////////////
   .tagline p {
@@ -319,6 +319,37 @@ h2:before {
         font-weight: normal;
         font-style: italic;
       }
+    }
+  }
+
+  .large_table {
+    width: 100%;
+    @include for-device(lg) { width: 80%; }
+    @include for-device(xl) {
+      float: left;
+      padding-left: 4%;
+      width: 68%;
+    }
+
+    table {
+      width: 100%;
+
+      & + table {
+        margin-top: 20px;
+      }
+    }
+
+    td {
+      border: 1px solid #e6e6e6;
+      padding: 10px;
+    }
+
+    th {
+      padding: 10px;
+    }
+
+    tbody tr:hover {
+      background-color: #f2f2f2;
     }
   }
 
