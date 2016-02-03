@@ -2,8 +2,7 @@
 layout: component
 title: Typography
 section: Components
-redirect_from: "/docs/ui-components/typography/"
-version: 1.0-beta.1
+version: 1.0.0-beta.2
 status: active
 people:
   - role: Product Owner
@@ -41,12 +40,13 @@ This component provides standard typographic styles for the platform.
 Every instance of text should use a type style defined in this component. If you find a use case not covered by the styles here, make a request to modify this component. (Keeping all type styles in a single component makes it easy to maintain and update them.)
 </div>
 
-## Font Stack
-All textual elements use the following font stack:
+## Font Stacks
+All textual elements use the following font stacks:
 
-```
+~~~
 font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-```
+font-family: Monaco, 'Lucida Console', monospace;
+~~~
 
 ## Labels
 <div class="section_text" markdown="1">
@@ -173,6 +173,48 @@ Copy is more flexible in this regard that labels or titles. You can include any 
 </div>
 </div>
 
+### Lists
+<div class="section_text" markdown="1">
+Both ordered and unordered lists are supported with a nesting depth of three. These should be used to present content within a copy block, not for UI elements.
+</div>
+
+<div class="images">
+<div class="narrow_image" markdown="1">
+![](./assets/copy.lists.ordered.png)
+</div>
+
+<div class="narrow_image" markdown="1">
+![](./assets/copy.lists.unordered.png)
+</div>
+</div>
+
+### Code
+<div class="section_text" markdown="1">
+Blocks of code (typically `<pre>` tags) are styled on a dark background. (See also the inline elements `<code>` and `<kbd>`.)
+</div>
+
+<div class="images">
+<div class="narrow_image" markdown="1">
+![](./assets/copy.code.png)
+</div>
+</div>
+
+
+## Headings
+<div class="section_text" markdown="1">
+Headings pair with [copy](#copy) styles to delineate sections within blocks of content. They should not be used for UI elements (see [titles](#titles) instead).
+
+There are six different levels available and should be used in order.
+</div>
+
+<div class="images">
+<div class="wide_image" markdown="1">
+![](./assets/headings.png)
+
+These headings don't change size as the viewport narrows.
+</div>
+</div>
+
 
 ## Inline Elements
 <div class="section_text" markdown="1">
@@ -189,6 +231,7 @@ There are a number of inline elements which can be used to modify the other type
 * `<q>`
 * `<sub>, <sup>`
 * `<mark>`
+* `<code>, <kbd>`
 </div>
 
 <div class="images">
@@ -210,6 +253,365 @@ Some inline elements should be used only for semantic reasons and don't effect t
 * `<abbr>`
 </div>
 
-
 ## Redlines
-Download them [here](./assets/redlines.zip).
+
+### Labels
+
+#### Sizes
+<div class="section_text" markdown="1">
+
+Small
+: - 13px font-size
+  - 15px line-height
+
+Basic
+: - 14px font-size
+  - 16px line-height
+
+Large
+: - 16px font-size
+  - 18px line-height
+
+Bold
+: - 14px font-size
+  - 16px line-height
+  - bold font-weight
+
+</div>
+
+<div class="images">
+<div class="narrow_image" markdown="1">
+![](./assets/redlines.labels.regular.png)
+</div>
+</div>
+
+#### Colors
+<div class="section_text" markdown="1">
+
+Primary (Light)
+: - \#231F20
+
+Secondary (Light)
+: - \#565656
+
+Primary (Dark)
+: - \#FFFFFF
+  - light font-weight
+
+Secondary (Dark)
+: - \#AEAEAE
+  - light font-weight
+
+</div>
+
+<div class="images">
+<div class="narrow_image" markdown="1">
+![](./assets/redlines.labels.colors.light.png)
+</div>
+
+<div class="narrow_image" markdown="1">
+![](./assets/redlines.labels.colors.dark.png)
+</div>
+</div>
+
+### Titles
+
+#### Sizes
+<div class="section_text" markdown="1">
+
+Basic
+: - 22px font-size
+  - 28px line-height
+
+Large
+: - 24px font-size
+  - 30px line-height
+
+XL
+: - 30px font-size
+  - 36px line-height
+
+At narrow viewports (< 480px):
+
+Basic
+: - 18px font-size
+  - 22px line-height
+
+Large
+: - 20px font-size
+  - 24px line-height
+
+XL
+: - 22px font-size
+  - 28px line-height
+
+</div>
+
+<div class="images">
+<div class="narrow_image" markdown="1">
+![](./assets/redlines.titles.regular.png)
+Regular title sizes
+</div>
+
+<div class="narrow_image" markdown="1">
+![](./assets/redlines.titles.narrow.png)
+Title sizes for narrow viewports (< 480px)
+</div>
+</div>
+
+#### Color
+<div class="section_text" markdown="1">
+All titles are colored \#231F20.
+</div>
+
+### Copy
+
+#### Basic Body
+<div class="section_text" markdown="1">
+
+Font
+: - 16px font-size
+  - 22px line-height
+
+Color
+: - \#231F20
+
+</div>
+
+<div class="images">
+<div class="narrow_image" markdown="1">
+![](./assets/redlines.copy.body.png)
+</div>
+</div>
+
+
+#### Lead
+<div class="section_text" markdown="1">
+
+Font
+: - 20px font-size
+  - 28px line-height
+  - light font-weight
+
+Color
+: - \#231F20
+
+</div>
+
+<div class="images">
+<div class="wide_image" markdown="1">
+![](./assets/redlines.copy.lead.png)
+</div>
+</div>
+
+#### Narrow lead
+<div class="section_text" markdown="1">
+At narrow viewports (<480px) the lead styles become:
+
+Font
+: - 18px font-size
+  - 24px line-height
+  - thin font-weight
+
+Color
+: - \#231F20
+
+</div>
+
+<div class="images">
+<div class="narrow_image" markdown="1">
+![](./assets/redlines.copy.lead.narrow.png)
+</div>
+</div>
+
+
+#### Lists
+<div class="section_text" markdown="1">
+These lists should be used to communicate content within a copy block, not as UI elements.
+
+Font
+: - Use the same style as Basic Body copy
+
+Spacing
+: - 12px above and below a list
+  - 6px between list items
+
+Bullets
+: - Centered in a 14px box which is left aligned to the surrounding body copy
+  - 4px padding separates box from list content
+  - 8px left margin for child elements
+
+Numbers
+: - Right aligned in a 14px box which is left aligned to the surrounding body copy
+  - If the number is too large for a 14px box, expand the box to fit
+  - 4px padding separates box from list content
+  - 8px left margin for child elements
+
+
+Note: The expanding box behavior for ordered lists can be achieved with a `display: table` layout.
+
+</div>
+
+<div class="images">
+<div class="narrow_image" markdown="1">
+![](./assets/redlines.copy.lists.ordered.1.png)
+</div>
+
+<div class="narrow_image" markdown="1">
+![](./assets/redlines.copy.lists.unordered.1.png)
+</div>
+
+<div class="narrow_image" markdown="1">
+![](./assets/redlines.copy.lists.ordered.2.png)
+</div>
+
+<div class="narrow_image" markdown="1">
+![](./assets/redlines.copy.lists.unordered.2.png)
+</div>
+</div>
+
+#### Code
+<div class="section_text" markdown="1">
+
+Font
+: - Monospace font stack
+  - 14px font-size
+  - 20px line-height
+
+Color
+: - \#AEAEAE
+  - \#424242 background-color
+
+</div>
+
+<div class="images">
+<div class="narrow_image" markdown="1">
+![](./assets/redlines.copy.code.png)
+</div>
+</div>
+
+
+### Headers
+<div class="section_text" markdown="1">
+
+#### Fonts
+Level 1
+: - 24px font-size
+  - 30px line-height
+  - bold font-weight
+  - 2px bottom border, #A6A8AB
+  - \#231F20 color
+
+Level 2
+: - 20px font-size
+  - bold font-weight
+  - \#231F20 color
+
+Level 3
+: - 18px font-size
+  - bold font-weight
+  - \#231F20 color
+
+Level 4
+: - 16px font-size
+  - bold font-weight
+  - \#565656 color
+
+Level 5
+: - 16px font-size
+  - italic font-style
+  - \#565656 color
+
+Level 6
+: - 14px font-size
+  - italic font-style
+  - \#565656 color
+
+
+#### Spacing
+
+Header that follows a header
+: - 6px margin
+  - 40px if top header is Level 1
+
+Header that follows content
+: - 20px margin
+
+</div>
+
+<div class="images">
+<div class="wide_image" markdown="1">
+![](./assets/redlines.headings.png)
+</div>
+</div>
+
+
+### Inline Elements
+<div class="section_text" markdown="1">
+
+`<small>, <time>, <abbr>`
+: - Same as the 'Basic Text' label
+
+`<mark>`
+: - \#FDEC2E background-color
+  - Only use within Body Copy
+
+`<em>, <i>`
+: - italic font-style
+
+`<strong>, <b>`
+: - bold font-weight
+
+`<del>, <s>`
+: - line-through text-decoration
+  - \#565656 color on light backgrounds
+  - \#AEAEAE color on dark backgrounds
+
+`<ins>`
+: - underline text-decoration
+  - cap with '+' symbol
+
+`<sup>`
+: - vertical-align: baseline
+  - position: relative
+  - top: 0.2em
+  - font-size: 90%
+
+`<sub>`
+: - vertical-align: baseline
+  - position: relative
+  - top: -0.2em
+  - font-size: 90%
+
+`<q>`
+: - cap with quotes from user's locale
+
+`<code>, <kbd>`
+: - Monospace font stack
+  - \#E6E6E6 background-color
+  - 4px horizontal padding
+
+</div>
+
+<div class="images">
+<div class="narrow_image" markdown="1">
+![](./assets/redlines.inline.1.png)
+</div>
+
+<div class="narrow_image" markdown="1">
+![](./assets/redlines.inline.2.png)
+</div>
+</div>
+
+
+## Changelog
+
+### 1.0.0-beta.2
+- ADDED: Style for code blocks (e.g. `<pre>` tags)
+- ADDED: Style for `<code>` and `<kbd>` inline elements
+- ADDED: Heading styles
+- ADDED: Styles for ordered and unordered lists within copy
+- CHANGED: Redlines are now included directly in the page, rather than in a .zip file
+
+### [1.0.0-beta.1](./v1.0.0-beta.1)
+Initial version
