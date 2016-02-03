@@ -607,11 +607,11 @@ Header that follows content
 ## Changelog
 
 ### 1.0.0-beta.2
-- ADDED: Style for code blocks (e.g. `<pre>` tags)
-- ADDED: Style for `<code>` and `<kbd>` inline elements
-- ADDED: Heading styles
-- ADDED: Styles for ordered and unordered lists within copy
-- CHANGED: Redlines are now included directly in the page, rather than in a .zip file
+- ADDED: Style for [code blocks](./#code) (e.g. `<pre>` tags)
+- ADDED: Style for [`<code>` and `<kbd>` inline elements](./#inline-elements)
+- ADDED: [Heading](./#headings) styles
+- ADDED: Styles for [ordered and unordered lists](./#lists) within copy
+- CHANGED: [Redlines](./#redlines) are now included directly in the page, rather than in a .zip file
 
 ### [1.0.0-beta.1](./v1.0.0-beta.1)
 Initial version
