@@ -2,7 +2,7 @@
 layout: component
 title: Icons
 section: Components
-version: 1.0.0-beta.2
+version: 1.0.0-beta.1
 status: active
 people:
   - role: Product Owner
@@ -41,23 +41,17 @@ All icons should come from this component.
 Icons come from font-awesome and are currently limited to the following set:
 
 - check
-- times
-- times-circle
-- trash-o
 - chevron-down
 - chevron-up
-- chevron-right
-- chevron-left
-- thumb-tack
 - cog
 - envelope
-- search
 - plus-circle
-- calendar
-- file-o
-- info-circle
+- search
+- thumb-tack
+- times
+- time-circle
+- trash-o
 - users
-- user
 
 </div>
 
@@ -88,11 +82,3 @@ Just use the specified glyphs from Font Awesome and inherit the font-size of the
 
 A lone symbol should still be wrapped in the relevant type style (e.g. Basic Label).
 </div>
-
-## Changelog
-
-### 1.0.0-beta.2
-- ADDED: Additional icons, including user, calendar, info-circle, and file-o.
-
-### [1.0.0-beta.1](./v1.0.0-beta.1)
-Initial release
