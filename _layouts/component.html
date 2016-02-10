@@ -7,29 +7,29 @@
 
     <div class="article_container">
       <div class="article_header">
-        <h1>{{page.title}}</h1>
-        <p>Version {{page.version}} &bull; <span class="status">{{page.status}}</span></p>
+        <h1 class="pe-title pe-title--extra-large">{{page.title}}</h1>
+        <p class="pe-label pe-label--large">Version {{page.version}} &bull; <span class="status">{{page.status}}</span></p>
         <div class="article_info">
           <div class="people">
             {% for person in page.people %}
             <div class="person">
-              <div class="title">{{person.role}}</div>
-              <div><a href="mailto:{{person.email}}">{{person.name}}</a></div>
+              <div class="title pe-label pe-label--bold">{{person.role}}</div>
+              <div class="pe-label"><a href="mailto:{{person.email}}">{{person.name}}</a></div>
             </div>
             {% endfor %}
           </div>
 
           <div class="implementations">
-            <div class="title">Implementations</div>
+            <div class="title pe-label pe-label--bold">Implementations</div>
             {% for implementation in page.implementations %}
-            <div><a href="{{implementation.link}}">{{implementation.type}}</a></div>
+            <div class="pe-label"><a href="{{implementation.link}}">{{implementation.type}}</a></div>
             {% endfor %}
           </div>
 
           <div class="downloads">
-            <div class="title">Downloads</div>
+            <div class="title pe-label pe-label--bold">Downloads</div>
             {% for download in page.downloads %}
-            <div><a href="{{download.link}}" class="button">{{download.name}}</a></div>
+            <div class="pe-label"><a href="{{download.link}}" class="button">{{download.name}}</a></div>
             {% endfor %}
           </div>
         </div>
