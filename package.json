@@ -1,5 +1,7 @@
 {
   "name": "design",
   "private": true,
+  "dependencies": {
+    "pearson-elements": "pearson-higher-ed/elements#v0"
   }
 }

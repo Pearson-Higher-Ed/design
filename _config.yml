@@ -5,7 +5,10 @@ baseurl: /design
 permalink: pretty
 exclude: [scss, node_modules, bower.json, Gruntfile.js, package.json, README.md]
 markdown: kramdown
-sass_dir: _sass
+sass:
+  load_paths:
+    - _sass
+    - node_modules/pearson-elements/scss
 sections:
   - Components
 gems:

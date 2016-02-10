@@ -3,11 +3,11 @@
 ---
 
 body {
-  font-family: "open-sans";
+  // font-family: "open-sans";
 }
 
+@import "elements";
 @import "responsive";
-@import "normalize";
 @import "navigation";
 @import "alert";
 @import "home";
