@@ -22,6 +22,8 @@ All components listed in the Component Library must satisfy all the requirements
 
 G1: Components must reflect the needs of Pearson as a whole rather than just the needs of one product.
 
+*The best way to demonstrate compliance with this requirement is to mockup your component in use across a couple different products.*
+
 
 ## Consistency
 
@@ -34,9 +36,12 @@ C2: A component must not duplicate functionality found in the following componen
 - Colors
 - Typography
 - Buttons
-- More tbd
+- Breakpoints
+- Icons
 
-C3: A component must reflect the design principles and aesthetics defined in the Elemental Design Theory document at the time the component is approved for library membership.
+C3: A component should reflect the current overall design aesthetic in use across the next gen products (e.g. Console, ILP, Pi, Exchange).
+
+*NOTE: This requirement will be updated in the near future to specify that components must align with the rebranded visual aesthetic (currently in progress).*
 
 C4: A component must be versioned according to the Component Versioning Specification.
 
