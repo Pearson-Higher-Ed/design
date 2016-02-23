@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="core">
+  {% include header.html %}
+  <body>
+    {% include construction.html %}
+    {% include navigation.html %}
+
+    <div class="article_contaier">
+      <div class="article_header">
+        <h1 class="pe-title pe-title--extra-large">{{page.title}}</h1>
+        <p class="pe-label pe-label--large">Version {{page.version}} &bull; <span class="status">{{page.status}}</span></p>
+        <div class="article_info">
+          <div class="people">
+            {% for person in page.people %}
+            <div class="person">
+              <div class="title pe-label pe-label--bold">{{person.role}}</div>
+              <div class="pe-label"><a href="mailto:{{person.email}}">{{person.name}}</a></div>
+            </div>
+            {% endfor %}
+          </div>
+
+          <div class="implementations">
+            <div class="title pe-label pe-label--bold">Implementations</div>
+            {% for implementation in page.implementations %}
+            <div class="pe-label"><a href="{{implementation.link}}">{{implementation.type}}</a></div>
+            {% endfor %}
+          </div>
+
+          <div class="downloads">
+            <div class="title pe-label pe-label--bold">Downloads</div>
+            {% for download in page.downloads %}
+            <div class="pe-label"><a href="{{download.link}}" class="button">{{download.name}}</a></div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+
+      <div class="blocks">
+        <h2>Overview</h2>
+        <p class="pe-lead">{{page.tagline}}</p>
+        {% if page.description %}<p>{{description}}</p>{% endif %}
+
+        <ul class="feature_list">
+          {% for feature in page.features %}
+          <li>{{feature}}</li>
+          {% endfor %}
+        </ul>
+
+        <aside class="usage">{{page.usage_guidelines}}</aside>
+
+        {% for block in page.blocks %}
+        <div class="block">
+          {% case block.type %}
+
+          {% when 'section' %}
+          <h2>{{block.name}}</h2>
+
+          {% when 'two column' or 'two_column' %}
+          <div class="text">{{block.text | markdownify}}</div>
+          <div class="content">
+            {% for item in block.contents %}
+              {% case item.type %}
+
+              {% when 'wide image' %}
+              <div class="image wide">
+                <div class="media">
+                  <img src="{{item.src}}" />
+                </div>
+                <div class="caption">{{item.caption | markdownify}}</div>
+              </div>
+
+              {% when 'narrow image' %}
+              <div class="image narrow">
+                <div class="media">
+                  <img src="{{item.src}}" />
+                </div>
+                <div class="caption">{{item.caption | markdownify}}</div>
+              </div>
+
+              {% when 'table' %}
+              <div class="table">{{item.content | markdownify}}</div>
+              {% endcase %}
+            {% endfor %}
+          </div>
+
+          {% endcase %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>

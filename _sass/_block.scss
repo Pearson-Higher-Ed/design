@@ -1,0 +1,29 @@
+body {
+  background-color: #f6f6f6;
+}
+
+.block {
+  @include for-device(xs) {
+    width: 90%;
+    max-width: 370px;
+  }
+  @include for-device(md) {
+    width: 760px;
+    max-width: none;
+  }
+  @include for-device(lg) { width: 1000px; }
+  @include for-device(xl) { width: 1160px; }
+  margin: 0 auto;
+
+  &:after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+  }
+
+  + .block {
+    margin-top: 20px;
+  }
+
+  @import "blocks/two_column";
+}

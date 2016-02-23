@@ -1,0 +1,167 @@
+p {
+  margin: 0;
+}
+
+.text {
+  @include for-device(xs) {
+    width: 100%;
+    margin-bottom: 20px;
+    font: 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  @include for-device(md) {
+    width: 440px;
+    margin-left: 60px;
+  }
+  @include for-device(lg) {
+    width: 210px;
+    float: left;
+    font: 13px/16px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+  @include for-device(xl) {
+    width: 320px;
+    font: 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+
+  p + p {
+    margin-top: 12px;
+  }
+
+  h3 {
+    font: 16px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    margin: 0;
+
+    + p {
+      margin-top: 8px;
+    }
+  }
+
+  ul {
+    display: table;
+    table-layout: fixed;
+    padding: 0;
+  }
+
+  li {
+    display: table-row;
+
+    &:before {
+      content: "●";
+      display: table-cell;
+      text-align: center;
+      width: 14px;
+      padding-right: 4px;
+      font-size: 0.8em;
+      line-height: 20px;
+    }
+  }
+
+  li > ul {
+    margin-left: 8px;
+
+    & > li {
+      &:before {
+        content: "○";
+      }
+
+      & > ul li {
+        &:before {
+          content: "■";
+        }
+      }
+    }
+  }
+
+    dl:after {
+      content: "";
+      display: inline-block;
+      width: 100%;
+    }
+
+  dt {
+    border-top: 1px solid #e6e6e6;
+    width: 40%;
+    @include for-device(lg) {
+      font-style: italic;
+      width: 100%;
+    }
+    @include for-device(xl) {
+      font-style: normal;
+      width: 40%; }
+  }
+
+  dd {
+    width: 60%;
+    @include for-device(lg) { width: 100%; }
+    @include for-device(xl) { width: 60%; }
+  }
+
+  dt, dd {
+    float: left;
+    @include for-device(lg) { float: none; }
+    @include for-device(xl) { float: left; }
+    padding: 10px 0;
+    margin: 0;
+    font-size: 13px;
+    border-top: 1px solid #e6e6e6;
+    @include for-device(lg) { border-top: none; }
+    @include for-device(xl) { border-top: 1px solid #e6e6e6; }
+  }
+
+  dt:first-of-type,
+  dd:first-of-type {
+    padding-top: 0;
+    border-top: none;
+  }
+
+  dd + dt {
+    clear: both;
+  }
+}
+
+.content {
+  @include for-device(sm) {
+    width: 100%;
+  }
+  @include for-device(md) {
+    width: 760px;
+  }
+  @include for-device(lg) {
+    margin-left: 30px;
+    float: left;
+  }
+  @include for-device(xl) { margin-left: 70px; }
+
+  > div {
+    float: left;
+
+    & + div {
+      margin-top: 30px;
+    }
+  }
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  .caption {
+    // @include for-device(md) { margin-left: 60px; }
+    @include for-device(lg) { margin-left: 0; }
+    font: 13px/16px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-top: 6px;
+  }
+
+  .image.narrow {
+    max-width: 370px;
+  }
+
+  .image.narrow + .image.narrow:nth-of-type(2n+1) {
+    @include for-device(md) {
+      margin-left: 20px;
+    }
+  }
+}
