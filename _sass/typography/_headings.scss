@@ -1,0 +1,77 @@
+@mixin hl1 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  color: pe-color(pitch);
+  border-bottom: 2px solid pe-color(boring);
+
+  @include h-spacing;
+}
+
+@mixin hl2 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: bold;
+  color: pe-color(pitch);
+
+  @include h-spacing;
+}
+
+@mixin hl3 {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+  color: pe-color(pitch);
+
+  @include h-spacing;
+}
+
+@mixin hl4 {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  color: pe-color(gray-no-1);
+
+  @include h-spacing;
+}
+
+@mixin hl5 {
+  font-size: 16px;
+  font-weight: normal;
+  font-style: italic;
+  color: pe-color(gray-no-1);
+
+  @include h-spacing;
+}
+
+@mixin hl6 {
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+  color: pe-color(gray-no-1);
+
+  @include h-spacing;
+}
+
+// spacing
+
+@mixin h-spacing {
+  margin: 20px 0 6px 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  & + h1,
+  & + h2,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + h6 {
+    margin-top: 6px;
+  }
+}
