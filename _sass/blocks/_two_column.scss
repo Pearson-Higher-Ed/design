@@ -1,25 +1,28 @@
+// type resets
 p {
   margin: 0;
 }
 
+// left column
 .text {
-  @include for-device(xs) {
+  // TODO switch to using mixins or something for typography
+  @include pe-responsive-breakpoint(xs) {
     width: 100%;
     margin-bottom: 20px;
     font: 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
-  @include for-device(md) {
+  @include pe-responsive-breakpoint(md) {
     width: 440px;
     margin-left: 60px;
   }
-  @include for-device(lg) {
+  @include pe-responsive-breakpoint(lg) {
     width: 210px;
     float: left;
     font: 13px/16px 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin-bottom: 0;
     margin-left: 0;
   }
-  @include for-device(xl) {
+  @include pe-responsive-breakpoint(xl) {
     width: 320px;
     font: 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
@@ -29,111 +32,28 @@ p {
     margin-top: 12px;
   }
 
-  h3 {
-    font: 16px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    margin: 0;
+  h3 { @include hl3; }
+  h4 { @include hl4; }
+  h5 { @include hl5; }
+  h6 { @include hl6; }
 
-    + p {
-      margin-top: 8px;
-    }
+  & > ul {
+    @include pe-ulist;
   }
 
-  ul {
-    display: table;
-    table-layout: fixed;
-    padding: 0;
-  }
-
-  li {
-    display: table-row;
-
-    &:before {
-      content: "●";
-      display: table-cell;
-      text-align: center;
-      width: 14px;
-      padding-right: 4px;
-      font-size: 0.8em;
-      line-height: 20px;
-    }
-  }
-
-  li > ul {
-    margin-left: 8px;
-
-    & > li {
-      &:before {
-        content: "○";
-      }
-
-      & > ul li {
-        &:before {
-          content: "■";
-        }
-      }
-    }
-  }
-
-    dl:after {
-      content: "";
-      display: inline-block;
-      width: 100%;
-    }
-
-  dt {
-    border-top: 1px solid #e6e6e6;
-    width: 40%;
-    @include for-device(lg) {
-      font-style: italic;
-      width: 100%;
-    }
-    @include for-device(xl) {
-      font-style: normal;
-      width: 40%; }
-  }
-
-  dd {
-    width: 60%;
-    @include for-device(lg) { width: 100%; }
-    @include for-device(xl) { width: 60%; }
-  }
-
-  dt, dd {
-    float: left;
-    @include for-device(lg) { float: none; }
-    @include for-device(xl) { float: left; }
-    padding: 10px 0;
-    margin: 0;
-    font-size: 13px;
-    border-top: 1px solid #e6e6e6;
-    @include for-device(lg) { border-top: none; }
-    @include for-device(xl) { border-top: 1px solid #e6e6e6; }
-  }
-
-  dt:first-of-type,
-  dd:first-of-type {
-    padding-top: 0;
-    border-top: none;
-  }
-
-  dd + dt {
-    clear: both;
+  dl {
+    @include redline-list;
   }
 }
 
 .content {
-  @include for-device(sm) {
-    width: 100%;
-  }
-  @include for-device(md) {
-    width: 760px;
-  }
-  @include for-device(lg) {
+  @include pe-responsive-breakpoint(sm) { width: 100%; }
+  @include pe-responsive-breakpoint(md) { width: 760px; }
+  @include pe-responsive-breakpoint(lg) {
     margin-left: 30px;
     float: left;
   }
-  @include for-device(xl) { margin-left: 70px; }
+  @include pe-responsive-breakpoint(xl) { margin-left: 70px; }
 
   > div {
     float: left;
@@ -146,12 +66,12 @@ p {
   img {
     width: 100%;
     display: block;
+    background-color: pe-color(white);
   }
 
   .caption {
-    // @include for-device(md) { margin-left: 60px; }
-    @include for-device(lg) { margin-left: 0; }
-    font: 13px/16px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    @include pe-responsive-breakpoint(lg) { margin-left: 0; }
+    @extend .pe-label, .pe-label--small;
     margin-top: 6px;
   }
 
@@ -160,7 +80,7 @@ p {
   }
 
   .image.narrow + .image.narrow:nth-of-type(2n+1) {
-    @include for-device(md) {
+    @include pe-responsive-breakpoint(md) {
       margin-left: 20px;
     }
   }

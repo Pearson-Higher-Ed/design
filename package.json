@@ -2,6 +2,6 @@
   "name": "design",
   "private": true,
   "dependencies": {
-    "pearson-elements": "pearson-higher-ed/elements#v0"
+    "pearson-elements": "pearson-higher-ed/elements#DES-151"
   }
 }

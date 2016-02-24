@@ -1,9 +1,9 @@
 body.home {
-  background-color: #D4EAE4;
+  background-color: pe-color(off-white);
 }
 
 .hero {
-  background-color: #D2DB0E;
+  background-color: pe-color(brightly-lit);
   text-align: center;
   padding: 50px 0;
 
@@ -12,23 +12,23 @@ body.home {
   }
 
   .welcome {
-    font-family: lobster;
-    font-size: 64px;
-    color: #003057;
+    font-size: 48px;
+    font-weight: normal;
+    color: pe-color(gutenberg-black);
   }
 
   .to {
     font-size: 30px;
     font-weight: normal;
-    color: #003057;
+    color: pe-color(pitch);
     margin: 10px 0 0 0;
     display: inline-block;
   }
 
   .name {
-    font-size: 56px;
+    font-size: 90px;
     font-weight: 100;
-    color: #003057;
+    color: pe-color(hyperdrive);
   }
 }
 
@@ -52,7 +52,7 @@ body.home {
     width: 80%;
     padding: 50px 10% 0;
   }
-  background-color: #D4EAE4;
+  background-color: pe-color(off-white);
 
   &:after {
     content: "";
@@ -115,7 +115,7 @@ body.home {
     width: 80%;
     padding: 50px 10% 0;
   }
-  background-color: #D4EAE4;
+  background-color: pe-color(off-white);
 
   &:after {
     content: "";

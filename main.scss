@@ -2,18 +2,23 @@
 # So Jekyll sees this file
 ---
 
-body {
-  // font-family: "open-sans";
-}
-
 @import "elements";
+
+@import "utility";
 @import "responsive";
+@import "typography/lists";
+@import "typography/headings";
+
 @import "navigation";
 @import "alert";
 @import "home";
 @import "article_body";
 @import "article_typography";
 @import "block";
+
+body {
+  background-color: pe-color('off-white');
+}
 
 .article_body {
   width: 50%;

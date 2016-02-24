@@ -1,0 +1,5 @@
+h2 {
+  // @extend .pe-title, .pe-title--extra-large;
+  @include hl1;
+  margin: 0;
+}

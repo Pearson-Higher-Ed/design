@@ -1,12 +1,12 @@
 .article_container {
   margin: 0 auto 20px;
   width: 90%;
-  @include for-device(sm) { width: 70%; }
-  @include for-device(md) { width: 90%; }
+  @include pe-responsive-breakpoint(sm) { width: 70%; }
+  @include pe-responsive-breakpoint(md) { width: 90%; }
 
   &:after {
     content: "";
-    display: inline-block;
+    display: table;
     width: 100%;
   }
 
@@ -106,8 +106,9 @@
     float: left;
     list-style-type: none;
     padding: 0;
-    font-size: 20px;
     margin-top: 20px;
+    margin-bottom: 40px;
+    @extend .pe-title;
 
     li {
       padding: 0;
@@ -135,36 +136,37 @@
 // Block structure /////////////////////////////////////////////////////////////
   h2 {
     clear: both;
+    @extend .pe-title, .pe-title--extra-large;
   }
 
   h2:before {
     content: " ";
-    display: inline-block;
+    display: table;
     width: 100%;
   }
 
 // Overview blocks /////////////////////////////////////////////////////////////
   .tagline p {
     @extend .pe-lead;
-    @include for-device(md) { width: 100%; }
-    @include for-device(lg) { width: 80%; }
-    @include for-device(xl) { width: 70%; }
+    @include pe-responsive-breakpoint(md) { width: 100%; }
+    @include pe-responsive-breakpoint(lg) { width: 80%; }
+    @include pe-responsive-breakpoint(xl) { width: 70%; }
   }
 
   .description {
     margin-bottom: 20px;
-    @include for-device(md) {
+    @include pe-responsive-breakpoint(md) {
       margin-bottom: 40px;
       width: 100%;
     }
-    @include for-device(lg) { width: 80%; }
-    @include for-device(xl) { width: 70%; }
+    @include pe-responsive-breakpoint(lg) { width: 80%; }
+    @include pe-responsive-breakpoint(xl) { width: 70%; }
 
     p {
       margin: 0;
       font-size: 16px;
       line-height: 24px;
-      @include for-device(md) {
+      @include pe-responsive-breakpoint(md) {
         font-size: 18px;
         line-height: 28px;
       }
@@ -177,42 +179,42 @@
 
   .feature_list {
     width: 100%;
+    @extend .pe-label, .pe-label--large;
     margin-bottom: 20px;
-    @include for-device(md) {
+    @include pe-responsive-breakpoint(md to lg) {
       width: 48%;
       margin-bottom: 0;
     }
-    @include for-device(xl) { width: 28%; }
+    @include pe-responsive-breakpoint(xl) { width: 28%; }
     float: left;
 
     &:before {
       content: "Feature Summary";
-      font-weight: bold;
-      font-size: 18px;
+      @extend .pe-title;
       display: block;
       margin-bottom: 6px;
     }
   }
 
   .usage {
+    @extend .pe-label, .pe-label--large;
     width: 100%;
-    @include for-device(md) {
+    @include pe-responsive-breakpoint(md) {
       margin-left: 4%;
       width: 48%;
     }
-    @include for-device(xl) { width: 38%; }
+    @include pe-responsive-breakpoint(xl) { width: 28%; }
     float: left;
 
-    background-color: #f6f6f6;
-    border-top: 12px solid #aaa;
-    box-sizing: border-box;
-    padding: 10px 15px;
+    // background-color: #f6f6f6;
+    // box-sizing: border-box;
+    // padding: 10px 15px;
 
     &:before {
       content: "When to Use This Component";
-      font-weight: bold;
-      font-size: 18px;
+      @extend .pe-title;
       display: block;
+      margin-bottom: 6px;
     }
 
     p {
@@ -230,23 +232,25 @@
   }
 
   .section_text {
+    @extend .pe-label;
+    line-height: 18px;
     margin-bottom: 40px;
-    @include for-device(md) {
+    @include pe-responsive-breakpoint(md) {
       width: 70%;
     }
-    @include for-device(lg) {
+    @include pe-responsive-breakpoint(lg) {
       width: 48%;
     }
-    @include for-device(xl) {
+    @include pe-responsive-breakpoint(xl) {
       margin-bottom: 0;
       float: left;
       width: 28%;
     }
 
-    p {
-      font-size: 15px;
-      line-height: 20px;
-    }
+    // p {
+    //   font-size: 15px;
+    //   line-height: 20px;
+    // }
 
     h4 {
       clear: both;
@@ -263,7 +267,7 @@
 
     dl:after {
       content: "";
-      display: inline-block;
+      display: table;
       width: 100%;
     }
 
@@ -279,7 +283,7 @@
       float: left;
       padding: 10px 0;
       margin: 0;
-      font-size: 13px;
+      @extend .pe-label, .pe-label--small;
       border-top: 1px solid #e6e6e6;
     }
 
@@ -310,8 +314,8 @@
 
   .large_table {
     width: 100%;
-    @include for-device(lg) { width: 80%; }
-    @include for-device(xl) {
+    @include pe-responsive-breakpoint(lg) { width: 80%; }
+    @include pe-responsive-breakpoint(xl) {
       float: left;
       padding-left: 4%;
       width: 68%;
@@ -340,8 +344,8 @@
   }
 
   .images {
-    @include for-device(lg) { width: 80%; }
-    @include for-device(xl) {
+    @include pe-responsive-breakpoint(lg) { width: 80%; }
+    @include pe-responsive-breakpoint(xl) {
       float: left;
       padding-left: 4%;
       width: 68%;
@@ -366,6 +370,7 @@
     img {
       width: 100%;
       box-sizing: border-box;
+      background-color: white;
     }
 
     .narrow_image {

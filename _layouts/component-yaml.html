@@ -6,55 +6,77 @@
     {% include navigation.html %}
 
     <div class="article_contaier">
-      <div class="article_header">
-        <h1 class="pe-title pe-title--extra-large">{{page.title}}</h1>
-        <p class="pe-label pe-label--large">Version {{page.version}} &bull; <span class="status">{{page.status}}</span></p>
-        <div class="article_info">
-          <div class="people">
-            {% for person in page.people %}
-            <div class="person">
-              <div class="title pe-label pe-label--bold">{{person.role}}</div>
-              <div class="pe-label"><a href="mailto:{{person.email}}">{{person.name}}</a></div>
+      <div class="blocks">
+        <div class="block article_header">
+          <h1 class="pe-title pe-title--extra-large">{{page.title}}</h1>
+          <p class="pe-label pe-label--large">Version {{page.version}} &bull; <span class="status">{{page.status}}</span></p>
+        </div>
+
+        <div class="block overview">
+          <div>
+            <p class="pe-lead tagline">{{page.tagline}}</p>
+            {% if page.description %}<p>{{description}}</p>{% endif %}
+
+            <div class="info">
+              <div class="feature_list">
+                <h3>Feature List</h3>
+                <ul>
+                  {% for feature in page.features %}
+                  <li>{{feature}}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+
+              <div class="usage">
+                <h3>Usage Guidelines</h3>
+                {{page.usage_guidelines | markdownify}}
+              </div>
             </div>
-            {% endfor %}
+
+            <div class="article_info">
+              <div class="people">
+                {% for person in page.people %}
+                <div class="person">
+                  <div class="title pe-label pe-label--bold">{{person.role}}</div>
+                  <div class="pe-label"><a href="mailto:{{person.email}}">{{person.name}}</a></div>
+                </div>
+                {% endfor %}
+              </div>
+
+              <div class="implementations">
+                <div class="title pe-label pe-label--bold">Implementations</div>
+                {% for implementation in page.implementations %}
+                <div class="pe-label"><a href="{{implementation.link}}">{{implementation.type}}</a></div>
+                {% endfor %}
+              </div>
+
+              <div class="downloads">
+                <div class="title pe-label pe-label--bold">Downloads</div>
+                {% for download in page.downloads %}
+                <div class="pe-label"><a href="{{download.link}}" class="button">{{download.name}}</a></div>
+                {% endfor %}
+              </div>
+            </div>
           </div>
 
-          <div class="implementations">
-            <div class="title pe-label pe-label--bold">Implementations</div>
-            {% for implementation in page.implementations %}
-            <div class="pe-label"><a href="{{implementation.link}}">{{implementation.type}}</a></div>
-            {% endfor %}
-          </div>
-
-          <div class="downloads">
-            <div class="title pe-label pe-label--bold">Downloads</div>
-            {% for download in page.downloads %}
-            <div class="pe-label"><a href="{{download.link}}" class="button">{{download.name}}</a></div>
-            {% endfor %}
+          <div class="toc">
+            <div class="pe-label pe-label--bold">Table of Contents</div>
+            <ul>
+              {% for heading in page.blocks %}
+                {% if heading.type == 'section' %}
+                <li><a href="#{{heading.name | slugify}}">{{heading.name}}</a></li>
+                {% endif %}
+              {% endfor %}
+            </ul>
           </div>
         </div>
-      </div>
-
-
-      <div class="blocks">
-        <h2>Overview</h2>
-        <p class="pe-lead">{{page.tagline}}</p>
-        {% if page.description %}<p>{{description}}</p>{% endif %}
-
-        <ul class="feature_list">
-          {% for feature in page.features %}
-          <li>{{feature}}</li>
-          {% endfor %}
-        </ul>
-
-        <aside class="usage">{{page.usage_guidelines}}</aside>
 
         {% for block in page.blocks %}
         <div class="block">
           {% case block.type %}
 
           {% when 'section' %}
-          <h2>{{block.name}}</h2>
+          <h2 id="{{block.name | slugify}}">{{block.name}}</h2>
 
           {% when 'two column' or 'two_column' %}
           <div class="text">{{block.text | markdownify}}</div>

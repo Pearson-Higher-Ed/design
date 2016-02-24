@@ -1,4 +1,7 @@
 .article_content {
+  &.article_body {
+    margin-top: 30px;
+  }
 
   h2 {
     @extend .pe-title;
