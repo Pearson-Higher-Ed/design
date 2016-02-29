@@ -89,7 +89,7 @@
                 <div class="media">
                   <img src="{{item.src}}" />
                 </div>
-                <div class="caption">{{item.caption | markdownify}}</div>
+                {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
               </div>
 
               {% when 'narrow image' %}
@@ -97,7 +97,7 @@
                 <div class="media">
                   <img src="{{item.src}}" />
                 </div>
-                <div class="caption">{{item.caption | markdownify}}</div>
+                {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
               </div>
 
               {% when 'table' %}
