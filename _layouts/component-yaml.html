@@ -102,6 +102,9 @@
 
               {% when 'table' %}
               <div class="table">{{item.content | markdownify}}</div>
+
+              {% when 'code' %}
+              <pre class="pe-code">{{item.content}}</pre>
               {% endcase %}
             {% endfor %}
           </div>

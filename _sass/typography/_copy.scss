@@ -1,0 +1,7 @@
+@mixin pe-code {
+  @include pe-copy-small;
+  font-family: monospace;
+  color: #AEAEAE;
+  background-color: #424242;
+  padding: 10px 10px 10px 20px;
+}

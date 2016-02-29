@@ -32,14 +32,16 @@ blocks:
   - type: section
     name: Font Stacks
 
-  - type: one column
+  - type: two column
     text: |
       All textual elements use the following font stacks:
+    contents:
+      - type: code
+        content: |
+          font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+          font-family: Monaco, 'Lucida Console', monospace;
 
-      ~~~
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      font-family: Monaco, 'Lucida Console', monospace;
-      ~~~
+          var test = 3;
 
   - type: section
     name: Labels
