@@ -35,6 +35,15 @@
     }
   }
 
+  .description {
+    width: 100%;
+    margin: 20px 0 40px;
+    @include pe-copy;
+    @include pe-responsive-breakpoint(md) {
+      width: 760px;
+    }
+  }
+
   .info {
     margin: 20px 0;
     @include clearfix;

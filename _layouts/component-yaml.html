@@ -15,7 +15,7 @@
         <div class="block overview">
           <div>
             <p class="pe-lead tagline">{{page.tagline}}</p>
-            {% if page.description %}<p>{{description}}</p>{% endif %}
+            {% if page.description %}<div class="description">{{page.description | markdownify}}</div>{% endif %}
 
             <div class="info">
               <div class="feature_list">
