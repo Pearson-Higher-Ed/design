@@ -9,7 +9,7 @@ p {
   @include pe-responsive-breakpoint(xs) {
     width: 100%;
     margin-bottom: 20px;
-    font: 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    @include pe-copy-small;
   }
   @include pe-responsive-breakpoint(md) {
     width: 440px;
@@ -18,13 +18,13 @@ p {
   @include pe-responsive-breakpoint(lg) {
     width: 210px;
     float: left;
-    font: 13px/16px 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin-bottom: 0;
     margin-left: 0;
+    @include pe-label-small;
   }
   @include pe-responsive-breakpoint(xl) {
     width: 320px;
-    font: 14px/20px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    @include pe-copy-small;
   }
 
 
@@ -67,7 +67,7 @@ p {
 
   .caption {
     @include pe-responsive-breakpoint(lg) { margin-left: 0; }
-    @extend .pe-label, .pe-label--small;
+    @include pe-label-small;
     margin-top: 6px;
   }
 
@@ -105,5 +105,10 @@ p {
     @include pe-responsive-breakpoint(md) {
       margin-left: 20px;
     }
+  }
+
+  pre {
+    margin: 0;
+    @include pe-code;
   }
 }

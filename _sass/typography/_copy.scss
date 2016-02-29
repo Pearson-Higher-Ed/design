@@ -1,3 +1,9 @@
+@mixin pe-copy-small {
+  @include pe-copy;
+  font-size: 14px;
+  line-height: 20px;
+}
+
 @mixin pe-code {
   @include pe-copy-small;
   font-family: monospace;

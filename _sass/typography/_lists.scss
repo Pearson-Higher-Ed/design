@@ -25,13 +25,12 @@
       text-align: center;
       width: 14px;
       padding-right: 4px;
-      // font-size: 0.8em;
-      // vertical-align: baseline;
     }
 
     & > ul {
       margin-left: 8px;
       margin-top: 6px !important;
+      padding: 0;
 
       & > li {
         &:before {
@@ -71,6 +70,9 @@
 
     ul {
       margin: 0;
+      li + li {
+        margin-top: 8px;
+      }
     }
   }
 
@@ -80,7 +82,7 @@
     @include pe-responsive-breakpoint(xl) { float: left; }
     padding: 10px 0;
     margin: 0;
-    font-size: 13px;
+    @include pe-label-small;
     border-top: 1px solid pe-color(hairline-gray);
     @include pe-responsive-breakpoint(lg) { border-top: none; }
     @include pe-responsive-breakpoint(xl) { border-top: 1px solid pe-color(hairline-gray); }
