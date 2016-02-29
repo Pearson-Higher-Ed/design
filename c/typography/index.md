@@ -1,5 +1,5 @@
 ---
-layout: component
+layout: component-yaml
 title: Typography
 section: Components
 version: 1.0.0-beta.2
@@ -16,6 +16,405 @@ people:
 implementations:
   - type: Origami
     link: https://origami.pearsoned.com/registry/components/o-type
+
+tagline: This component provides standard typographic styles for the platform.
+features:
+  - Single collection of all typographic styles
+  - Label styles for UI messages
+  - Title styles for UI headings
+  - Copy styles for content
+  - Inline styles (links, super/sub-script, etc.)
+  - Meets accessibility contrast requirements
+usage_guidelines: |
+  Every instance of text should use a type style defined in this component. If you find a use case not covered by the styles here, make a request to modify this component. (Keeping all type styles in a single component makes it easy to maintain and update them.)
+
+blocks:
+  - type: section
+    name: Font Stacks
+
+  - type: one column
+    text: |
+      All textual elements use the following font stacks:
+
+      ~~~
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-family: Monaco, 'Lucida Console', monospace;
+      ~~~
+
+  - type: section
+    name: Labels
+
+  - type: two column
+    text: |
+      Much of the typography used in a web application consists of short names, labels, or single line bits of content. For example, in Console the course tile displays information like instructor names and course dates with labels.
+    contents:
+      - type: wide image
+        src: ./assets/label.example.png
+        caption: An example of labels in use on the Console course tile
+
+  - type: two column
+    text: |
+      ### Size Variants
+      There are four different sizes of label, *Basic*, *Small*, *Large*, and *Bold*:
+
+      Labels should primarily be used in single line scenarios. Make a particular effort to avoid using bold labels in a multi-line manner.
+    contents:
+      - type: narrow image
+        src: ./assets/labels.regular.png
+        caption: The four label sizes
+
+  - type: two column
+    text: |
+      ### Color Variants
+      Labels come in two colors, *Primary* and *Secondary*. There is an inverse palette available as well.
+    contents:
+      - type: narrow image
+        src: ./assets/labels.colors.png
+        caption: Standard colors
+      - type: narrow image
+        src: ./assets/labels.inverse.png
+        caption: Inverse colors
+
+  - type: two column
+    text: |
+      ### Allowed Inline Elements
+      In general, labels should not be styled beyond the basic styles listed above. If necessary, stick to the following list of inline elements.
+
+      * `<em>, <i>`
+      * `<a>`
+      * `<small>`
+      * `<time>`
+      * `<abbr>`
+
+  - type: section
+    name: Titles
+
+  - type: two column
+    text: |
+      Titles are very similar to labels except they demarcate a logical section or container of content. In the previous example, the course name would be a title.
+    contents:
+      - type: wide image
+        src: ./assets/title.example.png
+        caption: Standard colors
+
+  - type: two column
+    text: |
+      ### Size Variants
+      There are three different sizes of title: *Basic*, *Large*, and *Extra Large*. These sizes will automatically scale down in narrow viewports.
+    contents:
+      - type: wide image
+        src: ./assets/titles.sizes.png
+        caption: |
+          Standard title sizes, multiline versions, and the responsive sizes used when the viewport is narrower.
+
+  - type: two column
+    text: |
+      ### Allowed Inline Elements
+      In general, titles should not be styled beyond the basic styles listed above. If necessary, stick to the following list of inline elements.
+
+      * `<em>, <i>`
+      * `<small>`
+      * `<time>`
+      * `<abbr>`
+
+
+
+
+
+  - type: section
+    name: Copy
+
+  - type: two column
+    text: |
+      When you have a chunk of content to display, use one of these styles.
+
+  - type: two column
+    text: |
+      ### Basic Body
+      Most regular content will use the *Basic Body* style.
+    contents:
+      - type: narrow image
+        src: ./assets/copy.basic.png
+
+  - type: two column
+    text: |
+      ### Lead Variant
+      There is also a *Lead* variant which can be used for the first paragraph of a message or as part of a hero block for marketing materials.
+
+      It will automatically scale down for narrow viewports as well.
+    contents:
+      - type: wide image
+        src: ./assets/copy.lead.png
+      - type: narrow image
+        src: ./assets/copy.lead.narrow.png
+
+  - type: two column
+    text: |
+      ### Lists
+      Both ordered and unordered lists are supported with a nesting depth of three. These should be used to present content within a copy block, not for UI elements.
+    contents:
+      - type: narrow image
+        src: ./assets/copy.lists.ordered.png
+      - type: narrow image
+        src: ./assets/copy.lists.unordered.png
+
+  - type: two column
+    text: |
+      ### Code
+      Blocks of code (typically `<pre>` tags) are styled on a dark background. (See also the inline elements `<code>` and `<kbd>`.)
+    contents:
+      - type: narrow image
+        src: ./assets/copy.code.png
+
+  - type: two column
+    text: |
+      ### Allowed Inline Elements
+      Copy is more flexible in this regard that labels or titles. You can include any of the inline elements covered by this component.
+
+  - type: section
+    name: Headings
+
+  - type: two column
+    text: |
+      Headings pair with [copy](#copy) styles to delineate sections within blocks of content. They should not be used for UI elements (see [titles](#titles) instead).
+
+      There are six different levels available and should be used in order.
+    contents:
+      - type: wide image
+        src: ./assets/headings.png
+        caption: These headings don't change size as the viewport narrows.
+
+  - type: section
+    name: Inline Elements
+
+  - type: two column
+    text: |
+      There are a number of inline elements which can be used to modify the other type styles (see the list of allowed inline elements for each type style).
+
+  - type: two column
+    text: |
+      ### Basic Elements
+
+      * `<a>`
+      * `<em>, <i>`
+      * `<strong>, <b>`
+      * `<u>`
+      * `<del>, <s>`
+      * `<ins>`
+      * `<q>`
+      * `<sub>, <sup>`
+      * `<mark>`
+      * `<code>, <kbd>`
+    contents:
+      - type: narrow image
+        src: ./assets/inline.1.png
+      - type: narrow image
+        src: ./assets/inline.2.png
+
+  - type: two column
+    text: |
+      ### Non-visible Elements
+      Some inline elements should be used only for semantic reasons and don't effect the visual style. These include:
+
+      * `<small>` (note: this element is used to represent side-comments and small print, including copyright and legal text, independent of its styled presentation)
+      * `<time>`
+      * `<abbr>`
+
+  - type: section
+    name: Redlines
+
+  - type: two column
+    text: |
+      ### Labels
+
+  - type: two column
+    text: |
+      #### Sizes
+      <div class="section_text" markdown="1">
+
+      Small
+      : - 13px font-size
+        - 15px line-height
+
+      Basic
+      : - 14px font-size
+        - 16px line-height
+
+      Large
+      : - 16px font-size
+        - 18px line-height
+
+      Bold
+      : - 14px font-size
+        - 16px line-height
+        - bold font-weight
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.labels.regular.png
+
+  - type: two column
+    text: |
+      #### Colors
+      Primary (Light)
+      : - \#231F20
+
+      Secondary (Light)
+      : - \#565656
+
+      Primary (Dark)
+      : - \#FFFFFF
+        - light font-weight
+
+      Secondary (Dark)
+      : - \#AEAEAE
+        - light font-weight
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.labels.colors.light.png
+      - type: narrow image
+        src: ./assets/redlines.labels.colors.dark.png
+
+  - type: two column
+    text: |
+      ### Titles
+
+  - type: two column
+    text: |
+      #### Sizes
+      Basic
+      : - 22px font-size
+        - 28px line-height
+
+      Large
+      : - 24px font-size
+        - 30px line-height
+
+      XL
+      : - 30px font-size
+        - 36px line-height
+
+      At narrow viewports (< 480px):
+
+      Basic
+      : - 18px font-size
+        - 22px line-height
+
+      Large
+      : - 20px font-size
+        - 24px line-height
+
+      XL
+      : - 22px font-size
+        - 28px line-height
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.titles.regular.png
+        caption: Regular title sizes
+      - type: narrow image
+        src: ./assets/redlines.titles.narrow.png
+        caption: Title sizes for narrow viewports (< 480px)
+
+  - type: two column
+    text: |
+      #### Color
+      All titles are colored \#231F20.
+
+  - type: two column
+    text: |
+      ### Copy
+
+  - type: two column
+    text: |
+      #### Basic Body
+      Font
+      : - 16px font-size
+        - 22px line-height
+
+      Color
+      : - \#231F20
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.copy.body.png
+
+  - type: two column
+    text: |
+      #### Lead
+      Font
+      : - 20px font-size
+        - 28px line-height
+        - light font-weight
+
+      Color
+      : - \#231F20
+    contents:
+      - type: wide image
+        src: ./assets/redlines.copy.lead.png
+
+  - type: two column
+    text: |
+      #### Narrow Lead
+      At narrow viewports (<480px) the lead styles become:
+
+      Font
+      : - 18px font-size
+        - 24px line-height
+        - thin font-weight
+
+      Color
+      : - \#231F20
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.copy.lead.narrow.png
+
+  - type: two column
+    text: |
+      #### Lists
+      These lists should be used to communicate content within a copy block, not as UI elements.
+
+      Font
+      : - Use the same style as Basic Body copy
+
+      Spacing
+      : - 12px above and below a list
+        - 6px between list items
+
+      Bullets
+      : - Centered in a 14px box which is left aligned to the surrounding body copy
+        - 4px padding separates box from list content
+        - 8px left margin for child elements
+
+      Numbers
+      : - Right aligned in a 14px box which is left aligned to the surrounding body copy
+        - If the number is too large for a 14px box, expand the box to fit
+        - 4px padding separates box from list content
+        - 8px left margin for child elements
+
+
+      Note: The expanding box behavior for ordered lists can be achieved with a `display: table` layout.
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.copy.lists.ordered.1.png
+      - type: narrow image
+        src: ./assets/redlines.copy.lists.unordered.1.png
+      - type: narrow image
+        src: ./assets/redlines.copy.lists.ordered.2.png
+      - type: narrow image
+        src: ./assets/redlines.copy.lists.unordered.2.png
+
+  - type: two column
+    text: |
+      #### Code
+      Font
+      : - Monospace font stack
+        - 14px font-size
+        - 20px line-height
+
+      Color
+      : - \#AEAEAE
+        - \#424242 background-color
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.copy.code.png
 ---
 
 * TOC here
@@ -23,472 +422,6 @@ implementations:
 
 
 ## Overview
-<div markdown="1" class="tagline">
-This component provides standard typographic styles for the platform.
-</div>
-
-<div markdown="1" class="feature_list">
-- Single collection of all typographic styles
-- Label styles for UI messages
-- Title styles for UI headings
-- Copy styles for content
-- Inline styles (links, super/sub-script, etc.)
-- Meets accessibility contrast requirements
-</div>
-
-<div markdown="1" class="usage">
-Every instance of text should use a type style defined in this component. If you find a use case not covered by the styles here, make a request to modify this component. (Keeping all type styles in a single component makes it easy to maintain and update them.)
-</div>
-
-## Font Stacks
-All textual elements use the following font stacks:
-
-~~~
-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-font-family: Monaco, 'Lucida Console', monospace;
-~~~
-
-## Labels
-<div class="section_text" markdown="1">
-Much of the typography used in a web application consists of short names, labels, or single line bits of content. For example, in Console the course tile displays information like instructor names and course dates with labels.
-</div>
-
-<div class="images">
-<div class="wide_image" markdown="1">
-![](./assets/label.example.png)
-
-An example of labels in use on the Console course tile
-</div>
-</div>
-
-### Size Variants
-<div class="section_text" markdown="1">
-There are four different sizes of label, *Basic*, *Small*, *Large*, and *Bold*:
-
-Labels should primarily be used in single line scenarios. Make a particular effort to avoid using bold labels in a multi-line manner.
-</div>
-
-<div class="images">
-<div class="narrow_image" markdown="1">
-![](./assets/labels.regular.png)
-
-The four label sizes
-</div>
-</div>
-
-### Color Variants
-<div class="section_text" markdown="1">
-Labels come in two colors, *Primary* and *Secondary*. There is an inverse palette available as well.
-</div>
-
-<div class="images">
-<div class="narrow_image" markdown="1">
-![](./assets/labels.colors.png)
-
-Standard colors
-</div>
-
-<div class="narrow_image" markdown="1">
-![](./assets/labels.inverse.png)
-
-Inverse colors
-</div>
-</div>
-
-### Allowed Inline Elements
-<div class="section_text" markdown="1">
-In general, labels should not be styled beyond the basic styles listed above. If necessary, stick to the following list of inline elements.
-
-* `<em>, <i>`
-* `<a>`
-* `<small>`
-* `<time>`
-* `<abbr>`
-</div>
-
-
-## Titles
-<div class="section_text" markdown="1">
-Titles are very similar to labels except they demarcate a logical section or container of content. In the previous example, the course name would be a title.
-</div>
-
-<div class="images">
-<div class="wide_image" markdown="1">
-![](./assets/title.example.png)
-
-Example title in use on the Console course tile
-</div>
-</div>
-
-### Size variants
-<div class="section_text" markdown="1">
-There are three different sizes of title: *Basic*, *Large*, and *Extra Large*. These sizes will automatically scale down in narrow viewports.
-
-### Allowed Inline Elements
-In general, titles should not be styled beyond the basic styles listed above. If necessary, stick to the following list of inline elements.
-
-* `<em>, <i>`
-* `<small>`
-* `<time>`
-* `<abbr>`
-</div>
-
-<div class="images">
-<div class="wide_image" markdown="1">
-![](./assets/titles.sizes.png)
-
-Standard title sizes, multiline versions, and the responsive sizes used when the viewport is narrower.
-</div>
-</div>
-
-
-## Copy
-<div class="section_text" markdown="1">
-When you have a chunk of content to display, use one of these styles. Most regular content will use the *Basic Body* style.
-</div>
-
-<div class="images">
-<div class="narrow_image" markdown="1">
-![](./assets/copy.basic.png)
-</div>
-</div>
-
-### Lead Variant
-<div class="section_text" markdown="1">
-There is also a *Lead* variant which can be used for the first paragraph of a message or as part of a hero block for marketing materials.
-
-It will automatically scale down for narrow viewports as well.
-
-### Allowed Inline Elements
-Copy is more flexible in this regard that labels or titles. You can include any of the inline elements covered by this component.
-</div>
-
-<div class="images">
-<div class="wide_image" markdown="1">
-![](./assets/copy.lead.png)
-</div>
-
-<div class="narrow_image" markdown="1">
-![](./assets/copy.lead.narrow.png)
-</div>
-</div>
-
-### Lists
-<div class="section_text" markdown="1">
-Both ordered and unordered lists are supported with a nesting depth of three. These should be used to present content within a copy block, not for UI elements.
-</div>
-
-<div class="images">
-<div class="narrow_image" markdown="1">
-![](./assets/copy.lists.ordered.png)
-</div>
-
-<div class="narrow_image" markdown="1">
-![](./assets/copy.lists.unordered.png)
-</div>
-</div>
-
-### Code
-<div class="section_text" markdown="1">
-Blocks of code (typically `<pre>` tags) are styled on a dark background. (See also the inline elements `<code>` and `<kbd>`.)
-</div>
-
-<div class="images">
-<div class="narrow_image" markdown="1">
-![](./assets/copy.code.png)
-</div>
-</div>
-
-
-## Headings
-<div class="section_text" markdown="1">
-Headings pair with [copy](#copy) styles to delineate sections within blocks of content. They should not be used for UI elements (see [titles](#titles) instead).
-
-There are six different levels available and should be used in order.
-</div>
-
-<div class="images">
-<div class="wide_image" markdown="1">
-![](./assets/headings.png)
-
-These headings don't change size as the viewport narrows.
-</div>
-</div>
-
-
-## Inline Elements
-<div class="section_text" markdown="1">
-There are a number of inline elements which can be used to modify the other type styles (see the list of allowed inline elements for each type style).
-
-### Basic Elements
-
-* `<a>`
-* `<em>, <i>`
-* `<strong>, <b>`
-* `<u>`
-* `<del>, <s>`
-* `<ins>`
-* `<q>`
-* `<sub>, <sup>`
-* `<mark>`
-* `<code>, <kbd>`
-</div>
-
-<div class="images">
-<div class="narrow_image" markdown="1">
-![](./assets/inline.1.png)
-</div>
-
-<div class="narrow_image" markdown="1">
-![](./assets/inline.2.png)
-</div>
-</div>
-
-### Non-visible Elements
-<div class="section_text" markdown="1">
-Some inline elements should be used only for semantic reasons and don't effect the visual style. These include:
-
-* `<small>` (note: this element is used to represent side-comments and small print, including copyright and legal text, independent of its styled presentation)
-* `<time>`
-* `<abbr>`
-</div>
-
-## Redlines
-
-### Labels
-
-#### Sizes
-<div class="section_text" markdown="1">
-
-Small
-: - 13px font-size
-  - 15px line-height
-
-Basic
-: - 14px font-size
-  - 16px line-height
-
-Large
-: - 16px font-size
-  - 18px line-height
-
-Bold
-: - 14px font-size
-  - 16px line-height
-  - bold font-weight
-
-</div>
-
-<div class="images">
-<div class="narrow_image" markdown="1">
-![](./assets/redlines.labels.regular.png)
-</div>
-</div>
-
-#### Colors
-<div class="section_text" markdown="1">
-
-Primary (Light)
-: - \#231F20
-
-Secondary (Light)
-: - \#565656
-
-Primary (Dark)
-: - \#FFFFFF
-  - light font-weight
-
-Secondary (Dark)
-: - \#AEAEAE
-  - light font-weight
-
-</div>
-
-<div class="images">
-<div class="narrow_image" markdown="1">
-![](./assets/redlines.labels.colors.light.png)
-</div>
-
-<div class="narrow_image" markdown="1">
-![](./assets/redlines.labels.colors.dark.png)
-</div>
-</div>
-
-### Titles
-
-#### Sizes
-<div class="section_text" markdown="1">
-
-Basic
-: - 22px font-size
-  - 28px line-height
-
-Large
-: - 24px font-size
-  - 30px line-height
-
-XL
-: - 30px font-size
-  - 36px line-height
-
-At narrow viewports (< 480px):
-
-Basic
-: - 18px font-size
-  - 22px line-height
-
-Large
-: - 20px font-size
-  - 24px line-height
-
-XL
-: - 22px font-size
-  - 28px line-height
-
-</div>
-
-<div class="images">
-<div class="narrow_image" markdown="1">
-![](./assets/redlines.titles.regular.png)
-Regular title sizes
-</div>
-
-<div class="narrow_image" markdown="1">
-![](./assets/redlines.titles.narrow.png)
-Title sizes for narrow viewports (< 480px)
-</div>
-</div>
-
-#### Color
-<div class="section_text" markdown="1">
-All titles are colored \#231F20.
-</div>
-
-### Copy
-
-#### Basic Body
-<div class="section_text" markdown="1">
-
-Font
-: - 16px font-size
-  - 22px line-height
-
-Color
-: - \#231F20
-
-</div>
-
-<div class="images">
-<div class="narrow_image" markdown="1">
-![](./assets/redlines.copy.body.png)
-</div>
-</div>
-
-
-#### Lead
-<div class="section_text" markdown="1">
-
-Font
-: - 20px font-size
-  - 28px line-height
-  - light font-weight
-
-Color
-: - \#231F20
-
-</div>
-
-<div class="images">
-<div class="wide_image" markdown="1">
-![](./assets/redlines.copy.lead.png)
-</div>
-</div>
-
-#### Narrow lead
-<div class="section_text" markdown="1">
-At narrow viewports (<480px) the lead styles become:
-
-Font
-: - 18px font-size
-  - 24px line-height
-  - thin font-weight
-
-Color
-: - \#231F20
-
-</div>
-
-<div class="images">
-<div class="narrow_image" markdown="1">
-![](./assets/redlines.copy.lead.narrow.png)
-</div>
-</div>
-
-
-#### Lists
-<div class="section_text" markdown="1">
-These lists should be used to communicate content within a copy block, not as UI elements.
-
-Font
-: - Use the same style as Basic Body copy
-
-Spacing
-: - 12px above and below a list
-  - 6px between list items
-
-Bullets
-: - Centered in a 14px box which is left aligned to the surrounding body copy
-  - 4px padding separates box from list content
-  - 8px left margin for child elements
-
-Numbers
-: - Right aligned in a 14px box which is left aligned to the surrounding body copy
-  - If the number is too large for a 14px box, expand the box to fit
-  - 4px padding separates box from list content
-  - 8px left margin for child elements
-
-
-Note: The expanding box behavior for ordered lists can be achieved with a `display: table` layout.
-
-</div>
-
-<div class="images">
-<div class="narrow_image" markdown="1">
-![](./assets/redlines.copy.lists.ordered.1.png)
-</div>
-
-<div class="narrow_image" markdown="1">
-![](./assets/redlines.copy.lists.unordered.1.png)
-</div>
-
-<div class="narrow_image" markdown="1">
-![](./assets/redlines.copy.lists.ordered.2.png)
-</div>
-
-<div class="narrow_image" markdown="1">
-![](./assets/redlines.copy.lists.unordered.2.png)
-</div>
-</div>
-
-#### Code
-<div class="section_text" markdown="1">
-
-Font
-: - Monospace font stack
-  - 14px font-size
-  - 20px line-height
-
-Color
-: - \#AEAEAE
-  - \#424242 background-color
-
-</div>
-
-<div class="images">
-<div class="narrow_image" markdown="1">
-![](./assets/redlines.copy.code.png)
-</div>
-</div>
 
 
 ### Headers
