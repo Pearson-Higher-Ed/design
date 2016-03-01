@@ -5,7 +5,7 @@
     {% include construction.html %}
     {% include navigation.html %}
 
-    <div class="article_contaier">
+    <div>
       <div class="blocks">
         <div class="block article_header">
           <h1 class="pe-title pe-title--extra-large">{{page.title}}</h1>
@@ -116,7 +116,11 @@
         <div class="block changelog">
           <h2>Changelog</h2>
           {% for change in page.changelog %}
-            <h3>{{change.version}}</h3>
+            {% if change.version != page.version %}
+              <h3><a href="./v{{change.version}}">{{change.version}}</a></h3>
+            {% else %}
+              <h3>{{change.version}}</h3>
+            {% endif %}
             {{change.changes | markdownify}}
           {% endfor %}
         </div>
