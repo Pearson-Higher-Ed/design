@@ -3,6 +3,7 @@
   background-color: pe-color(gutenberg-black);
   text-align: center;
   padding: 10px 0;
-  @extend .pe-label, .pe-label--bold;
+  @include pe-label;
+  @include pe-label-bold;
   color: pe-color(white);
 }
