@@ -112,6 +112,14 @@
           {% endcase %}
         </div>
         {% endfor %}
+
+        <div class="block changelog">
+          <h2>Changelog</h2>
+          {% for change in page.changelog %}
+            <h3>{{change.version}}</h3>
+            {{change.changes | markdownify}}
+          {% endfor %}
+        </div>
       </div>
     </div>
   </body>
