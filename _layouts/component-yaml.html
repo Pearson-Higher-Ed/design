@@ -67,6 +67,7 @@
                 <li><a href="#{{heading.name | slugify}}">{{heading.name}}</a></li>
                 {% endif %}
               {% endfor %}
+              <li><a href="#changelog">Changelog</a></li>
             </ul>
           </div>
         </div>
@@ -114,7 +115,7 @@
         {% endfor %}
 
         <div class="block changelog">
-          <h2>Changelog</h2>
+          <h2 id="changelog">Changelog</h2>
           {% for change in page.changelog %}
             {% if change.version != page.version %}
               <h3><a href="./v{{change.version}}">{{change.version}}</a></h3>
