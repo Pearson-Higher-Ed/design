@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Icons
 section: Components
-version: 1.0.0-beta.2
+version: 1.0.0-beta.3
 status: active
 people:
   - role: Product Owner
@@ -79,6 +79,9 @@ blocks:
       A lone symbol should still be wrapped in the relevant type style (e.g. Basic Label).
 
 changelog:
+  - version: 1.0.0-beta.3
+    changes: |
+      - ADDED: Additional icons, including square-o and check-square-o.
   - version: 1.0.0-beta.2
     changes: |
       - ADDED: Additional icons, including user, calendar, info-circle, and file-o.
