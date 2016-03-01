@@ -111,4 +111,29 @@ p {
     margin: 0;
     @include pe-code;
   }
+
+  .table {
+    width: 100%;
+
+    table {
+      width: 100%;
+
+      & + table {
+        margin-top: 20px;
+      }
+
+      td {
+        border: 1px solid #e6e6e6;
+        padding: 10px;
+      }
+
+      th {
+        padding: 10px;
+      }
+
+      tbody tr:hover {
+        background-color: #f2f2f2;
+      }
+    }
+  }
 }
