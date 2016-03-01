@@ -4,7 +4,6 @@
 
   & > div {
     float: left;
-    margin-top: 60px;
     width: 100%;
     @include pe-responsive-breakpoint(md) {
       width: auto;
@@ -14,10 +13,12 @@
 
   .toc {
     width: 100%;
+    margin-top: 40px;
     @include pe-responsive-breakpoint(lg) {
       width: 220px;
       text-align: right;
       margin-left: 20px;
+      margin-top: 0;
       float: left;
     }
     @include pe-responsive-breakpoint(xl) {
@@ -83,6 +84,7 @@
   }
 
   .article_info {
+    margin-top: 40px;
     @include pe-responsive-breakpoint(md) { width: 760px; }
     @include clearfix;
 
