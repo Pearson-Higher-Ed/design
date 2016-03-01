@@ -417,136 +417,115 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/redlines.copy.code.png
+
+  - type: two column
+    text: |
+      ### Headings
+
+      #### Fonts
+      Level 1
+      : - 24px font-size
+        - 30px line-height
+        - bold font-weight
+        - 2px bottom border, #A6A8AB
+        - \#231F20 color
+
+      Level 2
+      : - 20px font-size
+        - bold font-weight
+        - \#231F20 color
+
+      Level 3
+      : - 18px font-size
+        - bold font-weight
+        - \#231F20 color
+
+      Level 4
+      : - 16px font-size
+        - bold font-weight
+        - \#565656 color
+
+      Level 5
+      : - 16px font-size
+        - italic font-style
+        - \#565656 color
+
+      Level 6
+      : - 14px font-size
+        - italic font-style
+        - \#565656 color
+
+
+      #### Spacing
+
+      Header that follows a header
+      : - 6px margin
+        - 40px if top header is Level 1
+
+      Header that follows content
+      : - 20px margin
+    contents:
+      - type: wide image
+        src: ./assets/redlines.headings.png
+
+  - type: two column
+    text: |
+      ### Inline Elements
+      `<small>, <time>, <abbr>`
+      : - Same as the 'Basic Text' label
+
+      `<mark>`
+      : - \#FDEC2E background-color
+        - Only use within Body Copy
+
+      `<em>, <i>`
+      : - italic font-style
+
+      `<strong>, <b>`
+      : - bold font-weight
+
+      `<del>, <s>`
+      : - line-through text-decoration
+        - \#565656 color on light backgrounds
+        - \#AEAEAE color on dark backgrounds
+
+      `<ins>`
+      : - underline text-decoration
+        - cap with '+' symbol
+
+      `<sup>`
+      : - vertical-align: baseline
+        - position: relative
+        - top: 0.2em
+        - font-size: 90%
+
+      `<sub>`
+      : - vertical-align: baseline
+        - position: relative
+        - top: -0.2em
+        - font-size: 90%
+
+      `<q>`
+      : - cap with quotes from user's locale
+
+      `<code>, <kbd>`
+      : - Monospace font stack
+        - \#E6E6E6 background-color
+        - 4px horizontal padding
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.inline.1.png
+      - type: narrow image
+        src: ./assets/redlines.inline.2.png
+
+changelog:
+  - version: 1.0.0-beta.2
+    changes: |
+      - ADDED: Style for [code blocks](./#code) (e.g. `<pre>` tags)
+      - ADDED: Style for [`<code>` and `<kbd>` inline elements](./#inline-elements)
+      - ADDED: [Heading](./#headings) styles
+      - ADDED: Styles for [ordered and unordered lists](./#lists) within copy
+      - CHANGED: [Redlines](./#redlines) are now included directly in the page, rather than in a .zip file
+  - version: 1.0.0-beta.1
+    changes: Initial version
 ---
-
-* TOC here
-{:toc}
-
-
-## Overview
-
-
-### Headers
-<div class="section_text" markdown="1">
-
-#### Fonts
-Level 1
-: - 24px font-size
-  - 30px line-height
-  - bold font-weight
-  - 2px bottom border, #A6A8AB
-  - \#231F20 color
-
-Level 2
-: - 20px font-size
-  - bold font-weight
-  - \#231F20 color
-
-Level 3
-: - 18px font-size
-  - bold font-weight
-  - \#231F20 color
-
-Level 4
-: - 16px font-size
-  - bold font-weight
-  - \#565656 color
-
-Level 5
-: - 16px font-size
-  - italic font-style
-  - \#565656 color
-
-Level 6
-: - 14px font-size
-  - italic font-style
-  - \#565656 color
-
-
-#### Spacing
-
-Header that follows a header
-: - 6px margin
-  - 40px if top header is Level 1
-
-Header that follows content
-: - 20px margin
-
-</div>
-
-<div class="images">
-<div class="wide_image" markdown="1">
-![](./assets/redlines.headings.png)
-</div>
-</div>
-
-
-### Inline Elements
-<div class="section_text" markdown="1">
-
-`<small>, <time>, <abbr>`
-: - Same as the 'Basic Text' label
-
-`<mark>`
-: - \#FDEC2E background-color
-  - Only use within Body Copy
-
-`<em>, <i>`
-: - italic font-style
-
-`<strong>, <b>`
-: - bold font-weight
-
-`<del>, <s>`
-: - line-through text-decoration
-  - \#565656 color on light backgrounds
-  - \#AEAEAE color on dark backgrounds
-
-`<ins>`
-: - underline text-decoration
-  - cap with '+' symbol
-
-`<sup>`
-: - vertical-align: baseline
-  - position: relative
-  - top: 0.2em
-  - font-size: 90%
-
-`<sub>`
-: - vertical-align: baseline
-  - position: relative
-  - top: -0.2em
-  - font-size: 90%
-
-`<q>`
-: - cap with quotes from user's locale
-
-`<code>, <kbd>`
-: - Monospace font stack
-  - \#E6E6E6 background-color
-  - 4px horizontal padding
-
-</div>
-
-<div class="images">
-<div class="narrow_image" markdown="1">
-![](./assets/redlines.inline.1.png)
-</div>
-
-<div class="narrow_image" markdown="1">
-![](./assets/redlines.inline.2.png)
-</div>
-</div>
-
-
-## Changelog
-
-### 1.0.0-beta.2
-- ADDED: Style for [code blocks](./#code) (e.g. `<pre>` tags)
-- ADDED: Style for [`<code>` and `<kbd>` inline elements](./#inline-elements)
-- ADDED: [Heading](./#headings) styles
-- ADDED: Styles for [ordered and unordered lists](./#lists) within copy
-- CHANGED: [Redlines](./#redlines) are now included directly in the page, rather than in a .zip file
-
-### [1.0.0-beta.1](./v1.0.0-beta.1)
-Initial version
