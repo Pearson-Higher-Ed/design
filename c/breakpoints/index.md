@@ -91,4 +91,8 @@ blocks:
           | Nexus 7 (Landscape)            | 960px          | Medium      |
           | Nexus 9 (Landscape)            | 1024px         | Large       |
           | Galaxy Tab 10 (Landscape)      | 1280px         | Extra large |
+
+changelog:
+  - version: 1.0.0-beta.1
+    changes: Initial version
 ---
