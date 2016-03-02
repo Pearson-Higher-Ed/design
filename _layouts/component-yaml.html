@@ -79,6 +79,7 @@
           {% when 'section' %}
           <h2 id="{{block.name | slugify}}">{{block.name}}</h2>
 
+
           {% when 'two column' or 'two_column' %}
           <div class="text">{{block.text | markdownify}}</div>
           <div class="content">
@@ -110,6 +111,46 @@
             {% endfor %}
           </div>
 
+
+          {% when 'palette' %}
+            <div class="swatches">
+              <h3>Foreground</h3>
+              <table>
+                {% for color in block.foreground %}
+                  <tr>
+                    <td>{{color.name}}</td>
+                    <td>#{{color.hex}}</td>
+                    <td><div style="width: 100%; min-width: 100px; height: 40px; background-color: #{{color.hex}}"></div></td>
+                  </tr>
+                {% endfor %}
+              </table>
+            </div>
+            <div class="swatches">
+              <h3>Background</h3>
+              <table>
+                {% for color in block.background %}
+                  <tr>
+                    <td>{{color.name}}</td>
+                    <td>#{{color.hex}}</td>
+                    <td><div style="width: 100%; min-width: 100px; height: 40px; background-color: #{{color.hex}}"></div></td>
+                  </tr>
+                {% endfor %}
+              </table>
+            </div>
+            <div class="swatches">
+              <h3>Accents</h3>
+              <table>
+                {% for color in block.accents %}
+                  <tr>
+                    <td>{{color.name}}</td>
+                    <td>#{{color.hex}}</td>
+                    <td><div style="width: 100%; min-width: 100px; height: 40px; background-color: #{{color.hex}}"></div></td>
+                  </tr>
+                {% endfor %}
+              </table>
+            </div>
+
+            
           {% endcase %}
         </div>
         {% endfor %}

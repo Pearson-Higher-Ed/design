@@ -1,0 +1,35 @@
+.swatches {
+  width: 100%;
+  @include pe-responsive-breakpoint(lg) {
+    width: 32%;
+    float: left;
+
+    & + .swatches {
+      margin-left: 2%;
+    }
+  }
+  @include pe-responsive-breakpoint(xl) {
+    width: 370px;
+
+    & + .swatches {
+      margin-left: 25px;
+    }
+  }
+
+  table {
+    width: 100%;
+
+    tr {
+      @include pe-label;
+      border: 1px solid pe-color(gray-no-1);
+
+      td {
+        padding: 10px;
+
+        &:last-child {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
