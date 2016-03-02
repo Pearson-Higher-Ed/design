@@ -1,0 +1,7 @@
+@function map-get-strict($map, $key) {
+  @if map-has-key($map, $key) {
+    @return map-get($map, $key);
+  } @else {
+    @error 'Key "#{$key}" does not exist in map';
+  }
+}

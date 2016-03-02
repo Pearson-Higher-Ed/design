@@ -1,0 +1,3 @@
+@function pe-color($key) {
+  @return map-get-strict($pe-colors, $key);
+}

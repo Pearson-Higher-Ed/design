@@ -1,0 +1,28 @@
+/// Generates a visible class
+@mixin pe-visible($parent) {
+  // scss-lint:disable ImportantRule
+  #{$parent} {
+    display: block !important;
+  }
+
+  table#{$parent} {
+    display: table !important;
+  }
+
+  tr#{$parent} {
+    display: table-row !important;
+  }
+
+  th#{$parent},
+  td#{$parent} {
+    display: table-cell !important;
+  }
+}
+
+/// Generates a hidden class
+@mixin pe-hidden($parent) {
+  // scss-lint:disable ImportantRule
+  #{$parent} {
+    display: none !important;
+  }
+}
