@@ -47,6 +47,56 @@
   }
 }
 
+@mixin pe-olist {
+  display: table;
+  table-layout: fixed;
+  padding: 0;
+  counter-reset: table-ol;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  li {
+    display: table-row;
+    counter-increment: table-ol 1;
+
+    & + li:before {
+      padding-top: 6px;
+    }
+
+    &:before {
+      content: counter(table-ol)".";
+      display: table-cell;
+      width: 14px;
+      padding-right: 4px;
+      text-align: right;
+    }
+
+    & > ol {
+      margin-left: 8px;
+      margin-top: 6px !important;
+      padding: 0;
+
+      & > li {
+        &:before {
+          content: counter(table-ol, lower-alpha)".";
+        }
+
+        & > li {
+          &:before {
+            content: counter(table-ol, lower-alpha)".";
+          }
+        }
+      }
+    }
+  }
+}
+
 @mixin redline-list {
   @include clearfix;
 
