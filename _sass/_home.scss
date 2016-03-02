@@ -69,10 +69,10 @@ body.home {
       width: 30.33333%;
     }
     vertical-align: top;
-    color: #003057;
+    color: pe-color(gutenberg-black);
 
     header {
-      border-bottom: 3px solid #003057;
+      border-bottom: 3px solid pe-color(gutenberg-black);
     }
 
     ul {
@@ -126,7 +126,7 @@ body.home {
   header {
     margin: 0 1.5% 20px;
 
-    border-bottom: 3px solid #003057;
+    border-bottom: 3px solid pe-color(gutenberg-black);
   }
 
   .component {
@@ -142,7 +142,7 @@ body.home {
     float: left;
     display: block;
     box-sizing: border-box;
-    border: 2px solid #003057;
+    border: 2px solid pe-color(gutenberg-black);
     padding: 12px;
     color: pe-color('pitch');
     text-decoration: none;

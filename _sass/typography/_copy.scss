@@ -7,7 +7,7 @@
 @mixin pe-code {
   @include pe-copy-small;
   font-family: monospace;
-  color: #AEAEAE;
-  background-color: #424242;
+  color: pe-color(gray-wash);
+  background-color: pe-color(full-moon);
   padding: 10px 10px 10px 20px;
 }
