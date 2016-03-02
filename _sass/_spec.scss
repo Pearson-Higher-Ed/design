@@ -1,0 +1,112 @@
+.spec {
+  width: 1140px;
+  margin: 0 auto;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .toc {
+    box-sizing: border-box;
+    width: 320px;
+    padding-right: 40px;
+    float: left;
+  }
+
+  .article_content {
+    width: 760px;
+    float: left;
+  }
+
+  .reqs {
+    background-color: #f8f8f8;
+    padding: 20px;
+
+    h3 {
+      margin-top: 0;
+      font-size: 28px;
+    }
+
+    & + .reqs {
+      margin-top: 40px;
+    }
+
+    .description {
+      font-style: italic;
+    }
+
+    .req {
+      margin-top: 60px;
+      & > div:first-of-type {
+        p {
+          font-weight: bold;
+          margin: 0;
+        }
+
+        & + div {
+          margin-top: 20px;
+        }
+
+        a {
+          // background-color: white;
+          font-style: italic;
+          color: #0D65A6;
+          text-decoration: none;
+          // border-bottom: 1px solid #aaa;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+        ul {
+          -webkit-columns: 3;
+          margin: 6px 40px 0;
+        }
+      }
+
+      .required {
+        background-color: hsl(352, 73%, 41%);
+        font-weight: normal;
+        color: white;
+        padding: 2px 8px;
+        border-radius: 3px;
+        font-size: 10px;
+        text-transform: uppercase;
+      }
+
+      .should {
+        background-color: hsl(45, 79%, 34%);
+        font-weight: normal;
+        color: white;
+        padding: 2px 8px;
+        border-radius: 3px;
+        font-size: 10px;
+        text-transform: uppercase;
+      }
+
+      .explanation,
+      .approvers {
+        margin-top: 20px;
+        border-left: 2px solid #aaa;
+        padding-left: 10px;
+
+        .heading {
+          font-style: italic;
+          margin-bottom: 8px;
+          cursor: pointer;
+        }
+
+        p {
+          margin: 0;
+
+          & + p {
+            margin-top: 8px;
+          }
+        }
+      }
+    }
+  }
+}

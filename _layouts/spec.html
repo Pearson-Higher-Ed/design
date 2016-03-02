@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html class="core">
+{% include header.html %}
+<body>
+  {% include construction.html %}
+  {% include navigation.html %}
+
+  <div class="spec">
+    <div class="toc">
+      <ul>
+        <li>
+          Design Requirements
+          <ul>
+            {% for section in page.design_reqs %}
+            <li><a href="#{{section.name}}">{{section.name}}</a></li>
+            {% endfor %}
+          </ul>
+        </li>
+        <li>
+          Development Requirements
+          <ul>
+            <li>Test</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="article_content">
+      <h1>{{page.title}}</h1>
+      <p>Version {{page.version}}</p>
+
+      <div>
+        {{page.intro | markdownify}}
+      </div>
+
+      <h2>Design Requirements</h2>
+      {% for section in page.design_reqs %}
+      <div class="reqs">
+        <h3 id="{{section.name}}">{{section.name}}</h3>
+        <div class="description">{{section.description | markdownify}}</div>
+
+        {% for req in section.reqs %}
+        <div class="req">
+          <div>
+            {{req.req | markdownify}}
+            {% if req.type == 'mandatory' %}
+              <span class="required">Mandatory</span>
+            {% else if req.type == 'suggested' %}
+              <span class="should">Strongly Recommended</span>
+            {% endif %}
+          </div>
+
+          {% for extra in req.extras %}
+          <div class="explanation">
+            <div class="heading">{{extra.name}}</div>
+            <div class="content">{{extra.content | markdownify}}</div>
+          </div>
+          {% endfor %}
+
+          <div class="approvers">
+            <div class="heading">Approvers</div>
+            <div class="content">
+              <ul>
+                {% for approver in req.approvers %}
+                <li>{{approver}}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+      {% endfor %}
+
+      {{content}}
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var hideExtras = function() {
+      var items = document.querySelectorAll('.req .content');
+      for (var i = 0; i < items.length; i++) {
+        items[i].style.display = 'none';
+        items[i].setAttribute('hidden', true);
+      }
+    }
+
+    var toggleExtra = function(content) {
+      if (content.style.display == 'none') {
+        content.removeAttribute('style');
+      } else {
+        content.style.display = 'none';
+      }
+
+      if (content.hasAttribute('hidden')) {
+        content.removeAttribute('hidden');
+      } else {
+        content.setAttribute('hidden', true);
+      }
+    }
+
+    hideExtras();
+    document.querySelector('.article_content').addEventListener('click', function(e) {
+      if (e.target && e.target.matches('.heading')) {
+        toggleExtra(e.target.nextElementSibling);
+      }
+    });
+  </script>
+</body>
+</html>
