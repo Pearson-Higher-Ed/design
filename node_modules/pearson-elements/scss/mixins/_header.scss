@@ -1,0 +1,17 @@
+@mixin pe-header-link {
+  display: block;
+  padding: ($pe-header-height / 2) $pe-header-nav-link-padding-x;
+  color: $pe-header-link-color;
+  line-height: 0;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $pe-header-link-hover-color;
+  }
+
+  @include pe-responsive-breakpoint(lg) {
+    padding: ($pe-header-height-lg / 2) $pe-header-nav-link-padding-x;
+  }
+}

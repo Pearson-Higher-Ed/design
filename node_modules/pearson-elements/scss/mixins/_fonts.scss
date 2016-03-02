@@ -1,0 +1,3 @@
+@function pe-font-family($family) {
+  @return map-get($pe-font-families, $family);
+}

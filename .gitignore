@@ -2,5 +2,7 @@ _site
 .DS_Store
 .idea/
 .sass-cache/
-node_modules/
 .idea
+
+node_modules/*
+!node_modules/pearson-elements
