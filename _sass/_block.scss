@@ -21,6 +21,10 @@ body {
     margin-top: 60px;
   }
 
+  &:last-child {
+    margin-bottom: 60px;
+  }
+
   @import "blocks/overview";
   @import "blocks/section";
   @import "blocks/two_column";
