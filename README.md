@@ -12,7 +12,7 @@ Please see the [Component Definition Template](./_component_definition_template.
 
 You should be able to get along fine by following the template and looking at existing component definitions for reference, but if you want more detail about YAML you can [read this guide](https://learnxinyminutes.com/docs/yaml/). The main point is that if you want to include a multi-line string you'll need to demarcate with the pipe character (`|`) and tabs like so:
 
-```
+```YAML
 key: |
   I can include as many indented lines here as I want.
 
