@@ -1,0 +1,150 @@
+@mixin pe-ulist {
+  display: table;
+  table-layout: fixed;
+  padding: 0;
+  margin: 12px 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  li {
+    display: table-row;
+
+    & + li:before {
+      padding-top: 6px;
+    }
+
+    &:before {
+      content: "●";
+      display: table-cell;
+      text-align: center;
+      width: 14px;
+      padding-right: 4px;
+    }
+
+    & > ul {
+      margin-left: 8px;
+      margin-top: 6px !important;
+      padding: 0;
+
+      & > li {
+        &:before {
+          content: "○";
+        }
+
+        & > ul li {
+          &:before {
+            content: "■";
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin pe-olist {
+  display: table;
+  table-layout: fixed;
+  padding: 0;
+  counter-reset: table-ol;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  li {
+    display: table-row;
+    counter-increment: table-ol 1;
+
+    & + li:before {
+      padding-top: 6px;
+    }
+
+    &:before {
+      content: counter(table-ol)".";
+      display: table-cell;
+      width: 14px;
+      padding-right: 4px;
+      text-align: right;
+    }
+
+    & > ol {
+      margin-left: 8px;
+      margin-top: 6px !important;
+      padding: 0;
+
+      & > li {
+        &:before {
+          content: counter(table-ol, lower-alpha)".";
+        }
+
+        & > li {
+          &:before {
+            content: counter(table-ol, lower-alpha)".";
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin redline-list {
+  @include clearfix;
+
+  dt {
+    border-top: 1px solid pe-color(hairline-gray);
+    width: 40%;
+    @include pe-responsive-breakpoint(lg) {
+      font-style: italic;
+      width: 100%;
+    }
+    @include pe-responsive-breakpoint(xl) {
+      font-style: normal;
+      width: 40%;
+    }
+  }
+
+  dd {
+    width: 60%;
+    @include pe-responsive-breakpoint(lg) { width: 100%; }
+    @include pe-responsive-breakpoint(xl) { width: 60%; }
+
+    ul {
+      margin: 0;
+      li + li {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  dt, dd {
+    float: left;
+    @include pe-responsive-breakpoint(lg) { float: none; }
+    @include pe-responsive-breakpoint(xl) { float: left; }
+    padding: 10px 0;
+    margin: 0;
+    @include pe-label-small;
+    border-top: 1px solid pe-color(hairline-gray);
+    @include pe-responsive-breakpoint(lg) { border-top: none; }
+    @include pe-responsive-breakpoint(xl) { border-top: 1px solid pe-color(hairline-gray); }
+  }
+
+  dt:first-of-type,
+  dd:first-of-type {
+    padding-top: 0;
+    border-top: none;
+  }
+
+  dd + dt {
+    clear: both;
+  }
+}

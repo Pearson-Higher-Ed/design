@@ -11,45 +11,45 @@
 
 	<div class="contents">
 		<div class="section">
-			<header>Learn</header>
+			<header class="pe-title">Learn</header>
 			<ul>
 				{% assign learn = (site.pages | where: "section", "learn") %}
 				{% for page in learn %}
-					<li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+					<li class="pe-label pe-label--large"><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
 				{% endfor %}
 			</ul>
 		</div>
 
 		<div class="section">
-			<header>Use</header>
+			<header class="pe-title">Use</header>
 			<ul>
 				{% assign use = (site.pages | where: "section", "use") %}
 				{% for page in use %}
-					<li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+					<li class="pe-label pe-label--large"><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
 				{% endfor %}
 			</ul>
 		</div>
 
 		<div class="section">
-			<header>Contribute</header>
+			<header class="pe-title">Contribute</header>
 			<ul>
 				{% assign contribute = (site.pages | where: "section", "contribute") %}
 				{% for page in contribute %}
-					<li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+					<li class="pe-label pe-label--large"><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
 				{% endfor %}
 			</ul>
 		</div>
 	</div>
 
 	<div class="library">
-		<header>Library</header>
+		<header class="pe-title">Library</header>
 		{% assign components = (site.pages | where: "section", "Components") | sort:"title" %}
 		{% for page in components %}
 			{% if page.url contains 'beta' %}
 			{% else %}
 				<a class="component" href="{{site.baseurl}}{{page.url}}">
-					<span class="name">{{page.title}}</span>
-					<div class="data">
+					<span class="pe-label pe-label--bold">{{page.title}}</span>
+					<div class="data pe-label">
 						<span>Version {{page.version}}</span>
 						<span class="status">{{page.status}}</span>
 					</div>

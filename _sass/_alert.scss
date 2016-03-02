@@ -1,9 +1,9 @@
 .alert {
   width: 100%;
-  background-color: #505759;
+  background-color: pe-color(gutenberg-black);
   text-align: center;
   padding: 10px 0;
-  font-style: italic;
-  font-weight: bold;
-  color: white;
+  @include pe-label;
+  @include pe-label-bold;
+  color: pe-color(white);
 }

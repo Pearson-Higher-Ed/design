@@ -1,0 +1,140 @@
+// type resets
+p {
+  margin: 0;
+}
+
+// left column
+.text {
+  // TODO switch to using mixins or something for typography
+  @include pe-responsive-breakpoint(xs) {
+    width: 100%;
+    margin-bottom: 20px;
+    @include pe-copy-small;
+  }
+  @include pe-responsive-breakpoint(md) {
+    width: 440px;
+    margin-left: 60px;
+  }
+  @include pe-responsive-breakpoint(lg) {
+    width: 210px;
+    float: left;
+    margin-bottom: 0;
+    margin-left: 0;
+    @include pe-label-small;
+  }
+  @include pe-responsive-breakpoint(xl) {
+    width: 320px;
+    @include pe-copy-small;
+  }
+
+
+  p + p {
+    margin-top: 12px;
+  }
+
+  h3 { @include hl3; }
+  h4 { @include hl4; }
+  h5 { @include hl5; }
+  h6 { @include hl6; }
+
+  & > ul {
+    @include pe-ulist;
+  }
+
+  dl {
+    @include redline-list;
+  }
+}
+
+.content {
+  @include pe-responsive-breakpoint(sm) { width: 100%; }
+  @include pe-responsive-breakpoint(md) { width: 760px; }
+  @include pe-responsive-breakpoint(lg) {
+    margin-left: 30px;
+    float: left;
+  }
+  @include pe-responsive-breakpoint(xl) { margin-left: 70px; }
+
+  > div {
+    float: left;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+    background-color: pe-color(white);
+  }
+
+  .caption {
+    @include pe-responsive-breakpoint(lg) { margin-left: 0; }
+    @include pe-label-small;
+    margin-top: 6px;
+  }
+
+  .image.narrow {
+    max-width: 370px;
+  }
+
+  .image.wide:nth-child(n+2),
+  .image.narrow:nth-child(n+3),
+  .image.wide + .image.narrow {
+    margin-top: 30px;
+  }
+
+  .image.narrow + .image.narrow {
+    @include pe-responsive-breakpoint(md) {
+      margin-left: 20px;
+    }
+  }
+
+  .image.narrow + .image.narrow + .image.narrow {
+    margin-left: 0;
+  }
+
+  .image.narrow + .image.narrow + .image.narrow + .image.narrow {
+    @include pe-responsive-breakpoint(md) {
+      margin-left: 20px;
+    }
+  }
+
+  .image.narrow + .image.narrow + .image.narrow + .image.narrow + .image.narrow {
+    margin-left: 0;
+  }
+
+  .image.narrow + .image.narrow + .image.narrow + .image.narrow + .image.narrow + .image.narrow {
+    @include pe-responsive-breakpoint(md) {
+      margin-left: 20px;
+    }
+  }
+
+  pre {
+    margin: 0;
+    @include pe-code;
+  }
+
+  .table {
+    width: 100%;
+
+    table {
+      width: 100%;
+
+      & + table {
+        margin-top: 20px;
+      }
+
+      td {
+        @include pe-label;
+        border: 1px solid pe-color(brightly-lit);
+        padding: 10px;
+      }
+
+      th {
+        padding: 10px;
+      }
+
+      tbody tr:hover {
+        background-color: pe-color(brightly-lit);
+      }
+    }
+  }
+}

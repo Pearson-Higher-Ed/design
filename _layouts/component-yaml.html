@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="core">
+  {% include header.html %}
+  <body>
+    {% include construction.html %}
+    {% include navigation.html %}
+
+    <div>
+      <div class="blocks">
+        <div class="block article_header">
+          <h1 class="pe-title pe-title--extra-large">{{page.title}}</h1>
+          <p class="pe-label pe-label--large">Version {{page.version}} &bull; <span class="status">{{page.status}}</span></p>
+        </div>
+
+        <div class="block overview">
+          <div>
+            <p class="pe-lead tagline">{{page.tagline}}</p>
+            {% if page.description %}<div class="description">{{page.description | markdownify}}</div>{% endif %}
+
+            <div class="info">
+              <div class="feature_list">
+                <h3>Feature List</h3>
+                <ul>
+                  {% for feature in page.features %}
+                  <li>{{feature}}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+
+              <div class="usage">
+                <h3>Usage Guidelines</h3>
+                {{page.usage_guidelines | markdownify}}
+              </div>
+            </div>
+
+            <div class="article_info">
+              <div class="people">
+                {% for person in page.people %}
+                <div class="person">
+                  <div class="title pe-label pe-label--bold">{{person.role}}</div>
+                  <div class="pe-label"><a href="mailto:{{person.email}}">{{person.name}}</a></div>
+                </div>
+                {% endfor %}
+              </div>
+
+              <div class="implementations">
+                <div class="title pe-label pe-label--bold">Implementations</div>
+                {% for implementation in page.implementations %}
+                <div class="pe-label"><a href="{{implementation.link}}">{{implementation.type}}</a></div>
+                {% endfor %}
+              </div>
+
+              <div class="downloads">
+                <div class="title pe-label pe-label--bold">Downloads</div>
+                {% for download in page.downloads %}
+                <div class="pe-label"><a href="{{download.link}}" class="button">{{download.name}}</a></div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+
+          <div class="toc">
+            <div class="pe-label pe-label--bold">Table of Contents</div>
+            <ul>
+              {% for heading in page.blocks %}
+                {% if heading.type == 'section' %}
+                <li><a href="#{{heading.name | slugify}}">{{heading.name}}</a></li>
+                {% endif %}
+              {% endfor %}
+              <li><a href="#changelog">Changelog</a></li>
+            </ul>
+          </div>
+        </div>
+
+        {% for block in page.blocks %}
+        <div class="block">
+          {% case block.type %}
+
+          {% when 'section' %}
+          <h2 id="{{block.name | slugify}}">{{block.name}}</h2>
+
+
+          {% when 'two column' or 'two_column' %}
+          <div class="text">{{block.text | markdownify}}</div>
+          <div class="content">
+            {% for item in block.contents %}
+              {% case item.type %}
+
+              {% when 'wide image' %}
+              <div class="image wide">
+                <div class="media">
+                  <img src="{{item.src}}" />
+                </div>
+                {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
+              </div>
+
+              {% when 'narrow image' %}
+              <div class="image narrow">
+                <div class="media">
+                  <img src="{{item.src}}" />
+                </div>
+                {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
+              </div>
+
+              {% when 'table' %}
+              <div class="table">{{item.content | markdownify}}</div>
+
+              {% when 'code' %}
+              <pre class="pe-code">{{item.content}}</pre>
+              {% endcase %}
+            {% endfor %}
+          </div>
+
+
+          {% when 'palette' %}
+            <div class="swatches">
+              <h3>Foreground</h3>
+              <table>
+                {% for color in block.foreground %}
+                  <tr>
+                    <td>{{color.name}}</td>
+                    <td>#{{color.hex}}</td>
+                    <td><div style="width: 100%; min-width: 100px; height: 40px; background-color: #{{color.hex}}"></div></td>
+                  </tr>
+                {% endfor %}
+              </table>
+            </div>
+            <div class="swatches">
+              <h3>Background</h3>
+              <table>
+                {% for color in block.background %}
+                  <tr>
+                    <td>{{color.name}}</td>
+                    <td>#{{color.hex}}</td>
+                    <td><div style="width: 100%; min-width: 100px; height: 40px; background-color: #{{color.hex}}"></div></td>
+                  </tr>
+                {% endfor %}
+              </table>
+            </div>
+            <div class="swatches">
+              <h3>Accents</h3>
+              <table>
+                {% for color in block.accents %}
+                  <tr>
+                    <td>{{color.name}}</td>
+                    <td>#{{color.hex}}</td>
+                    <td><div style="width: 100%; min-width: 100px; height: 40px; background-color: #{{color.hex}}"></div></td>
+                  </tr>
+                {% endfor %}
+              </table>
+            </div>
+
+            
+          {% endcase %}
+        </div>
+        {% endfor %}
+
+        <div class="block changelog">
+          <h2 id="changelog">Changelog</h2>
+          {% for change in page.changelog %}
+            {% if change.version != page.version %}
+              <h3><a href="./v{{change.version}}">{{change.version}}</a></h3>
+            {% else %}
+              <h3>{{change.version}}</h3>
+            {% endif %}
+            {{change.changes | markdownify}}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

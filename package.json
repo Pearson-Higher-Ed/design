@@ -1,9 +1,7 @@
 {
   "name": "design",
   "private": true,
-  "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-sass": "*",
-    "grunt-contrib-watch": "*"
+  "dependencies": {
+    "pearson-elements": "pearson-higher-ed/elements#DES-151"
   }
 }
