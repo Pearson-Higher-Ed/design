@@ -6,7 +6,10 @@
       <ul>
         {% assign learn = (site.pages | where: "section", "learn") %}
 				{% for page in learn %}
+          {% if page.url contains 'beta' %}
+          {% else %}
 					<li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+          {% endif %}
 				{% endfor %}
       </ul>
     </li>
@@ -15,7 +18,10 @@
       <ul>
         {% assign learn = (site.pages | where: "section", "use") %}
         {% for page in learn %}
+          {% if page.url contains 'beta' %}
+          {% else %}
           <li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+          {% endif %}
         {% endfor %}
       </ul>
     </li>
@@ -24,7 +30,10 @@
       <ul>
         {% assign learn = (site.pages | where: "section", "contribute") %}
         {% for page in learn %}
+          {% if page.url contains 'beta' %}
+          {% else %}
           <li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+          {% endif %}
         {% endfor %}
       </ul>
     </li>
