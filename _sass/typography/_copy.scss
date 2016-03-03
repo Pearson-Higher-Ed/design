@@ -11,3 +11,12 @@
   background-color: pe-color(full-moon);
   padding: 10px 10px 10px 20px;
 }
+
+@mixin pe-link {
+  color: pe-color(hyperdrive);
+
+  &:hover {
+    color: pe-color(royal-navy);
+    text-decoration: none;
+  }
+}
