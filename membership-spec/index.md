@@ -2,7 +2,7 @@
 layout: spec
 title: Library Membership Specification
 section: contribute
-version: 1.0.0-beta.2
+version: 1.0.0-beta.1
 intro: |
   Every component listed in the Component Library must satisfy all the requirements contained in this document. To learn about submitting components for inclusion see the [Component Creation Guide][creation-guide].
 
@@ -108,8 +108,7 @@ design_reqs:
           UE2: Where applicable, a component’s design should reflect the [Learning Design Principles](https://neo.pearson.com/groups/learning-design-higher-education/projects/learning-design-principles)
         type: suggested
         approvers:
-          - Ed Zee (UX Design)
-          - Parker Malenke (UX Design)
+          - Tommy Bishop (Learning Design)
 
   - name: Accessible
     description: |
@@ -123,8 +122,9 @@ design_reqs:
             content: |
               Meeting the Pearson guidelines also satisfies Section 508 and WCAG 2.0 requirements. See [this checklist](https://docs.google.com/a/pearson.com/document/d/1Hqa-p_CePJ4x7O7ALOCWM88OaeODx9dP6gEko00sdxs/edit?usp=sharing) for help meeting this requirements.
         approvers:
-          - Ed Zee (UX Design)
-          - Parker Malenke (UX Design)
+          - Isabelle Burkhart (Accessibility)
+          - Chris Langston (Accessibility)
+          - Mallory van Achterberg-Hinkley (Accessibility)
 
   - name: Responsive
     description: |
@@ -138,8 +138,8 @@ design_reqs:
           - Parker Malenke (UX Design)
 
       - req: |
-          R2: All touch targets should be at least 44 x 44 pixels in size.
-        type: suggested
+          R2: All touch targets should be at least 44 x 44 pixels in size (minimum dimensions 36 x 36 pixels).
+        type: mandatory
         extras:
           - name: Explanation
             content: |
@@ -179,5 +179,9 @@ design_reqs:
         approvers:
           - Ed Zee (UX Design)
           - Parker Malenke (UX Design)
+
+changelog:
+  - version: 1.0.0-beta.1
+    changes: Initial version
 
 ---
