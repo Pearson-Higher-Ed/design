@@ -6,6 +6,8 @@ version: 1.0.0-beta.1
 intro: |
   Every component listed in the Component Library must satisfy all the requirements contained in this document. To learn about submitting components for inclusion see the [Component Creation Guide][creation-guide].
 
+  Requirements are divided into two sections, Design and Development. Your component definition will be approved based on the design requirements and the implementation is approved based on the development requirements.
+  
   [creation-guide]: /design/component-creation-guide/
 
 design_reqs:
