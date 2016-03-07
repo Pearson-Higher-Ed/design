@@ -36,6 +36,10 @@
       width: 320px;
       @include pe-label-large;
     }
+
+    & > ul > li + li {
+      margin-top: 20px;
+    }
   }
 
   .specs {
