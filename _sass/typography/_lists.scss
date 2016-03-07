@@ -24,6 +24,7 @@
       display: table-cell;
       text-align: center;
       width: 14px;
+      font-size: 0.6em;
       padding-right: 4px;
     }
 
@@ -35,16 +36,22 @@
       & > li {
         &:before {
           content: "○";
+          font-size: 0.8em;
         }
 
         & > ul li {
           &:before {
             content: "■";
+            font-size: 0.8em;
           }
         }
       }
     }
   }
+}
+
+@mixin pe-ulist-narrow {
+  padding: 0;
 }
 
 @mixin pe-olist {
