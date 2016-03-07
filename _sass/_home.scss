@@ -36,19 +36,19 @@ body.home {
   box-sizing: content-box;
   width: 90%;
   padding: 20px 5% 0;
-  @include for-device(sm) {
+  @include pe-responsive-breakpoint(sm) {
     width: 80%;
     padding: 30px 10% 0;
   }
-  @include for-device(md) {
+  @include pe-responsive-breakpoint(md) {
     width: 70%;
     padding: 40px 15% 0;
   }
-  @include for-device(lg) {
+  @include pe-responsive-breakpoint(lg) {
     width: 90%;
     padding: 40px 5% 0;
   }
-  @include for-device(xl) {
+  @include pe-responsive-breakpoint(xl) {
     width: 80%;
     padding: 50px 10% 0;
   }
@@ -64,7 +64,7 @@ body.home {
     float: left;
     width: 100%;
     margin: 20px 1.5% 0;
-    @include for-device(lg) {
+    @include pe-responsive-breakpoint(lg) {
       margin-top: 0;
       width: 30.33333%;
     }
@@ -99,19 +99,19 @@ body.home {
   box-sizing: content-box;
   width: 90%;
   padding: 20px 5% 0;
-  @include for-device(sm) {
+  @include pe-responsive-breakpoint(sm) {
     width: 80%;
     padding: 30px 10% 0;
   }
-  @include for-device(md) {
+  @include pe-responsive-breakpoint(md) {
     width: 70%;
     padding: 40px 15% 0;
   }
-  @include for-device(lg) {
+  @include pe-responsive-breakpoint(lg) {
     width: 90%;
     padding: 40px 5% 0;
   }
-  @include for-device(xl) {
+  @include pe-responsive-breakpoint(xl) {
     width: 80%;
     padding: 50px 10% 0;
   }
@@ -132,10 +132,10 @@ body.home {
   .component {
     width: 100%;
     margin: 20px 1.5%;
-    @include for-device(md) {
+    @include pe-responsive-breakpoint(md) {
       width: 47%;
     }
-    @include for-device(lg) {
+    @include pe-responsive-breakpoint(lg) {
       width: 30.3333333%;
     }
 

@@ -9,17 +9,13 @@
 @import "typography/headings";
 @import "typography/copy";
 
-// legacy styles
-@import "responsive";
-@import "article_typography";
-@import "article_body";
-
 // current styles
 @import "navigation";
+@import "toc";
 @import "alert";
 @import "home";
+@import "article";
 @import "block";
-@import "toc";
 @import "spec";
 
 body {
