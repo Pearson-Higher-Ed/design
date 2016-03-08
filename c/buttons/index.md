@@ -3,7 +3,7 @@ layout: component-yaml
 title: Buttons
 section: Components
 redirect_from: "/docs/ui-components/buttons/"
-version: 1.0.0-beta.1
+version: 1.0.0-beta.2
 status: active
 people:
   - role: Product Owner
@@ -19,6 +19,9 @@ people:
 implementations:
   - type: Origami
     link: https://origami.pearsoned.com/registry/components/o-buttons
+downloads:
+  - name: Sketch
+    link: ./assets/buttons.1.0.0-beta.1.sketch
 
 tagline: This component defines the standard visual style for buttons.
 features:
@@ -151,6 +154,11 @@ blocks:
         src: ./assets/redlines.link.png
 
 changelog:
+  - version: 1.0.0-beta.2
+    changes: |
+      - ADDED: Sketch UI mockup file
+
   - version: 1.0.0-beta.1
     changes: Initial version
+    linkable: false
 ---

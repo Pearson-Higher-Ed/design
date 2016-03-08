@@ -150,7 +150,7 @@
               </table>
             </div>
 
-            
+
           {% endcase %}
         </div>
         {% endfor %}
@@ -158,7 +158,7 @@
         <div class="block changelog">
           <h2 id="changelog">Changelog</h2>
           {% for change in page.changelog %}
-            {% if change.version != page.version %}
+            {% if change.version != page.version and change.linkable != false %}
               <h3><a href="./v{{change.version}}">{{change.version}}</a></h3>
             {% else %}
               <h3>{{change.version}}</h3>
