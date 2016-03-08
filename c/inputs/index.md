@@ -1,5 +1,5 @@
 ---
-layout: component
+layout: component-yaml
 title: Inputs
 section: Components
 redirect_from: /docs/ui-components/forms/
@@ -16,91 +16,129 @@ people:
   - role: Designer
     name: Parker Malenke
     email: parker.malenke@pearson.com
+
+tagline: |
+  This component defines the standard visual style for form elements.
+features:
+  - Single collection of all basic form styles
+  - Text, TextArea, Radio, Checkbox, Field Labels (required vs. optional), Field Groups
+  - Guaranteed compliance with Accessibility contrast requirements
+usage_guidelines: |
+  Every instance of a form element should come from this component. See the sections below for information about when to use each type of form.
+
+blocks:
+
+  - type: section
+    name: Form States
+
+  - type: two column
+    text: |
+      **Active** is the normal state of the form element.  It is available for user interaction.
+
+      **Focus** is initiated when the user interacts with the field.  We currently allow the browser to provide default styling for focus states.
+
+      **Read only** indicates that a field is active, but not editable.
+
+      **Disabled** state is a form input that is unavailable for interaction.
+    contents:
+      - type: narrow image
+        src: ./assets/states.png
+        caption: The four basic states. Note the focus is left up to the browser, this is an approximation of the Macintosh style.
+
+  - type: section
+    name: Text
+
+  - type: two column
+    text: |
+      Text input form elements are to be used for single line text inputs.
+    contents:
+      - type: narrow image
+        src: ./assets/text.png
+
+  - type: section
+    name: Textarea
+
+  - type: two column
+    text: |
+      Textarea form elements are to be used for multiple lines of text.
+
+      Vertical and horizontal resizing options may be enabled where appropriate.
+
+      Textarea states are styled similarly to regular text inputs.
+    contents:
+      - type: narrow image
+        src: ./assets/textarea.png
+
+  - type: section
+    name: Select
+
+  - type: two column
+    text: |
+
+
+      The select input allows a user to choose one of many predetermined options.
+
+      A default value can be set for the select element if it's recommended for most users.  Bear in mind that a user can easily overlook a preselected item, so use caution when doing so.
+    contents:
+      - type: narrow image
+        src: ./assets/select.png
+
+  - type: section
+    name: Radio Buttons
+
+  - type: two column
+    text: |
+      Radio buttons are for when the user must choose a single item out of several options.
+
+      Choose radios over selects when you want the user to carefully consider the options and need to expose all available options.
+
+      If there are only two mutually exclusive options, consider using a single checkbox. For example, use a checkbox for "I agree" instead of two radio buttons for "I agree" and "I don't agree."
+
+      Radio buttons use the default browser style.
+    contents:
+      - type: narrow image
+        src: ./assets/radio.png
+
+  - type: section
+    name: Checkboxes
+
+  - type: two column
+    text: |
+      Checkboxes are for times when the user needs to make one or more binary choices about a related item.
+
+      Unlike radio buttons, where a group of radio buttons represents a single choice, each check box in a group represents a separate, independent choice. When there is more than one option but only one can be selected, use a radio button instead.
+
+      Checkboxes use the default browser style.
+    contents:
+      - type: narrow image
+        src: ./assets/checkbox.png
+
+  - type: section
+    name: Labels
+
+  - type: two column
+    text: |
+      Labels communicate the purpose and meaning of a field to users.
+
+      Try to avoid over-explaining in the label (password requirements, for example, should be communicated in another way).
+    contents:
+      - type: narrow image
+        src: ./assets/labels.png
+
+  - type: two column
+    text: |
+      ### Required/Optional
+      Use the label to indicate whether a given field is required or optional. Only label the minority case (for example, if 6 fields are required and 2 are optional, only indicate the optional fields).
+    contents:
+      - type: narrow image
+        src: ./assets/required-optional.png
+
+changelog:
+  - version: 1.0.0-beta.1
+    changes: Initial version
 ---
 
-* TOC here
-{:toc}
-
-
-## Overview
-<div markdown="1" class="tagline">
-This component defines the standard visual style for form elements.
-</div>
-
-<div markdown="1" class="feature_list">
-- Single collection of all basic form styles
-- Text, TextArea, Radio, Checkbox, Field Labels (required vs. optional), Field Groups
-- Guaranteed compliance with Accessibility contrast requirements
-</div>
-
-<aside class="usage" markdown="1">
-Every instance of a form element should come from this component. See the sections below for information about when to use each type of form.
-</aside>
-
-
-## Form States
-
-<div class="section_text" markdown="1">
-**Default** is the normal state of the form element.  It is available for user interaction.
-
-**Focus** is initiated when the user interacts with the field.  We currently allow the browser to provide default styling for focus states.
-
-**Disabled** state is a form input that has been disabled and prevents the user from interacting with it.  It is used to indicate an input that has been provided at some point, but is currently unavailable to interaction.
-</div>
-
-## Text
-
-<div class="section_text" markdown="1">
-Text input form elements are to be used for single line text inputs.  Text inputs can have a <i>maxlength</i> character limit applied.  If the user input exceeds the visible width of the text field, the characters will shift to the left so that the last type character sits against the right edge of the field.  Keyboard and mouse controls will still allow horizontal scrolling within the field.
-</div>
-
-<div class="images">
-<div class="narrow_image" markdown="1">
-![](./assets/text.png)
-</div>
-</div>
-
-
-
-## Text Area
-
-
-<div class="section_text" markdown="1">
-Text area form elements are to be used for multiple lines of text.  If the text <i>overflows</i> the set number of lines allotted for the text area, the text area component will gain a vertical scroll bar.  If the text area element is intended to be <i>resize</i>-able, the controls for this feature will be enabled.  Text areas can be resized vertically, horizontally, or both.
-</div>
-
-<div class="images">
-<div class="narrow_image" markdown="1">
-![](./assets/textarea.png)
-</div>
-</div>
-
-
-## Select
-<div class="section_text" markdown="1">
-A default value can be set for the select element if it's recommended for most users.  Bear in mind that a user can easily overlook a preselected item, so use caution when doing so.
-
-The select form element provides a list of options for the user to make a single selection.  
-
-<aside class="usage" markdown="1">
-You have a list of 3 or more options for the user to choose from or hiding all options beneath a single trigger is acceptable.
-</aside>
-
-<aside class="usage" markdown="1">
-You have a list of 15 or more options for the user to choose from.  Consider a text input instead to prevent very long select lists.  An exception to this could be state or country selection.
-
-You want the user to carefully consider all options and do not wish to hide the select list options.
-</aside>
-</div>
-
-
-<div class="images">
-<div class="narrow_image" markdown="1">
-![](./assets/select.png)
-</div>
-</div>
-
-## Fieldset Anatomy
+## Labels
 
 <div class="section_text" markdown="1">
 A fieldset can contain one or more groupings of paired label and form elements.
@@ -155,33 +193,6 @@ An alternate visual treatment can be used for more explicit emphasis.
 <div class="images">
 <div class="narrow_image" markdown="1">
 ![](./assets/fieldset-group.png)
-</div>
-</div>
-
-## Radio and Checkbox
-
-
-<div class="section_text" markdown="1">
-Use radio and checkbox form elements for instances where you want the user to carefully consider the options and need to expose all available options.  Styling for Radio and Checkbox is browser default.
-
-<aside class="usage" markdown="1">
-The user needs to make a single selection from two or more options.  
-
-You need to present all available options equally.
-</aside>
-
-If there are only two mutually exclusive options, combine them into a single checkbox or toggle switch. For example, use a checkbox for "I agree" instead of two radio buttons for "I agree" and "I don't agree."
-
-<aside class="usage" markdown="1">
-You need to present users with a choice of one or more options that are not mutually exclusive, or a mixed choice.
-</aside>
-
-Unlike radio buttons, where a group of radio buttons represents a single choice, each check box in a group represents a separate, independent choice. When there is more than one option but only one can be selected, use a radio button instead.
-</div>
-
-<div class="images">
-<div class="narrow_image" markdown="1">
-![](./assets/radio-checkbox.png)
 </div>
 </div>
 
