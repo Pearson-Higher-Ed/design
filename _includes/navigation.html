@@ -43,7 +43,7 @@
       <ul>
         {% assign library = (site.pages | where: "section", "Components") | sort:"title" %}
         {% for page in library %}
-          {% if page.url contains 'beta' %}
+          {% if (page.url contains 'beta') or (page.private) %}
           {% else %}
             <li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
           {% endif %}
