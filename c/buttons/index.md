@@ -87,6 +87,8 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/redlines.sizes.png
+      - type: narrow image
+        src: ./assets/redlines.sizes.2.png
 
   - type: two column
     text: |
