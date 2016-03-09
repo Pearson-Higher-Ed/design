@@ -22,6 +22,8 @@ implementations:
 downloads:
   - name: Sketch
     link: ./assets/buttons.1.0.0-beta.1.sketch
+  - name: Illustrator
+    link: ./assets/buttons.mockup.ai
 
 tagline: This component defines the standard visual style for buttons.
 features:
