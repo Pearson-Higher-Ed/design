@@ -55,9 +55,13 @@ Begin the discussion by posting a [new thread in the Component Proposals categor
 ## 2. Define
 Now you should have a pretty good handle on your idea, how it might work across the platform, and maybe a list of partner teams. Or your discussion may cause you to pivot your idea from a brand new component into an enhancement to an existing component. Or maybe you join forces with another team that's already building something that will solve your problem. And that's perfectly fine. Ideally, the component library will consist of a lean set of just enough components to solve the use cases of the platform. Sometimes that means a new component, sometimes it doesn't.
 
-In the case that you proceed with a new component the next step is to begin designing and defining it. Your output at this stage is a component definition which will detail the features, usage, design, and behavior of your idea. Review the existing component documentation for examples of good definitions. (We're planning to add a guide dedicated to this topic in the future.)
+In the case that you proceed with a new component the next step is to begin designing and defining it. Your output at this stage is a component definition which will detail the features, usage, design, and behavior of your idea. Review the existing component documentation for examples of good definitions.
+
+Design documentation is currently hosted in this [Github Pages repository][d-repo]. Follow the readme file to get started with your own component definition page. (We're planning to add a guide dedicated to this topic in the future.)
 
 As you work on coalescing your idea you should publish your project to the mailing list and use version numbers (with the 'beta' modifier) to track progress. This allows interested parties to track your progress and provide feedback as you work.
+
+[d-repo]: https://github.com/Pearson-Higher-Ed/design/
 
 ### Definition Approval
 Once your definition reaches a final state you'll need to submit it to the review board to check compliance with the [Design Requirements][design-reqs] from the membership specification. If everything in the spec is satisfied you'll get a greenlight and can proceed to implementing your design. If anything doesn't quite line up the approvers will work with you to bring your component into alignment with the spec.
