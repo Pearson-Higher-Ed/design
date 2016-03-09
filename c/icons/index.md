@@ -14,8 +14,8 @@ people:
   - role: Designer
     name: Ed Zee
 implementations:
-  - type: Origami
-    link: https://origami.pearsoned.com/registry/components/o-buttons
+  - type: Elements SDK
+    link: http://pearson-higher-ed.github.io/elements/elements/icons/
 
 tagline: |
   Provides a standard set of icons at various sizes.
