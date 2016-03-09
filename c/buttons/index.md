@@ -17,8 +17,8 @@ people:
   - role: QA
     name: Eajaz
 implementations:
-  - type: Origami
-    link: https://origami.pearsoned.com/registry/components/o-buttons
+  - type: Elements SDK
+    link: https://pearson-elements-v0.surge.sh/elements/buttons/
 downloads:
   - name: Sketch
     link: ./assets/buttons.1.0.0-beta.1.sketch
