@@ -1,5 +1,5 @@
 name: Design
-highlighter: pygments
+highlighter: rouge
 relative_permalinks: false
 baseurl: /design
 permalink: pretty
