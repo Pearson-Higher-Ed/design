@@ -51,7 +51,7 @@
 		</div>
 	</div>
 
-	<div class="library">
+	<div id="library" class="library">
 		<header class="pe-title">Library</header>
 		{% assign components = (site.pages | where: "section", "Components") | sort:"title" %}
 		{% for page in components %}
