@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Icons
 section: Components
-version: 1.0.0-beta.4
+version: 1.0.0-beta.3
 status: active
 people:
   - role: Product Owner
@@ -14,8 +14,8 @@ people:
   - role: Designer
     name: Ed Zee
 implementations:
-  - type: Elements SDK
-    link: http://pearson-higher-ed.github.io/elements/elements/icons/
+  - type: Origami
+    link: https://origami.pearsoned.com/registry/components/o-buttons
 
 tagline: |
   Provides a standard set of icons at various sizes.
@@ -35,7 +35,7 @@ blocks:
 
       - check
       - times
-      - times-circle-o
+      - times-circle
       - trash-o
       - chevron-down
       - chevron-up
@@ -53,7 +53,6 @@ blocks:
       - user
       - square-o
       - check-square-o
-      - ban
     contents:
       - type: narrow image
         src: ./assets/icons.png
@@ -80,11 +79,6 @@ blocks:
       A lone symbol should still be wrapped in the relevant type style (e.g. Basic Label).
 
 changelog:
-  - version: 1.0.0-beta.4
-    changes: |
-      - ADDED: The ban icon.
-      - FIXED: The times-circle-o icon was incorrectly referred to as the times-circle icon.
-
   - version: 1.0.0-beta.3
     changes: |
       - ADDED: Additional icons, including square-o and check-square-o.
