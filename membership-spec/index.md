@@ -7,7 +7,7 @@ intro: |
   Every component listed in the Component Library must satisfy all the requirements contained in this document. To learn about submitting components for inclusion see the [Component Creation Guide][creation-guide].
 
   Requirements are divided into two sections, Design and Development. Your component definition will be approved based on the design requirements and the implementation is approved based on the development requirements.
-  
+
   [creation-guide]: /design/component-creation-guide/
 
 design_reqs:
@@ -94,12 +94,14 @@ design_reqs:
       Not only should our designs present a consistent and pleasing interface, but an intuitive and understandable one as well.
     reqs:
       - req: |
-          UE1: A component should be validated with user feedback.
+          UE1: A component should be validated for usefulness and usability with with user feedback from users of all abilities.
         type: suggested
         extras:
           - name: Explanation
             content: |
               Various levels of user research are acceptable depending on the complexity and novelty of a component. Extremely basic components may need little or no review (such as buttons). As a component becomes more complex it is a good idea to work with the various resources within Pearson to validate your design. Contact a researcher if you have questions about the appropriate level of research for your design.
+
+              Note that it is also recommended to conduct accessibility testing on more complex designs. Contact Chris Langston for more information.
 
               A non-exhaustive list of resource includes: Open Labs, Learning Design Research, Student and Educator Advisory Boards, and dedicated UX Research. Also, don't forget about the extensive collection of previous reports and findings.
         approvers:
@@ -117,16 +119,20 @@ design_reqs:
       WIP
     reqs:
       - req: |
-          A1: All components must fulfill Pearson Accessibility Guidelines 1, 6, 7, 8, 12, 15, 17, 18, 23, 26, 27, 28, and 42.
+          A1: All components must meet the requirements set forth in the [UXD Accessibility Checklist](https://docs.google.com/a/pearson.com/document/d/1Hqa-p_CePJ4x7O7ALOCWM88OaeODx9dP6gEko00sdxs/edit?usp=sharing).
         type: mandatory
         extras:
           - name: Explanation
             content: |
-              Meeting the Pearson guidelines also satisfies Section 508 and WCAG 2.0 requirements. See [this checklist](https://docs.google.com/a/pearson.com/document/d/1Hqa-p_CePJ4x7O7ALOCWM88OaeODx9dP6gEko00sdxs/edit?usp=sharing) for help meeting this requirements.
+              Make sure to pay particular attention to keyboard access and color contrast.
         approvers:
-          - Isabelle Burkhart (Accessibility)
-          - Chris Langston (Accessibility)
-          - Mallory van Achterberg-Hinkley (Accessibility)
+          - Isabelle Burkhart (Accessibility UX)
+          - Chris Langston (Accessibility UX)
+          - Mallory van Achterberg-Hinkley (Accessibility Development)
+          - Suzanne Taylor (Global Accessibility)
+
+      - req: |
+
 
   - name: Responsive
     description: |
@@ -181,6 +187,15 @@ design_reqs:
         approvers:
           - Ed Zee (UX Design)
           - Parker Malenke (UX Design)
+
+      - req: |
+          D5: Each component must include a completed [UXD Accessibility Checklist](https://docs.google.com/a/pearson.com/document/d/1Hqa-p_CePJ4x7O7ALOCWM88OaeODx9dP6gEko00sdxs/edit?usp=sharing).
+        type: mandatory
+        approvers:
+          - Isabelle Burkhart (Accessibility UX)
+          - Chris Langston (Accessibility UX)
+          - Mallory van Achterberg-Hinkley (Accessibility Development)
+          - Suzanne Taylor (Global Accessibility)
 
 changelog:
   - version: 1.0.0-beta.1
