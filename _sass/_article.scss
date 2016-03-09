@@ -24,6 +24,7 @@
   }
   h2 { @include hl1;  }
   h3 { @include hl2; }
+  h4 { @include hl3; }
   a { @include pe-link; }
 
   ul, ol {
