@@ -14,8 +14,11 @@ people:
   - role: Designer
     name: Ed Zee
 implementations:
-  - type: Origami
-    link: https://origami.pearsoned.com/registry/components/o-type
+  - type: Elements SDK
+    link: https://pearson-elements-v0.surge.sh/elements/typography/
+downloads:
+  - name: Sketch
+    link: ./assets/typography.mockup.sketch
 
 tagline: This component provides standard typographic styles for the platform.
 features:
@@ -546,6 +549,7 @@ changelog:
   - version: 1.0.0-beta.3
     changes: |
       - ADDED: Small body copy variant
+      - ADDED: Sketch mockup
       - FIXED: Correctly sized images
       - FIXED: Was missing redlines for links
 
