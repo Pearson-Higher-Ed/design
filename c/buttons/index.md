@@ -21,7 +21,7 @@ implementations:
     link: https://pearson-elements-v0.surge.sh/elements/buttons/
 downloads:
   - name: Sketch
-    link: ./assets/buttons.1.0.0-beta.1.sketch
+    link: ./assets/buttons.mockup.sketch
   - name: Illustrator
     link: ./assets/buttons.mockup.ai
 
