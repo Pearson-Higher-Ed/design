@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Typography
 section: Components
-version: 1.0.0-beta.2
+version: 1.0.0-beta.3
 status: active
 people:
   - role: Product Owner
@@ -134,9 +134,14 @@ blocks:
     text: |
       ### Basic Body
       Most regular content will use the *Basic Body* style.
+
+      #### Small variant
+      There is a smaller variant available which should be used when the line length is shorter.
     contents:
       - type: narrow image
         src: ./assets/copy.basic.png
+      - type: narrow image
+        src: ./assets/copy.small.png
 
   - type: two column
     text: |
@@ -334,9 +339,22 @@ blocks:
 
       Color
       : - \#231F20
+
+      Margins:
+      : - Adjacent paragraphs are separated by 12px
+        - Leave top/bottom padding for a block of `p` tags up to the consumer
+
+      ##### Small Size
+      Font
+      : - 14px font-size
+        - 20px line-height
     contents:
       - type: narrow image
         src: ./assets/redlines.copy.body.png
+        caption: Standard body copy
+      - type: narrow image
+        src: ./assets/redlines.copy.body.small.png
+        caption: Smaller body copy used for narrower line length
 
   - type: two column
     text: |
@@ -464,6 +482,8 @@ blocks:
 
       Header that follows content
       : - 20px margin
+
+      Margins can be customized to meet a layout if necessary.
     contents:
       - type: wide image
         src: ./assets/redlines.headings.png
@@ -473,6 +493,10 @@ blocks:
       ### Inline Elements
       `<small>, <time>, <abbr>`
       : - Same as the 'Basic Text' label
+
+      `<a>`
+      : - Active link = hyperdrive (#0D65A6) and underline
+        - Hover link = Royal Navy (#094877), no underline
 
       `<mark>`
       : - \#FDEC2E background-color
@@ -519,6 +543,12 @@ blocks:
         src: ./assets/redlines.inline.2.png
 
 changelog:
+  - version: 1.0.0-beta.3
+    changes: |
+      - ADDED: Small body copy variant
+      - FIXED: Correctly sized images
+      - FIXED: Was missing redlines for links
+
   - version: 1.0.0-beta.2
     changes: |
       - ADDED: Style for [code blocks](./#code) (e.g. `<pre>` tags)
