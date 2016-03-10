@@ -194,8 +194,6 @@ design_reqs:
         approvers:
           - Isabelle Burkhart (Accessibility UX)
           - Chris Langston (Accessibility UX)
-          - Mallory van Achterberg-Hinkley (Accessibility Development)
-          - Suzanne Taylor (Global Accessibility)
 
 changelog:
   - version: 1.0.0-beta.1
