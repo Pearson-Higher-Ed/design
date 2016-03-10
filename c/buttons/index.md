@@ -3,7 +3,7 @@ layout: component-yaml
 title: Buttons
 section: Components
 redirect_from: "/docs/ui-components/buttons/"
-version: 1.0.0-beta.2
+version: 1.0.0-beta.3
 status: active
 people:
   - role: Product Owner
@@ -158,7 +158,14 @@ blocks:
         src: ./assets/redlines.link.png
 
 changelog:
+  - version: 1.0.0-beta.3
+    changes: |
+      - ADDED: Illustrator UI mockup file
+      - FIXED: Proper link to elements SDK
+      - FIXED: Images aren't downsized
+
   - version: 1.0.0-beta.2
+    linkable: false
     changes: |
       - ADDED: Sketch UI mockup file
 
