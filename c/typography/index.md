@@ -395,34 +395,22 @@ blocks:
       These lists should be used to communicate content within a copy block, not as UI elements.
 
       Font
-      : - Use the same style as Basic Body copy
+      : - Inherit the containing body copy
 
       Spacing
       : - 12px above and below a list
         - 6px between list items
+        - Lists that immediately follow a header should contribute no top margin
 
-      Bullets
-      : - Centered in a 14px box which is left aligned to the surrounding body copy
-        - 4px padding separates box from list content
-        - 8px left margin for child elements
+      Padding
+      : - The first level of a list has 26px of left padding
+        - Sublists have 20px of padding
 
-      Numbers
-      : - Right aligned in a 14px box which is left aligned to the surrounding body copy
-        - If the number is too large for a 14px box, expand the box to fit
-        - 4px padding separates box from list content
-        - 8px left margin for child elements
-
-
-      Note: The expanding box behavior for ordered lists can be achieved with a `display: table` layout.
     contents:
       - type: narrow image
-        src: ./assets/redlines.copy.lists.ordered.1.png
+        src: ./assets/redlines.copy.lists.ordered.png
       - type: narrow image
-        src: ./assets/redlines.copy.lists.unordered.1.png
-      - type: narrow image
-        src: ./assets/redlines.copy.lists.ordered.2.png
-      - type: narrow image
-        src: ./assets/redlines.copy.lists.unordered.2.png
+        src: ./assets/redlines.copy.lists.unordered.png
 
   - type: two column
     text: |
@@ -550,6 +538,7 @@ changelog:
     changes: |
       - ADDED: Small body copy variant
       - ADDED: Sketch mockup
+      - CHANGED: Lists positioning is now more amenable to the default browser model
       - FIXED: Correctly sized images
       - FIXED: Was missing redlines for links
 
