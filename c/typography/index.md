@@ -316,6 +316,9 @@ blocks:
       XL
       : - 22px font-size
         - 28px line-height
+
+      #### Color
+      All titles are colored \#231F20.
     contents:
       - type: narrow image
         src: ./assets/redlines.titles.regular.png
@@ -323,11 +326,6 @@ blocks:
       - type: narrow image
         src: ./assets/redlines.titles.narrow.png
         caption: Title sizes for narrow viewports (< 480px)
-
-  - type: two column
-    text: |
-      #### Color
-      All titles are colored \#231F20.
 
   - type: two column
     text: |
