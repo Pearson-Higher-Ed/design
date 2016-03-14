@@ -23,7 +23,7 @@ Consists of pure CSS and includes the core set of components for setting up a we
 
 Install with: `npm install --save pearson-elements`
 
-In addition to the compiled CSS, Elements also installs the source SCSS files in case you want to integrate it more directly into your existing build process. This also allows you to access some of the SCSS features in your own styles, such as the predefined color variables. Read more on [Github][ghub] or in the [developer documentation][ddocs].
+In addition to the compiled CSS, Elements also installs the source SCSS files (and assets) in case you want to integrate it more directly into your existing build process. This also allows you to access some of the SCSS features in your own styles, such as the predefined color variables. Read more on [Github][ghub] or in the [developer documentation][ddocs].
 
 ### Compounds
 Currently in progress, this SDK will include commonly used components that leverage javascript for enhanced functionality and interactivity.
