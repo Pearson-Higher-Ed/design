@@ -62,7 +62,7 @@ design_reqs:
         extras:
           - name: Note
             content: |
-              This requirement will be updated in the near future to specify that components must align with the rebranded visual aesthetic (currently in progress).
+              This requirement will be updated in the near future to specify that components must align with the rebranded visual aesthetic (currently in progress). Rebranded components will also need to support the Pearson Brand Accessibility Guidelines.
         approvers:
           - Ed Zee (UX Design)
           - Parker Malenke (UX Design)
