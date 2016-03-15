@@ -108,7 +108,7 @@ design_reqs:
           - Chris Langston (Accessibility Research)
 
       - req: |
-          UE2: Where applicable, a component’s design should reflect the [Learning Design Principles](https://neo.pearson.com/groups/learning-design-higher-education/projects/learning-design-principles)
+          UE2: Where applicable, a component’s design should reflect the [Learning Design Principles](https://neo.pearson.com/groups/learning-design-higher-education/projects/learning-design-principles).
         type: suggested
         approvers:
           - Tommy Bishop (Learning Design)
