@@ -46,7 +46,7 @@ design_reqs:
           - Parker Malenke (UX Design)
 
       - req: |
-          C2: A component must not duplicate functionality found in the following components: <a href="#">Buttons</a>, <a href="#">Breakpoints</a>, <a href="#">Colors</a>, <a href="#">Icons</a>, or <a href="#">Typography</a>.
+          C2: A component must not duplicate functionality found in the following components: [Buttons](/design/c/buttons), [Breakpoints](/design/c/breakpoints), [Colors](/design/c/colors), [Icons](/design/c/icons), or [Typography](/design/c/typography).
         type: mandatory
         extras:
           - name: Explanation
@@ -68,7 +68,7 @@ design_reqs:
           - Parker Malenke (UX Design)
 
       - req: |
-          C4: A component must be versioned according to the Component Versioning Specification.
+          C4: A component must be versioned according to the [Component Versioning Specification](/design/component-versioning).
         type: mandatory
         approvers:
           - Ed Zee (UX Design)
