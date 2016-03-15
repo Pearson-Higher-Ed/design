@@ -138,6 +138,10 @@
           cursor: pointer;
         }
 
+        ul {
+          @include pe-ulist;
+        }
+
         p {
           margin: 0;
 
