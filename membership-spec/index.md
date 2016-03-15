@@ -94,19 +94,18 @@ design_reqs:
       Not only should our designs present a consistent and pleasing interface, but an intuitive and understandable one as well.
     reqs:
       - req: |
-          UE1: A component should be validated for usefulness and usability with with user feedback from users of all abilities.
+          UE1: A component should be evaluated for usefulness, usability, and accessibility through feedback from users with the widest possible range of abilities.
         type: suggested
         extras:
           - name: Explanation
             content: |
-              Various levels of user research are acceptable depending on the complexity and novelty of a component. Extremely basic components may need little or no review (such as buttons). As a component becomes more complex it is a good idea to work with the various resources within Pearson to validate your design. Contact a researcher if you have questions about the appropriate level of research for your design.
-
-              Note that it is also recommended to conduct accessibility testing on more complex designs. Contact Chris Langston for more information.
+              The necessary depth of user research increases with the scale, complexity, and novelty of a component. Atomic components such as simple buttons may only require internal documentation (including a UXD Accessibility Checklist). More complex components should be evaluated internally and externally through user feedback. Contact a User Experience Researcher if you have questions about the appropriateness of research for your component design.
 
               A non-exhaustive list of resource includes: Open Labs, Learning Design Research, Student and Educator Advisory Boards, and dedicated UX Research. Also, don't forget about the extensive collection of previous reports and findings.
         approvers:
           - Ed Zee (UX Design)
           - Parker Malenke (UX Design)
+          - Chris Langston (Accessibility Research)
 
       - req: |
           UE2: Where applicable, a component’s design should reflect the [Learning Design Principles](https://neo.pearson.com/groups/learning-design-higher-education/projects/learning-design-principles)
