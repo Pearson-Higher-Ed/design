@@ -102,6 +102,10 @@
         }
       }
 
+      .badge {
+        margin-top: 8px;
+      }
+
       .required {
         background-color: hsl(352, 73%, 41%);
         font-weight: normal;
@@ -113,9 +117,9 @@
       }
 
       .should {
-        background-color: hsl(45, 79%, 34%);
+        background-color: #EAB624;
         font-weight: normal;
-        color: white;
+        color: black;
         padding: 2px 8px;
         border-radius: 3px;
         font-size: 10px;

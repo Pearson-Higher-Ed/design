@@ -45,11 +45,13 @@
         <div class="req">
           <div>
             {{req.req | markdownify}}
-            {% if req.type == 'mandatory' %}
-              <span class="required">Mandatory</span>
-            {% else if req.type == 'suggested' %}
-              <span class="should">Strongly Recommended</span>
-            {% endif %}
+            <div class="badge">
+              {% if req.type == 'mandatory' %}
+                <span class="required">Mandatory</span>
+              {% else if req.type == 'suggested' %}
+                <span class="should">Strongly Recommended</span>
+              {% endif %}
+            </div>
           </div>
 
           {% for extra in req.extras %}
