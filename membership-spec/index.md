@@ -130,8 +130,6 @@ design_reqs:
           - Mallory van Achterberg-Hinkley (Accessibility Development)
           - Suzanne Taylor (Global Accessibility)
 
-      - req: |
-
 
   - name: Responsive
     description: |
