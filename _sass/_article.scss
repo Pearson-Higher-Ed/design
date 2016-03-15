@@ -27,10 +27,13 @@
   h4 { @include hl3; }
   a { @include pe-link; }
 
-  ul, ol {
-    @include pe-copy;
-    li + li {
-      margin-top: 2px;
-    }
+  ul { @include pe-ulist; }
+  ol { @include pe-olist; }
+
+  ul + p,
+  ol + p,
+  p + ul,
+  p + ol {
+    margin-top: 12px;
   }
 }

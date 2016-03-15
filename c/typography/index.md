@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Typography
 section: Components
-version: 1.0.0-beta.2
+version: 1.0.0-beta.3
 status: active
 people:
   - role: Product Owner
@@ -14,8 +14,13 @@ people:
   - role: Designer
     name: Ed Zee
 implementations:
-  - type: Origami
-    link: https://origami.pearsoned.com/registry/components/o-type
+  - type: Elements SDK
+    link: https://pearson-elements-v0.surge.sh/elements/typography/
+downloads:
+  - name: Sketch
+    link: ./assets/typography.mockup.sketch
+  - name: Illustrator
+    link: ./assets/typography.mockup.ai
 
 tagline: This component provides standard typographic styles for the platform.
 features:
@@ -40,8 +45,6 @@ blocks:
         content: |
           font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
           font-family: Monaco, 'Lucida Console', monospace;
-
-          var test = 3;
 
   - type: section
     name: Labels
@@ -134,9 +137,14 @@ blocks:
     text: |
       ### Basic Body
       Most regular content will use the *Basic Body* style.
+
+      #### Small variant
+      There is a smaller variant available which should be used when the line length is shorter.
     contents:
       - type: narrow image
         src: ./assets/copy.basic.png
+      - type: narrow image
+        src: ./assets/copy.small.png
 
   - type: two column
     text: |
@@ -308,6 +316,9 @@ blocks:
       XL
       : - 22px font-size
         - 28px line-height
+
+      #### Color
+      All titles are colored \#231F20.
     contents:
       - type: narrow image
         src: ./assets/redlines.titles.regular.png
@@ -315,11 +326,6 @@ blocks:
       - type: narrow image
         src: ./assets/redlines.titles.narrow.png
         caption: Title sizes for narrow viewports (< 480px)
-
-  - type: two column
-    text: |
-      #### Color
-      All titles are colored \#231F20.
 
   - type: two column
     text: |
@@ -334,9 +340,22 @@ blocks:
 
       Color
       : - \#231F20
+
+      Margins:
+      : - Adjacent paragraphs are separated by 12px
+        - Leave top/bottom padding for a block of `p` tags up to the consumer
+
+      ##### Small Size
+      Font
+      : - 14px font-size
+        - 20px line-height
     contents:
       - type: narrow image
         src: ./assets/redlines.copy.body.png
+        caption: Standard body copy
+      - type: narrow image
+        src: ./assets/redlines.copy.body.small.png
+        caption: Smaller body copy used for narrower line length
 
   - type: two column
     text: |
@@ -374,34 +393,22 @@ blocks:
       These lists should be used to communicate content within a copy block, not as UI elements.
 
       Font
-      : - Use the same style as Basic Body copy
+      : - Inherit the containing body copy
 
       Spacing
       : - 12px above and below a list
         - 6px between list items
+        - Lists that immediately follow a header should contribute no top margin
 
-      Bullets
-      : - Centered in a 14px box which is left aligned to the surrounding body copy
-        - 4px padding separates box from list content
-        - 8px left margin for child elements
+      Padding
+      : - The first level of a list has 26px of left padding
+        - Sublists have 20px of padding
 
-      Numbers
-      : - Right aligned in a 14px box which is left aligned to the surrounding body copy
-        - If the number is too large for a 14px box, expand the box to fit
-        - 4px padding separates box from list content
-        - 8px left margin for child elements
-
-
-      Note: The expanding box behavior for ordered lists can be achieved with a `display: table` layout.
     contents:
       - type: narrow image
-        src: ./assets/redlines.copy.lists.ordered.1.png
+        src: ./assets/redlines.copy.lists.ordered.png
       - type: narrow image
-        src: ./assets/redlines.copy.lists.unordered.1.png
-      - type: narrow image
-        src: ./assets/redlines.copy.lists.ordered.2.png
-      - type: narrow image
-        src: ./assets/redlines.copy.lists.unordered.2.png
+        src: ./assets/redlines.copy.lists.unordered.png
 
   - type: two column
     text: |
@@ -432,26 +439,31 @@ blocks:
 
       Level 2
       : - 20px font-size
+        - 24px line-height
         - bold font-weight
         - \#231F20 color
 
       Level 3
       : - 18px font-size
+        - 22px line-height
         - bold font-weight
         - \#231F20 color
 
       Level 4
       : - 16px font-size
+        - 20px line-height
         - bold font-weight
         - \#565656 color
 
       Level 5
       : - 16px font-size
+        - 20px line-height
         - italic font-style
         - \#565656 color
 
       Level 6
       : - 14px font-size
+        - 16px line-height
         - italic font-style
         - \#565656 color
 
@@ -464,6 +476,8 @@ blocks:
 
       Header that follows content
       : - 20px margin
+
+      Margins can be customized to meet a layout if necessary.
     contents:
       - type: wide image
         src: ./assets/redlines.headings.png
@@ -473,6 +487,10 @@ blocks:
       ### Inline Elements
       `<small>, <time>, <abbr>`
       : - Same as the 'Basic Text' label
+
+      `<a>`
+      : - Active link = hyperdrive (#0D65A6) and underline
+        - Hover link = Royal Navy (#094877), no underline
 
       `<mark>`
       : - \#FDEC2E background-color
@@ -519,13 +537,23 @@ blocks:
         src: ./assets/redlines.inline.2.png
 
 changelog:
+  - version: 1.0.0-beta.3
+    changes: |
+      - ADDED: Small body copy variant
+      - ADDED: Sketch mockup
+      - ADDED: Illustrator mockup
+      - CHANGED: Lists positioning is now more amenable to the default browser model
+      - FIXED: Correctly sized images
+      - FIXED: Was missing redlines for links
+      - FIXED: Was missing line-height info for headers
+
   - version: 1.0.0-beta.2
     changes: |
-      - ADDED: Style for [code blocks](./#code) (e.g. `<pre>` tags)
-      - ADDED: Style for [`<code>` and `<kbd>` inline elements](./#inline-elements)
-      - ADDED: [Heading](./#headings) styles
-      - ADDED: Styles for [ordered and unordered lists](./#lists) within copy
-      - CHANGED: [Redlines](./#redlines) are now included directly in the page, rather than in a .zip file
+      - ADDED: Style for code blocks (e.g. `<pre>` tags)
+      - ADDED: Style for `<code>` and `<kbd>` inline elements
+      - ADDED: Heading styles
+      - ADDED: Styles for ordered and unordered lists within copy
+      - CHANGED: Redlines are now included directly in the page, rather than in a .zip file
   - version: 1.0.0-beta.1
     changes: Initial version
 ---
