@@ -439,26 +439,31 @@ blocks:
 
       Level 2
       : - 20px font-size
+        - 24px line-height
         - bold font-weight
         - \#231F20 color
 
       Level 3
       : - 18px font-size
+        - 22px line-height
         - bold font-weight
         - \#231F20 color
 
       Level 4
       : - 16px font-size
+        - 20px line-height
         - bold font-weight
         - \#565656 color
 
       Level 5
       : - 16px font-size
+        - 20px line-height
         - italic font-style
         - \#565656 color
 
       Level 6
       : - 14px font-size
+        - 16px line-height
         - italic font-style
         - \#565656 color
 
