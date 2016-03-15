@@ -19,6 +19,8 @@ implementations:
 downloads:
   - name: Sketch
     link: ./assets/typography.mockup.sketch
+  - name: Illustrator
+    link: ./assets/typography.mockup.ai
 
 tagline: This component provides standard typographic styles for the platform.
 features:
@@ -43,8 +45,6 @@ blocks:
         content: |
           font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
           font-family: Monaco, 'Lucida Console', monospace;
-
-          var test = 3;
 
   - type: section
     name: Labels
