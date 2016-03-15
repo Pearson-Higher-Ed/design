@@ -26,7 +26,7 @@ If you have any questions, either about the process or a specific component, the
 
 [ml]: https://groups.google.com/a/pearson.com/forum/#!forum/elemental-discuss/categories
 
-## 3. Handing Off to Development
+## 3. Working With Development
 Each component includes a pre-built package of code that makes it easy for developers to incorporate the design into the final product. This also simplifies communication about the design details; you don't have to redline your use of a component, simply note which component it is. For example, you can just point out that a button is [a Large Default button][lg-btn], rather than indicating its exact size and color.
 
 [lg-btn]: {{site.baseurl}}/c/buttons/#button-sizes
