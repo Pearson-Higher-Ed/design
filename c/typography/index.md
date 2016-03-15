@@ -541,17 +541,19 @@ changelog:
     changes: |
       - ADDED: Small body copy variant
       - ADDED: Sketch mockup
+      - ADDED: Illustrator mockup
       - CHANGED: Lists positioning is now more amenable to the default browser model
       - FIXED: Correctly sized images
       - FIXED: Was missing redlines for links
+      - FIXED: Was missing line-height info for headers
 
   - version: 1.0.0-beta.2
     changes: |
-      - ADDED: Style for [code blocks](./#code) (e.g. `<pre>` tags)
-      - ADDED: Style for [`<code>` and `<kbd>` inline elements](./#inline-elements)
-      - ADDED: [Heading](./#headings) styles
-      - ADDED: Styles for [ordered and unordered lists](./#lists) within copy
-      - CHANGED: [Redlines](./#redlines) are now included directly in the page, rather than in a .zip file
+      - ADDED: Style for code blocks (e.g. `<pre>` tags)
+      - ADDED: Style for `<code>` and `<kbd>` inline elements
+      - ADDED: Heading styles
+      - ADDED: Styles for ordered and unordered lists within copy
+      - CHANGED: Redlines are now included directly in the page, rather than in a .zip file
   - version: 1.0.0-beta.1
     changes: Initial version
 ---
