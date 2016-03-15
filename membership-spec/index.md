@@ -118,12 +118,12 @@ design_reqs:
       WIP
     reqs:
       - req: |
-          A1: All components must meet the requirements set forth in the [UXD Accessibility Checklist](https://docs.google.com/a/pearson.com/document/d/1Hqa-p_CePJ4x7O7ALOCWM88OaeODx9dP6gEko00sdxs/edit?usp=sharing).
+          A1: All components must be reviewed with a [UX Design Accessibility Checklist](https://docs.google.com/a/pearson.com/document/d/1Hqa-p_CePJ4x7O7ALOCWM88OaeODx9dP6gEko00sdxs/edit?usp=sharing).
         type: mandatory
         extras:
           - name: Explanation
             content: |
-              Make sure to pay particular attention to keyboard access and color contrast.
+              WIP Chris Langston will write this.
         approvers:
           - Isabelle Burkhart (Accessibility UX)
           - Chris Langston (Accessibility UX)
