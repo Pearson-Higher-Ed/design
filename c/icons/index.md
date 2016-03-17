@@ -16,6 +16,13 @@ people:
 implementations:
   - type: Elements SDK
     link: http://pearson-higher-ed.github.io/elements/elements/icons/
+downloads:
+  - name: Font Files
+    link: http://fortawesome.github.io/Font-Awesome/
+  - name: Sketch
+    link: ./assets/icons.sketch
+  - name: Illustrator
+    link: ./assets/icons.mockup.ai
 
 tagline: |
   Provides a standard set of icons at various sizes.
@@ -83,6 +90,7 @@ blocks:
 changelog:
   - version: 1.0.0-beta.5
     changes: |
+      - ADDED: Sketch and Illustrator mockup files.
       - ADDED: The camera icon.
       - FIXED: Updated image widths.
   - version: 1.0.0-beta.4
