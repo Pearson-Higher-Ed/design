@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Icons
 section: Components
-version: 1.0.0-beta.5
+version: 1.0.0-beta.4
 status: active
 people:
   - role: Product Owner
@@ -54,7 +54,6 @@ blocks:
       - square-o
       - check-square-o
       - ban
-      - camera
     contents:
       - type: narrow image
         src: ./assets/icons.png
@@ -68,7 +67,7 @@ blocks:
       Since we're using an icon font each symbol will just inherit the font-size of the surrounding type.
     contents:
       - type: narrow image
-        src: ./assets/icon.sizes.png
+        src: ./assets/icons.sizes.png
         caption: Icons adopting the sizes of their containing type elements.
 
   - type: section
@@ -81,10 +80,6 @@ blocks:
       A lone symbol should still be wrapped in the relevant type style (e.g. Basic Label).
 
 changelog:
-  - version: 1.0.0-beta.5
-    changes: |
-      - ADDED: The camera icon.
-      - FIXED: Updated image widths.
   - version: 1.0.0-beta.4
     changes: |
       - ADDED: The ban icon.
