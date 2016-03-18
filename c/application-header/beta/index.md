@@ -54,8 +54,8 @@ blocks:
 
     contents:
       - type: wide image
-        src: ./assets/signed-out-mode.png
-        caption: The signed out header at two major breakpoints
+        src: ./assets/signed.out.mode.png
+        caption: The signed out header has one style that works for every breakpoint. Shown with and without the sign in link.
 
   - type: section
     name: Basic Mode
@@ -124,7 +124,25 @@ blocks:
 
   - type: two column
     text: |
-      For detailed documentation on colors, typography, sizes, spacing, etc. please see the [redlines available here](./assets/redlines.zip).
+      ### Signed Out Mode
+
+      Dimensions
+      : - 54px tall
+        - 100% viewport width
+
+      Spacing
+      : - Logo and links vertically centered
+        - 30px from either end
+        - 30px between links
+
+      Background
+      : - Black (\#000000)
+
+      Typography
+      : - Links are large labels (inverse primary color)
+    contents:
+      - type: wide image
+        src: ./assets/redlines.signed.out.mode.png
 
 changelog:
   - version: 1.0.0
