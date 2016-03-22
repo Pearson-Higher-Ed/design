@@ -39,28 +39,30 @@
       {% for section in page.design_reqs %}
       <div class="reqs">
         <h3 id="{{section.name | slugify}}">{{section.name}}</h3>
-        <div class="description">{{section.description | markdownify}}</div>
+        {% if section.description %}<div class="description">{{section.description | markdownify}}</div>{% endif %}
 
         {% for req in section.reqs %}
         <div class="req">
           <div>
             {{req.req | markdownify}}
-            {% if req.type == 'mandatory' %}
-              <span class="required">Mandatory</span>
-            {% else if req.type == 'suggested' %}
-              <span class="should">Strongly Recommended</span>
-            {% endif %}
+            <div class="badge">
+              {% if req.type == 'mandatory' %}
+                <span class="required">Mandatory</span>
+              {% else if req.type == 'suggested' %}
+                <span class="should">Strongly Recommended</span>
+              {% endif %}
+            </div>
           </div>
 
           {% for extra in req.extras %}
           <div class="explanation">
-            <div class="heading">{{extra.name}}</div>
+            <button class="heading">{{extra.name}}</button>
             <div class="content">{{extra.content | markdownify}}</div>
           </div>
           {% endfor %}
 
           <div class="approvers">
-            <div class="heading">Approvers</div>
+            <button class="heading">Approvers</button>
             <div class="content">
               <ul>
                 {% for approver in req.approvers %}
@@ -95,13 +97,13 @@
 
           {% for extra in req.extras %}
           <div class="explanation">
-            <div class="heading">{{extra.name}}</div>
+            <button class="heading">{{extra.name}}</button>
             <div class="content">{{extra.content | markdownify}}</div>
           </div>
           {% endfor %}
 
           <div class="approvers">
-            <div class="heading">Approvers</div>
+            <button class="heading">Approvers</button>
             <div class="content">
               <ul>
                 {% for approver in req.approvers %}
@@ -136,6 +138,7 @@
       for (var i = 0; i < items.length; i++) {
         items[i].style.display = 'none';
         items[i].setAttribute('hidden', true);
+        items[i].previousElementSibling.setAttribute('aria-expanded', 'false');
       }
     }
 
@@ -147,8 +150,10 @@
       }
 
       if (content.hasAttribute('hidden')) {
+        content.previousElementSibling.setAttribute('aria-expanded', 'true');
         content.removeAttribute('hidden');
       } else {
+        content.previousElementSibling.setAttribute('aria-expanded', 'false');
         content.setAttribute('hidden', true);
       }
     }

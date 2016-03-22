@@ -7,7 +7,7 @@ intro: |
   Every component listed in the Component Library must satisfy all the requirements contained in this document. To learn about submitting components for inclusion see the [Component Creation Guide][creation-guide].
 
   Requirements are divided into two sections, Design and Development. Your component definition will be approved based on the design requirements and the implementation is approved based on the development requirements.
-  
+
   [creation-guide]: /design/component-creation-guide/
 
 design_reqs:
@@ -46,7 +46,7 @@ design_reqs:
           - Parker Malenke (UX Design)
 
       - req: |
-          C2: A component must not duplicate functionality found in the following components: <a href="#">Buttons</a>, <a href="#">Breakpoints</a>, <a href="#">Colors</a>, <a href="#">Icons</a>, or <a href="#">Typography</a>.
+          C2: A component must not duplicate functionality found in the following components: [Buttons](/design/c/buttons), [Breakpoints](/design/c/breakpoints), [Colors](/design/c/colors), [Icons](/design/c/icons), or [Typography](/design/c/typography).
         type: mandatory
         extras:
           - name: Explanation
@@ -62,13 +62,13 @@ design_reqs:
         extras:
           - name: Note
             content: |
-              This requirement will be updated in the near future to specify that components must align with the rebranded visual aesthetic (currently in progress).
+              This requirement will be updated in the near future to specify that components must align with the rebranded visual aesthetic (currently in progress). Rebranded components will also need to support the Pearson Brand Accessibility Guidelines.
         approvers:
           - Ed Zee (UX Design)
           - Parker Malenke (UX Design)
 
       - req: |
-          C4: A component must be versioned according to the Component Versioning Specification.
+          C4: A component must be versioned according to the [Component Versioning Specification](/design/component-versioning).
         type: mandatory
         approvers:
           - Ed Zee (UX Design)
@@ -94,39 +94,42 @@ design_reqs:
       Not only should our designs present a consistent and pleasing interface, but an intuitive and understandable one as well.
     reqs:
       - req: |
-          UE1: A component should be validated with user feedback.
+          UE1: A component should be evaluated for usefulness, usability, and accessibility through feedback from users with the widest possible range of abilities.
         type: suggested
         extras:
           - name: Explanation
             content: |
-              Various levels of user research are acceptable depending on the complexity and novelty of a component. Extremely basic components may need little or no review (such as buttons). As a component becomes more complex it is a good idea to work with the various resources within Pearson to validate your design. Contact a researcher if you have questions about the appropriate level of research for your design.
+              The necessary depth of user research increases with the scale, complexity, and novelty of a component. Atomic components such as simple buttons may only require internal documentation (including a UXD Accessibility Checklist). More complex components should be evaluated internally and externally through user feedback. Contact a User Experience Researcher if you have questions about the appropriateness of research for your component design.
 
               A non-exhaustive list of resource includes: Open Labs, Learning Design Research, Student and Educator Advisory Boards, and dedicated UX Research. Also, don't forget about the extensive collection of previous reports and findings.
         approvers:
           - Ed Zee (UX Design)
           - Parker Malenke (UX Design)
+          - Chris Langston (Accessibility Research)
 
       - req: |
-          UE2: Where applicable, a component’s design should reflect the [Learning Design Principles](https://neo.pearson.com/groups/learning-design-higher-education/projects/learning-design-principles)
+          UE2: Where applicable, a component’s design should reflect the [Learning Design Principles](https://neo.pearson.com/groups/learning-design-higher-education/projects/learning-design-principles).
         type: suggested
         approvers:
           - Tommy Bishop (Learning Design)
 
   - name: Accessible
-    description: |
-      WIP
     reqs:
       - req: |
-          A1: All components must fulfill Pearson Accessibility Guidelines 1, 6, 7, 8, 12, 15, 17, 18, 23, 26, 27, 28, and 42.
+          A1: Components must conform to the [Pearson Accessibility Guidelines](http://wps.pearsoned.com/accessibility/115/29601/7577872.cw/index.html) (PAG). Designers must provide a [UXD Accessibility Checklist](https://docs.google.com/a/pearson.com/document/d/1Hqa-p_CePJ4x7O7ALOCWM88OaeODx9dP6gEko00sdxs/edit?usp=sharing) with each component that ensures that PAG has been considered during the design phase. This checklist also functions as fulfillment of PAG 42 - Documentation of Accessibility.
         type: mandatory
         extras:
           - name: Explanation
             content: |
-              Meeting the Pearson guidelines also satisfies Section 508 and WCAG 2.0 requirements. See [this checklist](https://docs.google.com/a/pearson.com/document/d/1Hqa-p_CePJ4x7O7ALOCWM88OaeODx9dP6gEko00sdxs/edit?usp=sharing) for help meeting this requirements.
+              The Pearson Accessibility Guidelines are a company-wide implementation of the Web Content Accessibility Guidelines (WCAG) 2.0. WCAG 2.0 is a global product of the Worldwide Web Consortium that mandates specific accessibility minima and features for compliance at Levels A, AA, and AAA. The Pearson Accessibility Guidelines ensure Level AA compliance by providing a design and development framework of 42 guidelines specific to Pearson products.
+
+              The UXD Accessibility Checklist specifies a subset of the 42 Pearson Accessibility Guidelines which **must** be addressed during the design phase. Not every item on the UXD Accessibility Checklist will apply to every design. However, each should be carefully considered and documented for clarity and to ensure the accessibility needs of the component are understood downstream.
         approvers:
-          - Isabelle Burkhart (Accessibility)
-          - Chris Langston (Accessibility)
-          - Mallory van Achterberg-Hinkley (Accessibility)
+          - Isabelle Burkhart (Accessibility UX)
+          - Chris Langston (Accessibility UX)
+          - Mallory van Achterberg-Hinkley (Accessibility Development)
+          - Suzanne Taylor (Global Accessibility)
+
 
   - name: Responsive
     description: |
@@ -181,6 +184,13 @@ design_reqs:
         approvers:
           - Ed Zee (UX Design)
           - Parker Malenke (UX Design)
+
+      - req: |
+          D5: Each component must include a completed [UXD Accessibility Checklist](https://docs.google.com/a/pearson.com/document/d/1Hqa-p_CePJ4x7O7ALOCWM88OaeODx9dP6gEko00sdxs/edit?usp=sharing).
+        type: mandatory
+        approvers:
+          - Isabelle Burkhart (Accessibility UX)
+          - Chris Langston (Accessibility UX)
 
 changelog:
   - version: 1.0.0-beta.1

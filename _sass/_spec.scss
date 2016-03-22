@@ -85,7 +85,8 @@
       font-style: italic;
     }
 
-    .description + .req {
+    .description + .req,
+    h3 + .req {
       margin-top: 30px;
     }
 
@@ -102,6 +103,10 @@
         }
       }
 
+      .badge {
+        margin-top: 8px;
+      }
+
       .required {
         background-color: hsl(352, 73%, 41%);
         font-weight: normal;
@@ -113,9 +118,9 @@
       }
 
       .should {
-        background-color: hsl(45, 79%, 34%);
+        background-color: #EAB624;
         font-weight: normal;
-        color: white;
+        color: black;
         padding: 2px 8px;
         border-radius: 3px;
         font-size: 10px;
@@ -132,6 +137,14 @@
           font-style: italic;
           margin-bottom: 8px;
           cursor: pointer;
+          background: none;
+          border: none;
+          padding: 0;
+          display: block;
+        }
+
+        ul {
+          @include pe-ulist;
         }
 
         p {
