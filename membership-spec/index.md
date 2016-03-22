@@ -114,16 +114,16 @@ design_reqs:
           - Tommy Bishop (Learning Design)
 
   - name: Accessible
-    description: |
-      WIP
     reqs:
       - req: |
-          A1: All components must be reviewed with a [UX Design Accessibility Checklist](https://docs.google.com/a/pearson.com/document/d/1Hqa-p_CePJ4x7O7ALOCWM88OaeODx9dP6gEko00sdxs/edit?usp=sharing).
+          A1: Components must conform to the [Pearson Accessibility Guidelines](http://wps.pearsoned.com/accessibility/115/29601/7577872.cw/index.html) (PAG). Designers must provide a [UXD Accessibility Checklist](https://docs.google.com/a/pearson.com/document/d/1Hqa-p_CePJ4x7O7ALOCWM88OaeODx9dP6gEko00sdxs/edit?usp=sharing) with each component that ensures that PAG has been considered during the design phase. This checklist also functions as fulfillment of PAG 42 - Documentation of Accessibility.
         type: mandatory
         extras:
           - name: Explanation
             content: |
-              WIP Chris Langston will write this.
+              The Pearson Accessibility Guidelines are a company-wide implementation of the Web Content Accessibility Guidelines (WCAG) 2.0. WCAG 2.0 is a global product of the Worldwide Web Consortium that mandates specific accessibility minima and features for compliance at Levels A, AA, and AAA. The Pearson Accessibility Guidelines ensure Level AA compliance by providing a design and development framework of 42 guidelines specific to Pearson products.
+
+              The UXD Accessibility Checklist specifies a subset of the 42 Pearson Accessibility Guidelines which **must** be addressed during the design phase. Not every item on the UXD Accessibility Checklist will apply to every design. However, each should be carefully considered and documented for clarity and to ensure the accessibility needs of the component are understood downstream.
         approvers:
           - Isabelle Burkhart (Accessibility UX)
           - Chris Langston (Accessibility UX)
