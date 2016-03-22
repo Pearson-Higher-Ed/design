@@ -85,7 +85,8 @@
       font-style: italic;
     }
 
-    .description + .req {
+    .description + .req,
+    h3 + .req {
       margin-top: 30px;
     }
 
@@ -136,6 +137,10 @@
           font-style: italic;
           margin-bottom: 8px;
           cursor: pointer;
+          background: none;
+          border: none;
+          padding: 0;
+          display: block;
         }
 
         ul {
