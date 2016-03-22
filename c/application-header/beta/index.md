@@ -3,7 +3,7 @@ layout: component-yaml
 title: Application Header
 section: Components
 redirect_from: /docs/ui-components/application-header/
-version: 1.0.0
+version: 1.1.0-beta.1
 status: active
 people:
   - role: Product Owner
@@ -43,7 +43,7 @@ blocks:
 
   - type: two column
     text: |
-      This is the simplest version of the header, just displaying the Pearson logo (with no link interaction), the help link, and (optionally) a Sign In link. The help link is designed to trigger the [Contextual Help component]().
+      This is the simplest version of the header, just displaying the Pearson logo (with no link interaction), the help link, and (optionally) a Sign In link. The help link is designed to trigger the [Contextual Help component](/design/c/contextual-help).
 
       Use this mode when the user is signed out.
 
@@ -67,13 +67,7 @@ blocks:
       The User Menu is labelled with the user's first name and contains My Account and Sign Out options. At widths less than 768px it is condensed into the *Mobile Menu* which relabels the dropdown as "Menu" and extends it with a list of courses (if the consuming app has that information).
 
       Use this mode when the user logs in to a standard Pi session and needs a default header experience.
-    contents:
-      - type: wide image
-        src: ./assets/basic-mode-1024.png
-        caption: The Basic Mode header at desktop sizes
 
-  - type: two column
-    text: |
       ### Options
 
       #### Course listing
@@ -82,15 +76,23 @@ blocks:
       Use this when the consuming application contains a list of courses for the current user.
     contents:
       - type: wide image
-        src: ./assets/basic-mode-480.png
-        caption: The basic header with a course list in the mobile menu
+        src: ./assets/basic.mode.png
+        caption: |
+          The desktop version of the basic mode header. (Note: Normally the mobile view would be used at this width, it has been compressed for illustration purposes.)
+      - type: narrow image
+        src: ./assets/basic.mode.mobile.png
+        caption: Mobile version with the course listing.
 
   - type: section
     name: Course Mode
 
   - type: two column
     text: |
-      At desktop sizes this is similar to the Basic Header. The Mobile Menu gains an "All Courses" link and any local navigation for the course. The Course Mode also offers the ability to enable a light theme.
+      At desktop sizes this is identical to the Basic Header.
+
+      The Mobile Menu gains an "All Courses" link and any local navigation for the course.
+
+      The Course Mode also offers the ability to enable a light theme.
 
       Use this mode when a user launches a specific product (such as Revel, Pearson Reader, etc.) with local navigation.
 
@@ -103,8 +105,8 @@ blocks:
       The header can switch it's color from black to a light gray. This option should be used when the user is viewing a reading, assessment, or some other type of content which requires their complete focus.
     contents:
       - type: wide image
-        src: ./assets/course-mode.png
-        caption: Course mode at mobile and desktop sizes
+        src: ./assets/course.mode.png
+        caption: Course mode with the light theme at < 480px; standard course mode at 480px – 767px.
 
   - type: section
     name: Integration Mode
@@ -116,7 +118,7 @@ blocks:
       Use this mode when the user's session is managed by a third party and the user shouldn't have access to platform session features (e.g. sign out, My Account). Specifically, this applies to 3PL/LMS integration scenarios.
     contents:
       - type: wide image
-        src: ./assets/integration-mode.png
+        src: ./assets/integration.mode.png
         caption: Integration mode
 
   - type: section
@@ -125,6 +127,11 @@ blocks:
   - type: two column
     text: |
       ### Signed Out Mode
+
+      #### ≥ 768px
+
+      Logo link
+      : - No active link
 
       Dimensions
       : - 54px tall
@@ -140,11 +147,180 @@ blocks:
 
       Typography
       : - Links are large labels (inverse primary color)
+
+      #### < 768px
+
+      Dimensions
+      : - 44px tall
+
+      Spacing
+      : - 14px from either end
+        - 14px between links
+
     contents:
       - type: wide image
         src: ./assets/redlines.signed.out.mode.png
 
+  - type: two column
+    text: |
+      ### Basic Mode
+
+      #### ≥ 1024px
+
+      Logo Link
+      : - www.console.pearson.com
+
+      Dimensions
+      : - 54px tall
+        - 100% viewport width
+        - Dropdown menu is 250px wide
+        - Menu items are 48px tall
+        - Menu dividers are 1px
+        - Dropdown tab is 42px tall
+        - Cap over tab is 2px tall
+
+      Spacing
+      : - Logo and links vertically centered
+        - 30px from either end
+        - 30px between links
+        - 8px between username and chevron-down icon
+        - Dropdown tab has 15px of horizontal padding
+
+      Colors
+      : - Main bar is Black (#000000)
+        - Dropdown background is Gutenberg Black (#333333)
+        - Divider lines in dropdown are Asphalt (#3f3f3f)
+        - Cap on username is Smoke Gray (#545454)
+
+
+      Typography
+      : - Top level links are large labels (inverse primary)
+        - Menu items are large labels (inverse secondary)
+
+      #### 768px – 1023px
+      Username is truncated to no more than 20 characters
+    contents:
+      - type: wide image
+        src: ./assets/redlines.basic.mode.png
+        caption: Redlines for larger viewports
+
+  - type: two column
+    text: |
+      #### 480px – 767px
+      Dimensions
+      : - 44px tall
+        - 100% viewport width
+        - Dropdown menu is 250px wide
+        - Course items in menu are 60px tall
+        - Other menu items are 48px tall
+        - Divider lines are 1px tall
+        - Dropdown tab is 36px tall
+        - Cap over tab is 2px tall
+
+      Spacing
+      : - Logo and links vertically centered
+        - 14px from either end
+        - 28px between links
+        - 8px between link and icons
+        - Dropdown tab has 14px of horizontal padding
+
+      Colors
+      : - Same as larger viewports
+
+      Typography
+      : - Top level links are large labels (inverse primary)
+        - Course items are large labels (inverse primary)
+        - Other menu items are large labels (inverse secondary)
+
+      Course List
+      : - If more than 5 items, add a 'Show X more courses...' item at the bottom
+
+      #### < 480px
+      Dropdown menu becomes 100% wide
+    contents:
+      - type: wide image
+        src: ./assets/redlines.basic.mode.responsive.png
+        caption: Redlines for smaller viewports.
+      - type: narrow image
+        src: ./assets/redlines.basic.mode.large.list.png
+        caption: The 'Show X more courses...' item.
+
+  - type: two column
+    text: |
+      ### Course Mode
+
+      #### ≥ 768px
+      Follow the Basic Mode specifications.
+
+      #### 480px – 767px
+      At this size the course navigation appears in the dropdown.
+
+      Logo Link
+      : - www.pearson.console.com
+
+      Dimensions
+      : - All courses link is 48px high
+        - Local nav options are 44px tall (incl. header)
+
+      Spacing
+      : - Top level links, and heading, have 20px horizontal padding
+        - Local nav options have 30px left padding, 20px on the right
+        - Heading has 9px top padding
+        - All Courses has 8px padding for the icon
+
+      Colors
+      : - Main dropdown background is Gutenberg Black (#333333)
+        - Local nav background is Full Moon (#424242)
+        - Divider lines are Asphalt (#3f3f3f)
+
+      Typography
+      : - All Courses link and standard menu items are large labels (inverse, secondary color)
+        - Course name is basic title (inverse)
+        - Local nav items are basic labels (inverse, secondary color)
+        - Active nav item is bold label (inverse, primary color)
+
+      #### < 480px
+      Same as above, dropdown just becomes 100% wide.
+
+    contents:
+      - type: wide image
+        src: ./assets/redlines.course.mode.480.png
+
+  - type: two column
+    text: |
+      #### Light theme
+
+      Colors
+      : - Header bar is Off White (#f2f2f2)
+        - Main dropdown background is Brightly Lit (#e6e6e6)
+        - Local nav background is Concrete (#cccccc)
+        - Dropdown cap is Boring (#a6a8ab)
+        - Divider lines are Hairline Gray (#b3b3b3)
+
+      Typography
+      : - Top level links are large labels
+        - All courses and other menu items are large labels (secondary color)
+        - Course heading is a basic title
+        - Local nav options are basic label (secondary color)
+        - Active nav option is bold label (primary color)
+
+    contents:
+      - type: wide image
+        src: ./assets/redlines.course.mode.320.png
+
+  - type: two column
+    text: |
+      ### Integration Mode
+
+      Identical to signed out mode, without the 'Sign In' link.
+
+
 changelog:
+  - version: 1.1.0-beta.1
+    changes: |
+      - CHANGED: Use colors component
+      - CHANGED: Use typography component
+
   - version: 1.0.0
     changes: Initial release
 ---
