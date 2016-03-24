@@ -21,8 +21,8 @@ tagline: |
   This component defines the standard visual style for form elements.
 features:
   - Single collection of all basic form styles
-  - Text, TextArea, Radio, Checkbox, Field Labels (required vs. optional), Field Groups
-  - Guaranteed compliance with Accessibility contrast requirements
+  - Text, Textarea, Select, Radio, Checkbox, Field Labels (required vs. optional)
+  - Guaranteed compliance with Accessibility requirements
 usage_guidelines: |
   Every instance of a form element should come from this component. See the sections below for information about when to use each type of form.
 
@@ -40,10 +40,12 @@ blocks:
       **Read only** indicates that a field is active, but not editable.
 
       **Disabled** state is a form input that is unavailable for interaction.
+
+      **Error** is used when a field has been filled out incorrectly. This state should always be paired with an explanatory message. (Note the inclusion of an 'X' icon to differentiate from the standard focus state for color blind users.)
     contents:
       - type: narrow image
         src: ./assets/states.png
-        caption: The four basic states. Note the focus is left up to the browser, this is an approximation of the Macintosh style.
+        caption: The five basic states. Note the focus is left up to the browser, this is an approximation of the Macintosh style.
 
   - type: section
     name: Text
@@ -51,9 +53,15 @@ blocks:
   - type: two column
     text: |
       Text input form elements are to be used for single line text inputs.
+
+      Placeholders can be used to give additional information about the format of data. They should typically not be used to label the input field; exceptions can be made when there is a single field and a secondary purpose indicator exists (like a search bar with a search icon in the attached button).
     contents:
       - type: narrow image
         src: ./assets/text.png
+        caption: Basic text input with a value.
+      - type: narrow image
+        src: ./assets/placeholders.png
+        caption: Basic text inputs with labels and placeholders.
 
   - type: section
     name: Textarea
@@ -65,23 +73,28 @@ blocks:
       Vertical and horizontal resizing options may be enabled where appropriate.
 
       Textarea states are styled similarly to regular text inputs.
+
+      They may also take a placeholder like basic text inputs. In this case the placeholder should simply offer additional information or guidance around the data format, it should never replace a label for the field.
     contents:
       - type: narrow image
         src: ./assets/textarea.png
+      - type: narrow image
+        src: ./assets/textarea.placeholder.png
 
   - type: section
     name: Select
 
   - type: two column
     text: |
-
-
       The select input allows a user to choose one of many predetermined options.
 
       A default value can be set for the select element if it's recommended for most users.  Bear in mind that a user can easily overlook a preselected item, so use caution when doing so.
+
+      The popup will follow the browser default style.
     contents:
       - type: narrow image
         src: ./assets/select.png
+        caption: Closed and opened select (demonstrating the Mac OS X default browser style).
 
   - type: section
     name: Radio Buttons
@@ -132,6 +145,155 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/required-optional.png
+
+  - type: section
+    name: Redlines
+
+  - type: two column
+    text: |
+      ### Text
+
+      Dimensions
+      : - 36px tall
+
+      Spacing
+      : - 14px horizontal padding
+
+      Active
+      : - 1px solid Hairline Gray (#d0d0d0) border
+        - White (#ffffff) background
+        - Large label (primary color)
+        - Place holders are large labels (#767676, italic)
+
+      Readonly
+      : - Same as active, but background becomes Off White (#f2f2f2)
+        - Placeholders should never appear in this state
+
+      Disabled
+      : - Same as readonly, but text color becomes Boring (#a6a8ab)
+        - Placeholders should never appear in this state
+
+      Focus
+      : - Same as active
+        - No changes to default browser style
+
+      Error
+      : - 1px solid \#D0021B border
+        - \#D0021B drop shadow, 4px of blur
+        - Include 'x' icon, with 14px of padding
+
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.text.png
+        caption: Active text field, with both a value and a placeholder.
+      - type: narrow image
+        src: ./assets/redlines.text.states.png
+        caption: Readonly and disabled states.
+      - type: narrow image
+        src: ./assets/redlines.text.states.2.png
+        caption: Focus (reproduction of Mac OS X style) and error states.
+
+  - type: two column
+    text: |
+      ### Textarea
+
+      Spacing
+      : - 14px horizontal padding
+        - 9px vertical padding
+
+      Placeholders
+      : - Follow text input redlines
+
+      States
+      : - Follow text redlines for states
+
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.textarea.png
+
+  - type: two column
+    text: |
+      ### Select
+
+      Dimensions
+      : - 36px tall
+
+      Spacing
+      : - 14px horizontal padding
+
+      Popup
+      : - Use browser default style
+
+      States
+      : - Follow redlines for basic text field
+        - Only difference is no 'x' icon for errors
+
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.select.png
+        caption: Closed and open select (showing a browser default style).
+      - type: narrow image
+        src: ./assets/redlines.select.states.png
+        caption: Readonly and disabled states.
+      - type: narrow image
+        src: ./assets/redlines.select.states.2.png
+        caption: Focus (reproduction of Mac OS X browser default) and error states.
+
+  - type: two column
+    text: |
+      ### Radio Buttons
+
+      Spacing
+      : - 10px between button and label
+
+      States
+      : - Use browser default styles in all cases
+        - Note this means there is no error state for the radio button itself, you **must** use explanatory text
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.radio.png
+        caption: Example radio buttons in the Mac OS X browser style.
+
+  - type: two column
+    text: |
+      ### Checkboxes
+
+      Spacing
+      : - 10px between checkbox and label
+
+      States
+      : - Use browser default styles in all cases
+        - Note this means there is no error state for the radio button itself, you **must** use explanatory text
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.checkbox.png
+        caption: Example checkboxes in the Mac OS X browser style.
+
+  - type: two column
+    text: |
+      ### Labels
+
+      Spacing
+      : - Left justified with related field
+        - 6px gap separating
+
+      Typography
+      : - Basic label
+
+      Error state
+      : - \#D0021B color
+
+      Required/Optional
+      : - Only label the type which occurs less frequently
+        - Simply append '(required)' or '(optional)' to the label text
+
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.labels.png
+        caption: Labels name each field.
+      - type: narrow image
+        src: ./assets/redlines.labels.required-optional.png
+        caption: Only label whichever type occurs less frequently (e.g. if there are four required fields and one optional only notate the single optional field).
 
 changelog:
   - version: 1.0.0-beta.1
