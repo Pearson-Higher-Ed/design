@@ -178,7 +178,7 @@ blocks:
       : - 1px solid Hairline Gray (#d0d0d0) border
         - White (#ffffff) background
         - Large label (primary color)
-        - Place holders are large labels (#767676, italic)
+        - Place holders are large labels (#6d6d6d, italic)
 
       Readonly
       : - Same as active, but background becomes Off White (#f2f2f2)
