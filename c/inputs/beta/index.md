@@ -41,11 +41,11 @@ blocks:
 
       **Disabled** state is a form input that is unavailable for interaction.
 
-      **Error** is used when a field has been filled out incorrectly. This state should always be paired with an explanatory message. (Note the inclusion of an 'X' icon to differentiate from the standard focus state for color blind users.)
+      **Error** is used when a field has been filled out incorrectly. This state should always be paired with an explanatory message.
     contents:
       - type: narrow image
         src: ./assets/states.png
-        caption: The five basic states. Note the focus is left up to the browser, this is an approximation of the Macintosh style.
+        caption: The five basic states. Note that focus is left up to the browser, this is an approximation of the Macintosh style.
 
   - type: section
     name: Text
@@ -147,6 +147,21 @@ blocks:
         src: ./assets/required-optional.png
 
   - type: section
+    name: Specialized Inputs
+
+  - type: two column
+    text: |
+      ### Search
+      There is a standard search component which extends the basic text input with a integrated button on the right.
+
+      Because this includes the button which indicates purpose the placeholder can serve as the input label (although this isn't required).
+    contents:
+      - type: narrow image
+        src: ./assets/specialized.png
+        caption: Search input with integrated button.
+
+
+  - type: section
     name: Redlines
 
   - type: two column
@@ -180,7 +195,7 @@ blocks:
       Error
       : - 1px solid \#D0021B border
         - \#D0021B drop shadow, 4px of blur
-        - Include 'x' icon, with 14px of padding
+        - Error states **must** be accompanied by explanatory text. See the forms component for standard examples of error handling.
 
     contents:
       - type: narrow image
@@ -226,7 +241,6 @@ blocks:
 
       States
       : - Follow redlines for basic text field
-        - Only difference is no 'x' icon for errors
 
     contents:
       - type: narrow image
@@ -295,6 +309,32 @@ blocks:
         src: ./assets/redlines.labels.required-optional.png
         caption: Only label whichever type occurs less frequently (e.g. if there are four required fields and one optional only notate the single optional field).
 
+  - type: two column
+    text: |
+      ### Search input
+      Dimensions
+      : - Match text input
+
+      Spacing
+      : - 14px horizontal padding in the text box
+        - 14px horizontal padding in the button (inherited from buttons)
+
+      Typography
+      : - Match text input
+
+      States
+      : - Match text input
+
+      Button
+      : - Medium button (default)
+        - fa-search icon, large label size
+
+      Joint
+      : - Override corners to provide square joint between input and button
+        - Dividing line should be 1px wide
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.specialized.png
 changelog:
   - version: 1.0.0-beta.1
     changes: Initial version
