@@ -137,7 +137,6 @@
       var items = document.querySelectorAll('.req .content');
       for (var i = 0; i < items.length; i++) {
         items[i].style.display = 'none';
-        items[i].setAttribute('hidden', true);
         items[i].previousElementSibling.setAttribute('aria-expanded', 'false');
       }
     }
@@ -149,12 +148,10 @@
         content.style.display = 'none';
       }
 
-      if (content.hasAttribute('hidden')) {
+      if (content.getAttribute('aria-expanded') == 'false') {
         content.previousElementSibling.setAttribute('aria-expanded', 'true');
-        content.removeAttribute('hidden');
       } else {
         content.previousElementSibling.setAttribute('aria-expanded', 'false');
-        content.setAttribute('hidden', true);
       }
     }
 
