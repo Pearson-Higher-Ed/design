@@ -2,7 +2,7 @@
 layout: spec
 title: Library Membership Specification
 section: contribute
-version: 1.0.0-beta.1
+version: 1.0.0
 intro: |
   Every component listed in the Component Library must satisfy all the requirements contained in this document. To learn about submitting components for inclusion see the [Component Creation Guide][creation-guide].
 
@@ -121,7 +121,7 @@ design_reqs:
         extras:
           - name: Explanation
             content: |
-              The Pearson Accessibility Guidelines are a company-wide implementation of the Web Content Accessibility Guidelines (WCAG) 2.0. WCAG 2.0 is a global product of the Worldwide Web Consortium that mandates specific accessibility minima and features for compliance at Levels A, AA, and AAA. The Pearson Accessibility Guidelines ensure Level AA compliance by providing a design and development framework of 42 guidelines specific to Pearson products.
+              The Pearson Accessibility Guidelines are a company-wide implementation of the Web Content Accessibility Guidelines (WCAG) 2.0. WCAG 2.0 is a global product of the Worldwide Web Consortium that mandates specific accessibility minima and features for compliance at Levels A, AA, and AAA. The Pearson Accessibility Guidelines ensure Level AA compliance by providing a design and development framework of 42 guidelines specific to learner needs and Pearson products.
 
               The UXD Accessibility Checklist specifies a subset of the 42 Pearson Accessibility Guidelines which **must** be addressed during the design phase. Not every item on the UXD Accessibility Checklist will apply to every design. However, each should be carefully considered and documented for clarity and to ensure the accessibility needs of the component are understood downstream.
         approvers:
@@ -193,7 +193,7 @@ design_reqs:
           - Chris Langston (Accessibility UX)
 
 changelog:
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: Initial version
 
 ---
