@@ -3,7 +3,7 @@ layout: component-yaml
 title: Colors
 section: Components
 redirect_from: /docs/ui-components/colors/
-version: 1.0.0-beta.1
+version: 1.0.0-beta.2
 status: active
 people:
   - role: Product Owner
@@ -16,7 +16,10 @@ people:
     name: Ed Zee
 implementations:
   - type: Origami
-    link: https://origami.pearsoned.com/registry/components/o-color
+    link: https://www.npmjs.com/package/pearson-elements
+downloads:
+  - name: UXD Accessibility Checklist
+    link: https://docs.google.com/a/pearson.com/document/d/1ThXm4SGwyPb3wtlJGmOWLTRCIWERcLsjtP-jlkGjwAY/edit?usp=sharing
 
 tagline: |
   Every color used in the Elemental Design library is defined in this component.
@@ -103,6 +106,9 @@ blocks:
         hex: 9DC0DB
 
 changelog:
+  - version: 1.0.0-beta.2
+    changes: |
+      - ADDED: Link to UXD Accessibility Checklist.
   - version: 1.0.0-beta.1
     changes: Initial version
 ---
