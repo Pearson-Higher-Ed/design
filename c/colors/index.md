@@ -48,6 +48,8 @@ blocks:
         hex: 0d65a6
       - name: Firetruck
         hex: D0021B
+      - name: Spruce
+        hex: 076826
     background:
       - name: Brightly Lit
         hex: E6E6E6
