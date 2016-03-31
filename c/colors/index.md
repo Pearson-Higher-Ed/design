@@ -57,6 +57,8 @@ blocks:
         hex: F8F8F8
       - name: White
         hex: FFFFFF
+      - name: Blue Milk
+        hex: D9EEFF
       - name: Highlighter
         hex: FDEC2E
     accents:
@@ -123,6 +125,7 @@ changelog:
     changes: |
       - ADDED: Link to UXD Accessibility Checklist.
       - ADDED: Firetruck red to light palette (for input errors).
+      - ADDED: Blue Milk to light palette (for selected backgrounds).
       - ADDED: White palette (for input placeholders)
   - version: 1.0.0-beta.1
     changes: Initial version
