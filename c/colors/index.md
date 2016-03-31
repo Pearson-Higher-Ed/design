@@ -46,6 +46,8 @@ blocks:
         hex: 094877
       - name: Hyperdrive
         hex: 0d65a6
+      - name: Firetruck
+        hex: D0021B
     background:
       - name: Brightly Lit
         hex: E6E6E6
@@ -105,10 +107,23 @@ blocks:
       - name: Sky Blue
         hex: 9DC0DB
 
+  - type: section
+    name: White Palette
+
+  - type: palette
+    foreground:
+      - name: Sandy Gray
+        hex: 6d6d6d
+    background:
+      - name: White
+        hex: ffffff
+
 changelog:
   - version: 1.0.0-beta.2
     changes: |
       - ADDED: Link to UXD Accessibility Checklist.
+      - ADDED: Firetruck red to light palette (for input errors).
+      - ADDED: White palette (for input placeholders)
   - version: 1.0.0-beta.1
     changes: Initial version
 ---
