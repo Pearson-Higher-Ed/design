@@ -172,6 +172,9 @@ blocks:
 
       Focus
       : - Use the browser default style
+
+      Spacing
+      : - Maintain the same spacing as the standard buttons
     contents:
       - type: wide image
         src: ./assets/redlines.link.png
