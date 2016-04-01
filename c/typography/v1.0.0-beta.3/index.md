@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Typography
 section: Components
-version: 1.0.0-beta.4
+version: 1.0.0-beta.3
 status: active
 people:
   - role: Product Owner
@@ -491,7 +491,6 @@ blocks:
       `<a>`
       : - Active link = hyperdrive (#0D65A6) and underline
         - Hover link = Royal Navy (#094877), no underline
-        - Focus states use the default browser style
 
       `<mark>`
       : - \#FDEC2E background-color
@@ -538,10 +537,6 @@ blocks:
         src: ./assets/redlines.inline.2.png
 
 changelog:
-  - version: 1.0.0-beta.4
-    changes: |
-      - ADDED: Specification that link focus states use the default browser style.
-
   - version: 1.0.0-beta.3
     changes: |
       - ADDED: Small body copy variant
