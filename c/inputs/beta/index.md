@@ -55,10 +55,12 @@ blocks:
       Text input form elements are to be used for single line text inputs.
 
       Placeholders can be used to give additional information about the format of data. They should typically not be used to label the input field; exceptions can be made when there is a single field and a secondary purpose indicator exists (like a search bar with a search icon in the attached button).
+
+      A smaller size is also available.
     contents:
       - type: narrow image
         src: ./assets/text.png
-        caption: Basic text input with a value.
+        caption: Basic and small text inputs with values.
       - type: narrow image
         src: ./assets/placeholders.png
         caption: Basic text inputs with labels and placeholders.
@@ -75,11 +77,15 @@ blocks:
       Textarea states are styled similarly to regular text inputs.
 
       They may also take a placeholder like basic text inputs. In this case the placeholder should simply offer additional information or guidance around the data format, it should never replace a label for the field.
+
+      A smaller size is available.
     contents:
       - type: narrow image
         src: ./assets/textarea.png
+        caption: Basic and small textareas.
       - type: narrow image
         src: ./assets/textarea.placeholder.png
+        caption: Example placeholder used to provide an example input.
 
   - type: section
     name: Select
@@ -91,6 +97,8 @@ blocks:
       A default value can be set for the select element if it's recommended for most users.  Bear in mind that a user can easily overlook a preselected item, so use caution when doing so.
 
       The popup will follow the browser default style.
+
+      A smaller variant is available.
     contents:
       - type: narrow image
         src: ./assets/select.png
@@ -108,9 +116,12 @@ blocks:
       If there are only two mutually exclusive options, consider using a single checkbox. For example, use a checkbox for "I agree" instead of two radio buttons for "I agree" and "I don't agree."
 
       Radio buttons use the default browser style.
+
+      Smaller radio buttons are also available.
     contents:
       - type: narrow image
         src: ./assets/radio.png
+        caption: Basic states for radio buttons; an example of the smaller size.
 
   - type: section
     name: Checkboxes
@@ -122,9 +133,12 @@ blocks:
       Unlike radio buttons, where a group of radio buttons represents a single choice, each check box in a group represents a separate, independent choice. When there is more than one option but only one can be selected, use a radio button instead.
 
       Checkboxes use the default browser style.
+
+      Like the other inputs, checkboxes are also available in a smaller size.
     contents:
       - type: narrow image
         src: ./assets/checkbox.png
+        caption: Various checkbox states; an example of the smaller checkbox size.
 
   - type: section
     name: Labels
@@ -134,6 +148,8 @@ blocks:
       Labels communicate the purpose and meaning of a field to users.
 
       Try to avoid over-explaining in the label (password requirements, for example, should be communicated in another way).
+
+      Labels come in one size but can be used for both standard and small inputs.
     contents:
       - type: narrow image
         src: ./assets/labels.png
@@ -155,6 +171,8 @@ blocks:
       There is a standard search component which extends the basic text input with a integrated button on the right.
 
       Because this includes the button which indicates purpose the placeholder can serve as the input label (although this isn't required).
+
+      Search only comes in the standard size right now.
     contents:
       - type: narrow image
         src: ./assets/specialized.png
@@ -197,10 +215,18 @@ blocks:
         - \#D0021B drop shadow, 4px of blur
         - Error states **must** be accompanied by explanatory text. See the forms component for standard examples of error handling.
 
+      Small Size
+      : - 28px tall
+        - 10px horizontal padding
+        - Use basic instead of large labels throughout
+
     contents:
       - type: narrow image
         src: ./assets/redlines.text.png
         caption: Active text field, with both a value and a placeholder.
+      - type: narrow image
+        src: ./assets/redlines.text.small.png
+        caption: Small text inputs.
       - type: narrow image
         src: ./assets/redlines.text.states.png
         caption: Readonly and disabled states.
@@ -222,9 +248,15 @@ blocks:
       States
       : - Follow text redlines for states
 
+      Small Size
+      : - 10px horizontal padding
+        - Use basic instead of large labels
+
     contents:
       - type: narrow image
         src: ./assets/redlines.textarea.png
+      - type: narrow image
+        src: ./assets/redlines.textarea.small.png
 
   - type: two column
     text: |
@@ -242,16 +274,21 @@ blocks:
       States
       : - Follow redlines for basic text field
 
+      Small Size
+      : - 10px horizontal padding
+        - 28px tall
+        - Use basic labels instead of large
+
     contents:
-      - type: narrow image
-        src: ./assets/redlines.select.png
-        caption: Closed and open select (showing a browser default style).
       - type: narrow image
         src: ./assets/redlines.select.states.png
         caption: Readonly and disabled states.
       - type: narrow image
         src: ./assets/redlines.select.states.2.png
         caption: Focus (reproduction of Mac OS X browser default) and error states.
+      - type: narrow image
+        src: ./assets/redlines.select.png
+        caption: Closed and open select (showing a browser default style).
 
   - type: two column
     text: |
@@ -263,6 +300,9 @@ blocks:
       States
       : - Use browser default styles in all cases
         - Note this means there is no error state for the radio button itself, you **must** use explanatory text
+
+      Small size
+      : - Use basic label, instead of large
     contents:
       - type: narrow image
         src: ./assets/redlines.radio.png
@@ -278,6 +318,9 @@ blocks:
       States
       : - Use browser default styles in all cases
         - Note this means there is no error state for the radio button itself, you **must** use explanatory text
+
+      Small Size
+      : - Use basic label, instead of large
     contents:
       - type: narrow image
         src: ./assets/redlines.checkbox.png
