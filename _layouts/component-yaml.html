@@ -137,18 +137,20 @@
                 {% endfor %}
               </table>
             </div>
-            <div class="swatches">
-              <h3>Accents</h3>
-              <table>
-                {% for color in block.accents %}
-                  <tr>
-                    <td>{{color.name}}</td>
-                    <td>#{{color.hex}}</td>
-                    <td><div style="width: 100%; min-width: 100px; height: 40px; background-color: #{{color.hex}}"></div></td>
-                  </tr>
-                {% endfor %}
-              </table>
-            </div>
+            {% if block.accents %}
+              <div class="swatches">
+                <h3>Accents</h3>
+                <table>
+                  {% for color in block.accents %}
+                    <tr>
+                      <td>{{color.name}}</td>
+                      <td>#{{color.hex}}</td>
+                      <td><div style="width: 100%; min-width: 100px; height: 40px; background-color: #{{color.hex}}"></div></td>
+                    </tr>
+                  {% endfor %}
+                </table>
+              </div>
+            {% endif %}
 
 
           {% endcase %}

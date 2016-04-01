@@ -3,7 +3,7 @@ layout: component-yaml
 title: Colors
 section: Components
 redirect_from: /docs/ui-components/colors/
-version: 1.0.0-beta.2
+version: 1.0.0-beta.1
 status: active
 people:
   - role: Product Owner
@@ -16,10 +16,7 @@ people:
     name: Ed Zee
 implementations:
   - type: Origami
-    link: https://www.npmjs.com/package/pearson-elements
-downloads:
-  - name: UXD Accessibility Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/1ThXm4SGwyPb3wtlJGmOWLTRCIWERcLsjtP-jlkGjwAY/edit?usp=sharing
+    link: https://origami.pearsoned.com/registry/components/o-color
 
 tagline: |
   Every color used in the Elemental Design library is defined in this component.
@@ -46,10 +43,6 @@ blocks:
         hex: 094877
       - name: Hyperdrive
         hex: 0d65a6
-      - name: Firetruck
-        hex: D0021B
-      - name: Spruce
-        hex: 076826
     background:
       - name: Brightly Lit
         hex: E6E6E6
@@ -59,8 +52,6 @@ blocks:
         hex: F8F8F8
       - name: White
         hex: FFFFFF
-      - name: Blue Milk
-        hex: D9EEFF
       - name: Highlighter
         hex: FDEC2E
     accents:
@@ -111,24 +102,7 @@ blocks:
       - name: Sky Blue
         hex: 9DC0DB
 
-  - type: section
-    name: White Palette
-
-  - type: palette
-    foreground:
-      - name: Sandy Gray
-        hex: 6d6d6d
-    background:
-      - name: White
-        hex: ffffff
-
 changelog:
-  - version: 1.0.0-beta.2
-    changes: |
-      - ADDED: Link to UXD Accessibility Checklist.
-      - ADDED: Firetruck red to light palette (for input errors).
-      - ADDED: Blue Milk to light palette (for selected backgrounds).
-      - ADDED: White palette (for input placeholders)
   - version: 1.0.0-beta.1
     changes: Initial version
 ---
