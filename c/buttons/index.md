@@ -20,6 +20,8 @@ implementations:
   - type: Elements SDK
     link: https://pearson-elements-v0.surge.sh/elements/buttons/
 downloads:
+  - name: UXD Accessibility Checklist
+    link: https://docs.google.com/a/pearson.com/document/d/19r4uvPAZpmXRwT_krIr9MqHLYC-Vgjah2kPDi9PYaQA/edit?usp=sharing
   - name: Sketch
     link: ./assets/buttons.mockup.sketch
   - name: Illustrator
@@ -115,6 +117,9 @@ blocks:
       : - \#9DC0DB fill
         - No border
 
+      Focus
+      : - Use the browser default style
+
     contents:
       - type: wide image
         src: ./assets/redlines.primary.png
@@ -137,6 +142,9 @@ blocks:
       : - \#F2F2F2 fill
         - No border
         - \#A6A8AB text color
+
+      Focus
+      : - Use the browser default style
     contents:
       - type: wide image
         src: ./assets/redlines.default.png
@@ -153,6 +161,9 @@ blocks:
 
       Disabled
       : - \#9DC0DB text color
+
+      Focus
+      : - Use the browser default style
     contents:
       - type: wide image
         src: ./assets/redlines.link.png
