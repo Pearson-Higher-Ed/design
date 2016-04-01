@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Typography
 section: Components
-version: 1.0.0-beta.4
+version: 1.0.0-beta.3
 status: active
 people:
   - role: Product Owner
@@ -17,8 +17,6 @@ implementations:
   - type: Elements SDK
     link: https://pearson-elements-v0.surge.sh/elements/typography/
 downloads:
-  - name: UXD Accessibility Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/1xE22tRE0aRGqqM8PGEJ-5MVClo8gTqr1nf2fy_VcFl0/edit?usp=sharing
   - name: Sketch
     link: ./assets/typography.mockup.sketch
   - name: Illustrator
@@ -493,7 +491,6 @@ blocks:
       `<a>`
       : - Active link = hyperdrive (#0D65A6) and underline
         - Hover link = Royal Navy (#094877), no underline
-        - Focus states use the default browser style
 
       `<mark>`
       : - \#FDEC2E background-color
@@ -540,11 +537,6 @@ blocks:
         src: ./assets/redlines.inline.2.png
 
 changelog:
-  - version: 1.0.0-beta.4
-    changes: |
-      - ADDED: Specification that link focus states use the default browser style.
-      - ADDED: UXD Accessibility checklist
-
   - version: 1.0.0-beta.3
     changes: |
       - ADDED: Small body copy variant
