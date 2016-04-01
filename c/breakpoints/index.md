@@ -12,6 +12,14 @@ people:
     name: Parker Malenke
     email: parker.malenke@pearson.com
 
+implementations:
+  - type: Origami
+    link: https://www.npmjs.com/package/pearson-elements
+
+downloads:
+  - name: UXD Accessibility Checklist
+    link: https://docs.google.com/a/pearson.com/document/d/11qC5a1zLuu5lreiNUSSX3djjS_KGsZxvg7H5TRyvFeU/edit?usp=sharing
+
 tagline: |
   This component defines the standard breakpoints to use for responsive design.
 features:
