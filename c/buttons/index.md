@@ -3,7 +3,7 @@ layout: component-yaml
 title: Buttons
 section: Components
 redirect_from: "/docs/ui-components/buttons/"
-version: 1.0.0-beta.3
+version: 1.0.0-beta.4
 status: active
 people:
   - role: Product Owner
@@ -59,11 +59,11 @@ blocks:
 
   - type: two column
     text: |
-      Buttons come in small, default, and large sizes. Prefer the default size but feel free to use these other sizes where they would fit better with surrounding content.
+      Buttons come in small, default, medium, and large sizes. Prefer the default size but feel free to use these other sizes where they would fit better with surrounding content. Medium buttons are specifically sized to pair well with inputs.
     contents:
       - type: narrow image
         src: ./assets/sizes.png
-        caption: Each button type in the two alternate sizes.
+        caption: The four button sizes.
 
 
   - type: section
@@ -72,21 +72,29 @@ blocks:
   - type: two column
     text: |
       ### Sizes
+      Small button
+      : - 24px tall
+        - 10px horizontal padding
+        - Small label font
 
       Standard button
       : - 28px tall
         - 12px horizontal padding
         - Basic label font
 
+      Medium button
+      : - 36px tall
+        - 12px horizontal padding
+        - Large label font
+
       Large button
       : - 42px tall
         - 20px horizontal padding
         - large label font
 
-      Small button
-      : - 24px tall
-        - 10px horizontal padding
-        - Small label font
+      Link style buttons
+      : - Maintain the same spacing around the text
+
 
     contents:
       - type: narrow image
@@ -169,6 +177,12 @@ blocks:
         src: ./assets/redlines.link.png
 
 changelog:
+  - version: 1.0.0-beta.4
+    changes: |
+      - ADDED: UXD Accessibility checklist link
+      - ADDED: Focus state details in the redlines section
+      - ADDED: Medium button size in anticipation of inputs
+
   - version: 1.0.0-beta.3
     changes: |
       - ADDED: Illustrator UI mockup file
