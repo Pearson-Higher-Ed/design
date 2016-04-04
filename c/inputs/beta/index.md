@@ -102,7 +102,7 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/select.png
-        caption: Closed and opened select (demonstrating the Mac OS X default browser style).
+        caption: Closed and opened select (demonstrating the Mac OS X default browser style); example of the smaller select size.
 
   - type: section
     name: Radio Buttons
@@ -255,8 +255,10 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/redlines.textarea.png
+        caption: Basic text area.
       - type: narrow image
         src: ./assets/redlines.textarea.small.png
+        caption: Small text area redlines.
 
   - type: two column
     text: |
@@ -288,7 +290,7 @@ blocks:
         caption: Focus (reproduction of Mac OS X browser default) and error states.
       - type: narrow image
         src: ./assets/redlines.select.png
-        caption: Closed and open select (showing a browser default style).
+        caption: Closed and open select (showing a browser default style); small select example.
 
   - type: two column
     text: |
@@ -382,64 +384,3 @@ changelog:
   - version: 1.0.0-beta.1
     changes: Initial version
 ---
-
-## Labels
-
-<div class="section_text" markdown="1">
-A fieldset can contain one or more groupings of paired label and form elements.
-
-Input prompts can be optionally placed inside text fields.
-
-<aside class="usage" markdown="1">
-The label of an input field does not fully explain what should be filled into it or when using such a label feels like over-explaining the interface.  
-
-Use when you want to save the space that a label otherwise takes up.  
-
-Use in combination with a label, to further explain what kind of input is needed.
-</aside>
-</div>
-
-<div class="images">
-<div class="narrow_image" markdown="1">
-![](./assets/fieldset.png)
-</div>
-</div>
-
-
-
-## Field Labels
-
-<div class="section_text" markdown="1">
-The label always sits above the field element to accommodate long text strings when dealing with internationalization.  When required or optional fields are needed, always opt to append the label with the option which appears less frequently.
-
-<aside class="usage" markdown="1">
-Suppose you have a 10 form elements on a screen.  
-
-If the majority of elements are required, use the optional callout and vice versa for an optional majority.  
-
-If there is an evenly matched number of required vs. optional form elements, use the required callout.
-</aside>
-</div>
-
-<div class="images">
-<div class="narrow_image" markdown="1">
-![](./assets/field-label.png)
-</div>
-</div>
-
-## Fieldset Groups
-
-<div class="section_text" markdown="1">
-A grouped fieldset contains multiple pairs of label and form elements and is used to visually connect these pairings with one another.  A fieldset title can be added to the group.
-
-An alternate visual treatment can be used for more explicit emphasis.
-</div>
-
-<div class="images">
-<div class="narrow_image" markdown="1">
-![](./assets/fieldset-group.png)
-</div>
-</div>
-
-## Redlines
-[Download the redline specification here](./assets/redlines-01.png)
