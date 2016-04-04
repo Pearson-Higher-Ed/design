@@ -78,25 +78,29 @@ p {
   }
 
   .image.wide:nth-child(n+2),
-  .image.narrow:nth-child(n+3),
   .image.wide + .image.narrow {
     margin-top: 30px;
   }
 
   .image.narrow + .image.narrow {
+    margin-top: 30px;
     @include pe-responsive-breakpoint(md) {
       margin-left: 20px;
+      margin-top: 0;
     }
   }
 
   .image.narrow + .image.narrow + .image.narrow {
     margin-left: 0;
+    margin-top: 30px;
+    clear:both;
   }
 
   .image.narrow + .image.narrow + .image.narrow + .image.narrow {
     @include pe-responsive-breakpoint(md) {
       margin-left: 20px;
     }
+    clear: none;
   }
 
   .image.narrow + .image.narrow + .image.narrow + .image.narrow + .image.narrow {
