@@ -116,6 +116,11 @@ blocks:
       - type: narrow image
         src: ./assets/responsive.secondary.png
 
+  - type: two column
+    text: |
+      ### Switching designs
+      For larger, more complex tables with a lot of non-optional data it may be necessary to change from using a table to some other display strategy in the mobile view. For example, you may adopt a list view where each item  can be opened up to view its complete dataset.
+
 changelog:
   - version: 1.0.0-beta.1
     changes: Initial version
