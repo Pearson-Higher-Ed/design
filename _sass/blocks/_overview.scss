@@ -57,7 +57,11 @@
 
   .info {
     margin: 20px 0;
+    width: 100%;
     @include clearfix;
+    @include pe-responsive-breakpoint(md) {
+      width: 760px;
+    }
   }
 
   .feature_list {
