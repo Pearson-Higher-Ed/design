@@ -278,6 +278,7 @@ blocks:
         - Course name is basic title (inverse)
         - Local nav items are basic labels (inverse, secondary color)
         - Active nav item is bold label (inverse, primary color)
+        - Local nav items truncate, rather than wrap to more than one line
 
       #### < 480px
       Same as above, dropdown just becomes 100% wide.
@@ -320,6 +321,7 @@ changelog:
     changes: |
       - CHANGED: Use colors component
       - CHANGED: Use typography component
+      - ADDED: Details on local nav item truncation
 
   - version: 1.0.0
     changes: Initial release
