@@ -22,7 +22,7 @@ downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1Uhkqt3gyK7cVDKkEeUcgXfO1GjYLwk5qp_2Gu8CcKhc/edit?usp=sharing
   - name: .sketch mockup
-    link: ./assets/o-app-header.sketch
+    link: ./assets/application-header.mockup.sketch
 
 tagline: |
   This component contains and displays global tools and navigation across the next gen platform.
