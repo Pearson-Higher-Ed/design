@@ -15,12 +15,14 @@ people:
   - role: Visual Design
     name: Meredith Williamson
     email: meredith.williamson@pearson.com
-implementation:
-  name: Dev Docs
-  link: https://origami.pearsoned.com/registry/components/o-app-header
+implementation: https://origami.pearsoned.com/registry/components/o-app-header
 downloads:
+  - name: UXD Accessibility Checklist
+    link: https://docs.google.com/a/pearson.com/document/d/1Uhkqt3gyK7cVDKkEeUcgXfO1GjYLwk5qp_2Gu8CcKhc/edit?usp=sharing
   - name: .sketch mockup
-    link: ./assets/o-app-header.sketch
+    link: ./assets/application-header.mockup.sketch
+  - name: .ai mockup
+    link: ./assets/application-header.mockup.ai
 
 tagline: |
   This component contains and displays global tools and navigation across the next gen platform.
@@ -148,6 +150,10 @@ blocks:
       Typography
       : - Links are large labels (inverse primary color)
 
+      States
+      : - Links use the browser default style for focus
+        - Hovering shows the hand icon, but otherwise no style change
+
       #### < 768px
 
       Dimensions
@@ -192,10 +198,13 @@ blocks:
         - Divider lines in dropdown are Asphalt (#3f3f3f)
         - Cap on username is Smoke Gray (#545454)
 
-
       Typography
       : - Top level links are large labels (inverse primary)
         - Menu items are large labels (inverse secondary)
+
+      States
+      : - Link focus states use the default browser implementation
+        - Hovering an item in the dropdown menu will show an underline
 
       #### 768px – 1023px
       Username is truncated to no more than 20 characters
@@ -278,6 +287,10 @@ blocks:
         - Course name is basic title (inverse)
         - Local nav items are basic labels (inverse, secondary color)
         - Active nav item is bold label (inverse, primary color)
+        - Local nav items truncate, rather than wrap to more than one line
+
+      States
+      : - Follow the Basic Mode specifications
 
       #### < 480px
       Same as above, dropdown just becomes 100% wide.
@@ -320,6 +333,9 @@ changelog:
     changes: |
       - CHANGED: Use colors component
       - CHANGED: Use typography component
+      - ADDED: Details on local nav item truncation
+      - ADDED: Details on focus and hover states
+      - ADDED: .ai mockup file
 
   - version: 1.0.0
     changes: Initial release
