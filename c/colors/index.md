@@ -4,7 +4,7 @@ title: Colors
 section: Components
 redirect_from: /docs/ui-components/colors/
 version: 1.0.0-beta.2
-status: active
+status: Unimplemented
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -14,9 +14,7 @@ people:
     email: parker.malenke@pearson.com
   - role: Designer
     name: Ed Zee
-implementations:
-  - type: Origami
-    link: https://www.npmjs.com/package/pearson-elements
+implementation: https://www.npmjs.com/package/pearson-elements
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1ThXm4SGwyPb3wtlJGmOWLTRCIWERcLsjtP-jlkGjwAY/edit?usp=sharing

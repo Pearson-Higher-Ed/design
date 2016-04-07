@@ -4,7 +4,7 @@ title: Application Header
 section: Components
 redirect_from: /docs/ui-components/application-header/
 version: 1.1.0-beta.1
-status: active
+status: Unimplemented
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -15,9 +15,9 @@ people:
   - role: Visual Design
     name: Meredith Williamson
     email: meredith.williamson@pearson.com
-implementations:
-  - type: origami
-    link: https://origami.pearsoned.com/registry/components/o-app-header
+implementation:
+  name: Dev Docs
+  link: https://origami.pearsoned.com/registry/components/o-app-header
 downloads:
   - name: .sketch mockup
     link: ./assets/o-app-header.sketch

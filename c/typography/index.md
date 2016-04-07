@@ -3,7 +3,7 @@ layout: component-yaml
 title: Typography
 section: Components
 version: 1.0.0-beta.4
-status: active
+status: Unimplemented
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -13,9 +13,7 @@ people:
     email: parker.malenke@pearson.com
   - role: Designer
     name: Ed Zee
-implementations:
-  - type: Elements SDK
-    link: https://pearson-elements-v0.surge.sh/elements/typography/
+implementation: https://pearson-elements-v0.surge.sh/elements/typography/
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1xE22tRE0aRGqqM8PGEJ-5MVClo8gTqr1nf2fy_VcFl0/edit?usp=sharing

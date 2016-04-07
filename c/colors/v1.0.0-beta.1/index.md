@@ -4,7 +4,7 @@ title: Colors
 section: Components
 redirect_from: /docs/ui-components/colors/
 version: 1.0.0-beta.1
-status: active
+status: Implemented
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -14,9 +14,7 @@ people:
     email: parker.malenke@pearson.com
   - role: Designer
     name: Ed Zee
-implementations:
-  - type: Origami
-    link: https://origami.pearsoned.com/registry/components/o-color
+implementation: https://www.npmjs.com/package/pearson-elements
 
 tagline: |
   Every color used in the Elemental Design library is defined in this component.

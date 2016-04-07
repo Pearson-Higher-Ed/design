@@ -4,7 +4,7 @@ title: Buttons
 section: Components
 redirect_from: "/docs/ui-components/buttons/"
 version: 1.0.0-beta.4
-status: active
+status: Implemented
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -16,9 +16,7 @@ people:
     name: Ed Zee
   - role: QA
     name: Eajaz
-implementations:
-  - type: Elements SDK
-    link: https://pearson-elements-v0.surge.sh/elements/buttons/
+implementation: https://pearson-elements-v0.surge.sh/elements/buttons/
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/19r4uvPAZpmXRwT_krIr9MqHLYC-Vgjah2kPDi9PYaQA/edit?usp=sharing

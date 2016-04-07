@@ -3,7 +3,7 @@ layout: component-yaml
 title: Breakpoints
 section: Components
 version: 1.0.0-beta.1
-status: active
+status: Implemented
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -12,9 +12,7 @@ people:
     name: Parker Malenke
     email: parker.malenke@pearson.com
 
-implementations:
-  - type: Origami
-    link: https://www.npmjs.com/package/pearson-elements
+implementation: https://www.npmjs.com/package/pearson-elements
 
 downloads:
   - name: UXD Accessibility Checklist

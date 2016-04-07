@@ -3,7 +3,7 @@ layout: component-yaml
 title: Icons
 section: Components
 version: 1.0.0-beta.5
-status: active
+status: Implemented
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -13,9 +13,7 @@ people:
     email: parker.malenke@pearson.com
   - role: Designer
     name: Ed Zee
-implementations:
-  - type: Elements SDK
-    link: http://pearson-higher-ed.github.io/elements/elements/icons/
+implementation: https://pearson-elements-v0.surge.sh/elements/icons/
 downloads:
   - name: Font Files
     link: http://fortawesome.github.io/Font-Awesome/
