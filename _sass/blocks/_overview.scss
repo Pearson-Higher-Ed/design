@@ -89,18 +89,21 @@
     @include clearfix;
 
     .people {
-      width: 370px;
+      width: 100%;
       @include pe-responsive-breakpoint(md) {
+        width: auto;
+        max-width: 565px;
         float: left;
       }
       .person {
         width: 175px;
         margin-bottom: 8px;
+        margin-left: 20px;
         float: left;
       }
 
-      .person + .person:nth-of-type(2n) {
-        margin-left: 20px;
+      .person:nth-of-type(3n+1) {
+        margin-left: 0;
       }
     }
 
@@ -118,10 +121,13 @@
 
     .downloads {
       margin-top: 20px;
-      width: 175px;
-      margin-left: 20px;
+      width: 100%;
+      clear: both;
       float: left;
       @include pe-responsive-breakpoint(md) {
+        width: 175px;
+        clear: none;
+        margin-left: 20px;
         margin-top: 0;
       }
     }
