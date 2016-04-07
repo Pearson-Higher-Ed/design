@@ -335,6 +335,7 @@ changelog:
       - CHANGED: Use typography component
       - ADDED: Details on local nav item truncation
       - ADDED: Details on focus and hover states
+      - ADDED: .ai mockup file
 
   - version: 1.0.0
     changes: Initial release
