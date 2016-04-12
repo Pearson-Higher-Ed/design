@@ -3,7 +3,7 @@ layout: component-yaml
 title: Tables
 section: Components
 status: active
-version: 1.0.0-beta.1
+version: 1.0.0-beta.2
 private: true
 people:
   - role: Product Owner
@@ -56,14 +56,6 @@ blocks:
 
   - type: section
     name: Advanced Features
-
-  - type: two column
-    text: |
-      ### Hoverable Rows
-      There is an option to highlight the currently hovered row.
-    contents:
-      - type: wide image
-        src: ./assets/basic.table.hoverable.png
 
   - type: two column
     text: |
@@ -122,6 +114,10 @@ blocks:
       For larger, more complex tables with a lot of non-optional data it may be necessary to change from using a table to some other display strategy in the mobile view. For example, you may adopt a list view where each item  can be opened up to view its complete dataset.
 
 changelog:
+  - version: 1.0.0-beta.2
+    changes: |
+      - CHANGED: Rows are striped
+      - REMOVED: Hover option
   - version: 1.0.0-beta.1
     changes: Initial version
 ---
