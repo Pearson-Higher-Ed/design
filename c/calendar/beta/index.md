@@ -3,9 +3,9 @@ layout: component-yaml
 title: Calendar
 section: Components
 redirect_from: /docs/ui-components/calendar/
-status: active
+status: Unimplemented
 version: 1.0.0-beta.1
-private: true
+private: false
 people:
   - role: Product Owner
     name: Joe Macaluso
