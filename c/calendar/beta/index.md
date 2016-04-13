@@ -73,3 +73,8 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/calendar-legend.png
+
+changelog:
+  - version: 1.0.0-beta.1
+    changes: Initial version
+---
