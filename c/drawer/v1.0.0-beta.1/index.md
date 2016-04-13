@@ -17,13 +17,13 @@ downloads:
     link: https://docs.google.com/a/pearson.com/document/d/1ThXm4SGwyPb3wtlJGmOWLTRCIWERcLsjtP-jlkGjwAY/edit?usp=sharing
 
 tagline: |
-  The drawer is a
+  The drawer component offers a convenient method for presenting secondary information which doesn't need to be immediately visible.
 features:
   - Overview and item detail levels
   - Animations for show/hide and viewing item details
   - Accessible implementation
 usage_guidelines: |
-  Only core components such as Buttons or Typography should depend directly on the colors component. Higher level components should get their colors indirectly from the core set of components. This makes it easy to update the color usage across the library.
+  Drawers should contain secondary content which only needs to be presented when specifically requested by the user, such as help information.
 
 blocks:
   - type: section
