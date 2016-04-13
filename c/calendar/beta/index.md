@@ -5,7 +5,7 @@ section: Components
 redirect_from: /docs/ui-components/calendar/
 status: Unimplemented
 version: 1.0.0-beta.1
-private: false
+private: true
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -56,6 +56,7 @@ blocks:
       **Disabled** state is used when a date is not selectable.  Disabled dates also cannot incur a hover state.
       
       **Highlight** state is used to indicate a range of selected dates.
+      
     contents:
       - type: narrow image
         src: ./assets/states.png
@@ -73,6 +74,92 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/calendar-legend.png
+
+  - type: section
+    name: Redlines
+
+  - type: two column
+    text: |
+      ### Calendar
+
+      Spacing
+      : - 20px padding
+        - 1px space between dates
+      
+      Month Label & Controls
+      : - Basic Title
+        - Pitch (#231F20)
+        - Chevron left/right icons
+      
+      Days of the Week
+      : - Large Label Text
+        - Pitch (#231F20)
+      
+      Border
+      : - 1px thick border
+        - Hairline Gray (#D0D0D0)
+      
+    contents:
+    - type: narrow image
+      src: ./assets/redlines-calendar.png
+      
+  - type: two column
+    text: |
+      ### Date States
+
+      Sizing
+      : - 40px width
+        - 35px height
+      
+      Dates within the current month
+      : - Large Label Text; Pitch (#231F20)
+        - Background fill; Dirty Ice  (#F8F8F8)
+        
+      Dates outside the current month
+      : - Large Label Text; Pitch (#231F20)
+        - Background fill; White (#FFFFFF)
+        
+      Hover State
+      : - Large Label Text; White (#FFFFFF)
+        - Background fill; Sea (#0C5D99)
+        
+      Selected State
+      : - Large Label Text; White (#FFFFFF)
+        - Background fill; Basic Blue (#107ACA)
+        
+      Disabled State
+      : - Large Label Text; Boring (#A6A8AB)
+        - Background fill; Brightly Lit (#E6E6E6)
+        
+      Highlighted State
+      : - Large Label Text; Pitch (#231F20)
+        - Background fill; Sky Blue (#9DC0DB)
+        
+    contents:
+      - type: narrow image
+        src: ./assets/redlines-date-states-01.png
+      - type: narrow image
+        src: ./assets/redlines-date-states-02.png
+        
+  - type: two column
+    text: |
+      ### Legend (optional)
+
+      Sizing
+        : - 50px high container
+          - 20px horizontal padding
+          - 22px square Legend Swatch
+          - 10px padding between Swatch and Label text
+          
+      Text
+        : - Basic Label Text; Gray No. 1 (#565656)
+        
+    contents:
+      - type: narrow image
+        src: ./assets/redlines-legend-01.png
+      - type: narrow image
+        src: ./assets/redlines-legend-02.png
+          
 
 changelog:
   - version: 1.0.0-beta.1
