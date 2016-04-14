@@ -1,6 +1,6 @@
 ---
 layout: component-yaml
-title: Drawer
+title: Drawer2
 section: Components
 version: 1.0.0-beta.1
 status: Unimplemented
