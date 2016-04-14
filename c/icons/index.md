@@ -60,8 +60,8 @@ blocks:
       - check-square-o
       - ban
       - camera
-      - heart-o
       - heart
+      - heart-o
       - laptop
       - book
       - list-ul
