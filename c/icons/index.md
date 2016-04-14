@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Icons
 section: Components
-version: 1.0.0-beta.5
+version: 1.0.0-beta.6
 status: Implemented
 people:
   - role: Product Owner
@@ -60,6 +60,13 @@ blocks:
       - check-square-o
       - ban
       - camera
+      - heart-o
+      - heart
+      - laptop
+      - book
+      - list-ul
+      - th-large
+
     contents:
       - type: narrow image
         src: ./assets/icons.png
@@ -86,6 +93,9 @@ blocks:
       A lone symbol should still be wrapped in the relevant type style (e.g. Basic Label).
 
 changelog:
+  - version: 1.0.0-beta.6
+    changes: |
+      - ADDED: Additional icons, including heart-o, heart, laptop, book, list-ul, and th-large.
   - version: 1.0.0-beta.5
     changes: |
       - ADDED: Sketch and Illustrator mockup files.
