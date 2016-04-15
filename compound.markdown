@@ -47,7 +47,7 @@
 				     please visit the following link: [*Pearson browser and device
 				     compatibility*](https://sites.google.com/a/pearson.com/compatibility/home)
 
-![](image2.png)
+![](\img\image2.png)
 
 
 
