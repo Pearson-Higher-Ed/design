@@ -4,7 +4,7 @@ title: Inputs
 section: Components
 redirect_from: /docs/ui-components/forms/
 status: active
-version: 1.0.0-beta.2
+version: 1.0.0-beta.1
 private: true
 people:
   - role: Product Owner
@@ -211,8 +211,7 @@ blocks:
         - No changes to default browser style
 
       Error
-      : - Same as active, except:
-        - 1px solid \#D0021B border
+      : - 1px solid \#D0021B border
         - \#D0021B drop shadow, 4px of blur
         - Error states **must** be accompanied by explanatory text. See the forms component for standard examples of error handling.
 
@@ -382,9 +381,6 @@ blocks:
       - type: narrow image
         src: ./assets/redlines.specialized.png
 changelog:
-  - version: 1.0.0-beta.2
-    changes: |
-      - FIXED: Incorrect labeling in redline image
   - version: 1.0.0-beta.1
     changes: Initial version
 ---
