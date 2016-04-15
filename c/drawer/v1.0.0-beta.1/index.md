@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Drawer2
 section: Components
-version: 1.0.0-beta.1
+version: 1.0.0-beta.2
 status: Unimplemented
 people:
   - role: Product Owner
@@ -80,7 +80,54 @@ blocks:
       - type: narrow image
         src: ./assets/responsive.png
 
+  - type: section
+    name: Redlines
+
+  - type: two column
+    text: |
+      ### Basic View
+      Spacing
+      : - 20px side and top margins around the content area
+        - 16px vertical margins around the title area, 20px side margins
+
+      Typography
+      : - Title is a large label
+
+      Icons
+      : - Close icon is `times`
+
+      Shadow
+      : - Color is rgba(0, 0, 0, 0.3)
+        - 8px blur
+        - -1px X axis offset
+
+      Title Separator
+      : - 1px solid hairline gray (#D0D0D0)
+    contents:
+      - type: wide image
+        src: ./assets/redlines.basic.view.png
+
+  - type: two column
+    text: |
+      ### Detail View
+      Title
+      : - Use a static "Back" label
+
+      Icon
+      : - chevron-left
+        - 8px spacing between icon and label
+    contents:
+      - type: wide image
+        src: ./assets/redlines.detail.view.png
+
+
 changelog:
+  - version: 1.0.0-beta.2
+    changes: |
+      - ADDED: Basic -> Detail transition video
+      - ADDED: Initial redlines
+      
   - version: 1.0.0-beta.1
+    linkable: false
     changes: Initial version.
 ---
