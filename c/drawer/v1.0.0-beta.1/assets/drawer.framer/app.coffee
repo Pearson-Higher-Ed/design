@@ -1,3 +1,6 @@
+# Remove framer cursor
+document.body.style.cursor = "auto"
+
 # Import file "framer" (sizes and positions are scaled 1:2)
 sk = Framer.Importer.load("imported/framer@2x")
 Framer.Device.contentScale = 0.5

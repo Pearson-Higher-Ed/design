@@ -56,9 +56,19 @@ blocks:
   - type: two column
     text: |
       If the drawer is presenting a list of items, selecting one of them should transition the drawer to the detail view. This adds a back label and icon for returning to the originating view.
+
+      The drawer should retain state on close, i.e. closing the drawer on a detail view and then reopening the same drawer will return the user to that detail view.
     contents:
       - type: wide image
         src: ./assets/detail.view.png
+
+  - type: two column
+    text: |
+      ### Animation
+      Displaying the second level uses an animation to provide context.
+    contents:
+      - type: wide video
+        src: ./assets/second.level.mov
 
   - type: section
     name: Responsive Behavior
