@@ -29,18 +29,17 @@ implementations:
 # Any downloads available
 downloads:
   - name: .sketch mockup
-    link: ./assets/o-app-header.sketch
+    link: ./assets/ProgressBarComponent.zip
 
 # Overview information for the component
 tagline: |
-  Graphical control element user to visualize the progression of an operation such as course copy, course setup or assignment creation.
+  Graphical control element used to visualize the progression of an operation such as course copy, course setup or assignment creation.
 description: 
 features:
   - Complete vs Incomplete Status
   - Compliance with Accessiblity
 usage_guidelines: |
-  Cover when to use the component and any major guidelines. Further details can
-  be provided below.
+  Every instance of a Progress Bar should use this component.  Future versions of the progress bar will include more detailed meta information.
 
 # Main contents of the component definition
 # `blocks` is a list of the content chunks to display. Several different types
@@ -58,57 +57,73 @@ blocks:
 
   - type: two column
     text: |
-      Here is the content for the text column on the side. It is run through
-      markdown.
+      The progress bar is broken into two states: Complete and Incomplete.  
+
+      The Complete state is represented from left to right as a filled foreground box.
+
+      The Incomplete state is represented from left to right as an unfilled stroke box with a solid color background.
+
+      As an operation progresses, the Complete fill box expands from left to right  as the Incomplete stroked box contracts from left to right at an equal size and rate that is linear in behavior.
 
     # (optional) A list of items to put in the right column
     contents:
       # Images can be wide or narrow, wide images are 760px and narrow are 370px
-      - type: wide image OR narrow image
-        src: ./assets/path.to.file.png
-        caption: (optional), appears below image
-
-      # Tables use the markdown format
-      - type: table
-        content: |
-          | Name    | Phone         | Zip code  |
-          |---------|---------------|-----------|
-          | Bob     | 303-123-4567  | 02134     |
-          | Sally   | 719-432-7869  | 92931     |
-
-      # Palettes list colors in a table. All three categories are required, and
-      # hex values should exclude a preceding '#'.
-      - type: palette
-        foreground:
-          - name: White
-            hex: FFFFFF
-          - name: Gray
-            hex: d8d8d8
-        background:
-          - name: Black
-            hex: 000000
-        accents:
-          - name: Blue
-            hex: 0000ff
+      - type: wide image
+        src: ./assets/anatomy.png
 
   - type: section
     name: Redlines
+
   - type: two column
     text: |
-      foreground
+      ### Sizes
+      Foreground
       : - 20px tall
-        - variable width
+        - Variable width
 
-      stroke
-      :   
+      Stroke
+      : - 20px tall
+        - Variable width
+        - 1px Thickness
+
+      Background
+      : - 20px tall
+        - Variable width
+
+    contents:
+      - type: wide image
+        src: ./assets/redlinesizes.png
+
+  - type: two column
+    text: |
+      ### Color
+      The progress bar should follow the Colors component in order to guarantee sufficient contrast to meet WCAG 2.0 AA guidelines. 
+
+    contents:
+      - type: wide image
+        src: ./assets/foregroundstrokebackground.png
+
+  - type: two column
+    text: |
+      Foreground
+      : - Royal Navy
+        - \#094877
+
+      Stroke
+      : - Royal Navy
+        - \#094877
+
+      Background
+      : - White
+        - \#FFFFFF
+
+    contents:
+      - type: wide image
+        src: ./assets/foregroundbackground.png        
 
 # Required. List out each version of the component and the changes made. Make
 # sure to follow the component versioning guide.
 changelog:
-  - version: 1.0.0-beta.2
-    changes: |
-      - ADDED: Green buttons
-      - CHANGED: Static links now show an underline which goes away on hover
   - version: 1.0.0-beta.1
     changes: |
       Initial version
