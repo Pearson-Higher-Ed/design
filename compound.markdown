@@ -53,7 +53,7 @@ section: contribute
 				     please visit the following link: [*Pearson browser and device
 				     compatibility*](https://sites.google.com/a/pearson.com/compatibility/home)
 
-![](/img/image2.png)
+![](img/image2.png)
 
 
 
@@ -247,7 +247,7 @@ section: contribute
 
 -   **Webpack**
 
-	 ![](/img/image1.png)
+	 ![](img/image1.png)
 	
 	-   Webpack is a "module bundler", which allows users to take a given
 	     set of modular JavaScript files, and compile them down into a
