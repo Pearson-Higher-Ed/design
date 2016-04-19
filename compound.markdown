@@ -53,7 +53,7 @@ section: contribute
 				     please visit the following link: [*Pearson browser and device
 				     compatibility*](https://sites.google.com/a/pearson.com/compatibility/home)
 
-![](img/image2.png)
+![]({{site.baseurl}}/img/image2.png)
 
 
 
