@@ -1,3 +1,9 @@
+---
+layout: article
+title: Compound Creation Guide
+section: contribute
+---
+
 **Contribution**:
 
 -   **Technical Governance**
