@@ -247,7 +247,7 @@ section: contribute
 
 -   **Webpack**
 	 
-![]({{site.baseurl}}/../img/image2.png)
+![](img/image2.png?raw=true)
 ![]({{site.baseurl}}/../img/image1.png)
 	
 	-   Webpack is a "module bundler", which allows users to take a given
