@@ -247,7 +247,7 @@ section: contribute
 
 -   **Webpack**
 
-	 ![](img/image1.png)
+	 ![]({{site.baseurl}}/../img/image1.png)
 	
 	-   Webpack is a "module bundler", which allows users to take a given
 	     set of modular JavaScript files, and compile them down into a
