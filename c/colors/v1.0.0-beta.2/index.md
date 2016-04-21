@@ -3,7 +3,7 @@ layout: component-yaml
 title: Colors
 section: Components
 redirect_from: /docs/ui-components/colors/
-version: 1.0.0
+version: 1.0.0-beta.2
 status: Unimplemented
 people:
   - role: Product Owner
@@ -121,6 +121,12 @@ blocks:
         hex: ffffff
 
 changelog:
-  - version: 1.0.0
+  - version: 1.0.0-beta.2
+    changes: |
+      - ADDED: Link to UXD Accessibility Checklist.
+      - ADDED: Firetruck red to light palette (for input errors).
+      - ADDED: Blue Milk to light palette (for selected backgrounds).
+      - ADDED: White palette (for input placeholders)
+  - version: 1.0.0-beta.1
     changes: Initial version
 ---
