@@ -4,7 +4,7 @@ title: Inputs
 section: Components
 redirect_from: /docs/ui-components/forms/
 status: active
-version: 1.0.0-beta.3
+version: 1.0.0-beta.2
 private: true
 people:
   - role: Product Owner
@@ -25,14 +25,6 @@ features:
   - Guaranteed compliance with Accessibility requirements
 usage_guidelines: |
   Every instance of a form element should come from this component. See the sections below for information about when to use each type of form.
-
-downloads:
-  - name: UXD Accessibility Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/13qcZKhRjvksN3oCb5xzKX48QJTtTeZGPQeom7xKKOfg/edit?usp=sharing
-  - name: .sketch mockup
-    link: ./assets/inputs.mockup.sketch
-  - name: .ai mockup
-    link: ./assets/inputs.mockup.ai
 
 blocks:
 
@@ -378,8 +370,6 @@ blocks:
 
       States
       : - Match text input
-        - Except for the exclusion of a readonly state
-        - Disabled state should override the button style to maintain a border
 
       Button
       : - Medium button (default)
@@ -392,11 +382,6 @@ blocks:
       - type: narrow image
         src: ./assets/redlines.specialized.png
 changelog:
-  - version: 1.0.0-beta.3
-    changes: |
-      - ADDED: UXD Accessibility checklist
-      - ADDED: Sketch and AI mockups
-      - CHANGED: Search box input redlines go into more detail
   - version: 1.0.0-beta.2
     changes: |
       - FIXED: Incorrect labeling in redline image
