@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Icons
 section: Components
-version: 1.0.0-beta.7
+version: 1.0.0-beta.6
 status: Unimplemented
 people:
   - role: Product Owner
@@ -66,7 +66,6 @@ blocks:
       - book
       - list-ul
       - th-large
-      - exclamation-circle
 
     contents:
       - type: narrow image
@@ -94,9 +93,6 @@ blocks:
       A lone symbol should still be wrapped in the relevant type style (e.g. Basic Label).
 
 changelog:
-  - version: 1.0.0-beta.7
-    changes: |
-      - ADDED: Additional icon, exclamation-circle.
   - version: 1.0.0-beta.6
     changes: |
       - ADDED: Additional icons, including heart-o, heart, laptop, book, list-ul, and th-large.
