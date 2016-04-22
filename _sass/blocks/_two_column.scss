@@ -41,6 +41,10 @@ p {
 
   & > ul {
     @include pe-ulist;
+
+    & + p {
+      margin-top: 12px;
+    }
   }
 
   dl {
