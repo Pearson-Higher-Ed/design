@@ -50,6 +50,7 @@ blocks:
       - The default text remains and a cursor appears within the field
       - The calendar picker appears
       - No date is selected by default
+
       If the user closes the calendar without making a selection, it reverts back to Default State.
 
     contents:
@@ -66,9 +67,11 @@ blocks:
       - The numeric date text in the field is highlighted
 
       **The calendar closes when:**
+
       - The user makes a selection from the picker
       - The user begins to manually type in a numeric date in the field
       - Focus is lost from field or calendar
+
       Note that for the first and second points, focus remains on the field until the user clicks elsewhere.
 
     contents:
@@ -86,7 +89,7 @@ blocks:
       - type: narrow image
         src: ./assets/single-input-nofocus-select.png
 
-- type: section
+  - type: section
     name: Double Input Field Date Picker (start/end dates)
 
   - type: two column
@@ -114,7 +117,7 @@ blocks:
 
     contents:
       - type: wide image
-      src: ./assets/double-input-focus-start-select.png
+        src: ./assets/double-input-focus-start-select.png
 
   - type: two column
     text: |
@@ -123,8 +126,8 @@ blocks:
       Note that once the user has made a start date selection, focus should automatically switch to the end date and the date picker for the end date should open. Until the user actually does a mousover on the calendar, only the selected start date will be highlighted.
 
     contents:
-      - type:wide image
-      src: ./assets/double-input-focus-end-noselect.png
+        - type: wide image
+          src: ./assets/double-input-focus-end-noselect.png
 
   - type: two column
     text: |
@@ -132,8 +135,8 @@ blocks:
       Dates prior to the start date are disabled.
 
     contents:
-      - type: wide image
-      src: ./assets/double-input-focus-end-hover.png
+        - type: wide image
+          src: ./assets/double-input-focus-end-hover.png
 
   - type: two column
     text: |
@@ -141,25 +144,27 @@ blocks:
       Dates prior to the start date are disabled.
 
     contents:
-      - type: wide image
-      src: ./assets/double-input-focus-end-select.png
+        - type: wide image
+          src: ./assets/double-input-focus-end-select.png
 
   - type: two column
     text: |
       ### Reopening the Start Date After Selecting Both Start and End Dates
 
       If the user refocuses on the start date after having selected both a start and end date:
+
         - The date picker appears with the start date selected
         - A highlight extending to the end date shows the date range
         - The numeric date text in the field is highlighted
         - No disabled dates are shown
+
       Making a selection will cause focus to automatically shift once again to the end date picker and field.
 
     contents:
-    - type: wide image
-    src:  ./assets/double-input-focus-start-allselect.png
+      - type: wide image
+        src:  ./assets/double-input-focus-start-allselect.png
 
-- type: section
+  - type: section
     name: Manual Numeric Entry Into Date Input Field
 
   - type: two column
@@ -167,8 +172,8 @@ blocks:
       ### Default State
 
     contents:
-    - type: narrow image
-    src: ./assets/single-input-default.png
+      - type: narrow image
+        src: ./assets/single-input-default.png
 
   - type: two column
     text: |
@@ -188,8 +193,8 @@ blocks:
       - Auto-insert “/” (separator) between mm/dd/yyyy
 
     contents:
-    - type: narrow image
-    src: ./assets/manual-input-focus-partial.png
+      - type: narrow image
+        src: ./assets/manual-input-focus-partial.png
 
   - type: two column
     text: |
@@ -197,8 +202,8 @@ blocks:
       User completes manual entry and clicks off the input field
 
     contents:
-    - type: narrow image
-    src: ./assets/manual-input-nofocus-complete.png
+      - type: narrow image
+        src: ./assets/manual-input-nofocus-complete.png
 
 changelog:
   - version: 1.0.0-beta.1
