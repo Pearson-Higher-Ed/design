@@ -26,7 +26,7 @@
 		<div class="section">
 			<header class="pe-title">Use</header>
 			<ul>
-				{% assign use = (site.pages | where: "section", "use") %}
+				{% assign use = (site.pages | where: "section", "use") | sort: "title" | sort: "order", "last" %}
 				{% for page in use %}
 					{% if page.url contains 'beta' %}
 					{% else %}
