@@ -33,7 +33,7 @@ blocks:
     text: |
       
       This type of date picker is used for picking a single date (ex. assignment due date).
-      
+
       ### Default State
       The single date picker consists of a specialized input field (including the current supported calendar icon) and a calendar component.
 
@@ -54,9 +54,9 @@ blocks:
       - The default text remains and a cursor appears within the field
       - The calendar appears
       - No date is selected by default
-      
+
       If the user closes the calendar without making a selection, it reverts back to Default State.
-      
+
     contents:
       - type: narrow image
         src: ./assets/single-input-focus-noselect.png
@@ -69,13 +69,13 @@ blocks:
 
       - The calendar appears and shows the selected date
       - The numeric date text in the field is highlighted
-      
+
       **The calendar closes when:**
 
       - The user makes a selection from the calendar
       - The user begins to manually type in a numeric date in the field
       - Focus is lost from field or calendar
-      
+
       Note that for the first and second points, focus remains on the field until the user clicks elsewhere.
 
     contents:
@@ -99,7 +99,7 @@ blocks:
   - type: two column
     text: |
       This type of date picker is to be used for choosing a range with specific start and end dates (ex. course beginning and end).
-      
+
       ### Default State
       The default state of the first date input (start) initially behaves the same way as a single date input field.
 
@@ -163,13 +163,13 @@ blocks:
         - A highlight extending to the end date shows the date range
         - The numeric date text in the field is highlighted
         - No disabled dates are shown
-        
+
       Making a selection will cause focus to automatically shift once again to the end date picker and field.
-      
+
       If the user chooses a new start date *before* the previously chosen end date, the end date selection *will be retained* and the user will be automatically moved to the end date input field to confirm their selection.
-      
+
       If the user chooses a new start date *after* the previously chosen end date, the end date selection *will clear* and the user will be automatically moved moved to the end date input field to make a new end date selection.
-      
+
     contents:
       - type: wide image
         src:  ./assets/double-input-focus-start-allselect.png
@@ -180,17 +180,17 @@ blocks:
   - type: two column
     text: |
       This section pertains to manual entry of numeric dates directly into the input field.
-    
+
       ### Default State
-    
+
     contents:
       - type: narrow image
         src: ./assets/single-input-default.png
-    
+
   - type: two column
     text: |
       ### Focus State (w/o selected date)
-    
+
     contents:
       - type: narrow image
         src: ./assets/single-input-focus-noselect.png
