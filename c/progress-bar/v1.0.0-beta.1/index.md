@@ -10,7 +10,7 @@ title: Progress Bar
 status: unimplemented
 
 # Version (follow the component versioning guide)
-version: 1.0.0-beta.2
+version: 1.0.0-beta.1
 
 # List the people involved
 people:
@@ -124,9 +124,6 @@ blocks:
 # Required. List out each version of the component and the changes made. Make
 # sure to follow the component versioning guide.
 changelog:
-  - version: 1.0.0-beta.2
-    changes: |
-      Changed background color from White \#FFFFFF to Brightly Lit \#E6E6E6
   - version: 1.0.0-beta.1
     changes: |
       Initial version
