@@ -1,8 +1,8 @@
 ---
 layout: component-yaml
-title: Drawer2
+title: Drawer
 section: Components
-version: 1.0.0-beta.2
+version: 1.0.0-beta.3
 status: Unimplemented
 people:
   - role: Product Owner
@@ -14,7 +14,11 @@ people:
 implementation: https://www.npmjs.com/package/pearson-elements
 downloads:
   - name: UXD Accessibility Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/1ThXm4SGwyPb3wtlJGmOWLTRCIWERcLsjtP-jlkGjwAY/edit?usp=sharing
+    link: https://docs.google.com/a/pearson.com/document/d/1iO8WNiFa5pn6_JleXMUufIvIsXEbVHXsiYUcgxtW-iM/edit?usp=sharing
+  - name: .sketch mockup
+    link: ./assets/drawer.mockup.sketch
+  - name: .ai mockup
+    link: ./assets/drawer.mockup.ai
 
 tagline: |
   The drawer component offers a convenient method for presenting secondary information which doesn't need to be immediately visible.
@@ -95,6 +99,7 @@ blocks:
 
       Icons
       : - Close icon is `times`
+        - A focused icon will used the standard browser outline for focus
 
       Shadow
       : - Color is rgba(0, 0, 0, 0.3)
@@ -112,6 +117,7 @@ blocks:
       ### Detail View
       Title
       : - Use a static "Back" label
+        - Focusing the "< Back" element will use the standard browser outline for focus
 
       Icon
       : - chevron-left
@@ -120,13 +126,60 @@ blocks:
       - type: wide image
         src: ./assets/redlines.detail.view.png
 
+  - type: two column
+    text: |
+      ### Show/Hide Transition
+      Animation
+      : - Slide in from the right
+
+      Timing
+      : - 0.5 seconds
+        - ease-in-out easing
+
+      ### Detail View Transition
+      Animation
+      : - Content container slides in from the right
+        - Title slides away to the left
+        - Back fades/slides in from about the middle of the drawer
+
+      Content
+      : - 0.3 seconds
+        - ease-in-out
+        - Opacity is 0 in hidden state
+
+      Hiding Title
+      : - Move 40px off to the left
+        - Opacity fades to 0
+        - 0.3 seconds
+        - ease-in-out
+
+      Restoring Title
+      : - Restore properties
+        - 0.4 seconds
+        - ease-in-out
+
+      Showing Back
+      : - Starts with midpoint centered at 60% of the content width and opacity of 0
+        - 0.3 seconds
+        - ease-in-out
+
+      Hiding Back
+      : - Reset position and opacity
+        - 0.4 seconds
+        - ease-in-out
 
 changelog:
+  - version: 1.0.0-beta.3
+    changes: |
+      - ADDED: Animation redlines
+      - ADDED: Accessibility checklist
+      - ADDED: Sketch and AI mockups
+
   - version: 1.0.0-beta.2
     changes: |
       - ADDED: Basic -> Detail transition video
       - ADDED: Initial redlines
-      
+
   - version: 1.0.0-beta.1
     linkable: false
     changes: Initial version.
