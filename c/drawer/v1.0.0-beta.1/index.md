@@ -37,7 +37,7 @@ blocks:
     text: |
       Selecting some UI element on the main page can trigger the drawer to slide in from the right, for example clicking 'Help' in the header.
 
-      A drawer can be dismissed by clicking the included 'x' icon or by selecting the trigger element again.
+      A drawer can be dismissed by clicking the included 'x' icon, by selecting the trigger element again, or by hitting the escape key.
     contents:
       - type: wide video
         src: ./assets/show.hide.mov
@@ -108,6 +108,10 @@ blocks:
 
       Title Separator
       : - 1px solid hairline gray (#D0D0D0)
+
+      Keyboard Shortcuts
+      : - Pressing escape should close the drawer in any mode
+
     contents:
       - type: wide image
         src: ./assets/redlines.basic.view.png
