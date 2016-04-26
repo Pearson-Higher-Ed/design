@@ -78,6 +78,11 @@
 
         {% for block in page.blocks %}
         <div class="block">
+          {% for export in block.exports %}
+          <div id="rd-{{export | slugify}}"></div>
+          {% endfor %}
+
+
           {% case block.type %}
 
           {% when 'section' %}
@@ -163,6 +168,26 @@
                 </table>
               </div>
             {% endif %}
+
+
+
+          {% when 'style table' or 'style_table' %}
+          <table class="pe-table">
+            <thead>
+              <tr>
+                <th>Available Styles</th>
+                <th>Reference As</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for style in block.styles %}
+                <tr>
+                  <td>{{style}}</td>
+                  <td><code>[&lt;link text&gt;]({{page.url}}{{page.version}}#rd-{{style | slugify}})</code></td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
 
 
           {% endcase %}
