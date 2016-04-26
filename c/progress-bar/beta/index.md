@@ -4,7 +4,7 @@ layout: component-yaml
 section: Components
 
 # Name the component (this is displayed as the title)
-title: Progress Bar
+title: Determinate Progress Bar
 
 # Status of the component (e.g. experimental, deprecated, etc.)
 status: unimplemented
