@@ -96,22 +96,26 @@
       width: 100%;
       @include pe-responsive-breakpoint(md) {
         width: auto;
-        max-width: 565px;
+        max-width: 370px;
         float: left;
       }
       .person {
-        width: 175px;
+        width: 46%;
+        margin-left: 4%;
+        @include pe-responsive-breakpoint(sm) {
+          width: 175px;
+          margin-left: 20px;
+        }
         margin-bottom: 8px;
-        margin-left: 20px;
         float: left;
       }
 
-      .person:nth-of-type(3n+1) {
+      .person:nth-of-type(2n+1) {
         margin-left: 0;
       }
     }
 
-    .implementations {
+    .dependencies {
       width: 175px;
       float: left;
       clear: both;

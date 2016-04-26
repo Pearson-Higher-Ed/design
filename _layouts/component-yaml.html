@@ -43,12 +43,16 @@
                 {% endfor %}
               </div>
 
-              <!-- <div class="implementations">
-                <div class="title pe-label pe-label--bold">Implementations</div>
-                {% for implementation in page.implementations %}
-                <div class="pe-label"><a href="{{implementation.link}}">{{implementation.type}}</a></div>
+              <div class="dependencies">
+                <div class="title pe-label pe-label--bold">Dependencies</div>
+                {% for dependency in page.dependencies %}
+                <div class="pe-label"><a href="{{site.baseurl}}/c/{{dependency.name | slugify}}/v{{dependency.version}}">{{dependency.name}}@^{{dependency.version}}</a></div>
                 {% endfor %}
-              </div> -->
+                {% unless page.dependencies and page.dependencies != empty %}
+                <div class="pe-label">None</div>
+                {% endunless %}
+
+              </div>
 
               <div class="downloads">
                 <div class="title pe-label pe-label--bold">Downloads</div>
