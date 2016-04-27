@@ -31,7 +31,7 @@ features:
   - Inline styles (links, super/sub-script, etc.)
   - Meets accessibility contrast requirements
 usage_guidelines: |
-  Every instance of text should use a type style defined in this component. If you find a use case not covered by the styles here, make a request to modify this component. (Keeping all type styles in a single component makes it easy to maintain and update them.) [Basic Label (Secondary)](/c/typography/v1.0.0/#basic-label-secondary)
+  Every instance of text should use a type style defined in this component. If you find a use case not covered by the styles here, make a request to modify this component. (Keeping all type styles in a single component makes it easy to maintain and update them.)
 
 dependencies:
   - name: Colors
@@ -52,11 +52,6 @@ blocks:
 
   - type: section
     name: Labels
-    exports:
-      - Basic Label
-      - Small Label
-      - Large Label
-      - Bold Label
 
   - type: two column
     text: |
@@ -245,23 +240,6 @@ blocks:
   - type: two column
     text: |
       ### Labels
-    exports:
-      - Basic Label (Primary Color)
-      - Small Label (Primary Color)
-      - Large Label (Primary Color)
-      - Bold Label (Primary Color)
-      - Basic Label (Secondary Color)
-      - Small Label (Secondary Color)
-      - Large Label (Secondary Color)
-      - Bold Label (Secondary Color)
-      - Basic Label (Inverse, Primary Color)
-      - Small Label (Inverse, Primary Color)
-      - Large Label (Inverse, Primary Color)
-      - Bold Label (Inverse, Primary Color)
-      - Basic Label (Inverse, Secondary Color)
-      - Small Label (Inverse, Secondary Color)
-      - Large Label (Inverse, Secondary Color)
-      - Bold Label (Inverse, Secondary Color)
 
   - type: two column
     text: |
@@ -310,32 +288,9 @@ blocks:
       - type: narrow image
         src: ./assets/redlines.labels.colors.dark.png
 
-  - type: style table
-    styles:
-      - Basic Label (Primary Color)
-      - Small Label (Primary Color)
-      - Large Label (Primary Color)
-      - Bold Label (Primary Color)
-      - Basic Label (Secondary Color)
-      - Small Label (Secondary Color)
-      - Large Label (Secondary Color)
-      - Bold Label (Secondary Color)
-      - Basic Label (Inverse, Primary Color)
-      - Small Label (Inverse, Primary Color)
-      - Large Label (Inverse, Primary Color)
-      - Bold Label (Inverse, Primary Color)
-      - Basic Label (Inverse, Secondary Color)
-      - Small Label (Inverse, Secondary Color)
-      - Large Label (Inverse, Secondary Color)
-      - Bold Label (Inverse, Secondary Color)
-
   - type: two column
     text: |
       ### Titles
-    exports:
-      - Basic Title
-      - Large Title
-      - XL Title
 
   - type: two column
     text: |
@@ -376,22 +331,9 @@ blocks:
         src: ./assets/redlines.titles.narrow.png
         caption: Title sizes for narrow viewports (< 480px)
 
-  - type: style table
-    styles:
-      - Basic Title
-      - Large Title
-      - XL Title
-
   - type: two column
     text: |
       ### Copy
-    exports:
-      - Basic Body
-      - Small Body
-      - Lead
-      - Ordered List
-      - Unordered List
-      - Code
 
   - type: two column
     text: |
@@ -435,7 +377,7 @@ blocks:
 
   - type: two column
     text: |
-      ##### Narrow Lead
+      #### Narrow Lead
       At narrow viewports (<480px) the lead styles become:
 
       Font
@@ -486,15 +428,6 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/redlines.copy.code.png
-
-  - type: style table
-    styles:
-      - Basic Body
-      - Small Body
-      - Lead
-      - Ordered List
-      - Unordered List
-      - Code
 
   - type: two column
     text: |
@@ -552,22 +485,6 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/redlines.headings.png
-    exports:
-      - Heading Level 1
-      - Heading Level 2
-      - Heading Level 3
-      - Heading Level 4
-      - Heading Level 5
-      - Heading Level 6
-
-  - type: style table
-    styles:
-      - Heading Level 1
-      - Heading Level 2
-      - Heading Level 3
-      - Heading Level 4
-      - Heading Level 5
-      - Heading Level 6
 
   - type: two column
     text: |
@@ -623,30 +540,6 @@ blocks:
         src: ./assets/redlines.inline.1.png
       - type: narrow image
         src: ./assets/redlines.inline.2.png
-    exports:
-      - small, time, abbr tags
-      - Links
-      - Highlighted Text
-      - Italic Text
-      - Bold Text
-      - Deleted Text
-      - Inserted Text
-      - Superscript, Subscript
-      - Inline Quoted Text
-      - code, kbd tags
-
-  - type: style table
-    styles:
-      - small, time, abbr tags
-      - Links
-      - Highlighted Text
-      - Italic Text
-      - Bold Text
-      - Deleted Text
-      - Inserted Text
-      - Superscript, Subscript
-      - Inline Quoted Text
-      - code, kbd tags
 
 changelog:
   - version: 1.0.0-beta.4
