@@ -55,7 +55,7 @@
 		<header class="pe-title">Library</header>
 		{% assign components = (site.pages | where: "section", "Components") | sort:"title" %}
 		{% for page in components %}
-			{% if (page.url contains 'beta') or (page.private) %}
+			{% if (page.url contains 'beta') or (page.private) or (page.status == 'Deprecated') %}
 			{% else %}
 				<a class="component" href="{{site.baseurl}}{{page.url}}">
 					<span class="pe-label pe-label--bold">{{page.title}}</span>

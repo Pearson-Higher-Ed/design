@@ -183,7 +183,7 @@
               {% for style in block.styles %}
                 <tr>
                   <td>{{style}}</td>
-                  <td><code>[&lt;link text&gt;]({{page.url}}{{page.version}}#rd-{{style | slugify}})</code></td>
+                  <td><code>[&lt;link text&gt;]({{site.baseurl}}{{page.url}}#rd-{{style | slugify}})</code></td>
                 </tr>
               {% endfor %}
             </tbody>

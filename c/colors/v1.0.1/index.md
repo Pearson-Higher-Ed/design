@@ -3,7 +3,7 @@ layout: component-yaml
 title: Colors
 section: Components
 redirect_from: /docs/ui-components/colors/
-version: 1.0.0
+version: 1.0.1
 status: Unimplemented
 people:
   - role: Product Owner
@@ -68,6 +68,22 @@ blocks:
         hex: B3B3B3
       - name: Hairline Gray
         hex: D0D0D0
+    exports:
+      - Pitch (#231f20)
+      - Gray No. 1 (#565656)
+      - Royal Navy (#094877)
+      - Hyperdrive (#0d65a6)
+      - Firetruck (#D0021B)
+      - Spruce (#076826)
+      - Brightly Lit (#E6E6E6)
+      - Off White (#F2F2F2)
+      - Dirty Ice (#F8F8F8)
+      - White (#FFFFFF)
+      - Blue Milk (#D9EEFF)
+      - Highlighter (#FDEC2E)
+      - Boring (#A6A8AB)
+      - Sidewalk (#B3B3B3)
+      - Hairline Gray (#D0D0D0)
 
   - type: section
     name: Dark Palette
@@ -90,6 +106,14 @@ blocks:
         hex: 3f3f3f
       - name: Smoke Gray
         hex: 545454
+    exports:
+      - White (#FFFFFF)
+      - Gray Wash (#AEAEAE)
+      - Black (#000000)
+      - Gutenberg Black (#333333)
+      - Full Moon (#424242)
+      - Asphalt (#3f3f3f)
+      - Smoke Gray (#545454)
 
   - type: section
     name: Blue Palette
@@ -108,6 +132,12 @@ blocks:
         hex: 0A4D80
       - name: Sky Blue
         hex: 9DC0DB
+    exports:
+      - White (#FFFFFF)
+      - Basic Blue (#107ACA)
+      - Sea (#0C5D99)
+      - Deep Sea (#0A4D80)
+      - Sky Blue (#9DC0DB)
 
   - type: section
     name: White Palette
@@ -119,8 +149,74 @@ blocks:
     background:
       - name: White
         hex: ffffff
+    exports:
+      - Sandy Gray (#6d6d6d)
+      - White (#ffffff)
+
+  - type: section
+    name: Exported Styles
+
+  - type: two column
+    text: |
+      ### Light Palette
+
+  - type: style table
+    styles:
+      - Pitch (#231f20)
+      - Gray No. 1 (#565656)
+      - Royal Navy (#094877)
+      - Hyperdrive (#0d65a6)
+      - Firetruck (#D0021B)
+      - Spruce (#076826)
+      - Brightly Lit (#E6E6E6)
+      - Off White (#F2F2F2)
+      - Dirty Ice (#F8F8F8)
+      - White (#FFFFFF)
+      - Blue Milk (#D9EEFF)
+      - Highlighter (#FDEC2E)
+      - Boring (#A6A8AB)
+      - Sidewalk (#B3B3B3)
+      - Hairline Gray (#D0D0D0)
+
+  - type: two column
+    text: |
+      ### Dark Palette
+
+  - type: style table
+    styles:
+      - White (#FFFFFF)
+      - Gray Wash (#AEAEAE)
+      - Black (#000000)
+      - Gutenberg Black (#333333)
+      - Full Moon (#424242)
+      - Asphalt (#3f3f3f)
+      - Smoke Gray (#545454)
+
+  - type: two column
+    text: |
+      ### Blue Palette
+
+  - type: style table
+    styles:
+      - White (#FFFFFF)
+      - Basic Blue (#107ACA)
+      - Sea (#0C5D99)
+      - Deep Sea (#0A4D80)
+      - Sky Blue (#9DC0DB)
+
+  - type: two column
+    text: |
+      ### White Palette
+
+  - type: style table
+    styles:
+      - Sandy Gray (#6d6d6d)
+      - White (#ffffff)
 
 changelog:
+  - version: 1.0.1
+    changes: |
+      - ADDED: Exported styles
   - version: 1.0.0
     changes: Initial version
 ---
