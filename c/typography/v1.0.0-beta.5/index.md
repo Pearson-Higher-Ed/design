@@ -52,11 +52,6 @@ blocks:
 
   - type: section
     name: Labels
-    exports:
-      - Basic Label
-      - Small Label
-      - Large Label
-      - Bold Label
 
   - type: two column
     text: |
@@ -245,23 +240,6 @@ blocks:
   - type: two column
     text: |
       ### Labels
-    exports:
-      - Basic Label (Primary Color)
-      - Small Label (Primary Color)
-      - Large Label (Primary Color)
-      - Bold Label (Primary Color)
-      - Basic Label (Secondary Color)
-      - Small Label (Secondary Color)
-      - Large Label (Secondary Color)
-      - Bold Label (Secondary Color)
-      - Basic Label (Inverse, Primary Color)
-      - Small Label (Inverse, Primary Color)
-      - Large Label (Inverse, Primary Color)
-      - Bold Label (Inverse, Primary Color)
-      - Basic Label (Inverse, Secondary Color)
-      - Small Label (Inverse, Secondary Color)
-      - Large Label (Inverse, Secondary Color)
-      - Bold Label (Inverse, Secondary Color)
 
   - type: two column
     text: |
@@ -287,6 +265,18 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/redlines.labels.regular.png
+    exports:
+      - Basic Label
+      - Small Label
+      - Large Label
+      - Bold Label
+
+  - type: style table
+    styles:
+      - Basic Label
+      - Small Label
+      - Large Label
+      - Bold Label
 
   - type: two column
     text: |
@@ -309,25 +299,18 @@ blocks:
         src: ./assets/redlines.labels.colors.light.png
       - type: narrow image
         src: ./assets/redlines.labels.colors.dark.png
+    exports:
+      - Primary Label Color
+      - Secondary Label Color
+      - Inverse Primary Label Color
+      - Inverse Secondary Label Color
 
   - type: style table
     styles:
-      - Basic Label (Primary Color)
-      - Small Label (Primary Color)
-      - Large Label (Primary Color)
-      - Bold Label (Primary Color)
-      - Basic Label (Secondary Color)
-      - Small Label (Secondary Color)
-      - Large Label (Secondary Color)
-      - Bold Label (Secondary Color)
-      - Basic Label (Inverse, Primary Color)
-      - Small Label (Inverse, Primary Color)
-      - Large Label (Inverse, Primary Color)
-      - Bold Label (Inverse, Primary Color)
-      - Basic Label (Inverse, Secondary Color)
-      - Small Label (Inverse, Secondary Color)
-      - Large Label (Inverse, Secondary Color)
-      - Bold Label (Inverse, Secondary Color)
+      - Primary Label Color
+      - Secondary Label Color
+      - Inverse Primary Label Color
+      - Inverse Secondary Label Color
 
   - type: two column
     text: |
@@ -385,13 +368,6 @@ blocks:
   - type: two column
     text: |
       ### Copy
-    exports:
-      - Basic Body
-      - Small Body
-      - Lead
-      - Ordered List
-      - Unordered List
-      - Code
 
   - type: two column
     text: |
@@ -418,6 +394,9 @@ blocks:
       - type: narrow image
         src: ./assets/redlines.copy.body.small.png
         caption: Smaller body copy used for narrower line length
+    exports:
+      - Basic Body
+      - Small Body
 
   - type: two column
     text: |
@@ -432,6 +411,8 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/redlines.copy.lead.png
+    exports:
+      - Lead
 
   - type: two column
     text: |
@@ -465,12 +446,14 @@ blocks:
       Padding
       : - The first level of a list has 26px of left padding
         - Sublists have 20px of padding
-
     contents:
       - type: narrow image
         src: ./assets/redlines.copy.lists.ordered.png
       - type: narrow image
         src: ./assets/redlines.copy.lists.unordered.png
+    exports:
+      - Ordered List
+      - Unordered List
 
   - type: two column
     text: |
@@ -486,6 +469,8 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/redlines.copy.code.png
+    exports:
+      - Code
 
   - type: style table
     styles:
