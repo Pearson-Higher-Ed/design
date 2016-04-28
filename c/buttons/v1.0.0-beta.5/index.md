@@ -79,39 +79,49 @@ blocks:
       Small button
       : - 24px tall
         - 10px horizontal padding
-        - [Small label font](/design/c/typography/v1.0.0-beta.5/#rd-small-label-inverse-primary-color)
+        - [Small label font](/design/c/typography/v1.0.0-beta.5/#rd-small-label)
 
       Standard button
       : - 28px tall
         - 12px horizontal padding
-        - [Basic label font](/design/c/typography/v1.0.0-beta.5/#rd-basic-label-inverse-primary-color)
+        - [Basic label font](/design/c/typography/v1.0.0-beta.5/#rd-basic-label)
 
       Medium button
       : - 36px tall
         - 12px horizontal padding
-        - [Large label font](/design/c/typography/v1.0.0-beta.5/#rd-large-label-inverse-primary-color)
+        - [Large label font](/design/c/typography/v1.0.0-beta.5/#rd-large-label)
 
 
       Large button
       : - 42px tall
         - 20px horizontal padding
-        - [large label font](/design/c/typography/v1.0.0-beta.5/#rd-large-label-inverse-primary-color)
+        - [large label font](/design/c/typography/v1.0.0-beta.5/#rd-large-label)
 
 
       Link style buttons
       : - Maintain the same spacing around the text
-
-
     contents:
       - type: narrow image
         src: ./assets/redlines.sizes.png
       - type: narrow image
         src: ./assets/redlines.sizes.2.png
+    exports:
+      - Small Button
+      - Standard Button
+      - Medium Button
+      - Large Button
 
   - type: two column
     text: |
       ### Corners
       All sizes use a 3px border radius.
+
+  - type: style table
+    styles:
+      - Small Button
+      - Standard Button
+      - Medium Button
+      - Large Button
 
   - type: two column
     text: |
@@ -120,7 +130,7 @@ blocks:
       Normal
       : - [Basic Blue (#107ACA)](/design/c/colors/v1.0.1/#rd-basic-blue-107aca) fill
         - [Deep Sea (#0A4D80)](/design/c/colors/v1.0.1/#rd-deep-sea-0a4d80) border
-        - [Inverse font color](/design/c/typography/v1.0.0-beta.5/#rd-basic-label-inverse-primary-color)
+        - [Inverse Primary Color](/design/c/typography/v1.0.0-beta.5/#rd-primary-label-color)
 
       Hover/Active
       : - [Sea (#0C5D99)](/design/c/colors/v1.0.1/#rd-sea-0c5d99) fill
@@ -133,17 +143,15 @@ blocks:
 
       Focus
       : - Use the browser default style
-
     contents:
       - type: wide image
         src: ./assets/redlines.primary.png
+    exports:
+      - Primary Button
 
   - type: style table
     styles:
-      - Primary Basic Button
-      - Primary Small Button
-      - Primary Medium Button
-      - Primary Large Button
+      - Primary Button
 
   - type: two column
     text: |
@@ -152,7 +160,7 @@ blocks:
       Normal
       : - [Dirty Ice (#F8F8F8)](/design/c/colors/v1.0.1/#rd-dirty-ice-f8f8f8) fill
         - [Sidewalk (#B3B3B3)](/design/c/colors/v1.0.1/#rd-sidewalk-b3b3b3) border
-        - [Secondary font color](/design/c/typography/v1.0.0-beta.5/#rd-basic-label-secondary-color)
+        - [Secondary font color](/design/c/typography/v1.0.0-beta.5/#rd-secondary-label-color)
 
       Hover/Active
       : - [Brightly Lit (#E6E6E6)](/design/c/colors/v1.0.1/#rd-brightly-lit-e6e6e6) fill
@@ -169,13 +177,12 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/redlines.default.png
+    exports:
+      - Default Button
 
   - type: style table
     styles:
-      - Secondary Basic Button
-      - Secondary Small Button
-      - Secondary Medium Button
-      - Secondary Large Button
+      - Default Button
 
   - type: two column
     text: |
@@ -198,13 +205,12 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/redlines.link.png
+    exports:
+      - Link Button
 
   - type: style table
     styles:
-      - Link Basic Button
-      - Link Small Button
-      - Link Medium Button
-      - Link Large Button
+      - Link Button
 
 changelog:
   - version: 1.0.0-beta.5
