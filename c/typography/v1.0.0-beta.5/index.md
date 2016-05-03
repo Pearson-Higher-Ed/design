@@ -31,7 +31,7 @@ features:
   - Inline styles (links, super/sub-script, etc.)
   - Meets accessibility contrast requirements
 usage_guidelines: |
-  Every instance of text should use a type style defined in this component. If you find a use case not covered by the styles here, make a request to modify this component. (Keeping all type styles in a single component makes it easy to maintain and update them.) [Basic Label (Secondary)](/c/typography/v1.0.0/#basic-label-secondary)
+  Every instance of text should use a type style defined in this component. If you find a use case not covered by the styles here, make a request to modify this component. (Keeping all type styles in a single component makes it easy to maintain and update them.)
 
 dependencies:
   - name: Colors
