@@ -3,7 +3,7 @@ layout: component-yaml
 title: Typography
 section: Components
 version: 1.0.0-beta.4
-status: Unimplemented
+status: deprecated
 people:
   - role: Product Owner
     name: Joe Macaluso
