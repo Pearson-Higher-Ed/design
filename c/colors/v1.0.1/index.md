@@ -4,7 +4,8 @@ title: Colors
 section: Components
 redirect_from: /docs/ui-components/colors/
 version: 1.0.1
-status: Unimplemented
+status: active
+implemented: false
 people:
   - role: Product Owner
     name: Joe Macaluso

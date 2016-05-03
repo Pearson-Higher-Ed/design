@@ -4,7 +4,7 @@ title: Colors
 section: Components
 redirect_from: /docs/ui-components/colors/
 version: 1.0.0-beta.2
-status: Unimplemented
+status: deprecated
 people:
   - role: Product Owner
     name: Joe Macaluso
