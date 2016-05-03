@@ -191,7 +191,7 @@
       <h2 id="changelog">Changelog</h2>
       {% for change in page.changelog %}
         {% if change.version != page.version and change.linkable != false %}
-          <h3><a href="{% if include.beta %}.{% endif %}./v{{change.version}}">{{change.version}}</a></h3>
+          <h3><a href="{% if include.beta or include.in_dir %}.{% endif %}./v{{change.version}}">{{change.version}}</a></h3>
         {% else %}
           <h3>{{change.version}}</h3>
         {% endif %}

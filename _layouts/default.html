@@ -55,13 +55,13 @@
 		<header class="pe-title">Library</header>
 		{% assign components = (site.pages | where: "section", "Components") | sort:"title" %}
 		{% for page in components %}
-			{% if page.version contains 'beta' or page.url contains 'beta' %}
+			{% if page.version contains 'beta' or page.url contains 'beta' or page.status != 'active' %}
 			{% else %}
 				<a class="component" href="{{site.baseurl}}{{page.url}}..">
 					<span class="pe-label pe-label--bold">{{page.title}}</span>
 					<div class="data pe-label">
 						<span>Version {{page.version}}</span>
-						<span class="status">{{page.status}}</span>
+						<span class="status">{% if page.implemented %}Implemented{% else %}Unimplemented{% endif %}</span>
 					</div>
 				</a>
 			{% endif %}
@@ -72,8 +72,8 @@
 		<header class="pe-title">Proposed Components</header>
 		{% assign components = (site.pages | where: "section", "Components") | sort:"title" %}
 		{% for page in components %}
-
-			{% if page.url contains 'beta' %}
+			{% if page.status != 'active' %}
+			{% elsif page.url contains 'beta' %}
 				{% assign versions = (site.pages | where: "title", page.title) %}
 				{% assign max = 0 %}
 
@@ -90,7 +90,7 @@
 						<span class="pe-label pe-label--bold">{{page.title}}</span>
 						<div class="data pe-label">
 							<span>Version {{page.version}}</span>
-							<span class="status">{{page.status}}</span>
+							<span class="status">{% if page.implemented %}Implemented{% else %}Unimplemented{% endif %}</span>
 						</div>
 					</a>
 				{% endif %}
