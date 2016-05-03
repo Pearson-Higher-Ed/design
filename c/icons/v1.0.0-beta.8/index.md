@@ -15,12 +15,17 @@ people:
     name: Ed Zee
 implementation: https://pearson-elements-v0.surge.sh/elements/icons/
 downloads:
+  - name: UXD Accessibility Checklist
+    link: https://docs.google.com/a/pearson.com/document/d/1SLdBJoFB7V75baDqNLoWpIR8z9t2B00_pq6zC5uvrlk/edit?usp=sharing
   - name: Font Files
     link: http://fortawesome.github.io/Font-Awesome/
   - name: Sketch
     link: ./assets/icons.sketch
   - name: Illustrator
     link: ./assets/icons.mockup.ai
+dependencies:
+  - name: Typography
+    version: 1.0.0-beta.5
 
 tagline: |
   Provides a standard set of icons at various sizes.
@@ -104,11 +109,11 @@ blocks:
       - exclamation-circle
 
   - type: section
-    name: Icon Sizing
+    name: Icon Sizes and Colors
 
   - type: two column
     text: |
-      Since we're using an icon font each symbol will just inherit the font-size of the surrounding type.
+      Since we're using an icon font each symbol will just inherit the size and color of the surrounding type.
     contents:
       - type: narrow image
         src: ./assets/icon.sizes.png
@@ -119,9 +124,11 @@ blocks:
 
   - type: two column
     text: |
-      Just use the specified glyphs from Font Awesome and inherit the font-size of the surrounding text.
+      Just use the specified glyphs from Font Awesome and inherit the font size and color of the surrounding text.
 
       A lone symbol should still be wrapped in the relevant type style (e.g. Basic Label).
+
+      See the [typography component](/design/c/typography/beta) for more information.
 
   - type: style table
     styles:
@@ -159,6 +166,8 @@ changelog:
   - version: 1.0.0-beta.8
     changes: |
       - ADDED: Style exports
+      - ADDED: UXD Accessibility Checklist
+      - ADDED: Explicit dependency on typography
   - version: 1.0.0-beta.7
     changes: |
       - ADDED: Additional icon, exclamation-circle.
