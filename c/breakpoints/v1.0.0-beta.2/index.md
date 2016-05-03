@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Breakpoints
 section: Components
-version: 1.0.0-beta.1
-status: deprecated
+version: 1.0.0-beta.2
+status: active
 implemented: true
 people:
   - role: Product Owner
@@ -50,6 +50,12 @@ blocks:
           | md   | 768px  | 1024px  |
           | lg   | 1024px | 1280px  |
           | xl   | 1280px | &infin; |
+    exports:
+      - Extra Small
+      - Small
+      - Medium
+      - Large
+      - Extra Large
 
   - type: section
     name: Common Devices
@@ -99,7 +105,22 @@ blocks:
           | Nexus 9 (Landscape)            | 1024px         | Large       |
           | Galaxy Tab 10 (Landscape)      | 1280px         | Extra large |
 
+  - type: section
+    name: Exported Styles
+
+  - type: style table
+    styles:
+      - Extra Small
+      - Small
+      - Medium
+      - Large
+      - Extra Large
+
 changelog:
+  - version: 1.0.0-beta.2
+    changes: |
+      - ADDED: Exported styles
+
   - version: 1.0.0-beta.1
     changes: Initial version
 ---
