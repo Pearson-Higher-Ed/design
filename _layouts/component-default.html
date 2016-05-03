@@ -35,7 +35,12 @@
     {% capture latest_version %}{{max_major}}.{{max_minor}}.{{max_patch}}{% endcapture %}
     {% assign page = (site.pages | where: "title", page.title | where: "version", latest_version | first) %}
 
-    {% include component-details.html %}
+    {% if page %}
+      {% include component-details.html %}
+    {% else %}
+      <h1 class="pe-title">No current published version of this component</h1>
+    {% endif %}
+
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
