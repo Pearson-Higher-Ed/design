@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Icons
 section: Components
-version: 1.0.0-beta.4
-status: deprecated
+version: 1.0.0-beta.8
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -13,9 +13,14 @@ people:
     email: parker.malenke@pearson.com
   - role: Designer
     name: Ed Zee
-implementations:
-  - type: Elements SDK
-    link: http://pearson-higher-ed.github.io/elements/elements/icons/
+implementation: https://pearson-elements-v0.surge.sh/elements/icons/
+downloads:
+  - name: Font Files
+    link: http://fortawesome.github.io/Font-Awesome/
+  - name: Sketch
+    link: ./assets/icons.sketch
+  - name: Illustrator
+    link: ./assets/icons.mockup.ai
 
 tagline: |
   Provides a standard set of icons at various sizes.
@@ -54,10 +59,49 @@ blocks:
       - square-o
       - check-square-o
       - ban
+      - camera
+      - heart
+      - heart-o
+      - laptop
+      - book
+      - list-ul
+      - th-large
+      - exclamation-circle
+
     contents:
       - type: narrow image
         src: ./assets/icons.png
         caption: The current icon repertoire.
+    exports:
+      - check
+      - times
+      - times-circle-o
+      - trash-o
+      - chevron-down
+      - chevron-up
+      - chevron-right
+      - chevron-left
+      - thumb-tack
+      - cog
+      - envelope
+      - search
+      - plus-circle
+      - calendar
+      - file-o
+      - info-circle
+      - users
+      - user
+      - square-o
+      - check-square-o
+      - ban
+      - camera
+      - heart
+      - heart-o
+      - laptop
+      - book
+      - list-ul
+      - th-large
+      - exclamation-circle
 
   - type: section
     name: Icon Sizing
@@ -67,7 +111,7 @@ blocks:
       Since we're using an icon font each symbol will just inherit the font-size of the surrounding type.
     contents:
       - type: narrow image
-        src: ./assets/icons.sizes.png
+        src: ./assets/icon.sizes.png
         caption: Icons adopting the sizes of their containing type elements.
 
   - type: section
@@ -79,7 +123,53 @@ blocks:
 
       A lone symbol should still be wrapped in the relevant type style (e.g. Basic Label).
 
+  - type: style table
+    styles:
+      - check
+      - times
+      - times-circle-o
+      - trash-o
+      - chevron-down
+      - chevron-up
+      - chevron-right
+      - chevron-left
+      - thumb-tack
+      - cog
+      - envelope
+      - search
+      - plus-circle
+      - calendar
+      - file-o
+      - info-circle
+      - users
+      - user
+      - square-o
+      - check-square-o
+      - ban
+      - camera
+      - heart
+      - heart-o
+      - laptop
+      - book
+      - list-ul
+      - th-large
+      - exclamation-circle
+
 changelog:
+  - version: 1.0.0-beta.8
+    changes: |
+      - ADDED: Style exports
+  - version: 1.0.0-beta.7
+    changes: |
+      - ADDED: Additional icon, exclamation-circle.
+  - version: 1.0.0-beta.6
+    changes: |
+      - ADDED: Additional icons, including heart-o, heart, laptop, book, list-ul, and th-large.
+  - version: 1.0.0-beta.5
+    changes: |
+      - ADDED: Sketch and Illustrator mockup files.
+      - ADDED: The camera icon.
+      - FIXED: Updated image widths.
   - version: 1.0.0-beta.4
     changes: |
       - ADDED: The ban icon.
