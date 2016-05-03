@@ -1,4 +1,4 @@
 ---
 title: Breakpoints
-layout: component-default
+layout: component-beta
 ---
