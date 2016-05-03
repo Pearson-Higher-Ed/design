@@ -4,7 +4,8 @@ title: Buttons
 section: Components
 redirect_from: "/docs/ui-components/buttons/"
 version: 1.0.0-beta.5
-status: Implemented
+status: active
+implemented: false
 people:
   - role: Product Owner
     name: Joe Macaluso
