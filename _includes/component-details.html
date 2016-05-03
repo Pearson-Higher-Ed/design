@@ -91,7 +91,7 @@
           {% when 'wide image' %}
           <div class="image wide">
             <div class="media">
-              <img src="{{item.src}}" />
+              <img src="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{item.src}}" />
             </div>
             {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
           </div>
@@ -99,7 +99,7 @@
           {% when 'narrow image' %}
           <div class="image narrow">
             <div class="media">
-              <img src="{{item.src}}" />
+              <img src="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{item.src}}" />
             </div>
             {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
           </div>
@@ -107,7 +107,7 @@
           {% when 'wide video' %}
           <div class="image wide">
             <div class="media">
-              <video src="{{item.src}}" loop controls/>
+              <video src="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{item.src}}" loop controls/>
             </div>
             {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
           </div>
