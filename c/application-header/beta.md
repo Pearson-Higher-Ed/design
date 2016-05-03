@@ -1,4 +1,4 @@
 ---
 title: Application Header
-layout: component-default
+layout: component-beta
 ---
