@@ -3,7 +3,7 @@ layout: component-yaml
 title: Drawer2
 section: Components
 version: 1.0.0-beta.2
-status: Unimplemented
+status: deprecated
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -126,8 +126,7 @@ changelog:
     changes: |
       - ADDED: Basic -> Detail transition video
       - ADDED: Initial redlines
-      
+
   - version: 1.0.0-beta.1
-    linkable: false
     changes: Initial version.
 ---

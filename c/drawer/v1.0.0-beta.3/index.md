@@ -3,7 +3,7 @@ layout: component-yaml
 title: Drawer
 section: Components
 version: 1.0.0-beta.3
-status: Unimplemented
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -185,6 +185,5 @@ changelog:
       - ADDED: Initial redlines
 
   - version: 1.0.0-beta.1
-    linkable: false
     changes: Initial version.
 ---
