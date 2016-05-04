@@ -5,6 +5,7 @@ section: Components
 redirect_from: /docs/ui-components/contextual-help/
 version: 1.0.0-beta.1
 status: active
+implemented: false
 people:
   - role: Product Owner
     name: Joe Macaluso
