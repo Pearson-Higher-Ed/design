@@ -69,7 +69,7 @@
 	</div>
 
 	<div id="library" class="library">
-		<header class="pe-title">Proposed Components</header>
+		<header class="pe-title">In Progress Components</header>
 		{% assign components = (site.pages | where: "section", "Components") | sort:"title" %}
 		{% for page in components %}
 			{% if page.status != 'active' %}
