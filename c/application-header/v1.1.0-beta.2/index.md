@@ -138,7 +138,15 @@ blocks:
   - type: two column
     text: |
       ### Signed Out Mode
+    exports:
+      - Signed Out Mode
 
+  - type: style table
+    styles:
+      - Signed Out Mode
+
+  - type: two column
+    text: |
       #### ≥ 768px ([medium and larger viewports](/design/c/breakpoints/v1.0.0-beta.2/#rd-medium))
 
       Logo link
@@ -177,9 +185,17 @@ blocks:
         src: ./assets/redlines.signed.out.mode.png
 
   - type: two column
+    exports:
+      - Basic Mode
     text: |
       ### Basic Mode
 
+  - type: style table
+    styles:
+      - Basic Mode
+
+  - type: two column
+    text: |
       #### ≥ 1024px ([L and XL viewports](/design/c/breakpoints/v1.0.0-beta.2/#rd-large))
 
       Logo Link
@@ -266,7 +282,15 @@ blocks:
   - type: two column
     text: |
       ### Course Mode
+    exports:
+      - Course Mode
 
+  - type: style table
+    styles:
+      - Course mode
+
+  - type: two column
+    text: |
       #### ≥ 768px ([Medium and larger viewports](/design/c/breakpoints/v1.0.0-beta.2/#rd-medium))
       Follow the Basic Mode specifications.
 
@@ -335,6 +359,12 @@ blocks:
       ### Integration Mode
 
       Identical to signed out mode, without the 'Sign In' link.
+    exports:
+      - Integration Mode
+
+  - type: style table
+    styles:
+      - Integration Mode
 
 
 changelog:
