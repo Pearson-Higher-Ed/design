@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html class="core">
+  {% include header.html %}
+  <body>
+    {% include construction.html %}
+    {% include navigation.html %}
+
+    {% assign max_major = 0 %}
+    {% assign max_minor = 0 %}
+    {% assign max_patch = 0 %}
+
+    {% assign versions = (site.pages | where: "title", page.title) %}
+    {% for version in versions %}
+      {% if version.version contains "beta" or version.version == nil %}
+      {% else %}
+        {% assign semver = (version.version | split: '.') %}
+        {% assign major = (semver[0] | round) %}
+        {% assign minor = (semver[1] | round) %}
+        {% assign patch = (semver[2] | split: '-' | first | round) %}
+
+        {% if major > max_major %}
+          {% assign max_major = major %}
+          {% assign max_minor = minor %}
+          {% assign max_patch = patch %}
+        {% elsif minor > max_minor %}
+          {% assign max_minor = minor %}
+          {% assign max_patch = patch %}
+        {% elsif patch > max_patch %}
+          {% assign max_patch = patch %}
+        {% endif %}
+
+      {% endif %}
+    {% endfor %}
+
+    {% capture latest_version %}{{max_major}}.{{max_minor}}.{{max_patch}}{% endcapture %}
+    {% assign page = (site.pages | where: "title", page.title | where: "version", latest_version | first) %}
+
+    {% if page %}
+      {% include component-details.html %}
+    {% else %}
+      <h1 class="pe-title">No current published version of this component</h1>
+    {% endif %}
+
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-75266302-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>

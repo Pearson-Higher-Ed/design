@@ -1,0 +1,29 @@
+.pe-table {
+  width: 100%;
+
+  th {
+    background: pe-color(brightly-lit);
+    padding: 12px 20px;
+    border: 1px solid pe-color(hairline-gray);
+    text-align: left;
+    @include pe-label;
+    @include pe-label-bold;
+
+    &:first-of-type {
+      width: 390px;
+    }
+  }
+
+  td {
+    padding: 14px 20px;
+    border-bottom: 1px solid pe-color(hairline-gray);
+    background-color: pe-color(dirty-ice);
+    @include pe-label;
+  }
+
+  tr:nth-of-type(2n) {
+    td {
+      background-color: pe-color(white);
+    }
+  }
+}

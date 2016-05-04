@@ -4,7 +4,6 @@ title: Tables
 section: Components
 status: active
 version: 1.0.0-beta.3
-private: true
 people:
   - role: Product Owner
     name: Joe Macaluso

@@ -3,7 +3,7 @@ layout: component-yaml
 title: Drawer
 section: Components
 version: 1.0.0-beta.1
-status: Unimplemented
+status: deprecated
 people:
   - role: Product Owner
     name: Joe Macaluso
