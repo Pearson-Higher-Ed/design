@@ -12,7 +12,8 @@
 
     {% assign versions = (site.pages | where: "title", page.title) %}
     {% for version in versions %}
-      {% if version.version contains "beta" %}
+      {% if version.version == nil %}
+      {% elsif version.version contains "beta" %}
 
         {% assign semver = (version.version | split: '.') %}
         {% assign major = (semver[0] | round) %}
@@ -27,11 +28,11 @@
           {% assign max_beta  = beta %}
         {% elsif minor > max_minor %}
           {% assign max_minor = minor %}
-          {% assign max_patch = 0 %}
-          {% assign max_beta  = 0 %}
+          {% assign max_patch = patch %}
+          {% assign max_beta  = beta %}
         {% elsif patch > max_patch %}
           {% assign max_patch = patch %}
-          {% assign max_beta  = 0 %}
+          {% assign max_beta  = beta %}
         {% elsif beta > max_beta %}
           {% assign max_beta = beta %}
         {% endif %}
