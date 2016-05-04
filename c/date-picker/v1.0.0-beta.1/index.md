@@ -3,7 +3,7 @@ layout: component-yaml
 title: Date Picker
 section: Components
 redirect_from: /docs/ui-components/date-picker/
-status: Unimplemented
+status: active
 version: 1.0.0-beta.1
 private: true
 people:
@@ -31,7 +31,7 @@ blocks:
 
   - type: two column
     text: |
-      
+
       This type of date picker is used for picking a single date (ex. assignment due date).
 
       ### Default State
@@ -40,7 +40,7 @@ blocks:
       By default the calendar is hidden until the user interacts with the date input field.
 
       The date input field should be prefilled with placeholder text to indicate formatting of the numeric date (ex. mm/dd/yyyy).
-    
+
     contents:
       - type: narrow image
         src: ./assets/single-input-default.png
