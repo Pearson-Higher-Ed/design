@@ -37,6 +37,8 @@ usage_guidelines: |
 dependencies:
   - name: Colors
     version: 1.0.1
+  - name: Breakpoints
+    version: 1.0.0-beta.2
 
 blocks:
   - type: section
@@ -336,7 +338,7 @@ blocks:
       : - 30px font-size
         - 36px line-height
 
-      At narrow viewports (< 480px):
+      At [extra small](/design/c/breakpoints/v1.0.0-beta.2/#rd-extra-small) viewports:
 
       Basic
       : - 18px font-size
@@ -418,7 +420,7 @@ blocks:
   - type: two column
     text: |
       ##### Narrow Lead
-      At narrow viewports (<480px) the lead styles become:
+      At [extra small](/design/c/breakpoints/v1.0.0-beta.2/#rd-extra-small) viewports the lead styles become:
 
       Font
       : - 18px font-size
