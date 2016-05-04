@@ -4,10 +4,10 @@ layout: component-yaml
 section: Components
 
 # Name the component (this is displayed as the title)
-title: Determinate Progress Bar
+title: Progress Bar
 
 # Status of the component (e.g. experimental, deprecated, etc.)
-status: unimplemented
+status: active
 
 # Version (follow the component versioning guide)
 version: 1.0.0-beta.2
@@ -34,7 +34,7 @@ downloads:
 # Overview information for the component
 tagline: |
   Graphical control element used to visualize the progression of an operation such as course copy, course setup or assignment creation.
-description: 
+description:
 features:
   - Complete vs Incomplete Status
   - Compliance with Accessiblity
@@ -97,7 +97,7 @@ blocks:
   - type: two column
     text: |
       ### Color
-      The progress bar should follow the Colors component in order to guarantee sufficient contrast to meet WCAG 2.0 AA guidelines. 
+      The progress bar should follow the Colors component in order to guarantee sufficient contrast to meet WCAG 2.0 AA guidelines.
 
     contents:
       - type: wide image
