@@ -3,7 +3,7 @@ layout: component-yaml
 title: Calendar
 section: Components
 redirect_from: /docs/ui-components/calendar/
-status: Unimplemented
+status: active
 version: 1.0.0-beta.1
 private: true
 people:
