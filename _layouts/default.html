@@ -57,7 +57,7 @@
 		{% for page in components %}
 			{% if page.version contains 'beta' or page.url contains 'beta' or page.status != 'active' %}
 			{% else %}
-				<a class="component" href="{{site.baseurl}}{{page.url}}..">
+				<a class="component" href="{{site.baseurl}}{{page.url}}../">
 					<span class="pe-label pe-label--bold">{{page.title}}</span>
 					<div class="data pe-label">
 						<span>Version {{page.version}}</span>
@@ -86,7 +86,7 @@
 
 				{% assign this_num = (page.version | split: '.' | last | round) %}
 				{% if this_num == max %}
-					<a class="component" href="{{site.baseurl}}{{page.url}}../beta">
+					<a class="component" href="{{site.baseurl}}{{page.url}}../beta/">
 						<span class="pe-label pe-label--bold">{{page.title}}</span>
 						<div class="data pe-label">
 							<span>Version {{page.version}}</span>
