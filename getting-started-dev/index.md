@@ -101,12 +101,11 @@ Development specific requirements will eventually be added to the [Library Membe
 ### Google group
 
 - elemental-review@pearson.com
-- https://www.google.com/url?q=https://groups.google.com/a/pearson.com/forum/%23!forum/elemental-discuss/categories&sa=D&ust=1460738399085000&usg=AFQjCNEQCQnqV3tDRhWur-_GA1I826wCdQ
+- [Mailing List]( https://www.google.com/url?q=https://groups.google.com/a/pearson.com/forum/%23!forum/elemental-discuss/categories&sa=D&ust=1460738399085000&usg=AFQjCNEQCQnqV3tDRhWur-_GA1I826wCdQ)
 
 ### Neo site
 
-- https://neo.pearson.com/groups/pearson-design-accelerator
+- <https://neo.pearson.com/groups/pearson-design-accelerator>
 
 ### Help with React
-- https://camjackson.net/post/9-things-every-reactjs-beginner-should-know
-
+- <https://camjackson.net/post/9-things-every-reactjs-beginner-should-know>
