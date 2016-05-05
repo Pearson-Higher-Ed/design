@@ -339,9 +339,9 @@ blocks:
       Colors
       : - Header bar is [Off White (#f2f2f2)](/design/c/colors/v1.0.1/#rd-off-white-f2f2f2)
         - Main dropdown background is [Brightly Lit (#e6e6e6)](/design/c/colors/v1.0.1/#rd-brightly-lit-e6e6e6)
-        - Local nav background is Concrete (#cccccc)
+        - Local nav background is [Off White (#f2f2f2)](/design/c/colors/v1.0.1/#rd-off-white-f2f2f2)
         - Dropdown cap is [Boring (#a6a8ab)](/design/c/colors/v1.0.1/#rd-boring-a6a8ab)
-        - Divider lines are [Hairline Gray (#b3b3b3)](/design/c/colors/v1.0.1/#rd-hairline-gray-d0d0d0)
+        - Divider lines are [Hairline Gray (#d0d0d0)](/design/c/colors/v1.0.1/#rd-hairline-gray-d0d0d0)
 
       Typography
       : - Top level links are [large labels](/design/c/typography/v1.0.0-beta.5/#rd-large-label) ([primary color](/design/c/typography/v1.0.0-beta.5/#rd-primary-label-color))
@@ -372,6 +372,8 @@ changelog:
     changes: |
       - ADDED: Dependency list and references
       - ADDED: Exported styles
+      - FIXED: Error in light theme divider line color
+      - CHANGED: Updated light theme background to use existing color
   - version: 1.1.0-beta.1
     changes: |
       - CHANGED: Use colors component
