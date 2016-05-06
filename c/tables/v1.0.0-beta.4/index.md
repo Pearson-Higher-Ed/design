@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Tables
 section: Components
-status: deprecated
-version: 1.0.0-beta.3
+status: active
+version: 1.0.0-beta.4
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -162,6 +162,14 @@ blocks:
         src: ./assets/redlines.basic.table.secondary.png
       - type: wide image
         src: ./assets/redlines.inputs.buttons.png
+    exports:
+      - Basic Table
+      - Secondary Row
+
+  - type: style table
+    styles:
+      - Basic Table
+      - Secondary Row
 
   - type: two column
     text: |
@@ -180,12 +188,19 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/redlines.small.table.png
+    exports:
+      - Small Table
 
-
+  - type: style table
+    styles:
+      - Small Table
 
 
 
 changelog:
+  - version: 1.0.0-beta.4
+    changes: |
+      - Added exportable styles
   - version: 1.0.0-beta.3
     changes: |
       - ADDED: Redlines
