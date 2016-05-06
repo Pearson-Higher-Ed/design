@@ -200,7 +200,7 @@ blocks:
 changelog:
   - version: 1.0.0-beta.4
     changes: |
-      - Added exportable styles
+      - ADDED: exportable styles
   - version: 1.0.0-beta.3
     changes: |
       - ADDED: Redlines
