@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Drawer
 section: Components
-version: 1.0.0-beta.3
-status: deprecated
+version: 1.0.0-beta.4
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -115,6 +115,8 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/redlines.basic.view.png
+    exports:
+      - Basic View
 
   - type: two column
     text: |
@@ -129,6 +131,8 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/redlines.detail.view.png
+    exports:
+      - Detail View
 
   - type: two column
     text: |
@@ -172,7 +176,15 @@ blocks:
         - 0.4 seconds
         - ease-in-out
 
+  - type: style table
+    styles:
+      - Basic View
+      - Detail View
+
 changelog:
+  - version: 1.0.0-beta.4
+    changes: |
+      - ADDED: Exported styles
   - version: 1.0.0-beta.3
     changes: |
       - ADDED: Animation redlines

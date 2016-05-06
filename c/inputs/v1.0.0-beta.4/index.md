@@ -3,8 +3,8 @@ layout: component-yaml
 title: Inputs
 section: Components
 redirect_from: /docs/ui-components/forms/
-status: deprecated
-version: 1.0.0-beta.3
+status: active
+version: 1.0.0-beta.4
 private: true
 people:
   - role: Product Owner
@@ -242,6 +242,8 @@ blocks:
       - type: narrow image
         src: ./assets/redlines.text.states.2.png
         caption: Focus (reproduction of Mac OS X style) and error states.
+    exports:
+      - Text Input
 
   - type: two column
     text: |
@@ -268,6 +270,8 @@ blocks:
       - type: narrow image
         src: ./assets/redlines.textarea.small.png
         caption: Small text area redlines.
+    exports:
+      - Textarea
 
   - type: two column
     text: |
@@ -300,6 +304,8 @@ blocks:
       - type: narrow image
         src: ./assets/redlines.select.png
         caption: Closed and open select (showing a browser default style); small select example.
+    exports:
+      - Select Input
 
   - type: two column
     text: |
@@ -318,6 +324,8 @@ blocks:
       - type: narrow image
         src: ./assets/redlines.radio.png
         caption: Example radio buttons in the Mac OS X browser style.
+    exports:
+      - Radio Button
 
   - type: two column
     text: |
@@ -336,6 +344,8 @@ blocks:
       - type: narrow image
         src: ./assets/redlines.checkbox.png
         caption: Example checkboxes in the Mac OS X browser style.
+    exports:
+      - Checkbox
 
   - type: two column
     text: |
@@ -362,6 +372,8 @@ blocks:
       - type: narrow image
         src: ./assets/redlines.labels.required-optional.png
         caption: Only label whichever type occurs less frequently (e.g. if there are four required fields and one optional only notate the single optional field).
+    exports:
+      - Label
 
   - type: two column
     text: |
@@ -391,7 +403,23 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/redlines.specialized.png
+    exports:
+      - Search Input
+
+  - type: style table
+    styles:
+      - Text Input
+      - Textarea
+      - Select Input
+      - Radio Button
+      - Checkbox
+      - Label
+      - Search Input
+
 changelog:
+  - version: 1.0.0-beta.4
+    changes: |
+      - ADDED: Exported styles
   - version: 1.0.0-beta.3
     changes: |
       - ADDED: UXD Accessibility checklist
