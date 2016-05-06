@@ -3,8 +3,8 @@ layout: component-yaml
 title: Inputs
 section: Components
 redirect_from: /docs/ui-components/forms/
-status: deprecated
-version: 1.0.0-beta.4
+status: active
+version: 1.0.0-beta.5
 private: true
 people:
   - role: Product Owner
@@ -25,6 +25,16 @@ features:
   - Guaranteed compliance with Accessibility requirements
 usage_guidelines: |
   Every instance of a form element should come from this component. See the sections below for information about when to use each type of form.
+
+dependencies:
+  - name: Colors
+    version: 1.0.1
+  - name: Typography
+    version: 1.0.0-beta.5
+  - name: Buttons
+    version: 1.0.0-beta.5
+  - name: Icons
+    version: 1.0.0-beta.8
 
 downloads:
   - name: UXD Accessibility Checklist
@@ -201,17 +211,17 @@ blocks:
       : - 14px horizontal padding
 
       Active
-      : - 1px solid Hairline Gray (#d0d0d0) border
-        - White (#ffffff) background
-        - Large label (primary color)
-        - Place holders are large labels (#6d6d6d, italic)
+      : - 1px solid [Hairline Gray (#d0d0d0)](/design/c/colors/v1.0.1/#rd-hairline-gray-d0d0d0) border
+        - [White (#ffffff)](/design/c/colors/v1.0.1/#rd-white-ffffff) background
+        - [Large label](/design/c/typography/v1.0.0-beta.5/#rd-large-label) ([primary color](/design/c/typography/v1.0.0-beta.5/#rd-primary-label-color))
+        - Place holders are [large labels](/design/c/typography/v1.0.0-beta.5/#rd-large-label), [Sandy Gray (#6d6d6d)](/design/c/colors/v1.0.1/#rd-sandy-gray-6d6d6d), italic
 
       Readonly
-      : - Same as active, but background becomes Off White (#f2f2f2)
+      : - Same as active, but background becomes [Off White (#f2f2f2)](/design/c/colors/v1.0.1/#rd-off-white-f2f2f2)
         - Placeholders should never appear in this state
 
       Disabled
-      : - Same as readonly, but text color becomes Boring (#a6a8ab)
+      : - Same as readonly, but text color becomes [Boring (#a6a8ab)](/design/c/colors/v1.0.1/#rd-boring-a6a8ab)
         - Placeholders should never appear in this state
 
       Focus
@@ -220,14 +230,14 @@ blocks:
 
       Error
       : - Same as active, except:
-        - 1px solid \#D0021B border
-        - \#D0021B drop shadow, 4px of blur
+        - 1px solid [Firetruck (#D0021B)](/design/c/colors/v1.0.1/#rd-firetruck-d0021b) border
+        - [Firetruck (#D0021B)](/design/c/colors/v1.0.1/#rd-firetruck-d0021b) drop shadow, 4px of blur
         - Error states **must** be accompanied by explanatory text. See the forms component for standard examples of error handling.
 
       Small Size
       : - 28px tall
         - 10px horizontal padding
-        - Use basic instead of large labels throughout
+        - Use [basic](/design/c/typography/v1.0.0-beta.5/#rd-basic-label) instead of large labels throughout
 
     contents:
       - type: narrow image
@@ -261,7 +271,7 @@ blocks:
 
       Small Size
       : - 10px horizontal padding
-        - Use basic instead of large labels
+        - Use [basic](/design/c/typography/v1.0.0-beta.5/#rd-basic-label) instead of large labels
 
     contents:
       - type: narrow image
@@ -292,7 +302,7 @@ blocks:
       Small Size
       : - 10px horizontal padding
         - 28px tall
-        - Use basic labels instead of large
+        - Use [basic](/design/c/typography/v1.0.0-beta.5/#rd-basic-label) instead of large labels
 
     contents:
       - type: narrow image
@@ -319,7 +329,7 @@ blocks:
         - Note this means there is no error state for the radio button itself, you **must** use explanatory text
 
       Small size
-      : - Use basic label, instead of large
+      : - Use [basic label](/design/c/typography/v1.0.0-beta.5/#rd-basic-label), instead of large
     contents:
       - type: narrow image
         src: ./assets/redlines.radio.png
@@ -339,7 +349,7 @@ blocks:
         - Note this means there is no error state for the radio button itself, you **must** use explanatory text
 
       Small Size
-      : - Use basic label, instead of large
+      : - Use [basic label](/design/c/typography/v1.0.0-beta.5/#rd-basic-label), instead of large
     contents:
       - type: narrow image
         src: ./assets/redlines.checkbox.png
@@ -356,10 +366,10 @@ blocks:
         - 6px gap separating
 
       Typography
-      : - Basic label
+      : - [Basic label](/design/c/typography/v1.0.0-beta.5/#rd-basic-label)
 
       Error state
-      : - \#D0021B color
+      : - [Firetruck (#D0021B)](/design/c/colors/v1.0.1/#rd-firetruck-d0021b) color
 
       Required/Optional
       : - Only label the type which occurs less frequently
@@ -394,8 +404,8 @@ blocks:
         - Disabled state should override the button style to maintain a border
 
       Button
-      : - Medium button (default)
-        - fa-search icon, large label size
+      : - [Medium button](/design/c/buttons/v1.0.0-beta.5/#rd-medium-button) ([default style](/design/c/buttons/v1.0.0-beta.5/#rd-default-button))
+        - [Search icon](/design/c/icons/v1.0.0-beta.8/#rd-search), [large label size](/design/c/typography/v1.0.0-beta.5/#rd-large-label)
 
       Joint
       : - Override corners to provide square joint between input and button
@@ -417,6 +427,9 @@ blocks:
       - Search Input
 
 changelog:
+  - version: 1.0.0-beta.5
+    changes: |
+      - Add dependency links
   - version: 1.0.0-beta.4
     changes: |
       - ADDED: Exported styles
