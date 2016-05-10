@@ -2,9 +2,9 @@
 layout: component-yaml
 title: Typography
 section: Components
-version: 1.0.0-beta.5
-status: deprecated
-implemented: false
+version: 1.0.0
+status: active
+implemented: true
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -38,7 +38,7 @@ dependencies:
   - name: Colors
     version: 1.0.1
   - name: Breakpoints
-    version: 1.0.0-beta.2
+    version: 1.0.0
 
 blocks:
   - type: section
@@ -338,7 +338,7 @@ blocks:
       : - 30px font-size
         - 36px line-height
 
-      At [extra small](/design/c/breakpoints/v1.0.0-beta.2/#rd-extra-small) viewports:
+      At [extra small](/design/c/breakpoints/v1.0.0/#rd-extra-small) viewports:
 
       Basic
       : - 18px font-size
@@ -420,7 +420,7 @@ blocks:
   - type: two column
     text: |
       ##### Narrow Lead
-      At [extra small](/design/c/breakpoints/v1.0.0-beta.2/#rd-extra-small) viewports the lead styles become:
+      At [extra small](/design/c/breakpoints/v1.0.0/#rd-extra-small) viewports the lead styles become:
 
       Font
       : - 18px font-size
@@ -637,32 +637,6 @@ blocks:
       - code, kbd tags
 
 changelog:
-  - version: 1.0.0-beta.5
-    changes: |
-      - ADDED: Dependency links
-
-  - version: 1.0.0-beta.4
-    changes: |
-      - ADDED: Specification that link focus states use the default browser style.
-      - ADDED: UXD Accessibility checklist
-
-  - version: 1.0.0-beta.3
-    changes: |
-      - ADDED: Small body copy variant
-      - ADDED: Sketch mockup
-      - ADDED: Illustrator mockup
-      - CHANGED: Lists positioning is now more amenable to the default browser model
-      - FIXED: Correctly sized images
-      - FIXED: Was missing redlines for links
-      - FIXED: Was missing line-height info for headers
-
-  - version: 1.0.0-beta.2
-    changes: |
-      - ADDED: Style for code blocks (e.g. `<pre>` tags)
-      - ADDED: Style for `<code>` and `<kbd>` inline elements
-      - ADDED: Heading styles
-      - ADDED: Styles for ordered and unordered lists within copy
-      - CHANGED: Redlines are now included directly in the page, rather than in a .zip file
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: Initial version
 ---

@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Icons
 section: Components
-version: 1.0.0-beta.8
-status: deprecated
+version: 1.0.0
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -25,7 +25,7 @@ downloads:
     link: ./assets/icons.mockup.ai
 dependencies:
   - name: Typography
-    version: 1.0.0-beta.5
+    version: 1.0.0
 
 tagline: |
   Provides a standard set of icons at various sizes.
@@ -128,7 +128,7 @@ blocks:
 
       A lone symbol should still be wrapped in the relevant type style (e.g. Basic Label).
 
-      See the [typography component](/design/c/typography/beta) for more information.
+      See the [typography component](/design/c/typography/) for more information.
 
   - type: style table
     styles:
@@ -163,34 +163,7 @@ blocks:
       - exclamation-circle
 
 changelog:
-  - version: 1.0.0-beta.8
-    changes: |
-      - ADDED: Style exports
-      - ADDED: UXD Accessibility Checklist
-      - ADDED: Explicit dependency on typography
-  - version: 1.0.0-beta.7
-    changes: |
-      - ADDED: Additional icon, exclamation-circle.
-  - version: 1.0.0-beta.6
-    changes: |
-      - ADDED: Additional icons, including heart-o, heart, laptop, book, list-ul, and th-large.
-  - version: 1.0.0-beta.5
-    changes: |
-      - ADDED: Sketch and Illustrator mockup files.
-      - ADDED: The camera icon.
-      - FIXED: Updated image widths.
-  - version: 1.0.0-beta.4
-    changes: |
-      - ADDED: The ban icon.
-      - FIXED: The times-circle-o icon was incorrectly referred to as the times-circle icon.
-
-  - version: 1.0.0-beta.3
-    changes: |
-      - ADDED: Additional icons, including square-o and check-square-o.
-  - version: 1.0.0-beta.2
-    changes: |
-      - ADDED: Additional icons, including user, calendar, info-circle, and file-o.
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: |
       Initial release
 
