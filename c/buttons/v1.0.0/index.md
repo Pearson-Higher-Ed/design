@@ -30,7 +30,7 @@ dependencies:
   - name: Colors
     version: 1.0.1
   - name: Typography
-    version: 1.0.0-beta.5
+    version: 1.0.0
 
 tagline: This component defines the standard visual style for buttons.
 features:
@@ -80,23 +80,23 @@ blocks:
       Small button
       : - 24px tall
         - 10px horizontal padding
-        - [Small label font](/design/c/typography/v1.0.0-beta.5/#rd-small-label)
+        - [Small label font](/design/c/typography/v1.0.0/#rd-small-label)
 
       Standard button
       : - 28px tall
         - 12px horizontal padding
-        - [Basic label font](/design/c/typography/v1.0.0-beta.5/#rd-basic-label)
+        - [Basic label font](/design/c/typography/v1.0.0/#rd-basic-label)
 
       Medium button
       : - 36px tall
         - 12px horizontal padding
-        - [Large label font](/design/c/typography/v1.0.0-beta.5/#rd-large-label)
+        - [Large label font](/design/c/typography/v1.0.0/#rd-large-label)
 
 
       Large button
       : - 42px tall
         - 20px horizontal padding
-        - [large label font](/design/c/typography/v1.0.0-beta.5/#rd-large-label)
+        - [large label font](/design/c/typography/v1.0.0/#rd-large-label)
 
 
       Link style buttons
@@ -131,7 +131,7 @@ blocks:
       Normal
       : - [Basic Blue (#107ACA)](/design/c/colors/v1.0.1/#rd-basic-blue-107aca) fill
         - [Deep Sea (#0A4D80)](/design/c/colors/v1.0.1/#rd-deep-sea-0a4d80) border
-        - [Inverse Primary Color](/design/c/typography/v1.0.0-beta.5/#rd-primary-label-color)
+        - [Inverse Primary Color](/design/c/typography/v1.0.0/#rd-primary-label-color)
 
       Hover/Active
       : - [Sea (#0C5D99)](/design/c/colors/v1.0.1/#rd-sea-0c5d99) fill
@@ -161,7 +161,7 @@ blocks:
       Normal
       : - [Dirty Ice (#F8F8F8)](/design/c/colors/v1.0.1/#rd-dirty-ice-f8f8f8) fill
         - [Sidewalk (#B3B3B3)](/design/c/colors/v1.0.1/#rd-sidewalk-b3b3b3) border
-        - [Secondary font color](/design/c/typography/v1.0.0-beta.5/#rd-secondary-label-color)
+        - [Secondary font color](/design/c/typography/v1.0.0/#rd-secondary-label-color)
 
       Hover/Active
       : - [Brightly Lit (#E6E6E6)](/design/c/colors/v1.0.1/#rd-brightly-lit-e6e6e6) fill
@@ -190,10 +190,10 @@ blocks:
       ### Link buttons
 
       Normal
-      : - Just follow the [standard link guidelines](/design/c/typography/v1.0.0-beta.5/#rd-links) for color, underline, etc.
+      : - Just follow the [standard link guidelines](/design/c/typography/v1.0.0/#rd-links) for color, underline, etc.
 
       Hover/Active
-      : - Follow [standard link styles](/design/c/typography/v1.0.0-beta.5/#rd-links)
+      : - Follow [standard link styles](/design/c/typography/v1.0.0/#rd-links)
 
       Disabled
       : - [Sky Blue (#9DC0DB)](/design/c/colors/v1.0.1/#rd-sky-blue-9dc0db) text color
