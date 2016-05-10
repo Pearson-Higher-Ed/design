@@ -3,8 +3,8 @@ layout: component-yaml
 title: Buttons
 section: Components
 redirect_from: "/docs/ui-components/buttons/"
-version: 1.0.0-beta.5
-status: deprecated
+version: 1.0.0
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -214,28 +214,6 @@ blocks:
       - Link Button
 
 changelog:
-  - version: 1.0.0-beta.5
-    changes: |
-      - ADDED: Dependency links
-
-  - version: 1.0.0-beta.4
-    changes: |
-      - ADDED: UXD Accessibility checklist link
-      - ADDED: Focus state details in the redlines section
-      - ADDED: Medium button size in anticipation of inputs
-
-  - version: 1.0.0-beta.3
-    changes: |
-      - ADDED: Illustrator UI mockup file
-      - FIXED: Proper link to elements SDK
-      - FIXED: Images aren't downsized
-
-  - version: 1.0.0-beta.2
-    linkable: false
-    changes: |
-      - ADDED: Sketch UI mockup file
-
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: Initial version
-    linkable: false
 ---
