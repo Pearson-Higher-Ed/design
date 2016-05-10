@@ -25,7 +25,7 @@ downloads:
     link: ./assets/icons.mockup.ai
 dependencies:
   - name: Typography
-    version: 1.0.0-beta.5
+    version: 1.0.0
 
 tagline: |
   Provides a standard set of icons at various sizes.
@@ -128,7 +128,7 @@ blocks:
 
       A lone symbol should still be wrapped in the relevant type style (e.g. Basic Label).
 
-      See the [typography component](/design/c/typography/beta) for more information.
+      See the [typography component](/design/c/typography/) for more information.
 
   - type: style table
     styles:
