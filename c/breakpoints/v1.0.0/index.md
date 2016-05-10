@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Breakpoints
 section: Components
-version: 1.0.0-beta.2
-status: deprecated
+version: 1.0.0
+status: active
 implemented: true
 people:
   - role: Product Owner
@@ -117,10 +117,6 @@ blocks:
       - Extra Large
 
 changelog:
-  - version: 1.0.0-beta.2
-    changes: |
-      - ADDED: Exported styles
-
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: Initial version
 ---
