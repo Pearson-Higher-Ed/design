@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Drawer
 section: Components
-version: 1.0.0-beta.4
-status: deprecated
+version: 1.0.0-beta.5
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -19,7 +19,11 @@ downloads:
     link: ./assets/drawer.mockup.sketch
   - name: .ai mockup
     link: ./assets/drawer.mockup.ai
-
+dependencies:
+  - name: Typography
+    version: 1.0.0-beta.5
+  - name: Icons
+    version: 1.0.0-beta.8
 tagline: |
   The drawer component offers a convenient method for presenting secondary information which doesn't need to be immediately visible.
 features:
@@ -95,11 +99,11 @@ blocks:
         - 16px vertical margins around the title area, 20px side margins
 
       Typography
-      : - Title is a large label
+      : - Title is a [large label](/design/c/typography/v1.0.0-beta.5/#rd-large-label)
 
       Icons
-      : - Close icon is `times`
-        - A focused icon will used the standard browser outline for focus
+      : - Close icon is "[times](/design/c/icons/v1.0.0-beta.8/#rd-times)"
+        - A focused icon will use the standard browser outline for focus
 
       Shadow
       : - Color is rgba(0, 0, 0, 0.3)
@@ -107,7 +111,7 @@ blocks:
         - -1px X axis offset
 
       Title Separator
-      : - 1px solid hairline gray (#D0D0D0)
+      : - 1px solid [hairline gray (#D0D0D0)](/design/c/colors/v1.0.1/#rd-hairline-gray-d0d0d0)
 
       Keyboard Shortcuts
       : - Pressing escape should close the drawer in any mode
@@ -126,7 +130,7 @@ blocks:
         - Focusing the "< Back" element will use the standard browser outline for focus
 
       Icon
-      : - chevron-left
+      : - "[chevron-left](/design/c/icons/v1.0.0-beta.8/#rd-chevron-left)"
         - 8px spacing between icon and label
     contents:
       - type: wide image
@@ -182,6 +186,9 @@ blocks:
       - Detail View
 
 changelog:
+  - version: 1.0.0-beta.5
+    changes: |
+      - ADDED: Dependency links
   - version: 1.0.0-beta.4
     changes: |
       - ADDED: Exported styles
