@@ -50,7 +50,11 @@
           <div class="downloads">
             <div class="title pe-label pe-label--bold">Downloads</div>
             {% for download in page.downloads %}
-            <div class="pe-label"><a href="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{download.link}}" class="button">{{download.name}}</a></div>
+              {% if download.link contains 'http' or download.link contains 'www' %}
+                <div class="pe-label"><a href="{{download.link}}" class="button">{{download.name}}</a></div>
+              {% else %}
+                <div class="pe-label"><a href="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{download.link}}" class="button">{{download.name}}</a></div>
+              {% endif %}
             {% endfor %}
           </div>
         </div>
