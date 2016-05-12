@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Tables
 section: Components
-status: deprecated
-version: 1.0.0-beta.5
+status: active
+version: 1.0.0-beta.6
 people:
   - role: Product Owner
     name: Joe Macaluso
