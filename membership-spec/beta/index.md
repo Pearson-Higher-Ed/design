@@ -2,7 +2,7 @@
 layout: spec
 title: Library Membership Specification
 section: contribute
-version: 1.0.0
+version: 1.1.0
 intro: |
   Every component listed in the Component Library must satisfy all the requirements contained in this document. To learn about submitting components for inclusion see the [Component Creation Guide][creation-guide].
 
@@ -195,7 +195,6 @@ design_reqs:
 dev_reqs:
   - name: General
     description: |
-      New description
     reqs:
       - req: |
           G1: Components must adhere to Pearson's standard browser and device support policies. See [this Neo page for the latest standards](https://neo.pearson.com/groups/css/).
@@ -221,6 +220,30 @@ dev_reqs:
         approvers:
           - ??
 
+      - req: |
+          G3: Standalone components must use the [Component Archetype][ca] as a starting point.
+
+          [ca]: https://github.com/Pearson-Higher-Ed/component-archetype
+        type: mandatory
+        extras:
+          - name: Explanation
+            content: |
+              The scaffolding template will help the teams with sample npm scripts, live reload, CI Integration etc.
+        approvers:
+          - Aaron Kaka?
+
+      - req: |
+          G4: New components should not duplicate the functionality found in existing components.
+        type: suggested
+        extras:
+          - name: Explanation
+            content: |
+              All teams are expected to re-use available elements and compounds in the npm registry. When developing a new component it is required to check the npm registry to ensure if a similar component already exists. If one exists it is necessary to reach out to the team and discuss potential updates to the original component before trying to create your own.
+
+              When creating a new component it is recommended to use existing sub components and element required to create a new component. The key idea behind this is to reuse components wherever applicable.
+        approvers:
+          - ??
+
   - name: Accessibility
     description: |
       Elemental Design and the Component Library are tools meant to serve the entirety of Pearson's next gen educational ecosystem.
@@ -232,6 +255,101 @@ dev_reqs:
           - name: Explanation
             content: |
               We recommend using [this validator](#).
+        approvers:
+          - ??
+
+  - name: Internationalization
+    description: |
+      Internationalization is the process of designing a software application or product so that it can be adapted to various languages and regions without engineering changes.
+
+      Localization is the process of adapting a product or application to a specific international language or culture so it seems natural to that particular region.
+    reqs:
+
+  - name: Testing
+    description: |
+      Testing is an important part of the software development process...
+    reqs:
+      - req: |
+          T1: All components must have at least 80% code coverage. Component should have 100% coverage whenever possible.
+        type: mandatory
+        approvers:
+          - Eajaz??
+
+  - name: Performance
+    description: |
+      Perceived and actual performance of software are significant factors in creating a usable and desirable user experience.
+    reqs:
+      - req: |
+          P1: Where applicable, all components should specify a caching policy to help the client determine if and when it can reuse a previously fetched response.
+        type: suggested
+        extras:
+          - name: Explanation
+            content: |
+              Fetching resources over the network is both slow and expensive: the download may require multiple round trips between the client and server, which delays processing and may block rendering of page content, and also incurs data costs for the visitor.
+        approvers:
+          - ??
+
+      - req: |
+          P2: Components must not call a backend service directly to get data.
+        type: mandatory
+        extras:
+          - name: Explanation
+            content: |
+              The architecture is designed for the components to be loosely coupled from the service to provide highly reusable front end components. The components would need data in a certain expected format. It is the responsibility of the client application to call the service, get data and provide it to the component in the format expected.
+        approvers:
+          - ??
+
+  - name: Conventions
+    description: |
+      Standards that make life easier.
+    reqs:
+      - req: |
+          C1: Use UTF-8.
+        type: mandatory
+        extras:
+          - name: Explanation
+            content: |
+              Character encoding can cause problems, especially on sites that are predominantly in English with a few foreign characters here and there, where issues with character encoding can easily go unnoticed.
+
+              Ensure that your pages are UTF-8 encoded, using both an HTTP response header **and** an HTML meta tag: `<meta charset="UTF-8" />`. Place this as the first tag within the `<head>` section of the page, before `<title>`, since it’s important that the browser knows the right character set to use before it gets to any content.
+        approvers:
+          - ??
+
+      - req: |
+          C2: Interactive components must be built with React.js and follow the ES6 class conventions.
+        type: mandatory
+        extras:
+          - name: Explanation
+            content: |
+              The react components developed for the compound SDK will be developed using ES6. The most common difference when creating a react component using ES6 is to use the class definition syntax as opposed to using React.createClass method to define a component. We can use an ES6 class that extends React.Component like:
+
+                  // The ES5 way
+                  var Origami = React.createClass({
+
+                  function1: function(e) { … },
+                    render: function() { … },
+                  });
+
+                  // The ES6 way
+                  class Origami extends React.Component {
+                    function1(e) { … }
+                    render() { … }
+                  }
+        approvers:
+          - ??
+
+  - name: Security
+    description: |
+    reqs:
+      - req: |
+          S1: Components must not collect data on insecure pages.
+        type: mandatory
+        extras:
+          - name: Explanation
+            content: |
+              When prompting the user for personal data such as email address, username, password or payment information, always serve the page with the form on it using HTTPS, and send the form submission to an HTTPS URL.
+
+              It’s often considered OK to serve forms on insecure pages as long as the form posts to a secure destination. This is not acceptable, because an attacker can modify the page that serves the form, to simply change the form post destination.
         approvers:
           - ??
 
