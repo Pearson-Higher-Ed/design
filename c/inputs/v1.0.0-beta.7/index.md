@@ -3,8 +3,8 @@ layout: component-yaml
 title: Inputs
 section: Components
 redirect_from: /docs/ui-components/forms/
-status: deprecated
-version: 1.0.0-beta.6
+status: active
+version: 1.0.0-beta.7
 private: true
 people:
   - role: Product Owner
@@ -335,7 +335,8 @@ blocks:
       : - 10px between button and label
 
       States
-      : - Use browser default styles in all cases
+      : - Use browser default styles in most cases
+        - Override for focus to show a 1px [Basic Blue](/design/c/colors/v1.0.1/#rd-basic-blue-107aca) outline, with a 2px offset
         - Note this means there is no error state for the radio button itself, you **must** use explanatory text
 
       Small size
@@ -355,7 +356,8 @@ blocks:
       : - 10px between checkbox and label
 
       States
-      : - Use browser default styles in all cases
+      : - Use browser default styles in most cases
+        - Override for focus to show a 1px [Basic Blue](/design/c/colors/v1.0.1/#rd-basic-blue-107aca) outline, with a 2px offset
         - Note this means there is no error state for the radio button itself, you **must** use explanatory text
 
       Small Size
@@ -437,6 +439,11 @@ blocks:
       - Search Input
 
 changelog:
+  - version: 1.0.0-beta.7
+    changes: |
+      - FIXED: Mockups now match the new focus and error styles.
+      - CHANGED: Selects now use new focus and error styles.
+      - CHANGED: Radio buttons and checkboxes now have an explicit focus style (this is because certain versions of Firefox lacked a built in style).
   - version: 1.0.0-beta.6
     changes: |
       - CHANGED: Text input and textarea focus states to use custom (i.e. non-browser) styles. This is because IE11 and Edge and certain versions of Firefox don't actually implement a browser focus state.
