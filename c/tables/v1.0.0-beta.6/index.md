@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Tables
 section: Components
-status: deprecated
-version: 1.0.0-beta.5
+status: active
+version: 1.0.0-beta.6
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -51,6 +51,8 @@ blocks:
       Columns can be left, center, or right aligned.
 
       Multiline cell content should be avoided where possible, but is allowed if necessary. Content should be top aligned.
+
+      Note that headers are required for accessibility compliance.
     contents:
       - type: wide image
         src: ./assets/basic.table.png
@@ -144,6 +146,7 @@ blocks:
         - [Bold Label typography](/design/c/typography/v1.0.0-beta.5/#rd-bold-label)
         - 1px solid [Hairline Gray (#d0d0d0)](/design/c/colors/v1.0.1/#rd-hairline-gray-d0d0d0) border around each cell
         - Vertically aligned to the center (if a header wraps to two columns)
+        - Headers are a non-optional feature of all table types (for accessibility compliance)
 
       Rows
       : - 20px horizontal padding
