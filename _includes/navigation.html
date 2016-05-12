@@ -16,7 +16,7 @@
     <li>
       Use
       <ul>
-        {% assign learn = (site.pages | where: "section", "use") %}
+        {% assign learn = (site.pages | where: "section", "use" | sort: "title" | sort: "order", "last") %}
         {% for page in learn %}
           {% if page.url contains 'beta' %}
           {% else %}
