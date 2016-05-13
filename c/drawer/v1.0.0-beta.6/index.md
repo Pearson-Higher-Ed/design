@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Drawer
 section: Components
-version: 1.0.0-beta.5
-status: deprecated
+version: 1.0.0-beta.6
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -21,9 +21,11 @@ downloads:
     link: ./assets/drawer.mockup.ai
 dependencies:
   - name: Typography
-    version: 1.0.0-beta.5
+    version: 1.0.0
   - name: Icons
-    version: 1.0.0-beta.8
+    version: 1.0.0
+  - name: Colors
+    version: 1.0.1
 tagline: |
   The drawer component offers a convenient method for presenting secondary information which doesn't need to be immediately visible.
 features:
@@ -99,10 +101,10 @@ blocks:
         - 16px vertical margins around the title area, 20px side margins
 
       Typography
-      : - Title is a [large label](/design/c/typography/v1.0.0-beta.5/#rd-large-label)
+      : - Title is a [large label](/design/c/typography/v1.0.0/#rd-large-label)
 
       Icons
-      : - Close icon is "[times](/design/c/icons/v1.0.0-beta.8/#rd-times)"
+      : - Close icon is "[times](/design/c/icons/v1.0.0/#rd-times)"
         - A focused icon will use the standard browser outline for focus
 
       Shadow
@@ -115,6 +117,12 @@ blocks:
 
       Keyboard Shortcuts
       : - Pressing escape should close the drawer in any mode
+
+      Focus Behavior
+      : - Opening the drawer moves focus from the triggering element to the first focusable item within the drawer (typically the Close icon).
+        - Tabbing within the drawer should cycle through focusable items like normal
+        - The drawer should capture focus, so you won't be able to tab out of the drawer
+        - Upon dismissing the drawer focus should be restored to the triggering element
 
     contents:
       - type: wide image
@@ -130,8 +138,14 @@ blocks:
         - Focusing the "< Back" element will use the standard browser outline for focus
 
       Icon
-      : - "[chevron-left](/design/c/icons/v1.0.0-beta.8/#rd-chevron-left)"
+      : - "[chevron-left](/design/c/icons/v1.0.0/#rd-chevron-left)"
         - 8px spacing between icon and label
+
+      Focus Behavior
+      : - Follow the patterns of the Basic Drawer
+        - Transitioning into the detail view should move focus to the first focusable element of the view (typically the back button)
+        - Focus should again be captured
+        - Focus targets from the Basic View should not be accessible
     contents:
       - type: wide image
         src: ./assets/redlines.detail.view.png
@@ -186,6 +200,11 @@ blocks:
       - Detail View
 
 changelog:
+  - version: 1.0.0-beta.6
+    changes: |
+      - CHANGED: Dependencies to final versions.
+      - ADDED: Missing colors dependency.
+      - ADDED: Additional detail on focus behavior for keyboard users.
   - version: 1.0.0-beta.5
     changes: |
       - ADDED: Dependency links
