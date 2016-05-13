@@ -21,9 +21,11 @@ downloads:
     link: ./assets/drawer.mockup.ai
 dependencies:
   - name: Typography
-    version: 1.0.0-beta.5
+    version: 1.0.0
   - name: Icons
-    version: 1.0.0-beta.8
+    version: 1.0.0
+  - name: Colors
+    version: 1.0.1
 tagline: |
   The drawer component offers a convenient method for presenting secondary information which doesn't need to be immediately visible.
 features:
@@ -99,10 +101,10 @@ blocks:
         - 16px vertical margins around the title area, 20px side margins
 
       Typography
-      : - Title is a [large label](/design/c/typography/v1.0.0-beta.5/#rd-large-label)
+      : - Title is a [large label](/design/c/typography/v1.0.0/#rd-large-label)
 
       Icons
-      : - Close icon is "[times](/design/c/icons/v1.0.0-beta.8/#rd-times)"
+      : - Close icon is "[times](/design/c/icons/v1.0.0/#rd-times)"
         - A focused icon will use the standard browser outline for focus
 
       Shadow
@@ -130,7 +132,7 @@ blocks:
         - Focusing the "< Back" element will use the standard browser outline for focus
 
       Icon
-      : - "[chevron-left](/design/c/icons/v1.0.0-beta.8/#rd-chevron-left)"
+      : - "[chevron-left](/design/c/icons/v1.0.0/#rd-chevron-left)"
         - 8px spacing between icon and label
     contents:
       - type: wide image
@@ -186,6 +188,10 @@ blocks:
       - Detail View
 
 changelog:
+  - version: 1.0.0-beta.6
+    changes: |
+      - CHANGED: Dependencies to final versions.
+      - ADDED: Missing colors dependency.
   - version: 1.0.0-beta.5
     changes: |
       - ADDED: Dependency links
