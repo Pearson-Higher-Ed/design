@@ -1,11 +1,13 @@
 ---
-layout: article
+layout: article-toc
 title: Component Creation Guide
 section: contribute
 order: 2
 ---
 
-## Getting Started
+* TOC
+{:toc}
+
 So you've got a great idea for a new component and want to bring it to life! What's the process look like for going from initial concept to Official Elemental Design Component? There are three key steps to the process of creating a new component:
 
 1. **Announce**  

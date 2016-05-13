@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html class="core">
+{% include header.html %}
+<body>
+  {% include construction.html %}
+  {% include navigation.html %}
+
+  <div class="toc"></div>
+
+  <div class="article article-toc">
+    <h1 class="pe-title pe-title--extra-large">{{page.title}}</h1>
+
+    {{content}}
+  </div>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-75266302-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+  <script>
+    // var toc = document.getElementById('markdown-toc');
+    // toc.parentNode.removeChild(toc);
+    //
+    // document.querySelector('.toc').appendChild(toc);
+  </script>
+</body>
+</html>

@@ -1,3 +1,5 @@
+
+
 .article {
   margin: 60px auto;
   width: 90%;
@@ -35,5 +37,21 @@
   p + ul,
   p + ol {
     margin-top: 12px;
+  }
+}
+
+
+.article-toc {
+  @include pe-responsive-breakpoint(lg) {
+    margin-left: 36%;
+  }
+
+  #markdown-toc {
+    @include pe-responsive-breakpoint(lg) {
+      position: fixed;
+      width: 25%;
+      left: 5%;
+      top: 160px;
+    }
   }
 }
