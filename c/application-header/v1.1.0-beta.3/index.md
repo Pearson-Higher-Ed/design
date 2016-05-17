@@ -3,8 +3,8 @@ layout: component-yaml
 title: Application Header
 section: Components
 redirect_from: /docs/ui-components/application-header/
-version: 1.1.0-beta.2
-status: deprecated
+version: 1.1.0-beta.3
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -29,9 +29,9 @@ dependencies:
   - name: Colors
     version: 1.0.1
   - name: Typography
-    version: 1.0.0-beta.5
+    version: 1.0.0
   - name: Breakpoints
-    version: 1.0.0-beta.2
+    version: 1.0.0
 
 tagline: |
   This component contains and displays global tools and navigation across the next gen platform.
@@ -147,7 +147,7 @@ blocks:
 
   - type: two column
     text: |
-      #### ≥ 768px ([medium and larger viewports](/design/c/breakpoints/v1.0.0-beta.2/#rd-medium))
+      #### ≥ 768px ([medium and larger viewports](/design/c/breakpoints/v1.0.0/#rd-medium))
 
       Logo link
       : - No active link
@@ -165,13 +165,13 @@ blocks:
       : - [Black (\#000000)](/design/c/colors/v1.0.1/#rd-black-000000)
 
       Typography
-      : - Links are [large labels](/design/c/typography/v1.0.0-beta.5/#rd-large-label) ([inverse primary color](/design/c/typography/v1.0.0-beta.5/#rd-inverse-primary-label-color))
+      : - Links are [large labels](/design/c/typography/v1.0.0/#rd-large-label) ([inverse primary color](/design/c/typography/v1.0.0/#rd-inverse-primary-label-color))
 
       States
       : - Links use the browser default style for focus
         - Hovering shows the hand icon, but otherwise no style change
 
-      #### < 768px ([Small and Extra Small viewports](/design/c/breakpoints/v1.0.0-beta.2/#rd-small))
+      #### < 768px ([Small and Extra Small viewports](/design/c/breakpoints/v1.0.0/#rd-small))
 
       Dimensions
       : - 44px tall
@@ -196,7 +196,7 @@ blocks:
 
   - type: two column
     text: |
-      #### ≥ 1024px ([L and XL viewports](/design/c/breakpoints/v1.0.0-beta.2/#rd-large))
+      #### ≥ 1024px ([L and XL viewports](/design/c/breakpoints/v1.0.0/#rd-large))
 
       Logo Link
       : - www.console.pearson.com
@@ -224,14 +224,14 @@ blocks:
         - Cap on username is [Smoke Gray (#545454)](/design/c/colors/v1.0.1/#rd-smoke-gray-545454)
 
       Typography
-      : - Top level links are [large labels](/design/c/typography/v1.0.0-beta.5/#rd-large-label) ([inverse primary color](/design/c/typography/v1.0.0-beta.5/#rd-inverse-primary-label-color))
-        - Menu items are [large labels](/design/c/typography/v1.0.0-beta.5/#rd-large-label) ([inverse secondary color](/design/c/typography/v1.0.0-beta.5/#rd-inverse-secondary-label-color))
+      : - Top level links are [large labels](/design/c/typography/v1.0.0/#rd-large-label) ([inverse primary color](/design/c/typography/v1.0.0/#rd-inverse-primary-label-color))
+        - Menu items are [large labels](/design/c/typography/v1.0.0/#rd-large-label) ([inverse secondary color](/design/c/typography/v1.0.0/#rd-inverse-secondary-label-color))
 
       States
       : - Link focus states use the default browser implementation
         - Hovering an item in the dropdown menu will show an underline
 
-      #### 768px – 1023px ([Medium Viewport](/design/c/breakpoints/v1.0.0-beta.2/#rd-medium))
+      #### 768px – 1023px ([Medium Viewport](/design/c/breakpoints/v1.0.0/#rd-medium))
       Username is truncated to no more than 20 characters
     contents:
       - type: wide image
@@ -240,7 +240,7 @@ blocks:
 
   - type: two column
     text: |
-      #### 480px – 767px ([Small Viewport](/design/c/breakpoints/v1.0.0-beta.2/#rd-small))
+      #### 480px – 767px ([Small Viewport](/design/c/breakpoints/v1.0.0/#rd-small))
       Dimensions
       : - 44px tall
         - 100% viewport width
@@ -262,14 +262,14 @@ blocks:
       : - Same as larger viewports
 
       Typography
-      : - Top level links are [large labels](/design/c/typography/v1.0.0-beta.5/#rd-large-label) ([inverse primary color](/design/c/typography/v1.0.0-beta.5/#rd-inverse-primary-label-color))
-        - Course items are [large labels](/design/c/typography/v1.0.0-beta.5/#rd-large-label) ([inverse primary color](/design/c/typography/v1.0.0-beta.5/#rd-inverse-primary-label-color))
-        - Other menu items are [large labels](/design/c/typography/v1.0.0-beta.5/#rd-large-label) ([inverse secondary color](/design/c/typography/v1.0.0-beta.5/#rd-inverse-secondary-label-color))
+      : - Top level links are [large labels](/design/c/typography/v1.0.0/#rd-large-label) ([inverse primary color](/design/c/typography/v1.0.0/#rd-inverse-primary-label-color))
+        - Course items are [large labels](/design/c/typography/v1.0.0/#rd-large-label) ([inverse primary color](/design/c/typography/v1.0.0/#rd-inverse-primary-label-color))
+        - Other menu items are [large labels](/design/c/typography/v1.0.0/#rd-large-label) ([inverse secondary color](/design/c/typography/v1.0.0/#rd-inverse-secondary-label-color))
 
       Course List
       : - If more than 5 items, add a 'Show X more courses...' item at the bottom
 
-      #### < 480px ([Extra Small viewport](/design/c/breakpoints/v1.0.0-beta.2/#rd-extra-small))
+      #### < 480px ([Extra Small viewport](/design/c/breakpoints/v1.0.0/#rd-extra-small))
       Dropdown menu becomes 100% wide
     contents:
       - type: wide image
@@ -291,10 +291,10 @@ blocks:
 
   - type: two column
     text: |
-      #### ≥ 768px ([Medium and larger viewports](/design/c/breakpoints/v1.0.0-beta.2/#rd-medium))
+      #### ≥ 768px ([Medium and larger viewports](/design/c/breakpoints/v1.0.0/#rd-medium))
       Follow the Basic Mode specifications.
 
-      #### 480px – 767px ([Small viewport](/design/c/breakpoints/v1.0.0-beta.2/#rd-small))
+      #### 480px – 767px ([Small viewport](/design/c/breakpoints/v1.0.0/#rd-small))
       At this size the course navigation appears in the dropdown.
 
       Logo Link
@@ -316,16 +316,16 @@ blocks:
         - Divider lines are [Asphalt (#3f3f3f)](/design/c/colors/v1.0.1/#rd-asphalt-3f3f3f)
 
       Typography
-      : - All Courses link and standard menu items are [large labels](/design/c/typography/v1.0.0-beta.5/#rd-large-label) ([inverse secondary color](/design/c/typography/v1.0.0-beta.5/#rd-inverse-secondary-label-color))
-        - Course name is [basic title](/design/c/typography/v1.0.0-beta.5/#rd-basic-title) (inverse)
-        - Local nav items are [basic labels](/design/c/typography/v1.0.0-beta.5/#rd-basic-label) ([inverse secondary color](/design/c/typography/v1.0.0-beta.5/#rd-inverse-secondary-label-color))
-        - Active nav item is [bold label](/design/c/typography/v1.0.0-beta.5/#rd-bold-label) ([inverse primary color](/design/c/typography/v1.0.0-beta.5/#rd-inverse-primary-label-color))
+      : - All Courses link and standard menu items are [large labels](/design/c/typography/v1.0.0/#rd-large-label) ([inverse secondary color](/design/c/typography/v1.0.0/#rd-inverse-secondary-label-color))
+        - Course name is [basic title](/design/c/typography/v1.0.0/#rd-basic-title) (inverse)
+        - Local nav items are [basic labels](/design/c/typography/v1.0.0/#rd-basic-label) ([inverse secondary color](/design/c/typography/v1.0.0/#rd-inverse-secondary-label-color))
+        - Active nav item is [bold label](/design/c/typography/v1.0.0/#rd-bold-label) ([inverse primary color](/design/c/typography/v1.0.0/#rd-inverse-primary-label-color))
         - Local nav items truncate, rather than wrap to more than one line
 
       States
       : - Follow the Basic Mode specifications
 
-      #### < 480px ([Extra Small viewport](/design/c/breakpoints/v1.0.0-beta.2/#rd-extra-small))
+      #### < 480px ([Extra Small viewport](/design/c/breakpoints/v1.0.0/#rd-extra-small))
       Same as above, dropdown just becomes 100% wide.
 
     contents:
@@ -344,11 +344,11 @@ blocks:
         - Divider lines are [Hairline Gray (#d0d0d0)](/design/c/colors/v1.0.1/#rd-hairline-gray-d0d0d0)
 
       Typography
-      : - Top level links are [large labels](/design/c/typography/v1.0.0-beta.5/#rd-large-label) ([primary color](/design/c/typography/v1.0.0-beta.5/#rd-primary-label-color))
-        - All courses and other menu items are [large labels](/design/c/typography/v1.0.0-beta.5/#rd-large-label) ([secondary color](/design/c/typography/v1.0.0-beta.5/#rd-secondary-label-color))
-        - Course heading is a [basic title](/design/c/typography/v1.0.0-beta.5/#rd-basic-title)
-        - Local nav options are basic label ([secondary color](/design/c/typography/v1.0.0-beta.5/#rd-secondary-label-color))
-        - Active nav option is [bold label](/design/c/typography/v1.0.0-beta.5/#rd-bold-label) ([primary color](/design/c/typography/v1.0.0-beta.5/#rd-primary-label-color))
+      : - Top level links are [large labels](/design/c/typography/v1.0.0/#rd-large-label) ([primary color](/design/c/typography/v1.0.0/#rd-primary-label-color))
+        - All courses and other menu items are [large labels](/design/c/typography/v1.0.0/#rd-large-label) ([secondary color](/design/c/typography/v1.0.0/#rd-secondary-label-color))
+        - Course heading is a [basic title](/design/c/typography/v1.0.0/#rd-basic-title)
+        - Local nav options are basic label ([secondary color](/design/c/typography/v1.0.0/#rd-secondary-label-color))
+        - Active nav option is [bold label](/design/c/typography/v1.0.0/#rd-bold-label) ([primary color](/design/c/typography/v1.0.0/#rd-primary-label-color))
 
     contents:
       - type: wide image
@@ -368,6 +368,9 @@ blocks:
 
 
 changelog:
+  - version: 1.1.0-beta.3
+    changes: |
+      - CHANGED: Dependencies to use latest versions
   - version: 1.1.0-beta.2
     changes: |
       - ADDED: Dependency list and references
