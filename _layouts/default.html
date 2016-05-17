@@ -5,8 +5,8 @@
 	{% include construction.html %}
 	<div class="hero">
 		<h1><span class="welcome">Welcome</span><br>
-			<span class="to">to</span><br>
-			<span class="name">Elemental Design</span></h1>
+			<span class="to">to the</span><br>
+			<span class="name">UX Framework</span></h1>
 	</div>
 
 	<div class="contents">
@@ -26,7 +26,7 @@
 		<div class="section">
 			<header class="pe-title">Use</header>
 			<ul>
-				{% assign use = (site.pages | where: "section", "use") %}
+				{% assign use = (site.pages | where: "section", "use") | sort: "title" | sort: "order", "last" %}
 				{% for page in use %}
 					{% if page.url contains 'beta' %}
 					{% else %}
@@ -55,16 +55,47 @@
 		<header class="pe-title">Library</header>
 		{% assign components = (site.pages | where: "section", "Components") | sort:"title" %}
 		{% for page in components %}
-			{% if (page.url contains 'beta') or (page.private) %}
+			{% if page.version contains 'beta' or page.url contains 'beta' or page.status != 'active' %}
 			{% else %}
-				<a class="component" href="{{site.baseurl}}{{page.url}}">
+				<a class="component" href="{{site.baseurl}}{{page.url}}../">
 					<span class="pe-label pe-label--bold">{{page.title}}</span>
 					<div class="data pe-label">
 						<span>Version {{page.version}}</span>
-						<span class="status">{{page.status}}</span>
+						<span class="status">{% if page.implemented %}Implemented{% else %}Unimplemented{% endif %}</span>
 					</div>
 				</a>
 			{% endif %}
+		{% endfor %}
+	</div>
+
+	<div id="library" class="library">
+		<header class="pe-title">In Progress Components</header>
+		{% assign components = (site.pages | where: "section", "Components") | sort:"title" %}
+		{% for page in components %}
+			{% if page.status != 'active' %}
+			{% elsif page.url contains 'beta' %}
+				{% assign versions = (site.pages | where: "title", page.title) %}
+				{% assign max = 0 %}
+
+				{% for version in versions %}
+					{% assign num = (version.version | split: '.' | last | round) %}
+					{% if num > max %}
+						{% assign max = num %}
+					{% endif %}
+				{% endfor %}
+
+				{% assign this_num = (page.version | split: '.' | last | round) %}
+				{% if this_num == max %}
+					<a class="component" href="{{site.baseurl}}{{page.url}}../beta/">
+						<span class="pe-label pe-label--bold">{{page.title}}</span>
+						<div class="data pe-label">
+							<span>Version {{page.version}}</span>
+							<span class="status">{% if page.implemented %}Implemented{% else %}Unimplemented{% endif %}</span>
+						</div>
+					</a>
+				{% endif %}
+			{% endif %}
+
 		{% endfor %}
 	</div>
 

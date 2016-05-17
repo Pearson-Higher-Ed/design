@@ -41,6 +41,10 @@ p {
 
   & > ul {
     @include pe-ulist;
+
+    & + p {
+      margin-top: 12px;
+    }
   }
 
   dl {
@@ -65,6 +69,11 @@ p {
     width: 100%;
     display: block;
     background-color: pe-color(white);
+  }
+
+  video {
+    width: 100%;
+    display: block;
   }
 
   .caption {

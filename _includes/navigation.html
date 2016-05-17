@@ -16,7 +16,7 @@
     <li>
       Use
       <ul>
-        {% assign learn = (site.pages | where: "section", "use") %}
+        {% assign learn = (site.pages | where: "section", "use" | sort: "title" | sort: "order", "last") %}
         {% for page in learn %}
           {% if page.url contains 'beta' %}
           {% else %}
@@ -43,9 +43,9 @@
       <ul>
         {% assign library = (site.pages | where: "section", "Components") | sort:"title" %}
         {% for page in library %}
-          {% if (page.url contains 'beta') or (page.private) %}
+          {% if (page.url contains 'beta') or (page.private) or (page.status != 'active') %}
           {% else %}
-            <li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+            <li><a href="{{site.baseurl}}{{page.url}}..">{{page.title}}</a></li>
           {% endif %}
         {% endfor %}
       </ul>

@@ -4,7 +4,7 @@ title: Typography
 section: Components
 redirect_from: "/docs/ui-components/typography/"
 version: 1.0.0-beta.1
-status: active
+status: deprecated
 people:
   - role: Product Owner
     name: Joe Macaluso

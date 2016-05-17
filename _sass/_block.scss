@@ -25,9 +25,14 @@ body {
     margin-bottom: 60px;
   }
 
+  a {
+    @include pe-link;
+  }
+
   @import "blocks/overview";
   @import "blocks/section";
   @import "blocks/two_column";
   @import "blocks/palette";
   @import "blocks/changelog";
+  @import "blocks/style_table";
 }

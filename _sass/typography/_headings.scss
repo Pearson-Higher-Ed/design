@@ -6,6 +6,7 @@
   border-bottom: 2px solid pe-color(boring);
 
   @include h-spacing;
+  @include h-links;
   margin-top: 40px;
 }
 
@@ -16,6 +17,7 @@
   color: pe-color(pitch);
 
   @include h-spacing;
+  @include h-links;
 }
 
 @mixin hl3 {
@@ -25,6 +27,7 @@
   color: pe-color(pitch);
 
   @include h-spacing;
+  @include h-links;
 }
 
 @mixin hl4 {
@@ -34,6 +37,7 @@
   color: pe-color(gray-no-1);
 
   @include h-spacing;
+  @include h-links;
 }
 
 @mixin hl5 {
@@ -43,6 +47,7 @@
   color: pe-color(gray-no-1);
 
   @include h-spacing;
+  @include h-links;
 }
 
 @mixin hl6 {
@@ -52,6 +57,7 @@
   color: pe-color(gray-no-1);
 
   @include h-spacing;
+  @include h-links;
 }
 
 // spacing
@@ -74,5 +80,11 @@
   & + h5,
   & + h6 {
     margin-top: 6px;
+  }
+}
+
+@mixin h-links {
+  a {
+    @include pe-link;    
   }
 }

@@ -1,0 +1,206 @@
+<div>
+  <div class="blocks">
+    <div class="block article_header">
+      <h1 class="pe-title pe-title--extra-large">{{page.title}}</h1>
+      <p class="pe-label pe-label--large">Version {{page.version}} &bull; <span class="status">{{page.status | capitalize}}</span> &bull; <span><a href="{{page.implementation}}">Dev Docs</a></span></p>
+    </div>
+
+    <div class="block overview">
+      <div>
+        <p class="pe-lead tagline">{{page.tagline}}</p>
+        {% if page.description %}<div class="description">{{page.description | markdownify}}</div>{% endif %}
+
+        <div class="info">
+          <div class="feature_list">
+            <h3>Feature List</h3>
+            <ul>
+              {% for feature in page.features %}
+              <li>{{feature}}</li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <div class="usage">
+            <h3>Usage Guidelines</h3>
+            {% if page.usage_guidelines %}{{page.usage_guidelines | markdownify}}{% endif %}
+          </div>
+        </div>
+
+        <div class="article_info">
+          <div class="people">
+            {% for person in page.people %}
+            <div class="person">
+              <div class="title pe-label pe-label--bold">{{person.role}}</div>
+              <div class="pe-label"><a href="mailto:{{person.email}}">{{person.name}}</a></div>
+            </div>
+            {% endfor %}
+          </div>
+
+          <div class="dependencies">
+            <div class="title pe-label pe-label--bold">Dependencies</div>
+            {% for dependency in page.dependencies %}
+            <div class="pe-label"><a href="{{site.baseurl}}/c/{{dependency.name | slugify}}/v{{dependency.version}}">{{dependency.name}}@^{{dependency.version}}</a></div>
+            {% endfor %}
+            {% unless page.dependencies and page.dependencies != empty %}
+            <div class="pe-label">None</div>
+            {% endunless %}
+
+          </div>
+
+          <div class="downloads">
+            <div class="title pe-label pe-label--bold">Downloads</div>
+            {% for download in page.downloads %}
+              {% if download.link contains 'http' or download.link contains 'www' %}
+                <div class="pe-label"><a href="{{download.link}}" class="button">{{download.name}}</a></div>
+              {% else %}
+                <div class="pe-label"><a href="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{download.link}}" class="button">{{download.name}}</a></div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="toc">
+        <div class="pe-label pe-label--bold">Table of Contents</div>
+        <ul>
+          {% for heading in page.blocks %}
+            {% if heading.type == 'section' %}
+            <li><a href="#{{heading.name | slugify}}">{{heading.name}}</a></li>
+            {% endif %}
+          {% endfor %}
+          <li><a href="#changelog">Changelog</a></li>
+        </ul>
+      </div>
+    </div>
+
+    {% for block in page.blocks %}
+    <div class="block">
+      {% for export in block.exports %}
+      <div id="rd-{{export | slugify}}"></div>
+      {% endfor %}
+
+
+      {% case block.type %}
+
+      {% when 'section' %}
+      <h2 id="{{block.name | slugify}}">{{block.name}}</h2>
+
+
+      {% when 'two column' or 'two_column' %}
+      <div class="text">{{block.text | markdownify}}</div>
+      <div class="content">
+        {% for item in block.contents %}
+          {% case item.type %}
+
+          {% when 'wide image' %}
+          <div class="image wide">
+            <div class="media">
+              <img src="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{item.src}}" />
+            </div>
+            {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
+          </div>
+
+          {% when 'narrow image' %}
+          <div class="image narrow">
+            <div class="media">
+              <img src="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{item.src}}" />
+            </div>
+            {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
+          </div>
+
+          {% when 'wide video' %}
+          <div class="image wide">
+            <div class="media">
+              <video src="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{item.src}}" loop controls/>
+            </div>
+            {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
+          </div>
+
+          {% when 'table' %}
+          <div class="table">{{item.content | markdownify}}</div>
+
+          {% when 'code' %}
+          <pre class="pe-code">{{item.content}}</pre>
+          {% endcase %}
+        {% endfor %}
+      </div>
+
+
+      {% when 'palette' %}
+        <div class="swatches">
+          <h3>Foreground</h3>
+          <table>
+            {% for color in block.foreground %}
+              <tr>
+                <td>{{color.name}}</td>
+                <td>#{{color.hex}}</td>
+                <td><div style="width: 100%; min-width: 100px; height: 40px; background-color: #{{color.hex}}"></div></td>
+              </tr>
+            {% endfor %}
+          </table>
+        </div>
+        <div class="swatches">
+          <h3>Background</h3>
+          <table>
+            {% for color in block.background %}
+              <tr>
+                <td>{{color.name}}</td>
+                <td>#{{color.hex}}</td>
+                <td><div style="width: 100%; min-width: 100px; height: 40px; background-color: #{{color.hex}}"></div></td>
+              </tr>
+            {% endfor %}
+          </table>
+        </div>
+        {% if block.accents %}
+          <div class="swatches">
+            <h3>Accents</h3>
+            <table>
+              {% for color in block.accents %}
+                <tr>
+                  <td>{{color.name}}</td>
+                  <td>#{{color.hex}}</td>
+                  <td><div style="width: 100%; min-width: 100px; height: 40px; background-color: #{{color.hex}}"></div></td>
+                </tr>
+              {% endfor %}
+            </table>
+          </div>
+        {% endif %}
+
+
+
+      {% when 'style table' or 'style_table' %}
+      <table class="pe-table">
+        <thead>
+          <tr>
+            <th>Available Styles</th>
+            <th>Reference As</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for style in block.styles %}
+            <tr>
+              <td>{{style}}</td>
+              <td><code>[&lt;link text&gt;]({{site.baseurl}}{{page.url}}#rd-{{style | slugify}})</code></td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+
+      {% endcase %}
+    </div>
+    {% endfor %}
+
+    <div class="block changelog">
+      <h2 id="changelog">Changelog</h2>
+      {% for change in page.changelog %}
+        {% if change.version != page.version and change.linkable != false %}
+          <h3><a href="{% if include.beta or include.in_dir %}.{% endif %}./v{{change.version}}">{{change.version}}</a></h3>
+        {% else %}
+          <h3>{{change.version}}</h3>
+        {% endif %}
+        {{change.changes | markdownify}}
+      {% endfor %}
+    </div>
+  </div>
+</div>
