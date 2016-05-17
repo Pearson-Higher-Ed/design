@@ -3,8 +3,8 @@ layout: component-yaml
 title: Inputs
 section: Components
 redirect_from: /docs/ui-components/forms/
-status: deprecated
-version: 1.0.0-beta.7
+status: active
+version: 1.0.0-beta.8
 private: true
 people:
   - role: Product Owner
@@ -439,6 +439,9 @@ blocks:
       - Search Input
 
 changelog:
+  - version: 1.0.0-beta.8
+    changes: |
+      Nothing yet
   - version: 1.0.0-beta.7
     changes: |
       - FIXED: Mockups now match the new focus and error styles.
