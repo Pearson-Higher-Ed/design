@@ -7,10 +7,10 @@ section: Components
 title: Progress Bar
 
 # Status of the component (e.g. experimental, deprecated, etc.)
-status: deprecated
+status: active
 
 # Version (follow the component versioning guide)
-version: 1.0.0-beta.3
+version: 1.0.0-beta.4
 
 # List the people involved
 people:
@@ -25,6 +25,10 @@ people:
 implementations:
   - type: origami
     link: https://origami.pearsoned.com/registry/components/o-app-header
+
+dependencies:
+  - name: Colors
+    version: 1.0.1
 
 # Any downloads available
 downloads:
@@ -75,6 +79,8 @@ blocks:
 
   - type: section
     name: Redlines
+    exports:
+      - Determinate Progress Bar
 
   - type: two column
     text: |
@@ -108,24 +114,32 @@ blocks:
   - type: two column
     text: |
       Foreground
-      : - Royal Navy
+      : - [Royal Navy](/design/c/colors/v1.0.1/#rd-royal-navy-094877)
         - \#094877
 
       Stroke
-      : - Royal Navy
+      : - [Royal Navy](/design/c/colors/v1.0.1/#rd-royal-navy-094877)
         - \#094877
 
       Background
-      : - White
-        - \#FFFFFF
+      : - [Brightly Lit](/design/c/colors/v1.0.1/#rd-brightly-lit-e6e6e6)
+        - \#e6e6e6
 
     contents:
       - type: wide image
-        src: ./assets/foregroundbackground.png        
+        src: ./assets/foregroundbackground.png      
+
+  - type: style table
+    styles: 
+      - Determinate Progress Bar
 
 # Required. List out each version of the component and the changes made. Make
 # sure to follow the component versioning guide.
 changelog:
+  - version: 1.0.0-beta.4
+    changes: |
+      - Added the dependency links
+      - Added exported styles
   - version: 1.0.0-beta.3
     changes: |
       Added the Accessiblity Checklist
