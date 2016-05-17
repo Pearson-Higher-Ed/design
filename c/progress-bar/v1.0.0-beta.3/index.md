@@ -7,10 +7,10 @@ section: Components
 title: Progress Bar
 
 # Status of the component (e.g. experimental, deprecated, etc.)
-status: deprecated
+status: active
 
 # Version (follow the component versioning guide)
-version: 1.0.0-beta.2
+version: 1.0.0-beta.3
 
 # List the people involved
 people:
@@ -30,6 +30,8 @@ implementations:
 downloads:
   - name: .sketch mockup
     link: ./assets/ProgressBarComponent.zip
+  - name: Accessiblity Checklist
+    link: https://docs.google.com/a/pearson.com/document/d/1k9ZciQifxzfafy90mTjYHIFzvztl2fz17XzYKbi2v-A/edit?usp=sharing
 
 # Overview information for the component
 tagline: |
@@ -124,6 +126,9 @@ blocks:
 # Required. List out each version of the component and the changes made. Make
 # sure to follow the component versioning guide.
 changelog:
+  - version: 1.0.0-beta.3
+    changes: |
+      Added the Accessiblity Checklist
   - version: 1.0.0-beta.2
     changes: |
       Changed background color from White \#FFFFFF to Brightly Lit \#E6E6E6
