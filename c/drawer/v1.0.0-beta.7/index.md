@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Drawer
 section: Components
-version: 1.0.0-beta.6
-status: deprecated
+version: 1.0.0-beta.7
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -26,6 +26,8 @@ dependencies:
     version: 1.0.0
   - name: Colors
     version: 1.0.1
+  - name: Breakpoints
+    version: 1.0.0
 tagline: |
   The drawer component offers a convenient method for presenting secondary information which doesn't need to be immediately visible.
 features:
@@ -99,6 +101,8 @@ blocks:
       Spacing
       : - 20px side and top margins around the content area
         - 16px vertical margins around the title area, 20px side margins
+        - Drawer is 320px wide at the [Small breakpoint](/design/c/breakpoints/v1.0.0/#rd-small) and wider
+        - Drawer is 100% width at the [Extra Small breakpoint](/design/c/breakpoints/v1.0.0/#rd-extra-small)
 
       Typography
       : - Title is a [large label](/design/c/typography/v1.0.0/#rd-large-label)
@@ -200,6 +204,10 @@ blocks:
       - Detail View
 
 changelog:
+  - version: 1.0.0-beta.7
+    changes: |
+      - ADDED: Dimensions to redlines
+      - ADDED: Dependency links for breakpoints
   - version: 1.0.0-beta.6
     changes: |
       - CHANGED: Dependencies to final versions.
