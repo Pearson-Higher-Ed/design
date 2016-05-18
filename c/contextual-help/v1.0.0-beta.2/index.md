@@ -20,10 +20,22 @@ people:
     name: Annie Persson
     email: ann.persson@pearson.com
 
+dependencies:
+  - name: Drawer
+    version: 1.0.0-beta.6
+  - name: Typography
+    version: 1.0.0
+
 tagline: |
   This component presents help content and articles within the product experience so that users can answer their questions without the interruption of opening a separate help system in a new tab.
 usage_guidelines: |
   Every url in the next gen platform should use the Contextual Help component, at a minimum configuring the two default items in the Help List.
+
+features:
+  - Answer user questions without leaving the product experience
+  - Present articles based on the user's current location
+  - In-page triggers can jump directly to relevant article
+  - Fully responsive and accessible
 
 blocks:
   - type: section
