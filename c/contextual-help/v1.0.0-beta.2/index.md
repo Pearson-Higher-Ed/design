@@ -3,8 +3,8 @@ layout: component-yaml
 title: Contextual Help
 section: Components
 redirect_from: /docs/ui-components/contextual-help/
-version: 1.0.0-beta.1
-status: deprecated
+version: 1.0.0-beta.2
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -109,6 +109,9 @@ blocks:
       Should be used to call attention to tricky or potentially undoable activities.
 
 changelog:
+  - version: 1.0.0-beta.2
+    changes: |
+      Nothing yet
   - version: 1.0.0-beta.1
     changes: Initial version
 ---
