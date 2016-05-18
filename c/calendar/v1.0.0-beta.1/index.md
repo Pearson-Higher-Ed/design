@@ -133,7 +133,7 @@ blocks:
 
       Highlighted State
       : - Large Label Text; Pitch (#231F20)
-        - Background fill; Sky Blue (#9DC0DB)
+        - Background fill; Sky Blue (#D9EEFF)
 
     contents:
       - type: narrow image
