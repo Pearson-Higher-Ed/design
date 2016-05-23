@@ -2,6 +2,7 @@
 layout: article
 title: Modifying and Updating Components
 section: contribute
+order: 3
 ---
 
 Each component is designed to be useful and high quality from the beginning, but the nature of software these days is to always change and evolve. Elemental Design understands this and includes several features to make updates easy, for both creators and consumers.

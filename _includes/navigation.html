@@ -28,7 +28,7 @@
     <li>
       Contribute
       <ul>
-        {% assign learn = (site.pages | where: "section", "contribute") %}
+        {% assign learn = (site.pages | where: "section", "contribute") | sort: "title" | sort: "order", "last" %}
         {% for page in learn %}
           {% if page.url contains 'beta' %}
           {% else %}

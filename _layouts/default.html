@@ -39,7 +39,7 @@
 		<div class="section">
 			<header class="pe-title">Contribute</header>
 			<ul>
-				{% assign contribute = (site.pages | where: "section", "contribute") %}
+				{% assign contribute = (site.pages | where: "section", "contribute") | sort: "title" | sort: "order", "last" %}
 				{% for page in contribute %}
 					{% if page.url contains 'beta' %}
 					{% else %}

@@ -3,6 +3,7 @@ layout: spec
 title: Library Membership Specification
 section: contribute
 version: 1.0.0
+order: 1
 intro: |
   Every component listed in the Component Library must satisfy all the requirements contained in this document. To learn about submitting components for inclusion see the [Component Creation Guide][creation-guide].
 

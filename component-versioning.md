@@ -2,6 +2,7 @@
 layout: article
 title: Component Versioning
 section: contribute
+order: 4
 ---
 
 Most aspects of Elemental Design are given version numbers in order to clearly communicate changes and support dependencies between components.
