@@ -121,6 +121,10 @@
 
           {% when 'code' %}
           <pre class="pe-code">{{item.content}}</pre>
+
+          {% when 'text' %}
+          <div class="text-content pe-copy">{{item.content | markdownify}}</div>
+
           {% endcase %}
         {% endfor %}
       </div>

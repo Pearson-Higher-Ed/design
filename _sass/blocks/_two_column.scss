@@ -152,4 +152,19 @@ p {
       }
     }
   }
+
+  .text-content {
+    h3 { @include hl3; }
+    h4 { @include hl4; }
+    h5 { @include hl5; }
+
+    ul {
+      @include pe-ulist;
+
+      & + p {
+        margin-top: 12px;
+      }
+    }
+    
+  }
 }
