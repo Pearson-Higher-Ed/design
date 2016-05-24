@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Tables
 section: Components
-status: deprecated
-version: 1.0.0-beta.6
+status: active
+version: 1.0.0
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -30,7 +30,7 @@ dependencies:
   - name: Colors
     version: 1.0.1
   - name: Typography
-    version: 1.0.0-beta.5
+    version: 1.0.0
 
 downloads:
   - name: UXD Accessibility Checklist
@@ -143,7 +143,7 @@ blocks:
       : - 20px horizontal padding
         - 12px vertical padding
         - [Brightly lit (#e6e6e6)](/design/c/colors/v1.0.1/#rd-brightly-lit-e6e6e6) background
-        - [Bold Label typography](/design/c/typography/v1.0.0-beta.5/#rd-bold-label)
+        - [Bold Label typography](/design/c/typography/v1.0.0/#rd-bold-label)
         - 1px solid [Hairline Gray (#d0d0d0)](/design/c/colors/v1.0.1/#rd-hairline-gray-d0d0d0) border around each cell
         - Vertically aligned to the center (if a header wraps to two columns)
         - Headers are a non-optional feature of all table types (for accessibility compliance)
@@ -153,11 +153,11 @@ blocks:
         - 14px vertical padding
         - Alternate [White (#ffffff)](/design/c/colors/v1.0.1/#rd-white-ffffff) and [Dirty Ice (#f8f8f8)](/design/c/colors/v1.0.1/#rd-dirty-ice-f8f8f8) background colors
         - 1px solid [Hairline Gray (#d0d0d0)](/design/c/colors/v1.0.1/#rd-hairline-gray-d0d0d0) top/bottom border
-        - [Basic Label typography](/design/c/typography/v1.0.0-beta.5/#rd-basic-label)
+        - [Basic Label typography](/design/c/typography/v1.0.0/#rd-basic-label)
         - Vertically align to the top (if a cell wraps to two or more columns)
 
       Secondary Row
-      : - [Basic Label](/design/c/typography/v1.0.0-beta.5/#rd-basic-label), [secondary color](/design/c/typography/v1.0.0-beta.5/#rd-secondary-label-color)
+      : - [Basic Label](/design/c/typography/v1.0.0/#rd-basic-label), [secondary color](/design/c/typography/v1.0.0/#rd-secondary-label-color)
         - 3px below main row
 
       Inputs/Buttons
@@ -192,7 +192,7 @@ blocks:
       Rows
       : - 12px horizontal padding
         - 8px vertical padding
-        - [Small Label typography](/design/c/typography/v1.0.0-beta.5/#rd-small-label)
+        - [Small Label typography](/design/c/typography/v1.0.0/#rd-small-label)
         - Otherwise same as basic table
     contents:
       - type: narrow image
@@ -207,20 +207,6 @@ blocks:
 
 
 changelog:
-  - version: 1.0.0-beta.5
-    changes: |
-      - ADDED: Dependency links
-  - version: 1.0.0-beta.4
-    changes: |
-      - ADDED: exportable styles
-  - version: 1.0.0-beta.3
-    changes: |
-      - ADDED: Redlines
-      - ADDED: Sketch and AI mockup files
-  - version: 1.0.0-beta.2
-    changes: |
-      - CHANGED: Rows are striped
-      - REMOVED: Hover option
-  - version: 1.0.0-beta.1
-    changes: Initial version
+  - version: 1.0.0
+    changes: Initial Version
 ---

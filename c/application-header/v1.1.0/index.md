@@ -3,8 +3,8 @@ layout: component-yaml
 title: Application Header
 section: Components
 redirect_from: /docs/ui-components/application-header/
-version: 1.1.0-beta.3
-status: deprecated
+version: 1.1.0
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -368,23 +368,15 @@ blocks:
 
 
 changelog:
-  - version: 1.1.0-beta.3
-    changes: |
-      - CHANGED: Dependencies to use latest versions
-  - version: 1.1.0-beta.2
-    changes: |
-      - ADDED: Dependency list and references
-      - ADDED: Exported styles
-      - FIXED: Error in light theme divider line color
-      - CHANGED: Updated light theme background to use existing color
-  - version: 1.1.0-beta.1
+  - version: 1.1.0
     changes: |
       - CHANGED: Use colors component
       - CHANGED: Use typography component
       - ADDED: Details on local nav item truncation
       - ADDED: Details on focus and hover states
       - ADDED: .ai mockup file
-
+      - ADDED: Dependency list and references
+      - ADDED: Exported styles
   - version: 1.0.0
     changes: Initial release
 ---
