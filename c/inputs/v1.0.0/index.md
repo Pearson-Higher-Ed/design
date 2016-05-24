@@ -5,7 +5,6 @@ section: Components
 redirect_from: /docs/ui-components/forms/
 status: active
 version: 1.0.0
-private: true
 people:
   - role: Product Owner
     name: Joe Macaluso
