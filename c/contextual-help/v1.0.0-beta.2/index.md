@@ -211,7 +211,11 @@ blocks:
 changelog:
   - version: 1.0.0-beta.2
     changes: |
-      Nothing yet
+      - ADDED: Images
+      - ADDED: Initial redlines
+      - ADDED: Dependency links
+      - ADDED: Embedded activation triggers
+      - CHANGED: Updated formatting guidelines
   - version: 1.0.0-beta.1
     changes: Initial version
 ---
