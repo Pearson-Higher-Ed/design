@@ -9,11 +9,9 @@ people:
   - role: Product Owner
     name: Joe Macaluso
     email: joe.macaluso@pearson.com
-  - role: Designer
-    name: Parker Malenke
-    email: parker.malenke@pearson.com
-  - role: Designer
+  - role: Interaction Designer
     name: Jeff Faller
+    email: jeffrey.faller@pearson.com
   - role: QA
     name: Eajaz
 implementations:
@@ -25,28 +23,23 @@ downloads:
   - name: Illustrator
     link: ./assets/buttons.mockup.ai
 
-tagline: This component defines the standard visual style for buttons.
+tagline: This component defines the standard visual style for the institution lookup.
 features:
-  - Single collection of all button styles
-  - Multiple button types including Primary, Default, and Link
-  - Small, Default, and Large button sizes
-  - Guaranteed compliance with Accessibility contrast requirements
+  - Dropdown, scrollable listing of alphabetized institutions 
+  - Filtered by type-ahead functionality
+  - Stateful, will show pre-selected values first
 usage_guidelines: |
-  Every instance of a button or button styled link should come from this component. See the sections below for information about when to each each type of button.
+  Every instance of an institution dropdown should be based upon this component.
 
 blocks:
   - type: section
-    name: Button types
+    name: Institution Dropdown
 
   - type: two column
     text: |
-      Buttons come in several different types. Each defines a normal, active/hover, and disabled state.
-
-      **Primary** indicates the main call to action and should only appear once per group of buttons.
-
-      **Default** is your basic button, it can appear multiple times in a given group.
-
-      **Link** indicates reduced importance of the option. ('Cancel' options should typically use this style, for example.)
+      The institution lookup will show the top (variable) number of institutions based upon the users keyed-in values. Starting with the first character and filtering down based upon further input by the user.
+      
+      The component will allow a pre-selected value (possibly associated with account) to determine the initial values.
     contents:
       - type: wide image
         src: ./assets/illustration.png
