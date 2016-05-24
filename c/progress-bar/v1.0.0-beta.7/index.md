@@ -115,7 +115,7 @@ blocks:
   - type: two column
     text: |
       ### Color
-      The progress bar should follow the Colors component in order to guarantee sufficient contrast to meet WCAG 2.0 AA guidelines..
+      The progress bar should follow the Colors component in order to guarantee sufficient contrast to meet WCAG 2.0 AA guidelines.
 
       Foreground
       : - [Royal Navy](/design/c/colors/v1.0.1/#rd-royal-navy-094877)
