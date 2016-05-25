@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Drawer
 section: Components
-version: 1.0.0-beta.7
-status: deprecated
+version: 1.0.0-beta.8
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -57,7 +57,7 @@ blocks:
     text: |
       The basic version of the drawer has a section for a title at the top and a built in close 'x' icon.
 
-      Content may populate the area below this with 20px margins.
+      Content may populate the area below this with 20px margins. Custom background colors and dividing lines may extend to 100% width.
     contents:
       - type: wide image
         src: ./assets/basic.view.png
@@ -103,6 +103,10 @@ blocks:
         - 16px vertical margins around the title area, 20px side margins
         - Drawer is 320px wide at the [Small breakpoint](/design/c/breakpoints/v1.0.0/#rd-small) and wider
         - Drawer is 100% width at the [Extra Small breakpoint](/design/c/breakpoints/v1.0.0/#rd-extra-small)
+        - Dividing lines may extend past the content area, up to 100% width
+
+      Background
+      : - Default background is [white](/design/c/colors/v1.0.1/#rd-white-ffffff), may customized to an accessible color and extend to 100% width
 
       Typography
       : - Title is a [large label](/design/c/typography/v1.0.0/#rd-large-label)
@@ -204,6 +208,9 @@ blocks:
       - Detail View
 
 changelog:
+  - version: 1.0.0-beta.8
+    changes: |
+      - ADDED: Ability to include 100% width divider lines and custom background colors
   - version: 1.0.0-beta.7
     changes: |
       - ADDED: Dimensions to redlines
