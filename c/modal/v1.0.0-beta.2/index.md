@@ -3,8 +3,8 @@ layout: component-yaml
 title: Modal
 section: Components
 redirect_from: /docs/ui-components/modal/
-version: 1.0.0-beta.1
-status: deprecated
+version: 1.0.0-beta.2
+status: active
 implemented: false
 private: true
 people:
@@ -22,13 +22,16 @@ people:
     email: elle.steiner@pearson.com
 dependencies:
   - name: Buttons
-    version: 1.0.0-beta.5
+    version: 1.0.0
   - name: Typography
-    version: 1.0.0-beta.5
+    version: 1.0.0
   - name: Breakpoints
-    version: 1.0.0-beta.2
+    version: 1.0.0
   - name: Icons
-    version: 1.0.0-beta.8
+    version: 1.0.0
+downloads:
+  - name: Sketch
+    link: ./assets/modal.sketch
 
 tagline: |
   This component defines the standard visual style for the modal element.
@@ -96,6 +99,21 @@ blocks:
       - type: narrow image
         src: ./assets/modal-image-resp.png
         caption: Image Modal
+
+  - type: section
+    name: Long Titles
+
+  - type: two column
+    text: |
+      Here are examples of how the modal will handle long titles that must wrap.
+
+    contents:
+      - type: wide image
+        src: ./assets/modal-standard-long.png
+        caption: Standard Modal
+      - type: narrow image
+        src: ./assets/modal-standard-resp-long.png
+        caption: Standard Modal at Responsive Size
 
   - type: section
     name: Redlines
@@ -201,6 +219,13 @@ blocks:
 
 
 changelog:
+  - version: 1.0.0-beta.2
+    changes: |
+      - ADDED: Sketch file
+      - ADDED: Long Titles
+      - FIXED: Dependencies
+      - FIXED: Redlines
+
   - version: 1.0.0-beta.1
     changes: Initial version
 ---
