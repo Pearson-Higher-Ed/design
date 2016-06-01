@@ -19,15 +19,66 @@ downloads:
 tagline: |
   Templates offer a standard set of page structures for a variety of use cases.
 features:
-  - Overview and item detail levels
-  - Animations for show/hide and viewing item details
+  - Consistent dimensions for a variety of useful page structures
+  - Responsive strategies for each template
   - Accessible implementation
 usage_guidelines: |
-  Drawers should contain secondary content which only needs to be presented when specifically requested by the user, such as help information.
+  Every page should utilize one or more of these templates to create it's high level structure.
 
 blocks:
   - type: section
+    name: Introduction
+
+  - type: two column
+    text: |
+      Templates provide a standard way of organizing and structuring the content of a page in a consistent and responsive way. There are a variety of templates available for everything from simple single column presentations to more complicated multi-column structures.
+
+  - type: section
+    name: Template usage
+
+  - type: two column
+    text: |
+      ### Stacking
+      Multiple templates may be stacked to create a single page.
+
+      ### Spacing
+      The joints can either abut directly or use the predefined standard/large spacings.
+
+      ### Backgrounds
+      Each template may specify it's own full width border (color or image) or let the default background show through.
+
+      ### Borders
+      Stacked templates may also specify separating borders, either container width or full viewport width.
+    contents:
+      - type: narrow image
+        src: ./assets/stacked.png
+        caption: A page consisting of three stacked layouts.
+      - type: narrow image
+        src: ./assets/spacing.png
+        caption: The three spacings available for stacked templates.
+
+  - type: section
     name: Single Column
+
+  - type: two column
+    text: |
+      The simplest page template, it takes up the full 12 columns available at every breakpoint. The standard Application Header is automatically included outside the grid. There is an option to position the content area directly below the header or to include a standard amount of spacing.
+    contents:
+      - type: wide image
+        src: ./assets/single.column.png
+        caption: The single column layout with optional spacing after the header.
+
+  - type: section
+    name: Two Column
+
+  - type: two column
+    text: |
+      This template devotes 8 columns to a main content area and the remaining 4 to a sidebar which appears on either side (prefer the right where it makes sense). At medium and smaller breakpoints the content areas stack, with the option to put the sidebar above or below the main content area.
+    contents:
+      - type: wide image
+        src: ./assets/two.column.png
+        caption: The two column layout at larger breakpoints.
+
 
 
 
