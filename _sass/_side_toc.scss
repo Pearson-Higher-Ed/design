@@ -1,0 +1,58 @@
+.side-toc {
+
+  .sidebar {
+    width: 360px;
+    padding: 60px;
+    padding-top: 120px;
+    border-right: 1px solid black;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    box-sizing: border-box;
+
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    > ul > li {
+      font-weight: bold;
+      margin-bottom: 20px;
+
+      > ul > li {
+        font-weight: normal;
+        margin-top: 6px;
+
+        > ul {
+          margin-left: 10px;
+
+          > li {
+            margin-top: 6px;
+          }
+        }
+      }
+    }
+  }
+
+  .main-content {
+    margin-left: 360px;
+    margin-top: 26px;
+
+    .content {
+      margin: 0 auto;
+      padding: 0 20px;
+      max-width: 800px;
+    }
+
+    h1 { @include hl1; }
+    h2 { @include hl2; }
+    h3 { @include hl3; }
+    p, ul, ol { @include pe-copy; }
+    ul { @include pe-ulist; }
+    ol { @include pe-olist; }
+  }
+
+}
