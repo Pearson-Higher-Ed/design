@@ -26,14 +26,14 @@
           {% assign max_minor = minor %}
           {% assign max_patch = patch %}
           {% assign max_beta  = beta %}
-        {% elsif minor > max_minor %}
+        {% elsif major == max_major and minor > max_minor %}
           {% assign max_minor = minor %}
           {% assign max_patch = patch %}
           {% assign max_beta  = beta %}
-        {% elsif patch > max_patch %}
+        {% elsif major == max_major and minor == max_minor and patch > max_patch %}
           {% assign max_patch = patch %}
           {% assign max_beta  = beta %}
-        {% elsif beta > max_beta %}
+        {% elsif major == max_major and  minor == max_minor and patch == max_patch and beta > max_beta %}
           {% assign max_beta = beta %}
         {% endif %}
 
