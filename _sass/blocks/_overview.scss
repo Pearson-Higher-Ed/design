@@ -41,6 +41,7 @@
 
   .tagline {
     width: 100%;
+    margin: 0;
     @include pe-responsive-breakpoint(md) {
       width: 760px;
     }
