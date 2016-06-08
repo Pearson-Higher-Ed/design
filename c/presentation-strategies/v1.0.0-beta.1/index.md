@@ -14,29 +14,37 @@ people:
     email: parker.malenke@pearson.com
 
 tagline: |
-  This component provides several standard stragies for presenting content within a layout template.
+  This component provides several standard strategies for presenting content within a layout template.
 features:
-  - Fully responsive, scales with browser width
-  - Variable width can be set
-  - Keyboard accessible
-  - Tab scope constrained to modal
-  - Focus memory on modal entry/exit
+  - Support for common layout patterns
+  - Full integration with the standard templates
 usage_guidelines: |
-  Every instance of a modal element should come from this component.
+  All content within a template should specify a presentation strategy to use.
+description: |
+  Layout [Templates](/design/c/templates/beta) help you structure a page at a high level and chunk it into major content areas. Presentation strategies operate at one level lower, helping to actually fill out those content areas in a standard and rational way.
 
 blocks:
   - type: section
-    name: Introduction
+    name: Overview
 
   - type: two column
     text: |
-      Presentation strategies offer several different methods for organizing content within the content areas of layout templates. Similarly to the templates themselves, strategies can be combined into stacks within a given content area.
+      ### Stacking
+      Similarly to the templates themselves, strategies can be combined into stacks within a given content area.
+
+      ### Spacing
+      Stacked strategies have the same spacing options as templates: Directly Adjoining, Small Gap, and Large Gap.
+
+      ### Responsive behavior
+      Strategies don't include inherent responsive behavior, preferring instead to delegate to their containing templates. More advanced designs may change between various strategies at the [standard breakpoints](/design/c/breakpoints), however.
 
     contents:
       - type: narrow image
         src: ./assets/strategies1.png
+        caption: Examples of presentation strategies (the dashed boxes) being stacked in a single column template.
       - type: narrow image
         src: ./assets/strategies2.png
+        caption: Strategies are designed to work regardless of their container size, as seen in this two column example.
 
   - type: section
     name: Default
