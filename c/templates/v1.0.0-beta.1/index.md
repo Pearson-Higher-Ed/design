@@ -78,6 +78,10 @@ blocks:
       - type: wide image
         src: ./assets/two.column.png
         caption: The two column layout at larger breakpoints.
+      - type: narrow image
+        src: ./assets/two.column.responsive.png
+      - type: narrow image
+        src: ./assets/two.column.responsive.alt.png
 
   - type: section
     name: Static Column
