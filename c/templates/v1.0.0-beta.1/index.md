@@ -79,7 +79,15 @@ blocks:
         src: ./assets/two.column.png
         caption: The two column layout at larger breakpoints.
 
+  - type: section
+    name: Static Column
 
+  - type: two column
+    text: |
+      The static column presents a single column of fixed width which is centered in the page. At smaller breakpoints it transitions to full width fluid behavior. This column comes in two different sizes (small at 480px and large at 800px) and is handy for presenting modals or small pieces of content like sign in forms.
+    contents:
+      - type: wide image
+        src: ./assets/static.column.png
 
 
 changelog:
