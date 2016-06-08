@@ -17,22 +17,19 @@ downloads:
     link: https://docs.google.com/a/pearson.com/document/d/1ThXm4SGwyPb3wtlJGmOWLTRCIWERcLsjtP-jlkGjwAY/edit?usp=sharing
 
 tagline: |
-  Templates offer a standard set of page structures for a variety of use cases.
+  A standard set of page structures for a variety of use cases.
 features:
   - Consistent dimensions for a variety of useful page structures
   - Responsive strategies for each template
   - Accessible implementation
 usage_guidelines: |
   Every page should utilize one or more of these templates to create it's high level structure.
+description: |
+  Templates provide a way of organizing and structuring the content of a page in a consistent and responsive way. There are a variety of templates available for everything from simple single column presentations to more complicated multi-column structures.
+
+  Several [Presentation Strategies](/design/c/presentation-strategies/beta) are available for organization within the content areas provided by the layout templates.
 
 blocks:
-  - type: section
-    name: Introduction
-
-  - type: two column
-    text: |
-      Templates provide a standard way of organizing and structuring the content of a page in a consistent and responsive way. There are a variety of templates available for everything from simple single column presentations to more complicated multi-column structures.
-
   - type: section
     name: Template usage
 
@@ -55,7 +52,7 @@ blocks:
         caption: A page consisting of three stacked layouts.
       - type: narrow image
         src: ./assets/spacing.png
-        caption: The three spacings available for stacked templates.
+        caption: The three spacings available for stacked templates. (Shown with container width borders.)
 
   - type: section
     name: Single Column
@@ -80,8 +77,10 @@ blocks:
         caption: The two column layout at larger breakpoints.
       - type: narrow image
         src: ./assets/two.column.responsive.png
+        caption: Responsive view with the main content on top.
       - type: narrow image
         src: ./assets/two.column.responsive.alt.png
+        caption: Sidebar content on top.
 
   - type: section
     name: Static Column
@@ -92,6 +91,7 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/static.column.png
+        caption: A column of static width at larger viewports.
 
 
 changelog:
