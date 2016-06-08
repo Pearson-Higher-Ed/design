@@ -39,6 +39,16 @@ blocks:
         src: ./assets/strategies2.png
 
   - type: section
+    name: Default
+
+  - type: two column
+    text: |
+      The default strategy is the normal browser layout flow of left aligning content.
+    contents:
+      - type: narrow image
+        src: ./assets/default.png
+
+  - type: section
     name: Centered
 
   - type: two column
