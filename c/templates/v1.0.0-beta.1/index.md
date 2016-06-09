@@ -46,6 +46,12 @@ blocks:
 
       ### Borders
       Stacked templates may also specify separating borders, either container width or full viewport width.
+
+      ### Presentation Strategies
+      Templates define set content areas which are designed to work with the [Presentation Strategies](/design/c/presentation-strategies/beta) component for actually filling them with content.
+
+      ### Responsive Behavior
+      Templates are designed to work at each breakpoint, adjusting the arrangement of content areas as appropriate. For more complex designs you may specify different templates for each breakpoint.
     contents:
       - type: narrow image
         src: ./assets/stacked.png
