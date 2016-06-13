@@ -22,40 +22,53 @@ downloads:
     link: ./assets/buttons.mockup.sketch
   - name: Illustrator
     link: ./assets/buttons.mockup.ai
+dependencies:
+  - name: Inputs
+    version: 1.0.0
 
 tagline: This component defines the standard visual style for the institution lookup.
 features:
   - Dropdown, scrollable listing of alphabetized institutions 
   - Filtered by type-ahead functionality
   - Stateful, will show pre-selected values first
+  - Sorted by geography, by ip. (e.g. OX in the U.S. may place Oxnard College high in the results, while in the U.K. it may place Oxford high.)
 usage_guidelines: |
   Every instance of an institution dropdown should be based upon this component.
 
 blocks:
   - type: section
-    name: Institution Dropdown
+    name: Default States
 
   - type: two column
     text: |
-      The institution lookup will show the top (variable) number of institutions based upon the users keyed-in values. Starting with the first character and filtering down based upon further input by the user.
-      
-      The component will allow a pre-selected value (possibly associated with account) to determine the initial values.
-    contents:
-      - type: wide image
-        src: ./assets/illustration.png
-        caption: Each of the three button types in their various states.
-
-  - type: section
-    name: Button sizes
-
-  - type: two column
-    text: |
-      Buttons come in small, default, and large sizes. Prefer the default size but feel free to use these other sizes where they would fit better with surrounding content.
+      The institution lookup will show the place holder text 'Institution or School' if there are no values available (anonymous state, none associated with account). If the user is signed in, and there is a primary (or single) institution or school associated with the user's account, this will be the displayed default value.
     contents:
       - type: narrow image
-        src: ./assets/sizes.png
-        caption: Each button type in the two alternate sizes.
+        src: ./assets/illustration.png
+        caption: Illustrating the two available place holder values.
 
+  - type: section
+    name: Pre-Set Values (Dropdown List)
+
+  - type: two column
+    text: |
+      If a user has one or more institutions associated with their account, these will be displayed in a traditional dropdown manner. The Primary institution will always be top of list.
+
+      The value: 'I am not associated with an institution or school' should be shown if appropriate. (NOTE: Does this clear a user's list of associated insitutions?)
+    contents:
+      - type: narrow image
+        src: ./assets/illustration2.png
+        caption: Displayed values from a user's account.
+  - type: section
+    name: Type-ahead Functionality
+
+  - type: two column
+    text: |
+      The type-ahead functionality will be initiated when the user either selects the field and begins typing, or if they select 'Search for an Institution or School'. Either action will clear the dropdown list values (minus the two static values: I am not associated with an institution or school. I do not see my institution or school.) and begin populating based upon the user's typed in values.
+    contents:
+      - type: narrow image
+        src: ./assets/illustration3.png
+        caption: Type-ahead functionality.
 
   - type: section
     name: Redlines
