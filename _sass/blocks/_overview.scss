@@ -86,6 +86,10 @@
       margin: 0 0 0 20px;
       float: left;
     }
+
+    h3 + p {
+      margin-top: 0;
+    }
   }
 
   .article_info {
