@@ -89,9 +89,12 @@ Compounds SDK will include commonly used components that leverage javascript for
 ## Contributing
 Read the [Component Creation Guide][creation] to learn about the process of adding a new component to the library. The development standards are currently being determined, for now please follow the [Origami principles][oprinciples]. If you are contributing to the Elements SDK follow [these guidelines][eprinciples] as well.
 
+Specifically for adding icons to ElementsSDK, first the icons must be approved by Elements' UX members. After that, you may follow the [instructions in the Elements README][ghubreadme].
+
 Development specific requirements will eventually be added to the [Library Membership Specification][spec]. In the meantime, one principle to keep in mind is that components should not do any data fetching themselves, rather they should expect data to be passed through eventing or properties.
 
 [creation]: {{site.baseurl}}/component-creation-guide
+[ghubreadme]: https://github.com/Pearson-Higher-Ed/elements#adding-icons
 [spec]: {{site.baseurl}}/membership-spec
 [oprinciples]: https://origami.pearsoned.com/docs/overview/principles/
 [eprinciples]: https://github.com/Pearson-Higher-Ed/elements/blob/v0/CONTRIBUTING.md
