@@ -1,8 +1,3 @@
-// type resets
-p {
-  margin: 0;
-}
-
 // left column
 .text {
   // TODO switch to using mixins or something for typography
@@ -95,6 +90,11 @@ p {
     margin-top: 30px;
     @include pe-responsive-breakpoint(md) {
       margin-left: 20px;
+    }
+  }
+
+  .image.narrow:first-child + .image.narrow {
+    @include pe-responsive-breakpoint(md) {
       margin-top: 0;
     }
   }
@@ -151,5 +151,20 @@ p {
         background-color: pe-color(brightly-lit);
       }
     }
+  }
+
+  .text-content {
+    h3 { @include hl3; }
+    h4 { @include hl4; }
+    h5 { @include hl5; }
+
+    ul {
+      @include pe-ulist;
+
+      & + p {
+        margin-top: 12px;
+      }
+    }
+
   }
 }

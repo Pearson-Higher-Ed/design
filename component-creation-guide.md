@@ -2,6 +2,7 @@
 layout: article
 title: Component Creation Guide
 section: contribute
+order: 2
 ---
 
 ## Getting Started
