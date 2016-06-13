@@ -7,7 +7,7 @@ section: Components
 title: Progress Bar
 
 # Status of the component (e.g. experimental, deprecated, etc.)
-status: active
+status: deprecated
 
 # Version (follow the component versioning guide)
 version: 1.0.0-beta.4
@@ -130,7 +130,7 @@ blocks:
         src: ./assets/foregroundbackground.png      
 
   - type: style table
-    styles: 
+    styles:
       - Determinate Progress Bar
 
 # Required. List out each version of the component and the changes made. Make
