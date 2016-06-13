@@ -100,27 +100,33 @@ blocks:
         content: |
 
           ### Do
-          * Write articles at the 9th grade reading level.
-          * Link to external assets such as EI guides, Marketing PDFs, Videos, etc. where relevant.
+          * Write articles at the 9th grade reading level. To check for this, you can use the Spelling and Grammar feature in MS Word. Click Spelling and Grammar and under Options, select "Show readability statistics".
+          * Title articles in the form of a question. This is consistent with how issues are recorded in Salesforce Knowledge. "Contact Us" and "Popular Resources" are an exception to this guideline.
+          * List "Popular Student Resources" and "Popular Instructor Resources" articles at the end of the help list.
+          * Include data-driven articles. If data is not available from tech support and Online Help Google Analytics to inform the value proposition of which content to display, include, at minimum, the Contact Us article in the Help List.
+          * Include accordions when necessary to improve readability of longer topics or procedures.
+          * Link to external assets such as EI guides, Marketing PDFs, Videos, etc. from within the "Popular Resources" articles when relevant.
+          * Add Help List articles that are role specific (educator/learner/TA).
+          * List up to 5 custom articles at the top of the list. Custom articles are specifically relevant to features/tools accessible at the current URL. If the feature/tool is only available under certain conditions, like embedded "Learn more" links,  it must be documented in a Standalone Article instead.
+          * Use Standalone Articles to either display a Help List article or additional information about a function/feature not in the Help List.
           * Follow the formatting guidelines.
-          * Title articles with a question.
-          * Tailor articles to the user's role, where appropriate.
-          * Include a ‘Popular Resources’, ‘FAQ’, or similar article relevant to the current url at the end of your article list.
 
           ### Don't
-          * Link out to 24/7 or Online Help System  content.
+          * Reformat the layout or structure of "Popular Resources" and "Contact Us" article types.
           * Link to other articles in the contextual help component.
           * Include tables.
-          * Include more than 5 custom articles per page.
+          * Exceed more than 7 articles per page (5 custom, 2 default: Contact Support and Popular Resources).
           * Include articles about features/tools which aren't permanently accessible from the current URL in the Help List. (Use standalone articles instead.)
+          * Link out to Pearson Support KB articles.
+          * Link out to Online Help Systems.
 
           ### Formatting guidelines
 
           #### Titles
-          Every article should have a single title at the top, encoded as an `<h4>` tag.
+          Every article should have a single title at the top, encoded as an `<h4>` tag after sanitization.
 
           #### Headings
-          Articles should structure their content using `<h5>` and `<h6>` tags.
+          Articles headings should be structured and encoded as `<h5>` and `<h6>` tags after sanitization.
 
           #### Body copy
           Article body copy must be written at a 9th grade reading level.
@@ -134,11 +140,11 @@ blocks:
           #### Ordered lists
           Should be used to describe steps in a workflow. Should not exceed 9 items in length.
 
-          #### Tips
+          #### Tips and notes
           Should be used to give handy bits of information more emphasis.
 
-          #### Warnings
-          Should be used to call attention to tricky or potentially undoable activities.
+          #### Accordions
+          Should be used for topics containing sub-topics or step procedures exceeding 9 steps.
 
   - type: section
     name: Redlines
@@ -211,7 +217,7 @@ blocks:
 changelog:
   - version: 1.0.0-beta.3
     changes: |
-      
+      - CHANGED: Updated formatting guidelines with latest documentation.
   - version: 1.0.0-beta.2
     changes: |
       - ADDED: Images
