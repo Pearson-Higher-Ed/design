@@ -43,7 +43,7 @@ downloads:
 
 # Overview information for the component
 tagline: |
-  Graphical control element used to visualize the progression of an operation such as course copy, course setup or assignment creation.
+  Graphical control element used to visualize the progression of an operation such as course copy, course setup, or assignment creation.
 description:
 features:
   - Complete vs Incomplete Status
@@ -150,7 +150,7 @@ blocks:
         src: ./assets/labels.png
 
   - type: style table
-    styles: 
+    styles:
       - Determinate Progress Bar
 
 # Required. List out each version of the component and the changes made. Make
