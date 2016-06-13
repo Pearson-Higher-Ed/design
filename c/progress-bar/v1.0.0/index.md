@@ -7,10 +7,10 @@ section: Components
 title: Progress Bar
 
 # Status of the component (e.g. experimental, deprecated, etc.)
-status: deprecated
+status: active
 
 # Version (follow the component versioning guide)
-version: 1.0.0-beta.7
+version: 1.0.0
 
 # List the people involved
 people:
@@ -156,27 +156,7 @@ blocks:
 # Required. List out each version of the component and the changes made. Make
 # sure to follow the component versioning guide.
 changelog:
-  - version: 1.0.0-beta.7
-    changes: |
-      - Added Labels & related information
-  - version: 1.0.0-beta.6
-    changes: |
-      - Cleaned up the Color section in the Redlines
-  - version: 1.0.0-beta.5
-    changes: |
-      - Updated Sketch file
-      - Added Illustrator file
-  - version: 1.0.0-beta.4
-    changes: |
-      - Added the dependency links
-      - Added exported styles
-  - version: 1.0.0-beta.3
-    changes: |
-      Added the Accessiblity Checklist
-  - version: 1.0.0-beta.2
-    changes: |
-      Changed background color from White \#FFFFFF to Brightly Lit \#E6E6E6
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: |
       Initial version
 ---
