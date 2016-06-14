@@ -23,6 +23,8 @@ downloads:
 dependencies:
   - name: Inputs
     version: 1.0.0
+  - name: Type-ahead
+    version: 
 
 tagline: This component defines the standard visual style for the institution lookup.
 features:
@@ -104,17 +106,6 @@ blocks:
         src: ./assets/redline.typeahead.list.png
 
 changelog:
-  - version: 1.0.0-beta.3
-    changes: |
-      - ADDED: Illustrator UI mockup file
-      - FIXED: Proper link to elements SDK
-      - FIXED: Images aren't downsized
-
-  - version: 1.0.0-beta.2
-    linkable: false
-    changes: |
-      - ADDED: Sketch UI mockup file
-
   - version: 1.0.0-beta.1
     changes: Initial version
     linkable: false
