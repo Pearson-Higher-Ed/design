@@ -3,8 +3,8 @@ layout: component-yaml
 title: Contextual Help
 section: Components
 redirect_from: /docs/ui-components/contextual-help/
-version: 1.0.0-beta.3
-status: deprecated
+version: 1.0.0-beta.4
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -88,6 +88,24 @@ blocks:
       - type: wide image
         src: ./assets/embedded-activation.png
         caption: Two examples of controls that can be embedded in the page. Normally you wouldn't mix and match the two styles like this.
+
+  - type: section
+    name: Article Features
+
+  - type: two column
+    text: |
+      ### Accordions
+      Content may be grouped into accordions which help organize and condense information.
+
+      ### Info Boxes
+      Authors may call extra attention to important information by wrapping it in an info box. There are three types available: 'Tip', 'Note', and 'Important'.
+    contents:
+      - type: narrow image
+        src: ./assets/accordions.png
+        caption: Example of accordions.
+      - type: narrow image
+        src: ./assets/tips.warnings.png
+        caption: General tip and warning boxes.
 
   - type: section
     name: Help Article Formatting
@@ -215,6 +233,9 @@ blocks:
 
 
 changelog:
+  - version: 1.0.0-beta.4
+    changes: |
+      - ADDED: Accordion styles
   - version: 1.0.0-beta.3
     changes: |
       - CHANGED: Updated formatting guidelines with latest documentation.
