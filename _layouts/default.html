@@ -52,24 +52,22 @@
 	</div>
 
 	<div id="library" class="library">
-		<header class="pe-title">Library</header>
-		{% assign components = (site.pages | where: "section", "Components") | sort:"title" %}
-		{% for page in components %}
-			{% if page.version contains 'beta' or page.url contains 'beta' or page.status != 'active' %}
-			{% else %}
-				<a class="component" href="{{site.baseurl}}{{page.url}}../">
-					<span class="pe-label pe-label--bold">{{page.title}}</span>
-					<div class="data pe-label">
-						<span>Version {{page.version}}</span>
-						<span class="status">{% if page.implemented %}Implemented{% else %}Unimplemented{% endif %}</span>
-					</div>
-				</a>
-			{% endif %}
-		{% endfor %}
-	</div>
+		<header class="pe-title clearfix">
+			Library
+			<span class="pull-right clearfix">
+				<div class="pe-checkbox pe-checkbox--unchecked">
+			    <input type="checkbox" id="chk3" checked name="proposed"><label for="chk3">Proposed</label>
+			  </div>
 
-	<div id="library" class="library">
-		<header class="pe-title">In Progress Components</header>
+				<div class="pe-checkbox pe-checkbox--unchecked">
+			    <input type="checkbox" id="chk4" checked name="designed"><label for="chk4">Designed</label>
+			  </div>
+
+				<div class="pe-checkbox pe-checkbox--unchecked">
+			    <input type="checkbox" id="chk5" checked name="developed"><label for="chk5">Developed</label>
+			  </div>
+			</span>
+		</header>
 		{% assign components = (site.pages | where: "section", "Components") | sort:"title" %}
 		{% for page in components %}
 			{% if page.status != 'active' %}
@@ -86,16 +84,25 @@
 
 				{% assign this_num = (page.version | split: '.' | last | round) %}
 				{% if this_num == max %}
-					<a class="component" href="{{site.baseurl}}{{page.url}}../beta/">
+					<a class="component" href="{{site.baseurl}}{{page.url}}../beta" data-status="proposed">
 						<span class="pe-label pe-label--bold">{{page.title}}</span>
 						<div class="data pe-label">
-							<span>Version {{page.version}}</span>
-							<span class="status">{% if page.implemented %}Implemented{% else %}Unimplemented{% endif %}</span>
+							{{page.tagline}}
 						</div>
+						<span class="pe-label">v{{page.version}}</span>
+						<span class="status pe-label pe-label--small">Proposed</span>
 					</a>
 				{% endif %}
+			{% else %}
+				<a class="component" href="{{site.baseurl}}{{page.url}}../" data-status="{% if page.implemented %}developed{% else %}designed{% endif %}">
+					<span class="pe-label pe-label--bold">{{page.title}}</span>
+					<div class="data pe-label">
+						{{page.tagline}}
+					</div>
+					<span class="pe-label">v{{page.version}}</span>
+					<span class="status pe-label pe-label--small">{% if page.implemented %}Developed{% else %}Designed{% endif %}</span>
+				</a>
 			{% endif %}
-
 		{% endfor %}
 	</div>
 
@@ -107,6 +114,51 @@
 
 	  ga('create', 'UA-75266302-1', 'auto');
 	  ga('send', 'pageview');
+
+	</script>
+
+	<script>
+		var queryArray = function(selector) {
+			nodes = document.querySelectorAll(selector);
+			nodesArray = [];
+			for (var i = 0; i < nodes.length; i++) {
+				nodesArray.push(nodes.item(i));
+			}
+			return nodesArray;
+		}
+
+		var hideComponent = function(node) { node.style.display = "none"; }
+		var showComponent = function(node) { node.style.display = "block"; }
+
+		var getFilters = function() {
+			var inputs = queryArray('.library input');
+			return inputs.reduce(function(memo, input) {
+				memo[input.name] = input.checked;
+				return memo;
+			}, {});
+		}
+
+		var componentMeetsFilters = function(component, filters) {
+			console.log(component.dataset, filters);
+			return filters[component.dataset.status];
+		}
+
+		var onFilterChange = function(e) {
+			var components = queryArray('a.component'),
+			    filters = getFilters();
+
+			components.forEach(function(component) {
+				if (componentMeetsFilters(component, filters)) {
+					showComponent(component);
+				} else {
+					hideComponent(component);
+				}
+			});
+		}
+
+		queryArray(".library input").forEach(function(input) {
+			input.addEventListener("change", onFilterChange);
+		});
 
 	</script>
 </body>
