@@ -47,11 +47,11 @@
 
 @function pe-responsive-get-breakpoint-value($breakpoint, $bound) {
   @if not index(min max, $bound) {
-    @error '$bound must be min or max'
+    @error '$bound must be min or max';
   }
 
   @if not index(map-keys($pe-responsive-breakpoints), $breakpoint) {
-    @error '$breakpoint was not recognized: #{$breakpoint}'
+    @error '$breakpoint was not recognized: #{$breakpoint}';
   }
 
   $_return: map-get($pe-responsive-breakpoints, $breakpoint);
