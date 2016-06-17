@@ -257,47 +257,82 @@ dev_reqs:
               We recommend using [this validator](#).
         approvers:
           - ??
+  - name: Browser and Device Support
+    description: |
+     The components should adhere to pearson standard browser policy and device support. There are two levels of support: Optimized and Supported.
+    reqs:
+      - req: |
+          R1: Optimized are those OS/Browser combinations tested and certified by QA. These will generally represent the newest versions of major OSs and Browsers.
+        type: mandatory
+        approvers:
+          - Eajaz Ali Mahaboob Basha (QA)
+         
 
-  - name: Internationalization
+      - req: |
+          R2: Supported combinations will no longer be tested and certified. Any issues with supported combinations will be address as S1 and S2 issues as they arise.
+        type: mandatory
+        approvers:
+          - Eajaz Ali Mahaboob Basha (QA)
+          
+- name: Internationalization (i18N)
     description: |
       Internationalization is the process of designing a software application or product so that it can be adapted to various languages and regions without engineering changes.
-
-      Localization is the process of adapting a product or application to a specific international language or culture so it seems natural to that particular region.
     reqs:
+      - req: |
+          R1: Externalization of strings.
+        type: mandatory
+        approvers:
+          - Deepak
+         
+
+      - req: |
+          R2: Testing of long string when localized
+        type: mandatory
+        approvers:
+          - Deepak      
+          
+     - name: Localization (L10n)
+    description: |
+     Localization is the process of adapting a product or application to a specific international language or culture so it seems natural to that particular region.
+    reqs:
+      - req: |
+          R1: Numeric, date and time formats.
+        type: mandatory
+        approvers:
+          - Deepak
+         
+      - req: |
+          R2: Use of currency
+        type: mandatory
+        approvers:
+          - Deepak   
+          
+       - req: |
+          R2: Collation and sorting
+        type: optional
+        approvers:
+          - Deepak       
 
   - name: Testing
     description: |
       Testing is an important part of the software development process...
     reqs:
       - req: |
-          T1: All components must have at least 80% code coverage. Component should have 100% coverage whenever possible.
+          T1: All components must have at least 80% code coverage. Component should have 100% coverage whenever possible. Eajaz to provide additional reqs.
         type: mandatory
         approvers:
           - Eajaz??
 
-  - name: Performance
+  - name: Data Binding
     description: |
-      Perceived and actual performance of software are significant factors in creating a usable and desirable user experience.
+      Components should not call a backend service directly to get data. The architecture is designed for the components to be loosely coupled from the service to provide highly reusable front end components. The components would need data in a certain expected format. It is the responsibility of the client application to call the service, get data and provide it to the component in the format expected.
     reqs:
       - req: |
-          P1: Where applicable, all components should specify a caching policy to help the client determine if and when it can reuse a previously fetched response.
-        type: suggested
-        extras:
-          - name: Explanation
-            content: |
-              Fetching resources over the network is both slow and expensive: the download may require multiple round trips between the client and server, which delays processing and may block rendering of page content, and also incurs data costs for the visitor.
-        approvers:
-          - ??
-
-      - req: |
-          P2: Components must not call a backend service directly to get data.
+          R1: Loosely coupled  components from backend data services.
         type: mandatory
-        extras:
-          - name: Explanation
-            content: |
-              The architecture is designed for the components to be loosely coupled from the service to provide highly reusable front end components. The components would need data in a certain expected format. It is the responsibility of the client application to call the service, get data and provide it to the component in the format expected.
         approvers:
           - ??
+               
 
   - name: Conventions
     description: |
@@ -314,30 +349,16 @@ dev_reqs:
               Ensure that your pages are UTF-8 encoded, using both an HTTP response header **and** an HTML meta tag: `<meta charset="UTF-8" />`. Place this as the first tag within the `<head>` section of the page, before `<title>`, since it’s important that the browser knows the right character set to use before it gets to any content.
         approvers:
           - ??
-
+- name: ES6
+    description: |
+     The ES6 or ES2015 syntax is recommended be used to create components. should be  should not call a backend service directly to get data. The architecture is designed for the components to be loosely coupled from the service to provide highly reusable front end components. The components would need data in a certain expected format. It is the responsibility of the client application to call the service, get data and provide it to the component in the format expected.
+    reqs:
       - req: |
-          C2: Interactive components must be built with React.js and follow the ES6 class conventions.
-        type: mandatory
-        extras:
-          - name: Explanation
-            content: |
-              The react components developed for the compound SDK will be developed using ES6. The most common difference when creating a react component using ES6 is to use the class definition syntax as opposed to using React.createClass method to define a component. We can use an ES6 class that extends React.Component like:
-
-                  // The ES5 way
-                  var Origami = React.createClass({
-
-                  function1: function(e) { … },
-                    render: function() { … },
-                  });
-
-                  // The ES6 way
-                  class Origami extends React.Component {
-                    function1(e) { … }
-                    render() { … }
-                  }
+          R1: Use ES6 to write components.
+        type: optional
         approvers:
           - ??
-
+     
   - name: Security
     description: |
     reqs:
