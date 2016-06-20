@@ -194,7 +194,6 @@ design_reqs:
 
 dev_reqs:
   - name: General
-    description: |
     reqs:
       - req: |
           G1: Components must adhere to Pearson's standard browser and device support policies. See [this Neo page for the latest standards](https://neo.pearson.com/groups/css/).
@@ -253,28 +252,27 @@ dev_reqs:
         type: mandatory
         extras:
           - name: Explanation
-            content: |
-              We recommend using [this validator](#).
+            content: We recommend using [this validator](#).
         approvers:
           - ??
   - name: Browser and Device Support
     description: |
-     The components should adhere to pearson standard browser policy and device support. There are two levels of support: Optimized and Supported.
+      The components should adhere to pearson standard browser policy and device support. There are two levels of support: Optimized and Supported.
     reqs:
       - req: |
           R1: Optimized are those OS/Browser combinations tested and certified by QA. These will generally represent the newest versions of major OSs and Browsers.
         type: mandatory
         approvers:
           - Eajaz Ali Mahaboob Basha (QA)
-         
+
 
       - req: |
           R2: Supported combinations will no longer be tested and certified. Any issues with supported combinations will be address as S1 and S2 issues as they arise.
         type: mandatory
         approvers:
           - Eajaz Ali Mahaboob Basha (QA)
-          
-- name: Internationalization (i18N)
+
+  - name: Internationalization (i18N)
     description: |
       Internationalization is the process of designing a software application or product so that it can be adapted to various languages and regions without engineering changes.
     reqs:
@@ -283,33 +281,33 @@ dev_reqs:
         type: mandatory
         approvers:
           - Deepak
-         
+
 
       - req: |
           R2: Testing of long string when localized
         type: mandatory
         approvers:
           - Deepak      
-          
-     - name: Localization (L10n)
+
+  - name: Localization (L10n)
     description: |
-     Localization is the process of adapting a product or application to a specific international language or culture so it seems natural to that particular region.
+      Localization is the process of adapting a product or application to a specific international language or culture so it seems natural to that particular region.
     reqs:
       - req: |
           R1: Numeric, date and time formats.
         type: mandatory
         approvers:
           - Deepak
-         
+
       - req: |
           R2: Use of currency
         type: mandatory
         approvers:
           - Deepak   
-          
-       - req: |
+
+      - req: |
           R2: Collation and sorting
-        type: optional
+        type: suggested
         approvers:
           - Deepak       
 
@@ -332,7 +330,7 @@ dev_reqs:
         type: mandatory
         approvers:
           - ??
-               
+
 
   - name: Conventions
     description: |
@@ -349,18 +347,18 @@ dev_reqs:
               Ensure that your pages are UTF-8 encoded, using both an HTTP response header **and** an HTML meta tag: `<meta charset="UTF-8" />`. Place this as the first tag within the `<head>` section of the page, before `<title>`, since it’s important that the browser knows the right character set to use before it gets to any content.
         approvers:
           - ??
-- name: ES6
+
+  - name: ES6
     description: |
-     The ES6 or ES2015 syntax is recommended be used to create components. should be  should not call a backend service directly to get data. The architecture is designed for the components to be loosely coupled from the service to provide highly reusable front end components. The components would need data in a certain expected format. It is the responsibility of the client application to call the service, get data and provide it to the component in the format expected.
+      The ES6 or ES2015 syntax is recommended be used to create components. should be  should not call a backend service directly to get data. The architecture is designed for the components to be loosely coupled from the service to provide highly reusable front end components. The components would need data in a certain expected format. It is the responsibility of the client application to call the service, get data and provide it to the component in the format expected.
     reqs:
       - req: |
           R1: Use ES6 to write components.
-        type: optional
+        type: suggested
         approvers:
           - ??
-     
+
   - name: Security
-    description: |
     reqs:
       - req: |
           S1: Components must not collect data on insecure pages.
