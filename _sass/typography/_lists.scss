@@ -2,12 +2,18 @@
   padding-left: 26px;
   margin: 0;
 
-  ul {
+  ul,
+  ol {
     padding-left: 20px;
   }
 
   li + li {
     margin-top: 6px;
+  }
+
+  & > li > ol {
+    margin-top: 6px;
+    list-style-type: lower-alpha;
   }
 
   & > li > ul {
