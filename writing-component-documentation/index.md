@@ -19,4 +19,18 @@ If you get an error message saying that you are not in the sudoers file then you
   <iframe width="960" height="720" src="https://www.youtube-nocookie.com/embed/YTTjxTdHjPM?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 </div>
 
+### For reference:
+
+- Download [Github Desktop](https://desktop.github.com)
+- Review the [Markdown syntax guide](https://guides.github.com/features/mastering-markdown/)
+- Download the [Atom text editor](https://atom.io)
+- Start Jekyll running by following these steps:
+  1. Right click the 'design' repository in the sidebar of Github Desktop and choose 'Open in Terminal'
+  2. Run this command: `bundle exec jekyll serve --safe`
+
 ## Creating Your First Component
+Once you've installed the Github pages software you can start your own component documentation page. This video walks through that process:
+
+<div class="video-wrapper">
+  <iframe width="960" height="720" src="https://www.youtube-nocookie.com/embed/Sd-RfTITcB4?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+</div>
