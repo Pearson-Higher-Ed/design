@@ -29,51 +29,55 @@ dependencies:
     version: 1.0.0
   - name: Icons
     version: 1.0.0
+  - name: Templates
+    version: 1.0.0-beta.1
 downloads:
   - name: Sketch
     link: ./assets/modal.sketch
 
 tagline: |
-  This component defines the standard visual style for the modal element.
+  Defines the standard visual style for a modal element with styles for both textual and image content.
 features:
   - Fully responsive, scales with browser width
-  - Variable width can be set
-  - Keyboard accessible
-  - Tab scope constrained to modal
-  - Focus memory on modal entry/exit
+  - Accessibility compliant (constrained tab scope, focus memory, etc.)
+  - Styles for both textual and image content
+  - Optional button toolbar
 usage_guidelines: |
-  Every instance of a modal element should come from this component.
+  You should typically avoid modals in your designs, using the styles defined here only when necessary.
 
 blocks:
   - type: section
-    name: Modal Types
+    name: Text Modals
 
   - type: two column
     text: |
-      ### Standard
+      Text modals include a header with a title and standard close button. The content area can then contain either a basic text message or more structured content such as a form.
 
-      A modal window requires the user to interact with it before returning to the parent window or application.
+      An optional button bar can present standard actions at the bottom of the  modal.
 
-      The default modal style is comprised of a title area with close button, a content area, and a footer area with actionable [Standard Buttons](/design/c/buttons/v1.0.0/#rd-standard-button).
+      At smaller breakpoints the modal shifts to 100% width to prevent content from being too constrained.
 
+      ### Accessibility considerations
+      Modals must be careful to properly handle keyboard access to maintain full accessibility compliance. Specifically they must:
+
+      #### Capture Focus
+      Opening a modal should move the current keyboard focus into the first focusable element of the modal. Tabbing should only loop through items within the modal, and not escape to the underlying content.
+
+      #### Focus restoration
+      Dismissing the modal should return focus to the element that was focused when the modal was activated.
     contents:
       - type: wide image
         src: ./assets/modal-standard.png
+        caption: Desktop sized modal with optional button bar.
+      - type: narrow image
+        src: ./assets/modal-standard-resp.png
+        caption: Responsive modal without the button bar.
+
+  - type: section
+    name: Image Modals
 
   - type: two column
     text: |
-      ### Alternate
-
-      The alternate modal is similar to the standard modal but has a title area with a [Sea (#0C5D99)](/design/c/colors/v1.0.1/#rd-sea-0c5d99) background color.
-
-    contents:
-      - type: wide image
-        src: ./assets/modal-alternate.png
-
-  - type: two column
-    text: |
-      ### Image
-
       The image modal is for image content. It replaces the title with zoom controls and has a [Black (#000000)](/design/c/colors/v1.0.1/#rd-black-000000) background color.
 
     contents:
@@ -81,39 +85,11 @@ blocks:
         src: ./assets/modal-image.png
 
   - type: section
-    name: Responsive
+    name: Sizes
 
   - type: two column
     text: |
-      The modal is fully responsive down to the [Extra Small](/design/c/breakpoints/v1.0.0/#rd-extra-small) width of 320px.
-
-      The modal [Large Title](/design/c/typography/v1.0.0/#rd-large-title) reduces in font size for [Extra Small](/design/c/breakpoints/v1.0.0/#rd-extra-small) viewports.
-
-    contents:
-      - type: narrow image
-        src: ./assets/modal-standard-resp.png
-        caption: Standard Modal
-      - type: narrow image
-        src: ./assets/modal-alternate-resp.png
-        caption: Alternate Modal
-      - type: narrow image
-        src: ./assets/modal-image-resp.png
-        caption: Image Modal
-
-  - type: section
-    name: Long Titles
-
-  - type: two column
-    text: |
-      Here are examples of how the modal will handle long titles that must wrap.
-
-    contents:
-      - type: wide image
-        src: ./assets/modal-standard-long.png
-        caption: Standard Modal
-      - type: narrow image
-        src: ./assets/modal-standard-resp-long.png
-        caption: Standard Modal at Responsive Size
+      Modals utilize the [Static Column](/design/c/templates/v1.0.0-beta.1) template and support both the large and small size of 480px or 800px.
 
   - type: section
     name: Redlines
@@ -222,6 +198,8 @@ changelog:
   - version: 1.0.0-beta.3
     changes: |
       - CHANGED: Merged standard and alternate modal types
+      - CHANGED: Sizing now leverages the templates component
+      - ADDED: A11y details
   - version: 1.0.0-beta.2
     changes: |
       - ADDED: Sketch file
