@@ -22,6 +22,10 @@ If you get an error message saying that you are not in the sudoers file then you
 ### For reference:
 
 - Download [Github Desktop](https://desktop.github.com)
+- Clone the [design site repository](www.github.com/Pearson-Higher-Ed/design)
+- Make sure you have at least Ruby v2.0.0 by running `ruby --version` at the terminal
+- Install bundler by running `gem install bundler`. You will probably need sudo access for this. You may also need to install the command line tools by running `xcode-select --install`.
+- Install all the software needed to generate the site by running `gem install` from within the repository you downloaded.
 - Review the [Markdown syntax guide](https://guides.github.com/features/mastering-markdown/)
 - Download the [Atom text editor](https://atom.io)
 - Start Jekyll running by following these steps:
