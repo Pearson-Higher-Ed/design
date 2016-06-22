@@ -1,5 +1,5 @@
 ---
-title: Writing Guide
+title: UI Copy Guide
 layout: side-toc
 section: use
 
@@ -47,6 +47,34 @@ blocks:
 
   - type: secondary section
     content: Coachmark Messaging
+
+  - type: content
+    content: |
+      Here is some content for this section
+    images:
+      - src: ./assets/tester.png
+
+  - type: main section
+    content: UI Text Tips
+
+  - type: secondary section
+    content: Capitalization
+
+  - type: content
+    content: |
+      Here is some content for this section
+
+  - type: content
+    title: Title Case
+    content: |
+      Initial Cap of All Words Except Articles and Lesser Words.
+
+      Use this for page and menu titles.
+
+  - type: content
+    title: Sentence Case
+    content: |
+      Initial cap of first word and proper nouns only.
 
 
 ---
