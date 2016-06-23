@@ -36,11 +36,12 @@ downloads:
     link: ./assets/modal.sketch
 
 tagline: |
-  Defines the standard visual style for a modal element with styles for both textual and image content.
+  Defines the standard visual style for a modal element with styles for both textual and media content.
 features:
   - Fully responsive, scales with browser width
   - Accessibility compliant (constrained tab scope, focus memory, etc.)
   - Styles for both textual and image content
+  - Five different zoom levels for image content
   - Optional button toolbar
 usage_guidelines: |
   You should typically avoid modals in your designs, using the styles defined here only when necessary.
@@ -55,7 +56,7 @@ blocks:
 
       An optional button bar can present standard actions at the bottom of the  modal.
 
-      At smaller breakpoints the modal shifts to 100% width to prevent content from being too constrained.
+      The text modal uses the [Static Column](/design/c/templates/v1.0.0-beta.1) template and supports both sizes (480px and 800px). At smaller breakpoints both sizes shift to 100% width to prevent content from being too constrained.
 
       ### Accessibility considerations
       Modals must be careful to properly handle keyboard access to maintain full accessibility compliance. Specifically they must:
@@ -74,124 +75,96 @@ blocks:
         caption: Responsive modal without the button bar.
 
   - type: section
-    name: Image Modals
+    name: Media Modals
 
   - type: two column
     text: |
-      The image modal is for image content. It replaces the title with zoom controls and has a [Black (#000000)](/design/c/colors/v1.0.1/#rd-black-000000) background color.
+      This variant presents images in a stripped down and focused modal. The close button and any other tools fit in a toolbar at the top. Content is initially sized according to it's intrinsic dimensions, with a max width/height of 90% of the space below the toolbar.
+
+      ### Image Zooming
+      Image modals optionally support zooming to 100%, 150%, 200%, 250%, and 300% levels. The image can be panned by clicking and dragging once it extends beyond the browser viewport.
 
     contents:
       - type: wide image
         src: ./assets/modal-image.png
-
-  - type: section
-    name: Sizes
-
-  - type: two column
-    text: |
-      Modals utilize the [Static Column](/design/c/templates/v1.0.0-beta.1) template and support both the large and small size of 480px or 800px.
+        caption: Basic image modal at 100% zoom.
+      - type: wide image
+        src: ./assets/modal-media-zoom.png
+        caption: Zoomed to 200%.
 
   - type: section
     name: Redlines
 
   - type: two column
     text: |
-      ### Standard
+      ### Text Modal
 
       Overlay
-      : - Background Color: rgba(0, 0, 0, 0.50)
+      : - Background Color: [Black](/design/c/colors/v1.0.1/#rd-black-000000), 30% opacity
+        - Opening the modal freezes the position of any underlying content, scrolling should only apply to the modal itself
 
-      Window
-      : - Width: 80% of Viewport (100% for [Extra Small](/design/c/breakpoints/v1.0.0/#rd-extra-small) Viewports)
-        - Background Color: [White (#FFFFFF)](/design/c/colors/v1.0.1/#rd-white-ffffff)
-        - Border: 1px solid [Sidewalk (#B3B3B3)](/design/c/colors/v1.0.1/#rd-sidewalk-b3b3b3)
+      Spacing
+      : - Title has 10px vertical padding, 15px horizontal padding
+        - Body has 15px padding all around
 
-      Title Area
-      : - Background Color: [White (#FFFFFF)](/design/c/colors/v1.0.1/#rd-white-ffffff)
-        - Text: [Large Title](/design/c/typography/v1.0.0/#rd-large-title)
-        - Color: [Pitch (#231F20)](/design/c/colors/v1.0.1/#rd-pitch-231f20)
-        - Padding: 11px
-        - Icon: [fa-close](/design/c/icons/v1.0.0/#rd-times)
-        - Border Bottom: 1px solid [Sidewalk (#B3B3B3)](/design/c/colors/v1.0.1/#rd-sidewalk-b3b3b3)
+      Sizing
+      : - Uses the Static Column template in either small or large sizes
 
-      Content Area
-      : - Background Color: [White (#FFFFFF)](/design/c/colors/v1.0.1/#rd-white-ffffff)
-        - Text: [Basic Body](/design/c/typography/v1.0.0/#rd-basic-body)
-        - Padding: 15px
+      Optional Button Bar
+      : - 1px solid [Hairline Gray](/design/c/colors/v1.0.1/#rd-hairline-gray-d0d0d0) divider with 15px horizontal padding
+        - [Standard button](/design/c/buttons/v1.0.0/#rd-standard-button) sizes, use only a single [primary](/design/c/buttons/v1.0.0/#rd-primary-button) button at a time (others are [default](/design/c/buttons/v1.0.0/#rd-default-button))
+        - 10px above buttons, 15px below
+        - 12px between buttons
 
-      Footer Area
-      : - Background Color: [White (#FFFFFF)](/design/c/colors/v1.0.1/#rd-white-ffffff)
-        - Padding: 11px
-        - Border Top: 1px solid [Sidewalk (#B3B3B3)](/design/c/colors/v1.0.1/#rd-sidewalk-b3b3b3)
-        - Buttons: [Standard Size](/design/c/buttons/v1.0.0/#rd-standard-button)
+      Colors
+      : - Title background is [Brightly Lit (#e6e6e6)](/design/c/colors/v1.0.1/#rd-brightly-lit-e6e6e6)
+        - Content background is [White (#ffffff)](/design/c/colors/v1.0.1/#rd-white-ffffff)
+
+      Shadow
+      : - The whole modal has a dropshadow of [Gray No. 1](/design/c/colors/v1.0.1/#rd-gray-no-1-565656), with 7px blur and 1px spread
+
+      Typography
+      : - Title is [Basic Title](/design/c/typography/v1.0.0/#rd-basic-title)
+        - Content should typically use the [Basic Body](/design/c/typography/v1.0.0/#rd-basic-body) styles
 
     contents:
     - type: wide image
-      src: ./assets/modal-standard-red.png
+      src: ./assets/redlines.modal-standard.png
+    - type: narrow image
+      src: ./assets/modal-text-no-buttons.png
+      caption: Responsively sized text modal with no button bar.
 
   - type: two column
     text: |
-      ### Alternate
+      ### Media Modal
 
       Overlay
-      : - Background Color: rgba(0, 0, 0, 0.50)
+      : - Background Color: [Black](/design/c/colors/v1.0.1/#rd-black-000000), 70% opacity
+        - Scrolling is disabled while the modal is open
 
-      Window
-      : - Width: 80% of Viewport (100% for [Extra Small](/design/c/breakpoints/v1.0.0/#rd-extra-small) Viewports)
-        - Background Color: [White (#FFFFFF)](/design/c/colors/v1.0.1/#rd-white-ffffff)
-        - Border: 1px solid [Sidewalk (#B3B3B3)](/design/c/colors/v1.0.1/#rd-sidewalk-b3b3b3)
+      Spacing
+      : - Toolbar items have 10px vertical padding, 20px horizontal padding on the outside edges, 15px between items
 
-      Title Area
-      : - Background Color: Sea (#0C5D99)
-        - Text: [Large Title](/design/c/typography/v1.0.0/#rd-large-title)
-        - Color: [White (#FFFFFF)](/design/c/colors/v1.0.1/#rd-white-ffffff)
-        - Padding: 11px
-        - Icon: [fa-close](/design/c/icons/v1.0.0/#rd-times)
+      Sizing
+      : - Images take on their native sizes with a maximum width/height of 90%
+        - Zoomed images may extend all the way to the edge of the viewport
+        - In responsive situations
 
-      Content Area
-      : - Background Color: [White (#FFFFFF)](/design/c/colors/v1.0.1/#rd-white-ffffff)
-        - Text: [Basic Body](/design/c/typography/v1.0.0/#rd-basic-body)
-        - Padding: 15px
+      Colors
+      : - Icons are [White](/design/c/colors/v1.0.1/#rd-white-ffffff) when enabled, [Smoke Gray](/design/c/colors/v1.0.1/#rd-smoke-gray-545454) when disabled
+        - Toolbar background is [Black](/design/c/colors/v1.0.1/#rd-black-000000), 95% opacity
 
-      Footer Area
-      : - Background Color: [White (#FFFFFF)](/design/c/colors/v1.0.1/#rd-white-ffffff)
-        - Padding: 11px
-        - Border Top: 1px solid [Sidewalk (#B3B3B3)](/design/c/colors/v1.0.1/#rd-sidewalk-b3b3b3)
-        - Buttons: [Standard Size](/design/c/buttons/v1.0.0/#rd-standard-button)
+      Shadow
+      : - The image has a dropshadow of [Black](/design/c/colors/v1.0.1/#rd-black-000000), with a 40px blur and 1px spread
+
+      Zooming
+      : - Images can be zoomed to 100%, 150%, 200%, 250%, and 300% of the original size
+        - Once the image is larger than the viewport it may be panned by clicking and dragging
+        - `grab` and `grabbing` css cursors should be used when panning
 
     contents:
     - type: wide image
-      src: ./assets/modal-alternate-red.png
-
-  - type: two column
-    text: |
-      ### Image
-
-      Overlay
-      : - Background Color: rgba(0, 0, 0, 0.50)
-
-      Window
-      : - Width: 80% of Viewport (100% for [Extra Small](/design/c/breakpoints/v1.0.0/#rd-extra-small) Viewports)
-        - Background Color: [Black (#000000)](/design/c/colors/v1.0.1/#rd-black-000000)
-
-      Title Area
-      : - Background Color: [Black (#000000)](/design/c/colors/v1.0.1/#rd-black-000000)
-        - Text: [Large Title](/design/c/typography/v1.0.0/#rd-large-title)
-        - Color: [White (#FFFFFF)](/design/c/colors/v1.0.1/#rd-white-ffffff)
-        - Diabled Color: [Gray No.1 (#565656)](/design/c/colors/v1.0.1/#rd-gray-no-1-565656)
-        - Padding: 11px
-        - Icon: [fa-close](/design/c/icons/v1.0.0/#rd-times), icon-zoom-out, icon-zoom-in
-
-      Content Area
-      : - Background Color: [Black (#000000)](/design/c/colors/v1.0.1/#rd-black-000000)
-
-      Footer Area
-      : - Background Color: [Black (#000000)](/design/c/colors/v1.0.1/#rd-black-000000)
-        - Height: 15px
-
-    contents:
-    - type: wide image
-      src: ./assets/modal-image-red.png
+      src: ./assets/redlines.modal-media.png
 
 
 changelog:
@@ -199,6 +172,8 @@ changelog:
     changes: |
       - CHANGED: Merged standard and alternate modal types
       - CHANGED: Sizing now leverages the templates component
+      - CHANGED: Updated image modal to use a more fullscreen style
+      - ADDED: Information about zooming/panning images
       - ADDED: A11y details
   - version: 1.0.0-beta.2
     changes: |
