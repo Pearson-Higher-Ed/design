@@ -50,9 +50,23 @@
     h1 { @include hl1; }
     h2 { @include hl2; }
     h3 { @include hl3; }
+    h4 { @include hl4; }
     p, ul, ol { @include pe-copy; }
+    p {
+      margin: 0;
+      & + p {
+        margin-top: 12px;
+      }
+    }
     ul { @include pe-ulist; }
     ol { @include pe-olist; }
+
+    ul + p,
+    ol + p,
+    p + ul,
+    p + ol {
+      margin-top: 12px;
+    }
   }
 
 }
