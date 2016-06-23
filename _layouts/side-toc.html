@@ -13,7 +13,7 @@
         {% case block.type %}
 
         {% when 'main section' %}
-          {% if last_type == 'secondary section' or last_type == 'tertiary section' %}
+          {% if last_type == 'secondary section' %}
             </li></ul></li>
           {% elsif last_type == 'main section' %}
             </li>
@@ -27,15 +27,30 @@
             <ul>
           {% elsif last_type == 'secondary section' %}
             </li>
+          {% elsif last_type == 'content' %}
+            </li></ul></li>
           {% endif %}
           <li>{{block.content}}
           {% assign last_type = block.type %}
+
+        {% when 'content' %}
+          {% if block.title %}
+            {% if last_type == 'secondary section' %}
+              <ul>
+            {% elsif last_type == 'content' %}
+              </li>
+            {% endif %}
+            <li>{{block.title}}
+            {% assign last_type = block.type %}
+          {% endif %}
 
         {% endcase %}
       {% endfor %}
 
       {% if last_type == 'secondary section' %}
         </li></ul>
+      {% elsif last_type == 'content' %}
+        </li></ul></li></ul>
       {% endif %}
     </li></ul>
   </div>
@@ -55,7 +70,14 @@
         <h3>{{block.content}}</h3>
 
         {% when 'content' %}
+        {% if block.title %}
+          <h4>{{block.title}}</h4>
+        {% endif %}
         {{block.content | markdownify}}
+
+        {% for image in block.images %}
+          <img src="{{image.src}}">
+        {% endfor %}
 
         {% endcase %}
 
