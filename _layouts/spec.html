@@ -82,7 +82,7 @@
       {% for section in page.dev_reqs %}
       <div class="reqs">
         <h3 id="{{section.name | slugify}}">{{section.name}}</h3>
-        <div class="description">{{section.description | markdownify}}</div>
+        {% if section.description %}<div class="description">{{section.description | markdownify}}</div>{% endif %}
 
         {% for req in section.reqs %}
         <div class="req">
