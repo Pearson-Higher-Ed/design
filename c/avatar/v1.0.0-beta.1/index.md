@@ -20,11 +20,7 @@ people:
 dependencies:
   - name: Modal
     version: 1.0.0-beta.2
-  - name: Buttons
-    version: 1.0.0
   - name: Typography
-    version: 1.0.0
-  - name: Breakpoints
     version: 1.0.0
   - name: Icons
     version: 1.0.0
