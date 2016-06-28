@@ -21,3 +21,13 @@
   	height: 100%;
   }
 }
+
+.js-tag {
+  display: inline-block;
+  padding: 2px 6px;
+  background: #f7df1e;
+  color: pe-color(pitch);
+  border-radius: 2px;
+  @include pe-label;
+  @include pe-label-bold;
+}
