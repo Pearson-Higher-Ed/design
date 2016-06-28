@@ -23,6 +23,8 @@ features:
   - Integration with inputs and buttons
   - Secondary data line within each cell
   - Three responsive strategies
+  - Sortable columns <span class="js-tag">JS</span>
+  - Selectable rows and a toolbar <span class="js-tag">JS</span>
 usage_guidelines: |
   Every instance of a static table should use this component. For more complex tables with sorting, filtering, etc. see the Interactive Table component.
 
