@@ -52,7 +52,7 @@ blocks:
 
       A new account will display the Default Avatar image. During the photo upload process the user is provided with photo editing tools in order to scale and crop their photo appropriately.
 
-      At any time the user may upload a new photo or delete their current photo. If a new photo is not uploaded after deletion, the Default Avatar will display once again.
+      At any time the user may upload a new photo or delete their current photo. Once a photo is deleted the Default Avatar will display again.
 
     contents:
       - type: narrow image
