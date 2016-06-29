@@ -311,26 +311,28 @@ dev_reqs:
         approvers:
           - Deepak       
 
-  - name: Testing
+  - name: QA
     description: |
-      Testing is an important part of the software development process...
+      All the functional automated tests for Elements SDK / Compounds SDK / Origami V2 components should be contributed to "ux-test-platform" repository, and the PR will be reviewed and merged only by PDA team
     reqs:
       - req: |
           T1: All components must have at least 80% code coverage. Component should have 100% coverage whenever possible. Eajaz to provide additional reqs.
         type: mandatory
         approvers:
-          - Eajaz??
+          - Eajaz
 
-  - name: Data Binding
-    description: |
-      Components should not call a backend service directly to get data. The architecture is designed for the components to be loosely coupled from the service to provide highly reusable front end components. The components would need data in a certain expected format. It is the responsibility of the client application to call the service, get data and provide it to the component in the format expected.
-    reqs:
       - req: |
-          R1: Loosely coupled  components from backend data services.
-        type: mandatory
+          Tools Used: Click the following link to use the tools used for Automated testing and test scripts. 
+          https://neo.pearson.com/docs/DOC-607807#jive_content_id_Tools_used
+        type: optional
         approvers:
-          - ??
-
+          - Eajaz
+      - req: |
+          How to Contribute: You can fork the repo or create a branch out of master and make your changes, create a Pull Request for your changes to merge into this Original master branch. Click the following link to see more details on how to contribute.
+          https://neo.pearson.com/docs/DOC-607807#jive_content_id_How_to_contribute_to_this_repo
+        type: optional
+        approvers:
+          - Eajaz
 
   - name: Conventions
     description: |
