@@ -322,8 +322,8 @@ dev_reqs:
           - Eajaz
 
       - req: |
-          Tools Used: Click the [following link][ca] to use the tools used for Automated testing and test scripts.[ca]: 
-          https://neo.pearson.com/docs/DOC-607807#jive_content_id_Tools_used
+          Tools Used: Click the [following link] (https://neo.pearson.com/docs/DOC-607807#jive_content_id_Tools_used) to use the tools used for Automated testing and test scripts. 
+          
           
         type: optional
         approvers:
