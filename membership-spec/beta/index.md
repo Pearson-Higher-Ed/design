@@ -322,15 +322,15 @@ dev_reqs:
           - Eajaz
 
       - req: |
-          Tools Used: Click the [following link] (https://neo.pearson.com/docs/DOC-607807#jive_content_id_Tools_used) to use the tools used for Automated testing and test scripts. 
+          Tools Used: Click the [following link](https://neo.pearson.com/docs/DOC-607807#jive_content_id_Tools_used) to use the tools used for Automated testing and test scripts. 
           
           
         type: optional
         approvers:
           - Eajaz
       - req: |
-          How to Contribute: You can fork the repo or create a branch out of master and make your changes, create a Pull Request for your changes to merge into this Original master branch. Click the following link to see more details on how to contribute.
-          https://neo.pearson.com/docs/DOC-607807#jive_content_id_How_to_contribute_to_this_repo
+          How to Contribute: You can fork the repo or create a branch out of master and make your changes, create a Pull Request for your changes to merge into this Original master branch. Click the [following link](https://neo.pearson.com/docs/DOC-607807#jive_content_id_How_to_contribute_to_this_repo) to see more details on how to contribute.
+          
         type: optional
         approvers:
           - Eajaz
