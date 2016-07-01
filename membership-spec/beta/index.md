@@ -319,7 +319,7 @@ dev_reqs:
           T1: All components must have at least 80% code coverage. Component should have 100% coverage whenever possible.
         type: mandatory
         approvers:
-          - Eajaz
+          - Eajaz Ali Mehboob Pasha
 
       - req: |
           Tools Used: Click the [following link](https://neo.pearson.com/docs/DOC-607807#jive_content_id_Tools_used) to use the tools used for Automated testing and test scripts. 
@@ -327,20 +327,20 @@ dev_reqs:
           
         type: optional
         approvers:
-          - Eajaz
+          - Eajaz Ali Mehboob Pasha
       - req: |
           How to Contribute: You can fork the repo or create a branch out of master and make your changes, create a Pull Request for your changes to merge into this Original master branch. Click the [following link](https://neo.pearson.com/docs/DOC-607807#jive_content_id_How_to_contribute_to_this_repo) to see more details on how to contribute.
           
         type: optional
         approvers:
-          - Eajaz
+          - Eajaz Ali Mehboob Pasha
 
   - name: Conventions
     description: |
       Standards that make life easier.
     reqs:
       - req: |
-          C1: Use UTF-8.
+          Use UTF-8:
         type: mandatory
         extras:
           - name: Explanation
