@@ -316,14 +316,15 @@ dev_reqs:
       All the functional automated tests for Elements SDK / Compounds SDK / Origami V2 components should be contributed to "ux-test-platform" repository, and the PR will be reviewed and merged only by PDA team
     reqs:
       - req: |
-          T1: All components must have at least 80% code coverage. Component should have 100% coverage whenever possible. Eajaz to provide additional reqs.
+          T1: All components must have at least 80% code coverage. Component should have 100% coverage whenever possible.
         type: mandatory
         approvers:
           - Eajaz
 
       - req: |
-          Tools Used: Click the following link to use the tools used for Automated testing and test scripts. 
+          Tools Used: Click the [following link][ca] to use the tools used for Automated testing and test scripts.[ca]: 
           https://neo.pearson.com/docs/DOC-607807#jive_content_id_Tools_used
+          
         type: optional
         approvers:
           - Eajaz
