@@ -19,26 +19,63 @@ downloads:
 dependencies:
   - name: typography
     version: 1.0.0
+  - name: buttons
+    version: 1.0.0
 
 tagline: |
   A simple component for presenting multiple options in a condensed space.
 features:
-  - Adapts to standard breakpoints
-  - Consistent fluid behavior
-  - Handy 12 column grid that can support many layouts
-  - Support for nested grids
+  - Can be triggered by a link or button
+  - Standard icon layout
+  - Accessible
 usage_guidelines: |
-  You should generally **not** use this component directly, prefer Templates and Layouts in your designs.
+  Use this component when the options listed represent actions or navigation destinations. Prefer the standard [select inputs](/design/c/inputs/#select) for all other use cases.
 
 blocks:
   - type: section
-    name: Grid Structure
+    name: Basic Dropdown
 
   - type: two column
     text: |
-      The grid consists of several key parts that include the Container, Container Margins, Columns, and Gutters.
+      The basic dropdown opens into a simple list of textual options. Icons may be prepended at each line.
 
-      All columns reside within the *Container*, which is located at the root level of a page. Depending on the breakpoint, the container will have *Container Margins* of various sizes. The container also has a maximum width property, beyond which only the container margins grow in size.
+      Dropdowns may be triggered by labels (except the bold variety) or buttons.
 
-      The container is divided into 12 proportional *Columns* which contain actual content. These are separated by *Gutters* of a fixed size (which varies based on the breakpoint again).
+      If the trigger item is too far to the right the dropdown will shift to be right aligned.
+    contents:
+      - type: wide image
+        src: ./assets/basic.dropdown.png
+        caption: A basic label dropdown; The hover effect for an item in the dropdown; Dropdown list with icons.
+      - type: narrow image
+        src: ./assets/button.trigger.png
+        caption: Basic button dropdown.
+      - type: narrow image
+        src: ./assets/right.aligned.png
+        caption: Right aligned dropdown behavior.
+
+  - type: section
+    name: Redlines
+
+  - type: two column
+    text: |
+      Dimensions
+      : - Standard widths are 180px or 250px
+        - Width can optionally be fluid below these sizes, with a minimum width that matches the triggering label or button
+
+      Spacing
+      : - 10px top and bottom padding
+        - 12px horizontal padding
+        - 8px between items
+        - 8px between icons and options
+
+      Alignment
+      : - Left aligned by default
+        - Right aligned if there is not room within the viewport for the dropdown
+
+      Icons
+      : - Angle-down, unless the label text is a direct action (e.g. "Copy This Course" or "Post Status")
+
+changelog:
+  - version: 1.0.0-beta.1
+    changes: Initial Version
 ---
