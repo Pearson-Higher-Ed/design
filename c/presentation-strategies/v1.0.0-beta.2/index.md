@@ -21,7 +21,7 @@ features:
 usage_guidelines: |
   All content within a template should specify a presentation strategy to use.
 description: |
-  Layout [Templates](/design/c/templates/beta) help you structure a page at a high level and chunk it into major content areas. Presentation strategies operate at one level lower, helping to actually fill out those content areas in a standard and rational way.
+  Layout [Templates](/design/c/templates/beta) help you structure a page at a high level and chunk it into major layout areas. Presentation strategies operate at one level lower, helping to actually fill out those layout areas in a standard and rational way.
 
 blocks:
   - type: section
@@ -33,7 +33,7 @@ blocks:
       Each strategy defines the location of one or more content areas which should each contain a single piece of content.
 
       ### Stacking
-      Similarly to the templates themselves, strategies can be combined into stacks within a given content area.
+      Similarly to the templates themselves, strategies can be combined into stacks within a given template area.
 
       ### Spacing
       Stacked strategies have the same spacing options as templates: Directly Adjoining, Small Gap, and Large Gap.
@@ -64,7 +64,7 @@ blocks:
 
   - type: two column
     text: |
-      The centered strategy simply centers it's contents within the containing area.
+      The centered strategy simply centers its contents within the containing area.
     contents:
       - type: narrow image
         src: ./assets/centered.png
@@ -116,6 +116,8 @@ blocks:
       : - Each content area is either 50%, 33.333333%, or 25% wide (including a gutter's width)
         - Small gutters are 10px, large are 20px
         - Negative margins or a similar technique should be used to position the left and right edges of the content areas directly against the edge of the container
+        - Each item should have the same height
+        - Items are filled in a left-to-right and then top-to-bottom order
 
       Spacing
       : - Directly adjoining strategies should have no gap between them
@@ -139,7 +141,7 @@ changelog:
   - version: 1.0.0-beta.2
     changes: |
       - CHANGED: Updated documentation text.
-      - ADDED: Complete redlines.
+      - ADDED: Completed redlines.
   - version: 1.0.0-beta.1
     changes: Initial version
 ---
