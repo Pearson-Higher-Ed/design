@@ -14,10 +14,10 @@ people:
 implementation:
 downloads:
   - name: UXD Accessibility Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/1ThXm4SGwyPb3wtlJGmOWLTRCIWERcLsjtP-jlkGjwAY/edit?usp=sharing
+    link: https://docs.google.com/a/pearson.com/document/d/1_ipKmABGA_ANqpqwt6qFhcB_TvduFdSBELPfXmYABFw/edit?usp=sharing
 dependencies:
   - name: grid
-    version: 1.0.0-beta.1
+    version: 1.0.0-beta.2
   - name: breakpoints
     version: 1.0.0
 
@@ -67,6 +67,8 @@ blocks:
 
   - type: section
     name: Single Column
+    exports:
+      - Single column
 
   - type: two column
     text: |
@@ -78,6 +80,8 @@ blocks:
 
   - type: section
     name: Two Column
+    exports:
+      - Two column
 
   - type: two column
     text: |
@@ -95,6 +99,8 @@ blocks:
 
   - type: section
     name: Static Column
+    exports:
+      - Static column
 
   - type: two column
     text: |
@@ -117,7 +123,7 @@ blocks:
 
       Backgrounds & Borders
       : - Each template section may include a full width border (either color or image)
-        - Two template sections may be divided with a border that is either full page width or just 12 columns wide
+        - Two template sections may be divided with a border that is either full page width or just [12 columns](/design/c/grid/v1.0.0-beta.2/#rd-grid) wide
     contents:
       - type: narrow image
         src: ./assets/stacked.png
@@ -129,34 +135,57 @@ blocks:
     text: |
       ### Single column
       Dimensions
-      : - Full 12 column width at all breakpoints
+      : - Full [12 column](/design/c/grid/v1.0.0-beta.2/#rd-grid) width at all breakpoints
 
       Responsive
-      : - Maintain full 12 column width
+      : - Maintain full [12 column](/design/c/grid/v1.0.0-beta.2/#rd-grid) width
+    contents:
+      - type: wide image
+        src: ./assets/single.column.png
+        caption: The single column template.
 
+  - type: two column
+    text: |
       ### Two column
       Dimensions
-      : - Main area is 8 grid columns wide, sidebar is 4
+      : - Main area is [8 grid columns](/design/c/grid/v1.0.0-beta.2/#rd-grid) wide, sidebar is [4 columns](/design/c/grid/v1.0.0-beta.2/#rd-grid)
         - Prefer to locate the sidebar on the right, but both are acceptable
 
       Responsive
       : - At [medium](/design/c/breakpoints/v1.0.0/#rd-medium) and smaller breakpoints stack the two columns
         - Either the main area or sidebar area can come first
+    contents:
+      - type: wide image
+        src: ./assets/two.column.png
+        caption: The two column template.
 
+  - type: two column
+    text: |
       ### Static column
       Dimensions
       : - The large size is 800px wide at [large](/design/c/breakpoints/v1.0.0/#rd-large) breakpoints and larger
         - The small size is 480px wide at [medium](/design/c/breakpoints/v1.0.0/#rd-medium) breakpoints and larger
 
       Responsive
-      : - Below the breakpoints mentioned above, both sizes become 10 grid columns wide and centered
-        - Below the [small](/design/c/breakpoints/v1.0.0/#rd-small) breakpoint both sizes become the full 12 column width
+      : - Below the breakpoints mentioned above, both sizes become [10 grid columns](/design/c/grid/v1.0.0-beta.2/#rd-grid) wide and centered
+        - Below the [small](/design/c/breakpoints/v1.0.0/#rd-small) breakpoint both sizes become the full [12 column](/design/c/grid/v1.0.0-beta.2/#rd-grid) width
+    contents:
+      - type: wide image
+        src: ./assets/static.column.png
+        caption: The static column template.
+
+  - type: style table
+    styles:
+      - Single column
+      - Two column
+      - Static column
 
 changelog:
   - version: 1.0.0-beta.2
     changes: |
       - CHANGED: Finalize documentation
       - ADDED: Complete redline specifications
+      - ADDED: Dependency links
   - version: 1.0.0-beta.1
     changes: Initial version.
 ---
