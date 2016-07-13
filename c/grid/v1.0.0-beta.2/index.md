@@ -33,6 +33,8 @@ usage_guidelines: |
 blocks:
   - type: section
     name: Grid Structure
+    exports:
+      - Grid
 
   - type: two column
     text: |
@@ -71,7 +73,9 @@ blocks:
       Columns
       : - Equal widths, size determined by remaining space after accounting for the container width and gutter size
 
-
+  - type: style table
+    styles:
+      - Grid
 
 
 
