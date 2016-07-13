@@ -32,7 +32,7 @@ dependencies:
   - name: Application Header
     version: 1.1.0
   - name: Icons
-    version: 1.1.0
+    version: 1.1.0-beta.2
 
 tagline: |
   Presents help content and articles within the product experience so that users can answer their questions without the interruption of opening a separate help system in a new tab.
