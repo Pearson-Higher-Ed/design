@@ -228,17 +228,17 @@ dev_reqs:
       -  req: |
           G3: Responsive Components
          type: mandatory
-        extras:
-          - name: Explanation
-            content: |
-              Responsive Web Design allows web pages to correctly format on any screen size. The application must balance the rich functionality associated with desktop usage with the ability to function on less powerful mobile devices.
-              
-              Principles for Responsive Web Design
-              A flexible, grid-based layout: This allows the layout to reflow to the screen size of any device. Uses relative sizing of grids. Allows grid layout to adjust to viewport size.
-              Flexible images and media: This allows the images and videos to reflow with the layout.
+         extras:
+           - name: Explanation
+             content: |
+               Responsive Web Design allows web pages to correctly format on any screen size. The application must balance the rich functionality associated with desktop usage with the ability to function on less powerful mobile devices.
 
-        approvers:
-          - PDA Development team
+               Principles for Responsive Web Design
+               A flexible, grid-based layout: This allows the layout to reflow to the screen size of any device. Uses relative sizing of grids. Allows grid layout to adjust to viewport size.
+               Flexible images and media: This allows the images and videos to reflow with the layout.
+
+         approvers:
+           - PDA Development team
 
       - req: |
           G4: New components should not duplicate the functionality found in existing components.
@@ -264,7 +264,7 @@ dev_reqs:
             content: We recommend using [this validator](#).
         approvers:
           - PDA accessibility team
-          - 
+          -
   - name: Browser and Device Support
     description: |
       The components should adhere to pearson standard browser policy and device support. There are two levels of support: Optimized and Supported.
@@ -296,7 +296,7 @@ dev_reqs:
           R2: Testing of long string when localized
         type: mandatory
         approvers:
-          - PDA Development team      
+          - PDA Development team
 
   - name: Localization (L10n)
     description: |
@@ -312,13 +312,13 @@ dev_reqs:
           R2: Use of currency
         type: mandatory
         approvers:
-          - PDA Development team   
+          - PDA Development team
 
       - req: |
           R2: Collation and sorting
         type: suggested
         approvers:
-          - PDA Development team       
+          - PDA Development team
 
   - name: QA
     description: |
@@ -331,15 +331,15 @@ dev_reqs:
           - PDA QA team
 
       - req: |
-          Tools Used: Click the [following link](https://neo.pearson.com/docs/DOC-607807#jive_content_id_Tools_used) to use the tools used for Automated testing and test scripts. 
-          
-          
+          Tools Used: Click the [following link](https://neo.pearson.com/docs/DOC-607807#jive_content_id_Tools_used) to use the tools used for Automated testing and test scripts.
+
+
         type: optional
         approvers:
           - PDA QA team
       - req: |
           How to Contribute: You can fork the repo or create a branch out of master and make your changes, create a Pull Request for your changes to merge into this Original master branch. Click the [following link](https://neo.pearson.com/docs/DOC-607807#jive_content_id_How_to_contribute_to_this_repo) to see more details on how to contribute.
-          
+
         type: optional
         approvers:
           - PDA QA team
