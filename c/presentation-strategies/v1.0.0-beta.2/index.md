@@ -13,6 +13,10 @@ people:
     name: Parker Malenke
     email: parker.malenke@pearson.com
 
+downloads:
+  - name: UX Accessibility Checklist
+    link: https://docs.google.com/a/pearson.com/document/d/1Qqu-JHvDYsNAqUP3rFaNkqR0c2Si9g3ephR7qhZ12u4/edit?usp=sharing
+
 tagline: |
   This component provides several standard strategies for presenting content within a layout template.
 features:
@@ -51,6 +55,8 @@ blocks:
 
   - type: section
     name: Default
+    exports:
+      - Default strategy
 
   - type: two column
     text: |
@@ -61,6 +67,8 @@ blocks:
 
   - type: section
     name: Centered
+    exports:
+      - Centered strategy
 
   - type: two column
     text: |
@@ -73,6 +81,8 @@ blocks:
 
   - type: section
     name: Left/Right
+    exports:
+      - Left/Right strategy
 
   - type: two column
     text: |
@@ -85,6 +95,8 @@ blocks:
 
   - type: section
     name: Basic Grid
+    exports:
+      - Basic Grid strategy
 
   - type: two column
     text: |
@@ -136,6 +148,14 @@ blocks:
       - type: narrow image
         src: ./assets/basic-grid4.png
         caption: The basic grid presentation strategy in a four column mode with small gutters.
+
+
+  - type: style table
+    styles:
+      - Default strategy
+      - Centered strategy
+      - Left/Right strategy
+      - Basic Grid strategy
 
 changelog:
   - version: 1.0.0-beta.2
