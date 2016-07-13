@@ -20,13 +20,17 @@ people:
     name: Annie Persson
     email: ann.persson@pearson.com
 
+downloads:
+  - name: UX Accessibility Checklist
+    link: https://docs.google.com/a/pearson.com/document/d/1YjPJz6ZJgG6m4iJvtTFYuhIBGVuefHpzYx3H_lPU-vo/edit?usp=sharing
+
 dependencies:
   - name: Drawer
     version: 1.0.0-beta.7
   - name: Typography
     version: 1.0.0
   - name: Application Header
-    version: 1.1.0-beta.3
+    version: 1.1.0
   - name: Icons
     version: 1.1.0
 
@@ -49,7 +53,7 @@ blocks:
     text: |
       This displays a listing of help articles relevant to the current url. Every url in the next gen platform should offer a Help List through this component. Common functionality includes:
 
-      * Universal access through the [Header](/design/c/application-header/v1.1.0-beta.3/#rd-signed-out-mode)
+      * Universal access through the [Header](/design/c/application-header/v1.1.0/#rd-signed-out-mode)
       * Standard location of 'Contact Support' information
       * Articles relevant to the user's current location and role
 
@@ -83,7 +87,7 @@ blocks:
 
   - type: two column
     text: |
-      Selecting the "Help" link in the [App Header](/design/c/application-header/v1.1.0-beta.3/#rd-signed-out-mode) will open the Help List. You can also navigate directly to an article (either a standalone article or one from the list) through embedded activation.
+      Selecting the "Help" link in the [App Header](/design/c/application-header/v1.1.0/#rd-signed-out-mode) will open the Help List. You can also navigate directly to an article (either a standalone article or one from the list) through embedded activation.
 
       A Help icon or a "Learn More" link can be used to activate an article from within the page. These should be positioned near the relevant portion of the page. Avoid mixing and matching both styles in the same page.
     contents:
@@ -309,6 +313,7 @@ changelog:
   - version: 1.0.0-beta.5
     changes: |
       - UPDATED: Author guidelines with latest UA documentation.
+      - ADDED: Accessibility checklist
   - version: 1.0.0-beta.4
     changes: |
       - ADDED: Accordion styles
