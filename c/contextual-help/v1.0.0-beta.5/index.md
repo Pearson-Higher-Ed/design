@@ -27,9 +27,11 @@ dependencies:
     version: 1.0.0
   - name: Application Header
     version: 1.1.0-beta.3
+  - name: Icons
+    version: 1.1.0
 
 tagline: |
-  This component presents help content and articles within the product experience so that users can answer their questions without the interruption of opening a separate help system in a new tab.
+  Presents help content and articles within the product experience so that users can answer their questions without the interruption of opening a separate help system in a new tab.
 usage_guidelines: |
   Every url in the next gen platform should use the Contextual Help component, at a minimum configuring the two default items in the Help List.
 
@@ -83,7 +85,7 @@ blocks:
     text: |
       Selecting the "Help" link in the [App Header](/design/c/application-header/v1.1.0-beta.3/#rd-signed-out-mode) will open the Help List. You can also navigate directly to an article (either a standalone article or one from the list) through embedded activation.
 
-      A Help icon or a "Learn More" link can be used to activate an article from within the page. These should be positioned near the relevant portion of the page.
+      A Help icon or a "Learn More" link can be used to activate an article from within the page. These should be positioned near the relevant portion of the page. Avoid mixing and matching both styles in the same page.
     contents:
       - type: wide image
         src: ./assets/embedded-activation.png
@@ -95,7 +97,7 @@ blocks:
   - type: two column
     text: |
       ### Accordions
-      Content may be grouped into accordions which help organize and condense information. See authoring guidelines for details on how to include an accordion in your article.
+      Content may be grouped into accordions which help organize and condense information. See the [Authoring Guidelines](#authoring-guidelines) below for details on how to include an accordion in your article.
 
       ### Info Boxes
       Authors may call extra attention to important information by wrapping it in an info box. There are three types available: 'Tip', 'Note', and 'Important'.
@@ -114,7 +116,7 @@ blocks:
     text: |
       Use these guidelines when authoring articles for the Contextual Help component.  If you’re using MadCap Flare to author articles, see these [specifics for preparing Flare files][flare].
 
-      [flare]: https://docs.google.com/document/d/1nHNR5nudYBv_GGhSDoYHIvdxcEClsmSex0TcOw5G6kM/edit?ts=5739f2e3
+      [flare]: https://docs.google.com/document/d/1tQVifP2ynJhHlg7R-Odk2Ej1qQxMs0SQ67fYzTlYjM8/edit?ts=578397b6
     contents:
       - type: text
         content: |
@@ -128,8 +130,8 @@ blocks:
           * Include accordions when necessary to improve readability of longer topics or procedures.
           * Link to external assets such as EI guides, Marketing PDFs, Videos, etc. from within the Popular Resources articles when relevant.
           * Add Help List articles that are role specific (educator/learner/TA).
-          * List up to 5 custom articles at the top of the list. Custom articles are specifically relevant to features/tools accessible at the current URL. If the feature/tool is only available under certain conditions  it must be documented in a Standalone Article instead.
-          * Follow the formatting guidelines.
+          * List up to 5 custom articles at the top of the list. These should be specifically relevant to features/tools accessible at the current URL. If the feature/tool is only available under certain conditions  it must be documented in a Standalone Article instead.
+          * Follow the formatting guidelines below.
 
           ### Don't
           * Reformat the layout or structure of Popular Resources and Contact Us article types. Your [UA Design representative](mailto:ann.persson@pearson.com) on the UXF Team will work with you in reviewing recommendations to ensure standardized contextual help articles are uniform across the customer experience.
@@ -141,27 +143,46 @@ blocks:
           * Link out to Online Help Systems.
 
           ### Formatting guidelines
+          After you’ve  committed your contextual help files to SVN, a sanitization script runs to clean the source html files to follow the tag conventions established by the UX framework.
 
-          #### Titles
-          Every article should have a single title at the top, encoded as an `<h4>` tag after sanitization.
+          **Sanitization**  
+          The [sanitization](https://en.wikipedia.org/wiki/HTML_sanitization) script alleviates authors from having to worry about the details of code and html tags used in their help files. Headings, sub-headings, body copy, bold and italics, lists and unordered lists, etc. are all reviewed and cleaned by the sanitization script to follow the same html semantics as other components. Sanitization also helps to ensure we are following accessibility best practices.
 
-          #### Headings
-          Articles headings should be structured and encoded as `<h5>` and `<h6>` tags after sanitization.
+          **Accordions**  
+          Enables authors to transform sub-headings into expand and collapsable blocks of content. The accordion component should be used within help articles to chunk content by sub-topics, infinitive phrases, step procedures exceeding 9 steps, or to replace “see topic xyz” links.
 
-          #### Bold and italics
-          Should be used normally to provide emphasis. The name of interactive elements (i.e. button labels) must be bolded.
 
-          #### Unordered lists
-          Should be used to organize content. Must not be nested more than two levels.
+          **Accordion Tags**  
+          To use use the accordion component, you will apply specific tags in your html files whether you are working from MadCap Flare, Dreamweaver, or other development tools. Here’s a couple examples showing how you would apply the accordion component to your sub-heading and paragraph tags.
 
-          #### Ordered lists
-          Should be used to describe steps in a workflow. Should not exceed 9 items in length.
+          *Example HTML code for an accordion*
 
-          #### Tips and notes
-          Should be used to give handy bits of information more emphasis.
+          ~~~
+          <h1>This is your topic heading</h1>
+          <p>This is your introduction paragraph for the topic.</p>
 
-          #### Accordions
-          Should be used for topics containing sub-topics or step procedures exceeding 9 steps.
+          <ul id="accordion" class="demo-accordion">
+            <li>
+              <div class="demo-panel-body">
+                <div class="demo-panel-heading">
+                  <h2 data-toggle="o-collapse" data-target="#accordion-1" data-parent="#accordion">This is your sub-topic heading</h2>
+                </div>
+                <div class="demo-panel-body">
+                  <p id="accordion-1" class="o-collapse">This is your paragraph text.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          ~~~
+
+          *Example output from above code*  
+          <div style="width: 370px;">
+            <img src="./assets/accordion-example.png" />
+          </div>
+
+          *MadCap Flair*  
+          Flare authors will use the accordion snippet to apply the accordion component tags. Refer to the [UA Team documentation](https://docs.google.com/document/d/1tQVifP2ynJhHlg7R-Odk2Ej1qQxMs0SQ67fYzTlYjM8/edit?ts=578397b6) on how to prepare Flare files to use the accordion snippet.
+
 
   - type: section
     name: Redlines
@@ -285,6 +306,9 @@ blocks:
 
 
 changelog:
+  - version: 1.0.0-beta.5
+    changes: |
+      - UPDATED: Author guidelines with latest UA documentation.
   - version: 1.0.0-beta.4
     changes: |
       - ADDED: Accordion styles
