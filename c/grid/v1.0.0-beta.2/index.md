@@ -59,14 +59,14 @@ blocks:
         - Always horizontally centered
 
       Container Margins
-      : - ≥ 40px at Large and Extra Large breakpoints
-        - 20px at Small and Medium breakpoints
+      : - ≥ 40px at [Large and Extra Large](/design/c/breakpoints/v1.0.0/#rd-large) breakpoints
+        - 20px at [Small and Medium](/design/c/breakpoints/v1.0.0/#rd-medium) breakpoints
         - 10px at Extra Small breakpoints
 
       Gutters
-      : - 40px at Medium and larger breakpoints
-        - 20px at Small breakpoints
-        - 10px at Extra Small breakpoints
+      : - 40px at [Medium](/design/c/breakpoints/v1.0.0/#rd-medium) and larger breakpoints
+        - 20px at [Small](/design/c/breakpoints/v1.0.0/#rd-small) breakpoints
+        - 10px at [Extra Small](/design/c/breakpoints/v1.0.0/#rd-extra-small) breakpoints
 
       Columns
       : - Equal widths, size determined by remaining space after accounting for the container width and gutter size
@@ -80,6 +80,7 @@ changelog:
     changes: |
       - UPDATED: Documentation
       - ADDED: Accessibility checklist
+      - ADDED: Dependency links
   - version: 1.0.0-beta.1
     changes: Initial version.
 ---
