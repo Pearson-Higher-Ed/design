@@ -213,12 +213,6 @@ dev_reqs:
         approvers:
           - PDA Development team
 
-
-
-
-
-
-
       - req: |
           G2: Standalone components must use the [Component Archetype][ca] as a starting point.
 
@@ -231,8 +225,9 @@ dev_reqs:
         approvers:
           - PDA Development team
 
--  req: |
-          G1: Responsive Components
+      -  req: |
+          G3: Responsive Components
+         type: mandatory
         extras:
           - name: Explanation
             content: |
@@ -246,7 +241,7 @@ dev_reqs:
           - PDA Development team
 
       - req: |
-          G3: New components should not duplicate the functionality found in existing components.
+          G4: New components should not duplicate the functionality found in existing components.
         type: suggested
         extras:
           - name: Explanation
