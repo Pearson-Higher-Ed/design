@@ -158,6 +158,7 @@
   }
 
   .text-content {
+    width: 100%;
     h3 { @include hl3; }
     h4 { @include hl4; }
     h5 { @include hl5; }
