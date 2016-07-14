@@ -32,7 +32,7 @@ dependencies:
   - name: Application Header
     version: 1.1.0
   - name: Icons
-    version: 1.1.0-beta.2
+    version: 1.1.0-beta.3
 
 tagline: |
   Presents help content and articles within the product experience so that users can answer their questions without the interruption of opening a separate help system in a new tab.
@@ -235,7 +235,7 @@ blocks:
     text: |
       ### Embedded Activation
       Icon
-      : - Question mark icon
+      : - [question-circle](/design/c/icons/v1.1.0-beta.3/#rd-question-circle)
         - [Large Label](/design/c/typography/v1.0.0/#rd-large-label) sizing
         - [Link formatting](/design/c/typography/v1.0.0/#rd-links)
 
