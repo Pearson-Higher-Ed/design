@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Drawer
 section: Components
-version: 1.0.0-beta.8
-status: deprecated
+version: 1.0.0
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -208,35 +208,6 @@ blocks:
       - Detail View
 
 changelog:
-  - version: 1.0.0-beta.8
-    changes: |
-      - ADDED: Ability to include 100% width divider lines and custom background colors
-  - version: 1.0.0-beta.7
-    changes: |
-      - ADDED: Dimensions to redlines
-      - ADDED: Dependency links for breakpoints
-  - version: 1.0.0-beta.6
-    changes: |
-      - CHANGED: Dependencies to final versions.
-      - ADDED: Missing colors dependency.
-      - ADDED: Additional detail on focus behavior for keyboard users.
-  - version: 1.0.0-beta.5
-    changes: |
-      - ADDED: Dependency links
-  - version: 1.0.0-beta.4
-    changes: |
-      - ADDED: Exported styles
-  - version: 1.0.0-beta.3
-    changes: |
-      - ADDED: Animation redlines
-      - ADDED: Accessibility checklist
-      - ADDED: Sketch and AI mockups
-
-  - version: 1.0.0-beta.2
-    changes: |
-      - ADDED: Basic -> Detail transition video
-      - ADDED: Initial redlines
-
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: Initial version.
 ---
