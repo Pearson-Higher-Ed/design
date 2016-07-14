@@ -26,7 +26,7 @@ downloads:
 
 dependencies:
   - name: Drawer
-    version: 1.0.0-beta.7
+    version: 1.0.0
   - name: Typography
     version: 1.0.0
   - name: Application Header
@@ -57,7 +57,7 @@ blocks:
       * Standard location of 'Contact Support' information
       * Articles relevant to the user's current location and role
 
-      Selecting an article opens it within a [detail view](/design/c/drawer/v1.0.0-beta.7/#rd-detail-view) in the drawer.
+      Selecting an article opens it within a [detail view](/design/c/drawer/v1.0.0/#rd-detail-view) in the drawer.
     contents:
       - type: narrow image
         src: ./assets/help-list.png
@@ -196,7 +196,7 @@ blocks:
       ### Help List
 
       Container
-      : - [Drawer Basic View](/design/c/drawer/v1.0.0-beta.7/#rd-basic-view)
+      : - [Drawer Basic View](/design/c/drawer/v1.0.0/#rd-basic-view)
 
       Dimensions
       : - 20px margin above article title and below article excerpt
@@ -218,8 +218,8 @@ blocks:
       ### Article Detail
 
       Container
-      : - [Drawer Detail View](/design/c/drawer/v1.0.0-beta.7/#rd-detail-view) for articles from the help list
-        - [Drawer Basic View](/design/c/drawer/v1.0.0-beta.7/#rd-basic-view) for standalone articles
+      : - [Drawer Detail View](/design/c/drawer/v1.0.0/#rd-detail-view) for articles from the help list
+        - [Drawer Basic View](/design/c/drawer/v1.0.0/#rd-basic-view) for standalone articles
         - Title is 'Help Topic' for standalone articles
 
       Typography
