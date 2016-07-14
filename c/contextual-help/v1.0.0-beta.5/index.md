@@ -264,7 +264,7 @@ blocks:
         - Accordion content follows the same type style as the surrounding text
 
       Icon
-      : - caret-right for unopened items, caret-down for opened
+      : - [caret-right](/design/c/icons/v1.1.0-beta.2/#rd-caret-right) for unopened items, [caret-down](/design/c/icons/v1.1.0-beta.2/#rd-caret-down) for opened
 
       Behavior
       : - Users can open accordion items independently from each other (i.e. opening an item doesn't autoclose other items that are already open)
@@ -285,9 +285,9 @@ blocks:
       : - 1px [hairline gray](/design/c/colors/v1.0.1/#rd-hairline-gray-d0d0d0) line separating title from content
 
       Icons
-      : - lightbulb for Tip
-        - info-circle for Note
-        - exclamation-circle for Warning
+      : - [light-bulb-o](/design/c/icons/v1.1.0-beta.2/#rd-light-bulb-o) for Tip
+        - [info-circle](/design/c/icons/v1.1.0-beta.2/#rd-info-circle) for Note
+        - [exclamation-circle](/design/c/icons/v1.1.0-beta.2/#rd-exclamation-circle) for Warning
         - 8px padding between icon and title
 
       Typography
