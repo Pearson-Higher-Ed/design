@@ -24,7 +24,7 @@ downloads:
 tagline: |
   This component defines the standard visual style for the output display of an avatar element.
 features:
-  - Square and circular display shapes
+  - Circular display shape
   - Large and small display sizes
 usage_guidelines: |
   Every instance of the avatar display element should come from this component.
@@ -32,20 +32,6 @@ usage_guidelines: |
 blocks:
   - type: section
     name: Avatar Shape
-
-  - type: two column
-    text: |
-      The avatar display component can be rendered in two shapes.
-
-      ### Square
-
-    contents:
-      - type: narrow image
-        src: ./assets/square-default.png
-        caption: Default Avatar
-      - type: narrow image
-        src: ./assets/square-photo.png
-        caption: Photo Avatar
 
   - type: two column
     text: |
@@ -70,9 +56,11 @@ blocks:
 
     contents:
       - type: narrow image
-        src: ./assets/square-photo.png
+        src: ./assets/circle-default.png
+        caption: Default Avatar
       - type: narrow image
         src: ./assets/circle-photo.png
+        caption: Photo Avatar
 
   - type: two column
     text: |
@@ -80,9 +68,11 @@ blocks:
 
     contents:
       - type: narrow image
-        src: ./assets/square-photo-sm.png
+        src: ./assets/circle-default-sm.png
+        caption: Default Avatar
       - type: narrow image
         src: ./assets/circle-photo-sm.png
+        caption: Photo Avatar
 
   - type: section
     name: Redlines
@@ -100,8 +90,6 @@ blocks:
 
     contents:
     - type: narrow image
-      src: ./assets/square-photo-red.png
-    - type: narrow image
       src: ./assets/circle-photo-red.png
 
   - type: two column
@@ -116,8 +104,6 @@ blocks:
       : - Border Radius: 50%
 
     contents:
-    - type: narrow image
-      src: ./assets/square-photo-sm-red.png
     - type: narrow image
       src: ./assets/circle-photo-sm-red.png
 
