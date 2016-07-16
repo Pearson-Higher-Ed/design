@@ -221,7 +221,7 @@ dev_reqs:
         extras:
           - name: Explanation
             content: |
-              The scaffolding template will help the teams with sample npm scripts, live reload, CI Integration etc.
+              The starter kit implements best practices like testing, linting, bundling, transpiling ES6 to ES5, etc. It codifies a long list of decisions that you no longer have to make to get rolling. It saves you from the long, painful process of wiring it all together into an automated development environment and build process.
         approvers:
           - PDA Development team
 
@@ -362,7 +362,7 @@ dev_reqs:
 
   - name: ES6
     description: |
-      The ES6 or ES2015 syntax is recommended be used to create components. should be  should not call a backend service directly to get data. The architecture is designed for the components to be loosely coupled from the service to provide highly reusable front end components. The components would need data in a certain expected format. It is the responsibility of the client application to call the service, get data and provide it to the component in the format expected.
+      The ES6 or ES2015 syntax is recommended be used to create components. Presentational components must not call a backend service directly to get data. The architecture is designed for the components to be loosely coupled from the service to provide highly reusable front end components. The components would need data in a certain expected format. It is the responsibility of either the consuming application or a container component to fetch and aggregate data from a RESTful API.
     reqs:
       - req: |
           R1: Use ES6 to write components.
