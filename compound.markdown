@@ -10,7 +10,7 @@ section: contribute
 
     -   **Generic**
 
-        -   **A11y**
+        -   **Accessibility (a11y)**
 
             -   Rendered HTML must be valid (pass validation, we'll link
                  to validators).
@@ -92,13 +92,11 @@ section: contribute
 
     -   Unit / Functional testing
 
-        -   Karma - Test Runner
-
         -   Mocha - Testing framework
 
-        -   Chai - Assertion Library
+        -   expect - Assertion Library
 
--   **Performance requirements**
+-   **Performance suggestions**
 
     -   Caching: Fetching resources over the network is both slow and
          expensive: the download may require multiple round trips
@@ -114,25 +112,25 @@ section: contribute
          encounters a script it has to stop and execute it before it
          can continue parsing the HTML. In the case of an external
          script the parser is also forced to wait for the resource to
-         download, which may incur one or more network roundtrips and
+         download, which may incur one or more network round trips and
          delay the time to first render of the page.
 
 -   **Data fetching policy**
 
-    -   Components should not call a backend service directly to
+    -   Presentational components should not call a backend service directly to
          get data. The architecture is designed for the components to
          be loosely coupled from the service to provide highly reusable
          front end components. The components would need data in a
          certain expected format. It is the responsibility of the
-         client application to call the service, get data and provide
-         it to the component in the format expected.
+         client application or a container component to call the service, retrieve data, and provide
+         it in the format expected.
 
--   **Readme**
+-   **README**
 
-    -   All teams are expected to add a readme file with
+    -   All teams are expected to add a README file with
          their component. It is expected for the team to add an
          introduction and brief overview of the component. The
-         following items are useful to be added in the readme file:
+         following items are useful to be added in the README file:
 
         -   Introduction
 
@@ -184,13 +182,15 @@ section: contribute
              extends React.Component like:
 
 						 // The ES5 way
+						 //
 						 var Origami = React.createClass({
 						
 						 function1: function(e) { … },
 							 render: function() { … },
 						 });
 						
-						 // The ES6 way\
+						 // The ES6 way
+						 //
 						 class Origami extends React.Component {
 							 function1(e) { … }
 							 render() { … }
@@ -208,7 +208,7 @@ section: contribute
 
     -   The following template can be used for creating an Origami
          React component. As described above the component will be
-         written in ReactJS using ES6 style. The main module for the
+         written in ReactJS using ES6 syntax. The main module for the
          component is called main.js and a sample package.json file is
          provided with scripts to be used for developing, building and
          publishing the component. Details on the development, building
@@ -238,12 +238,8 @@ section: contribute
     -   All components need to have test scripts. Tests should be part
          of the build process. It is highly recommended to run all test
          scripts with 100% code coverage as part of your build process.
-         Unit test should be written with Chai and Mocha. Minimum 80%.
-         npm run test
-
-	-	 Karma can be used to run the tests. Karma is a test runner. Karma uses
-		 your test framework to run tests in various environments of your
-		 choice.
+         Unit tests should be written using the Mocha framework. Minimum 80%.
+         **‘npm test‘**
 
 -   **Webpack**
 	 
@@ -258,22 +254,25 @@ section: contribute
 	     of [module loaders](https://webpack.github.io/docs/loaders.html).
 	     This effectively allows us to represent the whole application as a
 	     single, pre-built, minified file, assets and all.
+	     
+	-   Webpack provides additional tooling such as a dev server, hot reloading,
+	     and source maps which greatly speed up and enhance the development process.
 
 	-   Webpack can be run using a command line with parameters to the entry
 	     file (main.js) and the output file (bundle.js).
 	
 	-   It is recommend to create a webpack.config.js file to store all
-	     config settings for webpack including the entry and the
+	     config settings for webpack including the entry point and the resulting 
 	     bundle file.
 
 
 
--   **Npm Registry**
+-   **npm Registry**
 
     -   Components will be published to npm instead of the proprietary
          registry used earlier by Origami. With Continuous Integration
-         and npm script the component will be tested, build and pushed
-         to npm automatically using a script.
+         and npm scripts, the component will be tested, built and published
+         to the npm registry automatically using a release script.
 
 -   **Continuous Integration**
 
@@ -284,7 +283,7 @@ section: contribute
          to npm will use a admin id which is part of the Pearson
          Organization in npm with the scope @pearson-components.
 
--   **Npm Scoped Packages (default private)**
+-   **npm Scoped Packages (default private)**
 
     -   The component will be automatically published under the Pearson
          scope @pearson-components in npm. The access to the component
@@ -295,7 +294,7 @@ section: contribute
          components can only be installed by members of the Pearson
          Organization in npm.
 
--   **Steps to integrate github with travis**
+-   **Steps to integrate Github with TravisCI**
 
     -   First go to [https://travis-ci.org]() and sign in with your
          GitHub account.
@@ -375,9 +374,9 @@ section: contribute
          is acceptable. Studies suggest the sharper but more compressed
          image works equally well on high and low density screens.
 
-    -   Use an optimisation tool such as
+    -   Use an optimization tool such as
          [*ImageOptim*](https://imageoptim.com/) to remove unnecessary
-         metadata and colour profiles.
+         metadata and color profiles.
 
     -   Scale image containers with viewport size so that images do not
          cause pages to scroll horizontally on small screens.
@@ -387,7 +386,7 @@ section: contribute
              on both the mobile and desktop categories. This will cover
              off a wide variety of performance related best practices,
              including minification and concatenation of assets, image
-             sizing and avoiding subresource requests that
+             sizing and avoiding sub-resource requests that
              block rendering.
 
     -   **Security**
@@ -429,9 +428,9 @@ section: contribute
 
 -   **JavaScript**
 
-    -   **Lint your code** Consider running
+    -   **Lint your code** Consider running 
          [*ESLint*](http://www.eslint.org/) over your JavaScript. The
-         syntax standards used by sample react component are a good set
+         syntax standards used by the component archetype are a good set
          of rules to use.
 
 

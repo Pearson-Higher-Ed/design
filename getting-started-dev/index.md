@@ -4,14 +4,16 @@ title: Developer Guide
 section: use
 ---
 
-Components are being hosted on NPM under the [pearson-ux organization][npm-org].
+Components are being hosted on NPM under the [@pearson-components organization][npm-org]. The majority will be available
+in public scope, but some will be privately scoped and require credentials to install.
 
 ## SDKs
 
 We plan to offer two SDKs which package a set of commonly used components together for easy installation and usage.
 
 ### Elements
-Elements SDK consists of pure CSS and includes the core set of components for setting up a website with Elemental Design. This list includes components such as:
+Elements SDK consists of pure CSS (precompiled from SCSS) and includes the core set of components for setting up a 
+website with Elemental Design. This list includes components such as:
 
 - Buttons
 - Colors
@@ -19,10 +21,13 @@ Elements SDK consists of pure CSS and includes the core set of components for se
 - Breakpoints
 - Icons
 
-In addition to the compiled CSS, Elements also installs the source SCSS files (and assets) in case you want to integrate it more directly into your existing build process. This also allows you to access some of the SCSS features in your own styles, such as the predefined color variables. Read more on [Github][ghub] or in the [developer documentation][ddocs].
+In addition to the compiled CSS, Elements also installs the source SCSS files (and assets) in case you want to integrate
+ it more directly into your existing build process. This also allows you to access some of the SCSS features in your own
+styles, such as the predefined color variables. Read more on [Github][ghub] or in the [developer documentation][ddocs].
 
 ### Compounds
-Compounds SDK will include commonly used components that leverage javascript for enhanced functionality and interactivity. This SDK is in progress.
+Compounds SDK will include commonly used components that leverage javascript for enhanced functionality and interactivity.
+ This SDK is in progress.
 
 [elements]: https://www.npmjs.com/package/pearson-elements
 [npm-org]: https://www.npmjs.com/~pearson-ux
@@ -30,7 +35,6 @@ Compounds SDK will include commonly used components that leverage javascript for
 [ghub]: https://github.com/pearson-higher-ed/elements/
 
 ## Consuming
-
 
 ### For All Teams
 
@@ -45,10 +49,10 @@ Compounds SDK will include commonly used components that leverage javascript for
 2. Review components library and, at a minimum, use Typography, Colors, Icons, Responsive Utilities from the Elements SDK:
 - [Elements][elementsSDK]
 - [Other Components][otherComps]
-3. Review AppHeader and Contextual Help for possible inclusion
+3. Review App Header and Contextual Help for possible inclusion
 4. Consume other components as needed using ‘npm install’ and component usage instructions. (See Team Scenario 4)
 
-### Team Scenario 2: Adding Elements SDK or vanilla JS components to Existing Application
+### Team Scenario 2: Adding Elements SDK or vanilla JS components to any Existing Application
 
 1. Install npm2+ and identify how npm modules will work with your build process
 2. Review the Elements SDK and, at a minimum, use Typography, Colors, Icons, Responsive Utilities:
@@ -59,11 +63,11 @@ Compounds SDK will include commonly used components that leverage javascript for
 
 ### Team Scenario 3: Adding Compounds SDK or React components to non-React Application
 1. Install npm2+ and identify how npm modules will work with your build process
-2. Add React/ReactDOM script includes to page
+2. Add React/ReactDOM dependencies, via either script includes to page or npm installation
 3. For Angular 1.x apps, review the compounds-ng wrapper
 - [compounds-ng wrapper][compoundsNG]
-4. Review the [Compounds SDK][compoundsSDK] (not published yet)
-5. Integrate npm installable AppHeader and Contextual Help
+4. Review the [Compounds SDK][compoundsSDK]
+5. Integrate npm installable App Header and Contextual Help
 6. Review the other components in the Pearson Origami npm registry
 - [Other Components][otherComps]
 7. Consume other components as needed using ‘npm install’ and component usage instructions
@@ -71,9 +75,8 @@ Compounds SDK will include commonly used components that leverage javascript for
 ### Team Scenario 4: Adding Compounds SDK or React components to existing React Application
 1. Install npm2+ and identify how npm modules will work with your build process
 2. If on React < 0.14, upgrade to React v15
-3. Because React dependency is externalized, require the component in your source and use webpack configured with appropriate loaders, rather than using distro bundles
-4. Review the [Compounds SDK][compoundsSDK] (not published yet)
-5. Integrate npm installable AppHeader and Contextual Help
+4. Review the [Compounds SDK][compoundsSDK]
+5. Integrate npm installable App Header and Contextual Help if desired
 6. Review the other components in the Pearson Origami npm registry
 - [Other Components][otherComps]
 7. Consume other components as needed using ‘npm install’ and component usage instructions
@@ -87,9 +90,13 @@ Compounds SDK will include commonly used components that leverage javascript for
 [compoundsNG]: https://github.com/Pearson-Higher-Ed/compounds-ng
 
 ## Contributing
-Read the [Component Creation Guide][creation] to learn about the process of adding a new component to the library. The development standards are currently being determined, for now please follow the [Origami principles][oprinciples]. If you are contributing to the Elements SDK follow [these guidelines][eprinciples] as well.
+Read the [Component Creation Guide][creation] to learn about the process of adding a new component to the library. The 
+development standards are currently being determined, for now please follow the [Origami principles][oprinciples]. If you
+ are contributing to the Elements SDK follow [these guidelines][eprinciples] as well.
 
-Development specific requirements will eventually be added to the [Library Membership Specification][spec]. In the meantime, one principle to keep in mind is that components should not do any data fetching themselves, rather they should expect data to be passed through eventing or properties.
+Development specific requirements will eventually be added to the [Library Membership Specification][spec]. In the meantime,
+ one principle to keep in mind is that components should not do any data fetching themselves, rather they should expect 
+ data to be passed through eventing or properties.
 
 [creation]: {{site.baseurl}}/component-creation-guide
 [spec]: {{site.baseurl}}/membership-spec
