@@ -75,11 +75,11 @@ Compounds SDK will include commonly used components that leverage javascript for
 ### Team Scenario 4: Adding Compounds SDK or React components to existing React Application
 1. Install npm2+ and identify how npm modules will work with your build process
 2. If on React < 0.14, upgrade to React v15
-4. Review the [Compounds SDK][compoundsSDK]
-5. Integrate npm installable App Header and Contextual Help if desired
-6. Review the other components in the Pearson Origami npm registry
+3. Review the [Compounds SDK][compoundsSDK]
+4. Integrate npm installable App Header and Contextual Help if desired
+5. Review the other components in the Pearson Origami npm registry
 - [Other Components][otherComps]
-7. Consume other components as needed using ‘npm install’ and component usage instructions
+6. Consume other components as needed using ‘npm install’ and component usage instructions
 
 
 [o-intro]: https://docs.google.com/presentation/d/1Jco66Dk7p0b7z0uJ7SvuUqgtiyaeSCtR4JpFLUX4fSk/edit#slide=id.g11de0b299f_0_0
