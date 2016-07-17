@@ -217,7 +217,7 @@ dev_reqs:
               - Testing
               - Related Resources
         approvers:
-          - ??
+          - PDA Team
 
       - req: |
           G3: Standalone components must use the [Component Archetype][ca] as a starting point.
@@ -227,9 +227,9 @@ dev_reqs:
         extras:
           - name: Explanation
             content: |
-              The scaffolding template will help the teams with sample npm scripts, live reload, CI Integration etc.
+              The starter kit implements best practices like testing, linting, bundling, transpiling ES6 to ES5, etc. It codifies a long list of decisions that you no longer have to make to get rolling. It saves you from the long, painful process of wiring it all together into an automated development environment and build process.
         approvers:
-          - Aaron Kaka?
+          - PDA Dev Team
 
       - req: |
           G4: New components should not duplicate the functionality found in existing components.
@@ -241,7 +241,7 @@ dev_reqs:
 
               When creating a new component it is recommended to use existing sub components and element required to create a new component. The key idea behind this is to reuse components wherever applicable.
         approvers:
-          - ??
+          - PDA Team
 
   - name: Accessibility
     description: |

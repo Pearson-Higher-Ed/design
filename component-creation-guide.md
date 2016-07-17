@@ -72,7 +72,7 @@ Submit a definition for review by sending an email to <elemental-review@pearson.
 
 
 ## 3. Implement
-Once your definition is approved you can begin building out the implementation. <s>Currently this should be done in accordance with Origami principles, but in the future there may be other implementation methods (e.g. Angular or React).</s> Development specs and standards are currently being created.
+Once your definition is approved you can begin building out the implementation. Start with the component archetype based on React, available at https://github.com/Pearson-Higher-Ed/component-archetype. This will be the fastest route to Origami spec compliance.
 
 ### Implementation Approval
 Last step! Once you've built a functional version of your component you can submit it for final review by the board (simply email <elemental-review@pearson.com> again). At this point they will just ensure the final product matches your definition and continues to fulfill the membership specification. If everything looks good the component will be added to the library and you're all set! If there are any issues the approvers will again work with you to bring things in line with the spec.
