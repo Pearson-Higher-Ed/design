@@ -1,6 +1,6 @@
 ---
 layout: component-yaml
-title: Drawer2
+title: Drawer
 section: Components
 version: 1.0.0-beta.2
 status: deprecated
