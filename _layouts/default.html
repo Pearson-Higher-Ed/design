@@ -68,41 +68,153 @@
 			  </div>
 			</span>
 		</header>
+		{% assign component_names = (site.pages | where: "section", "Components") | map: "title" | uniq | sort %}
+
 		{% assign components = (site.pages | where: "section", "Components") | sort:"title" %}
-		{% for page in components %}
-			{% if page.status != 'active' %}
-			{% elsif page.url contains 'beta' %}
-				{% assign versions = (site.pages | where: "title", page.title) %}
-				{% assign max = 0 %}
 
-				{% for version in versions %}
-					{% assign num = (version.version | split: '.' | last | round) %}
-					{% if num > max %}
-						{% assign max = num %}
-					{% endif %}
-				{% endfor %}
+		{% for component in component_names %}
+			{% assign versions = (components | where: "title", component) | where: "status", "active" %}
 
-				{% assign this_num = (page.version | split: '.' | last | round) %}
-				{% if this_num == max %}
-					<a class="component" href="{{site.baseurl}}{{page.url}}../beta" data-status="proposed">
-						<span class="pe-label pe-label--bold">{{page.title}}</span>
-						<div class="data pe-label">
-							{{page.tagline}}
-						</div>
-						<span class="pe-label">v{{page.version}}</span>
-						<span class="status pe-label pe-label--small">Proposed</span>
-					</a>
+			<div class="component" href="{{site.baseurl}}{{page.url}}../beta" data-status="proposed">
+				<!-- FIND LATEST OFFICIAL DESIGN -->
+				{% assign max_major = 0 %}
+		    {% assign max_minor = 0 %}
+		    {% assign max_patch = 0 %}
+
+		    {% for version in versions %}
+		      {% if version.version contains "beta" or version.version == nil %}
+		      {% else %}
+		        {% assign semver = (version.version | split: '.') %}
+		        {% assign major = (semver[0] | round) %}
+		        {% assign minor = (semver[1] | round) %}
+		        {% assign patch = (semver[2] | split: '-' | first | round) %}
+
+		        {% if major > max_major %}
+		          {% assign max_major = major %}
+		          {% assign max_minor = minor %}
+		          {% assign max_patch = patch %}
+		        {% elsif major == max_major and minor > max_minor %}
+		          {% assign max_minor = minor %}
+		          {% assign max_patch = patch %}
+		        {% elsif major == max_major and minor == max_minor and patch > max_patch %}
+		          {% assign max_patch = patch %}
+		        {% endif %}
+
+		      {% endif %}
+		    {% endfor %}
+
+		    {% capture latest_version %}{{max_major}}.{{max_minor}}.{{max_patch}}{% endcapture %}
+
+
+				<!-- FIND LATEST BETA VERSION -->
+				{% assign max_major = 0 %}
+		    {% assign max_minor = 0 %}
+		    {% assign max_patch = 0 %}
+		    {% assign max_beta  = 1 %}
+
+		    {% for version in versions %}
+		      {% if version.version == nil %}
+		      {% elsif version.version contains "beta" %}
+
+		        {% assign semver = (version.version | split: '.') %}
+		        {% assign major = (semver[0] | round) %}
+		        {% assign minor = (semver[1] | round) %}
+		        {% assign patch = (semver[2] | split: '-' | first | round) %}
+		        {% assign beta  = (semver[3] | round) %}
+
+		        {% if major > max_major %}
+		          {% assign max_major = major %}
+		          {% assign max_minor = minor %}
+		          {% assign max_patch = patch %}
+		          {% assign max_beta  = beta %}
+		        {% elsif major == max_major and minor > max_minor %}
+		          {% assign max_minor = minor %}
+		          {% assign max_patch = patch %}
+		          {% assign max_beta  = beta %}
+		        {% elsif major == max_major and minor == max_minor and patch > max_patch %}
+		          {% assign max_patch = patch %}
+		          {% assign max_beta  = beta %}
+		        {% elsif major == max_major and  minor == max_minor and patch == max_patch and beta > max_beta %}
+		          {% assign max_beta = beta %}
+		        {% endif %}
+
+		      {% endif %}
+		    {% endfor %}
+
+		    {% capture latest_beta_version %}{{max_major}}.{{max_minor}}.{{max_patch}}-beta.{{max_beta}}{% endcapture %}
+
+
+				<!-- FIND LATEST OFFICIAL DESIGN WITH AN IMPLEMENTATION -->
+				{% assign max_major = 0 %}
+		    {% assign max_minor = 0 %}
+		    {% assign max_patch = 0 %}
+
+		    {% for version in versions %}
+		      {% if version.version contains "beta" or version.version == nil %}
+		      {% elsif version.implemented %}
+		        {% assign semver = (version.version | split: '.') %}
+		        {% assign major = (semver[0] | round) %}
+		        {% assign minor = (semver[1] | round) %}
+		        {% assign patch = (semver[2] | split: '-' | first | round) %}
+
+		        {% if major > max_major %}
+		          {% assign max_major = major %}
+		          {% assign max_minor = minor %}
+		          {% assign max_patch = patch %}
+		        {% elsif major == max_major and minor > max_minor %}
+		          {% assign max_minor = minor %}
+		          {% assign max_patch = patch %}
+		        {% elsif major == max_major and minor == max_minor and patch > max_patch %}
+		          {% assign max_patch = patch %}
+		        {% endif %}
+
+		      {% endif %}
+		    {% endfor %}
+
+		    {% capture latest_impl_version %}{{max_major}}.{{max_minor}}.{{max_patch}}{% endcapture %}
+
+
+				<!-- SPIT OUT THE ACTUAL LITTLE CARD -->
+				{% if latest_version != '0.0.0' %}
+					{% assign latest_component = (versions | where: "version", latest_version) | first %}
+				{% else %}
+					{% assign latest_component = (versions | where: "version", latest_beta_version) | first %}
 				{% endif %}
-			{% else %}
-				<a class="component" href="{{site.baseurl}}{{page.url}}../" data-status="{% if page.implemented %}developed{% else %}designed{% endif %}">
-					<span class="pe-label pe-label--bold">{{page.title}}</span>
+
+				<a href="{{site.baseurl}}{{latest_component.url}}../{% if latest_component.url contains 'beta' %}beta{% endif %}">
+					<span class="pe-label pe-label--bold">{{component}}</span>
 					<div class="data pe-label">
-						{{page.tagline}}
+						{{latest_component.tagline}}
 					</div>
-					<span class="pe-label">v{{page.version}}</span>
-					<span class="status pe-label pe-label--small">{% if page.implemented %}Developed{% else %}Designed{% endif %}</span>
 				</a>
-			{% endif %}
+
+				<div class="versions">
+					{% if latest_version != '0.0.0' %}
+						<a href="{{site.baseurl}}{{latest_component.url}}../" class="version pe-label pe-label--small">
+							Design
+							<br />
+							v{{latest_version}}
+						</a>
+					{% endif %}
+
+					{% if latest_impl_version != '0.0.0' %}
+						<a href="{{site.baseurl}}{{latest_component.url}}" class="version pe-label pe-label--small">
+							Code
+							<br />
+							v{{latest_version}}
+						</a>
+					{% endif %}
+
+					{% if latest_beta_version != '0.0.0-beta.1' %}
+						<a href="{{site.baseurl}}{{latest_component.url}}../beta" class="version pe-label pe-label--small">
+							Beta
+							<br />
+							v{{latest_beta_version}}
+						</a>
+					{% endif %}
+				</div>
+
+			</div>
 		{% endfor %}
 	</div>
 
