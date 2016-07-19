@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Icons
 section: Components
-version: 1.1.0-beta.3
-status: deprecated
+version: 1.1.0
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -190,15 +190,9 @@ blocks:
       - question-circle
 
 changelog:
-  - version: 1.1.0-beta.3
+  - version: 1.1.0
     changes: |
-      - ADDED: question-circle icon
-  - version: 1.1.0-beta.2
-    changes: |
-      - ADDED: caret-right, caret-down, and light-bulb-o
-  - version: 1.1.0-beta.1
-    changes: |
-      - ADDED: Icons added for archive action, plus reading, business case, video, and image content types
+      - ADDED: question-circle, caret-right, caret-down, light-bulb-o, and icons for archive action, plus reading, business case, video, and image content types
       - TWEAKED: Icons should now all be displayed in Pitch (#231f20)
   - version: 1.0.0
     changes: |
