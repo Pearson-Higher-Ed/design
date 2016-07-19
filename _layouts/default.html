@@ -54,7 +54,7 @@
 	<div id="library" class="library">
 		<header class="pe-title clearfix">
 			Library
-			<span class="pull-right clearfix">
+			<!-- <span class="pull-right clearfix">
 				<div class="pe-checkbox pe-checkbox--unchecked">
 			    <input type="checkbox" id="chk3" checked name="proposed"><label for="chk3">Proposed</label>
 			  </div>
@@ -66,7 +66,7 @@
 				<div class="pe-checkbox pe-checkbox--unchecked">
 			    <input type="checkbox" id="chk5" checked name="developed"><label for="chk5">Developed</label>
 			  </div>
-			</span>
+			</span> -->
 		</header>
 		{% assign component_names = (site.pages | where: "section", "Components") | map: "title" | uniq | sort %}
 
