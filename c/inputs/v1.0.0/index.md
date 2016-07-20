@@ -4,6 +4,7 @@ title: Inputs
 section: Components
 redirect_from: /docs/ui-components/forms/
 status: active
+implemented: true
 version: 1.0.0
 people:
   - role: Product Owner

@@ -3,7 +3,7 @@ layout: component-yaml
 title: Inputs
 section: Components
 redirect_from: /docs/ui-components/forms/
-status: active
+status: deprecated
 version: 1.0.0-beta.5
 private: true
 people:
