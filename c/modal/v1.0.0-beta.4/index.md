@@ -3,8 +3,8 @@ layout: component-yaml
 title: Modal
 section: Components
 redirect_from: /docs/ui-components/modal/
-version: 1.0.0-beta.3
-status: deprecated
+version: 1.0.0-beta.4
+status: active
 implemented: false
 private: true
 people:
@@ -127,6 +127,9 @@ blocks:
       : - Title is [Basic Title](/design/c/typography/v1.0.0/#rd-basic-title)
         - Content should typically use the [Basic Body](/design/c/typography/v1.0.0/#rd-basic-body) styles
 
+      Dismissing
+      : - The text modal may be dismissing by selecting the 'X' icon or anywhere in the gray overlay
+
     contents:
     - type: wide image
       src: ./assets/redlines.modal-standard.png
@@ -159,8 +162,11 @@ blocks:
 
       Zooming
       : - Images can be zoomed to 100%, 150%, 200%, 250%, and 300% of the original size
-        - Once the image is larger than the viewport it may be panned by clicking and dragging
+        - Once the image is larger than the viewport it may be panned by clicking and dragging (or just dragging on touch devices)
         - `grab` and `grabbing` css cursors should be used when panning
+
+      Dismissing
+      : - The media modal may be dismissed by selecting the 'X' icon or anywhere in the gray overlay region
 
     contents:
     - type: wide image
@@ -168,6 +174,9 @@ blocks:
 
 
 changelog:
+  - version: 1.0.0-beta.4
+    changes: |
+      - ADDED: More details on the dismissing behavior
   - version: 1.0.0-beta.3
     changes: |
       - CHANGED: Merged standard and alternate modal types
