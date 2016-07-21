@@ -3,8 +3,8 @@ layout: component-yaml
 title: Contextual Help
 section: Components
 redirect_from: /docs/ui-components/contextual-help/
-version: 1.0.0-beta.5
-status: deprecated
+version: 1.0.0-beta.6
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -35,9 +35,9 @@ dependencies:
     version: 1.1.0-beta.3
 
 tagline: |
-  Presents help content and articles within the product experience so that users can answer their questions without the interruption of opening a separate help system in a new tab.
+  Presents help and support articles within the product experience so that users can answer their questions without the interruption of opening a separate help system in a new tab.
 usage_guidelines: |
-  Every url in the next gen platform should use the Contextual Help component, at a minimum configuring the two default items in the Help List.
+  Every URL in the Next Gen platform should use the Contextual Help component, at a minimum configuring the two default items in the Help List.
 
 features:
   - Answer user questions without leaving the product experience
@@ -51,7 +51,7 @@ blocks:
 
   - type: two column
     text: |
-      This displays a listing of help articles relevant to the current url. Every url in the next gen platform should offer a Help List through this component. Common functionality includes:
+      Displays a listing of help articles relevant to the current url. Every url in the next gen platform should offer a Help List through this component. Common functionality includes:
 
       * Universal access through the [Header](/design/c/application-header/v1.1.0/#rd-signed-out-mode)
       * Standard location of 'Contact Support' information
@@ -61,7 +61,7 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/help-list.png
-        caption: Initially the drawer presents a list of help articles for the page.
+        caption: Initially the drawer presents a list of contextual help and support articles for the page.
       - type: narrow image
         src: ./assets/article-detail.png
         caption: Selecting an article navigates into it, presenting the full content.
@@ -89,7 +89,7 @@ blocks:
     text: |
       Selecting the "Help" link in the [App Header](/design/c/application-header/v1.1.0/#rd-signed-out-mode) will open the Help List. You can also navigate directly to an article (either a standalone article or one from the list) through embedded activation.
 
-      A Help icon or a "Learn More" link can be used to activate an article from within the page. These should be positioned near the relevant portion of the page. Avoid mixing and matching both styles in the same page.
+      A Help icon or a "Learn more" link can be used to activate an article from within the page. These should be positioned near the relevant portion of the page. Avoid mixing and matching both styles in the same page.
     contents:
       - type: wide image
         src: ./assets/embedded-activation.png
@@ -104,14 +104,14 @@ blocks:
       Content may be grouped into accordions which help organize and condense information. See the [Authoring Guidelines](#authoring-guidelines) below for details on how to include an accordion in your article.
 
       ### Info Boxes
-      Authors may call extra attention to important information by wrapping it in an info box. There are three types available: 'Tip', 'Note', and 'Important'.
+      Authors may use info boxes to call attention to important information.
     contents:
       - type: narrow image
         src: ./assets/accordions.png
         caption: Example of accordions.
       - type: narrow image
         src: ./assets/tips.warnings.png
-        caption: General tip and warning boxes.
+        caption: General Tip and Important boxes.
 
   - type: section
     name: Authoring Guidelines
@@ -127,11 +127,11 @@ blocks:
 
           ### Do
           * Write articles at the 9th grade reading level. If you like, use the Spelling and Grammar feature in MS Word. Click Spelling and Grammar and under Options, select "Show readability statistics".
-          * Title articles in the form of a question. This is consistent with how issues are recorded in Salesforce Knowledge. Contact Us and Popular Resources are an exception to this guideline.
+          * Title articles in the form of a question. Contact Us and Popular Resources are an exception to this guideline.
           * List the 'Contact Us' article at the bottom of the Help List. The Contact Us article is single sourced across all products adopting the contextual help component. Authors can find the Contact Us file in the SVN o-help directory: `o-help-content/EN-US/ContactSupport.html`
           * List Popular Student Resources and Popular Instructor Resources articles in the second to last position of the Help List.
           * Use Online Help Google Analytics and tech support data to determine what info to include in articles. Work with [Mark Giardina](mailto:mark.giardina@pearson.com) and [Matt Norris](mailto:matt.norris@pearson) to request KB metrics and usage reports. Be sure to also take advantage of the [Snapshot Tool](https://hepq.pearson.com/login).
-          * Include accordions when necessary to improve readability of longer topics or procedures.
+          * Include accordions when necessary to improve readability of longer topics or procedures. Consider using them as a replacement for "See this help topic" links.
           * Link to external assets such as EI guides, Marketing PDFs, Videos, etc. from within the Popular Resources articles when relevant.
           * Add Help List articles that are role specific (educator/learner/TA).
           * List up to 5 custom articles at the top of the list. These should be specifically relevant to features/tools accessible at the current URL. If the feature/tool is only available under certain conditions  it must be documented in a Standalone Article instead.
@@ -181,10 +181,10 @@ blocks:
 
           *Example output from above code*  
           <div style="width: 370px;">
-            <img src="./assets/accordion-example.png" />
+            <img src="../v1.0.0-beta.6/assets/accordion-example.png" />
           </div>
 
-          *MadCap Flair*  
+          *MadCap Flare*  
           Flare authors will use the accordion snippet to apply the accordion component tags. Refer to the [UA Team documentation](https://docs.google.com/document/d/1tQVifP2ynJhHlg7R-Odk2Ej1qQxMs0SQ67fYzTlYjM8/edit?ts=578397b6) on how to prepare Flare files to use the accordion snippet.
 
 
@@ -310,6 +310,9 @@ blocks:
 
 
 changelog:
+  - version: 1.0.0-beta.6
+    changes: |
+      - UPDATED: Include latest feedback from UA.
   - version: 1.0.0-beta.5
     changes: |
       - UPDATED: Author guidelines with latest UA documentation.
