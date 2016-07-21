@@ -129,6 +129,7 @@ blocks:
 
       Dismissing
       : - The text modal may be dismissing by selecting the 'X' icon or anywhere in the gray overlay
+        - Pressing the escape key will also dismiss the modal
 
     contents:
     - type: wide image
@@ -167,6 +168,7 @@ blocks:
 
       Dismissing
       : - The media modal may be dismissed by selecting the 'X' icon or anywhere in the gray overlay region
+        - Pressing the escape key will also dismiss the modal
 
     contents:
     - type: wide image
