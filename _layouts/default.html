@@ -54,7 +54,7 @@
 	<div id="library" class="library">
 		<header class="pe-title clearfix">
 			Library
-			<!-- <span class="pull-right clearfix">
+			<span class="pull-right clearfix">
 				<div class="pe-checkbox pe-checkbox--unchecked">
 			    <input type="checkbox" id="chk3" checked name="proposed"><label for="chk3">Proposed</label>
 			  </div>
@@ -66,7 +66,7 @@
 				<div class="pe-checkbox pe-checkbox--unchecked">
 			    <input type="checkbox" id="chk5" checked name="developed"><label for="chk5">Developed</label>
 			  </div>
-			</span> -->
+			</span>
 		</header>
 		{% assign component_names = (site.pages | where: "section", "Components") | map: "title" | uniq | sort %}
 
@@ -75,111 +75,122 @@
 		{% for component in component_names %}
 			{% assign versions = (components | where: "title", component) | where: "status", "active" %}
 
-			<div class="component" href="{{site.baseurl}}{{page.url}}../beta" data-status="proposed">
-				<!-- FIND LATEST OFFICIAL DESIGN -->
-				{% assign max_major = 0 %}
-		    {% assign max_minor = 0 %}
-		    {% assign max_patch = 0 %}
+			<!-- FIND LATEST OFFICIAL DESIGN -->
+			{% assign max_major = 0 %}
+	    {% assign max_minor = 0 %}
+	    {% assign max_patch = 0 %}
 
-		    {% for version in versions %}
-		      {% if version.version contains "beta" or version.version == nil %}
-		      {% else %}
-		        {% assign semver = (version.version | split: '.') %}
-		        {% assign major = (semver[0] | round) %}
-		        {% assign minor = (semver[1] | round) %}
-		        {% assign patch = (semver[2] | split: '-' | first | round) %}
+	    {% for version in versions %}
+	      {% if version.version contains "beta" or version.version == nil %}
+	      {% else %}
+	        {% assign semver = (version.version | split: '.') %}
+	        {% assign major = (semver[0] | round) %}
+	        {% assign minor = (semver[1] | round) %}
+	        {% assign patch = (semver[2] | split: '-' | first | round) %}
 
-		        {% if major > max_major %}
-		          {% assign max_major = major %}
-		          {% assign max_minor = minor %}
-		          {% assign max_patch = patch %}
-		        {% elsif major == max_major and minor > max_minor %}
-		          {% assign max_minor = minor %}
-		          {% assign max_patch = patch %}
-		        {% elsif major == max_major and minor == max_minor and patch > max_patch %}
-		          {% assign max_patch = patch %}
-		        {% endif %}
+	        {% if major > max_major %}
+	          {% assign max_major = major %}
+	          {% assign max_minor = minor %}
+	          {% assign max_patch = patch %}
+	        {% elsif major == max_major and minor > max_minor %}
+	          {% assign max_minor = minor %}
+	          {% assign max_patch = patch %}
+	        {% elsif major == max_major and minor == max_minor and patch > max_patch %}
+	          {% assign max_patch = patch %}
+	        {% endif %}
 
-		      {% endif %}
-		    {% endfor %}
+	      {% endif %}
+	    {% endfor %}
 
-		    {% capture latest_version %}{{max_major}}.{{max_minor}}.{{max_patch}}{% endcapture %}
-
-
-				<!-- FIND LATEST BETA VERSION -->
-				{% assign max_major = 0 %}
-		    {% assign max_minor = 0 %}
-		    {% assign max_patch = 0 %}
-		    {% assign max_beta  = 1 %}
-
-		    {% for version in versions %}
-		      {% if version.version == nil %}
-		      {% elsif version.version contains "beta" %}
-
-		        {% assign semver = (version.version | split: '.') %}
-		        {% assign major = (semver[0] | round) %}
-		        {% assign minor = (semver[1] | round) %}
-		        {% assign patch = (semver[2] | split: '-' | first | round) %}
-		        {% assign beta  = (semver[3] | round) %}
-
-		        {% if major > max_major %}
-		          {% assign max_major = major %}
-		          {% assign max_minor = minor %}
-		          {% assign max_patch = patch %}
-		          {% assign max_beta  = beta %}
-		        {% elsif major == max_major and minor > max_minor %}
-		          {% assign max_minor = minor %}
-		          {% assign max_patch = patch %}
-		          {% assign max_beta  = beta %}
-		        {% elsif major == max_major and minor == max_minor and patch > max_patch %}
-		          {% assign max_patch = patch %}
-		          {% assign max_beta  = beta %}
-		        {% elsif major == max_major and  minor == max_minor and patch == max_patch and beta > max_beta %}
-		          {% assign max_beta = beta %}
-		        {% endif %}
-
-		      {% endif %}
-		    {% endfor %}
-
-		    {% capture latest_beta_version %}{{max_major}}.{{max_minor}}.{{max_patch}}-beta.{{max_beta}}{% endcapture %}
+	    {% capture latest_version %}{{max_major}}.{{max_minor}}.{{max_patch}}{% endcapture %}
 
 
-				<!-- FIND LATEST OFFICIAL DESIGN WITH AN IMPLEMENTATION -->
-				{% assign max_major = 0 %}
-		    {% assign max_minor = 0 %}
-		    {% assign max_patch = 0 %}
+			<!-- FIND LATEST BETA VERSION -->
+			{% assign max_major = 0 %}
+	    {% assign max_minor = 0 %}
+	    {% assign max_patch = 0 %}
+	    {% assign max_beta  = 1 %}
 
-		    {% for version in versions %}
-		      {% if version.version contains "beta" or version.version == nil %}
-		      {% elsif version.implemented %}
-		        {% assign semver = (version.version | split: '.') %}
-		        {% assign major = (semver[0] | round) %}
-		        {% assign minor = (semver[1] | round) %}
-		        {% assign patch = (semver[2] | split: '-' | first | round) %}
+	    {% for version in versions %}
+	      {% if version.version == nil %}
+	      {% elsif version.version contains "beta" %}
 
-		        {% if major > max_major %}
-		          {% assign max_major = major %}
-		          {% assign max_minor = minor %}
-		          {% assign max_patch = patch %}
-		        {% elsif major == max_major and minor > max_minor %}
-		          {% assign max_minor = minor %}
-		          {% assign max_patch = patch %}
-		        {% elsif major == max_major and minor == max_minor and patch > max_patch %}
-		          {% assign max_patch = patch %}
-		        {% endif %}
+	        {% assign semver = (version.version | split: '.') %}
+	        {% assign major = (semver[0] | round) %}
+	        {% assign minor = (semver[1] | round) %}
+	        {% assign patch = (semver[2] | split: '-' | first | round) %}
+	        {% assign beta  = (semver[3] | round) %}
 
-		      {% endif %}
-		    {% endfor %}
+	        {% if major > max_major %}
+	          {% assign max_major = major %}
+	          {% assign max_minor = minor %}
+	          {% assign max_patch = patch %}
+	          {% assign max_beta  = beta %}
+	        {% elsif major == max_major and minor > max_minor %}
+	          {% assign max_minor = minor %}
+	          {% assign max_patch = patch %}
+	          {% assign max_beta  = beta %}
+	        {% elsif major == max_major and minor == max_minor and patch > max_patch %}
+	          {% assign max_patch = patch %}
+	          {% assign max_beta  = beta %}
+	        {% elsif major == max_major and  minor == max_minor and patch == max_patch and beta > max_beta %}
+	          {% assign max_beta = beta %}
+	        {% endif %}
 
-		    {% capture latest_impl_version %}{{max_major}}.{{max_minor}}.{{max_patch}}{% endcapture %}
+	      {% endif %}
+	    {% endfor %}
+
+	    {% capture latest_beta_version %}{{max_major}}.{{max_minor}}.{{max_patch}}-beta.{{max_beta}}{% endcapture %}
 
 
-				<!-- SPIT OUT THE ACTUAL LITTLE CARD -->
-				{% if latest_version != '0.0.0' %}
-					{% assign latest_component = (versions | where: "version", latest_version) | first %}
+			<!-- FIND LATEST OFFICIAL DESIGN WITH AN IMPLEMENTATION -->
+			{% assign max_major = 0 %}
+	    {% assign max_minor = 0 %}
+	    {% assign max_patch = 0 %}
+
+	    {% for version in versions %}
+	      {% if version.version contains "beta" or version.version == nil %}
+	      {% elsif version.implemented %}
+	        {% assign semver = (version.version | split: '.') %}
+	        {% assign major = (semver[0] | round) %}
+	        {% assign minor = (semver[1] | round) %}
+	        {% assign patch = (semver[2] | split: '-' | first | round) %}
+
+	        {% if major > max_major %}
+	          {% assign max_major = major %}
+	          {% assign max_minor = minor %}
+	          {% assign max_patch = patch %}
+	        {% elsif major == max_major and minor > max_minor %}
+	          {% assign max_minor = minor %}
+	          {% assign max_patch = patch %}
+	        {% elsif major == max_major and minor == max_minor and patch > max_patch %}
+	          {% assign max_patch = patch %}
+	        {% endif %}
+
+	      {% endif %}
+	    {% endfor %}
+
+	    {% capture latest_impl_version %}{{max_major}}.{{max_minor}}.{{max_patch}}{% endcapture %}
+
+
+			<!-- SPIT OUT THE ACTUAL LITTLE CARD -->
+			{% if latest_version != '0.0.0' %}
+				{% assign latest_component = (versions | where: "version", latest_version) | first %}
+			{% else %}
+				{% assign latest_component = (versions | where: "version", latest_beta_version) | first %}
+			{% endif %}
+
+			{% capture status %}
+				{% if latest_impl_version != '0.0.0' %}
+					developed
+				{% elsif latest_version != '0.0.0' %}
+					designed
 				{% else %}
-					{% assign latest_component = (versions | where: "version", latest_beta_version) | first %}
+					proposed
 				{% endif %}
+			{% endcapture %}
+
+			<div class="component" href="{{site.baseurl}}{{page.url}}../beta" data-status={{status}}>
 
 				<a href="{{site.baseurl}}{{latest_component.url}}../{% if latest_component.url contains 'beta' %}beta{% endif %}">
 					<span class="pe-label pe-label--bold">{{component}}</span>
@@ -230,6 +241,7 @@
 	</script>
 
 	<script>
+		// shortcut for getting a proper array of nodes back from a DOM selection
 		var queryArray = function(selector) {
 			nodes = document.querySelectorAll(selector);
 			nodesArray = [];
@@ -242,6 +254,7 @@
 		var hideComponent = function(node) { node.style.display = "none"; }
 		var showComponent = function(node) { node.style.display = "block"; }
 
+		// returns a map of 'filter name' => T/F for the currently selected filters
 		var getFilters = function() {
 			var inputs = queryArray('.library input');
 			return inputs.reduce(function(memo, input) {
@@ -250,13 +263,13 @@
 			}, {});
 		}
 
+		// returns boolean for whether a component matches the current filters
 		var componentMeetsFilters = function(component, filters) {
-			console.log(component.dataset, filters);
 			return filters[component.dataset.status];
 		}
 
 		var onFilterChange = function(e) {
-			var components = queryArray('a.component'),
+			var components = queryArray('div.component'),
 			    filters = getFilters();
 
 			components.forEach(function(component) {
