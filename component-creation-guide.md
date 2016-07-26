@@ -8,6 +8,9 @@ order: 2
 * TOC
 {:toc}
 
+## For Designers
+
+### Getting Started
 So you've got a great idea for a new component and want to bring it to life! What's the process look like for going from initial concept to Official Elemental Design Component? There are three key steps to the process of creating a new component:
 
 1. **Announce**  
@@ -22,7 +25,7 @@ Put your design to code and produce the final package which can be consumed by o
 After steps 2 and 3 you'll need to submit your work for review against the Library Membership Specification.
 
 
-## Resources
+### Resources
 There are a few key documents that will get you started down the right path when creating a new component. Take a minute to read through these and feel free to ask any questions you have on the [mailing list][ml].
 
 **[Library Membership Specification][spec]**  
@@ -31,7 +34,7 @@ The Library Membership Specification details everything that makes a high qualit
 **[Component Versioning Guide][versions]**  
 Your iterations should also follow the standard versioning scheme. This can be helpful for managing communication as you make improvements to your design as well as keeping track of any dependencies your component has.
 
-## 1. Announce
+### 1. Announce
 Once you have a handle on the Elemental Design infrastructure the next step is to share your idea with the community and gather feedback. This helps maximize usefulness of the final component and can uncover speed bumps early in the process. Suggested topics include:
 
 - Proposed component name
@@ -55,7 +58,7 @@ Begin the discussion by posting a [new thread in the Component Proposals categor
 [ml-proposal]: https://groups.google.com/a/pearson.com/forum/#!categories/elemental-discuss/component-proposals
 
 
-## 2. Define
+### 2. Define
 Now you should have a pretty good handle on your idea, how it might work across the platform, and maybe a list of partner teams. Or your discussion may cause you to pivot your idea from a brand new component into an enhancement to an existing component. Or maybe you join forces with another team that's already building something that will solve your problem. And that's perfectly fine. Ideally, the component library will consist of a lean set of just enough components to solve the use cases of the platform. Sometimes that means a new component, sometimes it doesn't.
 
 In the case that you proceed with a new component the next step is to begin designing and defining it. Your output at this stage is a component definition which will detail the features, usage, design, and behavior of your idea. Review the existing component documentation for examples of good definitions.
@@ -66,21 +69,17 @@ As you work on coalescing your idea you should publish your project to the maili
 
 [d-repo]: https://github.com/Pearson-Higher-Ed/design/
 
-### Definition Approval
+#### Definition Approval
 Once your definition reaches a final state you'll need to submit it to the review board to check compliance with the [Design Requirements][design-reqs] from the membership specification. If everything in the spec is satisfied you'll get a greenlight and can proceed to implementing your design. If anything doesn't quite line up the approvers will work with you to bring your component into alignment with the spec.
 
 Submit a definition for review by sending an email to <elemental-review@pearson.com>. Make sure to include a link to your work and a copy of the [approval checklist][checklist] (choose File > Make a copy).
 
 [checklist]: https://docs.google.com/a/pearson.com/spreadsheets/d/19dLruCBCAX7HlZdNcOrATrAWp4tdPuiYOwQzQ3hUA60/edit?usp=sharing
 
+### 3. Implement
+Once your definition is approved the implementation can be built out. See the [developer section](#for-developers) below for more information on this process.
 
-## 3. Implement
-Once your definition is approved you can begin building out the implementation. Start with the component archetype based on React, available at https://github.com/Pearson-Higher-Ed/component-archetype. This will be the fastest route to Origami spec compliance.
-
-### Implementation Approval
-Last step! Once you've built a functional version of your component you can submit it for final review by the board (simply email <elemental-review@pearson.com> again). At this point they will just ensure the final product matches your definition and continues to fulfill the membership specification. If everything looks good the component will be added to the library and you're all set! If there are any issues the approvers will again work with you to bring things in line with the spec.
-
-## Component Maintenance
+### Component Maintenance
 Your component is now complete and in the library, although you will probably want to add new features over time and find bugs you want to fix. Make sure to follow the component versioning guide as you make changes and continue to publish beta iterations to the mailing list.
 
 Note that you'll need to resubmit any modifications to the review board if you add new features or make breaking changes (anything that increments the Major or Minor version numbers) but bug fixes can be pushed through without review.
@@ -93,3 +92,7 @@ See [Modifying and Updating Components][updates] for more information.
 [design-reqs]: {{site.baseurl}}/membership-spec/beta#design-requirements
 [ml]: https://groups.google.com/a/pearson.com/forum/#!forum/elemental-discuss
 [updates]: {{site.baseurl}}/component-modification-guide
+
+
+## For Developers
+See contributing guide etc.
