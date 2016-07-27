@@ -27,10 +27,10 @@ dependencies:
     version: 1.0.0
   - name: Breakpoints
     version: 1.0.0
-  - name: Icons
-    version: 1.0.0
   - name: Templates
     version: 1.0.0-beta.1
+  - name: Icons
+    version: 1.2.0-beta.1
 downloads:
   - name: UX Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1PRuQGU_AlpPkWBGA5gJuOTEG3pu9xEp5_H7Z2dD7YMw/edit?usp=sharing
@@ -129,6 +129,9 @@ blocks:
       : - Title is [Basic Title](/design/c/typography/v1.0.0/#rd-basic-title)
         - Content should typically use the [Basic Body](/design/c/typography/v1.0.0/#rd-basic-body) styles
 
+      Icons
+      : - Close 'X' is the [times](/design/c/icons/v1.2.0-beta.1/#rd-times) icon
+
       Dismissing
       : - The text modal may be dismissing by selecting the 'X' icon or anywhere in the gray overlay
         - Pressing the escape key will also dismiss the modal
@@ -168,6 +171,10 @@ blocks:
         - Once the image is larger than the viewport it may be panned by clicking and dragging (or just dragging on touch devices)
         - `grab` and `grabbing` css cursors should be used when panning
 
+      Icons
+      : - Close 'X' is the [times](/design/c/icons/v1.2.0-beta.1/#rd-times) icon
+        - Zoom icons are [search-plus](/design/c/icons/v1.2.0-beta.1/#rd-search-plus) and [search-minus](/design/c/icons/v1.2.0-beta.1/#rd-search-minus)
+
       Dismissing
       : - The media modal may be dismissed by selecting the 'X' icon or anywhere in the gray overlay region
         - Pressing the escape key will also dismiss the modal
@@ -181,6 +188,7 @@ changelog:
   - version: 1.0.0-beta.5
     changes: |
       - ADDED: Accessibility checklist
+      - ADDED: Documentation for icons
   - version: 1.0.0-beta.4
     changes: |
       - ADDED: More details on the dismissing behavior
