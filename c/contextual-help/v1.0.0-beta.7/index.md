@@ -3,8 +3,8 @@ layout: component-yaml
 title: Contextual Help
 section: Components
 redirect_from: /docs/ui-components/contextual-help/
-version: 1.0.0-beta.6
-status: deprecated
+version: 1.0.0-beta.7
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -23,6 +23,10 @@ people:
 downloads:
   - name: UX Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1YjPJz6ZJgG6m4iJvtTFYuhIBGVuefHpzYx3H_lPU-vo/edit?usp=sharing
+  - name: .sketch
+    link: ./assets/contextual-help.mockup.sketch
+  - name: .ai
+    link: ./assets/contextual-help.mockup.ai
 
 dependencies:
   - name: Drawer
@@ -287,7 +291,7 @@ blocks:
       Icons
       : - [light-bulb-o](/design/c/icons/v1.1.0/#rd-light-bulb-o) for Tip
         - [info-circle](/design/c/icons/v1.1.0/#rd-info-circle) for Note
-        - [exclamation-circle](/design/c/icons/v1.1.0/#rd-exclamation-circle) for Warning
+        - [exclamation-circle](/design/c/icons/v1.1.0/#rd-exclamation-circle) for Important
         - 8px padding between icon and title
 
       Typography
@@ -310,6 +314,10 @@ blocks:
 
 
 changelog:
+  - version: 1.0.0-beta.6
+    changes: |
+      - ADDED: Sketch and Illustrator mockup files.
+      - CHANGED: Icons to match latest icons component
   - version: 1.0.0-beta.6
     changes: |
       - UPDATED: Include latest feedback from UA.
