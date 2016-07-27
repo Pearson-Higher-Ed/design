@@ -3,8 +3,8 @@ layout: component-yaml
 title: Modal
 section: Components
 redirect_from: /docs/ui-components/modal/
-version: 1.0.0-beta.4
-status: deprecated
+version: 1.0.0-beta.5
+status: active
 implemented: false
 private: true
 people:
@@ -32,6 +32,8 @@ dependencies:
   - name: Templates
     version: 1.0.0-beta.1
 downloads:
+  - name: UX Accessibility Checklist
+    link: https://docs.google.com/a/pearson.com/document/d/1PRuQGU_AlpPkWBGA5gJuOTEG3pu9xEp5_H7Z2dD7YMw/edit?usp=sharing
   - name: Sketch
     link: ./assets/modal.sketch
 
@@ -176,6 +178,9 @@ blocks:
 
 
 changelog:
+  - version: 1.0.0-beta.5
+    changes: |
+      - ADDED: Accessibility checklist
   - version: 1.0.0-beta.4
     changes: |
       - ADDED: More details on the dismissing behavior
