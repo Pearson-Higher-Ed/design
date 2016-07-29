@@ -73,7 +73,7 @@
               <div class="title pe-label pe-label--bold">Downloads</div>
               {% for download in page.downloads %}
                 {% if download.link contains 'http' or download.link contains 'www' %}
-                  <div class="pe-label"><a href="{{download.link}}" class="button" onClick="trackLink('{{download.link}}', '{{download.name}}')">{{download.name}}</a></div>
+                  <div class="pe-label"><a href="{{download.link}}" class="button" onClick="trackLink('{{download.link}}', '{{download.name}}'); return false;">{{download.name}}</a></div>
                 {% else %}
                   {% capture url %}{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{download.link}}{% endcapture %}
                   <div class="pe-label"><a href="{{url}}" class="button" onClick="trackLink('{{url}}', '{{download.name}}'); return false;">{{download.name}}</a></div>
