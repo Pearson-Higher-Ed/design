@@ -196,13 +196,7 @@ dev_reqs:
   - name: General
     reqs:
       - req: |
-          G1: Components must adhere to Pearson's standard browser and device support policies. See [this Neo page for the latest standards](https://neo.pearson.com/groups/css/).
-        type: mandatory
-        approvers:
-          - Eajaz (QA)
-
-      - req: |
-          G2: Each implementation must include a quality readme file which will help other teams install and use the component.
+          G1: Each implementation must include a quality readme file which will help other teams install and use the component.
         type: mandatory
         extras:
           - name: Explanation
@@ -217,19 +211,34 @@ dev_reqs:
               - Testing
               - Related Resources
         approvers:
-          - ??
+          - PDA Development team
 
       - req: |
-          G3: Standalone components must use the [Component Archetype][ca] as a starting point.
+          G2: Standalone components must use the [Component Archetype][ca] as a starting point.
 
           [ca]: https://github.com/Pearson-Higher-Ed/component-archetype
         type: mandatory
         extras:
           - name: Explanation
             content: |
-              The scaffolding template will help the teams with sample npm scripts, live reload, CI Integration etc.
+              The starter kit implements best practices like testing, linting, bundling, transpiling ES6 to ES5, etc. It codifies a long list of decisions that you no longer have to make to get rolling. It saves you from the long, painful process of wiring it all together into an automated development environment and build process.
         approvers:
-          - Aaron Kaka?
+          - PDA Development team
+
+      -  req: |
+          G3: Responsive Components
+         type: mandatory
+         extras:
+           - name: Explanation
+             content: |
+               Responsive Web Design allows web pages to correctly format on any screen size. The application must balance the rich functionality associated with desktop usage with the ability to function on less powerful mobile devices.
+
+               Principles for Responsive Web Design
+               A flexible, grid-based layout: This allows the layout to reflow to the screen size of any device. Uses relative sizing of grids. Allows grid layout to adjust to viewport size.
+               Flexible images and media: This allows the images and videos to reflow with the layout.
+
+         approvers:
+           - PDA Development team
 
       - req: |
           G4: New components should not duplicate the functionality found in existing components.
@@ -241,7 +250,7 @@ dev_reqs:
 
               When creating a new component it is recommended to use existing sub components and element required to create a new component. The key idea behind this is to reuse components wherever applicable.
         approvers:
-          - ??
+          - PDA Development team
 
   - name: Accessibility
     description: |
@@ -254,7 +263,8 @@ dev_reqs:
           - name: Explanation
             content: We recommend using [this validator](#).
         approvers:
-          - ??
+          - PDA accessibility team
+          -
   - name: Browser and Device Support
     description: |
       The components should adhere to pearson standard browser policy and device support. There are two levels of support: Optimized and Supported.
@@ -263,14 +273,13 @@ dev_reqs:
           R1: Optimized are those OS/Browser combinations tested and certified by QA. These will generally represent the newest versions of major OSs and Browsers.
         type: mandatory
         approvers:
-          - Eajaz Ali Mahaboob Basha (QA)
-
+          - PDA QA team
 
       - req: |
           R2: Supported combinations will no longer be tested and certified. Any issues with supported combinations will be address as S1 and S2 issues as they arise.
         type: mandatory
         approvers:
-          - Eajaz Ali Mahaboob Basha (QA)
+          - PDA QA team
 
   - name: Internationalization (i18N)
     description: |
@@ -280,14 +289,14 @@ dev_reqs:
           R1: Externalization of strings.
         type: mandatory
         approvers:
-          - Deepak
+          - PDA Development team
 
 
       - req: |
           R2: Testing of long string when localized
         type: mandatory
         approvers:
-          - Deepak      
+          - PDA Development team
 
   - name: Localization (L10n)
     description: |
@@ -297,47 +306,50 @@ dev_reqs:
           R1: Numeric, date and time formats.
         type: mandatory
         approvers:
-          - Deepak
+          - PDA Development team
 
       - req: |
           R2: Use of currency
         type: mandatory
         approvers:
-          - Deepak   
+          - PDA Development team
 
       - req: |
           R2: Collation and sorting
         type: suggested
         approvers:
-          - Deepak       
+          - PDA Development team
 
-  - name: Testing
+  - name: QA
     description: |
-      Testing is an important part of the software development process...
+      All the functional automated tests for Elements SDK / Compounds SDK / Origami V2 components should be contributed to "ux-test-platform" repository, and the PR will be reviewed and merged only by PDA team
     reqs:
       - req: |
-          T1: All components must have at least 80% code coverage. Component should have 100% coverage whenever possible. Eajaz to provide additional reqs.
+          T1: All components must have at least 80% code coverage. Component should have 100% coverage whenever possible.
         type: mandatory
         approvers:
-          - Eajaz??
+          - PDA QA team
 
-  - name: Data Binding
-    description: |
-      Components should not call a backend service directly to get data. The architecture is designed for the components to be loosely coupled from the service to provide highly reusable front end components. The components would need data in a certain expected format. It is the responsibility of the client application to call the service, get data and provide it to the component in the format expected.
-    reqs:
       - req: |
-          R1: Loosely coupled  components from backend data services.
-        type: mandatory
-        approvers:
-          - ??
+          Tools Used: Click the [following link](https://neo.pearson.com/docs/DOC-607807#jive_content_id_Tools_used) to use the tools used for Automated testing and test scripts.
 
+
+        type: optional
+        approvers:
+          - PDA QA team
+      - req: |
+          How to Contribute: You can fork the repo or create a branch out of master and make your changes, create a Pull Request for your changes to merge into this Original master branch. Click the [following link](https://neo.pearson.com/docs/DOC-607807#jive_content_id_How_to_contribute_to_this_repo) to see more details on how to contribute.
+
+        type: optional
+        approvers:
+          - PDA QA team
 
   - name: Conventions
     description: |
       Standards that make life easier.
     reqs:
       - req: |
-          C1: Use UTF-8.
+          Use UTF-8:
         type: mandatory
         extras:
           - name: Explanation
@@ -346,17 +358,17 @@ dev_reqs:
 
               Ensure that your pages are UTF-8 encoded, using both an HTTP response header **and** an HTML meta tag: `<meta charset="UTF-8" />`. Place this as the first tag within the `<head>` section of the page, before `<title>`, since it’s important that the browser knows the right character set to use before it gets to any content.
         approvers:
-          - ??
+          - PDA Development team
 
   - name: ES6
     description: |
-      The ES6 or ES2015 syntax is recommended be used to create components. should be  should not call a backend service directly to get data. The architecture is designed for the components to be loosely coupled from the service to provide highly reusable front end components. The components would need data in a certain expected format. It is the responsibility of the client application to call the service, get data and provide it to the component in the format expected.
+      The ES6 or ES2015 syntax is recommended be used to create components. Presentational components must not call a backend service directly to get data. The architecture is designed for the components to be loosely coupled from the service to provide highly reusable front end components. The components would need data in a certain expected format. It is the responsibility of either the consuming application or a container component to fetch and aggregate data from a RESTful API.
     reqs:
       - req: |
           R1: Use ES6 to write components.
         type: suggested
         approvers:
-          - ??
+          - PDA Development team
 
   - name: Security
     reqs:
@@ -370,7 +382,7 @@ dev_reqs:
 
               It’s often considered OK to serve forms on insecure pages as long as the form posts to a secure destination. This is not acceptable, because an attacker can modify the page that serves the form, to simply change the form post destination.
         approvers:
-          - ??
+          - PDA Development team
 
 changelog:
   - version: 1.1.0

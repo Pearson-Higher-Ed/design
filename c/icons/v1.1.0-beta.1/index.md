@@ -3,7 +3,7 @@ layout: component-yaml
 title: Icons
 section: Components
 version: 1.1.0-beta.1
-status: active
+status: deprecated
 people:
   - role: Product Owner
     name: Joe Macaluso

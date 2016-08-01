@@ -1,3 +1,24 @@
+<script>
+  var createFunctionWithTimeout = function(callback, opt_timeout) {
+    var called = false;
+    function fn() {
+      if (!called) {
+        called = true;
+        callback();
+      }
+    }
+    setTimeout(fn, opt_timeout || 1000);
+    return fn;
+  }
+
+  var trackLink = function(url, name) {
+    ga('send', 'event', 'component-downloads', 'download', (name ? name + ' - ' + url : url), {
+      transport: 'beacon',
+      hitCallback: createFunctionWithTimeout(function(){ document.location = url; })
+    });
+  }
+</script>
+
 <div>
   <div class="blocks">
     <div class="block article_header">
@@ -47,16 +68,19 @@
 
           </div>
 
-          <div class="downloads">
-            <div class="title pe-label pe-label--bold">Downloads</div>
-            {% for download in page.downloads %}
-              {% if download.link contains 'http' or download.link contains 'www' %}
-                <div class="pe-label"><a href="{{download.link}}" class="button">{{download.name}}</a></div>
-              {% else %}
-                <div class="pe-label"><a href="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{download.link}}" class="button">{{download.name}}</a></div>
-              {% endif %}
-            {% endfor %}
-          </div>
+          {% if page.downloads %}
+            <div class="downloads">
+              <div class="title pe-label pe-label--bold">Downloads</div>
+              {% for download in page.downloads %}
+                {% if download.link contains 'http' or download.link contains 'www' %}
+                  <div class="pe-label"><a href="{{download.link}}" class="button" onClick="trackLink('{{download.link}}', '{{download.name}}'); return false;">{{download.name}}</a></div>
+                {% else %}
+                  {% capture url %}{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{download.link}}{% endcapture %}
+                  <div class="pe-label"><a href="{{url}}" class="button" onClick="trackLink('{{url}}', '{{download.name}}'); return false;">{{download.name}}</a></div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
         </div>
       </div>
 
@@ -83,7 +107,12 @@
       {% case block.type %}
 
       {% when 'section' %}
-      <h2 id="{{block.name | slugify}}">{{block.name}}</h2>
+      <div class="section">
+        <h2 id="{{block.name | slugify}}">{{block.name}}</h2>
+        {% if block.javascript %}
+          <span class="js-tag" style="vertical-align: middle; margin-bottom: 8px;">Requires Javascript</span>
+        {% endif %}
+      </div>
 
 
       {% when 'two column' or 'two_column' %}
@@ -110,6 +139,14 @@
 
           {% when 'wide video' %}
           <div class="image wide">
+            <div class="media">
+              <video src="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{item.src}}" loop controls/>
+            </div>
+            {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
+          </div>
+
+          {% when 'narrow video' %}
+          <div class="image narrow">
             <div class="media">
               <video src="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{item.src}}" loop controls/>
             </div>

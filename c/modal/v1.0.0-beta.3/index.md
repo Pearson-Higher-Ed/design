@@ -4,7 +4,7 @@ title: Modal
 section: Components
 redirect_from: /docs/ui-components/modal/
 version: 1.0.0-beta.3
-status: active
+status: deprecated
 implemented: false
 private: true
 people:
