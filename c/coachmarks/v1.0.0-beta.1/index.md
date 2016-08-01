@@ -247,5 +247,5 @@ blocks:
 changelog:
   - version: 1.0.0-beta.1
     changes: |
-      - CHANGED: Placeholder
+      - CHANGED: Initial Creation
 ---
