@@ -1,4 +1,4 @@
 ---
-title: Coachmarks
+title: Coach Marks
 layout: component-beta
 ---

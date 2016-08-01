@@ -1,339 +1,251 @@
 ---
 layout: component-yaml
-title: Coachmarks
+title: Coach Marks
 section: Components
 version: 1.0.0-beta.1
 status: active
 implemented: false
 people:
   - role: Product Owner
-    name: Joe Macaluso
-    email: joe.macaluso@pearson.com
+    name: Pramit Sanyal
+    email: pramit.sanyal@pearson.com
   - role: Interaction Design
     name: Albert Christy
     email: albert.christy@pearson.com
-implementation: https://origami.pearsoned.com/registry/components/o-app-header
+  - role: Developer
+    name: Marc Donovan
+    email: marc.donovan@pearson.com
+implementation: https://origami.pearsoned.com/registry/components/coach-marks
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1Uhkqt3gyK7cVDKkEeUcgXfO1GjYLwk5qp_2Gu8CcKhc/edit?usp=sharing
-  - name: .sketch mockup
-    link: ./assets/application-header.mockup.sketch
-  - name: .ai mockup
-    link: ./assets/application-header.mockup.ai
+  - name: Sketch
+    link: ./assets/couch.mark.mockup.sketch
+  - name: Illustrator TBD
+    link:
 
 tagline: |
-  This component contains and displays global tools and navigation across the next gen platform.
-description: |
-  It offers a simple and consistent way to include standard behavior such as sign in/sign out, help content, and global navigation. For courses, it will present local navigation at mobile breakpoints. The header can be presented in four different modes depending on the context it's in. A user's first interaction with the header will likely be the [Signed Out Mode](#anonymous-mode) which displays only the most basic information (usually including a sign in link). After signing in the [Basic Mode](#basic-mode) represents the 'default' header, offering functionality such as account management and sign out. Once the user launches a specific course the [Course Mode](#course-mode) adds a few features, most notably local navigation for mobile breakpoints. In situations where the user's session is managed by a third party (for example 3PL/LMS integration) the [Integration Mode](#focus-mode) will remove distracting/irrelevant navigation options.
+  This component informs the user of a new feature, nudges a user to use features or guides the user through a multistep process.
+
 features:
-  - Pearson branding/navigate to home
-  - Standard help link
-  - Sign in/Sign out
-  - My Account
-  - Local navigation for courses (at mobile breakpoints)
-  - Accessibility best practices
-  - Mobile ready responsive design
+  - Coach Mark and background attributes
+  - Consistent guidelines on when to use the single coach mark vs. coach mark tour
+  - Guidelines on positioning the coach mark to the highlighted feature
+
 usage_guidelines: |
-  Every application that's a part of the next gen platform should display the relevant mode of this header in order to promote a consistent experience.
+  Coach marks should be used sparingly in the application to avoid coach mark chains. Information presented in a coach mark should be short and sweet, focusing on one key function.
 
 blocks:
   - type: section
-    name: Signed Out Mode
+    name: Single
 
   - type: two column
     text: |
-      This is the simplest version of the header, just displaying the Pearson logo (with no link interaction), the help link, and (optionally) a Sign In link. The help link is designed to trigger the [Contextual Help component](/design/c/contextual-help).
-
-      Use this mode when the user is signed out.
-
-      ### Options
-
-      #### Remove sign in link
-      There is a single configuration option to remove the "Sign In" link. Use this option when displaying the sign in link in the header would be redundant (e.g. on the actual sign in page).
+      A single coach mark appears pointing to the targeted focus. The coach mark displays a title, description and a link to dismiss the coach mark. The coach mark can only be dismissed manually through the link or the coach marks closing "x". Once the coach mark is dismissed, it will not show again.
 
     contents:
-      - type: wide image
-        src: ./assets/signed.out.mode.png
-        caption: The signed out header has one style that works for every breakpoint. Shown with and without the sign in link.
-
-  - type: section
-    name: Basic Mode
-
-  - type: two column
-    text: |
-      Represents the default signed in experience. Expands on the Signed Out Mode by making the Pearson Logo a home link (currently [www.console.pearson.com](http://console.pearson.com)) and including the *User Menu*.
-
-      The User Menu is labelled with the user's first name and contains My Account and Sign Out options. At widths less than 768px it is condensed into the *Mobile Menu* which relabels the dropdown as "Menu" and extends it with a list of courses (if the consuming app has that information).
-
-      Use this mode when the user logs in to a standard Pi session and needs a default header experience.
-
-      ### Options
-
-      #### Course listing
-      The Mobile Menu can display a list of Next Gen courses for the current user. If the list is longer than five items in length it's truncated and a "See X more courses" item is added at the bottom.
-
-      Use this when the consuming application contains a list of courses for the current user.
-    contents:
-      - type: wide image
-        src: ./assets/basic.mode.png
-        caption: |
-          The desktop version of the basic mode header. (Note: Normally the mobile view would be used at this width, it has been compressed for illustration purposes.)
       - type: narrow image
-        src: ./assets/basic.mode.mobile.png
-        caption: Mobile version with the course listing.
+        src: ./assets/single.instance.png
+        caption: The single instance coach mark.
 
   - type: section
-    name: Course Mode
+    name: Tour
 
   - type: two column
     text: |
-      At desktop sizes this is identical to the Basic Header.
-
-      The Mobile Menu gains an "All Courses" link and any local navigation for the course.
-
-      The Course Mode also offers the ability to enable a light theme.
-
-      Use this mode when a user launches a specific product (such as Revel, Pearson Reader, etc.) with local navigation.
+      The tour is a number of coach marks strung together through previous and next links. The tour is used to point out multiple pieces of functionality introduced in a related workflow. A tour can also be used to show the steps a user needs to take to finish a workflow. Closing the tour will close all related coach marks in the sequence.
 
       ### Options
 
-      #### Course navigation
-      At narrower breakpoints the Mobile Menu should contain the navigation for the course. The title of the current course will head this section. Use this option when the course offers any high level local navigation options.
+      #### Additional numbering
+      An additional numbering system can be added to the coach mark tour. Use this option when the tour is a true sequential process.
 
-      #### Light theme
-      The header can switch it's color from black to a light gray. This option should be used when the user is viewing a reading, assessment, or some other type of content which requires their complete focus.
     contents:
       - type: wide image
-        src: ./assets/course.mode.png
-        caption: Course mode with the light theme at < 480px; standard course mode at 480px – 767px.
+        src: ./assets/tour.pic1.png
+        caption: First Coach Mark in Tour
+      - type: wide image
+        src: ./assets/tour.pic2.png
+        caption: Second Coach Mark in Tour
+      - type: wide image
+        src: ./assets/tour.pic3.png
+        caption: Third Coach Mark in Tour
+      - type: wide image
+        src: ./assets/tour.alt.png
+        caption: Alternate tour design with number in title.
 
   - type: section
-    name: Integration Mode
+    name: < 480px Viewport
 
   - type: two column
     text: |
-      In this version of the header many options are removed that aren't relevant in cases where a user is linking their account to a 3rd party (e.g. BlackBoard, Canvas, or other LMSs). The Logo is no longer a link and the right side of the header only contains a help link.
+      At the extra small breakpoint < 480px the arrow is removed and the coach mark is centered onto the screen under the focus.
 
-      Use this mode when the user's session is managed by a third party and the user shouldn't have access to platform session features (e.g. sign out, My Account). Specifically, this applies to 3PL/LMS integration scenarios.
     contents:
-      - type: wide image
-        src: ./assets/integration.mode.png
-        caption: Integration mode
+      - type: narrow image
+        src: ./assets/mobile.under480.png
+        caption: The coach mark arrow is removed in this mobile view.
+
+  - type: section
+    name: Target Highlight and Modal Functionality
+
+  - type: two column
+    text: |
+      When a coach mark needs to stand out and stop all other user interaction on a page, the screen can be dimmed and the target of the coach mark should be highlighted. Step by step tours that move a user through various functions on a screen is a good candidate to utilize the modal dimming.
+
+      Highlighting is done by creating a div without a background on the target and adding a expanding transparent box-shadow around the object. When adding the transparent div be conscience of the space around the item and highlight the container div if it allows for breathing room around the element you are targeting.
+
+    contents:
+      - type: narrow image
+        src: ./assets/highlight.right.png
+        caption: |
+          Do
+          Give the target breathing room in the highlight.
+      - type: narrow image
+        src: ./assets/highlight.wrong.png
+        caption: |
+          Do Not
+          Crowd the target with the highlight.
 
   - type: section
     name: Redlines
 
   - type: two column
     text: |
-      ### Signed Out Mode
+      ### Single
 
-      #### ≥ 768px
+      #### ≥ 480px
 
-      Logo link
-      : - No active link
+      Dimensions - Bubble
+      : - 300px wide
+        - Height varies by content
+        - 4px radius
 
-      Dimensions
-      : - 54px tall
-        - 100% viewport width
+      Dimensions - Arrow
+      : - 15px high
+        - 30px wide
+
+      Shadow
+      : - 0px h-shadow
+        - 1px v-shadow
+        - 10 blur
+        - 0 spread
 
       Spacing
-      : - Logo and links vertically centered
-        - 30px from either end
-        - 30px between links
+      : - Title, Body left aligned
+        - close "x" and "Got it" link right aligned
+        - 20px padding top, left and bottom
+        - 25px padding right
+        - 10px padding right for close "x"
+        - 20px between Title and Body
+        - 15px between Body and "Got it" link.
 
       Background
-      : - Black (\#000000)
+      : - White (#FFFFFF)
 
       Typography
-      : - Links are large labels (inverse primary color)
+      : - Title is Bold Label Pitch
+        - Body is Basic Body Small Variant
+        - Link is Basic Body Link
 
       States
       : - Links use the browser default style for focus
         - Hovering shows the hand icon, but otherwise no style change
 
-      #### < 768px
-
-      Dimensions
-      : - 44px tall
-
-      Spacing
-      : - 14px from either end
-        - 14px between links
-
-    contents:
-      - type: wide image
-        src: ./assets/redlines.signed.out.mode.png
-
-  - type: two column
-    text: |
-      ### Basic Mode
-
-      #### ≥ 1024px
-
-      Logo Link
-      : - www.console.pearson.com
-
-      Dimensions
-      : - 54px tall
-        - 100% viewport width
-        - Dropdown menu is 250px wide
-        - Menu items are 48px tall
-        - Menu dividers are 1px
-        - Dropdown tab is 42px tall
-        - Cap over tab is 2px tall
-
-      Spacing
-      : - Logo and links vertically centered
-        - 30px from either end
-        - 30px between links
-        - 8px between username and chevron-down icon
-        - Dropdown tab has 15px of horizontal padding
-
-      Colors
-      : - Main bar is Black (#000000)
-        - Dropdown background is Gutenberg Black (#333333)
-        - Divider lines in dropdown are Asphalt (#3f3f3f)
-        - Cap on username is Smoke Gray (#545454)
-
-      Typography
-      : - Top level links are large labels (inverse primary)
-        - Menu items are large labels (inverse secondary)
-
-      States
-      : - Link focus states use the default browser implementation
-        - Hovering an item in the dropdown menu will show an underline
-
-      #### 768px – 1023px
-      Username is truncated to no more than 20 characters
-    contents:
-      - type: wide image
-        src: ./assets/redlines.basic.mode.png
-        caption: Redlines for larger viewports
-
-  - type: two column
-    text: |
-      #### 480px – 767px
-      Dimensions
-      : - 44px tall
-        - 100% viewport width
-        - Dropdown menu is 250px wide
-        - Course items in menu are 60px tall
-        - Other menu items are 48px tall
-        - Divider lines are 1px tall
-        - Dropdown tab is 36px tall
-        - Cap over tab is 2px tall
-
-      Spacing
-      : - Logo and links vertically centered
-        - 14px from either end
-        - 28px between links
-        - 8px between link and icons
-        - Dropdown tab has 14px of horizontal padding
-
-      Colors
-      : - Same as larger viewports
-
-      Typography
-      : - Top level links are large labels (inverse primary)
-        - Course items are large labels (inverse primary)
-        - Other menu items are large labels (inverse secondary)
-
-      Course List
-      : - If more than 5 items, add a 'Show X more courses...' item at the bottom
-
       #### < 480px
-      Dropdown menu becomes 100% wide
+
+      Dimensions - Arrow
+      : - None
+
+      Align
+      : - Centered on Screen
+
     contents:
-      - type: wide image
-        src: ./assets/redlines.basic.mode.responsive.png
-        caption: Redlines for smaller viewports.
       - type: narrow image
-        src: ./assets/redlines.basic.mode.large.list.png
-        caption: The 'Show X more courses...' item.
+        src: ./assets/redlines.singleinstance1.png
+        caption: Single Instance Coachmark ≥ 480px
+      - type: narrow image
+        src: ./assets/redlines.singleinstance2.png
+        caption: Single Instance Coachmark ≥ 480px
+      - type: narrow image
+        src: ./assets/redlines.singleinstance.small.png
+        caption: Single Instance Coachmark < 480px
 
   - type: two column
     text: |
-      ### Course Mode
+      ### Tour
 
-      #### ≥ 768px
-      Follow the Basic Mode specifications.
+      #### ≥ 480px
 
-      #### 480px – 767px
-      At this size the course navigation appears in the dropdown.
+      Dimensions - Bubble
+      : - 300px wide
+        - Height varies by content
+        - 4px radius
 
-      Logo Link
-      : - www.pearson.console.com
-
-      Dimensions
-      : - All courses link is 48px high
-        - Local nav options are 44px tall (incl. header)
+      Dimensions - Arrow
+      : - 15px high
+        - 30px wide
 
       Spacing
-      : - Top level links, and heading, have 20px horizontal padding
-        - Local nav options have 30px left padding, 20px on the right
-        - Heading has 9px top padding
-        - All Courses has 8px padding for the icon
+      : - Title, Body left aligned
+        - close "x" and "Got it" link right aligned
+        - 20px padding top, left and bottom
+        - 25px padding right
+        - 10px padding right for close "x"
+        - 20px between Title and Body
+        - 15px between Body and "Got it" link.
 
-      Colors
-      : - Main dropdown background is Gutenberg Black (#333333)
-        - Local nav background is Full Moon (#424242)
-        - Divider lines are Asphalt (#3f3f3f)
+      Background
+      : - White (#FFFFFF)
 
       Typography
-      : - All Courses link and standard menu items are large labels (inverse, secondary color)
-        - Course name is basic title (inverse)
-        - Local nav items are basic labels (inverse, secondary color)
-        - Active nav item is bold label (inverse, primary color)
-        - Local nav items truncate, rather than wrap to more than one line
+      : - Title is Bold Label Pitch
+        - Body is Basic Body Small Variant
+        - Links are Basic Body Link
+        - Numbering is Small Label Gray No. 1
+
+      Dimmed Browser
+      : - Black 20% Opacity
+
+      Variant Numbering
+      : - 30px high
+        - 30px wide
+        - background Basic Blue
+        - border 1px Sky Blue
+        - Large Label Bold White
+        - 14px padding right
 
       States
-      : - Follow the Basic Mode specifications
+      : - Links use the browser default style for focus
+        - Hovering shows the hand icon, but otherwise no style change
 
       #### < 480px
-      Same as above, dropdown just becomes 100% wide.
+
+      Dimensions - Arrow
+      : - None
+
+      Align
+      : - Centered on Screen
+
+      #### Target Highlight and Background Dim
+
+      Highlight
+      : - | box-shadow 0 0 0 9999999px rgba (0,0, .4)
+
+      The Highlight is created by focusing on the div and dimming the rest of the screen by adding a giant box shadow that encompasses the screen.
+
 
     contents:
-      - type: wide image
-        src: ./assets/redlines.course.mode.480.png
-
-  - type: two column
-    text: |
-      #### Light theme
-
-      Colors
-      : - Header bar is Off White (#f2f2f2)
-        - Main dropdown background is Brightly Lit (#e6e6e6)
-        - Local nav background is Concrete (#cccccc)
-        - Dropdown cap is Boring (#a6a8ab)
-        - Divider lines are Hairline Gray (#b3b3b3)
-
-      Typography
-      : - Top level links are large labels
-        - All courses and other menu items are large labels (secondary color)
-        - Course heading is a basic title
-        - Local nav options are basic label (secondary color)
-        - Active nav option is bold label (primary color)
-
-    contents:
-      - type: wide image
-        src: ./assets/redlines.course.mode.320.png
-
-  - type: two column
-    text: |
-      ### Integration Mode
-
-      Identical to signed out mode, without the 'Sign In' link.
-
+      - type: narrow image
+        src: ./assets/redlines.tour1.png
+      - type: narrow image
+        src: ./assets/redlines.tour2.png
+      - type: narrow image
+        src: ./assets/redlines.tour.alt.png
+        caption: Variant Numbering Tour Coach Mark
 
 changelog:
   - version: 1.0.0-beta.1
     changes: |
-      - CHANGED: Use colors component
-      - CHANGED: Use typography component
-      - ADDED: Details on local nav item truncation
-      - ADDED: Details on focus and hover states
-      - ADDED: .ai mockup file
-
-  - version: 1.0.0
-    changes: Initial release
+      - CHANGED: Placeholder
 ---
