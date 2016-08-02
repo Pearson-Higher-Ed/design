@@ -53,6 +53,15 @@ blocks:
         src: ./assets/right.aligned.png
         caption: Right aligned dropdown behavior.
 
+  - type: two column
+    text: |
+      ### Divider lines
+      Options within a dropdown may be grouped using divider lines.
+    contents:
+      - type: narrow image
+        src: ./assets/divider.line.png
+        caption: A dropdown with divider lines.
+
   - type: section
     name: Redlines
 
@@ -77,7 +86,9 @@ blocks:
 
 changelog:
   - version: 1.0.0-beta.2
-    changes: Some change
+    changes: |
+      - CHANGED: Icon to use existing style
+      - ADDED: Option to include dividers between options
   - version: 1.0.0-beta.1
     changes: Initial Version
 ---
