@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Dropdown
 section: Components
-version: 1.0.0-beta.1
-status: deprecated
+version: 1.0.0-beta.2
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -53,6 +53,15 @@ blocks:
         src: ./assets/right.aligned.png
         caption: Right aligned dropdown behavior.
 
+  - type: two column
+    text: |
+      ### Divider lines
+      Options within a dropdown may be grouped using divider lines.
+    contents:
+      - type: narrow image
+        src: ./assets/divider.line.png
+        caption: A dropdown with divider lines.
+
   - type: section
     name: Redlines
 
@@ -76,6 +85,10 @@ blocks:
       : - Angle-down, unless the label text is a direct action (e.g. "Copy This Course" or "Post Status")
 
 changelog:
+  - version: 1.0.0-beta.2
+    changes: |
+      - CHANGED: Icon to use existing style
+      - ADDED: Option to include dividers between options
   - version: 1.0.0-beta.1
     changes: Initial Version
 ---
