@@ -3,8 +3,8 @@ layout: component-yaml
 title: Avatar Display
 section: Components
 redirect_from: /docs/ui-components/avatar-display/
-version: 1.0.0-beta.1
-status: deprecated
+version: 1.0.0
+status: active
 implemented: false
 private: true
 people:
@@ -14,12 +14,13 @@ people:
   - role: Designer
     name: Sennett Johnson
     email: sennett.johnson@pearson.com
-dependencies:
-  - name: Avatar
-    version: 1.0.0-beta.1
 downloads:
+  - name: UXD Accessibility Checklist
+    link: https://docs.google.com/a/pearson.com/document/d/1f19T-QT-v73bswlOvjYYDrkpDS0uDfQ4AMnOP2no8nI/edit?usp=sharing
   - name: Sketch
     link: ./assets/avatar-display.sketch
+  - name: Illustrator
+    link: ./assets/avatar-display.ai
 
 tagline: |
   This component defines the standard visual style for the output display of an avatar element.
@@ -27,7 +28,7 @@ features:
   - Circular display shape
   - Large and small display sizes
 usage_guidelines: |
-  Every instance of the avatar display element should come from this component.
+  Every instance of a user avatar should come from this component.
 
 blocks:
   - type: section
@@ -54,6 +55,8 @@ blocks:
 
       ### Large Size
 
+      The large size avatar is recommended for use in account detail view pages.
+
     contents:
       - type: narrow image
         src: ./assets/circle-default.png
@@ -65,6 +68,8 @@ blocks:
   - type: two column
     text: |
       ### Small Size
+
+      The small size avatar is recommended for standard use. This includes student rosters, submissions, communication, and account icons.
 
     contents:
       - type: narrow image
@@ -108,6 +113,6 @@ blocks:
       src: ./assets/circle-photo-sm-red.png
 
 changelog:
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: Initial version
 ---

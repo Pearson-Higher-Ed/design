@@ -4,7 +4,7 @@ title: Avatar Display
 section: Components
 redirect_from: /docs/ui-components/avatar-display/
 version: 1.0.0-beta.2
-status: active
+status: deprecated
 implemented: false
 private: true
 people:
@@ -69,7 +69,7 @@ blocks:
     text: |
       ### Small Size
 
-      The small size avatar is recommended for standard use. This includes student rosters, submissions, communication, and account icons. 
+      The small size avatar is recommended for standard use. This includes student rosters, submissions, communication, and account icons.
 
     contents:
       - type: narrow image
