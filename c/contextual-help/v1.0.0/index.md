@@ -3,8 +3,8 @@ layout: component-yaml
 title: Contextual Help
 section: Components
 redirect_from: /docs/ui-components/contextual-help/
-version: 1.0.0-beta.4
-status: deprecated
+version: 1.0.0
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -20,18 +20,28 @@ people:
     name: Annie Persson
     email: ann.persson@pearson.com
 
+downloads:
+  - name: UX Accessibility Checklist
+    link: https://docs.google.com/a/pearson.com/document/d/1YjPJz6ZJgG6m4iJvtTFYuhIBGVuefHpzYx3H_lPU-vo/edit?usp=sharing
+  - name: .sketch
+    link: ./assets/contextual-help.mockup.sketch
+  - name: .ai
+    link: ./assets/contextual-help.mockup.ai
+
 dependencies:
   - name: Drawer
-    version: 1.0.0-beta.7
+    version: 1.0.0
   - name: Typography
     version: 1.0.0
   - name: Application Header
-    version: 1.1.0-beta.3
+    version: 1.1.0
+  - name: Icons
+    version: 1.1.0
 
 tagline: |
-  This component presents help content and articles within the product experience so that users can answer their questions without the interruption of opening a separate help system in a new tab.
+  Presents help and support articles within the product experience so that users can answer their questions without the interruption of opening a separate help system in a new tab.
 usage_guidelines: |
-  Every url in the next gen platform should use the Contextual Help component, at a minimum configuring the two default items in the Help List.
+  Every URL in the Next Gen platform should use the Contextual Help component, at a minimum configuring the two default items in the Help List.
 
 features:
   - Answer user questions without leaving the product experience
@@ -45,17 +55,17 @@ blocks:
 
   - type: two column
     text: |
-      This displays a listing of help articles relevant to the current url. Every url in the next gen platform should offer a Help List through this component. Common functionality includes:
+      Displays a listing of help articles relevant to the current url. Every url in the next gen platform should offer a Help List through this component. Common functionality includes:
 
-      * Universal access through the [Header](/design/c/application-header/v1.1.0-beta.3/#rd-signed-out-mode)
+      * Universal access through the [Header](/design/c/application-header/v1.1.0/#rd-signed-out-mode)
       * Standard location of 'Contact Support' information
       * Articles relevant to the user's current location and role
 
-      Selecting an article opens it within a [detail view](/design/c/drawer/v1.0.0-beta.7/#rd-detail-view) in the drawer.
+      Selecting an article opens it within a [detail view](/design/c/drawer/v1.0.0/#rd-detail-view) in the drawer.
     contents:
       - type: narrow image
         src: ./assets/help-list.png
-        caption: Initially the drawer presents a list of help articles for the page.
+        caption: Initially the drawer presents a list of contextual help and support articles for the page.
       - type: narrow image
         src: ./assets/article-detail.png
         caption: Selecting an article navigates into it, presenting the full content.
@@ -81,9 +91,9 @@ blocks:
 
   - type: two column
     text: |
-      Selecting the "Help" link in the [App Header](/design/c/application-header/v1.1.0-beta.3/#rd-signed-out-mode) will open the Help List. You can also navigate directly to an article (either a standalone article or one from the list) through embedded activation.
+      Selecting the "Help" link in the [App Header](/design/c/application-header/v1.1.0/#rd-signed-out-mode) will open the Help List. You can also navigate directly to an article (either a standalone article or one from the list) through embedded activation.
 
-      A Help icon or a "Learn More" link can be used to activate an article from within the page. These should be positioned near the relevant portion of the page.
+      A Help icon or a "Learn more" link can be used to activate an article from within the page. These should be positioned near the relevant portion of the page. Avoid mixing and matching both styles in the same page.
     contents:
       - type: wide image
         src: ./assets/embedded-activation.png
@@ -95,41 +105,41 @@ blocks:
   - type: two column
     text: |
       ### Accordions
-      Content may be grouped into accordions which help organize and condense information.
+      Content may be grouped into accordions which help organize and condense information. See the [Authoring Guidelines](#authoring-guidelines) below for details on how to include an accordion in your article.
 
       ### Info Boxes
-      Authors may call extra attention to important information by wrapping it in an info box. There are three types available: 'Tip', 'Note', and 'Important'.
+      Authors may use info boxes to call attention to important information.
     contents:
       - type: narrow image
         src: ./assets/accordions.png
         caption: Example of accordions.
       - type: narrow image
         src: ./assets/tips.warnings.png
-        caption: General tip and warning boxes.
+        caption: General Tip and Important boxes.
 
   - type: section
-    name: Help Article Formatting
+    name: Authoring Guidelines
 
   - type: two column
     text: |
       Use these guidelines when authoring articles for the Contextual Help component.  If you’re using MadCap Flare to author articles, see these [specifics for preparing Flare files][flare].
 
-      [flare]: https://docs.google.com/document/d/1nHNR5nudYBv_GGhSDoYHIvdxcEClsmSex0TcOw5G6kM/edit?ts=5739f2e3
+      [flare]: https://docs.google.com/document/d/1tQVifP2ynJhHlg7R-Odk2Ej1qQxMs0SQ67fYzTlYjM8/edit?ts=578397b6
     contents:
       - type: text
         content: |
 
           ### Do
           * Write articles at the 9th grade reading level. If you like, use the Spelling and Grammar feature in MS Word. Click Spelling and Grammar and under Options, select "Show readability statistics".
-          * Title articles in the form of a question. This is consistent with how issues are recorded in Salesforce Knowledge. Contact Us and Popular Resources are an exception to this guideline.
+          * Title articles in the form of a question. Contact Us and Popular Resources are an exception to this guideline.
           * List the 'Contact Us' article at the bottom of the Help List. The Contact Us article is single sourced across all products adopting the contextual help component. Authors can find the Contact Us file in the SVN o-help directory: `o-help-content/EN-US/ContactSupport.html`
           * List Popular Student Resources and Popular Instructor Resources articles in the second to last position of the Help List.
           * Use Online Help Google Analytics and tech support data to determine what info to include in articles. Work with [Mark Giardina](mailto:mark.giardina@pearson.com) and [Matt Norris](mailto:matt.norris@pearson) to request KB metrics and usage reports. Be sure to also take advantage of the [Snapshot Tool](https://hepq.pearson.com/login).
-          * Include accordions when necessary to improve readability of longer topics or procedures.
+          * Include accordions when necessary to improve readability of longer topics or procedures. Consider using them as a replacement for "See this help topic" links.
           * Link to external assets such as EI guides, Marketing PDFs, Videos, etc. from within the Popular Resources articles when relevant.
           * Add Help List articles that are role specific (educator/learner/TA).
-          * List up to 5 custom articles at the top of the list. Custom articles are specifically relevant to features/tools accessible at the current URL. If the feature/tool is only available under certain conditions  it must be documented in a Standalone Article instead.
-          * Follow the formatting guidelines.
+          * List up to 5 custom articles at the top of the list. These should be specifically relevant to features/tools accessible at the current URL. If the feature/tool is only available under certain conditions  it must be documented in a Standalone Article instead.
+          * Follow the formatting guidelines below.
 
           ### Don't
           * Reformat the layout or structure of Popular Resources and Contact Us article types. Your [UA Design representative](mailto:ann.persson@pearson.com) on the UXF Team will work with you in reviewing recommendations to ensure standardized contextual help articles are uniform across the customer experience.
@@ -141,27 +151,18 @@ blocks:
           * Link out to Online Help Systems.
 
           ### Formatting guidelines
+          After you’ve  committed your contextual help files to SVN, a sanitization script runs to clean the source html files to follow the tag conventions established by the UX framework.
 
-          #### Titles
-          Every article should have a single title at the top, encoded as an `<h4>` tag after sanitization.
+          **Sanitization**  
+          The [sanitization](https://en.wikipedia.org/wiki/HTML_sanitization) script alleviates authors from having to worry about the details of code and html tags used in their help files. Headings, sub-headings, body copy, bold and italics, lists and unordered lists, etc. are all reviewed and cleaned by the sanitization script to follow the same html semantics as other components. Sanitization also helps to ensure we are following accessibility best practices.
 
-          #### Headings
-          Articles headings should be structured and encoded as `<h5>` and `<h6>` tags after sanitization.
+          **Accordions**  
+          Enables authors to transform sub-headings into expand and collapsable blocks of content. The accordion component should be used within help articles to chunk content by sub-topics, infinitive phrases, step procedures exceeding 9 steps, or to replace “see topic xyz” links.
 
-          #### Bold and italics
-          Should be used normally to provide emphasis. The name of interactive elements (i.e. button labels) must be bolded.
 
-          #### Unordered lists
-          Should be used to organize content. Must not be nested more than two levels.
+          **Accordion Tags**  
+          To use use the accordion component, you will apply specific tags in your html files whether you are working from MadCap Flare, Dreamweaver, or other development tools.
 
-          #### Ordered lists
-          Should be used to describe steps in a workflow. Should not exceed 9 items in length.
-
-          #### Tips and notes
-          Should be used to give handy bits of information more emphasis.
-
-          #### Accordions
-          Should be used for topics containing sub-topics or step procedures exceeding 9 steps.
 
   - type: section
     name: Redlines
@@ -171,7 +172,7 @@ blocks:
       ### Help List
 
       Container
-      : - [Drawer Basic View](/design/c/drawer/v1.0.0-beta.7/#rd-basic-view)
+      : - [Drawer Basic View](/design/c/drawer/v1.0.0/#rd-basic-view)
 
       Dimensions
       : - 20px margin above article title and below article excerpt
@@ -193,8 +194,8 @@ blocks:
       ### Article Detail
 
       Container
-      : - [Drawer Detail View](/design/c/drawer/v1.0.0-beta.7/#rd-detail-view) for articles from the help list
-        - [Drawer Basic View](/design/c/drawer/v1.0.0-beta.7/#rd-basic-view) for standalone articles
+      : - [Drawer Detail View](/design/c/drawer/v1.0.0/#rd-detail-view) for articles from the help list
+        - [Drawer Basic View](/design/c/drawer/v1.0.0/#rd-basic-view) for standalone articles
         - Title is 'Help Topic' for standalone articles
 
       Typography
@@ -210,7 +211,7 @@ blocks:
     text: |
       ### Embedded Activation
       Icon
-      : - Question mark icon
+      : - [question-circle](/design/c/icons/v1.1.0/#rd-question-circle)
         - [Large Label](/design/c/typography/v1.0.0/#rd-large-label) sizing
         - [Link formatting](/design/c/typography/v1.0.0/#rd-links)
 
@@ -239,7 +240,7 @@ blocks:
         - Accordion content follows the same type style as the surrounding text
 
       Icon
-      : - caret-right for unopened items, caret-down for opened
+      : - [caret-right](/design/c/icons/v1.1.0/#rd-caret-right) for unopened items, [caret-down](/design/c/icons/v1.1.0/#rd-caret-down) for opened
 
       Behavior
       : - Users can open accordion items independently from each other (i.e. opening an item doesn't autoclose other items that are already open)
@@ -260,9 +261,9 @@ blocks:
       : - 1px [hairline gray](/design/c/colors/v1.0.1/#rd-hairline-gray-d0d0d0) line separating title from content
 
       Icons
-      : - lightbulb for Tip
-        - info-circle for Note
-        - exclamation-circle for Warning
+      : - [light-bulb-o](/design/c/icons/v1.1.0/#rd-light-bulb-o) for Tip
+        - [info-circle](/design/c/icons/v1.1.0/#rd-info-circle) for Note
+        - [exclamation-circle](/design/c/icons/v1.1.0/#rd-exclamation-circle) for Important
         - 8px padding between icon and title
 
       Typography
@@ -285,21 +286,6 @@ blocks:
 
 
 changelog:
-  - version: 1.0.0-beta.4
-    changes: |
-      - ADDED: Accordion styles
-      - ADDED: Tip, Note, and Warning styles
-      - CHANGED: Updated author guidelines per latest from UA
-  - version: 1.0.0-beta.3
-    changes: |
-      - CHANGED: Updated formatting guidelines with latest documentation.
-  - version: 1.0.0-beta.2
-    changes: |
-      - ADDED: Images
-      - ADDED: Initial redlines
-      - ADDED: Dependency links
-      - ADDED: Embedded activation triggers
-      - CHANGED: Updated formatting guidelines
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: Initial version
 ---
