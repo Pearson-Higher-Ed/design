@@ -4,7 +4,7 @@ title: Contextual Help
 section: Components
 redirect_from: /docs/ui-components/contextual-help/
 version: 1.0.0-beta.7
-status: active
+status: deprecated
 implemented: false
 people:
   - role: Product Owner
