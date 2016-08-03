@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Presentation Strategies
 section: Components
-version: 1.0.0-beta.2
-status: deprecated
+version: 1.0.0
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -158,10 +158,6 @@ blocks:
       - Basic Grid strategy
 
 changelog:
-  - version: 1.0.0-beta.2
-    changes: |
-      - CHANGED: Updated documentation text.
-      - ADDED: Completed redlines.
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: Initial version
 ---
