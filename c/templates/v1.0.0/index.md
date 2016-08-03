@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Templates
 section: Components
-version: 1.0.0-beta.2
-status: deprecated
+version: 1.0.0
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -181,11 +181,6 @@ blocks:
       - Static column
 
 changelog:
-  - version: 1.0.0-beta.2
-    changes: |
-      - CHANGED: Finalize documentation
-      - ADDED: Complete redline specifications
-      - ADDED: Dependency links
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: Initial version.
 ---
