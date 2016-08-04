@@ -3,8 +3,8 @@ layout: component-yaml
 title: Modal
 section: Components
 redirect_from: /docs/ui-components/modal/
-version: 1.0.0-beta.5
-status: deprecated
+version: 1.0.0-beta.6
+status: active
 implemented: false
 private: true
 people:
@@ -180,11 +180,92 @@ blocks:
         - Pressing the escape key will also dismiss the modal
 
     contents:
-    - type: wide image
-      src: ./assets/redlines.modal-media.png
+      - type: wide image
+        src: ./assets/redlines.modal-media.png
+
+  - type: two column
+    text: |
+      ### Accessibility guidelines
+      Follow these rules and guidelines for ensuring modals behave properly when used with assistive technology.
+    contents:
+      - type: text
+        content: |
+          Modals, being a single-context item (they do not coexist with any existing page, but act as though they are their own page), will need the following attributes and settings:
+
+          The dialog body itself (usually a div) needs `role="dialog"` and when the user opens the dialog they ought to get the "name" of it as well, so inside is usually a heading (and it can be an h1 because it's its own context) with an id. Remember id's must be unique to the whole HTML document and must start with a _ or a letter! The dialog div then additionally needs `aria-labelledby=" the id of that heading "`.
+
+          For a text-only dialog, where the modal is mostly just explaining stuff with perhaps an additional "ok" button, it's possible/encouraged to throw an id on the p element holding that text as well and on the dialog div add
+          `aria-describedby=" id of that p element "`.
+
+          Example of non-text modal code:
+
+          ~~~
+          <div role="dialog" aria-labelledby="f123">
+            <button data-foo="close">
+              <i class="pe-icon--times" aria-hidden="true"></i><span class="pe-sr-only">Close dialog</span>
+            </button>
+
+            <h1 id="f123">All about foo</h1>
+
+            ... possible form elements or interactives inside mixed with text...
+          </div>
+          ~~~
+
+          Example of a more text-only dialog:
+
+          ~~~
+          <div role="dialog" aria-labelledby="q456" aria-describedby="p233">
+            <button data-foo="close">
+              <i class="pe-icon--times" aria-hidden="true"></i><span class="pe-sr-only">Close dialog</span>
+            </button>
+
+            <h1 id="q456">Zomg</h1>
+
+            <p id="p233">Logging in requires you first contact someone from the FooBar office</p>
+
+            <a href="/contact">Contact the FooBar office</a>
+          </div>
+          ~~~
+
+          Modals should always have a close button for touchscreen accessibility, but also listen for ESC to close and bring the focus back to the modal trigger. Focus cycles through the modal so long as it is open.
+
+          Additionally, if the modal is, source-wise, not inside the page content, then we can prevent a nonvisual user accidentally reading out of the dialog using `aria-hidden`. Be careful using `aria-hidden` and make certain it is set to "false" (or removed entirely) when the modal is closed!
+
+          When modal is not open:
+
+          ~~~
+          <body>
+            <div class="page_container">
+              everything on the visible page is here!
+            </div>
+
+            <div role="dialog" aria-labelledby="f123" style="display:none;">
+              ...
+            </div>
+          </body>
+          ~~~
+
+          When modal is open:
+
+          ~~~
+          <body>
+            <div class="page_container" aria-hidden="true">
+              This page is not visible to AT!
+            </div>
+
+            <div role="dialog" aria-labelledby="f123">
+              ...
+            </div>
+          </body>
+          ~~~
+
+          Only mess around with `aria-hidden` on the page if you have a structure like this. If the modal div is *inside* the main page content div, `aria-hidden` should not be used, for it will affect all children including the modal itself. AT users would basically get a blank page.
 
 
 changelog:
+  - version: 1.0.0-beta.6
+    changes: |
+      - ADDED: Accessibility and ARIA documentation.
   - version: 1.0.0-beta.5
     changes: |
       - ADDED: Accessibility checklist
