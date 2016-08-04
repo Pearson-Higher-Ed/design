@@ -202,7 +202,8 @@ blocks:
           ~~~
           <div role="dialog" aria-labelledby="f123">
             <button data-foo="close">
-              <i class="pe-icon--times" aria-hidden="true"></i><span class="pe-sr-only">Close dialog</span>
+              <i class="pe-icon--times" aria-hidden="true"></i>
+              <span class="pe-sr-only">Close dialog</span>
             </button>
 
             <h1 id="f123">All about foo</h1>
@@ -216,7 +217,8 @@ blocks:
           ~~~
           <div role="dialog" aria-labelledby="q456" aria-describedby="p233">
             <button data-foo="close">
-              <i class="pe-icon--times" aria-hidden="true"></i><span class="pe-sr-only">Close dialog</span>
+              <i class="pe-icon--times" aria-hidden="true"></i>
+              <span class="pe-sr-only">Close dialog</span>
             </button>
 
             <h1 id="q456">Zomg</h1>
