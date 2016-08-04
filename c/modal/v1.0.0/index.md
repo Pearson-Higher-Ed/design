@@ -3,8 +3,8 @@ layout: component-yaml
 title: Modal
 section: Components
 redirect_from: /docs/ui-components/modal/
-version: 1.0.0-beta.5
-status: deprecated
+version: 1.0.0
+status: active
 implemented: false
 private: true
 people:
@@ -185,27 +185,6 @@ blocks:
 
 
 changelog:
-  - version: 1.0.0-beta.5
-    changes: |
-      - ADDED: Accessibility checklist
-      - ADDED: Documentation for icons
-  - version: 1.0.0-beta.4
-    changes: |
-      - ADDED: More details on the dismissing behavior
-  - version: 1.0.0-beta.3
-    changes: |
-      - CHANGED: Merged standard and alternate modal types
-      - CHANGED: Sizing now leverages the templates component
-      - CHANGED: Updated image modal to use a more fullscreen style
-      - ADDED: Information about zooming/panning images
-      - ADDED: A11y details
-  - version: 1.0.0-beta.2
-    changes: |
-      - ADDED: Sketch file
-      - ADDED: Long Titles
-      - FIXED: Dependencies
-      - FIXED: Redlines
-
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: Initial version
 ---
