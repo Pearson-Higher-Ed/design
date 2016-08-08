@@ -11,7 +11,7 @@ people:
   - role: Designer
     name: Parker Malenke
     email: parker.malenke@pearson.com
-implementation: https://www.npmjs.com/package/pearson-elements
+implementation: https://www.npmjs.com/package/@pearson-components/drawer
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1iO8WNiFa5pn6_JleXMUufIvIsXEbVHXsiYUcgxtW-iM/edit?usp=sharing

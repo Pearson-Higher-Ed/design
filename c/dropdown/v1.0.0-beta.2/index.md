@@ -11,7 +11,6 @@ people:
   - role: Designer
     name: Parker Malenke
     email: parker.malenke@pearson.com
-implementation:
 downloads:
   - name: UXD Accessibility Checklist
     link: ""

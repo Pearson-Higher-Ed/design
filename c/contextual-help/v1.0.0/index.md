@@ -6,6 +6,7 @@ redirect_from: /docs/ui-components/contextual-help/
 version: 1.0.0
 status: active
 implemented: false
+implementation: https://www.npmjs.com/package/@pearson-components/contextual-help
 people:
   - role: Product Owner
     name: Joe Macaluso
