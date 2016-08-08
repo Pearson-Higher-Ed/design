@@ -5,6 +5,7 @@ section: Components
 redirect_from: /docs/ui-components/forms/
 status: active
 implemented: true
+implementation: https://www.npmjs.com/package/pearson-elements
 version: 1.0.0
 people:
   - role: Product Owner

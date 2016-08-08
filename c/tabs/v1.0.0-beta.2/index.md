@@ -22,7 +22,6 @@ people:
   - role: Designer
     name: Ron Spezial
     email: ron.spezial@pearson.com
-implementation: https://pearson-elements-v0.surge.sh/elements/tabs/
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/19r4uvPAZpmXRwT_krIr9MqHLYC-Vgjah2kPDi9PYaQA/edit?usp=sharing
