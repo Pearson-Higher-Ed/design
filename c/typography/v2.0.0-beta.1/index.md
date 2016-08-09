@@ -60,9 +60,6 @@ blocks:
     text: |
       Much of the typography used in a web application consists of short names, labels, or single line bits of content. For example, in Console the course tile displays information like instructor names and course dates with labels.
     contents:
-      - type: wide image
-        src: ./assets/label.example.png
-        caption: An example of labels in use on the Console course tile
 
   - type: two column
     text: |
@@ -107,9 +104,6 @@ blocks:
 
       Titles come in two types, *Page* and *Section*. Page titles typically only appear once per page and are designed to name the current page. Section titles are designed to name the modular components that might make up a page.
     contents:
-      - type: wide image
-        src: ./assets/title.example.png
-        caption: Standard colors
 
   - type: two column
     text: |
