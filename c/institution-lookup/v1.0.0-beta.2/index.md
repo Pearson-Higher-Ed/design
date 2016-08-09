@@ -3,7 +3,7 @@ layout: component-yaml
 title: Institution Lookup
 section: Components
 redirect_from: "/docs/ui-components/institution-lookup/"
-version: 1.0.0-beta.1
+version: 1.0.0-beta.2
 status: active
 people:
   - role: Product Owner
@@ -58,13 +58,14 @@ blocks:
     text: |
       If a user has one or more institutions associated with their account, these will be displayed in a traditional dropdown manner. The Primary institution will be indicated as per default browser select functionality.
 
-      It is possible for a user to need to select more than one institution at a time. (e.g. An instructor who wishes to view results from two institutions at one time.) In this case, the 'multiple' attribute of the `<select>` element may be used. Due to the way that `<select>` then displays the options when using 'multiple', it is recommended that a css or js option be pursued for aesthetic purposes. 
-
-      The value: 'I am not affiliated with an institution or school' should be shown when appropriate. (NOTE: Does this clear a user's list of associated insitutions?)
+      **Optional values:** All optional values are surfaced within the appropriate context. (i.e. There may be certain situations where a specific value does not make sense given the context of the control.) There is also an outstanding question regarding how the control affects the user's account.
     contents:
       - type: narrow image
         src: ./assets/illustration2.png
         caption: Displayed values from a user's account.
+      - type: narrow image
+        src: ./assets/illustration4.png
+        caption: Optional contextual values.
   - type: section
     name: Type-ahead Functionality
 
