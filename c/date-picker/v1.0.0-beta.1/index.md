@@ -135,14 +135,6 @@ blocks:
         - type: wide image
           src: ./assets/double-input-focus-end-noselect.png
 
-  - type: two column
-    text: |
-      ### End Date Focus Hover and Highlight w/o Selection
-      Dates prior to the selected start date are disabled.
-
-    contents:
-        - type: wide image
-          src: ./assets/double-input-focus-end-hover.png
 
   - type: two column
     text: |

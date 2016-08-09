@@ -5,3 +5,29 @@
     width: 100%;
   }
 }
+
+.video-wrapper {
+  position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0;
+  margin: 10px 0;
+
+  iframe {
+    position: absolute;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+  }
+}
+
+.js-tag {
+  display: inline-block;
+  padding: 2px 6px;
+  background: #f7df1e;
+  color: pe-color(pitch);
+  border-radius: 2px;
+  @include pe-label;
+  @include pe-label-bold;
+}

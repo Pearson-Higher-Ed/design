@@ -99,6 +99,7 @@ body.home {
   box-sizing: content-box;
   width: 90%;
   padding: 20px 5% 0;
+
   @include pe-responsive-breakpoint(sm) {
     width: 80%;
     padding: 30px 10% 0;
@@ -127,6 +128,12 @@ body.home {
     margin: 0 1.5% 20px;
 
     border-bottom: 3px solid pe-color(gutenberg-black);
+
+    span > div {
+      display: inline-block;
+      margin-left: 20px;
+      margin-bottom: 4px;
+    }
   }
 
   .component {
@@ -147,13 +154,47 @@ body.home {
     color: pe-color('pitch');
     text-decoration: none;
 
-    .data {
-      margin-top: 6px;
+    & > a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
     }
 
-    .status {
-      float: right;
-      text-transform: capitalize;
+    .data {
+      height: 2rem;
+      margin-top: 6px;
+      margin-bottom: 6px;
+      overflow: hidden;
+      position: relative;
+
+      &:after {
+        content: "";
+        text-align: right;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 30%;
+        height: 1rem;
+        background: linear-gradient(to right, rgba(242, 242, 242, 0), rgba(242, 242, 242, 1) 50%);
+      }
+    }
+
+    .versions p {
+      margin-bottom: 4px;
+    }
+
+    .version {
+      display: block;
+      padding: 5px 10px;
+      text-align: center;
+      border: 1px solid pe-color(hairline-gray);
+      border-radius: 3px;
+      float: left;
+      text-decoration: none;
+
+      & + .version {
+        margin-left: 8px;
+      }
     }
   }
 }

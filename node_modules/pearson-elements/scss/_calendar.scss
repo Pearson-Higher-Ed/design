@@ -1,0 +1,10 @@
+.pe-calendar {
+  @include pe-calendar(
+  $pe-calendar-border,
+  $pe-calendar-border-width,
+  $pe-calendar-width,
+  $pe-calendar-default-line-height,
+  $pe-calendar-div-padding-left,
+  $pe-calendar-div-padding-right
+  );
+}

@@ -1,4 +1,11 @@
-h2 {
-  @include hl1;
-  margin: 0;
+.section {
+  border-bottom: 2px solid pe-color(boring);
+
+  h2 {
+    @include hl1;
+    margin: 0;
+    display: inline-block;
+    border: none;
+    vertical-align: baseline;
+  }
 }

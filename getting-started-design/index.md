@@ -27,6 +27,13 @@ If you have any questions, either about the process or a specific component, the
 
 [ml]: https://groups.google.com/a/pearson.com/forum/#!forum/elemental-discuss/categories
 
+### Craft Library
+For designers using Sketch, the [Craft plugin](https://www.invisionapp.com/craft) from Invision makes it easy to include components in your designs. Watch the video below for an overview of how to install Craft and get started using components today:
+
+<div class="video-wrapper">
+  <iframe width="960" height="720" src="https://www.youtube-nocookie.com/embed/sb5ZeKJaCVU?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
 ## 3. Working With Development
 Each component includes a pre-built package of code that makes it easy for developers to incorporate the design into the final product. This also simplifies communication about the design details; you don't have to redline your use of a component, simply note which component it is. For example, you can just point out that a button is [a Large Default button][lg-btn], rather than indicating its exact size and color.
 
