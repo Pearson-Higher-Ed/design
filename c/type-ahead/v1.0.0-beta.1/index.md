@@ -27,11 +27,13 @@ dependencies:
 tagline: This component defines the standard visual style for the type ahead.
 features:
   - Initialized upon focus
-  - Ordered by numerical and alphabetical descending (default) or ascending order
   - Filtered as the user inputs or deletes values
+  - Results ordered by numerical and alphabetical descending (default) or ascending order
+  - Initial results filtered upon popularity
+  - Results can be grouped
   
 usage_guidelines: |
-  Every instance of an institution dropdown should be based upon this component.
+  Use this component in situations where the user will be keying in values in order to search for a result.
 
 blocks:
   - type: section
