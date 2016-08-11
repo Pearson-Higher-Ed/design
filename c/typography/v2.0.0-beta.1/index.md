@@ -372,7 +372,7 @@ blocks:
         - 22px line-height
 
       Color
-      : - [Pitch (#231f20)](/design/c/colors/v1.0.1/#rd-pitch-231f20)
+      : - Charcoal
 
       Margins:
       : - Adjacent paragraphs are separated by 12px
@@ -392,38 +392,6 @@ blocks:
     exports:
       - Basic Body
       - Small Body
-
-  - type: two column
-    text: |
-      #### Lead
-      Font
-      : - 20px font-size
-        - 28px line-height
-        - light font-weight
-
-      Color
-      : - [Pitch (#231f20)](/design/c/colors/v1.0.1/#rd-pitch-231f20)
-    contents:
-      - type: wide image
-        src: ./assets/redlines.copy.lead.png
-    exports:
-      - Lead
-
-  - type: two column
-    text: |
-      ##### Narrow Lead
-      At [extra small](/design/c/breakpoints/v1.0.0/#rd-extra-small) viewports the lead styles become:
-
-      Font
-      : - 18px font-size
-        - 24px line-height
-        - thin font-weight
-
-      Color
-      : - [Pitch (#231f20)](/design/c/colors/v1.0.1/#rd-pitch-231f20)
-    contents:
-      - type: narrow image
-        src: ./assets/redlines.copy.lead.narrow.png
 
   - type: two column
     text: |
