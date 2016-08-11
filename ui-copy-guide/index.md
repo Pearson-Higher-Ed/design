@@ -130,12 +130,15 @@ blocks:
     content: |
       Calls to action should:
 
-      - First level
-        - second level
-        - secondary
-          - third
-        - another
-      - and another
+      - be brief (five words or fewer)
+      - be consistent
+      - tell the reader where you're taking them
+        - Take me to My Account
+        - Go to Gradebook
+      - describe what you'd like the reader to do:
+        - Start learning
+        - Learn more about dropped courses
+        - Search for course materials
 
   - type: secondary section
     content: Punctuation & Special Characters
