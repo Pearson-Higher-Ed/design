@@ -80,20 +80,9 @@ blocks:
     foreground:
       - name: White
         hex: FFFFFF
-      - name: Gray Wash
-        hex: AEAEAE
     background:
-      - name: Black
-        hex: "000000"
-      - name: Gutenberg Black
-        hex: 333333
-      - name: Full Moon
-        hex: 424242
-    accents:
-      - name: Asphalt
-        hex: 3f3f3f
-      - name: Smoke Gray
-        hex: 545454
+      - name: Pearson Blue
+        hex: 007fa3
     exports:
       - White (#FFFFFF)
       - Gray Wash (#AEAEAE)
