@@ -21,8 +21,6 @@ downloads:
 dependencies:
   - name: Inputs
     version: 1.0.0
-  - name: Type-ahead
-    version:
 
 tagline: This component defines the standard visual style for the type ahead.
 features:
@@ -47,7 +45,7 @@ blocks:
       ###Affiliated Institution
       If the user is signed in, and there is at least one institution or school associated with the user's account, the control will then be displayed as a select box with the primary or only institution displayed as the default value.
     contents:
-      - type: narrow image
+      - type: wide image
         src: ./assets/illustration.png
         caption: Illustrating the two different place holder values.
 
