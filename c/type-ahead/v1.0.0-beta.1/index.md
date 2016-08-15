@@ -39,54 +39,62 @@ blocks:
 
   - type: two column
     text: |
-      ###Anonymous and First Time
-      The user's initial (or an anonymous user's) view of the institution lookup will be a search field with the place holder text 'Institution or School'. This is also true if there are no values available, or none associated with an account.
+      ###Search and Standard Text Input
+      The user’s initial view of the type-ahead functionality will be a search field with the place holder text ‘Search’. Type-ahead can also be implemented within a standard text input field element. The functionality can be communicated through the placeholder text.
 
-      ###Affiliated Institution
-      If the user is signed in, and there is at least one institution or school associated with the user's account, the control will then be displayed as a select box with the primary or only institution displayed as the default value.
     contents:
       - type: wide image
         src: ./assets/illustration.png
         caption: Illustrating the two different place holder values.
 
   - type: section
-    name: Pre-Set Values (Select List)
+    name: Functionality
 
   - type: two column
     text: |
-      If a user has one or more institutions associated with their account, these will be displayed in a traditional dropdown manner. The Primary institution will be indicated as per default browser select functionality.
+      ###Focus and Input
+      Once the user clicks into the field and begins to type characters the response will be a displayed list of suggestions. The response can be buffered if the input can not be kept up with, but a response (results) will be surfaced as soon as resources are available. A user may also back characters out, therefore changing the responses.
 
-      The value: 'I am not affiliated with an institution or school' should be shown when appropriate. (NOTE: Does this clear a user's list of associated insitutions?)
+      ###Response and Results
+      The responses that are surfaced to the user are based upon character input, but they can be initially scoped through numerous critieria, dependent upon need and how the componenet is being utilized. (e.g. Geo-location, popularity, etc.) 
+
+      The results can be displayed in ascending alphabetical order (default) or descending alphabetical order. The user's typed-in characters will be bolded within the displayed results. Display of results, both vertically (number) as well as horizontally (characer / word length) can be set determined upon available space. But it is recommended that the list of results not be longer than 20 at any given time.
+
+      ###Selected Values
+      A selected value will be displayed within the field. 
     contents:
       - type: narrow image
         src: ./assets/illustration2.png
-        caption: Displayed values from a user's account.
+        caption: List of results.
+      - type: narrow image
+        src: ./assets/illustration4.png
+        caption: Selected result.
   - type: section
-    name: Type-ahead Functionality
+    name: Constant Values
 
   - type: two column
     text: |
-      The type-ahead functionality will be initiated when the user either selects the field and begins typing, or if they select 'Search for an Institution or School' from the select dropdown. Either action will clear the select list values (minus the two static values: I am not affiliated with an institution or school. I do not see my institution or school.) and begin populating based upon the user's keyed in values.
+      There may be situations wherein constant values (e.g. Institution lookup) will need to be surfaced to the user no matter what values or characters have been input. These will be displayed at the bottom of the list of results and visually delineated.
     contents:
       - type: narrow image
         src: ./assets/illustration3.png
-        caption: Type-Ahead functionality.
+        caption: Constant values shown below results.
 
   - type: section
     name: Redlines
 
   - type: two column
     text: |
-      ### Select
+      ### Search
 
-      Using optgroup
+      Standard implementation
       : - As per default browser functionality
-        - Grouping
+        - Grouping (as provided by standard markup control)
         - Basic label font
 
     contents:
       - type: narrow image
-        src: ./assets/redline.dropdown.select.png
+        src: ./assets/redline.focus.search.png
 
   - type: two column
     text: |
@@ -98,8 +106,8 @@ blocks:
         - Typed in values bolded across all suggestions
 
     contents:
-      - type: wide image
-        src: ./assets/redline.typeahead.list.png
+      - type: narrow image
+        src: ./assets/redline.constant.values.png
 
 changelog:
   - version: 1.0.0-beta.1
