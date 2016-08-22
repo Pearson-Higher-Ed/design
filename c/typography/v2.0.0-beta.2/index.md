@@ -65,13 +65,13 @@ blocks:
   - type: two column
     text: |
       ### Variants
-      There are six different types of label, *Basic*, *Small*, *Large*, *Bold*, and *Small bold*:
+      There are five different types of label, *Basic*, *Small*, *Large*, *Bold*, and *Small bold*:
 
       Labels should primarily be used in single line scenarios.
     contents:
       - type: narrow image
         src: ./assets/labels.regular.png
-        caption: The six label types
+        caption: The five label types
 
   - type: two column
     text: |
@@ -235,30 +235,34 @@ blocks:
   - type: two column
     text: |
       #### Sizes
-      <div class="section_text" markdown="1">
-
       Small
-      : - 13px font-size
-        - 15px line-height
+      : - 12px font-size
+        - 16px line-height
+
+      Small bold
+      : - Semibold weight
 
       Basic
       : - 14px font-size
-        - 16px line-height
-
-      Large
-      : - 16px font-size
         - 18px line-height
 
       Bold
-      : - 14px font-size
-        - 16px line-height
-        - bold font-weight
+      : - Semibold weight
+
+      Large
+      : - 16px font-size
+        - 20px line-height
+
+      #### Colors
+      Use the Light Palette. Text is Charcoal by default, Medium Gray should be used as the secondary color.
+
     contents:
       - type: narrow image
         src: ./assets/redlines.labels.regular.png
     exports:
       - Basic Label
       - Small Label
+      - Small Bold Label
       - Large Label
       - Bold Label
 
@@ -266,46 +270,13 @@ blocks:
     styles:
       - Basic Label
       - Small Label
+      - Small Bold Label
       - Large Label
       - Bold Label
 
   - type: two column
     text: |
-      #### Colors
-      Primary (Light)
-      : - [Pitch (#231f20)](/design/c/colors/v1.0.1/#rd-pitch-231f20)
-
-      Secondary (Light)
-      : - [Gray No. 1 (#565656)](/design/c/colors/v1.0.1/#rd-gray-no-1-565656)
-
-      Primary (Dark)
-      : - [White (#FFFFFF)](/design/c/colors/v1.0.1/#rd-white-ffffff)
-        - light font-weight
-
-      Secondary (Dark)
-      : - [Gray Wash (#AEAEAE)](/design/c/colors/v1.0.1/#rd-gray-wash-aeaeae)
-        - light font-weight
-    contents:
-      - type: narrow image
-        src: ./assets/redlines.labels.colors.light.png
-      - type: narrow image
-        src: ./assets/redlines.labels.colors.dark.png
-    exports:
-      - Primary Label Color
-      - Secondary Label Color
-      - Inverse Primary Label Color
-      - Inverse Secondary Label Color
-
-  - type: style table
-    styles:
-      - Primary Label Color
-      - Secondary Label Color
-      - Inverse Primary Label Color
-      - Inverse Secondary Label Color
-
-  - type: two column
-    text: |
-      ### Titles
+      ### Section Titles
     exports:
       - Basic Title
       - Large Title
@@ -314,47 +285,59 @@ blocks:
   - type: two column
     text: |
       #### Sizes
-      Basic
-      : - 22px font-size
-        - 28px line-height
-
-      Large
-      : - 24px font-size
-        - 30px line-height
-
-      XL
-      : - 30px font-size
-        - 36px line-height
-
-      At [extra small](/design/c/breakpoints/v1.0.0/#rd-extra-small) viewports:
-
-      Basic
+      Small
       : - 18px font-size
         - 22px line-height
 
-      Large
+      Basic
       : - 20px font-size
-        - 24px line-height
+        - 26px line-height
 
-      XL
-      : - 22px font-size
+      Bold
+      : - 20px font-size
+        - 26px line-height
+        - Semibold weight
+
+      Large
+      : - 24px font-size
         - 28px line-height
 
+
       #### Color
-      All titles are colored [Pitch (#231f20)](/design/c/colors/v1.0.1/#rd-pitch-231f20).
+      All titles are colored [Charcoal (#252525)](/design/c/colors/v1.0.1/#rd-pitch-231f20).
     contents:
       - type: narrow image
         src: ./assets/redlines.titles.regular.png
         caption: Regular title sizes
-      - type: narrow image
-        src: ./assets/redlines.titles.narrow.png
-        caption: Title sizes for narrow viewports (< 480px)
 
   - type: style table
     styles:
       - Basic Title
       - Large Title
       - XL Title
+
+  - type: two column
+    text: |
+      ### Page titles
+
+  - type: two column
+    text: |
+      #### Sizes
+      Page title
+      : - 38px font-size
+        - 52px line-height
+        - Light weight
+
+      Small page title
+      : - 28px font-size
+        - 38px line-height
+        - Light weight
+
+      #### Colors
+      All page titles are colored Charcoal.
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.page.title.regular.png
 
   - type: two column
     text: |
