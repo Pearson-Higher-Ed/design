@@ -76,20 +76,7 @@ blocks:
   - type: two column
     text: |
       ### Color Variants
-      The default label color is Dark Gray. Additional colors include:
-
-        - Medium Gray 1
-        - Charcoal
-        - Black
-        - Red
-        - Green
-    contents:
-      - type: narrow image
-        src: ./assets/labels.colors.png
-        caption: Standard colors
-      - type: narrow image
-        src: ./assets/labels.inverse.png
-        caption: Inverse colors
+      Labels can use any of the foreground colors from the Light Palette.
 
   - type: two column
     text: |
