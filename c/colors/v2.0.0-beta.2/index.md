@@ -72,15 +72,17 @@ blocks:
       - Hairline Gray (#D0D0D0)
 
   - type: section
-    name: Dark Palette
+    name: Gray Palette
 
   - type: palette
     foreground:
-      - name: White
-        hex: FFFFFF
+      - name: Charcoal
+        hex: 252525
     background:
-      - name: Pearson Blue
-        hex: 007fa3
+      - name: Moonlight
+        hex: e9e9e9
+      - name: Concrete
+        hex: c7c7c7
     exports:
       - White (#FFFFFF)
       - Gray Wash (#AEAEAE)
