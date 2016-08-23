@@ -55,21 +55,15 @@ blocks:
       - name: Off White
         hex: F2F2F2
     exports:
-      - Pitch (#231f20)
-      - Gray No. 1 (#565656)
-      - Royal Navy (#094877)
-      - Hyperdrive (#0d65a6)
-      - Firetruck (#D0021B)
-      - Spruce (#076826)
-      - Brightly Lit (#E6E6E6)
-      - Off White (#F2F2F2)
-      - Dirty Ice (#F8F8F8)
-      - White (#FFFFFF)
-      - Blue Milk (#D9EEFF)
-      - Highlighter (#FDEC2E)
-      - Boring (#A6A8AB)
-      - Sidewalk (#B3B3B3)
-      - Hairline Gray (#D0D0D0)
+      - Charcoal
+      - Medium Gray
+      - Pearson Blue
+      - Ink Blue
+      - Red
+      - Green
+      - Digital White
+      - Off White
+      - Light Palette
 
   - type: section
     name: Gray Palette
@@ -84,13 +78,10 @@ blocks:
       - name: Concrete
         hex: c7c7c7
     exports:
-      - White (#FFFFFF)
-      - Gray Wash (#AEAEAE)
-      - Black (#000000)
-      - Gutenberg Black (#333333)
-      - Full Moon (#424242)
-      - Asphalt (#3f3f3f)
-      - Smoke Gray (#545454)
+      - Charcoal
+      - Moonlight
+      - Concrete
+      - Gray Palette
 
   - type: section
     name: Exported Styles
@@ -101,35 +92,26 @@ blocks:
 
   - type: style table
     styles:
-      - Pitch (#231f20)
-      - Gray No. 1 (#565656)
-      - Royal Navy (#094877)
-      - Hyperdrive (#0d65a6)
-      - Firetruck (#D0021B)
-      - Spruce (#076826)
-      - Brightly Lit (#E6E6E6)
-      - Off White (#F2F2F2)
-      - Dirty Ice (#F8F8F8)
-      - White (#FFFFFF)
-      - Blue Milk (#D9EEFF)
-      - Highlighter (#FDEC2E)
-      - Boring (#A6A8AB)
-      - Sidewalk (#B3B3B3)
-      - Hairline Gray (#D0D0D0)
+      - Charcoal
+      - Medium Gray
+      - Pearson Blue
+      - Ink Blue
+      - Red
+      - Green
+      - Digital White
+      - Off White
+      - Light Palette
 
   - type: two column
     text: |
-      ### Dark Palette
+      ### Gray Palette
 
   - type: style table
     styles:
-      - White (#FFFFFF)
-      - Gray Wash (#AEAEAE)
-      - Black (#000000)
-      - Gutenberg Black (#333333)
-      - Full Moon (#424242)
-      - Asphalt (#3f3f3f)
-      - Smoke Gray (#545454)
+      - Charcoal
+      - Moonlight
+      - Concrete
+      - Gray Palette
 
 
 changelog:
