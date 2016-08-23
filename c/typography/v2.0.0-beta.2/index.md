@@ -189,6 +189,10 @@ blocks:
         src: ./assets/headings.png
         caption: All six heading levels.
 
+
+
+
+
   - type: section
     name: Inline Elements
 
@@ -225,6 +229,10 @@ blocks:
       * `<time>`
       * `<abbr>`
 
+
+
+
+
   - type: section
     name: Redlines
 
@@ -260,27 +268,28 @@ blocks:
       - type: narrow image
         src: ./assets/redlines.labels.regular.png
     exports:
-      - Basic Label
-      - Small Label
-      - Small Bold Label
-      - Large Label
-      - Bold Label
+      - Basic label
+      - Small label
+      - Small bold label
+      - Large label
+      - Bold label
 
   - type: style table
     styles:
-      - Basic Label
-      - Small Label
-      - Small Bold Label
-      - Large Label
-      - Bold Label
+      - Basic label
+      - Small label
+      - Small bold label
+      - Large label
+      - Bold label
 
   - type: two column
     text: |
       ### Section Titles
     exports:
-      - Basic Title
-      - Large Title
-      - XL Title
+      - Basic section title
+      - Small section title
+      - Bold section title
+      - Large section title
 
   - type: two column
     text: |
@@ -312,13 +321,17 @@ blocks:
 
   - type: style table
     styles:
-      - Basic Title
-      - Large Title
-      - XL Title
+      - Basic section title
+      - Small section title
+      - Bold section title
+      - Large section title
 
   - type: two column
     text: |
       ### Page titles
+    exports:
+      - Page title
+      - Small page title
 
   - type: two column
     text: |
@@ -338,6 +351,11 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/redlines.page.title.regular.png
+
+  - type: style table
+    styles:
+      - Page title
+      - Small page title
 
   - type: two column
     text: |
@@ -408,8 +426,6 @@ blocks:
   - type: style table
     styles:
       - Basic Body
-      - Small Body
-      - Lead
       - Ordered List
       - Unordered List
       - Code
