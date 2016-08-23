@@ -347,7 +347,7 @@ blocks:
     text: |
       #### Basic Body
       Font
-      : - 16px font-size
+      : - 14px font-size
         - 22px line-height
 
       Color
@@ -356,21 +356,12 @@ blocks:
       Margins:
       : - Adjacent paragraphs are separated by 12px
         - Leave top/bottom padding for a block of `p` tags up to the consumer
-
-      ##### Small Size
-      Font
-      : - 14px font-size
-        - 20px line-height
     contents:
       - type: narrow image
         src: ./assets/redlines.copy.body.png
         caption: Standard body copy
-      - type: narrow image
-        src: ./assets/redlines.copy.body.small.png
-        caption: Smaller body copy used for narrower line length
     exports:
       - Basic Body
-      - Small Body
 
   - type: two column
     text: |
@@ -406,8 +397,8 @@ blocks:
         - 20px line-height
 
       Color
-      : - [Gray Wash (#AEAEAE)](/design/c/colors/v1.0.1/#rd-gray-wash-aeaeae)
-        - [Full Moon (#424242)](/design/c/colors/v1.0.1/#rd-full-moon-424242) background-color
+      : - Digital White (#f9f9f9)
+        - Ink Blue (#005a70) background-color
     contents:
       - type: narrow image
         src: ./assets/redlines.copy.code.png
@@ -429,41 +420,22 @@ blocks:
 
       #### Fonts
       Level 1
-      : - 24px font-size
-        - 30px line-height
-        - bold font-weight
-        - 2px bottom border, [Boring (#A6A8AB)](/design/c/colors/v1.0.1/#rd-boring-a6a8ab)
-        - [Pitch (#231f20)](/design/c/colors/v1.0.1/#rd-pitch-231f20)
+      : - Match Small Page title style
 
       Level 2
-      : - 20px font-size
-        - 24px line-height
-        - bold font-weight
-        - [Pitch (#231f20)](/design/c/colors/v1.0.1/#rd-pitch-231f20)
+      : - Match Large section title style
 
       Level 3
-      : - 18px font-size
-        - 22px line-height
-        - bold font-weight
-        - [Pitch (#231f20)](/design/c/colors/v1.0.1/#rd-pitch-231f20)
+      : - Match Bold section title style
 
       Level 4
-      : - 16px font-size
-        - 20px line-height
-        - bold font-weight
-        - [Gray No. 1 (#565656)](/design/c/colors/v1.0.1/#rd-gray-no-1-565656)
+      : - Match Basic section title style
 
       Level 5
-      : - 16px font-size
-        - 20px line-height
-        - italic font-style
-        - [Gray No. 1 (#565656)](/design/c/colors/v1.0.1/#rd-gray-no-1-565656)
+      : - Match Small section title style
 
       Level 6
-      : - 14px font-size
-        - 16px line-height
-        - italic font-style
-        - [Gray No. 1 (#565656)](/design/c/colors/v1.0.1/#rd-gray-no-1-565656)
+      : - Match Large label style
 
 
       #### Spacing
@@ -500,11 +472,11 @@ blocks:
     text: |
       ### Inline Elements
       `<small>, <time>, <abbr>`
-      : - Same as the 'Basic Text' label
+      : - No visual change, these elements have semantic meaning only
 
       `<a>`
-      : - Active link = [Hyperdrive (#0D65A6)](/design/c/colors/v1.0.1/#rd-hyperdrive-0d65a6) and underline
-        - Hover link = [Royal Navy (#094877)](/design/c/colors/v1.0.1/#rd-royal-navy-094877), no underline
+      : - Active link = Pearson Blue (#00789A) and underline
+        - Hover link = Ink Blue (#005a70), no underline
         - Focus states use the default browser style
 
       `<mark>`
@@ -515,12 +487,10 @@ blocks:
       : - italic font-style
 
       `<strong>, <b>`
-      : - bold font-weight
+      : - semibold font-weight
 
       `<del>, <s>`
       : - line-through text-decoration
-        - [Gray No. 1 (#565656)](/design/c/colors/v1.0.1/#rd-gray-no-1-565656) color on light backgrounds
-        - [Gray Wash (#AEAEAE)](/design/c/colors/v1.0.1/#rd-gray-wash-aeaeae) color on dark backgrounds
 
       `<ins>`
       : - underline text-decoration
@@ -543,7 +513,7 @@ blocks:
 
       `<code>, <kbd>`
       : - Monospace font stack
-        - [Brightly Lit (#E6E6E6)](/design/c/colors/v1.0.1/#rd-brightly-lit-e6e6e6) background-color
+        - Moonlight (#e9e9e9) background-color
         - 4px horizontal padding
     contents:
       - type: narrow image
