@@ -3,7 +3,7 @@ layout: component-yaml
 title: Colors
 section: Components
 redirect_from: /docs/ui-components/colors/
-version: 2.0.0-beta.1
+version: 2.0.0-beta.2
 status: active
 implemented: false
 people:
