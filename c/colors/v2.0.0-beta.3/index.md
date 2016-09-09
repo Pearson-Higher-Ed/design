@@ -3,8 +3,8 @@ layout: component-yaml
 title: Colors
 section: Components
 redirect_from: /docs/ui-components/colors/
-version: 2.0.0-beta.2
-status: deprecated
+version: 2.0.0-beta.3
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -41,19 +41,23 @@ blocks:
         hex: 252525
       - name: Medium Gray
         hex: 6A7070
-      - name: Pearson Blue (a11y)
-        hex: 00789A
+      - name: Digital Pearson Blue
+        hex: 047a9c
       - name: Ink Blue
         hex: 005a70
-      - name: Red
+      - name: Strawberry Red
         hex: db0020
-      - name: Green
-        hex: 008035
+      - name: Digital Grass Green
+        hex: 038238
     background:
-      - name: Digital White
-        hex: f9f9f9
-      - name: Off White
-        hex: F2F2F2
+      - name: White
+        hex: ffffff
+      - name: White Gray
+        hex: f5f5f5
+      - name: Sunshine Yellow
+        hex: ffb81c
+      - name: Digital Ice Blue
+        hex: d6ebe8
     exports:
       - Charcoal
       - Medium Gray
@@ -115,6 +119,9 @@ blocks:
 
 
 changelog:
+  - version: 2.0.0-beta.3
+    changes: |
+      - CHANGED: Switch back to using pure white background, and update colors to be brighter.
   - version: 2.0.0-beta.2
     changes: |
       - CHANGED: Tweak colors for accessibility.
