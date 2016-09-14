@@ -5,6 +5,7 @@ _site
 .idea
 
 .jekyll-metadata
+.bundle/config
 
 node_modules/*
 !node_modules/pearson-elements
