@@ -16,16 +16,18 @@ people:
 implementation:
 downloads:
   - name: UXD Accessibility Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/1Uhkqt3gyK7cVDKkEeUcgXfO1GjYLwk5qp_2Gu8CcKhc/edit?usp=sharing
+    link: https://docs.google.com/a/pearson.com/document/d/1Qrk6QeSqoToRv8V52lNf3RJh1V9zN8blda5M5FsmXyI/edit?usp=sharing
   - name: .sketch mockup
-    link: ./assets/application-header.mockup.sketch
-  - name: .ai mockup
-    link: ./assets/application-header.mockup.ai
+    link: ./assets/slider.mockup.sketch
+dependencies:
+  - name: Colors
+    version: 1.0.1
 
 tagline: |
   Allows users to choose a numeric value from a large range of possibilities.
 features:
   - Minimum and maximum values
+  - Keyboard accessible
 usage_guidelines: |
   Simple confirmation acknowledgements that don't require additional detail should just use a confirmation button. If an error occurs or additional information is needed to clarify then the appropriate alert style may be dynamically presented.
 
@@ -83,6 +85,7 @@ changelog:
   - version: 1.0.0-beta.2
     changes: |
       - CHANGED: Switched to using a single color for the track.
+      - ADDED: Sketch mockup file.
   - version: 1.0.0-beta.1
     changes: Initial version
 ---
