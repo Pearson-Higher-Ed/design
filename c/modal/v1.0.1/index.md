@@ -3,8 +3,8 @@ layout: component-yaml
 title: Modal
 section: Components
 redirect_from: /docs/ui-components/modal/
-version: 1.0.0
-status: deprecated
+version: 1.0.1
+status: active
 implemented: false
 private: true
 people:
@@ -265,6 +265,9 @@ blocks:
 
 
 changelog:
+  - version: 1.0.1
+    changes: |
+      - FIXED: Responsive image button bar and sizing.
   - version: 1.0.0
     changes: Initial version
 ---
