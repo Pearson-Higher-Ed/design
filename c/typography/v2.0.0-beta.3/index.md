@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Typography
 section: Components
-version: 2.0.0-beta.2
-status: deprecated
+version: 2.0.0-beta.3
+status: active
 implemented: true
 people:
   - role: Product Owner
@@ -36,7 +36,7 @@ usage_guidelines: |
 
 dependencies:
   - name: Colors
-    version: 2.0.0-beta.1
+    version: 2.0.0-beta.4
 
 blocks:
   - type: section
@@ -48,7 +48,7 @@ blocks:
     contents:
       - type: code
         content: |
-          font-family: 'Open Sans', Calibri, 'Helvetica Neue', Tahoma, sans-serif;
+          font-family: 'Open Sans', Calibri, Tahoma, sans-serif;
           font-family: Monaco, 'Lucida Console', monospace;
 
   - type: section
@@ -76,7 +76,7 @@ blocks:
   - type: two column
     text: |
       ### Color Variants
-      Labels can use any of the foreground colors from the Light Palette.
+      Use [Charcoal](/design/c/colors/v2.0.0-beta.4/#rd-charcoal) as the default primary color and [Medium Gray](/design/c/colors/v2.0.0-beta.4/#rd-medium-gray) as the secondary gray. Prefer these defaults, but labels can use any color from the [Colors component](/design/c/colors), as long as they are over an appropriately contrasting background color.
 
   - type: two column
     text: |
@@ -126,6 +126,9 @@ blocks:
 
   - type: two column
     text: |
+      ### Color Variants
+      Titles follow the same color guidelines as labels, using [Charcoal](/design/c/colors/v2.0.0-beta.4/#rd-charcoal) by default and [Medium Gray](/design/c/colors/v2.0.0-beta.4/#rd-medium-gray) as a secondary supplement. Prefer these, but use other colors where appropriate (make sure to pair with an accessible background).
+
       ### Allowed Inline Elements
       In general, titles should not be styled beyond the basic styles listed above. If necessary, stick to the following list of inline elements.
 
@@ -262,7 +265,7 @@ blocks:
         - 20px line-height
 
       #### Colors
-      Use the Light Palette. Text is Charcoal by default, Medium Gray should be used as the secondary color.
+      Text is [Charcoal](/design/c/colors/v2.0.0-beta.4/#rd-charcoal) by default, [Medium Gray](/design/c/colors/v2.0.0-beta.4/#rd-medium-gray) should be used as the secondary color. Any other color can be used as long as it's paired with an appropriately contrasting background. See the [Colors](/design/c/colors) component for more details.
 
     contents:
       - type: narrow image
@@ -313,7 +316,7 @@ blocks:
 
 
       #### Color
-      All titles are colored [Charcoal (#252525)](/design/c/colors/v1.0.1/#rd-pitch-231f20).
+      Use the same color scheme as labels.
     contents:
       - type: narrow image
         src: ./assets/redlines.titles.regular.png
@@ -347,7 +350,7 @@ blocks:
         - Light weight
 
       #### Colors
-      All page titles are colored Charcoal.
+      Use the same color scheme as labels.
     contents:
       - type: narrow image
         src: ./assets/redlines.page.title.regular.png
@@ -369,7 +372,7 @@ blocks:
         - 22px line-height
 
       Color
-      : - Charcoal
+      : - [Charcoal](/design/c/colors/v2.0.0-beta.4/#rd-charcoal)
 
       Margins:
       : - Adjacent paragraphs are separated by 12px
@@ -415,8 +418,8 @@ blocks:
         - 20px line-height
 
       Color
-      : - Digital White (#f9f9f9)
-        - Ink Blue (#005a70) background-color
+      : - [White Gray](/design/c/colors/v2.0.0-beta.4/#rd-white-gray)
+        - [Ink Blue](/design/c/colors/v2.0.0-beta.4/#rd-ink-blue) background-color
     contents:
       - type: narrow image
         src: ./assets/redlines.copy.code.png
@@ -453,6 +456,8 @@ blocks:
       Level 6
       : - Match Large label style
 
+      #### Colors
+      All headings are [Charcoal](/design/c/colors/v2.0.0-beta.4/#rd-charcoal).
 
       #### Spacing
 
@@ -491,12 +496,12 @@ blocks:
       : - No visual change, these elements have semantic meaning only
 
       `<a>`
-      : - Active link = Pearson Blue (#00789A) and underline
-        - Hover link = Ink Blue (#005a70), no underline
+      : - Active link = [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue) and underline
+        - Hover link = [Ink Blue](/design/c/colors/v2.0.0-beta.4/#rd-ink-blue), no underline
         - Focus states use the default browser style
 
       `<mark>`
-      : - [Highlighter (#FDEC2E)](/design/c/colors/v1.0.1/#rd-highlighter-fdec2e) background-color
+      : - [Sunshine Yellow](/design/c/colors/v2.0.0-beta.4/#rd-sunshine-yellow) background-color
         - Only use within Body Copy
 
       `<em>, <i>`
@@ -529,7 +534,7 @@ blocks:
 
       `<code>, <kbd>`
       : - Monospace font stack
-        - Moonlight (#e9e9e9) background-color
+        - [Moonlight](/design/c/colors/v2.0.0-beta.4/#rd-moonlight) background-color
         - 4px horizontal padding
     contents:
       - type: narrow image
@@ -562,6 +567,10 @@ blocks:
       - code, kbd tags
 
 changelog:
+  - version: 2.0.0-beta.3
+    changes: |
+      - UPDATED: Uses latest colors, new a11y checklist.
+      - CHANGED: Removed Helvetica Neue from font stack.
   - version: 2.0.0-beta.2
     changes: |
       - Add redlines

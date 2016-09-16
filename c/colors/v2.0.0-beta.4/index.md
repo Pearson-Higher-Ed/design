@@ -3,8 +3,8 @@ layout: component-yaml
 title: Colors
 section: Components
 redirect_from: /docs/ui-components/colors/
-version: 2.0.0-beta.3
-status: deprecated
+version: 2.0.0-beta.4
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -18,7 +18,7 @@ people:
 implementation: https://www.npmjs.com/package/pearson-elements
 downloads:
   - name: UXD Accessibility Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/1ThXm4SGwyPb3wtlJGmOWLTRCIWERcLsjtP-jlkGjwAY/edit?usp=sharing
+    link: https://docs.google.com/a/pearson.com/document/d/1UmxPd4C895le-5PxkKoYrlxJ2WXlpZcftp44Pn6qkWQ/edit?usp=sharing
 
 tagline: |
   Every color used in the Elemental Design library is defined in this component.
@@ -207,6 +207,9 @@ blocks:
       - Digital Grass Green
 
 changelog:
+  - version: 2.0.0-beta.4
+    changes: |
+      - CHANGED: Added new accessibility checklist.
   - version: 2.0.0-beta.3
     changes: |
       - CHANGED: Switch back to using pure white background, and update colors to be brighter.
