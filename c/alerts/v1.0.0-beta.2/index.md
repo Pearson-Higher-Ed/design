@@ -16,11 +16,15 @@ people:
 implementation:
 downloads:
   - name: UXD Accessibility Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/1Uhkqt3gyK7cVDKkEeUcgXfO1GjYLwk5qp_2Gu8CcKhc/edit?usp=sharing
+    link: https://docs.google.com/a/pearson.com/document/d/1Zx7iuaBbjVis_m6p5yXxBxXhJFCYSagSgb-v6D9HaX8/edit?usp=sharing
   - name: .sketch mockup
-    link: ./assets/application-header.mockup.sketch
-  - name: .ai mockup
-    link: ./assets/application-header.mockup.ai
+    link: ./assets/alerts.mockup.sketch
+
+dependencies:
+  - name: Colors
+    version: 2.0.0-beta.4
+  - name: Typography
+    version: 2.0.0-beta.3
 
 tagline: |
   Presents important feedback or information to users either in response to their actions or upon page load.
@@ -63,11 +67,57 @@ blocks:
         src: ./assets/dynamic.mov
         caption: The animation for showing/dismissing a dynamic alert.
 
+  - type: section
+    name: Alert Types
+
+  - type: two column
+    text: |
+      Alerts come in two different types, Error and Success. Try to avoid using the success style unless you need to present more information about the success. Confirmation Buttons are a better pattern for typical cases.
+    contents:
+      - type: wide image
+        src: ./assets/alert.types.png
+        caption: The two alert styles. Note that success alerts should only be used when there is additional information that needs to be conveyed.
+
+  - type: section
+    name: Redlines
+
+  - type: two column
+    text: |
+      Dimensions
+      : - Color bar is 6px high
+        - Horizontal and bottom padding is 15px
+        - Title is 10px below color bar and 8px above message text
+
+      Colors
+      : - Error color is [Strawberry Red](/design/c/colors/v2.0.0-beta.4/#rd-strawberry-red)
+        - Success color is [Digital Grass Green](/design/c/colors/v2.0.0-beta.4/#rd-digital-grass-green)
+        - Background is [White](/design/c/colors/v2.0.0-beta.4/#rd-white)
+
+      Icon
+      : - Generic X
+
+      Typography
+      : - Title is [Basic Label](/design/c/typography/v2.0.0-beta.3/#rd-basic-label)
+        - Message is [Basic Body Copy](/design/c/typography/v2.0.0-beta.3/#rd-basic-body)
+
+      Animation
+      : - Drop in uses a Runge-Kutta spring with a tension of 400 and friction of 30
+        - Slide out uses a RK spring with a tension of 400 and friction of 34
+
+      Focus Behavior
+      : - When an alert dynamically appears focus should be moved to the first item (usually the close icon)
+        - Upon dismissing the alert focus should be restored to it's previous location
+        - Statically presented alerts should just be read and focused in the normal flow of the document
+    contents:
+      - type: wide image
+        src: ./assets/redlines.png
+
+
 
 changelog:
   - version: 1.0.0-beta.2
     changes: |
-      - ADDED: other info and confirmation styles
+      - ADDED: Success style, redlines, a11y checklist
   - version: 1.0.0-beta.1
     changes: Initial version
 ---
