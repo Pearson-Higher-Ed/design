@@ -3,8 +3,8 @@ layout: component-yaml
 title: Alerts
 section: Components
 redirect_from: /docs/ui-components/application-header/
-version: 1.0.0-beta.1
-status: deprecated
+version: 1.0.0-beta.2
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -65,6 +65,9 @@ blocks:
 
 
 changelog:
+  - version: 1.0.0-beta.2
+    changes: |
+      - ADDED: other info and confirmation styles
   - version: 1.0.0-beta.1
     changes: Initial version
 ---
