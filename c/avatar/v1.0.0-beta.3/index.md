@@ -3,8 +3,8 @@ layout: component-yaml
 title: Avatar
 section: Components
 redirect_from: /docs/ui-components/avatar/
-version: 1.0.0-beta.2
-status: deprecated
+version: 1.0.0-beta.3
+status: active
 implemented: false
 private: true
 people:
@@ -19,11 +19,13 @@ people:
     email: albert.christy@pearson.com
 dependencies:
   - name: Modal
-    version: 1.0.0-beta.2
+    version: 1.0.1
   - name: Typography
     version: 1.0.0
   - name: Icons
     version: 1.0.0
+  - name: Slider
+    version: 1.0.0-beta.2
 downloads:
   - name: Sketch
     link: ./assets/avatar.sketch
@@ -79,6 +81,8 @@ blocks:
     text: |
       The user may also click on their photo and drag it in order to reposition the photo around the silhouette for proper cropping.
 
+      The image can't be dragged past the edges of the crop silhouette so that an undersized selection is impossible.
+
     contents:
       - type: wide image
         src: ./assets/avatar-edit-position-start.png
@@ -86,17 +90,6 @@ blocks:
       - type: wide image
         src: ./assets/avatar-edit-position-end.png
         caption: Photo Repositioned for Cropping
-
-  - type: two column
-    text: |
-      ### Crop
-
-      The final step is to crop the uploaded photo by pressing the Save button. The portion of the photo in the open square of the silhouette will be set as the user's avatar.
-
-    contents:
-      - type: wide image
-        src: ./assets/avatar-edit-crop.png
-        caption: Pressing Save Crops the Photo
 
 
   - type: section
@@ -115,7 +108,7 @@ blocks:
       ### Edit Photo
 
       Modal
-      : - [Text Modal](http://pearson-higher-ed.github.io/design/c/modal/beta/)
+      : - [Text Modal](http://pearson-higher-ed.github.io/design/c/modal/v1.0.1/)
 
       Silhouette
       : - Width: 100%
@@ -123,28 +116,38 @@ blocks:
         - Background Color: [Black (#000000)](/design/c/colors/v1.0.1/#rd-black-000000), Opacity 50%
 
       Silhouette Subtraction
-      : - Width: 200px
+      : - Width: Variable, should match desired aspect ratio
         - Height: 200px
+        - 30px below top of shaded area
 
       Slider
-      : - Width: 300px
-        - Height: 30px
-        - Background Color: [Brightly Lit](/design/c/colors/v1.0.1/#rd-brightly-lit-e6e6e6), Opacity 75%
-        - Text Color: [Pitch](/design/c/colors/v1.0.1/#rd-pitch-231f20)
-        - Icon: fa-photo Icon
+      : - [Basic slider](/design/c/slider/beta) component
+        - [Off White](/design/c/colors/v1.0.1/#rd-off-white-f2f2f2) background
+        - 30px tall background
+        - 20px padding above/below
+        - 12px fa-photo icon for the small size, 22px icon for the large size
+        - 10px outer padding for icons
 
-      Slider Bar
-      : - Color: [Pitch](/design/c/colors/v1.0.1/#rd-pitch-231f20)
-        - Width: 220px
-        - Thickness: 2px
-        - Circle: 14px Diameter
+      Responsive
+      : - Image should be at least as tall as the crop silhouette
+        - Otherwise everything just gets narrower to fill the modal content area.
 
     contents:
-    - type: wide image
-      src: ./assets/avatar-edit-red.png
+      - type: wide image
+        src: ./assets/avatar-edit-red.png
+      - type: narrow image
+        src: ./assets/responsive.png
+
 
 
 changelog:
+  - version: 1.0.0-beta.3
+    changes: |
+      - CHANGED: Use slider component.
+      - ADDED: Responsive example.
+  - version: 1.0.0-beta.2
+    changes: |
+      - REMOVED: Specific details for avatar cropping.
   - version: 1.0.0-beta.1
     changes: Initial version
 ---
