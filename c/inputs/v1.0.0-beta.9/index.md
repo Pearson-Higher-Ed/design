@@ -2,7 +2,6 @@
 layout: component-yaml
 title: Inputs
 section: Components
-redirect_from: /docs/ui-components/forms/
 status: deprecated
 version: 1.0.0-beta.9
 private: true
