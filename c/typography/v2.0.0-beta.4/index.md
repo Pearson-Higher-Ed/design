@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Typography
 section: Components
-version: 2.0.0-beta.3
-status: deprecated
+version: 2.0.0-beta.4
+status: active
 implemented: true
 people:
   - role: Product Owner
@@ -177,7 +177,7 @@ blocks:
   - type: two column
     text: |
       ### Allowed Inline Elements
-      Copy is more flexible in this regard that labels or titles. You can include any of the inline elements covered by this component.
+      Copy is more flexible in this regard than labels or titles. You can include any of the inline elements covered by this component.
 
   - type: section
     name: Headings
@@ -210,7 +210,6 @@ blocks:
       * `<a>`
       * `<em>, <i>`
       * `<strong>, <b>`
-      * `<u>`
       * `<del>, <s>`
       * `<ins>`
       * `<q>`
@@ -567,6 +566,10 @@ blocks:
       - code, kbd tags
 
 changelog:
+  - version: 2.0.0-beta.4
+    changes: |
+      - FIXED: Typos
+      - REMOVED: `<u>` tag styling
   - version: 2.0.0-beta.3
     changes: |
       - UPDATED: Uses latest colors, new a11y checklist.
