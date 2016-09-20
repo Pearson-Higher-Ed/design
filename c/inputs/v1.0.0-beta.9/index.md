@@ -43,7 +43,7 @@ downloads:
 blocks:
 
   - type: section
-    name: Form States
+    name: Inputs States
 
   - type: two column
     text: |
@@ -65,17 +65,17 @@ blocks:
         src: ./assets/Inputs_states.png        
 
   - type: section
-    name: Text
+    name: Text Input Field (single line inputs)
 
   - type: two column
     text: |
-      Text input form elements are to be used for single line text inputs.
+      An input is a field used to elicit a response from a user
 
       Placeholders can be used to give additional information about the format of data. They should typically not be used to label the input field; exceptions can be made when there is a single field and a secondary purpose indicator exists (like a search bar with a search icon in the attached button).
 
       Note that the component provides custom focus styles for this input since certain versions of Firefox, IE11, and Edge don't offer a default focus state.
 
-      A smaller size is also available.
+      **Size** A smaller size is available.
     contents:
       - type: narrow image
         src: ./assets/Inputs_size.png
@@ -89,17 +89,17 @@ blocks:
 
   - type: two column
     text: |
-      Textarea form elements are to be used for multiple lines of text.
+      **Usage**
+      - Textarea form elements are to be used for multiple lines of text.
 
-      Vertical and horizontal resizing options may be enabled where appropriate.
+      - Vertical and horizontal resizing options may be enabled where appropriate.
 
-      Textarea states are styled similarly to regular text inputs.
+      - Textarea states are styled similarly to regular text inputs.
 
-      They may also take a placeholder like basic text inputs. In this case the placeholder should simply offer additional information or guidance around the data format, it should never replace a label for the field.
+      **Placeholder Usage** They may also take a placeholder like basic text inputs. In this case the placeholder should simply offer additional information or guidance around the data format, it should never replace a label for the field.
 
-      Note that the component provides custom focus styles for this input since certain versions of Firefox, IE11, and Edge don't offer a default focus state.
+      **Size** A smaller size is available.
 
-      A smaller size is available.
     contents:
       - type: narrow image
         src: ./assets/Inputs_label.png
@@ -107,6 +107,19 @@ blocks:
       - type: narrow image
         src: ./assets/Inputs_box_placeholder.png
         caption: Example placeholder used to provide an example input.
+
+  - type: two column
+    text: |
+        ## Text area with text counts
+
+        - When the user start typing (in focus state ), it shows the remaining available characters
+
+        - The user can type more than the charactors limited in but the error will displayed (and disables the action button).
+
+    contents:
+      - type: narrow image
+        src: ./assets/Inputs_box_textcount.png
+
 
   - type: section
     name: Select
