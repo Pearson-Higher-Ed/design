@@ -4,7 +4,7 @@ title: Alerts
 section: Components
 redirect_from: /docs/ui-components/application-header/
 version: 1.0.0-beta.1
-status: active
+status: deprecated
 implemented: false
 people:
   - role: Product Owner
