@@ -29,9 +29,9 @@ features:
 usage_guidelines: |
   Every instance of a mobile login screen should come from this component.
 
+blocks:
 # IOS
 
-blocks:
   - type: section
     name: iOS
 
@@ -91,34 +91,13 @@ blocks:
 
   - type: two column
     text: |
-      ### Standard
+      ### iOS
 
-      Overlay
-      : - Background Color: rgba(0, 0, 0, 0.50)
+      Zeplin link: https://zpl.io/Z1xy2c6
 
-      Window
-      : - Width: 80% of Viewport (100% for [Extra Small](/design/c/breakpoints/v1.0.0/#rd-extra-small) Viewports)
-        - Background Color: [White (#FFFFFF)](/design/c/colors/v1.0.1/#rd-white-ffffff)
-        - Border: 1px solid [Sidewalk (#B3B3B3)](/design/c/colors/v1.0.1/#rd-sidewalk-b3b3b3)
+      ### Android
 
-      Title Area
-      : - Background Color: [White (#FFFFFF)](/design/c/colors/v1.0.1/#rd-white-ffffff)
-        - Text: [Large Title](/design/c/typography/v1.0.0/#rd-large-title)
-        - Color: [Pitch (#231F20)](/design/c/colors/v1.0.1/#rd-pitch-231f20)
-        - Padding: 11px
-        - Icon: [fa-close](/design/c/icons/v1.0.0/#rd-times)
-        - Border Bottom: 1px solid [Sidewalk (#B3B3B3)](/design/c/colors/v1.0.1/#rd-sidewalk-b3b3b3)
-
-      Content Area
-      : - Background Color: [White (#FFFFFF)](/design/c/colors/v1.0.1/#rd-white-ffffff)
-        - Text: [Basic Body](/design/c/typography/v1.0.0/#rd-basic-body)
-        - Padding: 15px
-
-      Footer Area
-      : - Background Color: [White (#FFFFFF)](/design/c/colors/v1.0.1/#rd-white-ffffff)
-        - Padding: 11px
-        - Border Top: 1px solid [Sidewalk (#B3B3B3)](/design/c/colors/v1.0.1/#rd-sidewalk-b3b3b3)
-        - Buttons: [Standard Size](/design/c/buttons/v1.0.0/#rd-standard-button)
+      Zeplin link: https://zpl.io/1Vk7oy
 
 # CHANGELOG  
 
