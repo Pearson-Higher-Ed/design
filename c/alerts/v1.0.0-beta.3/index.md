@@ -3,8 +3,8 @@ layout: component-yaml
 title: Alerts
 section: Components
 redirect_from: /docs/ui-components/application-header/
-version: 1.0.0-beta.2
-status: deprecated
+version: 1.0.0-beta.3
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -104,9 +104,14 @@ blocks:
       : - Drop in uses a Runge-Kutta spring with a tension of 400 and friction of 30
         - Slide out uses a RK spring with a tension of 400 and friction of 34
 
+      Position
+      : - Alert should be aligned with the left side of the grid's container
+        - 50px of vertical padding above the first alert
+        - 20px spacing between alerts if there are more than one
+
       Focus Behavior
-      : - When an alert dynamically appears focus should be moved to the first item (usually the close icon)
-        - Upon dismissing the alert focus should be restored to it's previous location
+      : - Most alerts can just be announced by ARIA alerts and don't need special focus treatment
+        - If an alert is particularly important, focus should be moved to the first element of the alert (and restored to it's original position upon dismissal)
         - Statically presented alerts should just be read and focused in the normal flow of the document
     contents:
       - type: wide image
@@ -115,6 +120,10 @@ blocks:
 
 
 changelog:
+  - version: 1.0.0-beta.3
+    changes: |
+      - ADDED: Positioning details to redlines
+      - UPDATED: Keyboard and focus redlines.
   - version: 1.0.0-beta.2
     changes: |
       - ADDED: Success style, redlines, a11y checklist
