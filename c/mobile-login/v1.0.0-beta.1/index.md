@@ -71,16 +71,16 @@ blocks:
     text: |
       ### iOS
 
-      - login_ios
+      - login_ios:
         https://zpl.io/Z1xy2c6
 
-      - login_ios_inactive
+      - login_ios_inactive:
         https://zpl.io/Z2tuh0V
 
-      - login_ios_active
+      - login_ios_active:
         https://zpl.io/Z1DpGj1
 
-      - login_ios_invalid
+      - login_ios_invalid: 
         https://zpl.io/bvQpj
 
       ### Android
