@@ -1,8 +1,8 @@
 ---
 layout: component-yaml
-title: Mobile - Onboarding
+title: Mobile - Performance
 section: Components
-redirect_from: /docs/ui-components/mobile-onboarding/
+redirect_from: /docs/ui-components/mobile-performance/
 version: 1.0.0-beta.1
 status: active
 implemented: false
@@ -20,13 +20,15 @@ people:
 dependencies:
 
 tagline: |
-  This component defines the standard visual style for app onboarding.
+  This component defines the standard visual style for course-level performance.
 features:
-  - horizontal swipe through content
-  - dismissible
-  - supports up to 3? 5? screens
+  - overall score displayed in points and percentage value
+  - performance by assignment bar chart with paging across date ranges
+  - performance by assignment list view with vertical scroll
+  - time on task
+
 usage_guidelines: |
-  Every instance of a mobile onboarding screen should come from this component.
+  Every instance of course-level performance should come from this component.
 
 blocks:
 # IOS
@@ -38,8 +40,8 @@ blocks:
     text: tba
     contents:
       - type: narrow image
-        src: ./assets/ios/onboarding.png
-        caption: onboarding
+        src: ./assets/ios/performance_ios.png
+        caption: course-level performance
 
 
 # ANDROID
@@ -59,8 +61,8 @@ blocks:
     text: |
       ### iOS
 
-      - onboarding_ios:
-      <https://zpl.io/ZvCyGI>
+      - performance_ios:
+        <https://zpl.io/Z1erOcW>
 
       ### Android
 

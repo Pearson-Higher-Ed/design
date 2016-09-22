@@ -55,11 +55,14 @@ blocks:
         src: ./assets/ios/courses_update.png
         caption: updated course content
   - type: two column
-    text: Tapping on the information icon will bring up the details for that course. The user can delete course content from here.
+    text: Tapping on the information icon will bring up the details for that course. The user can delete course content from here. If the course is no longer available to the user, it will appear inaccessible.
     contents:
       - type: narrow image
         src: ./assets/ios/course_details.png
         caption: course details
+      - type: narrow image
+        src: ./assets/ios/courses_expired.png
+        caption: expired course
 
 
 # ANDROID
@@ -80,19 +83,19 @@ blocks:
       ### iOS
 
       - courses_empty:
-        https://zpl.io/Z4qhPr
+        <https://zpl.io/Z4qhPr>
 
       - courses_download:
-        https://zpl.io/Z2mOILp
+        <https://zpl.io/Z2mOILp>
 
       - courses:
-        https://zpl.io/Z1cy1rv
+        <https://zpl.io/Z1cy1rv>
 
       - courses_update:
-        https://zpl.io/ZFdX7p
+        <https://zpl.io/ZFdX7p>
 
       - course_details:
-        https://zpl.io/Zf7cf9
+        <https://zpl.io/Zf7cf9>
 
       ### Android
 

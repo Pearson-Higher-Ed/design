@@ -72,16 +72,16 @@ blocks:
       ### iOS
 
       - login_ios:
-        https://zpl.io/Z1xy2c6
+        <https://zpl.io/Z1xy2c6>
 
       - login_ios_inactive:
-        https://zpl.io/Z2tuh0V
+        <https://zpl.io/Z2tuh0V>
 
       - login_ios_active:
-        https://zpl.io/Z1DpGj1
+        <https://zpl.io/Z1DpGj1>
 
-      - login_ios_invalid: 
-        https://zpl.io/bvQpj
+      - login_ios_invalid:
+        <https://zpl.io/bvQpj>
 
       ### Android
 
