@@ -39,22 +39,19 @@ blocks:
     text: The mobile login screen features the Pearson iterrobang logo, username field, and password field. A "need help" link leads to pearsonhighered.com/support/.
     contents:
       - type: narrow image
-        src: ./assets/ios/login_1.png
+        src: ./assets/ios/login_ios.png
         caption: first load
       - type: narrow image
-        src: ./assets/ios/login_2.png
+        src: ./assets/ios/login_ios_inactive.png
         caption: keyboard
   - type: two column
-    text: Invalid credentials will trigger a warning modal to the user.
+    text: Once the user has entered a valid username and password, the Sign In button becomes active. Unrecognized credentials will trigger a warning modal to the user.
     contents:
       - type: narrow image
-        src: ./assets/ios/login_3.png
+        src: ./assets/ios/login_ios_active.png
         caption: entering credentials
       - type: narrow image
-        src: ./assets/ios/login_4.png
-        caption: validating
-      - type: narrow image
-        src: ./assets/ios/login_5.png
+        src: ./assets/ios/login_ios_invalid.png
         caption: invalid
 
 # ANDROID
@@ -63,26 +60,7 @@ blocks:
     name: Android
 
   - type: two column
-    text: The mobile login screen features the Pearson iterrobang logo, username field, and password field. A "need help" link leads to pearsonhighered.com/support/.
-    contents:
-      - type: narrow image
-        src: ./assets/android/login_1.png
-        caption: first load
-      - type: narrow image
-        src: ./assets/android/login_2.png
-        caption: keyboard
-  - type: two column
-    text: The user can tap the eye icon to hide/reveal the password. Invalid credentials will trigger a warning modal to the user.
-    contents:
-      - type: narrow image
-        src: ./assets/android/login_3.png
-        caption: entering credentials
-      - type: narrow image
-        src: ./assets/android/login_3a.png
-        caption: password revealed
-      - type: narrow image
-        src: ./assets/android/login_5.png
-        caption: invalid
+    text: tba
 
 # REDLINES
 
@@ -93,11 +71,21 @@ blocks:
     text: |
       ### iOS
 
-      Zeplin link: https://zpl.io/Z1xy2c6
+      - login_ios
+        https://zpl.io/Z1xy2c6
+
+      - login_ios_inactive
+        https://zpl.io/Z2tuh0V
+
+      - login_ios_active
+        https://zpl.io/Z1DpGj1
+
+      - login_ios_invalid
+        https://zpl.io/bvQpj
 
       ### Android
 
-      Zeplin link: https://zpl.io/1Vk7oy
+
 
 # CHANGELOG  
 
