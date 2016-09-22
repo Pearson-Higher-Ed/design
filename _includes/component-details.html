@@ -137,6 +137,22 @@
             {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
           </div>
 
+          {% when 'ios image' or 'ios_image' or 'iOS image' or 'iOS_image' %}
+          <div class="image ios">
+            <div class="media">
+              <img src="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{item.src}}" />
+            </div>
+            {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
+          </div>
+
+          {% when 'android image' or 'android_image' %}
+          <div class="image android">
+            <div class="media">
+              <img src="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{item.src}}" />
+            </div>
+            {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
+          </div>
+
           {% when 'wide video' %}
           <div class="image wide">
             <div class="media">
