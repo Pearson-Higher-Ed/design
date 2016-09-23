@@ -1,8 +1,8 @@
 ---
 layout: component-yaml
-title: Mobile - Onboarding
+title: Mobile - Typography
 section: Components
-redirect_from: /docs/ui-components/mobile-onboarding/
+redirect_from: /docs/ui-components/mobile-typography/
 version: 1.0.0-beta.1
 status: active
 implemented: false
@@ -20,13 +20,15 @@ people:
 dependencies:
 
 tagline: |
-  This component defines the standard visual style for app onboarding.
+  This component defines overall typography structure with mobile applications.
 features:
-  - horizontal swipe through content
-  - dismissible
-  - supports up to 3? 5? screens
+  - min / max sizes for accessibility.
+  - iOS and Android
+  - Logout
+  - App version
+  - Copyright disclaimer
 usage_guidelines: |
-  Every instance of a mobile onboarding screen should come from this component.
+  Every instance of the user account screen should come from this component.
 
 blocks:
 # IOS
@@ -38,8 +40,11 @@ blocks:
     text: tba
     contents:
       - type: narrow image
-        src: ./assets/ios/onboarding.png
-        caption: onboarding
+        src: ./assets/ios/typography_ios_size.png
+        caption: typography sizes for iOS
+      - type: narrow image
+        src: ./assets/ios/typography_ios_color.png
+        caption: typography colors for iOS
 
 
 # ANDROID
@@ -59,12 +64,15 @@ blocks:
     text: |
       ### iOS
 
-      - onboarding_ios:
-      <https://zpl.io/ZvCyGI>
+      - typography_ios_size:
+        <https://zpl.io/2rOYbE>
+
+      - typography_ios_color:
+        <https://zpl.io/Z11BVqT>
 
       ### Android
 
-
+      - tba
 
 # CHANGELOG  
 

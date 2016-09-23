@@ -6,7 +6,7 @@ redirect_from: /docs/ui-components/mobile-account/
 version: 1.0.0-beta.1
 status: active
 implemented: false
-private: true
+private: false
 people:
   - role: Product Owner
     name: Mike Pace
