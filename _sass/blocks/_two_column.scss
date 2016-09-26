@@ -170,6 +170,107 @@
         margin-top: 12px;
       }
     }
+  }
 
+  .colors {
+    width: 100%;
+
+    .color {
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+
+      & + .color {
+        margin-top: 20px;
+      }
+
+      .bar {
+        @include clearfix;
+        z-index: 10;
+        position: relative;
+
+        &.border {
+          border-bottom: 1px solid rgba(208, 208, 208, 1);
+        }
+      }
+
+      .name {
+        background-color: white;
+        @include pe-copy-small;
+        width: 210px;
+        height: 70px;
+        float: right;
+        box-sizing: border-box;
+        padding: 15px;
+        z-index: 15;
+        position: relative;
+
+        &.border {
+          border-top: 1px solid rgba(208, 208, 208, 1);
+          border-left: 1px solid rgba(208, 208, 208, 0);
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+
+      .details {
+        clear: both;
+        background-color: white;
+        padding: 15px;
+        float: left;
+        width: 100%;
+        z-index: 5;
+
+        h5 {
+          margin: 0;
+          margin-bottom: 6px;
+        }
+
+        .uses {
+          padding-right: 210px;
+        }
+
+        & > div {
+          @include pe-copy-small;
+          p:first-of-type {
+            margin-top: 0;
+          }
+        }
+
+        .complements {
+          margin-left: -15px;
+        }
+
+        .complement {
+          @include clearfix;
+          float: left;
+          width: 210px;
+
+          margin-bottom: 15px;
+          margin-left: 15px;
+
+          .complement_swatch {
+            width: 40px;
+            height: 40px;
+            float: left;
+
+            &.border {
+              border: 1px solid pe-color(hairline-gray);
+            }
+
+            & + p {
+              padding-left: 10px;
+            }
+          }
+
+          p {
+            float: left;
+            margin: 0;
+            @include pe-copy-small;
+          }
+        }
+      }
+    }
   }
 }
