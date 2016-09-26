@@ -3,8 +3,8 @@ layout: component-yaml
 title: Buttons
 section: Components
 redirect_from: "/docs/ui-components/buttons/"
-version: 2.0.0-beta
-status: design
+version: 2.0.0-beta.1
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -170,8 +170,9 @@ blocks:
     text: |
 
 changelog:
-  - version: 2.0.0-beta
-    changes:  New Version
+  - version: 2.0.0-beta.1
+    changes: |
+      - CHANGED: Adopt new visual style
 
   - version: 1.0.0-beta.5
     changes: |
