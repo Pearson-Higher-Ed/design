@@ -1,8 +1,8 @@
 ---
 layout: component-yaml
-title: Mobile - Account
+title: Mobile - Loading
 section: Components
-redirect_from: /docs/ui-components/mobile-account/
+redirect_from: /docs/ui-components/mobile-loading/
 version: 1.0.0-beta.1
 status: active
 implemented: false
@@ -20,15 +20,11 @@ people:
 dependencies:
 
 tagline: |
-  This component defines the standard visual style for the user account screen.
+  This component defines the standard visual style for the loading screen.
 features:
-  - user name and ID
-  - outbound links to Support, ToS and Privacy Policy.
-  - Logout
-  - App version
-  - Copyright disclaimer
+  - The Pearson thumb on a seafoam sea of tranquility?!
 usage_guidelines: |
-  Every instance of the user account screen should come from this component.
+  Every instance of a mobile loading screen should come from this component.
 
 blocks:
 # IOS
@@ -40,10 +36,8 @@ blocks:
     text: tba
     contents:
       - type: ios image
-        src: ./assets/ios/account_ios.png
-        caption: user account screen
-
-
+        src: ./assets/ios/loading_ios.png
+        caption: first load
 # ANDROID
 
   - type: section
@@ -61,12 +55,12 @@ blocks:
     text: |
       ### iOS
 
-      - account_ios:
-        <https://zpl.io/Z1n7GLS>
+      - login_ios:
+        <https://zpl.io/23oyI7>
 
       ### Android
 
-
+      - tba
 
 # CHANGELOG  
 

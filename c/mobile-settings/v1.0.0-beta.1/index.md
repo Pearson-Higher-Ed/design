@@ -1,8 +1,8 @@
 ---
 layout: component-yaml
-title: Mobile - Account
+title: Mobile - Settings
 section: Components
-redirect_from: /docs/ui-components/mobile-account/
+redirect_from: /docs/ui-components/mobile-settings/
 version: 1.0.0-beta.1
 status: active
 implemented: false
@@ -22,13 +22,10 @@ dependencies:
 tagline: |
   This component defines the standard visual style for the user account screen.
 features:
-  - user name and ID
-  - outbound links to Support, ToS and Privacy Policy.
-  - Logout
-  - App version
-  - Copyright disclaimer
+  - configure notifications, alerts
+  - allow cellular transfer
 usage_guidelines: |
-  Every instance of the user account screen should come from this component.
+  Every instance of the user settings screen should come from this component.
 
 blocks:
 # IOS
@@ -40,8 +37,11 @@ blocks:
     text: tba
     contents:
       - type: ios image
-        src: ./assets/ios/account_ios.png
-        caption: user account screen
+        src: ./assets/ios/settings_ios.png
+        caption: user settings screen
+      - type: ios image
+        src: ./assets/ios/settings_ios_alerts.png
+        caption: user settings screen
 
 
 # ANDROID
@@ -61,8 +61,11 @@ blocks:
     text: |
       ### iOS
 
-      - account_ios:
-        <https://zpl.io/Z1n7GLS>
+      - settings_ios:
+        <https://zpl.io/29a1Aq>
+
+      - settings_ios_alerts:
+        <https://zpl.io/LWaxg>
 
       ### Android
 
