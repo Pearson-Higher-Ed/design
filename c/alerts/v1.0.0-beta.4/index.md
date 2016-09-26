@@ -3,8 +3,8 @@ layout: component-yaml
 title: Alerts
 section: Components
 redirect_from: /docs/ui-components/application-header/
-version: 1.0.0-beta.3
-status: deprecated
+version: 1.0.0-beta.4
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -41,7 +41,7 @@ blocks:
 
   - type: two column
     text: |
-      When a message needs to be displayed upon page load (there was an error confirming an email address, for example) the alert should appear statically in the upper left corner of the page. This location makes it  noticeable even when the users screen is magnified.
+      When a message needs to be displayed upon page load (there was an error confirming an email address, for example) the alert should appear statically in the upper left corner of the page. This location makes it  noticeable even when the user's screen is magnified.
 
     contents:
       - type: wide image
@@ -106,11 +106,11 @@ blocks:
 
       Position
       : - Alert should be aligned with the left side of the grid's container
-        - 50px of vertical padding above the first alert
+        - 50px of spacing above the first alert
         - 20px spacing between alerts if there are more than one
 
       Focus Behavior
-      : - Most alerts can just be announced by ARIA alerts and don't need special focus treatment
+      : - Most alerts can just be announced by using ARIA alert roles and don't need special focus treatment
         - If an alert is particularly important, focus should be moved to the first element of the alert (and restored to it's original position upon dismissal)
         - Statically presented alerts should just be read and focused in the normal flow of the document
     contents:
@@ -120,6 +120,10 @@ blocks:
 
 
 changelog:
+  - version: 1.0.0-beta.4
+    changes: |
+      - FIXED: Accessibility verbiage is now more accurate
+      - FIXED: Spacing verbiage, other typos
   - version: 1.0.0-beta.3
     changes: |
       - ADDED: Positioning details to redlines
