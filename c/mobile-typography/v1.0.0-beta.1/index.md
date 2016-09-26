@@ -39,10 +39,10 @@ blocks:
   - type: two column
     text: tba
     contents:
-      - type: narrow image
+      - type: ios image
         src: ./assets/ios/typography_ios_size.png
         caption: typography sizes for iOS
-      - type: narrow image
+      - type: ios image
         src: ./assets/ios/typography_ios_color.png
         caption: typography colors for iOS
 

@@ -38,19 +38,19 @@ blocks:
   - type: two column
     text: The mobile login screen features the Pearson iterrobang logo, username field, and password field. A "need help" link leads to pearsonhighered.com/support/.
     contents:
-      - type: narrow image
+      - type: ios image
         src: ./assets/ios/login_ios.png
         caption: first load
-      - type: narrow image
+      - type: ios image
         src: ./assets/ios/login_ios_inactive.png
         caption: keyboard
   - type: two column
     text: Once the user has entered a valid username and password, the Sign In button becomes active. Unrecognized credentials will trigger a warning modal to the user.
     contents:
-      - type: narrow image
+      - type: ios image
         src: ./assets/ios/login_ios_active.png
         caption: entering credentials
-      - type: narrow image
+      - type: ios image
         src: ./assets/ios/login_ios_invalid.png
         caption: invalid
 

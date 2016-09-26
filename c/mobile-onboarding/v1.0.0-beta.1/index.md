@@ -37,7 +37,7 @@ blocks:
   - type: two column
     text: tba
     contents:
-      - type: narrow image
+      - type: ios image
         src: ./assets/ios/onboarding.png
         caption: onboarding
 

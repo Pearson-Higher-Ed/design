@@ -39,28 +39,28 @@ blocks:
   - type: two column
     text: If no courses are available, the user is prompted to register for their course, with a link to Pearson support provided. Once a course is made available, the user may tap "Download Course" to retrieve the course data to be stored locally on the device.
     contents:
-      - type: narrow image
+      - type: ios image
         src: ./assets/ios/courses_empty.png
         caption: empty state
-      - type: narrow image
+      - type: ios image
         src: ./assets/ios/courses_download.png
         caption: course download
   - type: two column
     text: Once the course data has been downloaded, the data is made available to the user in the course card. If the course content is updated, a refresh banner is displayed for the user which will action the content update.
     contents:
-      - type: narrow image
+      - type: ios image
         src: ./assets/ios/courses.png
         caption: course downloaded
-      - type: narrow image
+      - type: ios image
         src: ./assets/ios/courses_update.png
         caption: updated course content
   - type: two column
     text: Tapping on the information icon will bring up the details for that course. The user can delete course content from here. If the course is no longer available to the user, it will appear inaccessible.
     contents:
-      - type: narrow image
+      - type: ios image
         src: ./assets/ios/course_details.png
         caption: course details
-      - type: narrow image
+      - type: ios image
         src: ./assets/ios/courses_expired.png
         caption: expired course
 
