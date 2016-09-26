@@ -85,8 +85,18 @@
     max-width: 370px;
   }
 
+  .image.ios {
+    max-width: 375px;
+  }
+
+  .image.android {
+    max-width: 360px;
+  }
+
   .image.wide:nth-child(n+2),
-  .image.wide + .image.narrow {
+  .image.wide + .image.narrow,
+  .image.wide + .image.ios,
+  .image.wide + .image.android {
     margin-top: 30px;
   }
 
@@ -97,13 +107,31 @@
     }
   }
 
-  .image.narrow:first-child + .image.narrow {
+  .image.ios + .image.ios {
+    margin-top: 30px;
+    @include pe-responsive-breakpoint(md) {
+      margin-left: 10px;
+    }
+  }
+
+  .image.android + .image.android {
+    margin-top: 30px;
+    @include pe-responsive-breakpoint(md) {
+      margin-left: 40px;
+    }
+  }
+
+  .image.narrow:first-child + .image.narrow,
+  .image.ios:first-child + .image.ios,
+  .image.android:first-child + .image.android {
     @include pe-responsive-breakpoint(md) {
       margin-top: 0;
     }
   }
 
-  .image.narrow + .image.narrow + .image.narrow {
+  .image.narrow + .image.narrow + .image.narrow,
+  .image.ios + .image.ios + .image.ios,
+  .image.android + .image.android + .image.android {
     margin-left: 0;
     margin-top: 30px;
     clear:both;
@@ -116,7 +144,23 @@
     clear: none;
   }
 
-  .image.narrow + .image.narrow + .image.narrow + .image.narrow + .image.narrow {
+  .image.ios + .image.ios + .image.ios + .image.ios {
+    @include pe-responsive-breakpoint(md) {
+      margin-left: 10px;
+    }
+    clear: none;
+  }
+
+  .image.android + .image.android + .image.android + .image.android {
+    @include pe-responsive-breakpoint(md) {
+      margin-left: 40px;
+    }
+    clear: none;
+  }
+
+  .image.narrow + .image.narrow + .image.narrow + .image.narrow + .image.narrow,
+  .image.ios + .image.ios + .image.ios + .image.ios + .image.ios,
+  .image.android + .image.android + .image.android + .image.android + .image.android {
     margin-left: 0;
   }
 
@@ -125,6 +169,19 @@
       margin-left: 20px;
     }
   }
+
+  .image.ios + .image.ios + .image.ios + .image.ios + .image.ios + .image.ios {
+    @include pe-responsive-breakpoint(md) {
+      margin-left: 10px;
+    }
+  }
+
+  .image.android + .image.android + .image.android + .image.android + .image.android + .image.android {
+    @include pe-responsive-breakpoint(md) {
+      margin-left: 40px;
+    }
+  }
+
 
   pre {
     margin: 0;

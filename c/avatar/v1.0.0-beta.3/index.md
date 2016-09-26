@@ -6,7 +6,6 @@ redirect_from: /docs/ui-components/avatar/
 version: 1.0.0-beta.3
 status: active
 implemented: false
-private: true
 people:
   - role: Product Owner
     name: Joe Macaluso
