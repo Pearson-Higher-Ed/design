@@ -2,8 +2,7 @@
 layout: component-yaml
 title: Buttons
 section: Components
-redirect_from: "/docs/ui-components/buttons/"
-version: 2.0.0-beta.1
+version: 2.0.0-beta.2
 status: active
 implemented: false
 people:
@@ -69,6 +68,30 @@ blocks:
         src: ./assets/sizes.png
         caption: The two button sizes.
 
+  - type: section
+    name: Confirmation Buttons
+
+  - type: two column
+    text: |
+      In situations where the user should receive feedback that the action initiated by a button was successful use the Confirmation Button style which integrates feedback.
+
+      For simple binary confirmation feedback, this type of button is sufficient—an additional alert or message is unnecessary.
+    contents:
+      - type: narrow video
+        src: ./assets/confirmation.short.mov
+        caption: The loading indicator should appear for at least 500ms to provide the proper context.
+      - type: narrow video
+        src: ./assets/confirmation.long.mov
+        caption: If the action takes longer than 500ms then the loader is displayed until the action completes.
+
+  - type: two column
+    text: |
+      ### Error style
+      If the action failed to complete, there is an error state for the button which should be paired with an explanatory alert.
+    contents:
+      - type: narrow video
+        src: ./assets/error.short.mov
+        caption: If the action results in an error that can be presented within the button context as well. Make sure to pair this with an explanatory alert.
 
   - type: section
     name: Redlines
@@ -170,6 +193,10 @@ blocks:
     text: |
 
 changelog:
+  - version: 2.0.0-beta.2
+    changes: |
+      - ADDED: Confirmation button style
+
   - version: 2.0.0-beta.1
     changes: |
       - CHANGED: Adopt new visual style
