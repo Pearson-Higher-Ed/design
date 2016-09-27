@@ -1,8 +1,8 @@
 ---
 layout: component-yaml
-title: Mobile - Search
+title: Mobile - Assignment List
 section: Components
-redirect_from: /docs/ui-components/mobile-search/
+redirect_from: /docs/ui-components/mobile-assignment-list/
 version: 1.0.0-beta.1
 status: active
 implemented: false
@@ -20,12 +20,13 @@ people:
 dependencies:
 
 tagline: |
-  This component defines the standard visual style for the search screen. This pattern applies to ILP only.
+  This component defines the standard visual style for the assignment list screen.
 features:
-  - content search
-  - results populate in content order
+  - due date
+  - assignment title
+  - assignment status (completed, not started, in-progress, overdue)
 usage_guidelines: |
-  For ILP only. Additional search parameters to be added for future applications as they are designed.
+  The assignment list screen is used within ILP to view and access specific assignments for a particular course.
 
 blocks:
 # IOS
@@ -37,15 +38,8 @@ blocks:
     text: tba
     contents:
       - type: ios image
-        src: ./assets/ios/search_ios_new.png
-        caption: empty state
-      - type: ios image
-        src: ./assets/ios/search_ios_results.png
-        caption: results listing
-      - type: ios image
-        src: ./assets/ios/search_ios_noresults.png
-        caption: no results found
-
+        src: ./assets/ios/assignment_list_ios.png
+        caption: assignment list showing indicators for 1) completed 2) overdue 3) in progress and 4) not yet started assignments.
 
 # ANDROID
 
@@ -64,18 +58,12 @@ blocks:
     text: |
       ### iOS
 
-      - search_ios_new:
-        <https://zpl.io/1xonn7>
-
-      - search_ios_results:
-        <https://zpl.io/Z1BhHOf>
-
-      - search_ios_noresults:
-        <https://zpl.io/Z1BhHQj>
+      - assignment_list_ios:
+        <https://zpl.io/4Y1wH>
 
       ### Android
 
-
+      tba
 
 # CHANGELOG  
 
