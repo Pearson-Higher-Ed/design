@@ -1,8 +1,8 @@
 ---
 layout: component-yaml
-title: Mobile - Settings
+title: Mobile - Search
 section: Components
-redirect_from: /docs/ui-components/mobile-settings/
+redirect_from: /docs/ui-components/mobile-search/
 version: 1.0.0-beta.1
 status: active
 implemented: false
@@ -20,12 +20,12 @@ people:
 dependencies:
 
 tagline: |
-  This component defines the standard visual style for the user settings screen.
+  This component defines the standard visual style for the search screen. This pattern applies to ILP only.
 features:
-  - configure notifications, alerts
-  - allow cellular transfer
+  - content search
+  - results populate in content order
 usage_guidelines: |
-  Every instance of the user settings screen should come from this component.
+  For ILP only. Additional search parameters to be added for future applications as they are designed.
 
 blocks:
 # IOS
@@ -34,14 +34,17 @@ blocks:
     name: iOS
 
   - type: two column
-    text: uses standard iOS settings view.
+    text: tba
     contents:
       - type: ios image
-        src: ./assets/ios/settings_ios.png
-        caption: user settings screen
+        src: ./assets/ios/search_ios_new.png
+        caption: empty state
       - type: ios image
-        src: ./assets/ios/settings_ios_alert.png
-        caption: alert frequency
+        src: ./assets/ios/search_ios_results.png
+        caption: results listing
+      - type: ios image
+        src: ./assets/ios/search_ios_noresults.png
+        caption: no results found
 
 
 # ANDROID
@@ -61,10 +64,13 @@ blocks:
     text: |
       ### iOS
 
-      - settings_ios:
+      - search_ios_new:
         <https://zpl.io/29a1Aq>
 
-      - settings_ios_alerts:
+      - search_ios_results:
+        <https://zpl.io/LWaxg>
+
+      - search_ios_noresults:
         <https://zpl.io/LWaxg>
 
       ### Android
