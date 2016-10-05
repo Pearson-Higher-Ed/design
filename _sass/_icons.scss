@@ -7,3 +7,22 @@ img[src*="18-2x"] {
   width: 18px;
   height: auto;
 }
+
+/*---- Added zebra stripes to .table ----*/
+.table table {
+
+  th {
+    background: pe-color(brightly-lit);
+    border: 1px solid pe-color(hairline-gray);
+    font-size: 14px;
+  }
+
+  tr {
+    background-color: pe-color(dirty-ice);
+  }
+
+  tr:nth-of-type(2n) {
+    background-color: pe-color(white);
+  }
+
+}
