@@ -47,7 +47,7 @@
 
     <script>
 
-      var img = document.querySelectorAll("img:not(.image img)")
+      var img = document.querySelectorAll("img:not([src*='{{page.version}}'])")
       for (var i = 0; i < img.length; i++) {
         var newSrc = img.item(i).src.replace(/beta\/assets\//, 'v{{page.version}}/assets/')
         img.item(i).src = newSrc;
