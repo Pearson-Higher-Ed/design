@@ -6,7 +6,7 @@ redirect_from: /docs/ui-components/mobile-login/
 version: 1.0.0-beta.1
 status: active
 implemented: false
-private: false
+private: true
 people:
   - role: Product Owner
     name: Mike Pace
