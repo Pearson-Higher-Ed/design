@@ -25,9 +25,9 @@ downloads:
 
 dependencies:
   - name: Colors
-    version: 2.0.0-beta.3
+    version: 2.0.0-beta.5
   - name: Typography
-    version: 2.0.0-beta.3
+    version: 2.0.0-beta.5
 
 tagline: This component defines the standard visual style for buttons.
 features:
@@ -238,6 +238,14 @@ blocks:
     text: |
 
 changelog:
+  - version: 2.0.0-beta.3
+    changes: |
+      - ADDED: CTA button style
+      - ADDED: Disabled button explanations
+      - CHANGED: Default button bg fills for normal & hover states
+      - CHANGED: Disabled buttons for Primary & Default are now the same
+      - CHANGED: Dependency links
+
   - version: 2.0.0-beta.2
     changes: |
       - ADDED: Confirmation button style
