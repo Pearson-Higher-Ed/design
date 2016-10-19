@@ -213,10 +213,12 @@ blocks:
       - White
       - White Gray
       - Sunshine Yellow
+      - Sunflower Yellow
       - Digital Ice Blue
       - Charcoal
       - Medium Gray
       - Concrete
+      - Alto
       - Moonlight
       - Strawberry Red
       - Digital Grass Green
