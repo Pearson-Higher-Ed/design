@@ -46,8 +46,6 @@ blocks:
       - type: ios image
         src: ./assets/ios/mcq_fb_incorrect.png
         caption: incorrect
-    text: tba
-    contents:
       - type: ios image
         src: ./assets/ios/mcq_fb_correct.png
         caption: correct

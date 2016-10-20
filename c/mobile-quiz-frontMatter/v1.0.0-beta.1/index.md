@@ -46,26 +46,18 @@ blocks:
       - type: ios image
         src: ./assets/ios/frontMatter_ios_unavailable.png
         caption: unavailable assignment
-    text: tba
-    contents:
       - type: ios image
         src: ./assets/ios/frontMatter_ios_new.png
         caption: new (unaccessed) assignment
-    text: tba
-    contents:
       - type: ios image
         src: ./assets/ios/frontMatter_ios_continue.png
         caption: in-progress assignment
-    text: tba
-    contents:
       - type: ios image
         src: ./assets/ios/frontMatter_ios_pastDue.png
         caption: past due assignment
-    text: tba
-    contents:
       - type: ios image
-      src: ./assets/ios/frontMatter_ios_complete.png
-      caption: completed assignment
+        src: ./assets/ios/frontMatter_ios_complete.png
+        caption: completed assignment
 
 # ANDROID
 

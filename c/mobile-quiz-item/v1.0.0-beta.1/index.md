@@ -44,8 +44,6 @@ blocks:
       - type: ios image
         src: ./assets/ios/mcq_unselected_ios.png
         caption: no answer selected
-    text: tba
-    contents:
       - type: ios image
         src: ./assets/ios/mcq_selected_ios.png
         caption: selected answer
