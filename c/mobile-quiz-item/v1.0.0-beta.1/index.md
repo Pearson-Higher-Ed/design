@@ -1,8 +1,8 @@
 ---
 layout: component-yaml
-title: Mobile - Assignment Module
+title: Mobile - Quiz Item
 section: Components
-redirect_from: /docs/ui-components/mobile-assignment-module/
+redirect_from: /docs/ui-components/mobile-quiz-item/
 version: 1.0.0-beta.1
 status: active
 implemented: false
@@ -20,15 +20,17 @@ people:
 dependencies:
 
 tagline: |
-  This component defines the standard visual style for the assignment module screen in REVEL.
+  This component defines the standard visual style for the quiz item screen.
 features:
-  - due date
-  - assignment title
-  - assignment resources
-  - assignment status (completed, not started, in-progress, overdue)
-  - assignment point value
+  - current question number indicator
+  - total question number indicator
+  - point value
+  - problem statement (can contain text, audio, video, and/or images)
+  - answer options
+  - question navigation
+  - primary action (submit answer)
 usage_guidelines: |
-  The assignment module screen is used within ILP to view and access a specific assignment for a particular date.
+  The quiz item screen is used within ILP to view and answer questions within a REVEL quiz.
 
 blocks:
 # IOS
@@ -40,8 +42,14 @@ blocks:
     text: tba
     contents:
       - type: ios image
-        src: ./assets/ios/assignment_module_ios.png
-        caption: assignment module showing indicators for completed, in progress and not yet started assignment resources.
+        src: ./assets/ios/mcq_unselected_ios.png
+        caption: no answer selected
+    text: tba
+    contents:
+      - type: ios image
+        src: ./assets/ios/mcq_selected_ios.png
+        caption: selected answer
+
 
 # ANDROID
 
@@ -60,8 +68,10 @@ blocks:
     text: |
       ### iOS
 
-      - assignment_module_ios:
-        <https://zpl.io/1Xe0r>
+      - mcq_unselected_ios:
+        <https://zpl.io/Z22Yksn>
+      - mcq_selected_ios:
+        <https://zpl.io/Z1OOMHs>
 
       ### Android
 

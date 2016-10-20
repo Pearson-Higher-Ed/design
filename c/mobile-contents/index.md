@@ -1,4 +1,4 @@
 ---
-title: Mobile - Assignment Module
+title: Mobile - Table of Contents
 layout: component-default
 ---

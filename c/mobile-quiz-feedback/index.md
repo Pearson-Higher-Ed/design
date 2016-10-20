@@ -1,4 +1,4 @@
 ---
-title: Mobile - Assignment Module
+title: Mobile - Quiz Feedback
 layout: component-default
 ---
