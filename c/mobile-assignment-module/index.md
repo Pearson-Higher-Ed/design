@@ -1,4 +1,4 @@
 ---
-title: Mobile - Assignment Module
+title: Mobile - Assignment List
 layout: component-default
 ---

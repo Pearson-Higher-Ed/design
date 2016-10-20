@@ -1,8 +1,8 @@
 ---
 layout: component-yaml
-title: Mobile - Assignment Module
+title: Mobile - Assignment List
 section: Components
-redirect_from: /docs/ui-components/mobile-assignment-module/
+redirect_from: /docs/ui-components/mobile-assignment-list/
 version: 1.0.0-beta.1
 status: active
 implemented: false
@@ -20,15 +20,13 @@ people:
 dependencies:
 
 tagline: |
-  This component defines the standard visual style for the assignment module screen in REVEL.
+  This component defines the standard visual style for the assignment list screen.
 features:
   - due date
   - assignment title
-  - assignment resources
   - assignment status (completed, not started, in-progress, overdue)
-  - assignment point value
 usage_guidelines: |
-  The assignment module screen is used within ILP to view and access a specific assignment for a particular date.
+  The assignment list screen is used within ILP to view and access specific assignments for a particular course.
 
 blocks:
 # IOS
@@ -40,8 +38,8 @@ blocks:
     text: tba
     contents:
       - type: ios image
-        src: ./assets/ios/assignment_module_ios.png
-        caption: assignment module showing indicators for completed, in progress and not yet started assignment resources.
+        src: ./assets/ios/assignment_list_ios.png
+        caption: assignment list showing indicators for 1) completed 2) overdue 3) in progress and 4) not yet started assignments.
 
 # ANDROID
 
@@ -60,8 +58,8 @@ blocks:
     text: |
       ### iOS
 
-      - assignment_module_ios:
-        <https://zpl.io/1Xe0r>
+      - assignment_list_ios:
+        <https://zpl.io/4Y1wH>
 
       ### Android
 
