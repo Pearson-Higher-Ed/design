@@ -46,8 +46,6 @@ blocks:
       - type: ios image
         src: ./assets/ios/mcq_results_inprogress_ios.png
         caption: in-progress assignment
-    text: tba
-    contents:
       - type: ios image
         src: ./assets/ios/mcq_results_completed_ios.png
         caption: completed assignment
