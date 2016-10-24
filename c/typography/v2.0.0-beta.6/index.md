@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Typography
 section: Components
-version: 2.0.0-beta.5
-status: deprecated
+version: 2.0.0-beta.6
+status: active
 implemented: true
 people:
   - role: Product Owner
@@ -566,6 +566,9 @@ blocks:
       - code, kbd tags
 
 changelog:
+  - version: 2.0.0-beta.6
+    changes: |
+      - CHANGED: Updated names to be less confusing when communicating with developers
   - version: 2.0.0-beta.5
     changes: |
       - FIXED: Correct a11y checklist link
