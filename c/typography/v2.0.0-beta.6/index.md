@@ -52,26 +52,26 @@ blocks:
           font-family: Monaco, 'Lucida Console', monospace;
 
   - type: section
-    name: Labels
+    name: UI Text
 
   - type: two column
     text: |
-      Much of the typography used in a web application consists of short names, labels, or single line bits of content. For example, in Console the course tile displays information like instructor names and course dates with labels.
+      Much of the typography used in a web application consists of short names, labels, or single line bits of content. For example, in Console the course tile displays information like instructor names and course dates with UI Text.
     contents:
       - type: wide image
-        src: ./assets/label.example.png
-        caption: Examples of how labels are used.
+        src: ./assets/ui.text.example.png
+        caption: Examples of how UI Text is used.
 
   - type: two column
     text: |
       ### Variants
-      There are five different types of label, *Basic*, *Small*, *Large*, *Bold*, and *Small bold*:
+      There are five different types of UI Text, *Basic*, *Small*, *Large*, *Bold*, and *Small Bold*:
 
-      Labels should primarily be used in single line scenarios.
+      UI Text should primarily be used in single line scenarios.
     contents:
       - type: narrow image
-        src: ./assets/labels.regular.png
-        caption: The five label types
+        src: ./assets/ui.text.regular.png
+        caption: The five UI Text types
 
   - type: two column
     text: |
@@ -240,7 +240,7 @@ blocks:
 
   - type: two column
     text: |
-      ### Labels
+      ### UI Text
 
   - type: two column
     text: |
@@ -268,21 +268,21 @@ blocks:
 
     contents:
       - type: narrow image
-        src: ./assets/redlines.labels.regular.png
+        src: ./assets/redlines.ui.text.regular.png
     exports:
-      - Basic label
-      - Small label
-      - Small bold label
-      - Large label
-      - Bold label
+      - UI Text - Basic
+      - UI Text - Small
+      - UI Text - Small Bold
+      - UI Text - Large
+      - UI Text - Bold
 
   - type: style table
     styles:
-      - Basic label
-      - Small label
-      - Small bold label
-      - Large label
-      - Bold label
+      - UI Text - Basic
+      - UI Text - Small
+      - UI Text - Small Bold
+      - UI Text - Large
+      - UI Text - Bold
 
   - type: two column
     text: |
