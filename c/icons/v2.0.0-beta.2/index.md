@@ -69,8 +69,6 @@ blocks:
             | ![](./assets/icons24/info-fill-24-2x.png) | info-fill-18 | info-fill-24 |
             | ![](./assets/icons24/info-outline-24-2x.png) | info-outline-18 | info-outline-24 |
             | ![](./assets/icons24/note-24-2x.png) | note-18 | note-24 |
-            | ![](./assets/icons24/point-back-24-2x.png) | point-back-18 | point-back-24 |
-            | ![](./assets/icons24/point-next-24-2x.png) | point-next-18 | point-next-24 |
             | ![](./assets/icons24/remove-lg-24-2x.png) | remove-lg-18 | remove-lg-24 |
             | ![](./assets/icons24/remove-sm-24-2x.png) | remove-sm-18 | remove-sm-24 |
             | ![](./assets/icons24/search-lg-24-2x.png) | search-lg-18 | search-lg-24 |
@@ -106,6 +104,8 @@ blocks:
             | ![](./assets/icons24/lock-open-24-2x.png) | lock-open-18 | lock-open-24 |
             | ![](./assets/icons24/pivot-close-24-2x.png) | pivot-close-18 | pivot-close-24 |
             | ![](./assets/icons24/pivot-open-24-2x.png) | pivot-open-18 | pivot-open-24 |
+            | ![](./assets/icons24/point-back-24-2x.png) | point-back-18 | point-back-24 |
+            | ![](./assets/icons24/point-next-24-2x.png) | point-next-18 | point-next-24 |
             | ![](./assets/icons24/radio-button-off-24-2x.png) | radio-button-off-18 | radio-button-off-24 |
             | ![](./assets/icons24/radio-button-on-24-2x.png) | radio-button-on-18 | radio-button-on-24 |
             | ![](./assets/icons24/show-off-24-2x.png) | show-off-18 | show-off-24 |
