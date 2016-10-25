@@ -32,7 +32,7 @@ blocks:
 
   - type: two column
     text: |
-      Pearson icons are available in two sizes, **18 x 18 and 24 x 24 pixels**. You can incorporate them into your design by downloading the Pearson-icons.sketch file, located above.
+      Pearson icons are available in two sizes, **18 x 18** and **24 x 24 pixels**. You can incorporate them into your design by downloading the Pearson-icons.sketch file, located above.
 
       ### Web App Development
       You do not need to provide SVG or backup PNG, simply note the class name from the icons list or within the Pearson-icons.sketch file. If you wish to modify the icons, follow the guidelines below for colors, naming, and scaling.
@@ -53,6 +53,10 @@ blocks:
             | ![](./assets/icons24/camera-video-24-2x.png) | camera-video-18 | camera-video-24 |
             | ![](./assets/icons24/check-lg-24-2x.png) | check-lg-18 | check-lg-24 |
             | ![](./assets/icons24/check-sm-24-2x.png) | check-sm-18 | check-sm-24 |
+            | ![](./assets/icons24/chevron-back-24-2x.png) | chevron-back-18 | chevron-back-24 |
+            | ![](./assets/icons24/chevron-next-24-2x.png) | chevron-next-18 | chevron-next-24 |
+            | ![](./assets/icons24/point-back-24-2x.png) | point-back-18 | point-back-24 |
+            | ![](./assets/icons24/point-next-24-2x.png) | point-next-18 | point-next-24 |
             | ![](./assets/icons24/clock-24-2x.png) | clock-18 | clock-24 |
             | ![](./assets/icons24/delete-24-2x.png) | delete-18 | delete-24 |
             | ![](./assets/icons24/desktop-24-2x.png) | desktop-18 | desktop-24 |
@@ -92,8 +96,6 @@ blocks:
             | ![](./assets/icons24/checkbox-off-24-2x.png) | checkbox-off-18 | checkbox-off-24 |
             | ![](./assets/icons24/checkbox-on-24-2x.png) | checkbox-on-18 | checkbox-on-24 |
             | ![](./assets/icons24/checkbox-tristate-24-2x.png) | checkbox-tristate-18 | checkbox-tristate-24 |
-            | ![](./assets/icons24/chevron-back-24-2x.png) | chevron-back-18 | chevron-back-24 |
-            | ![](./assets/icons24/chevron-next-24-2x.png) | chevron-next-18 | chevron-next-24 |
             | ![](./assets/icons24/dropdown-close-24-2x.png) | dropdown-close-18 | dropdown-close-24 |
             | ![](./assets/icons24/dropdown-open-24-2x.png) | dropdown-open-18 | dropdown-open-24 |
             | ![](./assets/icons24/favorite-off-24-2x.png) | favorite-off-18 | favorite-off-24 |
@@ -104,8 +106,6 @@ blocks:
             | ![](./assets/icons24/lock-open-24-2x.png) | lock-open-18 | lock-open-24 |
             | ![](./assets/icons24/pivot-close-24-2x.png) | pivot-close-18 | pivot-close-24 |
             | ![](./assets/icons24/pivot-open-24-2x.png) | pivot-open-18 | pivot-open-24 |
-            | ![](./assets/icons24/point-back-24-2x.png) | point-back-18 | point-back-24 |
-            | ![](./assets/icons24/point-next-24-2x.png) | point-next-18 | point-next-24 |
             | ![](./assets/icons24/radio-button-off-24-2x.png) | radio-button-off-18 | radio-button-off-24 |
             | ![](./assets/icons24/radio-button-on-24-2x.png) | radio-button-on-18 | radio-button-on-24 |
             | ![](./assets/icons24/show-off-24-2x.png) | show-off-18 | show-off-24 |
@@ -177,7 +177,7 @@ blocks:
 
   - type: two column
     text: |
-      You can scale the icons up by **2x, 3x, 4x, and 5x**. However, scaling them down or any .5x variation, the lines and shapes will become blurry.
+      You can scale the icons up by **2x, 3x, 4x,** and **5x**. However, scaling them down or any .5x variation, the lines and shapes will become blurry.
 
     contents:
         - type: wide image
