@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Typography
 section: Components
-version: 2.0.0-beta.5
-status: deprecated
+version: 2.0.0-beta.6
+status: active
 implemented: true
 people:
   - role: Product Owner
@@ -52,26 +52,26 @@ blocks:
           font-family: Monaco, 'Lucida Console', monospace;
 
   - type: section
-    name: Labels
+    name: UI Text
 
   - type: two column
     text: |
-      Much of the typography used in a web application consists of short names, labels, or single line bits of content. For example, in Console the course tile displays information like instructor names and course dates with labels.
+      Much of the typography used in a web application consists of short names, labels, or single line bits of content. For example, in Console the course tile displays information like instructor names and course dates with UI Text.
     contents:
       - type: wide image
-        src: ./assets/label.example.png
-        caption: Examples of how labels are used.
+        src: ./assets/ui.text.example.png
+        caption: Examples of how UI Text is used.
 
   - type: two column
     text: |
       ### Variants
-      There are five different types of label, *Basic*, *Small*, *Large*, *Bold*, and *Small bold*:
+      There are five different types of UI Text, *Basic*, *Small*, *Large*, *Bold*, and *Small Bold*:
 
-      Labels should primarily be used in single line scenarios.
+      UI Text should primarily be used in single line scenarios.
     contents:
       - type: narrow image
-        src: ./assets/labels.regular.png
-        caption: The five label types
+        src: ./assets/ui.text.regular.png
+        caption: The five UI Text types
 
   - type: two column
     text: |
@@ -90,47 +90,47 @@ blocks:
       * `<abbr>`
 
   - type: section
-    name: Titles
+    name: UI Headings
 
   - type: two column
     text: |
-      Titles are very similar to labels except they demarcate a logical section or container of content. In the previous example, the course name would be a title.
+      UI Headings are very similar to UI Text except they demarcate a logical section or container of content. In the previous example, the course name would be a UI Heading.
 
-      Titles come in two types, *Page* and *Section*. Page titles typically only appear once per page and are designed to name the current page. Section titles are designed to name the modular components that might make up a page.
+      UI Headings come in two types, *Page* and *Section*. Page headings typically only appear once per page and are designed to name the current page. Section headings are designed to name the modular components that might make up a page.
     contents:
       - type: wide image
-        src: ./assets/title.example.png
-        caption: Example section title usage.
+        src: ./assets/section.ui.heading.example.png
+        caption: Example of Section UI Heading usage.
       - type: wide image
-        src: ./assets/page.title.example.png
-        caption: Example page title usage.
-
-  - type: two column
-    text: |
-      ### Page titles
-      Page titles come in two sizes, *Basic* and *Small*.
-    contents:
-      - type: wide image
-        src: ./assets/page.titles.sizes.png
-        caption: Standard page title sizes.
+        src: ./assets/page.ui.heading.example.png
+        caption: Example of Page UI Heading usage.
 
   - type: two column
     text: |
-      ### Section titles
-      There are four different types of section title: *Basic*, *Bold*, *Small*, and *Large*.
+      ### Page UI Headings
+      Page UI Headings come in two sizes, *Basic* and *Small*.
     contents:
       - type: wide image
-        src: ./assets/titles.sizes.png
+        src: ./assets/page.ui.heading.sizes.png
+        caption: Standard Page UI Heading sizes.
+
+  - type: two column
+    text: |
+      ### Section UI Headings
+      There are four different types of section UI Headings: *Basic*, *Bold*, *Small*, and *Large*.
+    contents:
+      - type: wide image
+        src: ./assets/section.ui.heading.sizes.png
         caption: |
-          Standard title types in single and multiline versions.
+          Standard Section UI Heading types in single and multiline versions.
 
   - type: two column
     text: |
       ### Color Variants
-      Titles follow the same color guidelines as labels, using [Charcoal](/design/c/colors/v2.0.0-beta.4/#rd-charcoal) by default and [Medium Gray](/design/c/colors/v2.0.0-beta.4/#rd-medium-gray) as a secondary supplement. Prefer these, but use other colors where appropriate (make sure to pair with an accessible background).
+      UI Headings follow the same color guidelines as UI Text, using [Charcoal](/design/c/colors/v2.0.0-beta.4/#rd-charcoal) by default and [Medium Gray](/design/c/colors/v2.0.0-beta.4/#rd-medium-gray) as a secondary supplement. Prefer these, but use other colors where appropriate (make sure to pair with an accessible background).
 
       ### Allowed Inline Elements
-      In general, titles should not be styled beyond the basic styles listed above. If necessary, stick to the following list of inline elements.
+      In general, UI Headings should not be styled beyond the basic styles listed above. If necessary, stick to the following list of inline elements.
 
       * `<em>, <i>`
       * `<small>`
@@ -180,17 +180,17 @@ blocks:
       Copy is more flexible in this regard than labels or titles. You can include any of the inline elements covered by this component.
 
   - type: section
-    name: Headings
+    name: Copy Headings
 
   - type: two column
     text: |
-      Headings pair with [copy](#copy) styles to delineate sections within blocks of content. They should not be used for UI elements (see [titles](#titles) instead).
+      Copy Headings pair with [copy](#copy) styles to delineate sections within blocks of content. They should not be used for UI elements (see [UI Headings](#ui-headings) instead).
 
       There are six different levels available and should be used in order.
     contents:
       - type: wide image
         src: ./assets/headings.png
-        caption: All six heading levels.
+        caption: All six Copy Heading levels.
 
 
 
@@ -240,7 +240,7 @@ blocks:
 
   - type: two column
     text: |
-      ### Labels
+      ### UI Text
 
   - type: two column
     text: |
@@ -268,30 +268,30 @@ blocks:
 
     contents:
       - type: narrow image
-        src: ./assets/redlines.labels.regular.png
+        src: ./assets/redlines.ui.text.regular.png
     exports:
-      - Basic label
-      - Small label
-      - Small bold label
-      - Large label
-      - Bold label
+      - UI Text - Basic
+      - UI Text - Small
+      - UI Text - Small Bold
+      - UI Text - Large
+      - UI Text - Bold
 
   - type: style table
     styles:
-      - Basic label
-      - Small label
-      - Small bold label
-      - Large label
-      - Bold label
+      - UI Text - Basic
+      - UI Text - Small
+      - UI Text - Small Bold
+      - UI Text - Large
+      - UI Text - Bold
 
   - type: two column
     text: |
-      ### Section Titles
+      ### Section UI Headings
     exports:
-      - Basic section title
-      - Small section title
-      - Bold section title
-      - Large section title
+      - UI Headings - Section - Basic
+      - UI Headings - Section - Small
+      - UI Headings - Section - Bold
+      - UI Headings - Section - Large
 
   - type: two column
     text: |
@@ -315,49 +315,49 @@ blocks:
 
 
       #### Color
-      Use the same color scheme as labels.
+      Use the same color scheme as UI Text.
     contents:
       - type: narrow image
-        src: ./assets/redlines.titles.regular.png
+        src: ./assets/redlines.ui.heading.section.regular.png
         caption: Regular title sizes
 
   - type: style table
     styles:
-      - Basic section title
-      - Small section title
-      - Bold section title
-      - Large section title
+      - UI Headings - Section - Basic
+      - UI Headings - Section - Small
+      - UI Headings - Section - Bold
+      - UI Headings - Section - Large
 
   - type: two column
     text: |
-      ### Page titles
+      ### Page UI Headings
     exports:
-      - Page title
-      - Small page title
+      - UI Headings - Page - Basic
+      - UI Headings - Page - Small
 
   - type: two column
     text: |
       #### Sizes
-      Page title
+      Basic
       : - 38px font-size
         - 52px line-height
         - Light weight
 
-      Small page title
+      Small
       : - 28px font-size
         - 38px line-height
         - Light weight
 
       #### Colors
-      Use the same color scheme as labels.
+      Use the same color scheme as UI Text.
     contents:
-      - type: narrow image
-        src: ./assets/redlines.page.title.regular.png
+      - type: wide image
+        src: ./assets/redlines.ui.heading.page.regular.png
 
   - type: style table
     styles:
-      - Page title
-      - Small page title
+      - UI Headings - Page - Basic
+      - UI Headings - Page - Small
 
   - type: two column
     text: |
@@ -434,29 +434,29 @@ blocks:
 
   - type: two column
     text: |
-      ### Headings
+      ### Copy Headings
 
       #### Fonts
       Level 1
-      : - Match Small Page title style
+      : - Match Small Page UI Heading style
 
       Level 2
-      : - Match Large section title style
+      : - Match Large Section UI Heading style
 
       Level 3
-      : - Match Bold section title style
+      : - Match Bold Section UI Heading style
 
       Level 4
-      : - Match Basic section title style
+      : - Match Basic Section UI Heading style
 
       Level 5
-      : - Match Small section title style
+      : - Match Small Section UI Heading style
 
       Level 6
-      : - Match Large label style
+      : - Match Large UI Text style
 
       #### Colors
-      All headings are [Charcoal](/design/c/colors/v2.0.0-beta.4/#rd-charcoal).
+      All Copy Headings are [Charcoal](/design/c/colors/v2.0.0-beta.4/#rd-charcoal).
 
       #### Spacing
 
@@ -566,6 +566,9 @@ blocks:
       - code, kbd tags
 
 changelog:
+  - version: 2.0.0-beta.6
+    changes: |
+      - CHANGED: Updated names to be less confusing when communicating with developers
   - version: 2.0.0-beta.5
     changes: |
       - FIXED: Correct a11y checklist link
