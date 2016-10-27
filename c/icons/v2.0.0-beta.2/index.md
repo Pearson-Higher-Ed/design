@@ -15,6 +15,11 @@ implementation: https://pearson-elements-v0.surge.sh/elements/icons/
 downloads:
   - name: Pearson-icons-1.1.sketch
     link: ./assets/Pearson_icons_1.1.sketch
+  - name: UXD Accessibility Checklist
+    link: https://docs.google.com/a/pearson.com/document/d/15RLoDS-Qlu_Qz1W8UNuiHu3OtdNZ8kzKm_7jecoP5So/edit?usp=sharing
+dependencies:
+  - name: Colors
+    version: 2.0.0
 
 tagline: |
   This component provides a standard set of UI icons across Pearson applications.
