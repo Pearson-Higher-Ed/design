@@ -31,6 +31,7 @@
         {% assign learn = (site.pages | where: "section", "contribute") | sort: "title" | sort: "order", "last" %}
         {% for page in learn %}
           {% if page.url contains 'beta' %}
+          {% elsif page.status == 'deprecated' %}
           {% else %}
           <li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
           {% endif %}
