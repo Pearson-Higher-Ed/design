@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Typography
 section: Components
-version: 2.0.0-beta.6
-status: deprecated
+version: 2.0.0-beta.7
+status: active
 implemented: true
 people:
   - role: Product Owner
@@ -495,7 +495,7 @@ blocks:
       : - No visual change, these elements have semantic meaning only
 
       `<a>`
-      : - Active link = [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue) and underline
+      : - Generic link = [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue) and underline
         - Hover link = [Ink Blue](/design/c/colors/v2.0.0-beta.4/#rd-ink-blue), no underline
         - Focus states use the default browser style, and also adopt the hover style
 
@@ -566,6 +566,9 @@ blocks:
       - code, kbd tags
 
 changelog:
+  - version: 2.0.0-beta.7
+    changes: |
+      - FIXED:
   - version: 2.0.0-beta.6
     changes: |
       - CHANGED: Updated names to be less confusing when communicating with developers
