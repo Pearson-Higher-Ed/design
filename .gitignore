@@ -9,3 +9,5 @@ _site
 
 node_modules/*
 !node_modules/pearson-elements
+
+c/drawer/v1.0.0-beta.9/index.md
