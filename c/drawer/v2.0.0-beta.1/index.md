@@ -51,7 +51,7 @@ blocks:
       An overlay drawer appears to "slide over" the content on the parent page, obscuring some of that content.
     contents:
       - type: wide video
-        src: ./assets/drawer.mov
+        src: ./assets/drawer.mp4
 
   - type: section
     name: Basic View
@@ -93,7 +93,7 @@ blocks:
       Displaying the second level uses an animation to provide context.
     contents:
       - type: wide video
-        src: ./assets/drawer_detail.mov
+        src: ./assets/drawer_detail.mp4
 
   - type: section
     name: Redlines
