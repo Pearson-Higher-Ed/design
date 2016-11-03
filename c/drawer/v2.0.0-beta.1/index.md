@@ -196,7 +196,7 @@ blocks:
 
 changelog:
   - version: 2.0.0-beta.1
-    changes: New design align with new brands    
+    changes: Redesign align with new brands    
 
   - version: 1.0.0-beta.8
     changes: |
