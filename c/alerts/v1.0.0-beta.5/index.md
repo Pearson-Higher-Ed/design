@@ -3,8 +3,8 @@ layout: component-yaml
 title: Alerts
 section: Components
 redirect_from: /docs/ui-components/application-header/
-version: 1.0.0-beta.4
-status: deprecated
+version: 1.0.0-beta.5
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -101,8 +101,8 @@ blocks:
         - Message is [Basic Body Copy](/design/c/typography/v2.0.0-beta.3/#rd-basic-body)
 
       Animation
-      : - Drop in uses a Runge-Kutta spring with a tension of 400 and friction of 30
-        - Slide out uses a RK spring with a tension of 400 and friction of 34
+      : - Drop in uses an ease-in-out easing curve with a duration of 300ms
+        - Slide out uses an ease-in easing curve with a duration of 200ms
 
       Position
       : - Alert should be aligned with the left side of the grid's container
@@ -120,6 +120,9 @@ blocks:
 
 
 changelog:
+  - version: 1.0.0-beta.5
+    changes: |
+      - CHANGED: Uses basic CSS easing curves, rather than springs.
   - version: 1.0.0-beta.4
     changes: |
       - FIXED: Accessibility verbiage is now more accurate
