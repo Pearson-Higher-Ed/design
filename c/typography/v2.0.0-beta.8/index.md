@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Typography
 section: Components
-version: 2.0.0-beta.7
-status: deprecated
+version: 2.0.0-beta.8
+status: active
 implemented: true
 people:
   - role: Product Owner
@@ -152,9 +152,14 @@ blocks:
     text: |
       ### Basic Body
       Most regular content will use the *Basic Body* style.
+
+      ### Large Body
+      For more extensive chunks of content, use the *Large Body* style. This is useful to maintain the target line length of around 75 characters.
     contents:
       - type: narrow image
         src: ./assets/copy.basic.png
+      - type: narrow image
+        src: ./assets/copy.large.png
 
   - type: two column
     text: |
@@ -365,9 +370,13 @@ blocks:
 
   - type: two column
     text: |
-      #### Basic Body
-      Font
+      #### Body
+      Basic Font Size
       : - 14px font-size
+        - 22px line-height
+
+      Large Font Size
+      : - 16px font-size
         - 22px line-height
 
       Color
@@ -380,8 +389,12 @@ blocks:
       - type: narrow image
         src: ./assets/redlines.copy.body.png
         caption: Standard body copy
+      - type: narrow image
+        src: ./assets/redlines.copy.large.png
+        caption: Large body copy
     exports:
       - Basic Body
+      - Large Body
 
   - type: two column
     text: |
@@ -428,6 +441,7 @@ blocks:
   - type: style table
     styles:
       - Basic Body
+      - Large Body
       - Ordered List
       - Unordered List
       - Code
@@ -566,6 +580,9 @@ blocks:
       - code, kbd tags
 
 changelog:
+  - version: 2.0.0-beta.8
+    changes: |
+      - ADDED: Large Body style
   - version: 2.0.0-beta.7
     changes: |
       - FIXED:
