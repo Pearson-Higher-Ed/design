@@ -126,6 +126,13 @@ blocks:
     images:
       - src: ./assets/cta_placeholderimage.png
 
+  - type: two column
+    text: tba
+    contents:
+      - type: ios image
+        src: ./assets/assignment_module_ios.png
+        caption: assignment list showing indicators for 1) completed 2) overdue 3) in progress and 4) not yet started assignments.
+
   - type: content
     content: |
       Calls to action should:

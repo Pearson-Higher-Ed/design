@@ -19,7 +19,7 @@
             </li>
           {% endif %}
 
-          <li>{{block.content}}
+          <li><a href="#{{block.content | slugify}}">{{block.content}}</a>
           {% assign last_type = block.type %}
 
         {% when 'secondary section' %}
@@ -30,7 +30,7 @@
           {% elsif last_type == 'content' %}
             </li></ul></li>
           {% endif %}
-          <li>{{block.content}}
+          <li><a href="#{{block.content | slugify}}">{{block.content}}</a>
           {% assign last_type = block.type %}
 
         {% when 'content' %}
@@ -40,7 +40,7 @@
             {% elsif last_type == 'content' %}
               </li>
             {% endif %}
-            <li>{{block.title}}
+            <li><a href="#{{block.title | slugify}}">{{block.title}}</a>
             {% assign last_type = block.type %}
           {% endif %}
 
@@ -64,19 +64,86 @@
         {% case block.type %}
 
         {% when 'main section' %}
-        <h2>{{block.content}}</h2>
+        <h2 id="{{block.content | slugify}}">{{block.content}}</h2>
 
         {% when 'secondary section' %}
-        <h3>{{block.content}}</h3>
+        <h3 id="{{block.content | slugify}}">{{block.content}}</h3>
 
         {% when 'content' %}
         {% if block.title %}
-          <h4>{{block.title}}</h4>
+          <h4 id="{{block.title | slugify}}">{{block.title}}</h4>
         {% endif %}
         {{block.content | markdownify}}
-
         {% for image in block.images %}
           <img src="{{image.src}}">
+        {% endfor %}
+
+        {% when 'two column' %}
+        {% if block.title %}
+          <h4 id="{{block.title | slugify}}">{{block.title}}</h4>
+        {% endif %}
+        {{block.text | markdownify}}
+        {% for attachment in block.contents %}
+          {% case attachment.type %}
+
+          {% when 'wide image' %}
+          <div class="image wide">
+            <div class="media">
+              <img src="{{attachment.src}}" />
+            </div>
+            {% if attachment.caption %}<div class="caption">{{attachment.caption | markdownify}}</div>{% endif %}
+          </div>
+
+          {% when 'narrow image' %}
+          <div class="image narrow">
+            <div class="media">
+              <img src="{{attachment.src}}" />
+            </div>
+            {% if attachment.caption %}<div class="caption">{{attachment.caption | markdownify}}</div>{% endif %}
+          </div>
+
+          {% when 'ios image' or 'ios_image' or 'iOS image' or 'iOS_image' %}
+          <div class="image ios">
+            <div class="media">
+              <img src="{{attachment.src}}" />
+            </div>
+            {% if attachment.caption %}<div class="caption">{{attachment.caption | markdownify}}</div>{% endif %}
+          </div>
+
+          {% when 'android image' or 'android_image' %}
+          <div class="image android">
+            <div class="media">
+              <img src="{{attachment.src}}" />
+            </div>
+            {% if attachment.caption %}<div class="caption">{{attachment.caption | markdownify}}</div>{% endif %}
+          </div>
+
+          {% when 'wide video' %}
+          <div class="image wide">
+            <div class="media">
+              <video src="{{attachment.src}}" loop controls/>
+            </div>
+            {% if attachment.caption %}<div class="caption">{{attachment.caption | markdownify}}</div>{% endif %}
+          </div>
+
+          {% when 'narrow video' %}
+          <div class="image narrow">
+            <div class="media">
+              <video src="{{attachment.src}}" loop controls/>
+            </div>
+            {% if attachment.caption %}<div class="caption">{{attachment.caption | markdownify}}</div>{% endif %}
+          </div>
+
+          {% when 'table' %}
+          <div class="table">{{attachment.content | markdownify}}</div>
+
+          {% when 'code' %}
+          <pre class="pe-code">{{attachment.content}}</pre>
+
+          {% when 'text' %}
+          <div class="text-content pe-copy">{{attachment.content | markdownify}}</div>
+
+          {% endcase %}
         {% endfor %}
 
         {% endcase %}
