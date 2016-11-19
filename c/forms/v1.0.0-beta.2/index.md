@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Forms
 section: Components
-version: 1.0.0-beta.1
-status: deprecated
+version: 1.0.0-beta.2
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -16,7 +16,7 @@ people:
     email: parker.malenke@pearson.com
 downloads:
   - name: UXD Accessibility Checklist
-    link:
+    link: https://docs.google.com/a/pearson.com/document/d/1O7YP1xc9QtHbVB4sugeWG585RXJbNZIT81H5EBPH9ps/edit?usp=sharing
 
 dependencies:
   - name: Typography
@@ -69,7 +69,7 @@ blocks:
 
   - type: two column
     text: |
-      Individual input fields should present their own errors following the styles dictated in the inputs components **Link Here**. Fields with errors should always be accompanied by error text, unless a top level error message is sufficient to understand and fix the problems.
+      Individual input fields should present their own errors following the styles dictated in the [inputs components](http://pearson-higher-ed.github.io/design/c/inputs/v2.0.0-beta.3/#labels). Fields with errors should always be accompanied by error text, unless a top level error message is sufficient to understand and fix the problems.
 
       Top Level Errors relevant to the form as a whole may be presented above the first input and below the form name. It should consist of a single line message (which is colored red) and then an optional chunk of body copy that explains the situation in more detail.
     contents:
@@ -93,11 +93,8 @@ blocks:
       Spacing
       : - 20px between Form Name and a Top Level Error
         - 30px between Form Name or Top Level Error and the first input
-        - 40px between all inputs
+        - 40px between all inputs (this includes space dedicated for one line of error text)
         - 40px between the last input and the Next/Submit button
-
-      Dimensions
-      : - Form width should never exceed ___ px
 
     contents:
       - type: wide image
@@ -109,6 +106,9 @@ blocks:
 
 
 changelog:
+  - version: 1.0.0-beta.2
+    changes: |
+      - FIXED: References to other components, cleaned up documentation in general
   - version: 1.0.0-beta.1
     changes: Initial version.
 ---
