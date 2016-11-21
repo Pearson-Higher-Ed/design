@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="core">
+{% include header.html %}
+<body class="side-toc">
+  {% include construction.html %}
+  {% include navigation.html %}
+
+  <div class="sidebar">
+    <ul>
+      {% assign last_type = "" %}
+
+      {% for block in page.blocks %}
+        {% if block.name %}
+          {% assign content = block.name %}
+        {% elsif block.content %}
+          {% assign content = block.content %}
+        {% endif %}
+
+        {% case block.type %}
+
+        {% when 'main section' %}
+          {% if last_type == 'secondary section' %}
+            </li></ul></li>
+          {% elsif last_type == 'main section' %}
+            </li>
+          {% endif %}
+          <li><a href="#{{content | slugify}}">{{content}}</a> {% assign last_type = block.type %}
+        {% when 'secondary section' %}
+          {% if last_type == 'main section' %}
+            <ul>
+          {% elsif last_type == 'secondary section' %}
+            </li>
+          {% elsif last_type == 'content' %}
+            </li></ul></li>
+          {% endif %}
+          <li><a href="#{{content | slugify}}">{{content}}</a> {% assign last_type = block.type %}
+        {% when 'content' %}
+          {% if block.title %}
+            {% if last_type == 'secondary section' %}
+              <ul>
+            {% elsif last_type == 'content' %}
+              </li>
+            {% endif %}
+            <li><a href="#{{block.title | slugify}}">{{block.title}}</a>
+            {% assign last_type = block.type %}
+          {% endif %}
+
+        {% endcase %}
+      {% endfor %}
+
+      {% if last_type == 'secondary section' %}
+        </li></ul>
+      {% elsif last_type == 'content' %}
+        </li></ul></li></ul>
+      {% endif %}
+    </li></ul>
+  </div>
+
+  <div class="main-content">
+    <div class="content">
+      <h1>{{page.title}}</h1>
+
+      {% for block in page.blocks %}
+        {% if block.name %}
+          {% assign content = block.name %}
+        {% elsif block.content %}
+          {% assign content = block.content %}
+        {% endif %}
+
+        {% case block.type %}
+
+        {% when 'main section' %}
+        <h2 id="{{content | slugify}}">{{content}}</h2>
+        {% when 'secondary section' %}
+        <h3 id="{{content | slugify}}">{{content}}</h3>
+
+        {% when 'content' %}
+        {% if block.title %}
+          <h4 id="{{block.title | slugify}}">{{block.title}}</h4>
+        {% endif %}
+        {{block.content | markdownify}}
+        {% for image in block.images %}
+          <img src="{{image.src}}">
+        {% endfor %}
+
+        {% when 'two column' %}
+        {% if block.title %}
+          <h4 id="{{block.title | slugify}}">{{block.title}}</h4>
+        {% endif %}
+        {{block.text | markdownify}}
+        <div class="images">
+        {% for attachment in block.contents %}
+          {% case attachment.type %}
+
+          {% when 'wide image' %}
+          <div class="image wide">
+            <div class="media">
+              <img src="{{attachment.src}}" />
+            </div>
+            {% if attachment.caption %}<div class="caption">{{attachment.caption | markdownify}}</div>{% endif %}
+          </div>
+
+          {% when 'narrow image' %}
+          <div class="image narrow">
+            <div class="media">
+              <img src="{{attachment.src}}" />
+            </div>
+            {% if attachment.caption %}<div class="caption">{{attachment.caption | markdownify}}</div>{% endif %}
+          </div>
+
+          {% when 'ios image' or 'ios_image' or 'iOS image' or 'iOS_image' %}
+          <div class="image ios">
+            <div class="media">
+              <img src="{{attachment.src}}" />
+            </div>
+            {% if attachment.caption %}<div class="caption">{{attachment.caption | markdownify}}</div>{% endif %}
+          </div>
+
+          {% when 'android image' or 'android_image' %}
+          <div class="image android">
+            <div class="media">
+              <img src="{{attachment.src}}" />
+            </div>
+            {% if attachment.caption %}<div class="caption">{{attachment.caption | markdownify}}</div>{% endif %}
+          </div>
+
+          {% when 'wide video' %}
+          <div class="image wide">
+            <div class="media">
+              <video src="{{attachment.src}}" loop controls/>
+            </div>
+            {% if attachment.caption %}<div class="caption">{{attachment.caption | markdownify}}</div>{% endif %}
+          </div>
+
+          {% when 'narrow video' %}
+          <div class="image narrow">
+            <div class="media">
+              <video src="{{attachment.src}}" loop controls/>
+            </div>
+            {% if attachment.caption %}<div class="caption">{{attachment.caption | markdownify}}</div>{% endif %}
+          </div>
+
+          {% when 'table' %}
+          <div class="table">{{attachment.content | markdownify}}</div>
+
+          {% when 'code' %}
+          <pre class="pe-code">{{attachment.content}}</pre>
+
+          {% when 'text' %}
+          <div class="text-content pe-copy">{{attachment.content | markdownify}}</div>
+
+          {% endcase %}
+        {% endfor %}
+        </div>
+
+        {% endcase %}
+
+      {% endfor %}
+    </div>
+  </div>
+
+
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-75266302-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</body>
+</html>
