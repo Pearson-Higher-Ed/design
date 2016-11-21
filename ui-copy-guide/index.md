@@ -1,7 +1,7 @@
 ---
 title: UI Copy Guide
 layout: side-toc
-section: use
+# section: use
 
 blocks:
   - type: content
