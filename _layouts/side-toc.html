@@ -10,6 +10,12 @@
       {% assign last_type = "" %}
 
       {% for block in page.blocks %}
+        {% if block.name %}
+          {% assign content = block.name %}
+        {% elsif block.content %}
+          {% assign content = block.content %}
+        {% endif %}
+
         {% case block.type %}
 
         {% when 'main section' %}
@@ -18,10 +24,7 @@
           {% elsif last_type == 'main section' %}
             </li>
           {% endif %}
-
-          <li><a href="#{{block.content | slugify}}">{{block.content}}</a>
-          {% assign last_type = block.type %}
-
+          <li><a href="#{{content | slugify}}">{{content}}</a> {% assign last_type = block.type %}
         {% when 'secondary section' %}
           {% if last_type == 'main section' %}
             <ul>
@@ -30,9 +33,7 @@
           {% elsif last_type == 'content' %}
             </li></ul></li>
           {% endif %}
-          <li><a href="#{{block.content | slugify}}">{{block.content}}</a>
-          {% assign last_type = block.type %}
-
+          <li><a href="#{{content | slugify}}">{{content}}</a> {% assign last_type = block.type %}
         {% when 'content' %}
           {% if block.title %}
             {% if last_type == 'secondary section' %}
@@ -60,14 +61,18 @@
       <h1>{{page.title}}</h1>
 
       {% for block in page.blocks %}
+        {% if block.name %}
+          {% assign content = block.name %}
+        {% elsif block.content %}
+          {% assign content = block.content %}
+        {% endif %}
 
         {% case block.type %}
 
         {% when 'main section' %}
-        <h2 id="{{block.content | slugify}}">{{block.content}}</h2>
-
+        <h2 id="{{content | slugify}}">{{content}}</h2>
         {% when 'secondary section' %}
-        <h3 id="{{block.content | slugify}}">{{block.content}}</h3>
+        <h3 id="{{content | slugify}}">{{content}}</h3>
 
         {% when 'content' %}
         {% if block.title %}
@@ -83,6 +88,7 @@
           <h4 id="{{block.title | slugify}}">{{block.title}}</h4>
         {% endif %}
         {{block.text | markdownify}}
+        <div class="images">
         {% for attachment in block.contents %}
           {% case attachment.type %}
 
@@ -145,6 +151,7 @@
 
           {% endcase %}
         {% endfor %}
+        </div>
 
         {% endcase %}
 

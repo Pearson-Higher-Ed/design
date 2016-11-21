@@ -50,7 +50,6 @@
 
     .content {
       margin: 0 auto;
-      padding: 0 20px;
       max-width: 760px;
     }
 
@@ -73,6 +72,136 @@
     p + ul,
     p + ol {
       margin-top: 12px;
+    }
+
+    .images {
+      margin: 20px 0;
+      @include clearfix;
+
+      & > div {
+        float: left;
+      }
+    }
+
+    .caption {
+      margin-top: 6px;
+
+      p, ul, ol {
+        @include pe-label-small;
+      }
+    }
+
+    .image {
+      img {
+        width: 100%;
+        display: block;
+        background-color: pe-color(white);
+      }
+    }
+
+    .image.narrow {
+      max-width: 370px;
+    }
+
+    .image.wide {
+      max-width: 760px;
+    }
+
+    .image.ios {
+      max-width: 375px;
+    }
+
+    .image.android {
+      max-width: 360px;
+    }
+
+    .image.wide:nth-child(n+2),
+    .image.wide + .image.narrow,
+    .image.wide + .image.ios,
+    .image.wide + .image.android {
+      margin-top: 30px;
+    }
+
+    .image.narrow + .image.narrow {
+      margin-top: 30px;
+      @include pe-responsive-breakpoint(md) {
+        margin-left: 20px;
+      }
+    }
+
+    .image.ios + .image.ios {
+      margin-top: 30px;
+      @include pe-responsive-breakpoint(md) {
+        margin-left: 10px;
+      }
+    }
+
+    .image.android + .image.android {
+      margin-top: 30px;
+      @include pe-responsive-breakpoint(md) {
+        margin-left: 40px;
+      }
+    }
+
+    .image.narrow:first-child + .image.narrow,
+    .image.ios:first-child + .image.ios,
+    .image.android:first-child + .image.android {
+      @include pe-responsive-breakpoint(md) {
+        margin-top: 0;
+      }
+    }
+
+    .image.narrow + .image.narrow + .image.narrow,
+    .image.ios + .image.ios + .image.ios,
+    .image.android + .image.android + .image.android {
+      margin-left: 0;
+      margin-top: 30px;
+      clear:both;
+    }
+
+    .image.narrow + .image.narrow + .image.narrow + .image.narrow {
+      @include pe-responsive-breakpoint(md) {
+        margin-left: 20px;
+      }
+      clear: none;
+    }
+
+    .image.ios + .image.ios + .image.ios + .image.ios {
+      @include pe-responsive-breakpoint(md) {
+        margin-left: 10px;
+      }
+      clear: none;
+    }
+
+    .image.android + .image.android + .image.android + .image.android {
+      @include pe-responsive-breakpoint(md) {
+        margin-left: 40px;
+      }
+      clear: none;
+    }
+
+    .image.narrow + .image.narrow + .image.narrow + .image.narrow + .image.narrow,
+    .image.ios + .image.ios + .image.ios + .image.ios + .image.ios,
+    .image.android + .image.android + .image.android + .image.android + .image.android {
+      margin-left: 0;
+    }
+
+    .image.narrow + .image.narrow + .image.narrow + .image.narrow + .image.narrow + .image.narrow {
+      @include pe-responsive-breakpoint(md) {
+        margin-left: 20px;
+      }
+    }
+
+    .image.ios + .image.ios + .image.ios + .image.ios + .image.ios + .image.ios {
+      @include pe-responsive-breakpoint(md) {
+        margin-left: 10px;
+      }
+    }
+
+    .image.android + .image.android + .image.android + .image.android + .image.android + .image.android {
+      @include pe-responsive-breakpoint(md) {
+        margin-left: 40px;
+      }
     }
   }
 
