@@ -51,7 +51,7 @@ blocks:
     text: |
       **Normal** is the normal state of the form element.  
 
-      **Focus** is initiated when the user interacts with the field.  We currently allow the browser to provide default styling for focus states (except for the text input and textarea as browsers are inconsistent in their use of a focus state here).
+      **Focus** is initiated when the user interacts with the field.  
 
       **Disabled** state is a form input that is unavailable for interaction.
 
@@ -161,6 +161,11 @@ blocks:
 
       **Focused Error** appears when the user focuses an input with an error.
 
+      **Error with error text** Error text displayed when error occur
+
+      **Error with information text** Error text displayed below the existing information text
+
+
     contents:
       - type: wide image
         src: ./assets/Inputs_error.png
@@ -217,12 +222,12 @@ blocks:
       Normal
       : - 1px solid (#DB0020) border
         - Input text (#252525), 14pt normal
-        - Label (#DB0020),12pt normal
+        - Label (#6A7070),12pt normal
 
       Focus
       : - 4px solid (#DB0020) border
         - Input text (#252525), 14pt normal
-        - Label (#DB0020),12pt normal
+        - Label (#6A7070),12pt normal
 
     contents:
       - type: wide image
