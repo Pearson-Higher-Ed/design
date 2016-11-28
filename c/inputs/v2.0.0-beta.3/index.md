@@ -178,6 +178,16 @@ blocks:
         - type: narrow image
           src: ./assets/Inputs_info.png
 
+  - type: two column
+    text: |
+      ## Password Show//Hide##
+      Show/Hide options for password input
+      - Password input contains inline < a > element that controls whether a user's password is displayed or hidden.
+      - Link options are "Show" or "Hide"
+    contents:    
+        - type: narrow image
+          src: ./assets/inputs_password.png
+
   - type: section
     name: Redlines
 
@@ -187,23 +197,23 @@ blocks:
 
       Normal
       : - 1px solid (#6A7070) border
-        - Input text (#252525), 14pt normal
-        - Label (#6A7070),12pt normal
+        - Input text (#252525), 14px normal
+        - Label (#6A7070),12px normal
         - Hint text (#C7C7C7), 14pt normal
 
       Focus
       : - 4px solid (#047A9C) border
-        - Input text (#252525), 14pt normal
-        - Label (#047A9C),12pt normal
+        - Input text (#252525), 14px normal
+        - Label (#047A9C),12px normal
 
       Disable
       : - 1px solid (#C7C7C7) border
-        - Disable text (#C7C7C7), 14pt normal
+        - Disable text (#C7C7C7), 14px normal
 
       Readonly
       : - No border
-        - Read only text (#252525), 14pt normal
-        - Label (#6A7070),12pt normal
+        - Read only text (#252525), 14px normal
+        - Label (#6A7070),12px normal
 
     contents:
       - type: wide image
@@ -221,13 +231,13 @@ blocks:
 
       Normal
       : - 1px solid (#DB0020) border
-        - Input text (#252525), 14pt normal
-        - Label (#6A7070),12pt normal
+        - Input text (#252525), 14px normal
+        - Label (#6A7070),12px normal
 
       Focus
       : - 4px solid (#DB0020) border
-        - Input text (#252525), 14pt normal
-        - Label (#6A7070),12pt normal
+        - Input text (#252525), 14px normal
+        - Label (#6A7070),12px normal
 
     contents:
       - type: wide image
@@ -267,6 +277,14 @@ blocks:
     exports:
       - Checkbox
 
+  - type: two column
+    text: |
+      ### Password Show/Hide
+
+    contents:
+      - type: narrow image
+        src: ./assets/redline_input_password.png
+
   - type: style table
     styles:
       - Text Input
@@ -278,7 +296,7 @@ blocks:
       - Search Input
 
 changelog:
-  - version: 2.0.0-beta.2
+  - version: 2.0.0-beta.3
     changes: |
       Change design to align with new brand
   - version: 1.0.0-beta.7
