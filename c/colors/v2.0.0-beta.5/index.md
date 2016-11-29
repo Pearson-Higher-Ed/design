@@ -101,7 +101,7 @@ colors:
     a11y_complements:
       - Charcoal
   Sunflower Yellow:
-    hex: ffa519
+    hex: ff9a19
     uses: Hover state for Sunshine Yellow.
     a11y_complements:
       - Charcoal
@@ -224,6 +224,10 @@ blocks:
       - Digital Grass Green
 
 changelog:
+  - version: 2.0.0-beta.5
+    changes: |
+      - ADDED: Sunflower Yellow color to Secondary Palette
+      - ADDED: Alto color to Neutral Palette
   - version: 2.0.0-beta.4
     changes: |
       - CHANGED: Added new accessibility checklist.

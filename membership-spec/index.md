@@ -2,7 +2,7 @@
 layout: spec
 title: Library Membership Specification
 section: contribute
-version: 1.0.0
+version: 2.0.0
 order: 1
 intro: |
   Every component listed in the Component Library must satisfy all the requirements contained in this document. To learn about submitting components for inclusion see the [Component Creation Guide][creation-guide].
@@ -58,15 +58,14 @@ design_reqs:
           - Parker Malenke (UX Design)
 
       - req: |
-          C3: A component should reflect the current overall design aesthetic in use across the next gen products (e.g. Console, ILP, Pi, Exchange).
-        type: suggested
+          C3: A component must be reviewed by Meredith Williamson for visual consistency.
+        type: mandatory
         extras:
           - name: Note
             content: |
               This requirement will be updated in the near future to specify that components must align with the rebranded visual aesthetic (currently in progress). Rebranded components will also need to support the Pearson Brand Accessibility Guidelines.
         approvers:
-          - Ed Zee (UX Design)
-          - Parker Malenke (UX Design)
+          - Meredith Williamson (UX Design)
 
       - req: |
           C4: A component must be versioned according to the [Component Versioning Specification](/design/component-versioning).
@@ -194,6 +193,8 @@ design_reqs:
           - Chris Langston (Accessibility UX)
 
 changelog:
+  - version: 2.0.0
+    changes: Changed C3 visual design requirement
   - version: 1.0.0
     changes: Initial version
 
