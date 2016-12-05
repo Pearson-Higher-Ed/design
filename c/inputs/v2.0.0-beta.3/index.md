@@ -264,6 +264,9 @@ blocks:
     text: |
       ### Checkboxes
 
+      Check icon
+      : [check-sm-18](/design/c/icons/beta)
+
       Normal States
       : - border-radius: 2px
         - border: 1px solid
