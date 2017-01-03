@@ -31,7 +31,7 @@ Compounds SDK will include commonly used components that leverage javascript for
 
 [elements]: https://www.npmjs.com/package/pearson-elements
 [npm-org]: https://www.npmjs.com/~pearson-ux
-[ddocs]: https://pearson-elements-v0.surge.sh/getting-started/
+[ddocs]: https://pearson-elements-v1.surge.sh/getting-started/
 [ghub]: https://github.com/pearson-higher-ed/elements/
 
 ## Consuming
@@ -104,7 +104,7 @@ Development specific requirements will eventually be added to the [Library Membe
 [ghubreadme]: https://github.com/Pearson-Higher-Ed/elements#adding-icons
 [spec]: {{site.baseurl}}/membership-spec
 [oprinciples]: https://origami.pearsoned.com/docs/overview/principles/
-[eprinciples]: https://github.com/Pearson-Higher-Ed/elements/blob/v0/CONTRIBUTING.md
+[eprinciples]: https://github.com/Pearson-Higher-Ed/docs/blob/master/origami-contributions.md 
 
 ## Other Important Links
 
