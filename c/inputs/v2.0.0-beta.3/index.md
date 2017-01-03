@@ -196,24 +196,24 @@ blocks:
       ### Input States
 
       Normal
-      : - 1px solid (#6A7070) border
-        - Input text (#252525), 14px normal
-        - Label (#6A7070),12px normal
-        - Hint text (#C7C7C7), 14pt normal
+      : - border: 1px solid  (#6A7070) or [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray)
+        - Input text: 14px normal(#252525) or [Charcoal](/design/c/colors/v2.0.0-beta.5/#rd-charcoal)
+        - Label:12px normal (#6A7070) or [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray)
+        - Hint text: 14pt normal (#C7C7C7) or [Concrete](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
 
       Focus
-      : - 4px solid (#047A9C) border
-        - Input text (#252525), 14px normal
-        - Label (#047A9C),12px normal
+      : - border: 4px solid (#047A9C) or [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.5/#rd-digital-pearson-blue)
+        - Input text: 14px normal (#252525) or [Charcoal](/design/c/colors/v2.0.0-beta.5/#rd-charcoal)
+        - Label: 12px normal (#047A9C) or [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.5/#rd-digital-pearson-blue)
 
       Disable
-      : - 1px solid (#C7C7C7) border
-        - Disable text (#C7C7C7), 14px normal
+      : - border: 1px solid (#C7C7C7)
+        - Disable text: 14px normal (#C7C7C7) or [Concrete](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
 
       Readonly
-      : - No border
-        - Read only text (#252525), 14px normal
-        - Label (#6A7070),12px normal
+      : - border: no border
+        - Read only text: 14px normal, (#252525) or [Charcoal](/design/c/colors/v2.0.0-beta.5/#rd-charcoal)
+        - Label 12px normal, (#6A7070) or [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray)
 
     contents:
       - type: wide image
@@ -230,14 +230,14 @@ blocks:
       ### Input Error States
 
       Normal
-      : - 1px solid (#DB0020) border
-        - Input text (#252525), 14px normal
-        - Label (#6A7070),12px normal
+      : - border: 1px solid (#DB0020)
+        - Input text: 14px normal (#252525)
+        - Label: 12px normal (#6A7070)
 
       Focus
-      : - 4px solid (#DB0020) border
-        - Input text (#252525), 14px normal
-        - Label (#6A7070),12px normal
+      : - border: 4px solid (#DB0020)
+        - Input text: 14px normal (#252525)
+        - Label: 12px normal (#6A7070)
 
     contents:
       - type: wide image
@@ -264,15 +264,31 @@ blocks:
     text: |
       ### Checkboxes
 
-      Size
-      : - 18x18px
+      Check icon
+      : [check-sm-18](/design/c/icons/beta)
 
-      States
-      : - There is no error state for the radio button itself, you **must** use explanatory text
+      Normal States
+      : - border-radius: 2px
+        - border: 1px solid
+        - color: (#6a7070) or [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray)
+
+
+      Focus States
+      : - border-radius: 2px
+        - border: 1px solid
+        - color: (#047A9C) or [Digital Blue](/design/c/colors/v2.0.0-beta.5/#rd-digital-ice-blue)
+
+
+      Disable States
+      : - border-radius: 2px
+        - border: 1px solid
+        - color: (#c7c7c7) or [Concrete](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
+        - fill: (#E9E9E9) or [Moonlight](/design/c/colors/v2.0.0-beta.5/#rd-moonlight)
+
 
     contents:
       - type: narrow image
-        src: ./assets/redline_Input_checkbox.png
+        src: ./assets/redline_checkbox.png
 
     exports:
       - Checkbox
