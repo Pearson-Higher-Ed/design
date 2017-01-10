@@ -258,7 +258,7 @@ blocks:
 changelog:
   - version: 2.0.0-beta.1
     changes: |
-    - CHANGED: Change to new design
+      - CHANGED: Change to new design
   - version: 1.0.0-beta.6
     changes: |
       - ADDED: Sketch and Illustrator mockup files.
