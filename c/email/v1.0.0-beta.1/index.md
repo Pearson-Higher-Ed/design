@@ -39,7 +39,8 @@ blocks:
       * __Username/Password Reset__ provides the users with a link to reset credentials when they forgot them.
       * __Purchase Confirmation__ informs the users of a successful payment transaction other details.
       * __Confirmation for Product Return, Exchange, or Cancellation__
-      http://www.github.com/
+      * __test__
+      * __test2__
 
     contents:
       - type: wide image
