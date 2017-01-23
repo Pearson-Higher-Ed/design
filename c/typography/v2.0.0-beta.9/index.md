@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Typography
 section: Components
-version: 2.0.0-beta.8
-status: deprecated
+version: 2.0.0-beta.9
+status: active
 implemented: true
 people:
   - role: Product Owner
@@ -377,7 +377,7 @@ blocks:
 
       Large Font Size
       : - 16px font-size
-        - 22px line-height
+        - 24px line-height
 
       Color
       : - [Charcoal](/design/c/colors/v2.0.0-beta.4/#rd-charcoal)
@@ -580,6 +580,9 @@ blocks:
       - code, kbd tags
 
 changelog:
+  - version: 2.0.0-beta.9
+    changes: |
+      - FIXED: Line height error for large body copy
   - version: 2.0.0-beta.8
     changes: |
       - ADDED: Large Body style
