@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Inputs
 section: Components
-status: deprecated
-version: 2.0.0-beta.3
+status: active
+version: 2.0.0-beta.4
 private: true
 people:
   - role: Product Owner
@@ -312,6 +312,9 @@ blocks:
       - Search Input
 
 changelog:
+  - version: 2.0.0-beta.4
+    changes: |
+      - ADDED: Basic input style
   - version: 2.0.0-beta.3
     changes: |
       Change design to align with new brand
