@@ -45,13 +45,29 @@ downloads:
 blocks:
 
   - type: section
-    name: Inputs States
+    name: Input Types
 
   - type: two column
     text: |
-      **Normal** is the normal state of the form element.  
+      Inputs come in two styles, *Fancy* and *Basic*. Most situations should use the basic style, fancy inputs are reserved for high-touch pages where it's important to emphasize the Pearson brand (such as Sign In or Account Creation).
 
-      **Focus** is initiated when the user interacts with the field.  
+      Never mix the two styles on the same page.
+    contents:
+      - type: narrow image
+        src: ./assets/Inputs_text_fancy.png
+        caption: Text inputs in the fancy style.
+      - type: narrow image
+        src: ./assets/Inputs_text_basic.png
+        caption: Text inputs in the basic style.
+
+  - type: section
+    name: Input States
+
+  - type: two column
+    text: |
+      **Normal** is the normal state of the form element.
+
+      **Focus** is initiated when the user interacts with the field.
 
       **Disabled** state is a form input that is unavailable for interaction.
 
@@ -59,35 +75,56 @@ blocks:
 
     contents:
       - type: wide image
-        src: ./assets/Inputs_states.png       
-
-  - type: section
-    name: Inputs (single line)
+        src: ./assets/Inputs_states.png
 
   - type: two column
     text: |
-      An input is a field used to elicit a response from a user
+      **Error** is when the field's content has some sort of error.
 
-      **Hint text Usage** Hint text should be used as an aid to help guide users on the required format and content.
+      **Focused Error** is the focused version of the error state.
 
-      - Hint text disappear as soon as input become focus.
+      **Error with info text** is used when additional details about the error are necessary. Note that space for one line of explanation is built into the input so no shifting is necessary.
+    contents:
+      - type: wide image
+        src: ./assets/Inputs_error.png
+
+  - type: section
+    name: Single Line Text
+
+  - type: two column
+    text: |
+      Text inputs may contain placeholder text as an aid to help guide users on the required format and content.
 
     contents:
       - type: narrow image
-        src: ./assets/Input_animate.gif
-        caption: Example of standard inputs
-
-  - type: section
-    name: Inputs (multiple lines)
+        src: ./assets/Inputs_text_fancy.png
+        caption: Fancy single line text inputs.
+      - type: narrow image
+        src: ./assets/Inputs_text_basic.png
+        caption: Basic single line text inputs.
 
   - type: two column
     text: |
-      Multiple lines inputs are to be used for multiple lines of text.
-
-
+      The fancy input style has an animation on focus.
     contents:
-      - type: wide image
-        src: ./assets/Inputs_multiline.png
+      - type: narrow image
+        src: ./assets/Input_animate.gif
+
+  - type: section
+    name: Multiple Line Text
+
+  - type: two column
+    text: |
+      These inputs only come in the basic style (fancy inputs should not be used in forms that need to collect this much information).
+
+      These inputs may optionally be resized vertically to allow for variable amounts of input.
+    contents:
+      - type: narrow image
+        src: ./assets/Inputs_multiline_placeholder.png
+        caption: Multiple line input with a placeholder.
+      - type: narrow image
+        src: ./assets/Inputs_multiline_value.png
+        caption: Multiple line input with a value. Note this input has the handle for vertical resizing.
 
   - type: section
     name: Select
@@ -96,15 +133,18 @@ blocks:
     text: |
       The select input allows a user to choose one of many predetermined options.
 
-      - A default value can be set for the select element if it's recommended for most users.  Bear in mind that a user can easily overlook a preselected item, so use caution when doing so.
+      A default value can be set for the select element if it's recommended for most users.  Bear in mind that a user can easily overlook a preselected item, so use caution when doing so.
 
-      - The popup will follow the browser default style.
+      The popup will follow the browser default style.
 
 
     contents:
       - type: narrow image
-        src: ./assets/Inputs_select.png
-        caption: Closed and opened select.
+        src: ./assets/Inputs_select_fancy.png
+        caption: Closed and opened select in the fancy style.
+      - type: narrow image
+        src: ./assets/Inputs_select_basic.png
+        caption: Closed an open select in the basic style.
 
   - type: section
     name: Radio Buttons
@@ -113,9 +153,9 @@ blocks:
     text: |
       Radio buttons are for when the user must choose a single item out of several options.
 
-      - Choose radios over selects when you want the user to carefully consider the options and need to expose all available options.
+      Choose radios over selects when you want the user to carefully consider the options and need to expose all available options.
 
-      - If there are only two mutually exclusive options, consider using a single checkbox. For example, use a checkbox for "I agree" instead of two radio buttons for "I agree" and "I don't agree."
+      If there are only two mutually exclusive options, consider using a single checkbox. For example, use a checkbox for "I agree" instead of two radio buttons for "I agree" and "I don't agree."
 
     contents:
       - type: narrow image
@@ -129,9 +169,9 @@ blocks:
     text: |
       Checkboxes are for times when the user needs to make one or more binary choices about a related item.
 
-      - Unlike radio buttons, where a group of radio buttons represents a single choice, each check box in a group represents a separate, independent choice.
+      Unlike radio buttons, where a group of radio buttons represents a single choice, each check box in a group represents a separate, independent choice.
 
-      - When there is more than one option but only one can be selected, use a radio button instead.
+      When there is more than one option but only one can be selected, use a radio button instead.
 
     contents:
       - type: narrow image
@@ -140,53 +180,65 @@ blocks:
 
   - type: section
     name: Labels
+
   - type: two column
     text: |
+      Labels are always required in order to satisfy accessibility requirements.
+
       ### Required/Optional
       Use the label to indicate whether a given field is required or optional.
 
-      **Usage** Only label in the minority case (for example, if 6 fields are required and 2 are optional, only indicate the optional fields).
+      Only label in the minority case (for example, if 6 fields are required and 2 are optional, only indicate the optional fields).
     contents:
       - type: narrow image
         src: ./assets/Inputs_optional_1.png
-        caption: Required and Optional label
+        caption: Required and Optional labels.
       - type: narrow image
         src: ./assets/Inputs_optional_2.png
-        caption: Example using (optional)label in a form
+        caption: Example using (optional) label in a form.
+
+
+  - type: section
+    name: Information/Error Text
 
   - type: two column
     text: |
-      ## Error Inputs State##
-      **Error** is used when a field has been filled out incorrectly. This state should always be paired with an explanatory message.
-
-      **Focused Error** appears when the user focuses an input with an error.
-
-      **Error with error text** Error text displayed when error occur
-
-      **Error with information text** Error text displayed below the existing information text
-
-
+      Additional instructions or context for an input may appear below the field. Prefer this over placeholder text for any information that all users should be able to access.
     contents:
-      - type: wide image
-        src: ./assets/Inputs_error.png
+      - type: narrow image
+        src: ./assets/Inputs_info.png
+        caption: Info text for both fancy and basic styled inputs.
 
   - type: two column
     text: |
-      ## Information text##
-      Information/description text below the inputs.
-    contents:    
-        - type: narrow image
-          src: ./assets/Inputs_info.png
+      Any fields that have an error should explain the error with additional text below the field. In this case it is colored red and paired with an error state on the form.
+
+      If necessary, information and error text may appear simultaneously, with error text following the informational.
+    contents:
+      - type: narrow image
+        src: ./assets/Inputs_error_text.png
+        caption: Error text.
+      - type: narrow image
+        src: ./assets/Inputs_error_text_2.png
+        caption: Simultaneous display of info and error text.
+
+
+  - type: section
+    name: Specialized Inputs
 
   - type: two column
     text: |
-      ## Password Show//Hide##
-      Show/Hide options for password input
-      - Password input contains inline < a > element that controls whether a user's password is displayed or hidden.
-      - Link options are "Show" or "Hide"
-    contents:    
-        - type: narrow image
-          src: ./assets/inputs_password.png
+      ## Password
+      The password input includes a show/hide option to turn off obfuscation. The value is hidden by default but may be revealed in lower security settings to make it easier for a user to type the intended password.
+
+      Note the show/hide control is slightly different than the standard link style with the underline appearing on hover/focus. This is to mesh with the fancy form style better.
+    contents:
+      - type: narrow image
+        src: ./assets/inputs_password.png
+        caption: Show/Hide password feature in the fancy input style.
+      - type: narrow image
+        src: ./assets/inputs_password_2.png
+        caption: And in the basic input style.
 
   - type: section
     name: Redlines
