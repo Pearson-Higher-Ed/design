@@ -245,123 +245,244 @@ blocks:
 
   - type: two column
     text: |
-      ### Input States
-
-      Normal
-      : - border: 1px solid  (#6A7070) or [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray)
-        - Input text: 14px normal(#252525) or [Charcoal](/design/c/colors/v2.0.0-beta.5/#rd-charcoal)
-        - Label:12px normal (#6A7070) or [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray)
-        - Hint text: 14pt normal (#C7C7C7) or [Concrete](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
-
-      Focus
-      : - border: 4px solid (#047A9C) or [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.5/#rd-digital-pearson-blue)
-        - Input text: 14px normal (#252525) or [Charcoal](/design/c/colors/v2.0.0-beta.5/#rd-charcoal)
-        - Label: 12px normal (#047A9C) or [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.5/#rd-digital-pearson-blue)
-
-      Disable
-      : - border: 1px solid (#C7C7C7)
-        - Disable text: 14px normal (#C7C7C7) or [Concrete](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
-
-      Readonly
-      : - border: no border
-        - Read only text: 14px normal, (#252525) or [Charcoal](/design/c/colors/v2.0.0-beta.5/#rd-charcoal)
-        - Label 12px normal, (#6A7070) or [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray)
-
-    contents:
-      - type: wide image
-        src: ./assets/redline_input_states.png
-      - type: narrow image
-        src: ./assets/redline_input.png
-        caption: Regular Inputs field
-      - type: narrow image
-        src: ./assets/redline_input_nolabel.png
-        caption: Input with no label
+      ### Single Line Text
 
   - type: two column
     text: |
-      ### Input Error States
+      #### Basic Style
 
-      Normal
-      : - border: 1px solid (#DB0020)
-        - Input text: 14px normal (#252525)
-        - Label: 12px normal (#6A7070)
+      Dimensions
+      : - 36px tall
+        - 3px border radius
+
+      Spacing
+      : - 14px horizontal padding
+        - 6px vertical space between field and label
+
+      Active
+      : - 1px solid [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete) border
+        - [White (#ffffff)](/design/c/colors/v2.0.0-beta.5/#rd-white) background
+        - [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic) ([Charcoal](/design/c/colors/v2.0.0-beta.5/#rd-charcoal)) for the value
+        - [Small UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-small) in [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray) for the label
+        - Place holders are [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic), [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
 
       Focus
-      : - border: 4px solid (#DB0020)
-        - Input text: 14px normal (#252525)
-        - Label: 12px normal (#6A7070)
+      : - Label is [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue)
+        - Border is 1px solid [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue)
+        - [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue) shadow with 5px blur
+
+      Disabled
+      : - Value is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
+        - Fill color is [Moonlight (#e9e9e9)](/design/c/colors/v2.0.0-beta.5/#rd-moonlight)
+
+      Error
+      : - Label is [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
+        - Border is 1px solid [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
+        - Error text is [Small UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-small) in [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
+        - Error text is 3px below the field
+
+      Focused Error
+      : - [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red) shadow with 4px blur
+
+      Readonly
+      : - No input box
+        - [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic) in [Charcoal](/design/c/colors/v2.0.0-beta.5/#rd-charcoal)
+        - 8px below label
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.text.basic.1.png
+      - type: narrow image
+        src: ./assets/redlines.text.basic.2.png
+
+  - type: two column
+    text: |
+      #### Fancy Style
+
+      Spacing
+      : - Label is 8px above value
+        - Value is 10px above underline in most cases
+        - Value is 7px above underline when focused or disabled
+
+      Typography
+      : - Label is [Small UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-small)
+        - Value and placeholder text is [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic)
+        - Error text is [Small UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-small)
+
+      Active
+      : - Label is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
+        - Value is [Charcoal](/design/c/colors/v2.0.0-beta.5/#rd-charcoal)
+        - Placeholder text is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
+        - Underline is 1px solid [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
+
+      Focus
+      : - Label is [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue)
+        - Underline is 4px solid [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue)
+        - The underline should animate out from the center of the input once the user clicks into the field
+
+      Readonly
+      : - No underline or other decoration
+        - Value is 8px below the label
+
+      Disabled
+      : - Value is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
+        - Underline is 4px solid [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
+
+      Error
+      : - Label and error text are [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
+        - Error text is 3px below the underline
+        - Underline is 1px solid [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
+
+      Focused Error
+      : - Underline is 4px solid [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
+        - Underline is 7px below value
 
     contents:
-      - type: wide image
-        src: ./assets/redline_input_error.png
+      - type: narrow image
+        src: ./assets/redlines.text.fancy.1.png
+      - type: narrow image
+        src: ./assets/redlines.text.fancy.2.png
+
+
+  - type: two column
+    text: |
+      ### Multiple Line Text
+
+      Spacing
+      : - Label is 6px above input
+        - Value has 14px horizontal padding, 9px vertical padding
+
+      Typography
+      : - Label is [Small UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-small)
+        - Value and placeholder text is [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic)
+
+      States
+      : - Follow the styles defined for the Basic Single Line input for each state
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.text.multiple.png
+
+  - type: two column
+    text: |
+      ### Select Inputs
+
+  - type: two column
+    text: |
+      #### Basic Style
+
+      Dimensions and Spacing
+      : - Select box is 36px tall
+        - Label is 6px above input
+        - 14px of horizontal padding
+
+      Typography
+      : - Label is [Small UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-small)
+        - Value is [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic)
+
+      Behavior
+      : - Activating the select should use the default browser popup
+
+      States
+      : - Follow the styles defined for the Basic Single Line input for each state
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.select.basic.png
+
+  - type: two column
+    text: |
+      #### Fancy Style
+
+      Spacing
+      : - Label is 8px above value
+        - Value is generally 10px above the underline
+
+      Icons
+      : - Dropdown icon is the dropdown-open-18 icon
+
+      Typography
+      : - Label is [Small UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-small)
+        - Value and placeholder text is [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic)
+
+      Behavior
+      : - Activating the select should use the default browser popup
+
+      States
+      : - Follow the styles defined for the Fancy Single Line input for each state
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.select.fancy.png
 
   - type: two column
     text: |
       ### Radio Buttons
 
-      Size
-      : - 18x18px
+      Spacing
+      : - Option value 10px right of the radio icon
+        - Multiple options are separated by 14px of vertical space
+
+      Typography
+      : - Option value is [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic)
+
+      Icons
+      : - Unselected radios use the radio-button-off-18 icon
+        - Selected radios use the radio-button-on-18 icon
 
       States
-      : - There is no error state for the radio button itself, you **must** use explanatory text
+      : - Radio border is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete) in most cases
+        - Selected radios have an inner circle filled with [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray) in most cases
+        - Focused radios use [Digital Pearson Blue (#047A9C)](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue) borders
+        - Disabled radios use a [Moonlight (#e9e9e9)](/design/c/colors/v2.0.0-beta.5/#rd-moonlight) fill color
+        - Disabled but selected radios have an inner circle filled with [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
 
     contents:
       - type: narrow image
-        src: ./assets/redline_Input_radiobutton.png
-
-    exports:
-      - Radio Button
+        src: ./assets/redlines.radiobuttons.png
 
   - type: two column
     text: |
       ### Checkboxes
 
-      Check icon
-      : [check-sm-18](/design/c/icons/beta)
+      Spacing
+      : - Option value 10px right of the checkbox icon
+        - Multiple options are separated by 14px of vertical space
 
-      Normal States
-      : - border-radius: 2px
-        - border: 1px solid
-        - color: (#6a7070) or [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray)
+      Typography
+      : - Option value is [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic)
 
+      Icons
+      : - Unselected checkboxes use the checkbox-off-18 icon
+        - Selected checkboxes use the checkbox-on-18 icon
 
-      Focus States
-      : - border-radius: 2px
-        - border: 1px solid
-        - color: (#047A9C) or [Digital Blue](/design/c/colors/v2.0.0-beta.5/#rd-digital-ice-blue)
-
-
-      Disable States
-      : - border-radius: 2px
-        - border: 1px solid
-        - color: (#c7c7c7) or [Concrete](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
-        - fill: (#E9E9E9) or [Moonlight](/design/c/colors/v2.0.0-beta.5/#rd-moonlight)
-
-
+      States
+      : - Box border is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete) in most cases
+        - Selected checkboxes have a [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray) check mark in most cases
+        - Focused checkboxes use [Digital Pearson Blue (#047A9C)](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue) borders
+        - Disabled checkboxes use a [Moonlight (#e9e9e9)](/design/c/colors/v2.0.0-beta.5/#rd-moonlight) fill color
+        - Disabled but selected checkboxes have a [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete) check mark
     contents:
       - type: narrow image
-        src: ./assets/redline_checkbox.png
+        src: ./assets/redlines.checkboxes.png
 
     exports:
       - Checkbox
 
   - type: two column
     text: |
-      ### Password Show/Hide
+      ### Password Input
+
+      Spacing
+      : - Show/hide link is 10px above the underline in the fancy style
+        - Link is 14px from the right edge in the basic style
+
+      Typography
+      : - Link is [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic) in [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue)
+
+      Focus
+      : - Hovering or focusing the link changes it to [Ink Blue](/design/c/colors/v2.0.0-beta.5/#rd-ink-blue) and adds an underline
+        - Any browser default focus indicator is also preserved
 
     contents:
       - type: narrow image
-        src: ./assets/redline_input_password.png
-
-  - type: style table
-    styles:
-      - Text Input
-      - Textarea
-      - Select Input
-      - Radio Button
-      - Checkbox
-      - Label
-      - Search Input
+        src: ./assets/redlines.password.showhide.png
 
 changelog:
   - version: 2.0.0-beta.4
