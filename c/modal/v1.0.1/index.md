@@ -6,7 +6,6 @@ redirect_from: /docs/ui-components/modal/
 version: 1.0.1
 status: active
 implemented: false
-private: true
 people:
   - role: Product Owner
     name: Joe Macaluso

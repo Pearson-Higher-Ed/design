@@ -46,6 +46,13 @@
     {% include component-details.html beta="true" %}
 
     <script>
+
+      var img = document.querySelectorAll("img:not([src*='{{page.version}}'])")
+      for (var i = 0; i < img.length; i++) {
+        var newSrc = img.item(i).src.replace(/beta\/assets\//, 'v{{page.version}}/assets/')
+        img.item(i).src = newSrc;
+      }
+
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

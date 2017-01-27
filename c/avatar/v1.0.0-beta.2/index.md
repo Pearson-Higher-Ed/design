@@ -4,7 +4,7 @@ title: Avatar
 section: Components
 redirect_from: /docs/ui-components/avatar/
 version: 1.0.0-beta.2
-status: active
+status: deprecated
 implemented: false
 private: true
 people:

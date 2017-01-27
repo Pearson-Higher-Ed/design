@@ -23,7 +23,7 @@
   <div class="blocks">
     <div class="block article_header">
       <h1 class="pe-title pe-title--extra-large">{{page.title}}</h1>
-      <p class="pe-label pe-label--large">Version {{page.version}} &bull; <span class="status">{{page.status | capitalize}}</span> &bull; <span><a href="{% if page.implementation %}{{page.implementation}}{% else %}/design/design-only/{% endif %}">Dev Docs</a></span></p>
+      <p class="pe-label pe-label--large">Version {{page.version}} &bull; <span class="status">{{page.status | capitalize}}</span>{% if page.implementation %} &bull; <span><a href="{{page.implementation}}">Dev Docs</a></span>{% endif %}</p>
     </div>
 
     <div class="block overview">
@@ -131,6 +131,22 @@
 
           {% when 'narrow image' %}
           <div class="image narrow">
+            <div class="media">
+              <img src="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{item.src}}" />
+            </div>
+            {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
+          </div>
+
+          {% when 'ios image' or 'ios_image' or 'iOS image' or 'iOS_image' %}
+          <div class="image ios">
+            <div class="media">
+              <img src="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{item.src}}" />
+            </div>
+            {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
+          </div>
+
+          {% when 'android image' or 'android_image' %}
+          <div class="image android">
             <div class="media">
               <img src="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{item.src}}" />
             </div>

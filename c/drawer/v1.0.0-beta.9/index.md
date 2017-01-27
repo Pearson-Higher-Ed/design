@@ -46,7 +46,6 @@ blocks:
       - The drawer is a convenient way of showing secondary page content . Providing more page real estate for the main content.
 
       - The UI contained within a drawer may provide a convenient means of updating the content of the parent page. For example, the options (sun roof, fog lights, heated seats) chosen from a drawer updates the configuration and price of a car displayed on the parent page.
-
   
   - type: section
     name: Showing/Hiding
