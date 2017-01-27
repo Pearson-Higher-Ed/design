@@ -3,8 +3,8 @@ layout: component-yaml
 title: Application Header
 section: Components
 redirect_from: /docs/ui-components/application-header/
-version: 1.2.0-beta.1
-status: deprecated
+version: 2.0.0-beta.1
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -377,6 +377,9 @@ blocks:
 
 
 changelog:
+  - version: 2.0.0-beta.1
+    changes: |
+      - CHANGED: Adopt rebrand style
   - version: 1.2.0-beta.1
     changes: |
       - ADDED: Enterprise admin login link.
