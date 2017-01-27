@@ -15,6 +15,11 @@ implementation: https://pearson-elements-v0.surge.sh/elements/icons/
 downloads:
   - name: Pearson-icons-1.1.sketch
     link: ./assets/Pearson_icons_1.1.sketch
+  - name: UXD Accessibility Checklist
+    link: https://docs.google.com/a/pearson.com/document/d/15RLoDS-Qlu_Qz1W8UNuiHu3OtdNZ8kzKm_7jecoP5So/edit?usp=sharing
+dependencies:
+  - name: Colors
+    version: 2.0.0
 
 tagline: |
   This component provides a standard set of UI icons across Pearson applications.
@@ -32,7 +37,7 @@ blocks:
 
   - type: two column
     text: |
-      Pearson icons are available in two sizes, **18 x 18 and 24 x 24 pixels**. You can incorporate them into your design by downloading the Pearson-icons.sketch file, located above.
+      Pearson icons are available in two sizes, **18 x 18** and **24 x 24 pixels**. You can incorporate them into your design by downloading the Pearson-icons.sketch file, located above.
 
       ### Web App Development
       You do not need to provide SVG or backup PNG, simply note the class name from the icons list or within the Pearson-icons.sketch file. If you wish to modify the icons, follow the guidelines below for colors, naming, and scaling.
@@ -53,6 +58,10 @@ blocks:
             | ![](./assets/icons24/camera-video-24-2x.png) | camera-video-18 | camera-video-24 |
             | ![](./assets/icons24/check-lg-24-2x.png) | check-lg-18 | check-lg-24 |
             | ![](./assets/icons24/check-sm-24-2x.png) | check-sm-18 | check-sm-24 |
+            | ![](./assets/icons24/chevron-back-24-2x.png) | chevron-back-18 | chevron-back-24 |
+            | ![](./assets/icons24/chevron-next-24-2x.png) | chevron-next-18 | chevron-next-24 |
+            | ![](./assets/icons24/point-back-24-2x.png) | point-back-18 | point-back-24 |
+            | ![](./assets/icons24/point-next-24-2x.png) | point-next-18 | point-next-24 |
             | ![](./assets/icons24/clock-24-2x.png) | clock-18 | clock-24 |
             | ![](./assets/icons24/delete-24-2x.png) | delete-18 | delete-24 |
             | ![](./assets/icons24/desktop-24-2x.png) | desktop-18 | desktop-24 |
@@ -69,8 +78,6 @@ blocks:
             | ![](./assets/icons24/info-fill-24-2x.png) | info-fill-18 | info-fill-24 |
             | ![](./assets/icons24/info-outline-24-2x.png) | info-outline-18 | info-outline-24 |
             | ![](./assets/icons24/note-24-2x.png) | note-18 | note-24 |
-            | ![](./assets/icons24/point-back-24-2x.png) | point-back-18 | point-back-24 |
-            | ![](./assets/icons24/point-next-24-2x.png) | point-next-18 | point-next-24 |
             | ![](./assets/icons24/remove-lg-24-2x.png) | remove-lg-18 | remove-lg-24 |
             | ![](./assets/icons24/remove-sm-24-2x.png) | remove-sm-18 | remove-sm-24 |
             | ![](./assets/icons24/search-lg-24-2x.png) | search-lg-18 | search-lg-24 |
@@ -94,8 +101,6 @@ blocks:
             | ![](./assets/icons24/checkbox-off-24-2x.png) | checkbox-off-18 | checkbox-off-24 |
             | ![](./assets/icons24/checkbox-on-24-2x.png) | checkbox-on-18 | checkbox-on-24 |
             | ![](./assets/icons24/checkbox-tristate-24-2x.png) | checkbox-tristate-18 | checkbox-tristate-24 |
-            | ![](./assets/icons24/chevron-back-24-2x.png) | chevron-back-18 | chevron-back-24 |
-            | ![](./assets/icons24/chevron-next-24-2x.png) | chevron-next-18 | chevron-next-24 |
             | ![](./assets/icons24/dropdown-close-24-2x.png) | dropdown-close-18 | dropdown-close-24 |
             | ![](./assets/icons24/dropdown-open-24-2x.png) | dropdown-open-18 | dropdown-open-24 |
             | ![](./assets/icons24/favorite-off-24-2x.png) | favorite-off-18 | favorite-off-24 |
@@ -177,7 +182,7 @@ blocks:
 
   - type: two column
     text: |
-      You can scale the icons up by **2x, 3x, 4x, and 5x**. However, scaling them down or any .5x variation, the lines and shapes will become blurry.
+      You can scale the icons up by **2x, 3x, 4x,** and **5x**. However, scaling them down or any .5x variation, the lines and shapes will become blurry.
 
     contents:
         - type: wide image
@@ -190,7 +195,7 @@ changelog:
     changes: |
       - ADDED: checkbox tri-state, dropdown, font settings, list, lock, note, pivots, pointers, tip, and zooms.
       - ADDED: class names for white and blue icons.
-      - TWEAKED: Icon lines are bolder and consistent across 18px and 24px.
+      - TWEAKED: bolder line-weight for 18px and 24px.
       - REMOVED: newspaper, pin, and suitcase.
   - version: 2.0.0-beta.1
     changes: |
@@ -205,5 +210,4 @@ changelog:
   - version: 1.0.0
     changes: |
       Initial release
-
 ---

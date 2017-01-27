@@ -23,7 +23,7 @@
   <div class="blocks">
     <div class="block article_header">
       <h1 class="pe-title pe-title--extra-large">{{page.title}}</h1>
-      <p class="pe-label pe-label--large">Version {{page.version}} &bull; <span class="status">{{page.status | capitalize}}</span> &bull; <span><a href="{% if page.implementation %}{{page.implementation}}{% else %}/design/design-only/{% endif %}">Dev Docs</a></span></p>
+      <p class="pe-label pe-label--large">Version {{page.version}} &bull; <span class="status">{{page.status | capitalize}}</span>{% if page.implementation %} &bull; <span><a href="{{page.implementation}}">Dev Docs</a></span>{% endif %}</p>
     </div>
 
     <div class="block overview">
@@ -137,6 +137,22 @@
             {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
           </div>
 
+          {% when 'ios image' or 'ios_image' or 'iOS image' or 'iOS_image' %}
+          <div class="image ios">
+            <div class="media">
+              <img src="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{item.src}}" />
+            </div>
+            {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
+          </div>
+
+          {% when 'android image' or 'android_image' %}
+          <div class="image android">
+            <div class="media">
+              <img src="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{item.src}}" />
+            </div>
+            {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
+          </div>
+
           {% when 'wide video' %}
           <div class="image wide">
             <div class="media">
@@ -162,16 +178,72 @@
           {% when 'text' %}
           <div class="text-content pe-copy">{{item.content | markdownify}}</div>
 
+          {% when 'colors' %}
+          <div class="colors">
+            {% for color in item.colors %}
+              {% assign color_data = page.colors[color] %}
+              <div class="color" data-state="open" data-border="{% if color_data.use_border %}true{% else %}false{% endif %}">
+                <div class="bar {% if color_data.use_border %}border{% endif %}" style="background-color: #{{color_data.hex}};">
+                  <div class="name {% if color_data.use_border %}border{% endif %}" style="transform: translateY(70px);">
+                    <p>{{color}}</p>
+                    <p>#{{color_data.hex}}</p>
+                  </div>
+                </div>
+                <div class="details">
+                  <h5>Primary Uses</h5>
+                  <div class="uses">{% if color_data.uses %}{{color_data.uses | markdownify}}{% endif %}</div>
+
+                  <h5>A11y Complements</h5>
+                  <div class="complements">
+                    {% for complement in color_data.a11y_complements %}
+                      {% assign comp_data = page.colors[complement] %}
+                      <div class="complement">
+                        <div class="complement_swatch {% if comp_data.use_border %}border{% endif %}" style="background-color: #{{comp_data.hex}}"></div>
+                        <p>{{complement}}</p>
+                      </div>
+                    {% else %}
+                      <div class="complement"><p>No complements meet accessibility requirements</p></div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+
           {% endcase %}
         {% endfor %}
       </div>
 
-
       {% when 'palette' %}
+      <div class="swatches">
+        <h3>Foreground</h3>
+        <table>
+          {% for color in block.foreground %}
+            <tr>
+              <td>{{color.name}}</td>
+              <td>#{{color.hex}}</td>
+              <td><div style="width: 100%; min-width: 100px; height: 40px; background-color: #{{color.hex}}"></div></td>
+            </tr>
+          {% endfor %}
+        </table>
+      </div>
+      <div class="swatches">
+        <h3>Background</h3>
+        <table>
+          {% for color in block.background %}
+            <tr>
+              <td>{{color.name}}</td>
+              <td>#{{color.hex}}</td>
+              <td><div style="width: 100%; min-width: 100px; height: 40px; background-color: #{{color.hex}}"></div></td>
+            </tr>
+          {% endfor %}
+        </table>
+      </div>
+      {% if block.accents %}
         <div class="swatches">
-          <h3>Foreground</h3>
+          <h3>Accents</h3>
           <table>
-            {% for color in block.foreground %}
+            {% for color in block.accents %}
               <tr>
                 <td>{{color.name}}</td>
                 <td>#{{color.hex}}</td>
@@ -180,32 +252,7 @@
             {% endfor %}
           </table>
         </div>
-        <div class="swatches">
-          <h3>Background</h3>
-          <table>
-            {% for color in block.background %}
-              <tr>
-                <td>{{color.name}}</td>
-                <td>#{{color.hex}}</td>
-                <td><div style="width: 100%; min-width: 100px; height: 40px; background-color: #{{color.hex}}"></div></td>
-              </tr>
-            {% endfor %}
-          </table>
-        </div>
-        {% if block.accents %}
-          <div class="swatches">
-            <h3>Accents</h3>
-            <table>
-              {% for color in block.accents %}
-                <tr>
-                  <td>{{color.name}}</td>
-                  <td>#{{color.hex}}</td>
-                  <td><div style="width: 100%; min-width: 100px; height: 40px; background-color: #{{color.hex}}"></div></td>
-                </tr>
-              {% endfor %}
-            </table>
-          </div>
-        {% endif %}
+      {% endif %}
 
 
 
@@ -245,3 +292,77 @@
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function(e){
+
+    var toggleColor = function(div) {
+      var name = div.children.item(0).children.item(0);
+      var bar = div.children.item(0);
+      var details = div.children.item(1);
+      var state = div.dataset.state;
+      var border = div.dataset.border === 'true';
+
+      if (state === 'closed') {
+        Velocity(details, {marginTop: 0}, [200, 25]);
+        Velocity(name, {translateY: 70}, {
+          easing: [250, 30],
+          begin: function() {
+            if (border) {
+              Velocity(name, {borderLeftColorAlpha: 0}, {duration: 50, queue: false});
+            }
+          },
+          complete: function() {
+            if (border) {
+              Velocity(name, {
+                borderTopColor: "#d0d0d0",
+                borderTopColorAlpha: 1
+              }, {duration: 50, queue: false});
+              Velocity(bar, {
+                borderBottomColor: "#d0d0d0",
+                borderBottomColorAlpha: 1
+              }, {duration: 50, queue: false});
+            }
+          }
+        });
+        div.dataset.state = 'open';
+      } else {
+        Velocity(details, {marginTop: '-='+details.clientHeight}, [200, 25]);
+        Velocity(name, {translateY: [0, 70]}, {
+          easing: [250, 30],
+          begin: function(){
+            if (border) {
+              Velocity(bar, {borderBottomColorAlpha: 0}, {duration: 50, queue: false});
+              Velocity(name, {borderTopColorAlpha: 0}, {duration: 50, queue: false});
+            }
+          },
+          complete: function() {
+            if (border) {
+              Velocity(name, {
+                borderLeftColor: "#d0d0d0",
+                borderLeftColorAlpha: 1
+              }, {duration: 50, queue: false});
+            }
+          }
+        });
+
+        div.dataset.state = 'closed';
+      }
+    };
+
+    var colors = document.querySelectorAll('.color');
+    for (var i = 0; i < colors.length; i++) {
+      colors[i].addEventListener('click', function(e) {
+
+        var open = document.querySelectorAll('[data-state="open"]');
+        for (var i = 0; i < open.length; i++) {
+          if (open[i] !== e.currentTarget) toggleColor(open[i]);
+        }
+
+        toggleColor(e.currentTarget);
+      });
+      toggleColor(colors[i]);
+    }
+
+  });
+</script>

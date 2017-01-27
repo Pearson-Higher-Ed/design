@@ -1,0 +1,208 @@
+.side-toc {
+  position: relative;
+  z-index: -20;
+
+  .sidebar {
+    width: 360px;
+    padding: 60px;
+    padding-top: 120px;
+    border-right: 1px solid black;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    box-sizing: border-box;
+
+    a {
+      color: pe-color(pitch);
+      text-decoration: none;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    > ul > li {
+      font-weight: bold;
+      margin-bottom: 20px;
+
+      > ul > li {
+        font-weight: normal;
+        margin-top: 6px;
+
+        > ul {
+          margin-left: 10px;
+
+          > li {
+            margin-top: 6px;
+          }
+        }
+      }
+    }
+  }
+
+  .main-content {
+    margin-left: 360px;
+    margin-top: 26px;
+
+    .content {
+      margin: 0 auto;
+      max-width: 760px;
+    }
+
+    h1 { @include hl1; }
+    h2 { @include hl2; }
+    h3 { @include hl3; }
+    h4 { @include hl4; }
+    p, ul, ol { @include pe-copy; }
+    p {
+      margin: 0;
+      & + p {
+        margin-top: 12px;
+      }
+    }
+    ul { @include pe-ulist; }
+    ol { @include pe-olist; }
+
+    ul + p,
+    ol + p,
+    p + ul,
+    p + ol {
+      margin-top: 12px;
+    }
+
+    .images {
+      margin: 20px 0;
+      @include clearfix;
+
+      & > div {
+        float: left;
+      }
+    }
+
+    .caption {
+      margin-top: 6px;
+
+      p, ul, ol {
+        @include pe-label-small;
+      }
+    }
+
+    .image {
+      img {
+        width: 100%;
+        display: block;
+        background-color: pe-color(white);
+      }
+    }
+
+    .image.narrow {
+      max-width: 370px;
+    }
+
+    .image.wide {
+      max-width: 760px;
+    }
+
+    .image.ios {
+      max-width: 375px;
+    }
+
+    .image.android {
+      max-width: 360px;
+    }
+
+    .image.wide:nth-child(n+2),
+    .image.wide + .image.narrow,
+    .image.wide + .image.ios,
+    .image.wide + .image.android {
+      margin-top: 30px;
+    }
+
+    .image.narrow + .image.narrow {
+      margin-top: 30px;
+      @include pe-responsive-breakpoint(md) {
+        margin-left: 20px;
+      }
+    }
+
+    .image.ios + .image.ios {
+      margin-top: 30px;
+      @include pe-responsive-breakpoint(md) {
+        margin-left: 10px;
+      }
+    }
+
+    .image.android + .image.android {
+      margin-top: 30px;
+      @include pe-responsive-breakpoint(md) {
+        margin-left: 40px;
+      }
+    }
+
+    .image.narrow:first-child + .image.narrow,
+    .image.ios:first-child + .image.ios,
+    .image.android:first-child + .image.android {
+      @include pe-responsive-breakpoint(md) {
+        margin-top: 0;
+      }
+    }
+
+    .image.narrow + .image.narrow + .image.narrow,
+    .image.ios + .image.ios + .image.ios,
+    .image.android + .image.android + .image.android {
+      margin-left: 0;
+      margin-top: 30px;
+      clear:both;
+    }
+
+    .image.narrow + .image.narrow + .image.narrow + .image.narrow {
+      @include pe-responsive-breakpoint(md) {
+        margin-left: 20px;
+      }
+      clear: none;
+    }
+
+    .image.ios + .image.ios + .image.ios + .image.ios {
+      @include pe-responsive-breakpoint(md) {
+        margin-left: 10px;
+      }
+      clear: none;
+    }
+
+    .image.android + .image.android + .image.android + .image.android {
+      @include pe-responsive-breakpoint(md) {
+        margin-left: 40px;
+      }
+      clear: none;
+    }
+
+    .image.narrow + .image.narrow + .image.narrow + .image.narrow + .image.narrow,
+    .image.ios + .image.ios + .image.ios + .image.ios + .image.ios,
+    .image.android + .image.android + .image.android + .image.android + .image.android {
+      margin-left: 0;
+    }
+
+    .image.narrow + .image.narrow + .image.narrow + .image.narrow + .image.narrow + .image.narrow {
+      @include pe-responsive-breakpoint(md) {
+        margin-left: 20px;
+      }
+    }
+
+    .image.ios + .image.ios + .image.ios + .image.ios + .image.ios + .image.ios {
+      @include pe-responsive-breakpoint(md) {
+        margin-left: 10px;
+      }
+    }
+
+    .image.android + .image.android + .image.android + .image.android + .image.android + .image.android {
+      @include pe-responsive-breakpoint(md) {
+        margin-left: 40px;
+      }
+    }
+  }
+
+}
