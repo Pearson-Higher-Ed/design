@@ -5,22 +5,24 @@ document.body.style.cursor = "auto"
 sk = Framer.Importer.load("imported/framer@2x")
 Framer.Device.contentScale = 0.5
 
-header  = sk.header
-drawer  = sk.drawer
-help    = sk.help
-close   = sk.close
-article = sk.article
-tl      = sk.top_level
-tlc     = sk.tlcontent
-sl      = sk.second_level
-slc     = sk.slcontent
-back    = sk.back
-tltitle = sk.tltitle
+header  = sk.header1
+drawer  = sk.drawer1
+help    = sk.help1
+close   = sk.close1
+article = sk.article1
+tl      = sk.top_level1
+tlc     = sk.tlcontent1
+sl      = sk.second_level1
+slc     = sk.slcontent1
+back    = sk.back1
+tltitle = sk.tltitle1
 
 help.style.cursor = 'pointer'
 close.style.cursor = 'pointer'
 article.style.cursor = 'pointer'
 back.style.cursor = 'pointer'
+
+header.bringToFront()
 
 drawer.states.remove 'default'
 drawer.states.add

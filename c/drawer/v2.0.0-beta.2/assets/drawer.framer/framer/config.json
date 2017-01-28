@@ -9,7 +9,7 @@
   "selectedHand" : "",
   "updateDelay" : 0.3,
   "deviceScale" : 1,
-  "codeFolds" : [
+  "foldedCodeRanges" : [
 
   ],
   "orientation" : 0

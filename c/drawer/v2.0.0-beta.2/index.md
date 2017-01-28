@@ -3,7 +3,7 @@ layout: component-yaml
 title: Drawer
 section: Components
 version: 2.0.0-beta.2
-status: deprecated
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -21,11 +21,11 @@ downloads:
     link: ./assets/drawer.mockup.ai
 dependencies:
   - name: Typography
-    version: 1.0.0
+    version: 2.0.0-beta.9
   - name: Icons
-    version: 1.0.0
+    version: 2.0.0-beta.3
   - name: Colors
-    version: 1.0.1
+    version: 2.0.0-beta.4
   - name: Breakpoints
     version: 1.0.0
 tagline: |
@@ -48,7 +48,7 @@ blocks:
       A drawer can be dismissed by clicking the included 'x' icon, by selecting the trigger element again, or by hitting the escape key.
     contents:
       - type: wide video
-        src: ./assets/show.hide.mov
+        src: ./assets/show.hide.mp4
 
   - type: section
     name: Basic View
@@ -80,7 +80,7 @@ blocks:
       Displaying the second level uses an animation to provide context.
     contents:
       - type: wide video
-        src: ./assets/second.level.mov
+        src: ./assets/second.level.mp4
 
   - type: section
     name: Responsive Behavior
@@ -113,7 +113,7 @@ blocks:
       : - Title is a [Basic section heading](/design/c/typography/v2.0.0-beta.9/#rd-ui-headings-section-basic)
 
       Icons
-      : - Close icon is "[Pearson Icon (remove-sm-24)]"
+      : - Close icon is remove-sm-24
         - A focused icon will use the standard browser outline for focus
 
       Shadow
