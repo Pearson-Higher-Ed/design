@@ -3,8 +3,8 @@ layout: component-yaml
 title: Application Header
 section: Components
 redirect_from: /docs/ui-components/application-header/
-version: 2.0.0-beta.1
-status: deprecated
+version: 2.0.0-beta.2
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -118,6 +118,9 @@ blocks:
       : - 70px tall
         - 100% viewport width
 
+      Logo
+      : - 37px tall, vertically centered
+
       Spacing
       : - Logo, links, and icons vertically centered
         - 15px from either end
@@ -139,6 +142,9 @@ blocks:
 
       Dimensions
       : - 60px tall
+
+      Logo
+      : - 30px tall
 
     contents:
       - type: wide image
@@ -201,6 +207,9 @@ blocks:
 
 
 changelog:
+  - version: 2.0.0-beta.2
+    changes: |
+      - CHANGED: Logo switches to smaller size in responsive views
   - version: 2.0.0-beta.1
     changes: |
       - CHANGED: Adopt rebrand style
