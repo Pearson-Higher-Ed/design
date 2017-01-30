@@ -3,8 +3,8 @@ layout: component-yaml
 title: Application Header
 section: Components
 redirect_from: /docs/ui-components/application-header/
-version: 2.0.0-beta.1
-status: deprecated
+version: 2.0.0-beta.2
+status: active
 implemented: false
 people:
   - role: Product Owner
