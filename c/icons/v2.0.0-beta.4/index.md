@@ -14,7 +14,7 @@ people:
 implementation: https://pearson-elements-v0.surge.sh/elements/icons/
 downloads:
   - name: Pearson-icons-1.3.sketch
-    link: ./assets/Pearson_icons_1.2.sketch
+    link: ./assets/Pearson_icons_1.3.sketch
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/15RLoDS-Qlu_Qz1W8UNuiHu3OtdNZ8kzKm_7jecoP5So/edit?usp=sharing
 dependencies:
