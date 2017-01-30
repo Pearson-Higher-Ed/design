@@ -2,15 +2,15 @@
 layout: component-yaml
 title: Drawer
 section: Components
-version: 2.0.0-beta.1
-status: deprecated
+version: 2.0.0-beta.2
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
     email: joe.macaluso@pearson.com
   - role: Designer
-    name: Lynn Chang
-    email: lynn.chang@pearson.com
+    name: Van Yang
+    email: van.yang@pearson.com
 implementation: https://www.npmjs.com/package/pearson-elements
 downloads:
   - name: UXD Accessibility Checklist
@@ -21,9 +21,9 @@ downloads:
     link: ./assets/drawer.mockup.ai
 dependencies:
   - name: Typography
-    version: 2.0.0-beta.7
+    version: 2.0.0-beta.9
   - name: Icons
-    version: 2.0.0-beta.2
+    version: 2.0.0-beta.3
   - name: Colors
     version: 2.0.0-beta.4
   - name: Breakpoints
@@ -38,7 +38,6 @@ usage_guidelines: |
   Drawers should contain secondary content which only needs to be presented when specifically requested by the user, such as help information.
 
 blocks:
-
   - type: section
     name: Showing/Hiding
 
@@ -47,23 +46,21 @@ blocks:
       Selecting some UI element on the main page can trigger the drawer to slide in from the right, for example clicking 'Help' in the header.
 
       A drawer can be dismissed by clicking the included 'x' icon, by selecting the trigger element again, or by hitting the escape key.
-
-      An overlay drawer appears to "slide over" the content on the parent page, obscuring some of that content.
     contents:
       - type: wide video
-        src: ./assets/drawer.mp4
+        src: ./assets/show.hide.mp4
 
   - type: section
     name: Basic View
 
   - type: two column
     text: |
-      - The basic version of the drawer has a section for a title at the top and a built in close 'x' icon.
-      - Scrolling will be available when more content displayed vertically.( The drawer can share the same vertical scrollbar as the parent page when needed. )
+      The basic version of the drawer has a section for a title at the top and a built in close 'x' icon.
 
+      Content may populate the area below this with 30px margins. Custom background colors and dividing lines may extend to 100% width.
     contents:
       - type: wide image
-        src: ./assets/drawer_basic.png
+        src: ./assets/basic.view.2x.png
 
   - type: section
     name: Detail View
@@ -75,7 +72,15 @@ blocks:
       The drawer should retain state on close, i.e. closing the drawer on a detail view and then reopening the same drawer will return the user to that detail view.
     contents:
       - type: wide image
-        src: ./assets/drawer_detail.png
+        src: ./assets/detail.view.2x.png
+
+  - type: two column
+    text: |
+      ### Animation
+      Displaying the second level uses an animation to provide context.
+    contents:
+      - type: wide video
+        src: ./assets/second.level.mp4
 
   - type: section
     name: Responsive Behavior
@@ -85,15 +90,7 @@ blocks:
       The drawer maintains the same behavior all the way down to the extra small breakpoint, at which point it begins taking up 100% of the viewport width.
     contents:
       - type: narrow image
-        src: ./assets/drawer_responsive.png
-
-  - type: two column
-    text: |
-      ### Animation
-      Displaying the second level uses an animation to provide context.
-    contents:
-      - type: wide video
-        src: ./assets/drawer_detail.mp4
+        src: ./assets/responsive.view.2x.png
 
   - type: section
     name: Redlines
@@ -101,40 +98,55 @@ blocks:
   - type: two column
     text: |
       ### Basic View
+      Spacing
+      : - 30px side, 25px top and 30px bottom margins around the content area
+        - 25px vertical margins below the title area, 30px side margins
+        - Drawer is 320px wide at the [Small breakpoint](/design/c/breakpoints/v1.0.0/#rd-small) and wider
+        - Drawer is 100% width at the [Extra Small breakpoint](/design/c/breakpoints/v1.0.0/#rd-extra-small)
+        - Dividing lines may extend past the content area, up to 100% width
+
+      Background
+      : - Default background is [white](/design/c/colors/v1.0.1/#rd-white-ffffff), may customized to an accessible color and extend to 100% width.
+        - Border is 1px solid [alto (#D9D9D9)](/design/c/colors/v2.0.0-beta.5/#rd-alto)
+
+      Typography
+      : - Title is a [Basic section heading](/design/c/typography/v2.0.0-beta.9/#rd-ui-headings-section-basic)
+
+      Icons
+      : - Close icon is remove-sm-24
+        - A focused icon will use the standard browser outline for focus
+
       Shadow
-      : - Color is rgba(0, 0, 0, 0.3)
-        - 8px blur
-        - -1px X axis offset
+      : - box-shadow: 0 3px 5px 0 rgba(199,199,199,0.70);
 
-      1.Header
-      : - Background color: #E9E9E9
-        - Drawer title: Open Sans SemiBold 16px
-        - Separator line: #C7C7C7 1px line
-        - Close Button: 14x14px
+      Title Separator
+      : - 1px solid [alto (#D9D9D9)](/design/c/colors/v2.0.0-beta.5/#rd-alto)
 
-      2.Content area
-      : - Padding: 32px left/right/top/bottom
-        - Background color: #F5F5F5
+      Keyboard Shortcuts
+      : - Pressing escape should close the drawer in any mode
 
       Focus Behavior
       : - Opening the drawer moves focus from the triggering element to the first focusable item within the drawer (typically the Close icon).
         - Tabbing within the drawer should cycle through focusable items like normal
-        - The drawer should capture focus, so you won’t be able to tab out of the drawer
+        - The drawer should capture focus, so you won't be able to tab out of the drawer
         - Upon dismissing the drawer focus should be restored to the triggering element
 
     contents:
       - type: wide image
-        src: ./assets/readline_basic.png
-      - type: narrow image
-        src: ./assets/redline_header.png
-      - type: narrow image
-        src: ./assets/redline_bodycontent.png
+        src: ./assets/redlines.basic.view.2x.png
     exports:
       - Basic View
 
   - type: two column
     text: |
       ### Detail View
+      Title
+      : - Use a static "Back" label
+        - Focusing the "< Back" element will use the standard browser outline for focus
+
+      Icon
+      : - Pearson Icon (chevron-back-18)
+        - 10px spacing between icon and label
 
       Focus Behavior
       : - Follow the patterns of the Basic Drawer
@@ -142,8 +154,8 @@ blocks:
         - Focus should again be captured
         - Focus targets from the Basic View should not be accessible
     contents:
-      - type: narrow image
-        src: ./assets/redline_detail.png
+      - type: wide image
+        src: ./assets/redlines.detail.view.2x.png
     exports:
       - Detail View
 
@@ -195,9 +207,10 @@ blocks:
       - Detail View
 
 changelog:
+  - version: 2.0.0-beta.2
+    changes: Apply new brand to existing component.
   - version: 2.0.0-beta.1
-    changes: Redesign align with new brands    
-
+    changes: Redesign align with new brands
   - version: 1.0.0-beta.8
     changes: |
       - ADDED: Ability to include 100% width divider lines and custom background colors
