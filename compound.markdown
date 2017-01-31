@@ -184,11 +184,11 @@ section: contribute
 						 // The ES5 way
 						 //
 						 var Origami = React.createClass({
-
+						
 						 function1: function(e) { … },
 							 render: function() { … },
 						 });
-
+						
 						 // The ES6 way
 						 //
 						 class Origami extends React.Component {
@@ -242,18 +242,27 @@ section: contribute
          **‘npm test‘**
 
 -   **Webpack**
-  ![](http://pearson-higher-ed.github.io/design/img/image1.png)
+	 
 
-	- Webpack is a "module bundler", which allows users to take a given set of modular JavaScript files, and compile them down into a single (or multiple) file(s). Not only that, but it also allows us to bundle in other file formats such as CSS and HTML via the use of [module loaders](https://webpack.github.io/docs/loaders.html). This effectively allows us to represent the whole application as a single, pre-built, minified file, assets and all.
 
+![](http://pearson-higher-ed.github.io/design/img/image1.png)
+	
+	-   Webpack is a "module bundler", which allows users to take a given
+	     set of modular JavaScript files, and compile them down into a
+	     single (or multiple) file(s). Not only that, but it also allows us
+	     to bundle in other file formats such as CSS and HTML via the use
+	     of [module loaders](https://webpack.github.io/docs/loaders.html).
+	     This effectively allows us to represent the whole application as a
+	     single, pre-built, minified file, assets and all.
+	     
 	-   Webpack provides additional tooling such as a dev server, hot reloading,
 	     and source maps which greatly speed up and enhance the development process.
 
 	-   Webpack can be run using a command line with parameters to the entry
 	     file (main.js) and the output file (bundle.js).
-
+	
 	-   It is recommend to create a webpack.config.js file to store all
-	     config settings for webpack including the entry point and the resulting
+	     config settings for webpack including the entry point and the resulting 
 	     bundle file.
 
 
@@ -384,33 +393,33 @@ section: contribute
 
         -   **Don’t collect data on insecure pages:**
 
-      		 When prompting the user for personal data such as email address,
-      		 username, password or payment information, always serve the page with
-      		 the form on it using HTTPS, and send the form submission to an HTTPS
-      		 URL.
-
-      		 It’s often considered OK to serve forms on insecure pages as long as
-      		 the form posts to a secure destination. This is not acceptable,
-      		 because an attacker can modify the page that serves the form, to
-      		 simply change the form post destination.
+		 When prompting the user for personal data such as email address,
+		 username, password or payment information, always serve the page with
+		 the form on it using HTTPS, and send the form submission to an HTTPS
+		 URL.
+		
+		 It’s often considered OK to serve forms on insecure pages as long as
+		 the form posts to a secure destination. This is not acceptable,
+		 because an attacker can modify the page that serves the form, to
+		 simply change the form post destination.
 
 -   **HTML**
 
     -   **Use UTF-8**
 
-       Character encoding can cause problems, especially on sites that are
-       predominantly in English with a few foreign characters here and there,
-       where issues with character encoding can easily go unnoticed.
+ Character encoding can cause problems, especially on sites that are
+ predominantly in English with a few foreign characters here and there,
+ where issues with character encoding can easily go unnoticed.
 
-       Ensure that your pages are **UTF-8** encoded, using both an HTTP
-       response header **and** an HTML meta tag: &lt;meta charset="UTF-8"
-       /&gt;. Place this as the first tag within the &lt;head&gt; section of
-       the page, before &lt;title&gt;, since it’s important that the browser
-       knows the right character set to use before it gets to any content.
+ Ensure that your pages are **UTF-8** encoded, using both an HTTP
+ response header **and** an HTML meta tag: &lt;meta charset="UTF-8"
+ /&gt;. Place this as the first tag within the &lt;head&gt; section of
+ the page, before &lt;title&gt;, since it’s important that the browser
+ knows the right character set to use before it gets to any content.
 
-    -   **Use correct viewport sizing**
-
-    	 By default, most mobile devices assume your site won’t fit on a small
+	-   **Use correct viewport sizing**
+	
+	 By default, most mobile devices assume your site won’t fit on a small
 	 screen so will pretend to be 900px wide and zoom out so that that fits
 	 on the screen. Add the following viewport meta tag to the &lt;head&gt;
 	 of your page to make sure that the viewport is zoomed to 100% and the
@@ -419,7 +428,12 @@ section: contribute
 
 -   **JavaScript**
 
-    -   **Lint your code** Consider running
+    -   **Lint your code** Consider running 
          [*ESLint*](http://www.eslint.org/) over your JavaScript. The
          syntax standards used by the component archetype are a good set
          of rules to use.
+
+
+
+
+

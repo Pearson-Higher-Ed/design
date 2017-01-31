@@ -2,8 +2,9 @@
 layout: component-yaml
 title: Inputs
 section: Components
-status: deprecated
+status: active
 version: 2.0.0-beta.1
+private: true
 people:
   - role: Product Owner
     name: Joe Macaluso
