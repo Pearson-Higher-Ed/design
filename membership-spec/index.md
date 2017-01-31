@@ -2,7 +2,7 @@
 layout: spec
 title: Library Membership Specification
 section: contribute
-version: 2.0.0
+version: 2.1.0
 order: 1
 intro: |
   Every component listed in the Component Library must satisfy all the requirements contained in this document. To learn about submitting components for inclusion see the [Component Creation Guide][creation-guide].
@@ -86,6 +86,13 @@ design_reqs:
         approvers:
           - Ed Zee (UX Design)
           - Parker Malenke (UX Design)
+
+      - req: |
+          C6: A component and its image examples must be reviewed by Annie Persson and Claudia Quella for UI text usage and consistency.
+        type: mandatory
+        approvers:
+          - Annie Persson
+          - Claudia Quella
 
 
 
@@ -192,7 +199,210 @@ design_reqs:
           - Isabelle Burkhart (Accessibility UX)
           - Chris Langston (Accessibility UX)
 
+      - req: |
+          D6: When applicable, a component must include UI text guidelines detailing standards and exceptions in UI language patterns and interactive behavior.
+        type: mandatory
+        approvers:
+          - Annie Persson
+          - Claudia Quella
+
+dev_reqs:
+  - name: General
+    reqs:
+      - req: |
+          G1: Each implementation must include a quality readme file which will help other teams install and use the component.
+        type: mandatory
+        extras:
+          - name: Explanation
+            content: |
+              A good readme will cover the following items:
+
+              - Introduction
+              - Installation
+              - Versions
+              - User Guide
+              - Implementation
+              - Testing
+              - Related Resources
+        approvers:
+          - PDA Development team
+
+      - req: |
+          G2: Standalone components must use the [Component Archetype][ca] as a starting point.
+
+          [ca]: https://github.com/Pearson-Higher-Ed/component-archetype
+        type: mandatory
+        extras:
+          - name: Explanation
+            content: |
+              The starter kit implements best practices like testing, linting, bundling, transpiling ES6 to ES5, etc. It codifies a long list of decisions that you no longer have to make to get rolling. It saves you from the long, painful process of wiring it all together into an automated development environment and build process.
+        approvers:
+          - PDA Development team
+
+      -  req: |
+          G3: Responsive Components
+         type: mandatory
+         extras:
+           - name: Explanation
+             content: |
+               Responsive Web Design allows web pages to correctly format on any screen size. The application must balance the rich functionality associated with desktop usage with the ability to function on less powerful mobile devices.
+
+               Principles for Responsive Web Design
+               A flexible, grid-based layout: This allows the layout to reflow to the screen size of any device. Uses relative sizing of grids. Allows grid layout to adjust to viewport size.
+               Flexible images and media: This allows the images and videos to reflow with the layout.
+
+         approvers:
+           - PDA Development team
+
+      - req: |
+          G4: New components should not duplicate the functionality found in existing components.
+        type: suggested
+        extras:
+          - name: Explanation
+            content: |
+              All teams are expected to re-use available elements and compounds in the npm registry. When developing a new component it is required to check the npm registry to ensure if a similar component already exists. If one exists it is necessary to reach out to the team and discuss potential updates to the original component before trying to create your own.
+
+              When creating a new component it is recommended to use existing sub components and element required to create a new component. The key idea behind this is to reuse components wherever applicable.
+        approvers:
+          - PDA Development team
+
+  - name: Accessibility
+    description: |
+      Elemental Design and the Component Library are tools meant to serve the entirety of Pearson's next gen educational ecosystem.
+    reqs:
+      - req: |
+          A1: Rendered HTML must be comply with the HTML5 specification.
+        type: mandatory
+        extras:
+          - name: Explanation
+            content: We recommend using [this validator](#).
+        approvers:
+          - PDA accessibility team
+          -
+  - name: Browser and Device Support
+    description: |
+      The components should adhere to pearson standard browser policy and device support. There are two levels of support: Optimized and Supported.
+    reqs:
+      - req: |
+          R1: Optimized are those OS/Browser combinations tested and certified by QA. These will generally represent the newest versions of major OSs and Browsers.
+        type: mandatory
+        approvers:
+          - PDA QA team
+
+      - req: |
+          R2: Supported combinations will no longer be tested and certified. Any issues with supported combinations will be address as S1 and S2 issues as they arise.
+        type: mandatory
+        approvers:
+          - PDA QA team
+
+  - name: Internationalization (i18N)
+    description: |
+      Internationalization is the process of designing a software application or product so that it can be adapted to various languages and regions without engineering changes.
+    reqs:
+      - req: |
+          R1: Externalization of strings.
+        type: mandatory
+        approvers:
+          - PDA Development team
+
+
+      - req: |
+          R2: Testing of long string when localized
+        type: mandatory
+        approvers:
+          - PDA Development team
+
+  - name: Localization (L10n)
+    description: |
+      Localization is the process of adapting a product or application to a specific international language or culture so it seems natural to that particular region.
+    reqs:
+      - req: |
+          R1: Numeric, date and time formats.
+        type: mandatory
+        approvers:
+          - PDA Development team
+
+      - req: |
+          R2: Use of currency
+        type: mandatory
+        approvers:
+          - PDA Development team
+
+      - req: |
+          R2: Collation and sorting
+        type: suggested
+        approvers:
+          - PDA Development team
+
+  - name: QA
+    description: |
+      All the functional automated tests for Elements SDK / Compounds SDK / Origami V2 components should be contributed to "ux-test-platform" repository, and the PR will be reviewed and merged only by PDA team
+    reqs:
+      - req: |
+          T1: All components must have at least 80% code coverage. Component should have 100% coverage whenever possible.
+        type: mandatory
+        approvers:
+          - PDA QA team
+
+      - req: |
+          Tools Used: Click the [following link](https://neo.pearson.com/docs/DOC-607807#jive_content_id_Tools_used) to use the tools used for Automated testing and test scripts.
+
+
+        type: optional
+        approvers:
+          - PDA QA team
+      - req: |
+          How to Contribute: You can fork the repo or create a branch out of master and make your changes, create a Pull Request for your changes to merge into this Original master branch. Click the [following link](https://neo.pearson.com/docs/DOC-607807#jive_content_id_How_to_contribute_to_this_repo) to see more details on how to contribute.
+
+        type: optional
+        approvers:
+          - PDA QA team
+
+  - name: Conventions
+    description: |
+      Standards that make life easier.
+    reqs:
+      - req: |
+          Use UTF-8:
+        type: mandatory
+        extras:
+          - name: Explanation
+            content: |
+              Character encoding can cause problems, especially on sites that are predominantly in English with a few foreign characters here and there, where issues with character encoding can easily go unnoticed.
+
+              Ensure that your pages are UTF-8 encoded, using both an HTTP response header **and** an HTML meta tag: `<meta charset="UTF-8" />`. Place this as the first tag within the `<head>` section of the page, before `<title>`, since it’s important that the browser knows the right character set to use before it gets to any content.
+        approvers:
+          - PDA Development team
+
+  - name: ES6
+    description: |
+      The ES6 or ES2015 syntax is recommended be used to create components. Presentational components must not call a backend service directly to get data. The architecture is designed for the components to be loosely coupled from the service to provide highly reusable front end components. The components would need data in a certain expected format. It is the responsibility of either the consuming application or a container component to fetch and aggregate data from a RESTful API.
+    reqs:
+      - req: |
+          R1: Use ES6 to write components.
+        type: suggested
+        approvers:
+          - PDA Development team
+
+  - name: Security
+    reqs:
+      - req: |
+          S1: Components must not collect data on insecure pages.
+        type: mandatory
+        extras:
+          - name: Explanation
+            content: |
+              When prompting the user for personal data such as email address, username, password or payment information, always serve the page with the form on it using HTTPS, and send the form submission to an HTTPS URL.
+
+              It’s often considered OK to serve forms on insecure pages as long as the form posts to a secure destination. This is not acceptable, because an attacker can modify the page that serves the form, to simply change the form post destination.
+        approvers:
+          - PDA Development team
+
 changelog:
+  - version: 2.1.0
+    changes: |
+      - ADDED: Development specifications
+      - ADDED: UA specifications
   - version: 2.0.0
     changes: Changed C3 visual design requirement
   - version: 1.0.0
