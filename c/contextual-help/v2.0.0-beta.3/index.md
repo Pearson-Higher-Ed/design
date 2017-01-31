@@ -3,8 +3,8 @@ layout: component-yaml
 title: Contextual Help
 section: Components
 redirect_from: /docs/ui-components/contextual-help/
-version: 2.0.0-beta.2
-status: deprecated
+version: 2.0.0-beta.3
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -257,6 +257,9 @@ blocks:
 
 
 changelog:
+  - version: 2.0.0-beta.3
+    changes: |
+      - CHANGED: Deleted authoring guidelines section.
   - version: 2.0.0-beta.2
     changes: |
       - CHANGED: Re-skin of current Console header to new branding.
