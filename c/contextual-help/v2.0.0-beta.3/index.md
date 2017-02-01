@@ -98,7 +98,7 @@ blocks:
   - type: two column
     text: |
       ### Accordions
-      Content may be grouped into accordions which help organize and condense information. See the [Authoring Guidelines](#authoring-guidelines) below for details on how to include an accordion in your article.
+      Content may be grouped into accordions which help organize and condense information.
 
     contents:
       - type: narrow image
