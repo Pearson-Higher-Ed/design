@@ -144,7 +144,7 @@ blocks:
         caption: Closed and opened select in the fancy style.
       - type: narrow image
         src: ./assets/Inputs_select_basic.png
-        caption: Closed an open select in the basic style.
+        caption: Closed and opened select in the basic style.
 
   - type: section
     name: Radio Buttons
