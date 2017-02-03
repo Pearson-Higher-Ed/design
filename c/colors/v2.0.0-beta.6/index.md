@@ -42,6 +42,7 @@ colors:
       - Moonlight
       - Concrete
       - Digital Ice Blue
+      - Digital Marine Turquoise
   White:
     hex: ffffff
     uses: Most content should appear on a white background, whether it spans the full page or forms a small tile. White should also be used as a text color on dark backgrounds.
@@ -53,6 +54,7 @@ colors:
       - Charcoal
       - Medium Gray
       - Strawberry Red
+      - Hot Pink
   Medium Gray:
     hex: 6a7070
     uses: Intended as the secondary text color for light backgrounds.
@@ -91,6 +93,11 @@ colors:
     a11y_complements:
       - White
       - White Gray
+  Digital Marine Turquoise:
+    hex: 19a6a4
+    uses: Indicate current day in calendars.
+    a11y_complements:
+      - Charcoal
   White Gray:
     hex: f5f5f5
     uses: The standard background for within applications. Only secondary content should live directly on a White Gray background, preferring to use White.
@@ -101,6 +108,7 @@ colors:
       - Charcoal
       - Medium Gray
       - Strawberry Red
+      - Hot Pink
   Sunshine Yellow:
     hex: ffb81c
     uses: Should be reserved for the most important interactive elements. More important than Pearson Blue, and should generally only appear once per screen.
@@ -209,6 +217,7 @@ blocks:
           - Strawberry Red
           - Digital Grass Green
           - Hot Pink
+          - Digital Marine Turquoise
 
   - type: section
     name: Exported Styles
@@ -230,11 +239,13 @@ blocks:
       - Strawberry Red
       - Digital Grass Green
       - Hot Pink
+      - Digital Marine Turquoise
 
 changelog:
   - version: 2.0.0-beta.6
     changes: |
       - ADDED: Hot Pink to the conditional palette.
+      - ADDED: Digital Marine Turquoise to the conditional palette.
   - version: 2.0.0-beta.5
     changes: |
       - ADDED: Sunflower Yellow color to Secondary Palette
