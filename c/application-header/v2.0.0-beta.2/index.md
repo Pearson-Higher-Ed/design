@@ -19,19 +19,19 @@ people:
 implementation: https://origami.pearsoned.com/registry/components/o-app-header
 downloads:
   - name: UXD Accessibility Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/1Uhkqt3gyK7cVDKkEeUcgXfO1GjYLwk5qp_2Gu8CcKhc/edit?usp=sharing
+    link: https://docs.google.com/a/pearson.com/document/d/1oxs4Mjp4xF27v_H7HvyQeonAXhFhKGB3XYQZh2SZ2Gs/edit?usp=sharing
   - name: .sketch mockup
-    link: ./assets/application-header.mockup.sketch
-  - name: .ai mockup
-    link: ./assets/application-header.mockup.ai
+    link: ./assets/application-header.sketch
 
 dependencies:
   - name: Colors
-    version: 2.0.0-beta.4
+    version: 2.0.0-beta.6
   - name: Typography
     version: 2.0.0-beta.9
   - name: Breakpoints
     version: 1.0.0
+  - name: Icons
+    version: 2.0.0-beta.4
 
 tagline: |
   This component contains and displays global tools and navigation across the next gen platform.
