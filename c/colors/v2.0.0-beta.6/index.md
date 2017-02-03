@@ -3,7 +3,7 @@ layout: component-yaml
 title: Colors
 section: Components
 redirect_from: /docs/ui-components/colors/
-version: 2.0.0-beta.4
+version: 2.0.0-beta.6
 status: deprecated
 implemented: false
 people:
@@ -85,6 +85,12 @@ colors:
     a11y_complements:
       - White
       - White Gray
+  Hot Pink:
+    hex: DA0474
+    uses: Indicate new/unread notifications.
+    a11y_complements:
+      - White
+      - White Gray
   White Gray:
     hex: f5f5f5
     uses: The standard background for within applications. Only secondary content should live directly on a White Gray background, preferring to use White.
@@ -100,6 +106,11 @@ colors:
     uses: Should be reserved for the most important interactive elements. More important than Pearson Blue, and should generally only appear once per screen.
     a11y_complements:
       - Charcoal
+  Sunflower Yellow:
+    hex: ff9a19
+    uses: Hover state for Sunshine Yellow.
+    a11y_complements:
+      - Charcoal
   Digital Ice Blue:
     hex: d6ebe8
     uses: Alternative background for screens with minimal content, such as sign in.
@@ -109,6 +120,12 @@ colors:
   Concrete:
     hex: c7c7c7
     uses: Intended for borders and separators, typically not used for actual content.
+    a11y_complements:
+      - Charcoal
+      - Ink Blue
+  Alto:
+    hex: d9d9d9      
+    uses: Default button color.
     a11y_complements:
       - Charcoal
       - Ink Blue
@@ -143,6 +160,7 @@ blocks:
     name: Secondary Palette
     exports:
       - Sunshine Yellow
+      - Sunflower Yellow
       - Digital Ice Blue
 
   - type: two column
@@ -152,6 +170,7 @@ blocks:
       - type: colors
         colors:
           - Sunshine Yellow
+          - Sunflower Yellow
           - Digital Ice Blue
 
   - type: section
@@ -160,6 +179,7 @@ blocks:
       - Charcoal
       - Medium Gray
       - Concrete
+      - Alto
       - Moonlight
 
   - type: two column
@@ -171,6 +191,7 @@ blocks:
           - Charcoal
           - Medium Gray
           - Concrete
+          - Alto
           - Moonlight
 
   - type: section
@@ -187,6 +208,7 @@ blocks:
         colors:
           - Strawberry Red
           - Digital Grass Green
+          - Hot Pink
 
   - type: section
     name: Exported Styles
@@ -198,15 +220,25 @@ blocks:
       - White
       - White Gray
       - Sunshine Yellow
+      - Sunflower Yellow
       - Digital Ice Blue
       - Charcoal
       - Medium Gray
       - Concrete
+      - Alto
       - Moonlight
       - Strawberry Red
       - Digital Grass Green
+      - Hot Pink
 
 changelog:
+  - version: 2.0.0-beta.6
+    changes: |
+      - ADDED: Hot Pink to the conditional palette.
+  - version: 2.0.0-beta.5
+    changes: |
+      - ADDED: Sunflower Yellow color to Secondary Palette
+      - ADDED: Alto color to Neutral Palette
   - version: 2.0.0-beta.4
     changes: |
       - CHANGED: Added new accessibility checklist.
