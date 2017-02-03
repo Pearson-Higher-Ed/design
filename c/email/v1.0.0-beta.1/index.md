@@ -29,7 +29,7 @@ dependencies:
 
 blocks:
   - type: section
-    name: Usage
+    name: Templates
 
   - type: two column
     text: |
@@ -59,13 +59,13 @@ blocks:
 
   - type: two column
     text: |
-      Build your email using these components:
+      You can build your email with these basic components, but don't feel you are limited with the items in the list.
 
-      1. __Logo__ Logo*
+      1. __Logo__
 
       2. __Greetings__ is a short line of text stating the core message
 
-      3. __Heading__ is a line of text that explains what the email is about. It comes after the greeting, but there can be exceptions by use cases. E.g. In the Email Verification Template, heading comes before greeting for a more natural reading flow.
+      3. __Heading__ is a line of text that explains what the email is about.
 
       4. __Body__ is the main content
 
@@ -85,16 +85,80 @@ blocks:
       - type: wide image
         src: ./assets/Email Components.png
 
+  - type: section
+    name: Design
+
+  - type: two column
+    text: |
+      Build an email using the components following these rules:
+
+      ### Minimal requirement for an email
+
+      * Logo
+      * Greetings
+      * Body
+      * Sign-off
+      * Divider
+      * Footer
+
+
+      ### Use 40px blocks for spacing
+      Separate distinct contents or group related contents by using spacing of multiples of 40px. See the illustration on the left for example.
+
+      ### Heading comes after greetings
+      Heading is suggested for it is efficient in telling the readers what the email is about. It should come after the greetings, but you may break this rule if there is legitimate design reason behind it. For example, in the Email Verification template, heading comes before greeting for a more natural reading flow.
+
+
+    contents:
+      - type: wide image
+        src: ./assets/Email Components Spacing.png
+        caption: Create spacing using blocks of 40px tall
+
+  - type: section
+    name: Specs
+
+  - type: two column
+    text: |
+
+      Logo
+      : - Height: 45px
+
+      Greetings
+      : - Text size: 16px
+        - Text line-height: 24px
+        - Charcoal #252525
+
+      Heading
+      : - Text size: Light 28px
+        - Text line-height: 38px
+        - Charcoal #252525
+
+      Body
+      : - Text style: same as greeting
+
+      Table
+      : - Style: [Basic Table](/design/c/tables/v1.1.0-beta.1)
+        - Right-align numbers so it’s easier to add up the values
+
+
+
+      Bold
+      : - Semibold weight
+
+      Large
+      : - 16px font-size
+        - 20px line-height
+
+
   - type: two column
     text: |
       ### Variants
       There are five different types of UI Text, *Basic*, *Small*, *Large*, *Bold*, and *Small Bold*:
 
       UI Text should primarily be used in single line scenarios.
-    contents:
-      - type: narrow image
-        src: ./assets/ui.text.regular.png
-        caption: The five UI Text types
+
+      test test test
+
 
   - type: two column
     text: |
@@ -173,7 +237,7 @@ blocks:
 
   - type: two column
     text: |
-      ### Basic Body
+      Basic Body >>>>>>>>>>
       Most regular content will use the *Basic Body* style.
 
       ### Large Body
