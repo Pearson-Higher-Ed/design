@@ -93,7 +93,6 @@ blocks:
       Build an email using the components following these rules:
 
       ### Minimal requirement for an email
-
       * Logo
       * Greetings
       * Body
@@ -101,13 +100,11 @@ blocks:
       * Divider
       * Footer
 
-
       ### Use 40px blocks for spacing
       Separate distinct contents or group related contents by using spacing of multiples of 40px. See the illustration on the left for example.
 
       ### Heading comes after greetings
-      Heading is suggested for it is efficient in telling the readers what the email is about. It should come after the greetings, but you may break this rule if there is legitimate design reason behind it. For example, in the Email Verification template, heading comes before greeting for a more natural reading flow.
-
+      Heading is suggested to have for its clarity and efficiency. It should come after the greetings, but you may break this rule if there is legitimate design reasons. For example, in the Email Verification template, heading comes prior to the greetings in order to have a more natural reading flow.
 
     contents:
       - type: wide image
@@ -134,47 +131,47 @@ blocks:
         - Charcoal #252525
 
       Body
-      : - Text style: same as greeting
+      : - Text style: same as greetings
 
       Table
       : - Style: [Basic Table](/design/c/tables/v1.1.0-beta.1)
         - Right-align numbers so it’s easier to add up the values
 
+      Link
+      : - Generic Link
 
+      Sign-off
+      : - Text style: same as greetings
 
-      Bold
-      : - Semibold weight
+      Divider
+      : - Thickness: 1px
+        - Concrete #c7c7c7
 
-      Large
-      : - 16px font-size
-        - 20px line-height
+      Footer
+      : - Text size: 12px
+        - Text line-height: 16px
+        - Medium Gray #6A7070
 
+      Button
+      : - Style: Primary Button (Large)
+        - On mobile devices, buttons expand to full width
 
-  - type: two column
-    text: |
-      ### Variants
-      There are five different types of UI Text, *Basic*, *Small*, *Large*, *Bold*, and *Small Bold*:
-
-      UI Text should primarily be used in single line scenarios.
-
-      test test test
-
-
-  - type: two column
-    text: |
-      ### Color Variants
-      Use [Charcoal](/design/c/colors/v2.0.0-beta.4/#rd-charcoal) as the default primary color and [Medium Gray](/design/c/colors/v2.0.0-beta.4/#rd-medium-gray) as the secondary gray. Prefer these defaults, but labels can use any color from the [Colors component](/design/c/colors), as long as they are over an appropriately contrasting background color.
+    contents:
+      - type: wide image
+        src: ./assets/Email Components.png
 
   - type: two column
     text: |
-      ### Allowed Inline Elements
-      In general, labels should not be styled beyond the basic styles listed above. If necessary, stick to the following list of inline elements.
+      ###Responsive Behavior
+      The design is responsive to the size of the viewport. Keep in mind that media query doesn’t work for all clients, so you should design as if there is no breakpoints.
 
-      * `<em>, <i>`
-      * `<a>`
-      * `<small>`
-      * `<time>`
-      * `<abbr>`
+      __The border grows proportionally to the content__
+
+      - The white area has a padding of 5.25%
+      - The ice blue frame has a padding of 3.75%
+
+
+
 
   - type: section
     name: UI Headings
@@ -182,6 +179,10 @@ blocks:
   - type: two column
     text: |
       UI Headings are very similar to UI Text except they demarcate a logical section or container of content. In the previous example, the course name would be a UI Heading.
+
+
+
+      test
 
       UI Headings come in two types, *Page* and *Section*. Page headings typically only appear once per page and are designed to name the current page. Section headings are designed to name the modular components that might make up a page.
     contents:
