@@ -112,7 +112,7 @@ blocks:
         caption: Create spacing using blocks of 40px tall
 
   - type: section
-    name: Specs
+    name: Redlines
 
   - type: two column
     text: |
@@ -158,7 +158,7 @@ blocks:
 
     contents:
       - type: wide image
-        src: ./assets/Email Components.png
+        src: ./assets/Email Components 2.png
 
   - type: two column
     text: |
@@ -170,7 +170,9 @@ blocks:
       - The white area has a padding of 5.25%
       - The ice blue frame has a padding of 3.75%
 
-
+    contents:
+      - type: wide image
+        src: ./assets/Email Redline_Paddings.png
 
 
   - type: section
