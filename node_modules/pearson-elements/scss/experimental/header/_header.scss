@@ -1,0 +1,125 @@
+@import './variables';
+@import './mixins';
+@import '../../elements/responsive-utilities/responsive-utilities';
+
+/* This component is experimental and not available for production use. If you need a component with this functionality, please contact us in the Pearson Design Accelerator hipchat room */
+
+.pe-header {
+  width: 100%;
+  min-height: $pe-header-height;
+  z-index: $pe-header-z-index;
+  background-color: $pe-header-bg;
+  color: $pe-header-text-color;
+
+  @include pe-responsive-breakpoint(lg) {
+    min-height: $pe-header-height-lg;
+  }
+}
+
+.pe-header--fixed {
+  position: fixed;
+  top: 0;
+}
+
+// Sections
+//
+
+.pe-header__section {
+  float: left;
+}
+
+.pe-header__section--right {
+  float: right;
+}
+
+// Brand
+//
+
+.pe-header__brand {
+  font-size: $pe-header-brand-font-size;
+
+  @include pe-header-link;
+}
+
+// Logo
+//
+
+.pe-header__logo {
+  display: block;
+  margin: 0 $pe-header-logo-margin-x;
+}
+
+.pe-header__logo--pearson {
+  height: $pe-header-height;
+  width: 100px;
+  background: url(#{$pe-images-path}#{$pe-header-logo-sprite-name}) no-repeat;
+  background-position: right ($pe-header-height - $pe-header-logo-sprite-height) / 2;
+  background-clip: content-box;
+
+  @include pe-responsive-breakpoint(lg) {
+    height: $pe-header-height-lg;
+    background-position: right ($pe-header-height-lg - $pe-header-logo-sprite-height) / 2;
+  }
+}
+
+// Nav
+//
+
+.pe-header__nav {
+  width: auto;
+  float: left;
+}
+
+.pe-header__nav-items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pe-header__nav-item {
+  float: left;
+  height: $pe-header-height;
+
+  a {
+    @include pe-header-link;
+  }
+
+  @include pe-responsive-breakpoint(lg) {
+    height: $pe-header-height-lg;
+  }
+}
+
+.pe-header__nav-item--active {
+  background: $pe-header-nav-link-active-bg;
+}
+
+// Inverse
+//
+
+.pe-header--inverse {
+  background: $pe-header-bg-inverse;
+
+  a {
+    color: $pe-header-link-color-inverse;
+
+    &:hover,
+    &:focus {
+      color: $pe-header-link-hover-color-inverse;
+    }
+  }
+
+  .pe-header__nav-item--active {
+    background-color: $pe-header-nav-link-active-bg-inverse;
+  }
+
+  .pe-header__logo--pearson {
+    background-position: right (($pe-header-height - $pe-header-logo-sprite-height) / 2) - $pe-header-logo-sprite-height;
+    background-clip: content-box;
+    padding: (($pe-header-height - $pe-header-logo-sprite-height) / 2) 0;
+
+    @include pe-responsive-breakpoint(lg) {
+      background-position: right (($pe-header-height-lg - $pe-header-logo-sprite-height) / 2) - $pe-header-logo-sprite-height;
+      padding: (($pe-header-height-lg - $pe-header-logo-sprite-height) / 2) 0;
+    }
+  }
+}

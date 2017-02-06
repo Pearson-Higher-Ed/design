@@ -1,0 +1,64 @@
+@mixin pe-placeholder {
+  &::-webkit-input-placeholder { @content }
+  &::-moz-placeholder { @content }
+  &:-moz-placeholder { @content }
+  &:-ms-input-placeholder { @content }
+};
+
+.abstract {
+  padding: $textInput-basic-padding;
+  height: $textInput-basic-height;
+  border-radius: $textInput-basic-borderRadius;
+  background-color: $pe-color-white;
+  color: $pe-color-charcoal;
+  display: $textInput-basic-display;
+  margin-top: $textInput-basic-marginTop;
+}
+
+@mixin textInputBasic() {
+
+  .pe-textInput--basic {
+    @extend .abstract;
+    border: $textInput-basic-border;
+
+    @include pe-placeholder {
+      font-size : $textInput-placeholder-font-size;
+      color     : $textInput-placeholder-color;
+    }
+
+    &:focus {
+      outline: none;
+      border: $textInput-basic-focus-border;
+      box-shadow: $textInput-basic-focus-boxShadow;
+    }
+  }
+
+};
+
+@mixin textInputBasicError() {
+
+  .pe-textInput--basic_error {
+    @extend .abstract;
+    border: $textInput-basic-error-border;
+
+    @include pe-placeholder {
+      font-size : $textInput-placeholder-font-size;
+      color     : $textInput-placeholder-color;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: $textInput-basic-error-focus-boxShadow;
+    }
+  }
+
+};
+
+@mixin textInputBasicDisabled() {
+
+  .pe-textInput--basic:disabled {
+    background-color: $pe-color-moonlight;
+    margin-top: $textInput-basic-marginTop;
+  }
+
+}
