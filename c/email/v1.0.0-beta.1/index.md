@@ -7,11 +7,12 @@ status: active
 implemented: true
 people:
   - role: Designer
-    name: Karen Taxier
-    email: karen.taxier@pearson.com
-  - role: Designer
     name: Linda Tsai
     email: linda.tsai@pearson.com
+  - role: Designer
+    name: Karen Taxier
+    email: karen.taxier@pearson.com
+
 implementation: https://pearson-elements-v0.surge.sh/elements/typography/
 downloads:
   - name: Sketch
@@ -34,17 +35,23 @@ blocks:
     text: |
       Some email examples include:
 
-      - **Account Creation** informs the users of a successful account setup.
-      * __Email Verification__ inquires users to verify their email address.
-      * __Username/Password Reset__ provides the users with a link to reset credentials when they forgot them.
+      * __Email Address Verification__ asks users to confirm the email address to complete the account creation process.
+      * __Username/Password Reset__ provides the users with a link to reset the credentials.
+      * __Password Reset Confirmation__ informs the users of an successful password reset.
       * __Purchase Confirmation__ informs the users of a successful payment transaction other details.
       * __Confirmation for Product Return, Exchange, or Cancellation__
-      http://www.github.com/
+
 
     contents:
-      - type: wide image
-        src: ./assets/email template_welcome_1.png
-        caption: Template - [Email Verification](/assets/Email Template_4 copy.sketch)
+      - type: narrow image
+        src: ./assets/Email Address Verification.png
+        caption: Template - [Email Address Verification](http://www.wikihow.com/End-a-Letter)
+      - type: narrow image
+        src: ./assets/Username Password Request.png
+        caption: Template - [Username Password Request](./assets/Username Password Request.png)  
+      - type: narrow image
+        src: ./assets/Password Reset Confirmation.png
+        caption: Template - [Email Reset Confirmation](./assets/Password Reset Confirmation.png)    
 
 
   - type: section
@@ -54,30 +61,29 @@ blocks:
     text: |
       Build your email using these components:
 
-      1. __Logo__
+      1. __Logo__ Logo*
 
-      2. __Title__ is a short line of text stating the core message
+      2. __Greetings__ is a short line of text stating the core message
 
-      3. __Body__ is the main content
+      3. __Heading__ is a line of text that explains what the email is about. It comes after the greeting, but there can be exceptions by use cases. E.g. In the Email Verification Template, heading comes before greeting for a more natural reading flow.
 
-      4. __Image + Caption__ is a two column layout with image and text side by side
+      4. __Body__ is the main content
 
-      5. __Button__ is the primary call to action
+      5. __Table__ is an effective way of displaying data
 
       6. __Link__ is best for non-crucial call to action
 
-      7. __Section__ groups related information together. E.g. account information, shipping address, or transaction information,etc.
+      7. __Sign-off__
 
-      8. __Divider__ separates the content from the footer
+      8. __Divider__ separates the body text from the footer
 
-      9. __Footer__ contains common information from Pearson. It should include customer support information and copyright text
+      9. __Footer__ contains standard Pearson information. It must include customer support information and copyright text
 
-      10. __Table__ is for displaying information more effectively. E.g. purchase details
+      10. __Button__ is the primary call to action
 
     contents:
       - type: wide image
-        src: ./assets/Definition.png
-        caption: Example email
+        src: ./assets/Email Components.png
 
   - type: two column
     text: |
