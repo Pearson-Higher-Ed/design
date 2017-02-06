@@ -16,8 +16,8 @@
   }
 
   p {
-    @include pe-copy;
-    @include pe-paragraph;
+    @extend .pe-copy;
+    @extend .pe-paragraph;
     margin: 0;
     & + p {
       margin-top: 12px;

@@ -1,10 +1,10 @@
 // left column
 .text {
   // TODO switch to using mixins or something for typography
+  @extend .pe-copy--small;
   @include pe-responsive-breakpoint(xs) {
     width: 100%;
     margin-bottom: 20px;
-    @include pe-copy-small;
   }
   @include pe-responsive-breakpoint(md) {
     width: 440px;
@@ -15,11 +15,11 @@
     float: left;
     margin-bottom: 0;
     margin-left: 0;
-    @include pe-label-small;
+    // @extend .pe-label--small;
   }
   @include pe-responsive-breakpoint(xl) {
     width: 320px;
-    @include pe-copy-small;
+    // @extend .pe-copy--small;
   }
 
 
@@ -71,7 +71,7 @@
 
   .caption {
     @include pe-responsive-breakpoint(lg) { margin-left: 0; }
-    @include pe-label-small;
+    @extend .pe-label--small;
     margin-top: 6px;
   }
 
@@ -201,7 +201,7 @@
       }
 
       td {
-        @include pe-label;
+        @extend .pe-label;
         border: 1px solid pe-color(brightly-lit);
         padding: 10px;
       }
@@ -254,7 +254,7 @@
 
       .name {
         background-color: white;
-        @include pe-copy-small;
+        @extend .pe-copy--small;
         width: 210px;
         height: 70px;
         float: right;
@@ -291,7 +291,7 @@
         }
 
         & > div {
-          @include pe-copy-small;
+          @extend .pe-copy--small;
           p:first-of-type {
             margin-top: 0;
           }
@@ -326,7 +326,7 @@
           p {
             float: left;
             margin: 0;
-            @include pe-copy-small;
+            @extend .pe-copy--small;
           }
         }
       }

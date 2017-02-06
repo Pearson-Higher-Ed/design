@@ -20,7 +20,7 @@
     width: 100%;
 
     tr {
-      @include pe-label;
+      @extend .pe-label;
       border: 1px solid pe-color(gray-no-1);
 
       td {

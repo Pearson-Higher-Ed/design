@@ -1,11 +1,11 @@
 @mixin pe-copy-small {
-  @include pe-copy;
+  @extend .pe-copy;
   font-size: 14px;
   line-height: 20px;
 }
 
 @mixin pe-code {
-  @include pe-copy-small;
+  @extend .pe-copy--small;
   font-family: monospace;
   color: pe-color(gray-wash);
   background-color: pe-color(full-moon);

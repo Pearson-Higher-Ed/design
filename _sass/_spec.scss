@@ -25,16 +25,15 @@
     box-sizing: border-box;
     width: 100%;
     margin-bottom: 60px;
+    @extend .pe-label;
     @include pe-responsive-breakpoint(lg) {
       width: 210px;
       float: left;
       padding-right: 40px;
-
-      @include pe-label;
     }
     @include pe-responsive-breakpoint(xl) {
       width: 320px;
-      @include pe-label-large;
+      // @extend .pe-label-large;
     }
 
     & > ul > li + li {
@@ -51,8 +50,8 @@
   }
 
   h1 {
-    @include pe-title;
-    @include pe-title-extra-large;
+    @extend .pe-title;
+    @extend .pe-page-title--small;
     margin-top: 0;
   }
 
@@ -62,7 +61,7 @@
   }
 
   p {
-    @include pe-copy;
+    @extend .pe-copy;
   }
 
   a {

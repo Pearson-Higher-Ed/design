@@ -85,7 +85,7 @@
     @include pe-responsive-breakpoint(xl) { float: left; }
     padding: 10px 0;
     margin: 0;
-    @include pe-label-small;
+    @extend .pe-label--small;
     border-top: 1px solid pe-color(hairline-gray);
     @include pe-responsive-breakpoint(lg) { border-top: none; }
     @include pe-responsive-breakpoint(xl) { border-top: 1px solid pe-color(hairline-gray); }

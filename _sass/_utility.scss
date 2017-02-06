@@ -28,6 +28,6 @@
   background: #f7df1e;
   color: pe-color(pitch);
   border-radius: 2px;
-  @include pe-label;
-  @include pe-label-bold;
+  @extend .pe-label;
+  @extend .pe-label--bold;
 }

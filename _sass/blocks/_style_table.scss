@@ -6,8 +6,8 @@
     padding: 12px 20px;
     border: 1px solid pe-color(hairline-gray);
     text-align: left;
-    @include pe-label;
-    @include pe-label-bold;
+    @extend .pe-label;
+    @extend .pe-label--bold;
 
     &:first-of-type {
       width: 390px;
@@ -18,7 +18,7 @@
     padding: 14px 20px;
     border-bottom: 1px solid pe-color(hairline-gray);
     background-color: pe-color(dirty-ice);
-    @include pe-label;
+    @extend .pe-label;
   }
 
   tr:nth-of-type(2n) {

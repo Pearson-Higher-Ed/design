@@ -57,7 +57,7 @@
     h2 { @include hl2; }
     h3 { @include hl3; }
     h4 { @include hl4; }
-    p, ul, ol { @include pe-copy; }
+    p, ul, ol { @extend .pe-copy; }
     p {
       margin: 0;
       & + p {
@@ -87,7 +87,7 @@
       margin-top: 6px;
 
       p, ul, ol {
-        @include pe-label-small;
+        @extend .pe-label--small;
       }
     }
 
