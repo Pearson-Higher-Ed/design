@@ -28,7 +28,7 @@ dependencies:
     version: 2.0.0-beta.6
   - name: Typography
     version: 2.0.0-beta.9
-  - name: Table
+  - name: Tables
     version: 1.1.0-beta.1
   - name: Buttons
     version: 2.0.0-beta.4
@@ -39,11 +39,11 @@ blocks:
 
   - type: two column
     text: |
-      Some email examples include:
+      Here are a few examples of common email templates:
 
-      * __Email Address Verification__ asks users to confirm the email address to complete the account creation process.
-      * __Username/Password Reset__ provides the users with a link to reset the credentials.
-      * __Password Reset Confirmation__ informs the users of an successful password reset.
+      * __Create an Account__ verifies users' email address to complete the account creation process.
+      * __Forgot Username or Password__ provides the users with a link to reset the credentials.
+      * __Password Successfully Reset__ informs the users of an successful password reset.
       * __Purchase Confirmation__ informs the users of a successful payment transaction other details.
       * __Confirmation for Product Return, Exchange, or Cancellation__
 
@@ -51,13 +51,13 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/Email Address Verification.png
-        caption: Email Address Verification
+        caption: Create an Account
       - type: narrow image
         src: ./assets/Username Password Request.png
-        caption: Username Password Request  
+        caption: Forgot Username or Password
       - type: narrow image
         src: ./assets/Password Reset Confirmation.png
-        caption: Email Reset Confirmation   
+        caption: Password Successfully Reset
 
 
   - type: section
@@ -65,21 +65,21 @@ blocks:
 
   - type: two column
     text: |
-      You can build your email with these basic components, but don't feel you are limited with the items in the list.
+      You can create an email template with these basic components. If there is something that's not defined here, feel free to contact Linda Tsai (linda.tsai@pearson.com).
 
       1. __Logo__
 
-      2. __Greetings__
+      2. __Greeting__
 
       3. __Heading__ is a line of text that explains what the email is about.
 
       4. __Body__ is the main content.
 
-      5. __Table__
+      5. __Table__ is helpful for displaying a lot of information for easy viewing.
 
       6. __Link__ is best for non-crucial call to action.
 
-      7. __Sign-off__
+      7. __Signature__
 
       8. __Divider__ separates the body text from the footer.
 
@@ -100,22 +100,22 @@ blocks:
 
       ### Minimal requirement for an email
       * Logo
-      * Greetings
+      * Greeting
       * Body
-      * Sign-off
+      * Signature
       * Divider
       * Footer
 
-      ### Use 40px blocks for spacing
-      Separate distinct contents or group related contents by using spacing of multiples of 40px. See the illustration on the left for example.
+      ### Use blocks of 40px to separate contents
+      In the image on the right, see how you can use the 40px spacing (in pink) to separate content.
 
-      ### Heading comes after greetings
-      Heading is suggested to have for its clarity and efficiency. It should come after the greetings, but you may break this rule if there is legitimate design reasons. For example, in the Email Verification template, heading comes prior to the greetings in order to have a more natural reading flow.
+      ### Heading comes after greeting
+      Heading is suggested to have for its clarity and efficiency. It should come after the greeting, but you may break this rule if there is legitimate design reasons. For example, in the Email Verification template, heading comes prior to the greeting in order to have a more natural reading flow.
 
     contents:
       - type: wide image
         src: ./assets/Email Components Spacing.png
-        caption: Create spacing using blocks of 40px tall
+        caption: Use blocks of 40px to separate contents
 
 
   - type: two column
@@ -170,7 +170,7 @@ blocks:
       Logo
       : - Height: 45px
 
-      Greetings
+      Greeting
       : - Text size: 16px
         - Text line-height: 24px
         - [Charcoal](/design/c/colors/v2.0.0-beta.6/#rd-charcoal) #252525
@@ -181,7 +181,7 @@ blocks:
         - [Charcoal](/design/c/colors/v2.0.0-beta.6/#rd-charcoal) #252525
 
       Body
-      : - Text style: same as greetings
+      : - Text style: same as greeting
 
       Table
       : - Style: [Basic Table](/design/c/tables/v1.1.0-beta.1)
@@ -190,8 +190,8 @@ blocks:
       Links
       : - [Generic Link](/design/c/typography/v2.0.0-beta.9/#rd-links)
 
-      Sign-off
-      : - Text style: same as greetings
+      Signature
+      : - Text style: same as greeting
 
       Divider
       : - Thickness: 1px
@@ -221,7 +221,7 @@ blocks:
 
     contents:
       - type: wide image
-        src: ./assets/Email Redline_Paddings.png
+        src: ./assets/Email Redline_Frame.png
 
 
 
