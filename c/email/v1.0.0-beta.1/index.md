@@ -28,7 +28,7 @@ dependencies:
     version: 2.0.0-beta.6
   - name: Typography
     version: 2.0.0-beta.9
-  - name: Table
+  - name: Tables
     version: 1.1.0-beta.1
   - name: Buttons
     version: 2.0.0-beta.4
@@ -39,11 +39,11 @@ blocks:
 
   - type: two column
     text: |
-      Some email examples include:
+      Here are a few examples of common email templates:
 
-      * __Email Address Verification__ asks users to confirm the email address to complete the account creation process.
-      * __Username/Password Reset__ provides the users with a link to reset the credentials.
-      * __Password Reset Confirmation__ informs the users of an successful password reset.
+      * __Create an Account__ verifies users' email address to complete the account creation process.
+      * __Forgot Username or Password__ provides the users with a link to reset the credentials.
+      * __Password Successfully Reset__ informs the users of an successful password reset.
       * __Purchase Confirmation__ informs the users of a successful payment transaction other details.
       * __Confirmation for Product Return, Exchange, or Cancellation__
 
@@ -51,13 +51,13 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/Email Address Verification.png
-        caption: Email Address Verification
+        caption: Create an Account
       - type: narrow image
         src: ./assets/Username Password Request.png
-        caption: Username Password Request  
+        caption: Forgot Username or Password
       - type: narrow image
         src: ./assets/Password Reset Confirmation.png
-        caption: Email Reset Confirmation   
+        caption: Password Successfully Reset
 
 
   - type: section
@@ -65,11 +65,11 @@ blocks:
 
   - type: two column
     text: |
-      You can build your email with these basic components, but don't feel you are limited with the items in the list.
+      You can create an email template with these basic components. If there is something that's not defined here, feel free to contact Linda Tsai (linda.tsai@pearson.com).
 
-      1. __Logo__
+      1. __Logo__lllll
 
-      2. __Greetings__
+      2. __Greeting__
 
       3. __Heading__ is a line of text that explains what the email is about.
 
@@ -79,7 +79,7 @@ blocks:
 
       6. __Link__ is best for non-crucial call to action.
 
-      7. __Sign-off__
+      7. __Signature__
 
       8. __Divider__ separates the body text from the footer.
 
@@ -100,9 +100,9 @@ blocks:
 
       ### Minimal requirement for an email
       * Logo
-      * Greetings
+      * Greeting
       * Body
-      * Sign-off
+      * Signature
       * Divider
       * Footer
 
