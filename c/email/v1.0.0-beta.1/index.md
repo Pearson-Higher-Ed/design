@@ -67,7 +67,7 @@ blocks:
     text: |
       You can create an email template with these basic components. If there is something that's not defined here, feel free to contact Linda Tsai (linda.tsai@pearson.com).
 
-      1. __Logo__lllll
+      1. __Logo__
 
       2. __Greeting__
 
@@ -221,7 +221,7 @@ blocks:
 
     contents:
       - type: wide image
-        src: ./assets/Email Redline_Paddings.png
+        src: ./assets/Email Redline_Frame.png
 
 
 
