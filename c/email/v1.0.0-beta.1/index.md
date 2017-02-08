@@ -12,6 +12,9 @@ people:
   - role: Designer
     name: Karen Taxier
     email: karen.taxier@pearson.com
+  - role: Developer
+    name: Rich Evers
+    email: rich.evers@pearson.com  
 
 implementation: https://pearson-elements-v0.surge.sh/elements/typography/
 downloads:
@@ -50,13 +53,13 @@ blocks:
 
     contents:
       - type: narrow image
-        src: ./assets/Email Address Verification.png
+        src: ./assets/template_create an account.png
         caption: Create an Account
       - type: narrow image
-        src: ./assets/Username Password Request.png
+        src: ./assets/template_forgot username or password.png
         caption: Forgot Username or Password
       - type: narrow image
-        src: ./assets/Password Reset Confirmation.png
+        src: ./assets/template_password successfully reset.png
         caption: Password Successfully Reset
 
 
@@ -67,25 +70,25 @@ blocks:
     text: |
       You can create an email template with these basic components. If there is something that's not defined here, feel free to contact Linda Tsai (linda.tsai@pearson.com).
 
-      1. __Logo__
+      * __Logo__
 
-      2. __Greeting__
+      * __Greeting__
 
-      3. __Heading__ is a line of text that explains what the email is about.
+      * __Heading__ is a line of text that explains what the email is about.
 
-      4. __Body__ is the main content.
+      * __Body__ is the main content.
 
-      5. __Table__ is helpful for displaying a lot of information for easy viewing.
+      * __Table__ is helpful for displaying a lot of information for easy viewing.
 
-      6. __Link__ is best for non-crucial call to action.
+      * __Link__ is best for non-crucial call to action.
 
-      7. __Signature__
+      * __Signature__
 
-      8. __Divider__ separates the body text from the footer.
+      * __Divider__ separates the body text from the footer.
 
-      9. __Footer__ contains standard Pearson information. It must include customer support information and copyright text.
+      * __Footer__ contains standard Pearson information. It must include customer support information and copyright text.
 
-      10. __Button__ is the primary call to action.
+      * __Button__ is the primary call to action.
 
     contents:
       - type: wide image
@@ -106,56 +109,58 @@ blocks:
       * Divider
       * Footer
 
-      ### Use blocks of 40px to separate contents
-      In the image on the right, see how you can use the 40px spacing (in pink) to separate content.
+  - type: two column
+    text: |
 
-      ### Heading comes after greeting
-      Heading is suggested to have for its clarity and efficiency. It should come after the greeting, but you may break this rule if there is legitimate design reasons. For example, in the Email Verification template, heading comes prior to the greeting in order to have a more natural reading flow.
+      ### Heading
+      Heading is option. There are three different layouts regarding the usage of the heading. Choose the one that works best depending on the message.
 
     contents:
       - type: wide image
-        src: ./assets/Email Components Spacing.png
-        caption: Use blocks of 40px to separate contents
-
+        src: ./assets/layouts_heading.png
 
   - type: two column
     text: |
 
       ### Responsive Behavior
-      The design is responsive to the size of the viewport. Keep in mind that media query doesn’t work for all clients, so you should design as if there is no breakpoints.The ice blue border grows proportionally to the content width. See [redlines](/design/c/email/beta/#redlines) for more details.
+
+      The content adjusts to the size of the viewport, and the email frame (in digital ice blue) shrinks proportionally with the content.
+
+      Email design differs from web design in a way that not all email clients support media query, which means that some clients won't be able to tell how wide the viewport is. Therefore, when you design, don't rely on breakpoints, instead, come up with a design that fits all sizes.
 
     contents:
       - type: wide image
-        src: ./assets/Email Address Verification.png
+        src: ./assets/template_create an account.png
         caption: Desktop
       - type: narrow image
-        src: ./assets/Email Address Verification_Mobile_iPhone 6_IOS 9.png
+        src: ./assets/template_create an account_mobile.png
         caption: iPhone 6 (IOS 9)
 
   - type: section
-    name: Writing & Design
+    name: Email Content
 
   - type: two column
     text: |
-      ###Be clear and get to the point quickly
-      Users are busy, so don’t make them read to much. Try to simplify the information to reduce cognitive load so to help users focus on the message and tasks.
 
-      ###Calls to action
-      To get readers to perform a task, the call to action should be persuasive. It should be more descriptive than “click here”. Start with command verbs to clarify what clicking a link or button will get to. For example:
+      ### Be clear and concise
+      Users are busy, so don’t make them read too much. Simplify the information to help users focus on the message.
 
-      * Reset Password
-      * Order Now
-      * Read More
+      ### Calls to action
+      The main point of a of call to action is to get users to do something. It should be more descriptive than “click here”. Start with command verbs to clarify what clicking a link or button will get to. For example:
 
-      Give readers a reason why they should perform the call to action. It’s helpful to explain the benefit of taking the action or give a sense of urgency.
+      * Reset password
+      * Order now
+      * Lear more
 
-      ###Buttons v.s. Links
+      Give the users a reason why they should perform the task. It helps to explain the benefit of taking the action or give a sense of urgency.
+
+      ### Buttons v.s. Links
 
       A general rule of thumb is to use only one button for the main call to action so it is clear to the users what they should do.
 
       Unlike buttons, it’s easier to include links within the copy of your email so it doesn’t cause an abrupt halt. However, that makes links easy to miss. An easy way to do that is to lengthen the number of words covered in a link. Besides, use meaningful description for the link text instead of the URL.
 
-      [Learn more on best Email design practices by MailChimp](http://templates.mailchimp.com/design/)
+      [Learn more on best email design practices by MailChimp](http://templates.mailchimp.com/design/)
 
 
   - type: section
@@ -213,6 +218,24 @@ blocks:
 
   - type: two column
     text: |
+      ### Allow 60px spacing under the first block of text
+
+    contents:
+      - type: wide image
+        src: ./assets/layouts_heading_redline.png
+
+
+  - type: two column
+    text: |
+      ### Separate contents using 40px blocks
+
+    contents:
+      - type: wide image
+        src: ./assets/Email Components Spacing.png
+
+
+  - type: two column
+    text: |
       ### Responsive Behavior
       The design is responsive to the size of the viewport.
 
@@ -222,6 +245,9 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/Email Redline_Frame.png
+
+
+
 
 
 
