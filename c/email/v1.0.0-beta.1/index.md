@@ -16,12 +16,12 @@ people:
     name: Rich Evers
     email: rich.evers@pearson.com  
 
-implementation: https://pearson-elements-v0.surge.sh/elements/typography/
+implementation: https://bitbucket.pearson.com/login?next=/projects/PROTO/repos/idam-email-templates/browse/README.md
 downloads:
   - name: Sketch
     link: ./assets/Email Template_5.sketch
   - name: UXD Accessibility Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/1gYypf7WpDkSSMsB29Qa9woJLdPsiwGIZ-u0LrH650Vs/edit?usp=sharing
+    link: https://docs.google.com/document/d/1eTnQ9XujqAWiv_YU4Fct1e1XXSmyA-ikNSHzJQ7hnzc/edit
 
 
 tagline: Emails inform the users about a specific task or message. They may contain critical information, require decisions, or involve multiple tasks.
@@ -52,6 +52,8 @@ blocks:
 
 
     contents:
+      - type: wide image
+        src: ./assets/email in context.png
       - type: narrow image
         src: ./assets/template_create an account.png
         caption: Create an Account
@@ -76,7 +78,7 @@ blocks:
 
       * __Heading__ is a line of text that explains what the email is about.
 
-      * __Body__ is the main content.
+      * __Body Copy__ is used for the main content.
 
       * __Table__ is helpful for displaying a lot of information for easy viewing.
 
@@ -84,9 +86,9 @@ blocks:
 
       * __Signature__
 
-      * __Divider__ separates the body text from the footer.
+      * __Divider__ separates the body from the footer.
 
-      * __Footer__ contains standard Pearson information. It must include customer support information and copyright text.
+      * __Footer__ contains standard Pearson information. You must follow the copy provided in the templates, but if you need to add more information in the footer, place it between the divider and the current copy.
 
       * __Button__ is the primary call to action.
 
@@ -99,19 +101,6 @@ blocks:
 
   - type: two column
     text: |
-      Build an email using the components following these rules:
-
-      ### Minimal requirement for an email
-      * Logo
-      * Greeting
-      * Body
-      * Signature
-      * Divider
-      * Footer
-
-  - type: two column
-    text: |
-
       ### Heading
       Heading is option. There are three different layouts regarding the usage of the heading. Choose the one that works best depending on the message.
 
@@ -136,32 +125,6 @@ blocks:
         src: ./assets/template_create an account_mobile.png
         caption: iPhone 6 (IOS 9)
 
-  - type: section
-    name: Email Content
-
-  - type: two column
-    text: |
-
-      ### Be clear and concise
-      Users are busy, so don’t make them read too much. Simplify the information to help users focus on the message.
-
-      ### Calls to action
-      The main point of a of call to action is to get users to do something. It should be more descriptive than “click here”. Start with command verbs to clarify what clicking a link or button will get to. For example:
-
-      * Reset password
-      * Order now
-      * Lear more
-
-      Give the users a reason why they should perform the task. It helps to explain the benefit of taking the action or give a sense of urgency.
-
-      ### Buttons v.s. Links
-
-      A general rule of thumb is to use only one button for the main call to action so it is clear to the users what they should do.
-
-      Unlike buttons, it’s easier to include links within the copy of your email so it doesn’t cause an abrupt halt. However, that makes links easy to miss. An easy way to do that is to lengthen the number of words covered in a link. Besides, use meaningful description for the link text instead of the URL.
-
-      [Learn more on best email design practices by MailChimp](http://templates.mailchimp.com/design/)
-
 
   - type: section
     name: Redlines
@@ -185,7 +148,7 @@ blocks:
         - Text line-height: 38px
         - [Charcoal](/design/c/colors/v2.0.0-beta.6/#rd-charcoal) #252525
 
-      Body
+      Body Copy
       : - Text style: same as greeting
 
       Table
@@ -236,15 +199,38 @@ blocks:
 
   - type: two column
     text: |
-      ### Responsive Behavior
-      The design is responsive to the size of the viewport.
-
-      - The white area has a padding of 5.25%
-      - The ice blue frame has a padding of 3.75%
+      ### The frame adjusts to the width of the viewport
 
     contents:
       - type: wide image
         src: ./assets/Email Redline_Frame.png
+
+
+  - type: section
+    name: Email Content
+
+  - type: two column
+    text: |
+
+      ### Be clear and concise
+      Users are busy, so don’t make them read too much. Simplify the information to help users focus on the message.
+
+      ### Calls to action
+      The main point of a of call to action is to get users to do something. It should be more descriptive than “click here”. Start with command verbs to clarify what clicking a link or button will get to. For example:
+
+      * Reset password
+      * Order now
+      * Learn more
+
+      Give the users a reason why they should perform the task. It helps to explain the benefit of taking the action or give a sense of urgency.
+
+      ### Buttons vs. links
+
+      A general rule of thumb is to use only one button for the main call to action so it is clear to the users what they should do.
+
+      Unlike buttons, it’s easier to include links within the copy of your email so it doesn’t cause an abrupt halt. However, that makes links easy to miss. An easy way to do that is to lengthen the number of words covered in a link. Besides, use meaningful description for the link text instead of the URL.
+
+      [Learn more about best email design practices by MailChimp](http://templates.mailchimp.com/design/)
 
 
 
