@@ -1,0 +1,106 @@
+<div class="sidebar">
+  <a href="{{site.baseurl}}/">
+    <header>
+      UX Framework
+    </header>
+  </a>
+
+  {% assign learn_pages = '' | split: '' %}
+  {% assign use_pages = '' | split: '' %}
+  {% assign contribute_pages = '' | split: '' %}
+  {% assign element_pages = '' | split: '' %}
+  {% assign compound_pages = '' | split: '' %}
+
+  {% for page in site.pages %}
+    {% comment %}
+    Short circuit out pages we're not interested in.
+    {% endcomment %}
+
+    {% if page.status != nil %}
+      {% if page.status != 'active' %}
+        {% continue %}
+      {% endif %}
+    {% endif %}
+
+    {% if page.private == true %}
+      {% continue %}
+    {% endif %}
+
+    {% if page.url contains 'beta' %}
+      {% continue %}
+    {% endif %}
+
+    {% case page.section %}
+      {% when 'learn' %}
+        {% assign learn_pages = learn_pages | push: page %}
+      {% when 'use' %}
+        {% assign use_pages = use_pages | push: page %}
+      {% when 'contribute' %}
+        {% assign contribute_pages = contribute_pages | push: page %}
+      {% when 'Components' %}
+        {% assign element_pages = element_pages | push: page %}
+      {% else %}
+    {% endcase %}
+  {% endfor %}
+
+  <div class="sidebar-toc">
+    <ul>
+      <li>
+        Learn
+        <ul>
+          {% for page in learn_pages %}
+            <li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+      <li>
+        Use
+        <ul>
+          {% for page in use_pages %}
+            <li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+      <li>
+        Contribute
+        <ul>
+          {% for page in contribute_pages %}
+            <li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+      <li>
+        Elements
+        <ul>
+          {% for page in element_pages %}
+            <li><a href="{{site.baseurl}}{{page.url}}..">{{page.title}}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+      <li>Compounds</li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="ultimate-header">
+  <img class="burger" src="{{site.baseurl}}/assets/burger.svg"> {{page.title}}
+</div>
+
+<script type="text/javascript">
+  var sidebar = document.querySelector('.sidebar');
+  var closeSidebar = function() {
+    sidebar.classList.remove('open');
+  };
+  var openSidebar = function() {
+    sidebar.classList.add('open');
+  }
+
+  document.addEventListener('click', function(e) {
+    if (event.target.closest('.burger')) {
+      openSidebar();
+    } else if (!event.target.closest('.sidebar')) {
+      closeSidebar();
+    }
+  });
+</script>
