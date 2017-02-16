@@ -44,11 +44,10 @@ blocks:
     text: |
       Here are a few examples of common email templates:
 
-      * __Create an Account__ verifies users' email address to complete the account creation process.
-      * __Forgot Username or Password__ provides the users with a link to reset the credentials.
-      * __Password Successfully Reset__ informs the users of an successful password reset.
-      * __Purchase Confirmation__ informs the users of a successful payment transaction other details.
-      * __Confirmation for Product Return, Exchange, or Cancellation__
+      * __Email Verification__ verifies users' email address to complete the account creation process.
+      * __Username or Password Reset__ provides the users with a link to reset the credentials.
+      * __Password Reset Confirmation__ informs the users of a successful password reset.
+
 
 
     contents:
@@ -56,13 +55,13 @@ blocks:
         src: ./assets/email in context.png
       - type: narrow image
         src: ./assets/template_create an account.png
-        caption: Create an Account
+        caption: Email Verification
       - type: narrow image
         src: ./assets/template_forgot username or password.png
-        caption: Forgot Username or Password
+        caption: Username or Password Reset
       - type: narrow image
         src: ./assets/template_password successfully reset.png
-        caption: Password Successfully Reset
+        caption: Password Reset Confirmation
 
 
   - type: section
