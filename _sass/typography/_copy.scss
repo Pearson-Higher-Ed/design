@@ -13,10 +13,10 @@
 }
 
 @mixin pe-link {
-  color: pe-color(hyperdrive);
+  color: $pe-color-digital-pearson-blue;
 
   &:hover {
-    color: pe-color(royal-navy);
+    color: $pe-color-ink-blue;
     text-decoration: none;
   }
 }

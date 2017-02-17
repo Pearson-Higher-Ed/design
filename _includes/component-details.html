@@ -22,30 +22,15 @@
 <div class="top-level-content">
   <div class="blocks">
     <div class="block article_header">
-      <h1 class="pe-title pe-title--extra-large">{{page.title}}</h1>
-      <p class="pe-label pe-label--large">Version {{page.version}} &bull; <span class="status">{{page.status | capitalize}}</span>{% if page.implementation %} &bull; <span><a href="{{page.implementation}}">Dev Docs</a></span>{% endif %}</p>
+      <h1 class="pe-page-title">{{page.title}}</h1>
+      <span class="pe-label pe-label--large">v{{page.version}} &bull; </span>
+      <span class="pe-label pe-label--large">See latest proposed version</span>
     </div>
 
     <div class="block overview">
       <div>
         <p class="pe-lead tagline">{{page.tagline}}</p>
         {% if page.description %}<div class="description">{{page.description | markdownify}}</div>{% endif %}
-
-        <div class="info">
-          <div class="feature_list">
-            <h3>Feature List</h3>
-            <ul>
-              {% for feature in page.features %}
-              <li>{{feature}}</li>
-              {% endfor %}
-            </ul>
-          </div>
-
-          <div class="usage">
-            <h3>Usage Guidelines</h3>
-            {% if page.usage_guidelines %}{{page.usage_guidelines | markdownify}}{% endif %}
-          </div>
-        </div>
 
         <div class="article_info">
           <div class="people">
@@ -85,7 +70,6 @@
       </div>
 
       <div class="toc">
-        <div class="pe-label pe-label--bold">Table of Contents</div>
         <ul>
           {% for heading in page.blocks %}
             {% if heading.type == 'section' %}

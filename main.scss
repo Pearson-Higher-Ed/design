@@ -21,6 +21,10 @@
 @import "side_toc";
 @import "sidebar";
 
+html {
+  font-size: 0.875rem;
+}
+
 body {
   background-color: pe-color('off-white');
 }
