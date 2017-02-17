@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Notifications
 section: Components
-version: 1.0.0-beta.1
-status: deprecated
+version: 1.0.0-beta.2
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -17,7 +17,7 @@ downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1mO6K4RV0GKQzrLp1PpHibzrsnIVq0ImdPZ1ZISlWZ1o/edit?usp=sharing
   - name: .sketch mockup
-    link: ./assets/application-header.mockup.sketch
+    link: ./assets/notifications.mockup.sketch
 
 dependencies:
   - name: Typography
@@ -101,7 +101,7 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/redline-notelist.png
-      - type: narrow image
+      - type: wide image
         src: ./assets/redline-no-message.png
 
 
@@ -123,9 +123,6 @@ blocks:
 
       Typography
       : - Inherited from the notification list style
-
-      Title
-      : - Back label reads "Back to Notifications" if triggered from the active list, "Back to Notification Archive" if triggered from the archive
 
     contents:
       - type: wide image
@@ -154,6 +151,9 @@ blocks:
 
 
 changelog:
+  - version: 1.0.0-beta.2
+    changes: |
+      - CHANGED: Copy to match UA recommendations.
   - version: 1.0.0-beta.1
     changes: Initial design
 ---
