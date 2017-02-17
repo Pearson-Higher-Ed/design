@@ -1,0 +1,54 @@
+@mixin default-strategy(){
+
+    @each $breakpoint in map-keys($pe-responsive-breakpoints) {
+
+      $current-margin                : map-get($pe-container-margin, $breakpoint);
+      $current-breakpoint-value-gets : get-breakpoint-value($breakpoint);
+
+      //Construct media query
+      @media(min-width: $current-breakpoint-value-gets){
+
+        .pe-strategy__default{
+          margin-right : $current-margin / - 1;
+          margin-left  : $current-margin / - 1;
+        };
+      };
+    };
+
+};
+
+
+
+@mixin centered-strategy(){
+
+  .pe-strategy__centered > * {
+    margin-right: auto;
+    margin-left : auto;
+  };
+
+};
+
+
+@mixin left_right-strategy(){
+
+  @each $breakpoint in map-keys($pe-responsive-breakpoints) {
+
+    $current-margin                : map-get($pe-container-margin, $breakpoint);
+    $current-breakpoint-value-gets : get-breakpoint-value($breakpoint);
+
+    //Construct media query
+    @media(min-width: $current-breakpoint-value-gets){
+
+      .pe-strategy__left_right > :first-child {
+        margin-left : $current-margin / - 1;
+        float       : left;
+      };
+
+      .pe-strategy__left_right > :last-child {
+        margin-right : $current-margin / - 1;
+        float        : right;
+      };
+    };
+  };
+
+};

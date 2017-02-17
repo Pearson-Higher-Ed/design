@@ -1,0 +1,65 @@
+////
+/// @group o-header
+/// @link https://origami.pearsoned.com/registry/components/o-header
+////
+
+// Box sizing baseline
+.o-header {
+	box-sizing: border-box;
+}
+
+.o-header *,
+.o-header *:before,
+.o-header *:after {
+	box-sizing: inherit;
+}
+
+// Base
+.o-header {
+	box-sizing: border-box;
+	width: 100%;
+	min-height: $o-header-height-mobile;
+	z-index: $o-header-z-index;
+	background-color: $o-header-bg;
+	color: $o-header-text-color;
+	font-size: $o-header-base-font-size;
+
+	a {
+		text-decoration: none;
+		color: $o-header-link-color;
+		outline-offset: -2px;
+
+		&:hover,
+		&:focus {
+			color: $o-header-link-hover-color;
+		}
+	}
+
+	&::before,
+	&::after {
+		display: table;
+		content: '';
+	}
+
+	&::after {
+		clear: both;
+	}
+
+	@media (min-width: $o-header-height-breakpoint) {
+		min-height: $o-header-height;
+	}
+}
+
+.o-header--fixed {
+	position: fixed;
+	top: 0;
+}
+
+// Sections
+.o-header__section {
+	float: left;
+}
+
+.o-header__section--right {
+	float: right;
+}

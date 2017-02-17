@@ -1,0 +1,33 @@
+////
+/// @group o-header
+/// @link https://origami.pearsoned.com/registry/components/o-header
+////
+
+.o-header__nav {
+	width: auto;
+	float: left;
+}
+
+.o-header__nav-items {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.o-header__nav-item {
+	float: left;
+	height: $o-header-height-mobile;
+
+	> a {
+		@include nav-link;
+	}
+
+
+	@media (min-width: $o-header-desktop-min) {
+		height: $o-header-height;
+	}
+}
+
+.o-header__nav-item--active {
+	background: $o-header-nav-link-active-bg;
+}

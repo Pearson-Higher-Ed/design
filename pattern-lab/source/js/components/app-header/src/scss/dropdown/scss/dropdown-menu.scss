@@ -1,0 +1,161 @@
+.o-dropdown-menu {
+	position: relative;
+	font-size: $o-dropdown-menu-base-font-size;
+}
+
+// Menu item container
+.o-dropdown-menu__menu-items {
+	position: absolute;
+	left: 0;
+	z-index: $o-dropdown-menu-z-index;
+	display: none;
+	float: left;
+	min-width: 160px;
+	padding: 10px 0;
+	margin: 0;
+	list-style: none;
+	text-align: left;
+	background-color: $o-dropdown-menu-bg;
+	border: 1px solid $o-dropdown-menu-border;
+}
+
+.o-dropdown-menu--expanded > .o-dropdown-menu__menu-items {
+	display: block;
+}
+
+.o-dropdown-menu--up > .o-dropdown-menu__menu-items {
+	bottom: 100%;
+}
+
+.o-dropdown-menu--right > .o-dropdown-menu__menu-items {
+	right: 0;
+	left: auto;
+}
+
+// Menu item
+.o-dropdown-menu__menu-item > a,
+.o-dropdown-menu__menu-item > button {
+	display: block;
+	padding: $o-dropdown-menu-menu-item-padding;
+	clear: both;
+	text-decoration: none;
+	color: $o-dropdown-menu-link-color;
+	white-space: nowrap;
+	outline-offset: -2px;
+
+	&:hover,
+	&:focus {
+		color: $o-dropdown-menu-link-hover-color;
+		background-color: $o-dropdown-menu-link-hover-bg;
+	}
+
+}
+
+.o-dropdown-menu__menu-item > button {
+	min-width: 100%;
+	margin: 0;
+	border: 0;
+	font-size: inherit;
+	font-family: inherit;
+	text-align: left;
+	cursor: pointer;
+	background-color: $o-dropdown-menu-bg;
+
+	// Remove extra space in FF
+	&::-moz-focus-inner {
+		padding: 0;
+		border: 0;
+	}
+}
+
+// Divider
+.o-dropdown-menu__divider {
+	height: 1px;
+	margin: 9px 0;
+	overflow: hidden;
+	background-color: $o-dropdown-menu-divider-bg;
+}
+
+// Heading
+.o-dropdown-menu__heading {
+	font-size: $o-dropdown-menu-heading-font-size;
+}
+
+.o-dropdown-menu__heading:not(.o-dropdown-menu__menu-item) {
+	padding: $o-dropdown-menu-menu-item-padding;
+	color: $o-dropdown-menu-heading-color;
+
+	> a {
+		text-decoration: none;
+	}
+}
+
+// Disabled state
+.o-dropdown-menu__menu-item--disabled > a,
+.o-dropdown-menu__menu-item > button:disabled {
+
+	&,
+	&:hover,
+	&:focus {
+		color: $o-dropdown-menu-link-disabled-color;
+	}
+
+	// Remove hover/focus effects
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		background-color: transparent;
+		background-image: none;
+		cursor: not-allowed;
+	}
+
+}
+
+// Inverse
+.o-dropdown-menu--inverse {
+
+	.o-dropdown-menu__menu-items {
+		background-color: $o-dropdown-menu-bg-inverse;
+		border: 1px solid $o-dropdown-menu-border-inverse;
+	}
+
+	.o-dropdown-menu__menu-item > a,
+	.o-dropdown-menu__menu-item > button {
+		color: $o-dropdown-menu-link-color-inverse;
+
+		&:hover,
+		&:focus {
+			color: $o-dropdown-menu-link-hover-color-inverse;
+			background-color: $o-dropdown-menu-link-hover-bg-inverse;
+		}
+	}
+
+	.o-dropdown-menu__menu-item > button {
+		background-color: $o-dropdown-menu-bg-inverse;
+	}
+
+	.o-dropdown-menu__menu-item--disabled > a,
+	.o-dropdown-menu__menu-item > button:disabled {
+
+		&,
+		&:hover,
+		&:focus {
+			color: $o-dropdown-menu-link-disabled-color-inverse;
+		}
+
+		// Remove hover/focus effects
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			background-color: transparent;
+			background-image: none;
+			cursor: not-allowed;
+		}
+
+	}
+
+	.o-dropdown-menu__divider {
+		background-color: $o-dropdown-menu-divider-bg-inverse;
+	}
+
+}

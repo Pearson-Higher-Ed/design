@@ -1,0 +1,18 @@
+////
+/// @group o-app-header
+/// @link https://origami.pearsoned.com/registry/components/o-app-header
+////
+
+$o-app-header-height-mobile: $o-header-height-mobile !default;
+$o-app-header-height: $o-header-height !default;
+$o-app-header-nav-link-line-height: $o-header-nav-link-line-height !default;
+$o-app-header-z-index: 1000 !default;
+
+// TODO: replace with o-colors
+$o-app-header-menu-item-disabled-color: #999999 !default;
+$o-app-header-menu-course-nav-bg: #666666 !default;
+
+// Light theme
+// TODO: replace with o-colors
+$o-app-header-menu-item-disabled-color-light: #808080 !default;
+$o-app-header-menu-course-nav-bg-light: #cccccc !default;

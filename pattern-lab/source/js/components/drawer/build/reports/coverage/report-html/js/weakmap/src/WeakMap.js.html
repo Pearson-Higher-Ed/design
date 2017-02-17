@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for js/weakmap/src/WeakMap.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../prettify.css">
+    <link rel="stylesheet" href="../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header medium">
+    <h1>Code coverage report for <span class="entity">js/weakmap/src/WeakMap.js</span></h1>
+    <h2>
+        Statements: <span class="metric">52.17% <small>(12 / 23)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">40% <small>(8 / 20)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">50% <small>(3 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">52.63% <small>(10 / 19)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">js/weakmap/src/</a> &#187; WeakMap.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * @license
+ * Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
+ * This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+ * Code distributed by Google as part of the polymer project is also
+ * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+ */
+// @version 0.7.9
+&nbsp;
+(function (root) {
+  var defineProperty = Object.defineProperty;
+  var counter = Date.now() % 1e9;
+&nbsp;
+  var WeakMap = function() {
+    this.name = "__st" + (Math.random() * 1e9 &gt;&gt;&gt; 0) + (counter++ + "__");
+  };
+&nbsp;
+  WeakMap.prototype = {
+    set: function(key, value) {
+      var entry = key[this.name];
+      if (entry &amp;&amp; entry[0] === key) entry[1] = value; else defineProperty(key, this.name, {
+        value: [ key, value ],
+        writable: true
+      });
+      return this;
+    },
+    get: <span class="fstat-no" title="function not covered" >function(key) {</span>
+<span class="cstat-no" title="statement not covered" >      var entry;</span>
+<span class="cstat-no" title="statement not covered" >      return (entry = key[this.name]) &amp;&amp; entry[0] === key ? entry[1] : undefined;</span>
+    },
+    'delete': <span class="fstat-no" title="function not covered" >function(key) {</span>
+<span class="cstat-no" title="statement not covered" >      var entry = key[this.name];</span>
+<span class="cstat-no" title="statement not covered" >      if (!entry || entry[0] !== key) <span class="cstat-no" title="statement not covered" >return false;</span></span>
+<span class="cstat-no" title="statement not covered" >      entry[0] = entry[1] = undefined;</span>
+<span class="cstat-no" title="statement not covered" >      return true;</span>
+    },
+    has: <span class="fstat-no" title="function not covered" >function(key) {</span>
+<span class="cstat-no" title="statement not covered" >      var entry = key[this.name];</span>
+<span class="cstat-no" title="statement not covered" >      if (!entry) <span class="cstat-no" title="statement not covered" >return false;</span></span>
+<span class="cstat-no" title="statement not covered" >      return entry[0] === key;</span>
+    }
+  };
+&nbsp;
+  module.exports = (root || <span class="branch-1 cbranch-no" title="branch not covered" >{})</span>.WeakMap || WeakMap;
+&nbsp;
+})(this || <span class="branch-1 cbranch-no" title="branch not covered" >window)</span>;
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Sep 21 2016 15:40:43 GMT+0000 (UTC)</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

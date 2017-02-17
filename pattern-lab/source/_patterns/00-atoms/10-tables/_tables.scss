@@ -1,0 +1,31 @@
+table {
+  &.pe-proto {
+	thead {
+      background-color:$neutral-four;
+	  border:1px solid $border;
+    }
+	
+	tr {
+	  border-bottom:1px solid $border;
+	  &:nth-child(even) {
+		background-color:$primary-four;
+	  }
+	}
+	
+	th {
+	  padding:em(12) em(20);
+	  border-right:1px solid $border;
+	}
+	
+	td {
+	  padding:em(14) em(20);
+	  vertical-align: middle;
+	}
+
+	&.small {
+	  th, td {
+		padding:5px 20px;
+	  }
+	}
+  }
+}

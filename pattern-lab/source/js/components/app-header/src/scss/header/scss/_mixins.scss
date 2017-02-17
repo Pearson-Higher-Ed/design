@@ -1,0 +1,46 @@
+// scss-lint:disable ImportantRule
+
+////
+/// @group o-header
+/// @link https://origami.pearsoned.com/registry/components/o-header
+////
+
+@mixin nav-link {
+	display: block;
+	padding: (($o-header-height-mobile - $o-header-nav-link-line-height) / 2) $o-header-nav-link-padding;
+	line-height: $o-header-nav-link-line-height;
+	text-decoration: none;
+	color: $o-header-link-color;
+	font-size: 16px;
+
+	&:hover,
+	&:focus {
+		color: $o-header-link-hover-color;
+	}
+
+	@media (min-width: $o-header-desktop-min) {
+		padding: (($o-header-height - $o-header-nav-link-line-height) / 2) $o-header-nav-link-padding;
+	}
+}
+
+@mixin nav-link-light {
+	color: $o-header-link-color-light;
+
+	&:hover,
+	&:focus {
+		color: $o-header-link-hover-color-light;
+	}
+}
+
+// Responsive
+@mixin responsive-visible($parent) {
+	#{$parent} {
+		display: block !important;
+	}
+}
+
+@mixin responsive-hidden($parent) {
+	#{$parent} {
+		display: none !important;
+	}
+}

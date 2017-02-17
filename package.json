@@ -1,0 +1,30 @@
+{
+  "name": "elements-patternlab",
+  "version": "0.1.1",
+  "description": "Patternlab setup with Pearson Elements CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "gulp install"
+  },
+  "author": "Pearson Prototyping Team",
+  "license": "ISC",
+  "devDependencies": {
+    "browserslist": "^1.7.2",
+    "edition-node-gulp": "1.3.4",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-exec": "^2.1.2",
+    "gulp-header-footer": "0.0.3",
+    "gulp-html-prettify": "0.0.1",
+    "gulp-inject": "^4.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-postcss": "^6.3.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-ruby-sass": "^2.0.6",
+    "gulp-sftp": "^0.1.5",
+    "gulp-strip-comments": "^2.4.3",
+    "pearson-elements": "^1.0.6",
+    "require-dir": "^0.3.0"
+  }
+}

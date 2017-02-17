@@ -1,0 +1,107 @@
+/* This component is experimental and not available for production use. If you need a component with this functionality, please contact us in the Pearson Design Accelerator hipchat room */
+
+.pe-dropdown-menu {
+  position: relative;
+}
+
+.pe-dropdown-menu__menu-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: $pe-dropdown-z-index;
+  display: none;
+  float: left;
+  min-width: 160px;
+  width: auto;
+  padding: 10px 0;
+  margin: 0;
+  list-style: none;
+  text-align: left;
+  background-color: $pe-dropdown-menu-bg;
+  border: 1px solid $pe-dropdown-menu-border;
+}
+
+.pe-dropdown-menu--expanded > .pe-dropdown-menu__menu-items {
+  display: block;
+}
+
+.pe-dropdown-menu--right > .pe-dropdown-menu__menu-items {
+  right: 0;
+  left: auto;
+}
+
+// Menu item
+.pe-dropdown-menu__menu-item > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  text-decoration: none;
+  color: $pe-dropdown-menu-link-color;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    color: $pe-dropdown-menu-link-hover-color;
+    background-color: $pe-dropdown-menu-link-hover-bg;
+  }
+
+}
+
+// Divider
+.pe-dropdown-menu__divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: $pe-dropdown-menu-divider-bg;
+}
+
+.pe-dropdown-menu__menu-item--disabled > a {
+
+  &,
+  &:hover,
+  &:focus {
+    color: $pe-dropdown-menu-link-disabled-color;
+  }
+
+  // Remove hover/focus effects
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-color: transparent;
+    background-image: none;
+    cursor: not-allowed;
+  }
+}
+
+.pe-dropdown-menu--inverse {
+
+  .pe-dropdown-menu__menu-items {
+    background-color: $pe-dropdown-menu-bg-inverse;
+    border: 1px solid $pe-dropdown-menu-border-inverse;
+  }
+
+  .pe-dropdown-menu__menu-item > a {
+    color: $pe-dropdown-menu-link-color-inverse;
+
+    &:hover,
+    &:focus {
+      color: $pe-dropdown-menu-link-hover-color-inverse;
+      background-color: $pe-dropdown-menu-link-hover-bg-inverse;
+    }
+  }
+
+  .pe-dropdown-menu__menu-item--disabled > a {
+
+    &,
+    &:hover,
+    &:focus {
+      color: $pe-dropdown-menu-link-disabled-color-inverse;
+    }
+
+  }
+
+  .pe-dropdown-menu__divider {
+    background-color: $pe-dropdown-menu-divider-bg-inverse;
+  }
+
+}

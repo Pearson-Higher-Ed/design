@@ -1,0 +1,1383 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for js/AppHeader.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">js/AppHeader.js</span></h1>
+    <h2>
+        Statements: <span class="metric">97.71% <small>(171 / 175)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">92.77% <small>(77 / 83)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">96.43% <small>(27 / 28)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">99.39% <small>(163 / 164)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">js/</a> &#187; AppHeader.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328
+329
+330
+331
+332
+333
+334
+335
+336
+337
+338
+339
+340
+341
+342
+343
+344
+345
+346
+347
+348
+349
+350
+351
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362
+363
+364
+365
+366
+367
+368
+369
+370
+371
+372
+373
+374
+375
+376
+377
+378
+379
+380
+381
+382
+383
+384
+385
+386
+387
+388
+389
+390
+391
+392
+393
+394
+395
+396
+397
+398
+399
+400
+401
+402
+403
+404
+405
+406
+407
+408
+409
+410
+411
+412
+413
+414
+415
+416
+417
+418
+419
+420
+421
+422
+423
+424
+425
+426
+427
+428
+429
+430
+431
+432
+433
+434
+435
+436
+437
+438
+439
+440
+441
+442
+443
+444
+445
+446
+447</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-yes">54</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">44</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">44</span>
+<span class="cline-any cline-yes">43</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">43</span>
+<span class="cline-any cline-yes">43</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">100</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">152</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">152</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">24</span>
+<span class="cline-any cline-yes">24</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">56</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">93</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">99</span>
+<span class="cline-any cline-yes">99</span>
+<span class="cline-any cline-yes">99</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">99</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">130</span>
+<span class="cline-any cline-yes">130</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">130</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">130</span>
+<span class="cline-any cline-yes">106</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">130</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">130</span>
+<span class="cline-any cline-yes">130</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">130</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">99</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">99</span>
+<span class="cline-any cline-yes">61</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">99</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">99</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">99</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">99</span>
+<span class="cline-any cline-yes">20</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">99</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">99</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">96</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">96</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">131</span>
+<span class="cline-any cline-yes">131</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">127</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-yes">12</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">131</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">99</span>
+<span class="cline-any cline-yes">99</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">99</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">96</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+var assign = require('object-assign/index');
+var dom = require('./utils/dom');
+var get = require('./utils/get');
+var forEach = require('./utils/forEach');
+var patch = require('../../lib/incremental-dom').patch;
+var template = require('./template');
+var I18n = require('./utils/I18n');
+var DropdownMenu = require('../scss/dropdown/main.js');
+&nbsp;
+module.exports = AppHeader;
+&nbsp;
+/**
+ * Represents the header for Pearson Higher Ed web applications.
+ * @param {HTMLElement} element
+ * @param {Object} options
+ */
+function AppHeader(element, options) {
+	this.init(element, options);
+}
+&nbsp;
+&nbsp;
+AppHeader.prototype.constants_ = {
+	MODES: ['Signed Out', 'Basic', 'Course', 'Integration', 'Legacy Course'],
+	MAX_COURSE_ITEMS: 5,
+	LOGIN_EVENT: 'oAppHeader.login',
+	LOGOUT_EVENT: 'oAppHeader.logout'
+};
+&nbsp;
+&nbsp;
+/**
+ * Default settings for all AppHeader instances.
+ * @type {Object}
+ */
+AppHeader.defaultSettings = {
+	consoleBaseUrl: 'https://console.pearson.com',
+	links: {
+		home: '{consoleBaseUrl}/console/home',
+		myAccount: '{consoleBaseUrl}/account/manage/account'
+	},
+	menu: {
+		// showAllCoursesMenuItem: false
+	},
+	mode: 'Signed Out',
+	// Mode options
+	showLoginControls: true,
+	menuItems: [],
+	onLogin: noop,
+	onLogout: noop
+};
+&nbsp;
+&nbsp;
+/**
+ * Initializes an AppHeader instance.
+ * @param  {HTMLElement} element
+ * @param  {Object} options
+ * @return {AppHeader}
+ */
+AppHeader.init = <span class="fstat-no" title="function not covered" >function (element, options) {</span>
+<span class="cstat-no" title="statement not covered" >	return new AppHeader(element, options);</span>
+};
+&nbsp;
+&nbsp;
+/**
+ * Initializes the current AppHeader instance.
+ * @param  {HTMLElement} [element] The DOM element to initialize.
+ * Defaults to document.body, in which case the header element is
+ * prepended to the contents of the body element.
+ * @param  {Object} options
+ */
+AppHeader.prototype.init = function (element, options) {
+	if (typeof element === 'object' &amp;&amp; !(element instanceof HTMLElement)) {
+		options = element;
+		element = null;
+	}
+	if (!element) element = document.body;
+	if (!(element instanceof HTMLElement)) element = document.querySelector(element);
+&nbsp;
+	var settings = this.getSettings_(options);
+	var rootEl = this.element = this.constructRootEl_(settings);
+&nbsp;
+	this.i18n_ = new I18n({ locale: settings.locale });
+	this.state_ = assign({}, settings);
+&nbsp;
+	if (element === document.body) {
+		element.insertBefore(rootEl, element.firstChild);
+	} else {
+		// Replace the passed in element with the header element
+		element.parentElement.insertBefore(rootEl, element);
+		element.parentNode.removeChild(element);
+	}
+&nbsp;
+	this.render_();
+};
+&nbsp;
+&nbsp;
+/**
+ * Returns the current header mode.
+ * @return {string} The header mode.
+ */
+AppHeader.prototype.getMode = function () {
+	return this.state_.mode;
+};
+&nbsp;
+&nbsp;
+/**
+ * Sets the header mode.
+ * @param {string} mode The mode.
+ * @param {Object} [options] An object with the options for the specified mode.
+ */
+AppHeader.prototype.setMode = function (mode, options) {
+	var newState = assign({}, this.state_, { mode: mode }, options || {});
+&nbsp;
+	this.validateSettings_(newState);
+	this.setState_(newState, true);
+};
+&nbsp;
+&nbsp;
+/**
+ * Private methods
+ */
+&nbsp;
+&nbsp;
+/**
+ * Updates the internal state by replacing the existing object with a new
+ * object containing the new state.
+ * @param {Object} newState An object containing the new state.
+ * @param {Boolean} [update] If true, update the component's view.
+ */
+AppHeader.prototype.setState_ = function (newState, update) {
+	this.state_ = assign({}, this.state_, newState);
+	<span class="missing-if-branch" title="else path not taken" >E</span>if (update) this.render_();
+};
+&nbsp;
+&nbsp;
+AppHeader.prototype.validateSettings_ = function (settings) {
+	if (this.constants_.MODES.indexOf(settings.mode) === -1) {
+		throw new TypeError('Unrecognized mode, \'' + settings.mode + '\'');
+	}
+};
+&nbsp;
+&nbsp;
+AppHeader.prototype.getSettings_ = function (options) {
+	options = options || {};
+&nbsp;
+	// Merge links object
+	var globalSettings = this.getGlobalSettings_();
+	var links = assign({}, AppHeader.defaultSettings.links, globalSettings.links, options.links);
+&nbsp;
+	var settings = assign({}, AppHeader.defaultSettings, globalSettings, options, { links: links });
+&nbsp;
+	this.validateSettings_(settings);
+&nbsp;
+	return settings;
+};
+&nbsp;
+&nbsp;
+AppHeader.prototype.getGlobalSettings_ = function () {
+	var configEl = document.querySelector('[data-o-app-header-config]');
+	var config = {};
+&nbsp;
+	<span class="missing-if-branch" title="if path not taken" >I</span>if (!configEl) <span class="cstat-no" title="statement not covered" >return config;</span>
+	try { config = JSON.parse(configEl.textContent); } catch (e) { <span class="cstat-no" title="statement not covered" >throw new Error('Unable to parse configuration object: invalid JSON'); </span>}
+	return config;
+};
+&nbsp;
+&nbsp;
+AppHeader.prototype.resolveLink_ = function (key) {
+	<span class="missing-if-branch" title="if path not taken" >I</span>if (!this.state_.links[key] || typeof this.state_.links[key] !== 'string') <span class="cstat-no" title="statement not covered" >return;</span>
+&nbsp;
+	return this.state_.links[key].replace('{consoleBaseUrl}', this.state_.consoleBaseUrl);
+};
+&nbsp;
+&nbsp;
+AppHeader.prototype.constructRootEl_ = function (options) {
+	var element = document.createElement('header');
+&nbsp;
+	element.classList.add('o-app-header');
+	element.setAttribute('role', 'banner');
+	element.classList.add('o-header');
+	element.classList.add('o-header--fixed');
+&nbsp;
+	element.addEventListener('oDropdownMenu.expand', function (e) {
+		forEach(e.target.querySelectorAll('.o-app-header__icon'), function (idx, item) {
+			item.classList.remove('pe-icon--chevron-down');
+			item.classList.add('pe-icon--chevron-up');
+		});
+	});
+&nbsp;
+	element.addEventListener('oDropdownMenu.collapse', function (e) {
+		forEach(e.target.querySelectorAll('.o-app-header__icon'), function (idx, item) {
+			item.classList.remove('pe-icon--chevron-up');
+			item.classList.add('pe-icon--chevron-down');
+		});
+	});
+&nbsp;
+	return element;
+};
+&nbsp;
+&nbsp;
+AppHeader.prototype.setThemeForMode_ = function () {
+	if ((this.state_.mode === 'Course' || this.state_.mode === 'Legacy Course') &amp;&amp;
+		this.state_.theme === 'light') {
+		this.element.classList.add('o-header--theme-light');
+	} else {
+		this.element.classList.remove('o-header--theme-light');
+	}
+};
+&nbsp;
+&nbsp;
+AppHeader.prototype.getDataForRender_ = function () {
+	var mode = this.state_.mode;
+	var data = {};
+	var menuItems = [];
+&nbsp;
+	var menuItemCounter = 0;
+&nbsp;
+	function createMenuItemDef(source, options) {
+		options = options || <span class="branch-1 cbranch-no" title="branch not covered" >{};</span>
+		options.classes = options.classes || <span class="branch-1 cbranch-no" title="branch not covered" >[];</span>
+&nbsp;
+		var defaultClasses = [];
+&nbsp;
+		if (options.classes.indexOf('o-dropdown-menu__divider') === -1) {
+			defaultClasses = ['o-dropdown-menu__menu-item'];
+		}
+&nbsp;
+		var menuItem = assign({}, source);
+&nbsp;
+		menuItem.key = menuItemCounter++;
+		menuItem.classes = defaultClasses.concat(options.classes).join(' ');
+&nbsp;
+		return menuItem;
+	}
+&nbsp;
+	var menuNavItemClasses = ['o-header__nav-item'];
+&nbsp;
+	if (mode === 'Signed Out' &amp;&amp; this.state_.showLoginControls) {
+		menuNavItemClasses.push('o-app-header__nav-item-sign-in');
+	}
+&nbsp;
+	if (mode === 'Basic' ||
+		mode === 'Course' ||
+		mode === 'Legacy Course') {
+		menuNavItemClasses.push('o-app-header__nav-item-menu');
+	}
+&nbsp;
+	menuNavItemClasses = menuNavItemClasses.join(' ');
+&nbsp;
+	if (mode === 'Basic') {
+		var courseItems = get(this.state_, 'courseItems') || [];
+		var courseItemsExceedsMax = false;
+&nbsp;
+		if (courseItems.length &gt; this.constants_.MAX_COURSE_ITEMS) {
+			courseItemsExceedsMax = true;
+			courseItems = courseItems.slice(0, this.constants_.MAX_COURSE_ITEMS);
+		}
+&nbsp;
+		if (courseItems.length) {
+			for (var i = 0, l = courseItems.length; i &lt; l; i++) {
+				menuItems.push(createMenuItemDef(courseItems[i], {
+					classes: [
+						'o-app-header__menu-item-course',
+						'o-header__viewport-tablet--hidden',
+						'o-header__viewport-desktop--hidden'
+					]
+				}));
+			}
+&nbsp;
+			if (courseItemsExceedsMax) {
+				menuItems.push(createMenuItemDef({
+					text: this.i18n_.translate('All courses'),
+					href: this.resolveLink_('home')
+				}, {
+					classes: [
+						'o-app-header__menu-item-all-courses',
+						'o-header__viewport-tablet--hidden',
+						'o-header__viewport-desktop--hidden'
+					]
+				}));
+			}
+&nbsp;
+			menuItems.push(createMenuItemDef({}, {
+				classes: [
+					'o-dropdown-menu__divider',
+					'o-header__viewport-tablet--hidden',
+					'o-header__viewport-desktop--hidden'
+				]
+			}));
+		}
+	}
+&nbsp;
+	if (mode === 'Course' || mode === 'Legacy Course') {
+		menuItems.push(createMenuItemDef({
+			text: this.i18n_.translate('All courses'),
+			href: this.resolveLink_('home')
+		}, {
+			classes: [
+				'o-app-header__menu-item-all-courses',
+				'o-header__viewport-tablet--hidden',
+				'o-header__viewport-desktop--hidden'
+			]
+		}));
+&nbsp;
+		menuItems.push(createMenuItemDef({}, {
+			classes: [
+				'o-dropdown-menu__divider',
+				'o-header__viewport-tablet--hidden',
+				'o-header__viewport-desktop--hidden'
+			]
+		}));
+&nbsp;
+		var courseNav = assign({ items: [] }, get(this.state_, 'courseNav'));
+&nbsp;
+		if (courseNav.heading || courseNav.items.length) {
+			var courseNavRoot = {
+				isCourseNav: true,
+				courseNavMenuItems: []
+			};
+&nbsp;
+			if (courseNav.heading) {
+				courseNavRoot.courseNavMenuItems.push(createMenuItemDef(courseNav.heading, {
+					classes: [
+						'o-app-header__menu-item-course-nav',
+						'o-dropdown-menu__heading'
+					]
+				}));
+			}
+&nbsp;
+			courseNav.items.forEach(function (item) {
+				var classes = ['o-app-header__menu-item-course-nav'];
+&nbsp;
+				if (item.active) classes.push('o-dropdown-menu__menu-item--disabled');
+&nbsp;
+				courseNavRoot.courseNavMenuItems.push(createMenuItemDef(item, {
+					classes: classes
+				}));
+			});
+&nbsp;
+			menuItems.push(courseNavRoot);
+		}
+	}
+&nbsp;
+	if (mode === 'Legacy Course' &amp;&amp; this.state_.menuItems.length) {
+		this.state_.menuItems.forEach(function (menuItem) {
+			menuItems.push(createMenuItemDef(menuItem, {
+				classes: ['o-app-header__menu-item']
+			}));
+		});
+&nbsp;
+		menuItems.push(createMenuItemDef({}, { classes: ['o-dropdown-menu__divider'] }));
+	}
+&nbsp;
+	if (mode === 'Basic' || mode === 'Course' || mode === 'Legacy Course') {
+		// My Account
+		menuItems.push(createMenuItemDef({
+			text: this.i18n_.translate('My Account'),
+			href: this.resolveLink_('myAccount')
+		}, {
+			classes: ['o-app-header__menu-item-my-account']
+		}));
+&nbsp;
+		// Sign Out
+		menuItems.push(createMenuItemDef({
+			text: this.i18n_.translate('Sign Out'),
+			onClick: this.getHandler_('onLogout', this.constants_.LOGOUT_EVENT)
+		}, {
+			classes: ['o-app-header__menu-item-sign-out']
+		}));
+	}
+&nbsp;
+	data = assign({}, this.state_, {
+		mode: mode,
+		links: {
+			home: this.resolveLink_('home')
+		},
+		menuItems: menuItems,
+		menuNavItemClasses: menuNavItemClasses
+	});
+&nbsp;
+	return data;
+};
+&nbsp;
+&nbsp;
+AppHeader.prototype.getHandler_ = function (prop, eventName) {
+	var element = this.element;
+	var handler = this.state_[prop];
+&nbsp;
+	function wrapHandler(handler) {
+		return function (e) {
+			e.preventDefault();
+			<span class="missing-if-branch" title="else path not taken" >E</span>if (eventName) dom.dispatchEvent(element, eventName);
+			handler.call();
+		};
+	}
+&nbsp;
+	if (typeof handler === 'function') return wrapHandler(handler);
+	else if (typeof window[handler] === 'function') return wrapHandler(window[handler]);
+	else throw new TypeError('Expected \'' + prop + '\' to be a function');
+};
+&nbsp;
+&nbsp;
+AppHeader.prototype.render_ = function () {
+	var element = this.element;
+	var i18n = this.i18n_;
+&nbsp;
+	var data = this.getDataForRender_();
+&nbsp;
+	var handlers = {
+		handleLogin: this.getHandler_('onLogin', this.constants_.LOGIN_EVENT),
+		handleHelpNavItemClick: this.handleHelpNavItemClick_.bind(this)
+	};
+&nbsp;
+	this.setThemeForMode_();
+&nbsp;
+	patch(element, function () {
+		template(data, handlers, i18n.translate.bind(i18n));
+		DropdownMenu.init(element);
+		dom.dispatchEvent(element, 'oAppHeader.didUpdate');
+	});
+};
+&nbsp;
+&nbsp;
+AppHeader.prototype.handleHelpNavItemClick_ = function (e) {
+	e.preventDefault();
+&nbsp;
+	// Since we prevent the default action, the dropdown menu nav items
+	// will not collapse automatically.
+	var accountMenuEl = this.element.querySelector('.o-app-header__menu-menu');
+&nbsp;
+	if (accountMenuEl) {
+		accountMenuEl.classList.remove('o-dropdown-menu--expanded');
+&nbsp;
+		var accountMenuIconEls = accountMenuEl.querySelectorAll('.o-app-header__icon');
+&nbsp;
+		forEach(accountMenuIconEls, function (idx, el) {
+			el.classList.remove('pe-icon--chevron-up');
+			el.classList.add('pe-icon--chevron-down');
+		});
+	}
+&nbsp;
+	dom.dispatchEvent(this.element, 'oAppHeader.help.toggle');
+};
+&nbsp;
+function noop() {}
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jun 22 2016 21:53:18 GMT+0000 (UTC)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

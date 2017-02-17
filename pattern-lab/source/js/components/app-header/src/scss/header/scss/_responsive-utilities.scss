@@ -1,0 +1,48 @@
+////
+/// @group o-header
+/// @link https://origami.pearsoned.com/registry/components/o-header
+////
+
+// Visible
+
+.o-header__viewport-phone-sm--visible,
+.o-header__viewport-phone--visible,
+.o-header__viewport-tablet--visible,
+.o-header__viewport-desktop--visible {
+	// scss-lint:disable ImportantRule
+	display: none !important;
+}
+
+@media (max-width: $o-header-phone-sm-max) {
+	@include responsive-visible('.o-header__viewport-phone-sm--visible');
+}
+
+@media (min-width: $o-header-phone-min) and (max-width: $o-header-phone-max) {
+	@include responsive-visible('.o-header__viewport-phone--visible');
+}
+
+@media (min-width: $o-header-tablet-min) and (max-width: $o-header-tablet-max) {
+	@include responsive-visible('.o-header__viewport-tablet--visible');
+}
+
+@media (min-width: $o-header-desktop-min) {
+	@include responsive-visible('.o-header__viewport-desktop--visible');
+}
+
+// Hidden
+
+@media (max-width: $o-header-phone-sm-max) {
+	@include responsive-hidden('.o-header__viewport-phone-sm--hidden');
+}
+
+@media (min-width: $o-header-phone-min) and (max-width: $o-header-phone-max) {
+	@include responsive-hidden('.o-header__viewport-phone--hidden');
+}
+
+@media (min-width: $o-header-tablet-min) and (max-width: $o-header-tablet-max) {
+	@include responsive-hidden('.o-header__viewport-tablet--hidden');
+}
+
+@media (min-width: $o-header-desktop-min) {
+	@include responsive-hidden('.o-header__viewport-desktop--hidden');
+}

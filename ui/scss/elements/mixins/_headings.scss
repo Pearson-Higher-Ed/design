@@ -1,0 +1,102 @@
+
+@mixin pe-heading-large-bold {
+  font-weight: bold;
+  color: $pe-text-heading-l1tol3-color;
+}
+
+@mixin pe-heading-small-italic {
+  font-style: italic;
+  color: $pe-text-heading-l4tol6-color;
+}
+
+@mixin pe-heading-following-content {
+  p + & {
+    margin-top: 20px;
+  }
+}
+
+@mixin pe-heading-following-heading {
+  & + h1,
+  & + h2,
+  & + h3,
+  & + h4,
+  & + h5,
+  & + h6,
+  & + .pe-heading-level1,
+  & + .pe-heading-level2,
+  & + .pe-heading-level3,
+  & + .pe-heading-level4,
+  & + .pe-heading-level5,
+  & + .pe-heading-level6 {
+    margin-top: 6px;
+  }
+}
+
+@mixin pe-heading-level1 {
+  font-size: 24px;
+  line-height: 30px;
+  border-bottom: 2px solid $pe-text-heading-bottom-border;
+
+  & + h1:not(.pe-title),
+  & + h2:not(.pe-title),
+  & + h3:not(.pe-title),
+  & + h4:not(.pe-title),
+  & + h5:not(.pe-title),
+  & + h6:not(.pe-title),
+  & + .pe-heading-level1,
+  & + .pe-heading-level2,
+  & + .pe-heading-level3,
+  & + .pe-heading-level4,
+  & + .pe-heading-level5,
+  & + .pe-heading-level6 {
+    margin-top: 40px;
+  };
+  & + .pe-title {
+    margin-top: 6px;
+  };
+  @include pe-heading-large-bold;
+  @include pe-heading-following-content;
+}
+
+@mixin pe-heading-level2 {
+  font-size: 20px;
+  line-height: 24px;
+  @include pe-heading-large-bold;
+  @include pe-heading-following-content;
+  @include pe-heading-following-heading;
+}
+
+@mixin pe-heading-level3 {
+  font-size: 18px;
+  line-height: 22px;
+  @include pe-heading-large-bold;
+  @include pe-heading-following-content;
+  @include pe-heading-following-heading;
+}
+
+@mixin pe-heading-level4 {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+  color: $pe-text-heading-l4tol6-color;
+  @include pe-heading-following-content;
+  @include pe-heading-following-heading;
+}
+
+@mixin pe-heading-level5 {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  @include pe-heading-small-italic;
+  @include pe-heading-following-content;
+  @include pe-heading-following-heading;
+}
+
+@mixin pe-heading-level6 {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 16px;
+  @include pe-heading-small-italic;
+  @include pe-heading-following-content;
+  @include pe-heading-following-heading;
+}

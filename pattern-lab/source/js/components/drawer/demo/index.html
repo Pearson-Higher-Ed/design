@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <title>drawer demo</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <style>body {
+        margin: 0;
+    }
+
+    .demo-js .o--if-nojs {
+        display: none;
+    }</style>
+    <script>(function (d) {
+        d.className = d.className + ' demo-js';
+    })(document.documentElement);</script>
+</head>
+<body>
+<div data-o-component="o-drawer" id="left-drawer-demo" class="o-drawer-animated" style="padding:5px;">
+    <button type="button" data-target="#left-drawer-demo" data-close="o-drawer">close</button>
+    <br>
+    <h1>Hello Left Drawer</h1>
+    <p>Drawer stuffs... just a Drawer, being a Drawer, doing Drawer things. <a href="#foo">Random link</a> and many other things.</p>
+    <label for="bar" style="display:block;">Bar: </label><input type="text" id="bar" value="focusables">
+</div>
+
+<div data-o-component="o-drawer" id="left-drawer-demo2" class="o-drawer-animated" style="padding:5px;">
+    <button type="button" data-target="#left-drawer-demo2" data-close="o-drawer">close</button>
+    <br>
+    <h1>Other Left Drawer</h1>
+    <p>More Drawer stuffs... just another left Drawer, being a left Drawer, doing left Drawer things. <a href="#quux">Another random link</a> and many <a href="#quux">other</a> things.</p>
+    <label for="baz" style="display:block;">Baz: </label><input type="text" id="baz" value="more focusables">
+</div>
+
+<div data-o-component="o-drawer" id="right-drawer-demo" class="o-drawer-right o-drawer-animated" style="padding:5px;">
+    <button type="button" data-target="#right-drawer-demo" data-close="o-drawer">close</button>
+    <br>
+    <h1>Hello Right Drawer</h1>
+    <p>Right Drawer stuffs... just another right Drawer, being a right Drawer, doing right Drawer things. <a href="#quu">...random link</a> and many <a href="#quu">other</a> right-side things.</p>
+    <form method="get" action="#">
+      <label for="buu" style="display:block;">Buu: </label><input type="text" id="buu" placeholder="type in me" value="">
+      <input type="submit" value="Dummy!">
+    </form>
+</div>
+<div style="width: 240px; margin: 0px auto;">
+    <a href="#left-drawer-demo" data-toggle="o-drawer">Toggle Left Drawer</a><br/>
+    <a href="#left-drawer-demo2" data-toggle="o-drawer">Other Left drawer</a><br/>
+    <a href="#right-drawer-demo" data-toggle="o-drawer">Toggle Right Drawer</a>
+    <br/><br/>
+    <a href="#left-drawer-demo" data-open="o-drawer">Open Left Drawer</a><br/>
+    <a href="#right-drawer-demo" data-open="o-drawer">Open Right Drawer</a>
+    <br/><br/>
+    <a href="#left-drawer-demo" data-close="o-drawer">Close Left Drawer</a><br/>
+    <button type="button" data-target="#right-drawer-demo" data-close="o-drawer">Close Right Drawer</button>
+</div>
+
+<script src="http://localhost:8081/webpack-dev-server.js"></script>
+<script src="https://cdn.polyfill.io/v2/polyfill.js?features=CustomEvent"></script>
+<script src="../build/dev_bundle.drawer.js"></script>
+<script src="./src/demo.js"></script>
+</body>
+</html>

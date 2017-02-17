@@ -1,0 +1,524 @@
+// Variables
+//
+
+// Global paths
+//
+// Paths to assets. Override these variables if you change the location(s)
+// of bundled assets.
+
+$pe-icons-path: '../fonts/' !default;
+// Icon font filename without the extension.
+$pe-icons-name: 'pearson-fa' !default;
+
+$pe-images-path: '../images/';
+$pe-header-logo-sprite-name: 'pearson-sprite.svg' !default;
+
+
+// Colors
+//
+
+$pe-colors: (
+  // grayscale
+  pitch: #231f20,
+  gray-no-1: #565656,
+  brightly-lit: #e6e6e6,
+  off-white: #f2f2f2,
+  dirty-ice: #f8f8f8,
+  white: #ffffff,
+  boring: #a6a8ab,
+  sidewalk: #b3b3b3,
+  hairline-gray: #d0d0d0,
+  gray-wash: #aeaeae,
+  black: #000000,
+  gutenberg-black: #333333,
+  full-moon: #424242,
+  asphalt: #3f3f3f,
+  smoke-gray: #545454,
+  sandy-gray: #6d6d6d,
+
+  // colors
+  highlighter: #fdec2e,
+  royal-navy: #094877,
+  hyperdrive: #0d65a6,
+  basic-blue: #107aca,
+  sea: #0c5d99,
+  deep-sea: #0a4d80,
+  sky-blue: #9dc0db,
+  firetruck: #d0021b,
+  spruce: #076826,
+  blue-milk: #d9eeff
+);
+
+// Responsive breakpoints
+//
+
+$pe-responsive-breakpoints: (
+  xs: (min: 1px,    max: 479px),
+  sm: (min: 480px,  max: 767px),
+  md: (min: 768px,  max: 1023px),
+  lg: (min: 1024px, max: 1279px),
+  xl: (min: 1280px)
+) !default;
+
+//Grid
+//
+
+$pe-columns             : 12 !default;
+
+$pe-columns-min-height  : 1px;
+
+$pe-container-max-width : 1140px;
+
+$pe-container-margin: (
+  xl : 40px,
+  lg : 40px,
+  md : 20px,
+  sm : 20px,
+  xs : 10px
+);
+
+$pe-gutter-widths: (
+  xl : 40px,
+  lg : 40px,
+  md : 40px,
+  sm : 20px,
+  xs : 10px
+);
+
+// Templates
+//
+
+$pe-static-template-width-breakpoints : (
+  sm : 480px,
+  lg : 800px
+);
+
+$pe-template__static-large-xs-width        : percentage(12 / $pe-columns);
+$pe-template__static-large-md_and_sm-width : percentage(10 / $pe-columns);
+$pe-template__static-large-lg_and_xl-width : 800px;
+
+$pe-template__double--sidebar-width           : percentage(4 / $pe-columns);
+$pe-template__double--main-width              : percentage(8 / $pe-columns);
+$pe-template__double-horizontal-margin-height : 40px;
+
+$pe-template__static-small-xs-width : percentage(12 / $pe-columns);
+$pe-template__static-small-sm-width : percentage(10 / $pe-columns);
+$pe-template__static-small-lg_and_xl_and_md-width : 480px;
+
+$pe-template__small-gap : 40px;
+$pe-template__large-gap : 80px;
+
+
+
+// Presentation Strategies
+//
+
+$pe-strategy__small-gap : 40px;
+$pe-strategy__large-gap : 80px;
+
+
+// Type
+//
+
+$pe-font-size-base: 16px !default;
+$pe-line-height-base: 1.5 !default;
+
+// Functions
+
+
+@function pxToRem($px) {
+  @return #{$px/$pe-font-size-base}rem;
+}
+
+@mixin fontSize($size) {
+  font-size: $size; //Fallback in px
+  font-size: pxToRem($size);
+}
+
+
+$pe-font-families: (
+  default-sans-serif: ('Helvetica Neue', Helvetica, Arial, sans-serif),
+  default-serif: (Georgia, Times, 'Times New Roman', serif),
+  default-monospace: ('Lucida Sans Typewriter', 'Lucida Console', monaco, 'Bitstream Vera Sans Mono', monospace)
+) !default;
+
+// Links
+//
+
+$pe-link-color: pe-color(hyperdrive) !default;
+$pe-link-hover-color: pe-color(royal-navy) !default;
+
+// Headings
+//
+
+$pe-text-heading-small-color: pe-color(smoke-gray) !default;
+$pe-text-heading-small-font-size: 0.8rem !default;
+$pe-text-heading-bottom-border: pe-color(boring);
+$pe-text-heading-l1tol3-color: pe-color(pitch);
+$pe-text-heading-l4tol6-color: pe-color(gray-no-1);
+
+// Inline text
+//
+
+$pe-text-mark-bg: pe-color(highlighter) !default;
+
+$pe-text-strikethrough-color: pe-color(gray-no-1) !default;
+
+$pe-text-small-line-height: 1rem !default;
+$pe-text-small-font-weight: normal !default;
+$pe-text-small-font-size: inherit !default;
+
+
+
+// Body copy
+//
+
+$pe-copy-color: pe-color(pitch) !default;
+$pe-copy-font-size: 1rem !default;
+$pe-copy-line-height: 1.375 !default;
+
+// body copy small
+//
+
+$pe-copy-small-font-size: 0.875rem !default;
+$pe-copy-small-line-height: 1.25rem !default;
+$pe-paragraph-margin-bottom: 12px !default;
+$pe-paragraph-last-margin-bottom: 0 !default;
+
+
+// Titles
+//
+
+$pe-title-color: pe-color(black) !default;
+$pe-title-font-weight: normal !default;
+$pe-title-font-size: 1.124rem !default;
+$pe-title-line-height: 1.375rem !default;
+$pe-title-border-bottom: 0 !default;
+// sm and larger viewports
+$pe-title-sm-font-size: 1.375rem !default;
+$pe-title-sm-line-height: 1.75rem !default;
+
+$pe-title-large-font-size: 1.25rem !default;
+$pe-title-large-line-height: 1.5rem !default;
+// sm and larger viewports
+$pe-title-large-sm-font-size: 1.5rem !default;
+$pe-title-large-sm-line-height: 1.875rem !default;
+
+$pe-title-extra-large-font-size: 1.375rem !default;
+$pe-title-extra-large-line-height: 1.75rem !default;
+// sm and larger viewports
+$pe-title-extra-large-sm-font-size: 1.875rem !default;
+$pe-title-extra-large-sm-line-height: 2.25rem !default;
+
+// Leads
+//
+
+$pe-lead-color: pe-color(pitch) !default;
+$pe-lead-font-weight: 200 !default;
+$pe-lead-font-size: 1.125rem !default;
+$pe-lead-line-height: 1.5rem !default;
+// sm and larger viewports
+$pe-lead-sm-font-weight: 300 !default;
+$pe-lead-sm-font-size: 1.25rem !default;
+$pe-lead-sm-line-height: 1.75rem !default;
+
+// Labels
+//
+
+$pe-label-color: pe-color(pitch) !default;
+$pe-label-font-size: 0.875rem !default;
+$pe-label-line-height: 1rem !default;
+$pe-label-font-weight: normal !default;
+
+$pe-label-secondary-color: pe-color(gray-no-1) !default;
+
+$pe-label-small-font-size: 0.813rem !default;
+$pe-label-medium-font-size: pxToRem(16px) !default;
+$pe-label-small-line-height: 0.9375rem !default;
+
+$pe-label-large-font-size: 1rem !default;
+$pe-label-large-line-height: 1.125rem !default;
+
+$pe-label-bold-font-weight: bold !default;
+
+$pe-label-inverse-color: pe-color(white) !default;
+$pe-label-secondary-inverse-color: pe-color(gray-wash) !default;
+$pe-label-inverse-font-weight: 300 !default;
+
+// Inputs
+//
+
+$pe-input-border-radius: 3px !default;
+$pe-input-focus-color: pe-color(hyperdrive) !default;
+$pe-input-focus-border: 1px solid pe-color(hyperdrive) !default;
+$pe-input-focus-box-shadow: 0px 0px 4px pe-color(hyperdrive) !default;
+$pe-input-font-size: $pe-label-large-font-size !default;
+$pe-input-height: 36px !default;
+$pe-input-padding: 0 14px !default;
+
+$pe-input-default-bg: pe-color(white) !default;
+$pe-input-default-border: solid 1px pe-color(hairline-gray) !default;
+$pe-input-default-text: pe-color(pitch) !default;
+$pe-input-default-disabled-bg: pe-color(off-white) !default;
+$pe-input-default-disabled-text: pe-color(boring) !default;
+$pe-input-default-line-height: $pe-label-large-line-height !default;
+
+$pe-input-small-bg: $pe-input-default-bg !default;
+$pe-input-small-border: $pe-input-default-border !default;
+$pe-input-small-text: $pe-input-default-text !default;
+$pe-input-small-disabled-bg: $pe-input-default-disabled-bg !default;
+$pe-input-small-disabled-text: $pe-input-default-disabled-text !default;
+$pe-input-small-height: 28px !default;
+$pe-input-small-padding: 0 10px !default;
+$pe-input-small-font-size: $pe-label-font-size !default;
+$pe-input-small-line-height: $pe-label-line-height !default;
+$pe-input-readonly-bg: pe-color(off-white) !default;
+$pe-input-error-border: solid 1px pe-color(firetruck) !default;
+$pe-input-error-text-color: pe-color(firetruck);
+$pe-input-error-outline: 1px solid pe-color(firetruck);
+$pe-input-error-box-shadow: 0px 0px 4px pe-color(firetruck) !default;
+$pe-input-placeholder-color: pe-color(sandy-gray) !default;
+$pe-input-placeholder-text: italic !default;
+
+
+// Aside
+//
+
+$pe-aside-bg: pe-color(dirty-ice) !default;
+$pe-aside-border-left: 5px solid pe-color(basic-blue) !default;
+$pe-aside-padding: 15px !default;
+$pe-aside-margin: 15px !default;
+
+// Buttons
+//
+
+$pe-btn-border-radius: 3px !default;
+$pe-btn-font-size: 0.875rem !default;
+$pe-btn-height: 28px !default;
+$pe-btn-padding: 0 11px !default;
+
+$pe-btn-default-bg: pe-color(dirty-ice) !default;
+$pe-btn-default-border: solid 1px pe-color(hairline-gray) !default;
+$pe-btn-default-text: $pe-label-secondary-color !default;
+$pe-btn-default-font-weight: $pe-label-font-weight !default;
+$pe-btn-default-hover-bg: pe-color(brightly-lit) !default;
+$pe-btn-default-hover-border: solid 1px pe-color(sidewalk) !default;
+$pe-btn-default-hover-text: $pe-label-secondary-color !default;
+$pe-btn-default-active-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3) !default;
+$pe-btn-default-disabled-bg: pe-color(off-white) !default;
+$pe-btn-default-disabled-text: pe-color(boring) !default;
+
+$pe-btn-primary-bg: pe-color(basic-blue) !default;
+$pe-btn-primary-border: solid 1px pe-color(deep-sea) !default;
+$pe-btn-primary-text: $pe-label-inverse-color !default;
+$pe-btn-primary-font-weight: $pe-label-inverse-font-weight !default;
+$pe-btn-primary-hover-bg: pe-color(sea) !default;
+$pe-btn-primary-hover-border: solid 1px pe-color(deep-sea) !default;
+$pe-btn-primary-hover-text: $pe-label-inverse-color !default;
+$pe-btn-primary-active-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3) !default;
+$pe-btn-primary-disabled-bg: pe-color(sky-blue) !default;
+$pe-btn-primary-disabled-text: pe-color(white) !default;
+
+$pe-btn-link-bg: none !default;
+$pe-btn-link-border: 0 !default;
+$pe-btn-link-text: $pe-link-color !default;
+$pe-btn-link-hover-bg: $pe-btn-link-bg !default;
+$pe-btn-link-hover-border: $pe-btn-link-border !default;
+$pe-btn-link-hover-text: $pe-link-hover-color !default;
+$pe-btn-link-disabled-bg: 0 !default;
+$pe-btn-link-disabled-text: pe-color(sky-blue) !default;
+
+$pe-btn-inverse-link-text: $pe-label-secondary-color !default;
+$pe-btn-inverse-link-hover-text: $pe-link-color !default;
+$pe-btn-inverse-link-disabled-text: pe-color(boring) !default;
+
+$pe-btn-small-height: 24px !default;
+$pe-btn-small-font-size: $pe-label-small-font-size !default;
+$pe-btn-small-padding: 0 9px !default;
+
+$pe-btn-medium-height: 36px !default;
+$pe-btn-medium-font-size: $pe-label-medium-font-size !default;
+$pe-btn-medium-padding: 0 12px !default;
+
+$pe-btn-large-height: 42px !default;
+$pe-btn-large-font-size: $pe-label-large-font-size !default;
+$pe-btn-large-padding: 0 19px !default;
+
+// Card
+//
+
+$pe-card-border: solid 1px pe-color(sidewalk) !default;
+$pe-card-margin-bottom: 15px !default;
+$pe-card-heading-padding: 15px !default;
+
+// Header
+//
+
+$pe-header-height: 44px !default;
+$pe-header-height-lg: 54px !default;
+$pe-header-bg: pe-color(black) !default;
+$pe-header-text-color: pe-color(white) !default;
+$pe-header-link-color: pe-color(hairline-gray) !default;
+$pe-header-link-hover-color: pe-color(off-white) !default;
+
+$pe-header-brand-font-size: 1.25rem !default;
+
+$pe-header-logo-sprite-height: 16px !default;
+$pe-header-logo-margin-x: 14px !default;
+
+$pe-header-nav-link-active-bg: pe-color(full-moon) !default;
+$pe-header-nav-link-padding-x: 15px !default;
+
+$pe-header-bg-inverse: #f2f2f2 !default;
+$pe-header-link-color-inverse: #000000 !default;
+$pe-header-link-hover-color-inverse: #595959 !default;
+$pe-header-nav-link-active-bg-inverse: #e6e6e6 !default;
+
+// Tables
+//
+
+$pe-table-striped-bg: pe-color(brightly-lit) !default;
+$pe-table-border-color: pe-color(hairline-gray) !default;
+
+// Dropdowns
+//
+$pe-dropdown-menu-bg: pe-color(white);
+$pe-dropdown-menu-border: rgba(0, 0, 0, 0.15) !default;
+$pe-dropdown-menu-divider-bg: $pe-dropdown-menu-border;
+$pe-dropdown-menu-link-color: pe-color(gray-no-1);
+$pe-dropdown-menu-link-hover-color: pe-color(white);
+$pe-dropdown-menu-link-hover-bg: pe-color(boring);
+$pe-dropdown-menu-link-disabled-color: pe-color(boring);
+
+// inverse
+$pe-dropdown-menu-bg-inverse: pe-color(gutenberg-black);
+$pe-dropdown-menu-border-inverse: pe-color(gutenberg-black);
+$pe-dropdown-menu-link-color-inverse: pe-color(gray-wash);
+$pe-dropdown-menu-link-hover-color-inverse: pe-color(brightly-lit);
+$pe-dropdown-menu-link-hover-bg-inverse: pe-color(asphalt);
+$pe-dropdown-menu-link-disabled-color-inverse: pe-color(smoke-gray);
+$pe-dropdown-menu-divider-bg-inverse: pe-color(gray-wash);
+
+// z-index
+//
+
+$pe-header-z-index: 1000 !default;
+$pe-dropdown-z-index: 1001 !default;
+
+
+// code
+//
+
+$pe-code-line-height: 1.25rem;
+$pe-code-font-size: 0.875rem !default;
+$pe-code-color: pe-color(gray-wash) !default;
+$pe-code-bg: pe-color(full-moon) !default;
+
+$pe-code-inline-padding: 4px !default;
+$pe-code-inline-color: pe-color(gray-wash) !default;
+$pe-code-inline-bg: pe-color(brightly-lit) !default;
+
+
+// lists
+//
+$pe-list-color: #231f20 !default;
+$pe-list-font-size: 1rem !default;
+$pe-list-line-height: 1.375rem !default;
+$pe-list-font-weight: normal !default;
+
+$list-style-type: none !default;
+$list-style-padding-left: 20px;
+$list-style-first-padding-left: 26px;
+$list-style-margin-bottom: 12px;
+$list-style-margin-top: 12px;
+$list-style-type-roman: lower-roman;
+$list-style-type-ordered: lower-alpha;
+$list-style-type-number: decimal;
+$list-style-type-disc: disc;
+$list-style-type-circle: circle;
+$list-style-type-square: square;
+$list-heding-style-margin-top: 0;
+$list-padding-left: 20px;
+
+
+//text-area
+//
+$pe-textarea-padding: 9px 14px !default;
+$pe-textarea-small-padding: 9px 10px !default;
+
+// select-box
+//
+$pe-select-height: 36px !default;
+$pe-select-padding-left: 14px !default;
+$pe-select-padding-right: 14px !default;
+$pe-select-bg: pe-color(white) !default;
+$pe-select-text: pe-color(pitch) !default;
+$pe-select-vertical-align: middle !default;
+$pe-select-line-height: 18px !default;
+
+$pe-select-small-padding-left: 10px !default;
+$pe-select-small-padding-right: 10px !default;
+$pe-select-small-line-height: 16px !default;
+
+$pe-select-readonly-text: pe-color(boring) !default;
+
+//calendar
+//
+$pe-calendar-border: 1px solid pe-color(hairline-gray) !default;
+$pe-calendar-border-width: 1px !default;
+$pe-calendar-width: 328px !default;
+$pe-calendar-background-color: pe-color(white) !default;
+$pe-calendar-padding: 20px !default;
+$pe-calendar-padding-right: 0px !default;
+$pe-calendar-default-font: $pe-title-sm-font-size !default;
+$pe-calendar-default-font-color: pe-color(pitch) !default;
+$pe-calendar-default-line-height: 50px !default;
+$pe-calendar-table-height: 100% !default;
+$pe-calendar-dates-border-top: 0px !default;
+$pe-calendar-dates-font-size: $pe-label-large-font-size !default;
+$pe-calendar-dates-line-height: $pe-label-large-line-height !default;
+$pe-calendar-dates-border-collapse: separate !default;
+$pe-calendar-dates-border-spacing: 1px !default;
+$pe-calendar-dates-width: 40px !default;
+$pe-calendar-dates-height: 35px !default;
+$pe-calendar-dates-hover-color: pe-color(white) !default;
+$pe-calendar-dates-hover-background-color: pe-color(sea) !default;
+$pe-calendar-dates-text-align: center !default;
+$pe-calendar-dates-disabled-color: pe-color(boring) !default;
+$pe-calendar-dates-disabled-background-color: pe-color(brightly-lit) !default;
+$pe-calendar-dates-selected-color: pe-color(white) !default;
+$pe-calendar-dates-selected-background-color: pe-color(basic-blue) !default;
+$pe-calendar-dates-highlighted-color: pe-color(pitch) !default;
+$pe-calendar-dates-highlighted-background-color: pe-color(sky-blue) !default;
+$pe-calendar-dates-heading-padding-bottom: 12px !default;
+$pe-calendar-dates-heading-padding-top: 5px !default;
+$pe-calendar-dates-within-color: pe-color(pitch) !default;
+$pe-calendar-dates-within-background-color: pe-color(dirty-ice) !default;
+$pe-calendar-dates-outside-color: pe-color(pitch) !default;
+$pe-calendar-dates-outside-background-color: pe-color(white) !default;
+$pe-calendar-dates-margin-bottom: 0px !default;
+$pe-calendar-div-padding-left: 20px !default;
+$pe-calendar-div-padding-right: 20px !default;
+$pe-calendar-table-header-font-weight: normal !default;
+$pe-calendar-table-header-font-size: $pe-label-large-font-size !default;
+$pe-calendar-table-header-line-height: $pe-label-large-line-height !default;
+$pe-calendar-month-float: right !default;
+$pe-calendar-month-line-height: $pe-title-sm-line-height !default;
+$pe-calendar-days-border-bottom: none !default;
+$pe-calendar-days-text-decoration: none !default;
+$pe-calendar-month-font-weight: normal !default;
+$pe-calendar-month-display: inline;
+$pe-calendar-div-min-width: 328px;
+$pe-calendar-div-max-width: 328px;
+$pe-calendar-dates-max-width: 280px;
+$pe-calendar-dates-min-width: 280px;
+$pe-calendar-dates-max-width: 40px;
+$pe-calendar-dates-min-width: 40px;
+$pe-calendar-dates-max-height: 35px;
+$pe-calendar-dates-min-height: 35px;
+
+
+// progressbar
+$pe-progressbar-bg: pe-color(brightly-lit);
+$pe-progressbar-border: 1px solid pe-color(royal-navy);
+$pe-progressbar-value: pe-color(royal-navy);

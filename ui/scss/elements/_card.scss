@@ -1,0 +1,16 @@
+/* This component is experimental and not available for production use. If you need a component with this functionality, please contact us in the Pearson Design Accelerator hipchat room */
+
+.pe-card {
+  margin-bottom: $pe-card-margin-bottom;
+  border: $pe-card-border;
+}
+
+.pe-card__header,
+.pe-card__content {
+  padding: $pe-card-heading-padding;
+}
+
+.pe-card__header {
+  border-bottom: $pe-card-border;
+}
+

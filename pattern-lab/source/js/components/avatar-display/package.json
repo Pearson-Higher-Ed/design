@@ -1,0 +1,133 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@pearson-components/avatar-display",
+        "scope": "@pearson-components",
+        "escapedName": "@pearson-components%2favatar-display",
+        "name": "@pearson-components/avatar-display",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/uodeyda/Sites/boilerplates/patternlab-elements"
+    ]
+  ],
+  "_from": "@pearson-components/avatar-display@latest",
+  "_id": "@pearson-components/avatar-display@0.1.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/@pearson-components/avatar-display",
+  "_nodeVersion": "4.2.6",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/avatar-display-0.1.1.tgz_1471386689713_0.791873111622408"
+  },
+  "_npmUser": {
+    "name": "pearson-ux",
+    "email": "pearson-design-accelerator@pearson.com"
+  },
+  "_npmVersion": "2.14.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@pearson-components/avatar-display",
+    "scope": "@pearson-components",
+    "escapedName": "@pearson-components%2favatar-display",
+    "name": "@pearson-components/avatar-display",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/@pearson-components/avatar-display/-/avatar-display-0.1.1.tgz",
+  "_shasum": "7566ac99a9a26b703d08cb2a7da01ab71ec641a7",
+  "_shrinkwrap": null,
+  "_spec": "@pearson-components/avatar-display",
+  "_where": "/Users/uodeyda/Sites/boilerplates/patternlab-elements",
+  "author": {
+    "name": "pearson-design-accelerator@pearson.com"
+  },
+  "bugs": {
+    "url": "https://github.com/Pearson-Higher-Ed/avatar-display/issues"
+  },
+  "dependencies": {
+    "react-intl": "~2.0.1"
+  },
+  "description": "component to display avatar image",
+  "devDependencies": {
+    "babel-core": "~6.3.17",
+    "babel-eslint": "~4.1.6",
+    "babel-loader": "~6.2.0",
+    "babel-polyfill": "~6.7.4",
+    "babel-preset-es2015": "~6.3.13",
+    "babel-preset-react": "~6.3.13",
+    "babel-preset-stage-0": "~6.5.0",
+    "babel-register": "~6.7.2",
+    "colors": "~1.1.2",
+    "conventional-changelog": "^1.1.0",
+    "css-loader": "~0.23.0",
+    "eslint": "~1.10.3",
+    "eslint-loader": "~1.1.1",
+    "eslint-plugin-react": "~3.16.1",
+    "expect": "~1.18.0",
+    "expect-jsx": "~2.5.1",
+    "file-loader": "~0.8.5",
+    "intl": "~1.1.0",
+    "jsdom": "~8.5.0",
+    "json-loader": "~0.5.4",
+    "mocha": "~2.4.5",
+    "node-sass": "~3.4.2",
+    "pearson-elements": "^0.7.0",
+    "react": "^15.0.0",
+    "react-addons-test-utils": "^15.0.0",
+    "react-dom": "^15.0.0",
+    "sass-loader": "~3.2.0",
+    "semver": "~5.1.0",
+    "style-loader": "~0.13.0",
+    "url-loader": "~0.5.7",
+    "webpack": "~1.12.9",
+    "webpack-dev-server": "~1.14.0"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "7566ac99a9a26b703d08cb2a7da01ab71ec641a7",
+    "tarball": "https://registry.npmjs.org/@pearson-components/avatar-display/-/avatar-display-0.1.1.tgz"
+  },
+  "gitHead": "d4b773fdc82b195866e7f91689474429cef91394",
+  "homepage": "https://github.com/Pearson-Higher-Ed/avatar-display#readme",
+  "keywords": [
+    "pearson-components"
+  ],
+  "license": "MIT",
+  "main": "./main.js",
+  "maintainers": [
+    {
+      "name": "pearson-ux",
+      "email": "pearson-design-accelerator@pearson.com"
+    }
+  ],
+  "name": "@pearson-components/avatar-display",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pearson-Higher-Ed/avatar-display.git"
+  },
+  "scripts": {
+    "build": "webpack -p",
+    "ci": "npm test && npm run build",
+    "dev": "npm run dev-setup && webpack-dev-server --port 8081 --devtool source-map --hot --progress --colors",
+    "dev-setup": "mkdir -p fonts && cp ./node_modules/pearson-elements/dist/fonts/* ./fonts && cp ./node_modules/pearson-elements/dist/css/elements.css ./demo",
+    "gen-changelog": "node ./npm_scripts/gen-changelog.js",
+    "lint": "eslint src/js/** demo/demo.js",
+    "postpublish": "npm access public && echo 'Package scope set to public!'",
+    "pretest": "npm run lint",
+    "release": "node ./npm_scripts/release.js",
+    "test": "mocha --compilers js:babel-register --require babel-polyfill --require intl --require test/utils/dom.js",
+    "verify": "node ./npm_scripts/verify.js",
+    "version": "npm run gen-changelog && git add CHANGELOG.md"
+  },
+  "version": "0.1.1"
+}

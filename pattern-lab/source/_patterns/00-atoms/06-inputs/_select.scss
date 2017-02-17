@@ -1,0 +1,23 @@
+select {
+	padding: 8px 50px 10px 0;
+    display:block;
+	width:100%;
+	border: none;
+	box-shadow: none;
+	background: transparent;
+	appearance: none;
+	border-bottom: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: $neutral-three;
+	border-radius: 0;
+	overflow: hidden;
+	background: url("../images/select-arrow.svg") no-repeat 100% 50%;
+  
+  &::-ms-expand {
+	display:none;
+  }
+}
+  
+
+  
+

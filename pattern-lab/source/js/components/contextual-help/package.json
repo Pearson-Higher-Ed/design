@@ -1,0 +1,121 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@pearson-components/contextual-help",
+        "scope": "@pearson-components",
+        "escapedName": "@pearson-components%2fcontextual-help",
+        "name": "@pearson-components/contextual-help",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/uodeyda/Sites/boilerplates/patternlab-elements"
+    ]
+  ],
+  "_from": "@pearson-components/contextual-help@latest",
+  "_id": "@pearson-components/contextual-help@1.3.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/@pearson-components/contextual-help",
+  "_nodeVersion": "4.2.6",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/contextual-help-1.3.1.tgz_1479340376253_0.20091236336156726"
+  },
+  "_npmUser": {
+    "name": "pearson-ux",
+    "email": "pearson-design-accelerator@pearson.com"
+  },
+  "_npmVersion": "2.14.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@pearson-components/contextual-help",
+    "scope": "@pearson-components",
+    "escapedName": "@pearson-components%2fcontextual-help",
+    "name": "@pearson-components/contextual-help",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@pearson-components/contextual-help/-/contextual-help-1.3.1.tgz",
+  "_shasum": "6f0ee217400f832fc3fad4e3188b8d9f0726c309",
+  "_shrinkwrap": null,
+  "_spec": "@pearson-components/contextual-help",
+  "_where": "/Users/uodeyda/Sites/boilerplates/patternlab-elements",
+  "bugs": {
+    "url": "https://github.com/Pearson-Higher-Ed/contextual-help/issues"
+  },
+  "dependencies": {
+    "@pearson-components/drawer": "~0.3.0",
+    "dom-delegate": "~2.0.3"
+  },
+  "description": "Contextual help for web applications.",
+  "devDependencies": {
+    "conventional-changelog": "^1.1.0",
+    "coveralls": "^2.11.4",
+    "css-loader": "^0.23.1",
+    "expect.js": "^0.3.1",
+    "html-loader": "^0.4.3",
+    "karma": "^0.13.3",
+    "karma-coverage": "^0.2.6",
+    "karma-mocha": "^0.1.10",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-webpack": "^1.7.0",
+    "mocha": "^2.1.0",
+    "node-sass": "^3.4.2",
+    "pearson-elements": "^0.14.0",
+    "phantomjs-prebuilt": "^2.1.7",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "6f0ee217400f832fc3fad4e3188b8d9f0726c309",
+    "tarball": "https://registry.npmjs.org/@pearson-components/contextual-help/-/contextual-help-1.3.1.tgz"
+  },
+  "gitHead": "c879d70809a3708ad334899e842ab0139e776630",
+  "homepage": "https://github.com/Pearson-Higher-Ed/contextual-help#readme",
+  "keywords": [
+    "pearson-components",
+    "contextual-help"
+  ],
+  "maintainers": [
+    {
+      "name": "aaron.kaka",
+      "email": "aaron.kaka@gmail.com"
+    },
+    {
+      "name": "darin.lampson",
+      "email": "darin.lampson@pearson.com"
+    },
+    {
+      "name": "pearson-ux",
+      "email": "pearson-design-accelerator@pearson.com"
+    }
+  ],
+  "name": "@pearson-components/contextual-help",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pearson-Higher-Ed/contextual-help.git"
+  },
+  "scripts": {
+    "build": "webpack -p",
+    "ci": "npm run build",
+    "dev": "npm run dev-setup && webpack-dev-server --devtool source-map --hot --progress --colors",
+    "dev-setup": "mkdir -p fonts && cp ./node_modules/pearson-elements/dist/fonts/* ./fonts",
+    "gen-changelog": "node ./npm_scripts/gen-changelog.js",
+    "release": "node ./npm_scripts/release.js",
+    "test": "./node_modules/karma/bin/karma start karma.conf.js",
+    "version": "npm run gen-changelog && git add CHANGELOG.md"
+  },
+  "version": "1.3.1"
+}

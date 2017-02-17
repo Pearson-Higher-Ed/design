@@ -1,0 +1,136 @@
+// NOTE: this needs a better home!
+// display label-input pairs in a row
+
+.pe-inlineblock {
+  div {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0 1em 1em;
+  }
+
+  div:first-child {
+    margin-left: 0;
+  }
+}
+
+// input type=text etc
+
+.pe-input {
+  @include pe-input(
+    $pe-input-default-bg,
+    $pe-input-default-border,
+    $pe-input-default-text,
+    $pe-input-default-disabled-bg,
+    $pe-input-default-disabled-text
+  );
+
+  margin-bottom: 1em;//until Parker changes
+
+  & label {
+    @include pe-label;
+
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  & input {
+    display: inline-block;
+    vertical-align: middle;
+
+    font-size: $pe-input-font-size;
+    height: $pe-input-height;
+    line-height: $pe-input-default-line-height;
+    padding: $pe-input-padding;
+  }
+
+  &-group {
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+      height: 0;
+    }
+    .pe-input {
+
+      input {
+        float: left;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right: 0;
+      }
+    }
+    .pe-btn {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+  }
+}
+
+//text-area
+
+.pe-textarea {
+  @include pe-input(
+    $pe-input-default-bg,
+    $pe-input-default-border,
+    $pe-input-default-text,
+    $pe-input-default-disabled-bg,
+    $pe-input-default-disabled-text
+  );
+
+  margin-bottom: 1em;//until Parker changes
+
+  & label {
+    @include pe-label;
+
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  & textarea {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: $pe-input-font-size;
+    height: auto;
+    line-height: $pe-input-default-line-height;
+    padding: $pe-textarea-padding;
+  }
+}
+
+// checks and radios
+
+.pe-checkbox,
+.pe-radio {
+  & input,
+  & label {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  & input {
+    margin-right: 7px;// because inline-block adds approx 3-4px space
+
+    &:focus {
+      outline: 1px solid $pe-link-color;
+      outline-offset: 2px;// not supported by IE
+    }
+  }
+
+  & label {
+    @include pe-label-large;
+  }
+}
+
+// if JavaScript detects a mouse and adds the class
+
+.mouseDetected .pe-radio input:focus,
+.mouseDetected .pe-checkbox input:focus {
+  outline: 0;
+}
+
+.pe-checkbox--small,
+.pe-radio--small,
+.pe-textarea--small {
+  & label {
+    @include pe-label;
+  }
+}

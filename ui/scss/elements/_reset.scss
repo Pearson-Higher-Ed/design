@@ -1,0 +1,11 @@
+html {
+  box-sizing: border-box;
+  font-family: pe-font-family(default-sans-serif);
+  font-size: $pe-font-size-base;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}

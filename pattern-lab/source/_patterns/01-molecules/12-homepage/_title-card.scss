@@ -1,0 +1,9 @@
+.title-card {
+  padding:0 1em;
+  h2 {
+	@extend h1;
+	& + h2 {
+	  margin-top:0;
+	}
+  }
+}

@@ -1,0 +1,13 @@
+/* Imports Elements SDK SCSS, Font Awesome & Patternlab styles */
+@import 'elements/elements';
+@import 'font-awesome/font-awesome';
+@import 'pattern-lab';
+
+// Loads generic helper classes
+@import 'variables';
+@import 'mixins';
+@import 'helpers';
+@import 'flex';
+
+// Start project files located in the 'pattern-lab/source/_patterns' folders
+@import '../source/_patterns/01-atoms/00-atoms-name';

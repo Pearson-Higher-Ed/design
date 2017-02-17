@@ -1,0 +1,103 @@
+@import 'node_modules/@pearson-components/drawer/main';
+
+.o-contextual-help__drawer {
+  color: #333333;
+  font-size: 16px;
+}
+
+.o-contextual-help__content--visible {
+  .o-contextual-help__topics {
+    left: -100%;
+  }
+  .o-contextual-help__topic-content {
+    left: 0px;
+  }
+}
+
+.o-contextual-help__header {
+  padding: 19px;
+  border-bottom: 1px solid #e8e8e8;
+  overflow: hidden;
+}
+
+.o-contextual-help__topics,
+.o-contextual-help__topic-content {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding-top: 48px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+  transition: left 0.4s ease;
+  user-select: none;
+
+  .o-panel--closed {
+    display: none;
+  }
+  .o-panel--opened {
+    display: block;
+  }
+}
+
+.o-contextual-help__topic {
+  padding: 10px 19px;
+  border-bottom: 1px solid #e8e8e8;
+
+  h1, h2, h3, h4 {
+    font-size: 18px;
+    line-height: 1.45em;
+    font-weight: normal;
+    margin-bottom: 6px;
+    margin-top: 6px;
+  }
+  p {
+    font-size: 0.9em;
+    line-height: 1.6em;
+  }
+}
+
+.o-contextual-help__topic-content {
+  left: 100%;
+
+  ul {
+    padding-left: 40px;
+  }
+}
+
+#contextual-help-close-content{
+    color:#333333;
+}
+
+.o-contextual-help__excerpt p {
+  height: 3em;
+  overflow: hidden;
+
+  &:after {
+    content: '\02026';
+  }
+}
+
+.close-help, .o-disclosure, .back-to-help {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+
+  &:focus {
+    outline: 1px dotted #333333;
+  }
+}
+
+.close-help {
+  float: right;
+}
+
+.back-to-help {
+  float: left;
+
+  span {
+    margin-right: .3em;
+  }
+}

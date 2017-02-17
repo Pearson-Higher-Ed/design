@@ -1,0 +1,61 @@
+.swatch {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0.3em;
+  border-radius: 5px;
+  
+}
+
+.swatch > div {
+  padding:1em;
+  min-width:20%;
+  
+  @media(max-width:640px) {
+    width:100%;
+  }
+}
+
+.o-header--fixed {
+  position:absolute !important;
+}
+
+.ux-boilerplate:before {
+  content: "• ";
+  color: deepskyblue !important;
+}
+
+.elements:before {
+  content: "• ";
+  color: greenyellow !important;
+}
+
+.custom:before {
+  content: "• ";
+  color: hotpink !important;
+}
+
+.compounds:before {
+  content: "• ";
+  color: mediumpurple !important;
+}
+
+.inprogress:before {
+  content: "• ";
+  color: #ff4136 !important;
+}
+
+.d-icon-list {
+  list-style-type: none;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  
+  li {
+    padding:1em;
+    width:50%;
+  }
+}
+
+button {
+  cursor: pointer;
+}

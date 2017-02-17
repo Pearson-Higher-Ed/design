@@ -1,0 +1,49 @@
+.o-drawer {
+	position: fixed;
+	background-color: $o-drawer-bg;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.23);
+	overflow-x: hidden;
+	overflow-y: auto;
+	height: 100%;
+	width: $o-drawer-width;
+	z-index: $o-drawer-z-index;
+	&.o-drawer-animated {
+		transition: left 0.4s ease, right 0.4s ease;
+	}
+	&.o-drawer-left,
+	&.o-drawer-right {
+		top: 0px;
+	}
+	&.o-drawer-right {
+		right: $o-drawer-width * -1;
+		&.o-drawer-open {
+			right: 0px;
+		}
+	}
+	&.o-drawer-left {
+		left: $o-drawer-width * -1;
+		&.o-drawer-open {
+			left: 0px;
+		}
+	}
+	.pe-trap {
+		/* take up no room */
+		width: 0;
+		height: 0;
+		padding: 0;
+		/* and hide but focusable */
+		opacity: 0;
+	}
+}
+@media only screen and (max-width: 415px) {
+	.o-drawer {
+		width: 100%;
+		z-index: $o-drawer-z-index;
+		&.o-drawer-right {
+			right: -100%;
+		}
+		&.o-drawer-left {
+			left: -100%;
+		}
+	}
+}

@@ -1,0 +1,63 @@
+// Converts PX to REM
+
+@function calculate-rem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+// to use @include fontSize(32px);
+@mixin font-size($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculate-rem($size);
+}
+
+// Sets background color and font color of element
+@mixin color-mix($color1, $color2) {
+  background-color:$color1;
+  color:$color2;
+}
+
+
+// Creates a fluid 5 column grid
+// When used on a large number of flexbox items
+@mixin respond-fluid() {
+  width:100%;
+   
+  @media (min-width:480px) {
+    width:50%;
+  }
+  
+  @media (min-width:768px) {
+    width:33.3%;
+  }
+  
+  @media (min-width:1024px) {
+    width:25%;
+  }
+  
+  @media (min-width:1280px) {
+    width:20%;
+  }
+}
+
+@mixin button-style($color1, $color2) {
+  background-color:$color1;
+  color:$color2;
+  border-color:$color2;
+}
+
+@mixin max-height($size) {
+  max-height:$size;
+  overflow-y:scroll;
+}
+
+@mixin flex-center {
+  display:flex;
+  align-items: center;
+  justify-content:center;
+}
+
+@mixin create-box($size) {
+  width:$size;
+  height:$size;
+}

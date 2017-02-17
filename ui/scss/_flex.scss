@@ -1,0 +1,31 @@
+.flex, .flex-container {
+  display:flex;
+  
+  &.wrap {
+	flex-wrap:wrap;
+  }
+  
+  &.row {
+	flex-direction:row;
+	
+	@media (max-width:640px) {
+	  flex-direction: column;
+	}
+  }
+  
+  &.align-center {
+	align-items: center;
+  }
+  
+  &.justify-center {
+	justify-content: center;
+  }
+  
+  &.justify-between {
+	justify-content: space-between;;
+  }
+}
+
+.flex-grow {
+  flex-grow:1;
+}

@@ -1,0 +1,12 @@
+////
+/// Custom SCSS for component-specific styling goes here
+////
+img {
+  &.avatar-display-img {
+    border: 0;
+  }
+
+  &.avatar-display-round {
+    border-radius: 50%;
+  }
+}

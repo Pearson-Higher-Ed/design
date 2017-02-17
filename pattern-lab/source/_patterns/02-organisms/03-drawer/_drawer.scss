@@ -1,0 +1,37 @@
+.pe-proto {
+  &.drawer {
+	@include box-shadow;
+	max-width:320px;
+	min-height:100vh;
+	background-color:$primary-four;
+	
+	.title-container {
+	  @include flex;
+	  height:56px;
+	  background-color: $neutral-four;
+	  padding:em(20);
+	  
+	  h6 {
+		margin:0;
+	  }
+	}
+	.content-container {
+	  padding:2em;
+	  background-color:$primary-four;
+	  
+	  h6 {
+		margin-bottom:2em;
+	  }
+	  
+	  .section-title {
+		padding-bottom:2em;
+	  }
+	}
+  }
+  .block {
+	background-color:#fff;
+	border-left:5px solid $primary;
+	padding:1em;
+	margin-bottom:2em;
+  }
+}

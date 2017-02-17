@@ -1,0 +1,100 @@
+<template args="data handlers translate">
+	<div class="o-header__container">
+		<section class="o-header__section">
+			<div class="o-header__brand">
+				<if condition="data.mode === 'Basic' || data.mode === 'Course' || data.mode === 'Legacy Course'">
+					<a href="{data.links.home}">
+						<div class="o-header__logo o-header__logo--pearson"></div>
+					</a>
+				</if>
+				<if condition="data.mode ==='Signed Out' || data.mode === 'Integration'">
+					<div class="o-header__logo o-header__logo--pearson"></div>
+				</if>
+			</div>
+		</section>
+		<section class="o-header__section o-header__section--right">
+			<nav class="o-header__nav">
+				<ul class="o-header__nav-items">
+					<li class="o-header__nav-item o-app-header__nav-item-notification" aria-hidden="true">
+					</li>
+					<li class="o-header__nav-item o-app-header__nav-item-help">
+						<a href="#" onclick="{handlers.handleHelpNavItemClick($event)}" if="!data.help">{translate('Help')}</a>
+						<a href="{data.help}" if="typeof data.help === 'string'">{translate('Help')}</a>
+						<div class="o-dropdown-menu o-dropdown-menu--right" if="typeof data.help === 'object'">
+							<a href="#"
+								id="o-app-header-help-menu-toggle"
+								class="o-dropdown-menu__toggle"
+								data-toggle="dropdown-menu"
+								aria-haspopup="true"
+								aria-expanded="false">{translate('Help')}</a>
+							<ul class="o-dropdown-menu__menu-items" role="menu" aria-labelledby="o-app-header-menu-toggle-help">
+								<li class="o-dropdown-menu__menu-item" role="presentation" each="key in data.help">
+									<a role="menuitem" href="{data.help[key]}" tabindex="-1" if="typeof data.help[key] === 'string'">{key}</a>
+									<a role="menuitem" href="{data.help[key].href}" tabindex="-1" target="{data.help[key].target}" if="data.help[key].href">{key}</a>
+									<a role="menuitem" href="#" tabindex="-1" onclick="{data.help[key].onClick($event)}" if="typeof data.help[key].onClick === 'function'">{key}</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="{data.menuNavItemClasses}">
+						<if condition="data.mode === 'Signed Out' && data.showLoginControls">
+							<a href="#" onclick="{handlers.handleLogin($event)}">{translate('Sign In')}</a>
+						</if>
+
+						<if condition="data.mode === 'Basic' || data.mode === 'Course' || data.mode === 'Legacy Course'">
+							<div class="o-dropdown-menu o-dropdown-menu--right o-app-header__menu-menu">
+								<a href="#"
+									class="o-dropdown-menu__toggle"
+									data-toggle="dropdown-menu"
+									aria-haspopup="true"
+									aria-expanded="false">
+									<span id="o-app-header-user-menu-label" class="o-app-header--sr-only">{translate('User account menu')}</span>
+									<span class="o-app-header__username o-app-header--truncate o-header__viewport-tablet--visible o-header__viewport-desktop--visible">{data.user.givenName || translate('Menu')} <i class="o-app-header__icon pe-icon--chevron-down"></i></span>
+									<span class="o-header__viewport-tablet--hidden o-header__viewport-desktop--hidden">{translate('Menu')} <i class="o-app-header__icon pe-icon--chevron-down"></i></span>
+								</a>
+								<ul class="o-dropdown-menu__menu-items" role="menu" aria-labelledby="o-app-header-user-menu-label">
+									<li class="{item.classes}"
+										role="presentation"
+										each="item, item.key in data.menuItems">
+										<a role="menuitem"
+											class="o-app-header--truncate"
+											href="{item.href}"
+											tabindex="-1"
+											target="{item.target}"
+											if="item.href">{item.text}</a>
+										<a role="menuitem"
+											class="o-app-header--truncate"
+											href="#"
+											tabindex="-1"
+											onclick="{item.onClick($event)}"
+											if="typeof item.onClick === 'function'">{item.text}</a>
+										<if condition="item.isCourseNav">
+											<ul class="o-app-header__menu-items-course-nav o-header__viewport-tablet--hidden o-header__viewport-desktop--hidden">
+												<li class="{courseNavItem.classes}"
+													role="presentation"
+													each="courseNavItem, courseNavItem.key in item.courseNavMenuItems">
+													<a role="menuitem"
+														class="o-app-header--truncate"
+														href="{courseNavItem.href}"
+														tabindex="-1"
+														target="{courseNavItem.target}"
+														if="courseNavItem.href">{courseNavItem.text}</a>
+													<a role="menuitem"
+														class="o-app-header--truncate"
+														href="#"
+														tabindex="-1"
+														onclick="{courseNavItem.onClick($event)}"
+														if="typeof courseNavItem.onClick === 'function'">{courseNavItem.text}</a>
+												</li>
+											</ul>
+										</if>
+									</li>
+								</ul>
+							</div>
+						</if>
+					</li>
+				</ul>
+			</nav>
+		</section>
+	</div>
+</template>

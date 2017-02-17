@@ -1,0 +1,49 @@
+{
+  "alert": {
+    "error": {
+      "label": "Error",
+      "content": "Uh oh, we weren't able to verify your email address. Try resending the email."
+    },
+    "success": {
+      "label": "Success",
+      "content": "Yay!  Your message was successfully sent."
+    }
+  },
+  "header": {
+    "label": {
+      "one": "Help",
+      "two": "Sign in"
+    }
+  },
+  "slider": {
+    "icon": {
+      "one": "image-18",
+      "two": "image-24"
+    }
+  },
+  "modal": {
+    "text": {
+      "title": "Basic Title",
+      "content": "Bacon ipsum dolor amet tri-tip beef picanha, hamburger shank pork loin kielbasa frankfurter pastrami tongue turducken turkey. Pastrami tongue chuck jowl, chicken leberkas bresaola pork chop bacon andouille."
+    }
+  },
+  "btn-text": "Button Text",
+  "icon": "remove-sm-24",
+  "link-url": "#",
+  "avatar": {
+    "scale": {
+      "title": "Edit Photo",
+      "content": "Nice Photo!  Now use the photo editing tools to add that final touch"
+    }
+  },
+  "coachmark": {
+    "content": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.",
+    "link": "Got It",
+    "url": "#"
+  },
+  "title-card-title": "Title",
+  "title-card-content": "Content",
+  "title-card-url": "#foo",
+  "title-card-linktext": "Get Started",
+  "left-align": true
+}

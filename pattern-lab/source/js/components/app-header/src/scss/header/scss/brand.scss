@@ -1,0 +1,14 @@
+////
+/// @group o-header
+/// @link https://origami.pearsoned.com/registry/components/o-header
+////
+
+.o-header__brand {
+	float: left;
+	height: $o-header-height-mobile;
+	padding: 0 $o-header-padding-horizontal;
+
+	@media (min-width: $o-header-desktop-min) {
+		height: $o-header-height;
+	}
+}

@@ -1,0 +1,134 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@pearson-components/app-header",
+        "scope": "@pearson-components",
+        "escapedName": "@pearson-components%2fapp-header",
+        "name": "@pearson-components/app-header",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/uodeyda/Sites/boilerplates/patternlab-elements"
+    ]
+  ],
+  "_from": "@pearson-components/app-header@latest",
+  "_id": "@pearson-components/app-header@1.1.2",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/@pearson-components/app-header",
+  "_nodeVersion": "5.2.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/app-header-1.1.2.tgz_1466632410075_0.16459602862596512"
+  },
+  "_npmUser": {
+    "name": "pearson-ux",
+    "email": "pearson-design-accelerator@pearson.com"
+  },
+  "_npmVersion": "3.3.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@pearson-components/app-header",
+    "scope": "@pearson-components",
+    "escapedName": "@pearson-components%2fapp-header",
+    "name": "@pearson-components/app-header",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@pearson-components/app-header/-/app-header-1.1.2.tgz",
+  "_shasum": "45bde36a0648a170244c4a652100de4d44ace469",
+  "_shrinkwrap": null,
+  "_spec": "@pearson-components/app-header",
+  "_where": "/Users/uodeyda/Sites/boilerplates/patternlab-elements",
+  "bugs": {
+    "url": "https://github.com/Pearson-Higher-Ed/app-header/issues"
+  },
+  "dependencies": {
+    "dom-delegate": "~2.0.3",
+    "object-assign": "~4.0.1"
+  },
+  "description": "Global responsive header for Pearson applications.",
+  "devDependencies": {
+    "browserify": "^10.2.4",
+    "browserify-istanbul": "^0.2.1",
+    "conventional-changelog": "^1.1.0",
+    "coveralls": "^2.11.4",
+    "css-loader": "^0.23.1",
+    "expect.js": "^0.3.1",
+    "file-loader": "^0.8.5",
+    "karma": "^0.12.31",
+    "karma-browserify": "^4.0.0",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-coverage": "^0.2.6",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-mocha": "^0.1.10",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-sinon": "^1.0.4",
+    "mocha": "^2.1.0",
+    "node-sass": "^3.4.2",
+    "pearson-elements": "^0.2.0",
+    "phantomjs-polyfill": "0.0.2",
+    "sass-loader": "^3.1.2",
+    "semver": "^5.1.0",
+    "sinon": "^1.15.3",
+    "style-loader": "^0.13.0",
+    "superviews.js": "0.0.5",
+    "textrequireify": "^2.1.1",
+    "travis-multirunner": "^2.7.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "45bde36a0648a170244c4a652100de4d44ace469",
+    "tarball": "https://registry.npmjs.org/@pearson-components/app-header/-/app-header-1.1.2.tgz"
+  },
+  "gitHead": "20d6b51cbab5a6c6a327f9191e627d2d63c48666",
+  "homepage": "https://github.com/Pearson-Higher-Ed/app-header#readme",
+  "keywords": [
+    "pearson-components",
+    "app-header"
+  ],
+  "license": "MIT",
+  "main": "./main.js",
+  "maintainers": [
+    {
+      "name": "aaron.kaka",
+      "email": "aaron.kaka@gmail.com"
+    },
+    {
+      "name": "darin.lampson",
+      "email": "darin.lampson@pearson.com"
+    },
+    {
+      "name": "pearson-ux",
+      "email": "pearson-design-accelerator@pearson.com"
+    }
+  ],
+  "name": "@pearson-components/app-header",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pearson-Higher-Ed/app-header.git"
+  },
+  "scripts": {
+    "build": "webpack -p",
+    "ci": "npm test && npm run build",
+    "dev": "npm run dev-setup && webpack-dev-server --port 8081 --devtool source-map --hot --progress --colors",
+    "dev-setup": "mkdir -p fonts && cp ./node_modules/pearson-elements/dist/fonts/* ./fonts && cp ./node_modules/pearson-elements/dist/css/elements.css ./demo",
+    "gen-changelog": "node ./npm_scripts/gen-changelog.js",
+    "release": "node ./npm_scripts/release.js",
+    "test": "./node_modules/karma/bin/karma start karma.conf.js",
+    "version": "npm run gen-changelog && git add CHANGELOG.md"
+  },
+  "version": "1.1.2"
+}

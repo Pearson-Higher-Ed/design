@@ -1,0 +1,29 @@
+.pe-proto {
+  &.slider {
+	position:relative;
+	height:40px;
+	@include flex($justify-content: center);
+	
+	.track {
+	  @include box-size(100%, 4px);
+	  background-color:$primary;
+	}
+	.knob {
+	  @include box-size(20px, 20px);
+	  @include box-shadow;
+	  border-radius:50%;
+	  background-color:#fff;
+	  z-index:1000;
+	  border:1px solid $neutral-four;
+	}
+  }
+  &.slider-icons {
+	width:100%;
+	
+	.slider {
+	  width:100%;
+	  margin: 0 em(15);
+	}
+  }
+}
+

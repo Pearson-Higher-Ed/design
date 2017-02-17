@@ -1,0 +1,1023 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for js/Drawer.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header medium">
+    <h1>Code coverage report for <span class="entity">js/Drawer.js</span></h1>
+    <h2>
+        Statements: <span class="metric">70.78% <small>(109 / 154)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">54.35% <small>(50 / 92)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">58.33% <small>(14 / 24)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">71.24% <small>(109 / 153)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">js/</a> &#187; Drawer.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">15</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-yes">5</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">37</span>
+<span class="cline-any cline-yes">31</span>
+<span class="cline-any cline-yes">31</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-yes">6</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13</span>
+<span class="cline-any cline-yes">40</span>
+<span class="cline-any cline-yes">34</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">40</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* jshint -W079 */
+&nbsp;
+'use strict';
+&nbsp;
+var DomDelegate = require('dom-delegate');
+var WeakMap = require('./weakmap/main');
+&nbsp;
+var dispatchEvent = function(element, name, data) {
+  <span class="missing-if-branch" title="else path not taken" >E</span>if (document.createEvent &amp;&amp; element.dispatchEvent) {
+    var event = document.createEvent('Event');
+    event.initEvent(name, true, true);
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (data) {
+<span class="cstat-no" title="statement not covered" >      event.detail = data;</span>
+    }
+&nbsp;
+    element.dispatchEvent(event);
+  }
+};
+&nbsp;
+function Drawer(el) {
+  if (!(this instanceof Drawer)) {
+    throw new TypeError('Constructor Drawer requires \'new\'');
+  }
+  if (!el) {
+    throw new TypeError('missing required argument: element');
+  }
+  if (typeof el === 'string') {
+    el = document.querySelector(el);
+  }
+&nbsp;
+  this.target = el;
+  this.currentTarget = false;
+  this.trigger; // opened drawer
+  this.closeButton;
+  this.target.style.display ='none'; // don't tab through hidden drawers
+  this.target.classList.add('o-drawer');
+&nbsp;
+  this.trap = document.createElement('button');
+  this.trap.className = 'pe-trap';
+  this.trap.onclick = <span class="fstat-no" title="function not covered" >function(e) {</span> <span class="cstat-no" title="statement not covered" >e.preventDefault() }</span>;
+&nbsp;
+  Drawer.cache.set(el, this);
+&nbsp;
+  var hasAlignmentClass = this.target.classList.contains('o-drawer-left') ||
+                          this.target.classList.contains('o-drawer-right');
+  if (!hasAlignmentClass) {
+    this.target.classList.add('o-drawer-left');
+  }
+&nbsp;
+  if (!Drawer.delegate) {
+    var delegate = new DomDelegate(document.body);
+    delegate.on('click',
+      '[data-toggle="o-drawer"], [data-close="o-drawer"], [data-open="o-drawer"]',
+<span class="fstat-no" title="function not covered" >      function(e, eventTarget) {</span> <span class="cstat-no" title="statement not covered" >handleClick(e, eventTarget, Drawer) }</span>);
+    Drawer.delegate = delegate;
+  }
+&nbsp;
+  var _drawer = this;
+  getFocusables(_drawer); // for managing keyboard trap
+  closeOtherDrawers(_drawer);// two drawers never open on the same side
+&nbsp;
+  return this;
+}
+&nbsp;
+Drawer.cache = new WeakMap();
+&nbsp;
+&nbsp;
+/**
+ * Initializes all drawer elements on the page or within
+ * the element passed in.
+ * @param  {HTMLElement|string} element DOM element or selector.
+ * @return {DropdownMenu[]} List of Drawer instances that
+ * have been initialized.
+ */
+Drawer.init = function(element) {
+  var drawerEls = selectAll(element),
+      drawers = [];
+&nbsp;
+  for(var i=0, l=drawerEls.length; i&lt;l; i++) {
+    drawers.push(new Drawer(drawerEls[i]));
+  }
+&nbsp;
+  return drawers;
+};
+&nbsp;
+function selectAll(element) {
+  if (!element) {
+    element = document.body;
+  }
+  if (!(element instanceof HTMLElement)) {
+    element = document.querySelectorAll(element)[0];
+  }
+&nbsp;
+  return element.querySelectorAll('[data-o-component="o-drawer"]');
+}
+&nbsp;
+&nbsp;
+/**
+ * Destroy all Drawer Components on the page
+ */
+Drawer.destroy = function() {
+  <span class="missing-if-branch" title="else path not taken" >E</span>if (Drawer.bodyDelegate) {
+    Drawer.bodyDelegate.destroy();
+  }
+};
+&nbsp;
+/**
+ * Opens the Drawer
+ * Sets aria-expanded on the triggering control and saves trigger
+ * Sets focus to first focusable/close button
+ * Traps focus within
+ * @return {Drawer} self, for chainability
+ */
+Drawer.prototype.open = function() {
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (this.target.classList.contains('o-drawer-open')) {
+<span class="cstat-no" title="statement not covered" >    return this;</span>
+  }
+&nbsp;
+  this.trigger = document.activeElement;
+  var control = this.trigger,
+      t = this.target,
+      firstFocusable = this.firstFocusable;
+&nbsp;
+  t.style.display = 'block';
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (t.classList.contains('o-drawer-animated')) {
+<span class="cstat-no" title="statement not covered" >    setTimeout(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >      setStates(t, control, firstFocusable);</span>
+    }, 50);
+  }
+  else {
+    setStates(t, control, firstFocusable);
+  }
+&nbsp;
+  this.bound = this.trapFocus.bind(this);
+  t.addEventListener('keydown', this.bound);
+&nbsp;
+  this.currentTarget = true;
+  if (t.classList.contains('o-drawer-right')) {
+    dispatchEvent(t, 'o.Drawer.RightDrawer');
+  }
+  if (t.classList.contains('o-drawer-left')) {
+    dispatchEvent(t, 'o.Drawer.LeftDrawer');
+  }
+&nbsp;
+  dispatchEvent(t, 'oDrawer.open');
+&nbsp;
+  return this;
+};
+&nbsp;
+function setStates(t, control, firstFocusable) {
+  t.classList.add('o-drawer-open');
+  control &amp;&amp; control.setAttribute('aria-expanded', 'true');
+  firstFocusable &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >firstFocusable.focus();</span>
+}
+&nbsp;
+&nbsp;
+/**
+ * Closes the Drawer
+ * Releases keyboard trap
+ * Moves focus back to triggering control if applicable
+ * Set aria-expanded to false on trigger
+ * @return {Drawer} self, for chainability
+ */
+Drawer.prototype.close = function() {
+  if (!this.target.classList.contains('o-drawer-open')) {
+    this.trigger = document.activeElement;
+    return this;
+  }
+  this.target.classList.remove('o-drawer-open');
+  dispatchEvent(this.target, 'oDrawer.close');
+&nbsp;
+  this.trigger &amp;&amp; this.trigger.setAttribute('aria-expanded', 'false');
+&nbsp;
+  var t = this.target,
+      closedFromWithin = containedIn(document.activeElement, t);
+&nbsp;
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (t.classList.contains('o-drawer-animated')) {
+<span class="cstat-no" title="statement not covered" >    setTimeout(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >      t.style.display = 'none';</span>
+    }, 400);
+  }
+  else {
+    t.style.display = 'none';
+  }
+&nbsp;
+  t.removeEventListener('keydown', this.bound);
+&nbsp;
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (closedFromWithin &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >this.trigger)</span> {
+<span class="cstat-no" title="statement not covered" >    this.trigger.focus();</span>
+  }
+&nbsp;
+  return this;
+};
+&nbsp;
+function containedIn(child, t) {
+  while ((child = child.parentNode) &amp;&amp; (child !== t));
+  return child;
+}
+&nbsp;
+&nbsp;
+/**
+ * Toggles the Drawer
+ * @return {Drawer} self, for chainability
+ */
+Drawer.prototype.toggle = function() {
+  var visible = this.target.classList.contains('o-drawer-open');
+  (visible &amp;&amp; this.close()) || this.open();
+  return this;
+};
+&nbsp;
+/**
+ * Esc closes drawer
+ * Traps tab-focus in the Drawer
+ * this fails if spatial focus is used
+ * waiting... https://github.com/whatwg/html/pull/1474 
+ */
+Drawer.prototype.trapFocus = <span class="fstat-no" title="function not covered" >function(e) {</span>
+<span class="cstat-no" title="statement not covered" >  var ev = e || event,</span>
+      active = document.activeElement,
+      trap = this.trap,
+      firstFocusable = this.firstFocusable,
+      code = ev.keyCode;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function forwards() {</span>
+<span class="cstat-no" title="statement not covered" >    if (active === trap) {</span>
+<span class="cstat-no" title="statement not covered" >      ev.preventDefault();</span>
+<span class="cstat-no" title="statement not covered" >      firstFocusable.focus();</span>
+    }
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  function backwards() {</span>
+<span class="cstat-no" title="statement not covered" >    if (active === firstFocusable) {</span>
+<span class="cstat-no" title="statement not covered" >      ev.preventDefault();</span>
+<span class="cstat-no" title="statement not covered" >      trap.focus();</span>
+    }
+  }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  switch(code) {</span>
+    case 27:
+<span class="cstat-no" title="statement not covered" >      this.close();</span>
+<span class="cstat-no" title="statement not covered" >      break;</span>
+&nbsp;
+    case 9:
+<span class="cstat-no" title="statement not covered" >      if (this.focusables.length === 1) {</span>
+<span class="cstat-no" title="statement not covered" >        ev.preventDefault();</span>
+<span class="cstat-no" title="statement not covered" >        break;</span>
+      }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      return (ev.shiftKey) ? backwards() : forwards();</span>
+<span class="cstat-no" title="statement not covered" >      break;</span>
+  
+    default:
+<span class="cstat-no" title="statement not covered" >      break;</span>
+  }
+}
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >function handleClick(e, target, Drawer) {</span>
+<span class="cstat-no" title="statement not covered" >  e.preventDefault();</span>
+<span class="cstat-no" title="statement not covered" >  var drawerName = target.getAttribute('data-target') ||</span>
+                   target.getAttribute('href'),
+      drawerElements = document.querySelectorAll(drawerName);
+&nbsp;
+  // Is it actually possible to have multiple drawers per trigger??
+  // Certainly can't be with anchor triggers. 
+<span class="cstat-no" title="statement not covered" >  for (var i=0, l=drawerElements.length; i&lt;l; i++) {</span>
+<span class="cstat-no" title="statement not covered" >    var t = drawerElements[i],</span>
+        drawer = Drawer.cache.get(t);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (!drawer &amp;&amp; t.getAttribute('data-o-component') === 'o-collapse') {</span>
+<span class="cstat-no" title="statement not covered" >      drawer = new Drawer(t);</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (drawer) {</span>
+<span class="cstat-no" title="statement not covered" >      var action = openCloseToggle(target);</span>
+<span class="cstat-no" title="statement not covered" >      drawer[action]();</span>
+    }
+  }
+}
+&nbsp;
+function getFocusables(_drawer) {
+  _drawer.focusables = Array.prototype.slice.call(_drawer.target.querySelectorAll(
+      '[tabindex="0"], a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled])'));
+&nbsp;
+  for (var i=0, l=_drawer.focusables.length; i&lt;l; i++) {
+<span class="cstat-no" title="statement not covered" >    var f = _drawer.focusables[i];</span>
+<span class="cstat-no" title="statement not covered" >    if (f.hasAttribute('data-close')) {</span>
+<span class="cstat-no" title="statement not covered" >      _drawer.closeButton = f;</span>
+<span class="cstat-no" title="statement not covered" >      break;</span>
+    }
+  }
+  // could a drawer have zero focusables?
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (_drawer.focusables.length) {
+<span class="cstat-no" title="statement not covered" >    _drawer.firstFocusable = _drawer.closeButton || _drawer.focusables[0];</span>
+<span class="cstat-no" title="statement not covered" >    _drawer.target.appendChild(_drawer.trap);</span>
+  }
+}
+&nbsp;
+function closeOtherDrawers(_drawer) {
+  document.addEventListener('o.Drawer.RightDrawer', function() {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (_drawer.target.classList.contains('o-drawer-right') &amp;&amp; !_drawer.currentTarget) {
+<span class="cstat-no" title="statement not covered" >      _drawer.close();</span>
+    }
+    _drawer.currentTarget = false;
+  });
+&nbsp;
+  document.addEventListener('o.Drawer.LeftDrawer', function() {
+    if (_drawer.target.classList.contains('o-drawer-left') &amp;&amp; !_drawer.currentTarget) {
+      _drawer.close();
+    }
+    _drawer.currentTarget = false;
+  });
+}
+&nbsp;
+<span class="fstat-no" title="function not covered" >function openCloseToggle(el) {</span>
+<span class="cstat-no" title="statement not covered" >  if (el &amp;&amp; el.dataset) {</span>
+<span class="cstat-no" title="statement not covered" >    return Object.keys(el.dataset).filter(<span class="fstat-no" title="function not covered" >function(key) {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (el.dataset[key] === 'o-drawer') {</span>
+<span class="cstat-no" title="statement not covered" >        return key;</span>
+      }
+    });
+  }
+}
+&nbsp;
+module.exports = Drawer;
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Sep 21 2016 15:40:43 GMT+0000 (UTC)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

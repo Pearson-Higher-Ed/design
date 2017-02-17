@@ -1,0 +1,66 @@
+// Converts PX to REM
+@function calculate-rem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+// convert PX to EM
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+
+// to use @include fontSize(32px);
+@mixin font-size($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculate-rem($size);
+}
+
+@mixin font-color($color) {
+  color: $color;
+  fill: $color
+}
+
+@mixin flex($align-items: center, $justify-content: space-between, $flex-direction: row) {
+  display: flex;
+  align-items: #{$align-items};
+  justify-content: #{$justify-content};
+  flex-direction: #{$flex-direction};
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+   
+    padding-top: ($height / $width) * 100%;
+  }
+  > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@mixin box-shadow {
+  box-shadow: 0px 0px 21px 6px rgba(0,0,0,0.06);
+}
+
+@mixin box-size ($width, $height) {
+  width:$width;
+  height:$height;
+}
+
+@mixin color-mix ($background, $color) {
+  background-color:$background;
+  color:$color;
+}
+
+@mixin grid($col) {
+  width: 8.333333% * $col
+}

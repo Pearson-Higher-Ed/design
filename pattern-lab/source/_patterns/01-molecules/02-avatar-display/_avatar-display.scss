@@ -1,0 +1,15 @@
+.pe-proto {
+  &.avatar-display {
+	img {
+	  background:$primary-four;
+	  border-radius: 50%;
+	}
+	.large {
+	  @include box-size(120px, 120px)
+	}
+	
+	.small {
+	  @include box-size(50px, 50px);
+	}
+  }
+}

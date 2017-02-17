@@ -1,0 +1,31 @@
+/* This component is experimental and not available for production use. If you need a component with this functionality, please contact us in the Pearson Design Accelerator hipchat room */
+
+@mixin pe-aside {
+  margin-bottom: $pe-aside-margin;
+  padding: $pe-aside-padding;
+  background: $pe-aside-bg;
+  border-left: $pe-aside-border-left;
+}
+
+//aside,
+.pe-aside {
+  @include pe-aside;
+
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: 0.8rem;
+  }
+}

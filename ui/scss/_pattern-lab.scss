@@ -1,0 +1,196 @@
+// THIS FILE SHOULD NOT BE EDITED
+@mixin respond-fluid() {
+  width:100%;
+  
+  @media (min-width:641px) {
+	width:50%;
+  }
+  
+  @media (min-width:769px) {
+	width:33.3%;
+  }
+  
+  @media (min-width:1025px) {
+	width:25%;
+  }
+  
+  @media (min-width:1281px) {
+	width:20%;
+  }
+}
+
+// Dark Gray
+$black: pe-color(black);
+$pitch: pe-color(pitch);
+$gutenberg-black: pe-color(gutenberg-black);
+$asphalt: pe-color(asphalt);
+$full-moon: pe-color(full-moon);
+$smoke-gray: pe-color(smoke-gray);
+$gray-no-1: pe-color(gray-no-1);
+
+// Neutral Gray
+$boring: pe-color(boring);
+$gray-wash: pe-color(gray-wash);
+$sidewalk: pe-color(sidewalk);
+$sandy-gray: pe-color(sandy-gray);
+
+// Light Gray
+$hairline-gray: pe-color(hairline-gray);
+$brightly-lit: pe-color(brightly-lit);
+$off-white: pe-color(off-white);
+$dirty-ice: pe-color(dirty-ice);
+$white: pe-color(white);
+
+// Blues
+$deep-sea: pe-color(deep-sea);
+$royal-navy: pe-color(royal-navy);
+$hyperdrive: pe-color(hyperdrive);
+$basic-blue: pe-color(basic-blue);
+$sea: pe-color(sea);
+$sky-blue: pe-color(sky-blue);
+$blue-milk: pe-color(blue-milk);
+
+// Other
+$highlighter: pe-color(highlighter);
+$firetruck: pe-color(firetruck);
+$spruce: pe-color(spruce);
+
+
+// swatch container
+.swatch {
+  > div {
+	width:100%;
+	padding:1em;
+	border:3px solid $white;
+	@include respond-fluid;
+  }
+}
+
+// background classes
+.black-bg {
+  background-color: $black;
+}
+
+.pitch-bg {
+  background-color: $pitch;
+}
+
+.gutenberg-black-bg {
+  background-color: $gutenberg-black;
+}
+
+.asphalt-bg {
+  background-color: $asphalt;
+}
+
+.full-moon-bg {
+  background-color: $full-moon;
+}
+
+.smoke-gray-bg {
+  background-color: $smoke-gray;
+}
+
+.gray-no-1-bg {
+  background-color: $gray-no-1;
+}
+
+.boring-bg {
+  background-color: $boring;
+}
+
+.gray-wash-bg {
+  background-color: $gray-wash;
+}
+
+.sidewalk-bg {
+  background-color: $sidewalk;
+}
+
+.hairline-gray-bg {
+  background-color: $hairline-gray;
+}
+
+.sandy-gray-bg {
+  background-color: $sandy-gray;
+}
+
+.brightly-lit-bg {
+  background-color: $brightly-lit;
+}
+
+.off-white-bg {
+  background-color: $off-white;
+}
+
+.dirty-ice-bg {
+  background-color: $dirty-ice;
+}
+
+.white-bg {
+  background-color: $white;
+}
+
+.deep-sea-bg {
+  background-color: $deep-sea;
+}
+
+.royal-navy-bg {
+  background-color: $royal-navy;
+}
+
+.hyperdrive-bg {
+  background-color: $hyperdrive;
+}
+
+.basic-blue-bg {
+  background-color: $basic-blue;
+}
+
+.sea-bg {
+  background-color: $sea;
+}
+
+.sky-blue-bg {
+  background-color: $sky-blue;
+}
+
+.highlighter-bg {
+  background-color: $highlighter;
+}
+
+.blue-milk-bg {
+  background-color: $blue-milk;
+}
+
+.firetruck-bg {
+  background-color: $firetruck;
+}
+
+.spruce-bg {
+  background-color: $spruce;
+}
+
+.icon-list {
+  > li {
+	padding:5px;
+	@include respond-fluid;
+	
+	> span {
+	  width: 32px;
+	  font-size: 14px;
+	  display: inline-block;
+	  text-align: right;
+	  margin-right: 10px;
+	}
+  }
+}
+
+.img-spec {
+  max-width: 100%;
+}
+
+.presentation {
+  padding:25px;
+  height:1280px;
+}

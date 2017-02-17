@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for js/template.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">js/template.js</span></h1>
+    <h2>
+        Statements: <span class="metric">97.46% <small>(115 / 118)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">91.67% <small>(44 / 48)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(9 / 9)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">97.35% <small>(110 / 113)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">js/</a> &#187; template.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140</td><td class="line-coverage"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">63</span>
+<span class="cline-any cline-yes">63</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">92</span>
+<span class="cline-any cline-yes">92</span>
+<span class="cline-any cline-yes">92</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-yes">2</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">60</span>
+<span class="cline-any cline-yes">60</span>
+<span class="cline-any cline-yes">60</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">118</span>
+<span class="cline-any cline-yes">118</span>
+<span class="cline-any cline-yes">60</span>
+<span class="cline-any cline-yes">60</span>
+<span class="cline-any cline-yes">60</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">118</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-yes">33</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">118</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-yes">7</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">118</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-yes">32</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-yes">95</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* jshint ignore: start */
+&nbsp;
+// *** DO NOT MODIFY THIS FILE ***
+// This file was generated from src/html/header.template
+// Regenerate using bin/gen-template
+&nbsp;
+var incrementalDom = require('../../lib/incremental-dom');
+var elementOpen = incrementalDom.elementOpen;
+var elementClose = incrementalDom.elementClose;
+var elementVoid = incrementalDom.elementVoid;
+var text = incrementalDom.text;
+&nbsp;
+module.exports = template;
+&nbsp;
+function template (data, handlers, translate) {
+  elementOpen("div", null, ["class", "o-header__container"])
+    elementOpen("section", null, ["class", "o-header__section"])
+      elementOpen("div", null, ["class", "o-header__brand"])
+        if (data.mode === 'Basic' || data.mode === 'Course' || data.mode === 'Legacy Course') {
+          elementOpen("a", null, null, "href", data.links.home)
+            elementOpen("div", null, ["class", "o-header__logo o-header__logo--pearson"])
+            elementClose("div")
+          elementClose("a")
+        }
+        if (data.mode ==='Signed Out' || data.mode === 'Integration') {
+          elementOpen("div", null, ["class", "o-header__logo o-header__logo--pearson"])
+          elementClose("div")
+        }
+      elementClose("div")
+    elementClose("section")
+    elementOpen("section", null, ["class", "o-header__section o-header__section--right"])
+      elementOpen("nav", null, ["class", "o-header__nav"])
+        elementOpen("ul", null, ["class", "o-header__nav-items"])
+          elementOpen("li", null, ["class", "o-header__nav-item o-app-header__nav-item-notification", "aria-hidden", "true"])
+          elementClose("li")
+          elementOpen("li", null, ["class", "o-header__nav-item o-app-header__nav-item-help"])
+            if (!data.help) {
+              elementOpen("a", null, ["href", "#"], "onclick", function ($event) {handlers.handleHelpNavItemClick($event)})
+                text("" + (translate('Help')) + "")
+              elementClose("a")
+            }
+            <span class="missing-if-branch" title="if path not taken" >I</span>if (typeof data.help === 'string') {
+<span class="cstat-no" title="statement not covered" >              elementOpen("a", null, null, "href", data.help)</span>
+<span class="cstat-no" title="statement not covered" >                text("" + (translate('Help')) + "")</span>
+<span class="cstat-no" title="statement not covered" >              elementClose("a")</span>
+            }
+            if (typeof data.help === 'object') {
+              elementOpen("div", null, ["class", "o-dropdown-menu o-dropdown-menu--right"])
+                elementOpen("a", null, ["href", "#", "id", "o-app-header-help-menu-toggle", "class", "o-dropdown-menu__toggle", "data-toggle", "dropdown-menu", "aria-haspopup", "true", "aria-expanded", "false"])
+                  text("" + (translate('Help')) + "")
+                elementClose("a")
+                elementOpen("ul", null, ["class", "o-dropdown-menu__menu-items", "role", "menu", "aria-labelledby", "o-app-header-menu-toggle-help"])
+                  ;(Array.isArray(data.help) ? <span class="branch-0 cbranch-no" title="branch not covered" >data.help </span>: Object.keys(data.help)).forEach(function(key, $index) {
+                    elementOpen("li", $index, ["class", "o-dropdown-menu__menu-item", "role", "presentation"])
+                      if (typeof data.help[key] === 'string') {
+                        elementOpen("a", null, ["role", "menuitem", "tabindex", "-1"], "href", data.help[key])
+                          text("" + (key) + "")
+                        elementClose("a")
+                      }
+                      if (data.help[key].href) {
+                        elementOpen("a", null, ["role", "menuitem", "tabindex", "-1"], "href", data.help[key].href, "target", data.help[key].target)
+                          text("" + (key) + "")
+                        elementClose("a")
+                      }
+                      if (typeof data.help[key].onClick === 'function') {
+                        elementOpen("a", null, ["role", "menuitem", "href", "#", "tabindex", "-1"], "onclick", function ($event) {data.help[key].onClick($event)})
+                          text("" + (key) + "")
+                        elementClose("a")
+                      }
+                    elementClose("li")
+                  }, data.help)
+                elementClose("ul")
+              elementClose("div")
+            }
+          elementClose("li")
+          elementOpen("li", null, null, "class", data.menuNavItemClasses)
+            if (data.mode === 'Signed Out' &amp;&amp; data.showLoginControls) {
+              elementOpen("a", null, ["href", "#"], "onclick", function ($event) {handlers.handleLogin($event)})
+                text("" + (translate('Sign In')) + "")
+              elementClose("a")
+            }
+            if (data.mode === 'Basic' || data.mode === 'Course' || data.mode === 'Legacy Course') {
+              elementOpen("div", null, ["class", "o-dropdown-menu o-dropdown-menu--right o-app-header__menu-menu"])
+                elementOpen("a", null, ["href", "#", "class", "o-dropdown-menu__toggle", "data-toggle", "dropdown-menu", "aria-haspopup", "true", "aria-expanded", "false"])
+                  elementOpen("span", null, ["id", "o-app-header-user-menu-label", "class", "o-app-header--sr-only"])
+                    text("" + (translate('User account menu')) + "")
+                  elementClose("span")
+                  elementOpen("span", null, ["class", "o-app-header__username o-app-header--truncate o-header__viewport-tablet--visible o-header__viewport-desktop--visible"])
+                    text("" + (data.user.givenName || translate('Menu')) + " ")
+                    elementOpen("i", null, ["class", "o-app-header__icon pe-icon--chevron-down"])
+                    elementClose("i")
+                  elementClose("span")
+                  elementOpen("span", null, ["class", "o-header__viewport-tablet--hidden o-header__viewport-desktop--hidden"])
+                    text("" + (translate('Menu')) + " ")
+                    elementOpen("i", null, ["class", "o-app-header__icon pe-icon--chevron-down"])
+                    elementClose("i")
+                  elementClose("span")
+                elementClose("a")
+                elementOpen("ul", null, ["class", "o-dropdown-menu__menu-items", "role", "menu", "aria-labelledby", "o-app-header-user-menu-label"])
+                  ;(Array.isArray(data.menuItems) ? data.menuItems : <span class="branch-1 cbranch-no" title="branch not covered" >Object.keys(data.menuItems))</span>.forEach(function(item, $index) {
+                    elementOpen("li", item.key, ["role", "presentation"], "class", item.classes)
+                      if (item.href) {
+                        elementOpen("a", null, ["role", "menuitem", "class", "o-app-header--truncate", "tabindex", "-1"], "href", item.href, "target", item.target)
+                          text("" + (item.text) + "")
+                        elementClose("a")
+                      }
+                      if (typeof item.onClick === 'function') {
+                        elementOpen("a", null, ["role", "menuitem", "class", "o-app-header--truncate", "href", "#", "tabindex", "-1"], "onclick", function ($event) {item.onClick($event)})
+                          text("" + (item.text) + "")
+                        elementClose("a")
+                      }
+                      if (item.isCourseNav) {
+                        elementOpen("ul", null, ["class", "o-app-header__menu-items-course-nav o-header__viewport-tablet--hidden o-header__viewport-desktop--hidden"])
+                          ;(Array.isArray(item.courseNavMenuItems) ? item.courseNavMenuItems : <span class="branch-1 cbranch-no" title="branch not covered" >Object.keys(item.courseNavMenuItems))</span>.forEach(function(courseNavItem, $index) {
+                            elementOpen("li", courseNavItem.key, ["role", "presentation"], "class", courseNavItem.classes)
+                              if (courseNavItem.href) {
+                                elementOpen("a", null, ["role", "menuitem", "class", "o-app-header--truncate", "tabindex", "-1"], "href", courseNavItem.href, "target", courseNavItem.target)
+                                  text("" + (courseNavItem.text) + "")
+                                elementClose("a")
+                              }
+                              if (typeof courseNavItem.onClick === 'function') {
+                                elementOpen("a", null, ["role", "menuitem", "class", "o-app-header--truncate", "href", "#", "tabindex", "-1"], "onclick", function ($event) {courseNavItem.onClick($event)})
+                                  text("" + (courseNavItem.text) + "")
+                                elementClose("a")
+                              }
+                            elementClose("li")
+                          }, item.courseNavMenuItems)
+                        elementClose("ul")
+                      }
+                    elementClose("li")
+                  }, data.menuItems)
+                elementClose("ul")
+              elementClose("div")
+            }
+          elementClose("li")
+        elementClose("ul")
+      elementClose("nav")
+    elementClose("section")
+  elementClose("div")
+}</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jun 22 2016 21:53:18 GMT+0000 (UTC)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

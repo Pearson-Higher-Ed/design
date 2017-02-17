@@ -1,0 +1,67 @@
+{
+  "paths" : {
+    "source" : {
+      "root": "../../pattern-lab/source/",
+      "patterns" : "../../pattern-lab/source/_patterns/",
+      "data" : "../../pattern-lab/source/_data/",
+      "meta": "../../pattern-lab/source/_meta/",
+      "annotations" : "../../pattern-lab/source/_annotations/",
+      "styleguide" : "./node_modules/styleguidekit-assets-default/dist/",
+      "patternlabFiles" : "./node_modules/styleguidekit-mustache-default/views/",
+      "js" : "../../pattern-lab/source/js",
+      "images" : "../../pattern-lab/source/images",
+      "fonts" : "../../pattern-lab/source/fonts",
+      "css" : "../../pattern-lab/source/css/"
+    },
+    "public" : {
+      "root" : "../../pattern-lab/public/",
+      "patterns" : "../../pattern-lab/public/patterns/",
+      "data" : "../../pattern-lab/public/styleguide/data/",
+      "annotations" : "../../pattern-lab/public/annotations/",
+      "styleguide" : "../../pattern-lab/public/styleguide/",
+      "js" : "../../pattern-lab/public/js",
+      "images" : "../../pattern-lab/public/images",
+      "fonts" : "../../pattern-lab/public/fonts",
+      "css" : "../../pattern-lab/public/css"
+    }
+  },
+  "styleGuideExcludes": [
+  ],
+  "defaultPattern": "all",
+  "defaultShowPatternInfo": false,
+  "cleanPublic" : true,
+  "patternExtension": "mustache",
+  "ignored-extensions" : ["scss", "DS_Store", "less"],
+  "ignored-directories" : ["scss"],
+  "debug": false,
+  "ishControlsHide": {
+    "s": false,
+    "m": false,
+    "l": false,
+    "full": false,
+    "random": false,
+    "disco": false,
+    "hay": true,
+    "mqs": false,
+    "find": false,
+    "views-all": false,
+    "views-annotations": false,
+    "views-code": false,
+    "views-new": false,
+    "tools-all": false,
+    "tools-docs": false
+  },
+  "ishMinimum": "240",
+  "ishMaximum": "2600",
+  "patternStateCascade": ["inprogress", "inreview", "complete", "uxboilerplate"],
+  "patternStates": {
+  },
+  "patternExportPatternPartials": ["atoms-name"],
+  "patternExportDirectory": "../../dist/",
+  "cacheBust": true,
+  "starterkitSubDir": "dist",
+  "outputFileSuffixes": {
+    "rawTemplate": "",
+    "markupOnly": ".markup-only"
+  }
+}

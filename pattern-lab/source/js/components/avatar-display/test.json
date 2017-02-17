@@ -1,0 +1,23 @@
+HTTP/1.1 200 OK
+Connection: keep-alive
+Server: nginx
+Date: Tue, 16 Aug 2016 22:31:24 GMT
+Content-Type: application/json;charset=utf-8
+Content-Length: 3642
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Expose-Headers: Content-Type, Cache-Control, Expires, Etag, Last-Modified
+Strict-Transport-Security: max-age=31536000
+X-Endpoint: Travis::Api::App::Endpoint::Repos
+X-Pattern: /:owner_name/:name/builds/:id
+X-Oauth-Scopes: public
+X-Accepted-Oauth-Scopes: public
+Vary: Accept,Accept-Encoding
+Cache-Control: no-cache
+Etag: "9d258c29ce1d641485f41cfdf4f013b9"
+X-Content-Digest: d2149ef278a8b939de9d95412ad3990ae99b4704
+Age: 0
+X-Rack-Cache: miss, store
+Via: 1.1 vegur
+
+{"id":152822536,"repository_id":7354140,"number":"4429","config":{"language":"java","sudo":false,"addons":{"sauce_connect":{"no_ssl_bump_domains":"all"}},"before_script":["nvm install 5.0","nvm use 5.0","python -m SimpleHTTPServer &"],"script":["export component=avatar-display","export feature_branch=v0.1.1","chmod 777 ./src/main/shell_scripts/components.sh","./src/main/shell_scripts/components.sh","mvn -Dtest_suite_xml=avatar_display.xml test"],"notifications":{"email":{"recipients":["eajazali.mahaboobbasha@pearson.com","veeramani.balagurusamy@pearson.com"],"on_success":"always","on_failure":"always"},"hipchat":"pQrkiv99DE4e4K1I1KLrR8HZtoE8i3ZGg2bHYLrp@2846476"},".result":"configured","global_env":[{"secure":"UX8IPlfuE1XvcEJwZiv6eM4rsPO3cxapgywxLqOObVt2wypsSiHo0NkkYJet5MfgpPYIviy8FP2poZUG3PkSc+x+zWtNf+usYBMeuhjbaW4sUvjznwhOpq5qphEhBlf7L9OCGd5Qv0qZjoHNSD5stfSOJd8Z53miFJ4O4KjpRNVFCJYfn1ple5WCoCjATbMl6bZqbigYU3s0jaXp9oue8cYVCttm/ahyQ+O9ya/NvGr93mr+dIr0scXDAMDM3aUTB8VZcRJ46Y9jy8MJ3nQTlJr1/+Gm2ujdpzgloVlQ2nBgSPAjvxJv3RQIZZsIYm4SoRntpSilYR91KZFEirUkZON7E6/bhb8N4mJTnqo5UPcHJl/8teF+SfdURiYDc7XQ3i94aiWKzOdzNBWi0OZsAU483jn0+kuTMafsTZ3EOGMMequZecdfn4PG47Ahq29Qy2s/92CECNoFiZL8BXCAbb4ecnS0fShe/79qsbG7OyTHkJlDPYhoQY+2eCVv0Wnrprv/sThzmnrs8QpAyPWAQ4siJ0y8Q8mIeDUWWZ4C5cll4Mincom7tdOOapuCsNLCxWn2LJeyCRPzpbgJBW4I2R76Ed2yjR1yuh4l5W0HB1604rRh+ImPpHn8ZYDYxrk284aI2RzhSNkUU6bdx2tgheJs2uFtDgXKIpZtlw1Kqks="},{"secure":"P8t4vLidU5cVGbHllIiUkZFeajPVwGMaipIe+o1rm0FQO7bciJawoXJSOcTSMJhN1RMFSzF0ZaAbo4EiLJcx2VGxppyiR8LLYDMXt8E0QuW+Yy91K8TdjJOMrgJlWJsWmK8pRVjQSeLP77xDO7HvA/vfJPSf3d6DLeeFQ+Y+hu1/u+HwTUxZ4Ta79Iy87U6y4tyZCx/0H28Xvb9cMRM0m1urPJ15EGyDGJfo9rmn77VKrdFy2q5QDjF/O8o6fNCZ+lXlyWxEnxawETKjX3nfOTM1Lm2pfLfKC3+zhLQ5ukQPbrhDXK5QHK03nppv7lUMtN+BskWyJCZnC7l4VkZyYaOumnTENuDXK4O7Lq4swv3jXOcWZT3ZLpRG0/Ydw4rFwPOW4VCVEO10tVdxyi+hro4C+CgNxalXyXdLCAGqEYkIH0RsKp3hPoOaD00pstobGvEw/ZWIhinkk8YNAJ4MliKINonFBHUe5TEt4p4QV2awee3Q8ajn9F0BhpNsS733dkSIV1BvWgj/BwVllN4kxNP0XoCFMVa7lifykFr/TI39ilwUFK5wOM36kmVTTLHumB4qVdybrqOcG2amjsTgql9MbBxuD0tzBpLJzKacCXB/W8Z148oYFQQSkX6KM5Cp39a2HiLmH2oZrLk8xrVNxUcGqS+xYW3S7CEYSxxp+hs="}],"group":"stable","dist":"precise"},"state":"finished","result":0,"status":0,"started_at":"2016-08-16T22:25:03Z","finished_at":"2016-08-16T22:31:23Z","duration":380,"commit":"f6b5cba2262d7c496f872b68bded6e32522dd3d5","branch":"master","message":"feat(avatar-display): Run avatar-display Tests","committed_at":"2016-08-12T20:21:27Z","author_name":"umahaea","author_email":"eajazali.mahaboobbasha@pearson.com","committer_name":"GitHub","committer_email":"noreply@github.com","compare_url":"https://github.com/Pearson-Higher-Ed/ux-test-platform/compare/0bdc9fae877831054998738806a2fec6b9698cc6...f6b5cba2262d7c496f872b68bded6e32522dd3d5","event_type":"api","matrix":[{"id":152822537,"repository_id":7354140,"number":"4429.1","config":{"language":"java","sudo":false,"addons":{},"before_script":["nvm install 5.0","nvm use 5.0","python -m SimpleHTTPServer &"],"script":["export component=avatar-display","export feature_branch=v0.1.1","chmod 777 ./src/main/shell_scripts/components.sh","./src/main/shell_scripts/components.sh","mvn -Dtest_suite_xml=avatar_display.xml test"],"notifications":{"email":{"recipients":["eajazali.mahaboobbasha@pearson.com","veeramani.balagurusamy@pearson.com"],"on_success":"always","on_failure":"always"},"hipchat":"pQrkiv99DE4e4K1I1KLrR8HZtoE8i3ZGg2bHYLrp@2846476"},".result":"configured","global_env":"SAUCE_USERNAME=[secure] SAUCE_ACCESS_KEY=[secure]","group":"stable","dist":"precise","os":"linux"},"result":0,"started_at":"2016-08-16T22:25:03Z","finished_at":"2016-08-16T22:31:23Z","allow_failure":false}]}

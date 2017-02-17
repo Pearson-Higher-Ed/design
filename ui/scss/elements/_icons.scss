@@ -1,0 +1,204 @@
+// Icons
+//
+// Icons includes a subset of Font Awesome:
+// Font Awesome by Dave Gandy - http://fontawesome.io
+
+@font-face {
+  font-family: 'pearson-fa';
+  src: url('#{$pe-icons-path}#{$pe-icons-name}.eot');
+  src: url('#{$pe-icons-path}#{$pe-icons-name}.eot#iefix') format('embedded-opentype'),
+  url('#{$pe-icons-path}#{$pe-icons-name}.ttf') format('truetype'),
+  url('#{$pe-icons-path}#{$pe-icons-name}.woff') format('woff'),
+  url('#{$pe-icons-path}#{$pe-icons-name}.svg##{$pe-icons-name}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^='pe-icon--'],
+[class*=' pe-icon--'] {
+  // use !important to prevent issues with browser extensions that change fonts
+  font-family: 'pearson-fa' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  // Better Font Rendering
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pe-icon--search:before {
+  content: '\f002';
+}
+
+.pe-icon--check:before {
+  content: '\f00c';
+}
+
+/* all three for close-X */
+
+.pe-icon--close:before {
+  content: '\f00d';
+}
+
+.pe-icon--remove:before {
+  content: '\f00d';
+}
+
+.pe-icon--times:before {
+  content: '\f00d';
+}
+
+.pe-icon--cog:before {
+  content: '\f013';
+}
+
+.pe-icon--trash-o:before {
+  content: '\f014';
+}
+
+.pe-icon--plus-circle:before {
+  content: '\f055';
+}
+
+.pe-icon--chevron-up:before {
+  content: '\f077';
+}
+
+.pe-icon--chevron-down:before {
+  content: '\f078';
+}
+
+.pe-icon--chevron-left:before {
+  content: '\f056';
+}
+
+.pe-icon--chevron-right:before {
+  content: '\f058';
+}
+
+.pe-icon--thumb-tack:before {
+  content: '\f08d';
+}
+
+.pe-icon--user:before {
+  content: '\f007';
+}
+
+.pe-icon--users:before {
+  content: '\f0c0';
+}
+
+.pe-icon--envelope:before {
+  content: '\f0e0';
+}
+
+.pe-icon--times-circle-o:before {
+  content: '\f05c';
+}
+
+.pe-icon--info-circle:before {
+  content: '\f05a';
+}
+
+.pe-icon--file-o:before {
+  content: '\f016';
+}
+
+.pe-icon--calendar:before {
+  content: '\f073';
+}
+
+.pe-icon--square-o:before {
+  content: '\f096';
+}
+
+.pe-icon--check-square-o:before {
+  content: '\f046';
+}
+
+.pe-icon--ban:before {
+  content: '\f05e';
+}
+
+.pe-icon--camera:before {
+  content: '\f030';
+}
+
+.pe-icon--clock-o:before {
+  content: '\f017';
+}
+
+.pe-icon--exclamation-circle:before {
+  content: '\f06a';
+}
+
+.pe-icon--bell:before {
+  content: '\f0f3';
+}
+
+.pe-icon--archive:before {
+  content: '\f187';
+}
+
+.pe-icon--question-circle:before {
+  content: '\f059';
+}
+
+.pe-icon--heart:before {
+  content: '\f004';
+}
+
+.pe-icon--heart-o:before {
+  content: '\f08a';
+}
+
+.pe-icon--laptop:before {
+  content: '\f109';
+}
+
+.pe-icon--book:before {
+  content: '\f02d';
+}
+
+.pe-icon--list-ul:before {
+  content: '\f0ca';
+}
+
+.pe-icon--th-large:before {
+  content: '\f009';
+}
+
+.pe-icon--newspaper-o:before {
+  content: '\f1ea';
+}
+
+.pe-icon--video-camera:before {
+  content: '\f03d';
+}
+
+.pe-icon--picture-o:before {
+  content: '\f03e';
+}
+
+.pe-icon--suitcase:before {
+  content: '\f0f2';
+}
+
+.pe-icon--caret-right:before {
+  content: '\f0da';
+}
+
+.pe-icon--caret-down:before {
+  content: '\f0d7';
+}
+
+.pe-icon--lightbulb-o:before {
+  content: '\f0eb';
+}
+
+.pe-icon--shopping-cart:before {
+  content: '\f07a';
+}

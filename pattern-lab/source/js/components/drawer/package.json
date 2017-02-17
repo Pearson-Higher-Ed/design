@@ -1,0 +1,119 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "@pearson-components/drawer@~0.3.0",
+        "scope": "@pearson-components",
+        "escapedName": "@pearson-components%2fdrawer",
+        "name": "@pearson-components/drawer",
+        "rawSpec": "~0.3.0",
+        "spec": ">=0.3.0 <0.4.0",
+        "type": "range"
+      },
+      "/Users/uodeyda/Sites/boilerplates/patternlab-elements/node_modules/@pearson-components/contextual-help"
+    ]
+  ],
+  "_from": "@pearson-components/drawer@>=0.3.0 <0.4.0",
+  "_id": "@pearson-components/drawer@0.3.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/@pearson-components/drawer",
+  "_nodeVersion": "5.2.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/drawer-0.3.0.tgz_1474472814592_0.8287347995210439"
+  },
+  "_npmUser": {
+    "name": "pearson-ux",
+    "email": "pearson-design-accelerator@pearson.com"
+  },
+  "_npmVersion": "3.3.12",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "@pearson-components/drawer@~0.3.0",
+    "scope": "@pearson-components",
+    "escapedName": "@pearson-components%2fdrawer",
+    "name": "@pearson-components/drawer",
+    "rawSpec": "~0.3.0",
+    "spec": ">=0.3.0 <0.4.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/@pearson-components/contextual-help"
+  ],
+  "_resolved": "https://registry.npmjs.org/@pearson-components/drawer/-/drawer-0.3.0.tgz",
+  "_shasum": "1613b7761a06a32f7b9391da06f2cd44d93abbf8",
+  "_shrinkwrap": null,
+  "_spec": "@pearson-components/drawer@~0.3.0",
+  "_where": "/Users/uodeyda/Sites/boilerplates/patternlab-elements/node_modules/@pearson-components/contextual-help",
+  "bugs": {
+    "url": "https://github.com/Pearson-Higher-Ed/drawer/issues"
+  },
+  "dependencies": {
+    "dom-delegate": "^2.0.3",
+    "node-sass": "^3.4.2"
+  },
+  "description": "Off-canvas navigation and content container.",
+  "devDependencies": {
+    "browserify-istanbul": "^0.2.1",
+    "conventional-changelog": "^1.1.0",
+    "coveralls": "^2.11.4",
+    "css-loader": "^0.23.1",
+    "expect.js": "^0.3.1",
+    "karma": "^0.12.31",
+    "karma-browserify": "^4.0.0",
+    "karma-coverage": "^0.2.6",
+    "karma-mocha": "^0.1.10",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "mocha": "^2.1.0",
+    "phantomjs-polyfill": "0.0.2",
+    "sass-loader": "^3.2.0",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "1613b7761a06a32f7b9391da06f2cd44d93abbf8",
+    "tarball": "https://registry.npmjs.org/@pearson-components/drawer/-/drawer-0.3.0.tgz"
+  },
+  "gitHead": "c5fda6cd43446b510c059b6b430e125cddab0b5d",
+  "homepage": "https://github.com/Pearson-Higher-Ed/drawer#readme",
+  "keywords": [
+    "pearson-components",
+    "drawer"
+  ],
+  "license": "MIT",
+  "maintainers": [
+    {
+      "name": "aaron.kaka",
+      "email": "aaron.kaka@gmail.com"
+    },
+    {
+      "name": "darin.lampson",
+      "email": "darin.lampson@pearson.com"
+    },
+    {
+      "name": "pearson-ux",
+      "email": "pearson-design-accelerator@pearson.com"
+    }
+  ],
+  "name": "@pearson-components/drawer",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pearson-Higher-Ed/drawer.git"
+  },
+  "scripts": {
+    "build": "webpack -p",
+    "ci": "npm test && npm run build",
+    "dev": "webpack-dev-server --port 8081 --devtool eval --hot --progress --colors",
+    "gen-changelog": "node ./npm_scripts/gen-changelog.js",
+    "postpublish": "npm access public && echo 'Package scope set to public!'",
+    "release": "node ./npm_scripts/release.js",
+    "test": "./node_modules/karma/bin/karma start karma.conf.js",
+    "version": "npm run gen-changelog && git add CHANGELOG.md"
+  },
+  "version": "0.3.0"
+}
