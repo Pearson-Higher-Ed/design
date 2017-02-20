@@ -3,8 +3,8 @@ layout: component-yaml
 title: Colors
 section: Components
 redirect_from: /docs/ui-components/colors/
-version: 2.0.0-beta.6
-status: deprecated
+version: 2.0.0
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -242,25 +242,7 @@ blocks:
       - Digital Marine Turquoise
 
 changelog:
-  - version: 2.0.0-beta.6
-    changes: |
-      - ADDED: Hot Pink to the conditional palette.
-      - ADDED: Digital Marine Turquoise to the conditional palette.
-  - version: 2.0.0-beta.5
-    changes: |
-      - ADDED: Sunflower Yellow color to Secondary Palette
-      - ADDED: Alto color to Neutral Palette
-  - version: 2.0.0-beta.4
-    changes: |
-      - CHANGED: Added new accessibility checklist.
-  - version: 2.0.0-beta.3
-    changes: |
-      - CHANGED: Switch back to using pure white background, and update colors to be brighter.
-  - version: 2.0.0-beta.2
-    changes: |
-      - CHANGED: Tweak colors for accessibility.
-      - CHANGED: Palette to match rebrand discussions.
-  - version: 2.0.0-beta.1
+  - version: 2.0.0
     changes: |
       - CHANGED: Colors now reflect new branding.
   - version: 1.0.1
