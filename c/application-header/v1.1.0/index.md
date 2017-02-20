@@ -4,7 +4,7 @@ title: Application Header
 section: Components
 redirect_from: /docs/ui-components/application-header/
 version: 1.1.0
-status: active
+status: deprecated
 implemented: false
 people:
   - role: Product Owner
