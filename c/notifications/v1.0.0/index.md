@@ -2,8 +2,9 @@
 layout: component-yaml
 title: Notifications
 section: Components
-version: 1.0.0-beta.2
-status: deprecated
+version: 1.0.0
+rebranded: true
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -151,9 +152,6 @@ blocks:
 
 
 changelog:
-  - version: 1.0.0-beta.2
-    changes: |
-      - CHANGED: Copy to match UA recommendations.
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: Initial design
 ---
