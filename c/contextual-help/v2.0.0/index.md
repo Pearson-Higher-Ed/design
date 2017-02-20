@@ -3,8 +3,9 @@ layout: component-yaml
 title: Contextual Help
 section: Components
 redirect_from: /docs/ui-components/contextual-help/
-version: 2.0.0-beta.3
-status: deprecated
+version: 2.0.0
+rebranded: true
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -20,8 +21,6 @@ downloads:
     link: ./assets/contextual-help.mockup.sketch
   - name: .ai
     link: ./assets/contextual-help.mockup.ai
-  - name: Authoring Guidelines
-    https: https://docs.google.com/document/d/1tQVifP2ynJhHlg7R-Odk2Ej1qQxMs0SQ67fYzTlYjM8/edit?ts=578397b6
 
 dependencies:
   - name: Drawer
@@ -34,7 +33,7 @@ dependencies:
     version: 1.1.0
 
 tagline: |
-  Contextual help presents help and support articles within the product experience so that users can answer their questions without the interruption of opening a separate help system in a new tab.
+  Presents help and support articles within the product experience so that users can answer their questions without the interruption of opening a separate help system in a new tab.
 usage_guidelines: |
   Every URL in the Next Gen platform should use the Contextual Help component, at a minimum configuring the two default items in the Help List.
 
@@ -89,9 +88,6 @@ blocks:
       Selecting the "Help" link in the [App Header](/design/c/application-header/v2.0.0-beta.2/#rd-signed-out-mode) will open the Help List. You can also navigate directly to an article (either a standalone article or one from the list) through embedded activation.
 
       A Help icon or a "Learn more" link can be used to activate an article from within the page. These should be positioned near the relevant portion of the page. Avoid mixing and matching both styles in the same page.
-
-      Selecting the embedded activation will launch a particular article in the drawer, but not the full help list.
-
     contents:
       - type: wide image
         src: ./assets/embedded-activation.png
@@ -109,16 +105,6 @@ blocks:
       - type: narrow image
         src: ./assets/help-according-2x.png
         caption: Example of accordions.
-
-
-
-  - type: section
-    name: Writer's Guide
-
-  - type: two column
-    text: |
-      Use [the authoring guidelines](https://docs.google.com/document/d/1tQVifP2ynJhHlg7R-Odk2Ej1qQxMs0SQ67fYzTlYjM8/edit?ts=578397b6) when authoring articles for the Contextual Help component.
-
 
   - type: section
     name: Redlines
@@ -196,41 +182,9 @@ blocks:
 
 
 changelog:
-  - version: 2.0.0-beta.3
-    changes: |
-      - CHANGED: Deleted authoring guidelines section.
-  - version: 2.0.0-beta.2
-    changes: |
-      - CHANGED: Re-skin of current Console header to new branding.
-  - version: 2.0.0-beta.1
+  - version: 2.0.0
     changes: |
       - CHANGED: Change to new design
-  - version: 1.0.0-beta.6
-    changes: |
-      - ADDED: Sketch and Illustrator mockup files.
-      - CHANGED: Icons to match latest icons component
-  - version: 1.0.0-beta.6
-    changes: |
-      - UPDATED: Include latest feedback from UA.
-  - version: 1.0.0-beta.5
-    changes: |
-      - UPDATED: Author guidelines with latest UA documentation.
-      - ADDED: Accessibility checklist
-  - version: 1.0.0-beta.4
-    changes: |
-      - ADDED: Accordion styles
-      - ADDED: Tip, Note, and Warning styles
-      - CHANGED: Updated author guidelines per latest from UA
-  - version: 1.0.0-beta.3
-    changes: |
-      - CHANGED: Updated formatting guidelines with latest documentation.
-  - version: 1.0.0-beta.2
-    changes: |
-      - ADDED: Images
-      - ADDED: Initial redlines
-      - ADDED: Dependency links
-      - ADDED: Embedded activation triggers
-      - CHANGED: Updated formatting guidelines
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: Initial version
 ---
