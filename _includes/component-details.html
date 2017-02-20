@@ -24,6 +24,9 @@
     <div class="block article_header">
       <h1 class="pe-title pe-title--extra-large">{{page.title}}</h1>
       <p class="pe-label pe-label--large">Version {{page.version}} &bull; <span class="status">{{page.status | capitalize}}</span>{% if page.implementation %} &bull; <span><a href="{{page.implementation}}">Dev Docs</a></span>{% endif %}</p>
+      {% if page.rebranded %}
+        <div class="alert-color">This component is a part of a larger rebranding project. Please coordinate with the Framework team before consuming it.</div>
+      {% endif %}
     </div>
 
     <div class="block overview">

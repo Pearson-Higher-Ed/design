@@ -7,3 +7,9 @@
   @include pe-label-bold;
   color: pe-color(white);
 }
+
+.alert-color {
+  @extend .alert;
+  background-color: pe-color(royal-navy);
+  font-weight: normal;
+}
