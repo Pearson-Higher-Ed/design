@@ -2,8 +2,9 @@
 layout: component-yaml
 title: Typography
 section: Components
-version: 2.0.0-beta.1
-status: deprecated
+version: 2.0.0
+rebranded: true
+status: active
 implemented: true
 people:
   - role: Product Owner
@@ -17,7 +18,7 @@ people:
 implementation: https://pearson-elements-v0.surge.sh/elements/typography/
 downloads:
   - name: UXD Accessibility Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/1xE22tRE0aRGqqM8PGEJ-5MVClo8gTqr1nf2fy_VcFl0/edit?usp=sharing
+    link: https://docs.google.com/a/pearson.com/document/d/1gYypf7WpDkSSMsB29Qa9woJLdPsiwGIZ-u0LrH650Vs/edit?usp=sharing
   - name: Sketch
     link: ./assets/typography.mockup.sketch
   - name: Illustrator
@@ -27,7 +28,7 @@ tagline: This component provides standard typographic styles for the platform.
 features:
   - Single collection of all typographic styles
   - Label styles for UI messages
-  - Title styles for UI headings
+  - Title styles for UI and Page headings
   - Copy styles for content
   - Inline styles (links, super/sub-script, etc.)
   - Meets accessibility contrast requirements
@@ -36,9 +37,7 @@ usage_guidelines: |
 
 dependencies:
   - name: Colors
-    version: 1.0.1
-  - name: Breakpoints
-    version: 1.0.0
+    version: 2.0.0-beta.4
 
 blocks:
   - type: section
@@ -50,45 +49,35 @@ blocks:
     contents:
       - type: code
         content: |
-          font-family: 'Open Sans', Calibri, 'Helvetica Neue', Tahoma, sans-serif;
+          font-family: 'Open Sans', Calibri, Tahoma, sans-serif;
           font-family: Monaco, 'Lucida Console', monospace;
 
   - type: section
-    name: Labels
+    name: UI Text
 
   - type: two column
     text: |
-      Much of the typography used in a web application consists of short names, labels, or single line bits of content. For example, in Console the course tile displays information like instructor names and course dates with labels.
+      Much of the typography used in a web application consists of short names, labels, or single line bits of content. For example, in Console the course tile displays information like instructor names and course dates with UI Text.
     contents:
+      - type: wide image
+        src: ./assets/ui.text.example.png
+        caption: Examples of how UI Text is used.
 
   - type: two column
     text: |
-      ### Size Variants
-      There are four different sizes of label, *Basic*, *Small*, *Large*, and *Bold*:
+      ### Variants
+      There are five different types of UI Text, *Basic*, *Small*, *Large*, *Bold*, and *Small Bold*:
 
-      Labels should primarily be used in single line scenarios. Make a particular effort to avoid using bold labels in a multi-line manner.
+      UI Text should primarily be used in single line scenarios.
     contents:
       - type: narrow image
-        src: ./assets/labels.regular.png
-        caption: The four label sizes
+        src: ./assets/ui.text.regular.png
+        caption: The five UI Text types
 
   - type: two column
     text: |
       ### Color Variants
-      The default label color is Dark Gray. Additional colors include:
-
-        - Medium Gray 1
-        - Charcoal
-        - Black
-        - Red
-        - Green
-    contents:
-      - type: narrow image
-        src: ./assets/labels.colors.png
-        caption: Standard colors
-      - type: narrow image
-        src: ./assets/labels.inverse.png
-        caption: Inverse colors
+      Use [Charcoal](/design/c/colors/v2.0.0-beta.4/#rd-charcoal) as the default primary color and [Medium Gray](/design/c/colors/v2.0.0-beta.4/#rd-medium-gray) as the secondary gray. Prefer these defaults, but labels can use any color from the [Colors component](/design/c/colors), as long as they are over an appropriately contrasting background color.
 
   - type: two column
     text: |
@@ -102,42 +91,47 @@ blocks:
       * `<abbr>`
 
   - type: section
-    name: Titles
+    name: UI Headings
 
   - type: two column
     text: |
-      Titles are very similar to labels except they demarcate a logical section or container of content. In the previous example, the course name would be a title.
+      UI Headings are very similar to UI Text except they demarcate a logical section or container of content. In the previous example, the course name would be a UI Heading.
 
-      Titles come in two types, *Page* and *Section*. Page titles typically only appear once per page and are designed to name the current page. Section titles are designed to name the modular components that might make up a page.
-    contents:
-
-  - type: two column
-    text: |
-      ### Page titles
-
-      #### Sizes
-      Page titles come in two sizes, *Basic* and *Small*.
+      UI Headings come in two types, *Page* and *Section*. Page headings typically only appear once per page and are designed to name the current page. Section headings are designed to name the modular components that might make up a page.
     contents:
       - type: wide image
-        src: ./assets/page.titles.sizes.png
-        caption: Standard page title sizes.
+        src: ./assets/section.ui.heading.example.png
+        caption: Example of Section UI Heading usage.
+      - type: wide image
+        src: ./assets/page.ui.heading.example.png
+        caption: Example of Page UI Heading usage.
 
   - type: two column
     text: |
-      ### Section titles
-
-      #### Sizes
-      There are four different sizes of section title: *Basic*, *Small*, *Large*, and *Extra Large*.
+      ### Page UI Headings
+      Page UI Headings come in two sizes, *Basic* and *Small*.
     contents:
       - type: wide image
-        src: ./assets/titles.sizes.png
+        src: ./assets/page.ui.heading.sizes.png
+        caption: Standard Page UI Heading sizes.
+
+  - type: two column
+    text: |
+      ### Section UI Headings
+      There are four different types of section UI Headings: *Basic*, *Bold*, *Small*, and *Large*.
+    contents:
+      - type: wide image
+        src: ./assets/section.ui.heading.sizes.png
         caption: |
-          Standard title sizes, multiline versions, and the responsive sizes used when the viewport is narrower.
+          Standard Section UI Heading types in single and multiline versions.
 
   - type: two column
     text: |
+      ### Color Variants
+      UI Headings follow the same color guidelines as UI Text, using [Charcoal](/design/c/colors/v2.0.0-beta.4/#rd-charcoal) by default and [Medium Gray](/design/c/colors/v2.0.0-beta.4/#rd-medium-gray) as a secondary supplement. Prefer these, but use other colors where appropriate (make sure to pair with an accessible background).
+
       ### Allowed Inline Elements
-      In general, titles should not be styled beyond the basic styles listed above. If necessary, stick to the following list of inline elements.
+      In general, UI Headings should not be styled beyond the basic styles listed above. If necessary, stick to the following list of inline elements.
 
       * `<em>, <i>`
       * `<small>`
@@ -159,9 +153,14 @@ blocks:
     text: |
       ### Basic Body
       Most regular content will use the *Basic Body* style.
+
+      ### Large Body
+      For more extensive chunks of content, use the *Large Body* style. This is useful to maintain the target line length of around 75 characters.
     contents:
       - type: narrow image
         src: ./assets/copy.basic.png
+      - type: narrow image
+        src: ./assets/copy.large.png
 
   - type: two column
     text: |
@@ -184,20 +183,24 @@ blocks:
   - type: two column
     text: |
       ### Allowed Inline Elements
-      Copy is more flexible in this regard that labels or titles. You can include any of the inline elements covered by this component.
+      Copy is more flexible in this regard than labels or titles. You can include any of the inline elements covered by this component.
 
   - type: section
-    name: Headings
+    name: Copy Headings
 
   - type: two column
     text: |
-      Headings pair with [copy](#copy) styles to delineate sections within blocks of content. They should not be used for UI elements (see [titles](#titles) instead).
+      Copy Headings pair with [copy](#copy) styles to delineate sections within blocks of content. They should not be used for UI elements (see [UI Headings](#ui-headings) instead).
 
       There are six different levels available and should be used in order.
     contents:
       - type: wide image
         src: ./assets/headings.png
-        caption: These headings don't change size as the viewport narrows.
+        caption: All six Copy Heading levels.
+
+
+
+
 
   - type: section
     name: Inline Elements
@@ -213,7 +216,6 @@ blocks:
       * `<a>`
       * `<em>, <i>`
       * `<strong>, <b>`
-      * `<u>`
       * `<del>, <s>`
       * `<ins>`
       * `<q>`
@@ -235,136 +237,133 @@ blocks:
       * `<time>`
       * `<abbr>`
 
+
+
+
+
   - type: section
     name: Redlines
 
   - type: two column
     text: |
-      ### Labels
+      ### UI Text
 
   - type: two column
     text: |
       #### Sizes
-      <div class="section_text" markdown="1">
-
       Small
-      : - 13px font-size
-        - 15px line-height
+      : - 12px font-size
+        - 16px line-height
+
+      Small bold
+      : - Semibold weight
 
       Basic
       : - 14px font-size
-        - 16px line-height
-
-      Large
-      : - 16px font-size
         - 18px line-height
 
       Bold
-      : - 14px font-size
-        - 16px line-height
-        - bold font-weight
-    contents:
-      - type: narrow image
-        src: ./assets/redlines.labels.regular.png
-    exports:
-      - Basic Label
-      - Small Label
-      - Large Label
-      - Bold Label
+      : - Semibold weight
 
-  - type: style table
-    styles:
-      - Basic Label
-      - Small Label
-      - Large Label
-      - Bold Label
+      Large
+      : - 16px font-size
+        - 20px line-height
 
-  - type: two column
-    text: |
       #### Colors
-      Primary (Light)
-      : - [Pitch (#231f20)](/design/c/colors/v1.0.1/#rd-pitch-231f20)
+      Text is [Charcoal](/design/c/colors/v2.0.0-beta.4/#rd-charcoal) by default, [Medium Gray](/design/c/colors/v2.0.0-beta.4/#rd-medium-gray) should be used as the secondary color. Any other color can be used as long as it's paired with an appropriately contrasting background. See the [Colors](/design/c/colors) component for more details.
 
-      Secondary (Light)
-      : - [Gray No. 1 (#565656)](/design/c/colors/v1.0.1/#rd-gray-no-1-565656)
-
-      Primary (Dark)
-      : - [White (#FFFFFF)](/design/c/colors/v1.0.1/#rd-white-ffffff)
-        - light font-weight
-
-      Secondary (Dark)
-      : - [Gray Wash (#AEAEAE)](/design/c/colors/v1.0.1/#rd-gray-wash-aeaeae)
-        - light font-weight
     contents:
       - type: narrow image
-        src: ./assets/redlines.labels.colors.light.png
-      - type: narrow image
-        src: ./assets/redlines.labels.colors.dark.png
+        src: ./assets/redlines.ui.text.regular.png
     exports:
-      - Primary Label Color
-      - Secondary Label Color
-      - Inverse Primary Label Color
-      - Inverse Secondary Label Color
+      - UI Text - Basic
+      - UI Text - Small
+      - UI Text - Small Bold
+      - UI Text - Large
+      - UI Text - Bold
 
   - type: style table
     styles:
-      - Primary Label Color
-      - Secondary Label Color
-      - Inverse Primary Label Color
-      - Inverse Secondary Label Color
+      - UI Text - Basic
+      - UI Text - Small
+      - UI Text - Small Bold
+      - UI Text - Large
+      - UI Text - Bold
 
   - type: two column
     text: |
-      ### Titles
+      ### Section UI Headings
     exports:
-      - Basic Title
-      - Large Title
-      - XL Title
+      - UI Headings - Section - Basic
+      - UI Headings - Section - Small
+      - UI Headings - Section - Bold
+      - UI Headings - Section - Large
+
+  - type: two column
+    text: |
+      #### Sizes
+      Small
+      : - 18px font-size
+        - 22px line-height
+
+      Basic
+      : - 20px font-size
+        - 26px line-height
+
+      Bold
+      : - 20px font-size
+        - 26px line-height
+        - Semibold weight
+
+      Large
+      : - 24px font-size
+        - 28px line-height
+
+
+      #### Color
+      Use the same color scheme as UI Text.
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.ui.heading.section.regular.png
+        caption: Regular title sizes
+
+  - type: style table
+    styles:
+      - UI Headings - Section - Basic
+      - UI Headings - Section - Small
+      - UI Headings - Section - Bold
+      - UI Headings - Section - Large
+
+  - type: two column
+    text: |
+      ### Page UI Headings
+    exports:
+      - UI Headings - Page - Basic
+      - UI Headings - Page - Small
 
   - type: two column
     text: |
       #### Sizes
       Basic
-      : - 22px font-size
-        - 28px line-height
+      : - 38px font-size
+        - 52px line-height
+        - Light weight
 
-      Large
-      : - 24px font-size
-        - 30px line-height
+      Small
+      : - 28px font-size
+        - 38px line-height
+        - Light weight
 
-      XL
-      : - 30px font-size
-        - 36px line-height
-
-      At [extra small](/design/c/breakpoints/v1.0.0/#rd-extra-small) viewports:
-
-      Basic
-      : - 18px font-size
-        - 22px line-height
-
-      Large
-      : - 20px font-size
-        - 24px line-height
-
-      XL
-      : - 22px font-size
-        - 28px line-height
-
-      #### Color
-      All titles are colored [Pitch (#231f20)](/design/c/colors/v1.0.1/#rd-pitch-231f20).
+      #### Colors
+      Use the same color scheme as UI Text.
     contents:
-      - type: narrow image
-        src: ./assets/redlines.titles.regular.png
-        caption: Regular title sizes
-      - type: narrow image
-        src: ./assets/redlines.titles.narrow.png
-        caption: Title sizes for narrow viewports (< 480px)
+      - type: wide image
+        src: ./assets/redlines.ui.heading.page.regular.png
 
   - type: style table
     styles:
-      - Basic Title
-      - Large Title
-      - XL Title
+      - UI Headings - Page - Basic
+      - UI Headings - Page - Small
 
   - type: two column
     text: |
@@ -372,32 +371,31 @@ blocks:
 
   - type: two column
     text: |
-      #### Basic Body
-      Font
-      : - 16px font-size
+      #### Body
+      Basic Font Size
+      : - 14px font-size
         - 22px line-height
 
+      Large Font Size
+      : - 16px font-size
+        - 24px line-height
+
       Color
-      : - Charcoal
+      : - [Charcoal](/design/c/colors/v2.0.0-beta.4/#rd-charcoal)
 
       Margins:
       : - Adjacent paragraphs are separated by 12px
         - Leave top/bottom padding for a block of `p` tags up to the consumer
-
-      ##### Small Size
-      Font
-      : - 14px font-size
-        - 20px line-height
     contents:
       - type: narrow image
         src: ./assets/redlines.copy.body.png
         caption: Standard body copy
       - type: narrow image
-        src: ./assets/redlines.copy.body.small.png
-        caption: Smaller body copy used for narrower line length
+        src: ./assets/redlines.copy.large.png
+        caption: Large body copy
     exports:
       - Basic Body
-      - Small Body
+      - Large Body
 
   - type: two column
     text: |
@@ -433,8 +431,8 @@ blocks:
         - 20px line-height
 
       Color
-      : - [Gray Wash (#AEAEAE)](/design/c/colors/v1.0.1/#rd-gray-wash-aeaeae)
-        - [Full Moon (#424242)](/design/c/colors/v1.0.1/#rd-full-moon-424242) background-color
+      : - [White Gray](/design/c/colors/v2.0.0-beta.4/#rd-white-gray)
+        - [Ink Blue](/design/c/colors/v2.0.0-beta.4/#rd-ink-blue) background-color
     contents:
       - type: narrow image
         src: ./assets/redlines.copy.code.png
@@ -444,54 +442,36 @@ blocks:
   - type: style table
     styles:
       - Basic Body
-      - Small Body
-      - Lead
+      - Large Body
       - Ordered List
       - Unordered List
       - Code
 
   - type: two column
     text: |
-      ### Headings
+      ### Copy Headings
 
       #### Fonts
       Level 1
-      : - 24px font-size
-        - 30px line-height
-        - bold font-weight
-        - 2px bottom border, [Boring (#A6A8AB)](/design/c/colors/v1.0.1/#rd-boring-a6a8ab)
-        - [Pitch (#231f20)](/design/c/colors/v1.0.1/#rd-pitch-231f20)
+      : - Match Small Page UI Heading style
 
       Level 2
-      : - 20px font-size
-        - 24px line-height
-        - bold font-weight
-        - [Pitch (#231f20)](/design/c/colors/v1.0.1/#rd-pitch-231f20)
+      : - Match Large Section UI Heading style
 
       Level 3
-      : - 18px font-size
-        - 22px line-height
-        - bold font-weight
-        - [Pitch (#231f20)](/design/c/colors/v1.0.1/#rd-pitch-231f20)
+      : - Match Bold Section UI Heading style
 
       Level 4
-      : - 16px font-size
-        - 20px line-height
-        - bold font-weight
-        - [Gray No. 1 (#565656)](/design/c/colors/v1.0.1/#rd-gray-no-1-565656)
+      : - Match Basic Section UI Heading style
 
       Level 5
-      : - 16px font-size
-        - 20px line-height
-        - italic font-style
-        - [Gray No. 1 (#565656)](/design/c/colors/v1.0.1/#rd-gray-no-1-565656)
+      : - Match Small Section UI Heading style
 
       Level 6
-      : - 14px font-size
-        - 16px line-height
-        - italic font-style
-        - [Gray No. 1 (#565656)](/design/c/colors/v1.0.1/#rd-gray-no-1-565656)
+      : - Match Large UI Text style
 
+      #### Colors
+      All Copy Headings are [Charcoal](/design/c/colors/v2.0.0-beta.4/#rd-charcoal).
 
       #### Spacing
 
@@ -527,27 +507,25 @@ blocks:
     text: |
       ### Inline Elements
       `<small>, <time>, <abbr>`
-      : - Same as the 'Basic Text' label
+      : - No visual change, these elements have semantic meaning only
 
       `<a>`
-      : - Active link = [Hyperdrive (#0D65A6)](/design/c/colors/v1.0.1/#rd-hyperdrive-0d65a6) and underline
-        - Hover link = [Royal Navy (#094877)](/design/c/colors/v1.0.1/#rd-royal-navy-094877), no underline
-        - Focus states use the default browser style
+      : - Generic link = [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue) and underline
+        - Hover link = [Ink Blue](/design/c/colors/v2.0.0-beta.4/#rd-ink-blue), no underline
+        - Focus states use the default browser style, and also adopt the hover style
 
       `<mark>`
-      : - [Highlighter (#FDEC2E)](/design/c/colors/v1.0.1/#rd-highlighter-fdec2e) background-color
+      : - [Sunshine Yellow](/design/c/colors/v2.0.0-beta.4/#rd-sunshine-yellow) background-color
         - Only use within Body Copy
 
       `<em>, <i>`
       : - italic font-style
 
       `<strong>, <b>`
-      : - bold font-weight
+      : - semibold font-weight
 
       `<del>, <s>`
       : - line-through text-decoration
-        - [Gray No. 1 (#565656)](/design/c/colors/v1.0.1/#rd-gray-no-1-565656) color on light backgrounds
-        - [Gray Wash (#AEAEAE)](/design/c/colors/v1.0.1/#rd-gray-wash-aeaeae) color on dark backgrounds
 
       `<ins>`
       : - underline text-decoration
@@ -570,7 +548,7 @@ blocks:
 
       `<code>, <kbd>`
       : - Monospace font stack
-        - [Brightly Lit (#E6E6E6)](/design/c/colors/v1.0.1/#rd-brightly-lit-e6e6e6) background-color
+        - [Moonlight](/design/c/colors/v2.0.0-beta.4/#rd-moonlight) background-color
         - 4px horizontal padding
     contents:
       - type: narrow image
@@ -603,7 +581,7 @@ blocks:
       - code, kbd tags
 
 changelog:
-  - version: 2.0.0-beta.1
+  - version: 2.0.0
     changes: |
       - CHANGED: Font family and size to match rebrand aesthetic
   - version: 1.0.0
