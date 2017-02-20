@@ -2,9 +2,9 @@
 layout: component-yaml
 title: Inputs
 section: Components
-status: deprecated
-version: 2.0.0-beta.4
-private: true
+status: active
+version: 2.0.0
+rebranded: true
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -483,36 +483,9 @@ blocks:
         src: ./assets/redlines.password.showhide.png
 
 changelog:
-  - version: 2.0.0-beta.4
-    changes: |
-      - ADDED: Basic input style
-  - version: 2.0.0-beta.3
+  - version: 2.0.0
     changes: |
       Change design to align with new brand
-  - version: 1.0.0-beta.7
-    changes: |
-      - FIXED: Mockups now match the new focus and error styles.
-      - CHANGED: Selects now use new focus and error styles.
-      - CHANGED: Radio buttons and checkboxes now have an explicit focus style (this is because certain versions of Firefox lacked a built in style).
-  - version: 1.0.0-beta.6
-    changes: |
-      - CHANGED: Text input and textarea focus states to use custom (i.e. non-browser) styles. This is because IE11 and Edge and certain versions of Firefox don't actually implement a browser focus state.
-      - CHANGED: Text input and textarea error states to be more compatible with focus + error states.
-      - FIXED: Error in the text input redline images.
-  - version: 1.0.0-beta.5
-    changes: |
-      - Add dependency links
-  - version: 1.0.0-beta.4
-    changes: |
-      - ADDED: Exported styles
-  - version: 1.0.0-beta.3
-    changes: |
-      - ADDED: UXD Accessibility checklist
-      - ADDED: Sketch and AI mockups
-      - CHANGED: Search box input redlines go into more detail
-  - version: 1.0.0-beta.2
-    changes: |
-      - FIXED: Incorrect labeling in redline image
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: Initial version
 ---
