@@ -2,8 +2,9 @@
 layout: component-yaml
 title: Drawer
 section: Components
-version: 2.0.0-beta.2
-status: deprecated
+version: 2.0.0
+rebranded: true
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -67,7 +68,7 @@ blocks:
     text: |
       If the drawer is presenting a list of items, selecting one of them should transition the drawer to the detail view. This adds a back label and icon for returning to the originating view.
 
-      The drawer should retain state on close, i.e. closing the drawer on a detail view and then reopening the same drawer will return the user to that detail view. However, refreshing the page will reset the state.
+      The drawer should retain state on close, i.e. closing the drawer on a detail view and then reopening the same drawer will return the user to that detail view.
     contents:
       - type: wide image
         src: ./assets/detail.view.2x.png
@@ -205,39 +206,8 @@ blocks:
       - Detail View
 
 changelog:
-  - version: 2.0.0-beta.2
+  - version: 2.0.0
     changes: Apply new brand to existing component.
-  - version: 2.0.0-beta.1
-    changes: Redesign align with new brands
-  - version: 1.0.0-beta.8
-    changes: |
-      - ADDED: Ability to include 100% width divider lines and custom background colors
-  - version: 1.0.0-beta.7
-    changes: |
-      - ADDED: Dimensions to redlines
-      - ADDED: Dependency links for breakpoints
-  - version: 1.0.0-beta.6
-    changes: |
-      - CHANGED: Dependencies to final versions.
-      - ADDED: Missing colors dependency.
-      - ADDED: Additional detail on focus behavior for keyboard users.
-  - version: 1.0.0-beta.5
-    changes: |
-      - ADDED: Dependency links
-  - version: 1.0.0-beta.4
-    changes: |
-      - ADDED: Exported styles
-  - version: 1.0.0-beta.3
-    changes: |
-      - ADDED: Animation redlines
-      - ADDED: Accessibility checklist
-      - ADDED: Sketch and AI mockups
-
-  - version: 1.0.0-beta.2
-    changes: |
-      - ADDED: Basic -> Detail transition video
-      - ADDED: Initial redlines
-
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: Initial version.
 ---
