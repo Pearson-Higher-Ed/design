@@ -2,8 +2,9 @@
 layout: component-yaml
 title: Forms
 section: Components
-version: 1.0.0-beta.3
-status: deprecated
+version: 1.0.0
+rebranded: true
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -106,12 +107,6 @@ blocks:
 
 
 changelog:
-  - version: 1.0.0-beta.3
-    changes: |
-      - UPDATED: Error images to match latest input error style
-  - version: 1.0.0-beta.2
-    changes: |
-      - FIXED: References to other components, cleaned up documentation in general
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: Initial version.
 ---
