@@ -109,6 +109,32 @@ blocks:
         caption: If the action results in an error that can be presented within the button context as well. Make sure to pair this with an explanatory alert.
 
   - type: section
+    name: Link Style Buttons
+
+  - type: two column
+    text: |
+      In situations where link styled text is to be used in place of a button for the purposes of de-emphasizing an action (visual hierarchy).  The premise stands that links are to be used for navigation and buttons are to be used for actions.  The need for link styled text is conform to [Pearson Accessibility Guidelines for E-Learning #11 Semantic Markup][Accessibility]
+
+      [Accessibility]: http://wps.pearsoned.com/accessibility/115/29601/7577872.cw/index.html#PG11
+
+      *Identify roles (e.g. heading, numbered list, bulleted list, data table, paragraph, emphasized text) of page elements using conventions for the media type. (And do not misidentify roles by using those conventions solely for their visual effects.)* _emphasize_
+
+    contents:
+        - type: text
+          content: |
+
+            ### Do's
+            - Do use link style buttons to de-emphasize less important actions.
+            - Do use link style buttons to trigger an action.
+            - Do indicate in design specification the presence of a link style button to your developer.
+            - Do use the same visual styling as link text.
+            - examples: "Edit, Dismiss, Resend Confirmation Email, Reset Password"
+
+            ### Dont's
+            - Don't use link style buttons as part of a grouping with other buttons (button bars, save/cancel).
+            - Don't use link style buttons for navigation.
+
+  - type: section
     name: Redlines
 
   - type: two column
