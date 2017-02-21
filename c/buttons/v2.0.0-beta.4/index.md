@@ -117,7 +117,7 @@ blocks:
 
       [Accessibility]: http://wps.pearsoned.com/accessibility/115/29601/7577872.cw/index.html#PG11
 
-      *Identify roles (e.g. heading, numbered list, bulleted list, data table, paragraph, emphasized text) of page elements using conventions for the media type. (And do not misidentify roles by using those conventions solely for their visual effects.)* _emphasize_
+      *Identify roles (e.g. heading, numbered list, bulleted list, data table, paragraph, emphasized text) of page elements using conventions for the media type. (And do not misidentify roles by using those conventions solely for their visual effects.)*
 
     contents:
         - type: text
@@ -127,8 +127,8 @@ blocks:
             - Do use link style buttons to de-emphasize less important actions.
             - Do use link style buttons to trigger an action.
             - Do indicate in design specification the presence of a link style button to your developer.
-            - Do use the same visual styling as link text.
-            - examples: "Edit, Dismiss, Resend Confirmation Email, Reset Password"
+            - Do use the same visual styling as link text.  [See typography specification document.](http://pearson-higher-ed.github.io/design/c/typography/)
+            - Examples: "Edit, Dismiss, Resend Confirmation Email, Reset Password"
 
             ### Dont's
             - Don't use link style buttons as part of a grouping with other buttons (button bars, save/cancel).

@@ -212,7 +212,7 @@ blocks:
     text: |
       ### Basic Elements
 
-      * `<a>`
+      * `<a>` For Link Style Buttons, please refer to the [Button Specification Document](http://pearson-higher-ed.github.io/design/c/buttons/)
       * `<em>, <i>`
       * `<strong>, <b>`
       * `<del>, <s>`
