@@ -113,7 +113,7 @@ blocks:
 
   - type: two column
     text: |
-      In situations where link styled text is to be used in place of a button for the purposes of de-emphasizing an action (visual hierarchy).  The premise stands that links are to be used for navigation and buttons are to be used for actions.  The need for link styled text is conform to [Pearson Accessibility Guidelines for E-Learning #11 Semantic Markup][Accessibility]
+      Link style buttons can be used in place of a graphical button for the purposes of de-emphasizing an action (visual hierarchy).  However, the premise stands that links should be used for navigation and buttons should be used for actions.  Therefore, the need for link style buttons is to conform to [Pearson Accessibility Guidelines for E-Learning #11 Semantic Markup][Accessibility]
 
       [Accessibility]: http://wps.pearsoned.com/accessibility/115/29601/7577872.cw/index.html#PG11
 
