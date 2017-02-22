@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Buttons
 section: Components
-version: 2.0.0-beta.4
+version: 2.0.0-beta.5
 status: active
 implemented: false
 people:
