@@ -128,7 +128,7 @@ blocks:
             - Do use link style buttons to trigger an action.
             - Do indicate in design specification the presence of a link style button to your developer.
             - Do use the same visual styling as link text.  [See typography specification document.](http://pearson-higher-ed.github.io/design/c/typography/)
-            - Examples: "Edit, Dismiss, Resend Confirmation Email, Reset Password"
+            - Examples: "Edit, Dismiss, Resend Verification Email, Reset Password"
 
             ### Dont's
             - Don't use link style buttons as part of a grouping with other buttons (button bars, save/cancel).
