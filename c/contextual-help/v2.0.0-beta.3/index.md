@@ -20,6 +20,8 @@ downloads:
     link: ./assets/contextual-help.mockup.sketch
   - name: .ai
     link: ./assets/contextual-help.mockup.ai
+  - name: Authoring Guidelines
+    https: https://docs.google.com/document/d/1tQVifP2ynJhHlg7R-Odk2Ej1qQxMs0SQ67fYzTlYjM8/edit?ts=578397b6
 
 dependencies:
   - name: Drawer
@@ -104,6 +106,16 @@ blocks:
       - type: narrow image
         src: ./assets/help-according-2x.png
         caption: Example of accordions.
+
+
+
+  - type: section
+    name: Writer's Guide
+
+  - type: two column
+    text: |
+      Use [the authoring guidelines](https://docs.google.com/document/d/1tQVifP2ynJhHlg7R-Odk2Ej1qQxMs0SQ67fYzTlYjM8/edit?ts=578397b6) when authoring articles for the Contextual Help component.
+
 
   - type: section
     name: Redlines
