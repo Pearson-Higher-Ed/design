@@ -1,0 +1,33 @@
+.pe-proto {
+  &.datepicker {
+	position:relative;
+  }
+  
+  .start {
+	margin-right:2em;
+  }
+  
+  .focused {
+	input {
+	  border-bottom:5px solid $primary;
+	}
+  }
+  
+  .inputs {
+	@media(max-width:480px) {
+		flex-direction: column;
+	  
+	 > div {
+		margin:0;
+		width:100%;
+	  }
+	  .input-container {
+		flex:1 0 auto;
+		margin:1em 0;
+	  }
+	}
+  }
+  .cal-container {
+	position:relative;
+  }
+}

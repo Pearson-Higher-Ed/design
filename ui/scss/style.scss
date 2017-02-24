@@ -1,7 +1,10 @@
 /* Imports Elements SDK SCSS, Font Awesome & Patternlab styles */
-@import 'elements/elements';
+@import '../../node_modules/pearson-elements/scss/elements';
 @import 'font-awesome/font-awesome';
+@import 'elements-v0-icons';
+@import 'ux-boilerplate';
 @import 'pattern-lab';
+@import 'ie11.scss';
 
 // Loads generic helper classes
 @import 'variables';
@@ -9,5 +12,42 @@
 @import 'helpers';
 @import 'flex';
 
+// Loads UX Framework and Elements that have not yet been coded.
+@import '../source/_patterns/00-atoms/06-inputs/radios';
+@import '../source/_patterns/00-atoms/06-inputs/select';
+@import '../source/_patterns/00-atoms/06-inputs/textarea';
+@import '../source/_patterns/00-atoms/10-tables/tables';
+
+@import '../source/_patterns/01-molecules/00-alerts/alert';
+@import '../source/_patterns/01-molecules/01-application-header/application-header';
+@import '../source/_patterns/01-molecules/02-avatar-display/avatar-display';
+@import '../source/_patterns/01-molecules/03-coachmarks/coachmark';
+@import '../source/_patterns/01-molecules/04-datepicker/datepicker';
+@import '../source/_patterns/01-molecules/04-datepicker/time-picker';
+@import '../source/_patterns/01-molecules/05-slider/slider';
+@import '../source/_patterns/01-molecules/06-progress-bar/progress-bar';
+@import '../source/_patterns/01-molecules/07-tabs/tabs';
+@import '../source/_patterns/01-molecules/08-forms/forms';
+@import '../source/_patterns/01-molecules/09-dropdown/dropdown';
+@import '../source/_patterns/01-molecules/10-text-editor/text-editor';
+@import '../source/_patterns/01-molecules/10-text-editor/text-editor-box';
+@import '../source/_patterns/01-molecules/10-text-editor/slim-editor';
+@import '../source/_patterns/01-molecules/11-tags/tags';
+
+@import '../source/_patterns/02-organisms/00-avatar/scale-photo';
+@import '../source/_patterns/02-organisms/01-calendar/calendar';
+@import '../source/_patterns/02-organisms/02-contextual-help/help-list';
+@import '../source/_patterns/02-organisms/03-drawer/drawer';
+@import '../source/_patterns/02-organisms/04-modal/modal';
+@import '../source/_patterns/02-organisms/05-timepicker/timepicker';
+
 // Start project files located in the 'pattern-lab/source/_patterns' folders
-@import '../source/_patterns/01-atoms/00-atoms-name';
+
+@import '../source/_patterns/01-molecules/12-homepage/sidebar-list';
+@import '../source/_patterns/01-molecules/12-homepage/title-card';
+@import '../source/_patterns/01-molecules/12-homepage/content-card';
+
+@import '../source/_patterns/02-organisms/06-homepage/sidebar-menu';
+@import '../source/_patterns/02-organisms/06-homepage/cards';
+
+@import '../source/_patterns/04-pages/homepage';

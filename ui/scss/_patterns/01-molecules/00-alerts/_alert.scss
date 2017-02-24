@@ -1,0 +1,26 @@
+.pe-proto {
+  &.alert-box {
+    @include box-shadow;
+    padding:em(10) 1em 1em 1em;
+    border-top: 6px solid;
+    
+    &.error {
+      border-color: $error;
+      
+      .pe-label {
+        color:$error;
+      }
+    }
+  
+    &.success {
+      border-color: $success;
+      .pe-label {
+        color:$success;
+      }
+    }
+  }
+  .alert-title {
+    @include flex;
+    margin-bottom:em(8);
+  }
+}

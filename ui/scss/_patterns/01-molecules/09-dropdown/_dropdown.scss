@@ -1,0 +1,42 @@
+.pe-proto {
+  &.dropdown {
+	position:relative;
+	
+	.pe-btn {
+	  @include flex($justify-content: flex-start);
+	}
+	
+	.action-container {
+	  @include flex($justify-content: flex-start);
+	}
+	
+	.pe-list {
+	  width:180px;
+	  box-shadow: 0 0 30px 2px rgba(0, 0, 0, 0.2);
+	  padding: em(10) 0;
+	  
+	  li {
+		cursor: pointer;
+		padding:em(8);
+		margin:0;
+		
+		&:hover {
+		  background-color:$primary;
+		  color:#fff;
+		}
+		
+		&.divider {
+		  border-top:1px solid $border;
+		  margin:.5em;
+		  height:1px;
+		  padding:0;
+		  
+		  &:hover {
+			background-color:none;
+		  }
+		}
+	  }
+	}
+  }
+}
+

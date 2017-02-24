@@ -1,5 +1,8 @@
 <div class="title-card text-align-center">
     <h2>{{title-card-title}}</h2>
     <p>{{title-card-content}}</p>
+    {{#show-button}}
+        <button class="pe-btn--btn_xlarge pe-btn__cta">{{#show-icon}}{{> atoms-single-icon}} {{/show-icon}}{{button-text}}</button>
+    {{/show-button}}
     <a href="{{title-card-url}}">{{title-card-linktext}}</a>
 </div>

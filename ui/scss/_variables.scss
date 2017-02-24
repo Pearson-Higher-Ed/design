@@ -1,19 +1,22 @@
 // Primary Colors
-$blue: $basic-blue;
-$light-blue: lighten($sky-blue, 10%);
+$primary: $pe-color-digital-pearson-blue;
+$primary-two: $pe-color-ink-blue;
+$primary-three: $pe-color-white;
+$primary-four: $pe-color-white-gray;
 
-// Neutral Colors
-$gray: $boring;
-$light-gray: $sidewalk;
-$dark-gray: $gray-no-1; //#4d4d4d
+$secondary: $pe-color-sunshine-yellow;
+$secondary-two: $pe-color-sunflower-yellow;
+$secondary-three: $pe-color-digital-ice-blue;
 
+$neutral: $pe-color-concrete;
+$neutral-two: $pe-color-charcoal;
+$neutral-three: $pe-color-medium-gray;
+$neutral-four: $pe-color-alto;
+$neutral-five: $pe-color-moonlight;
+ 
+$condition-one: $pe-color-strawberry-red;
+$condition-two: $pe-color-digital-grass-green;
 
-// Utility Colors
-$red : #D0021B;
-$green: #076826;
-$dark-green: darken($green, 15%);
-$light-green: lighten($green, 70%);
-$disabled: $brightly-lit;
-
-// Measurements
-$unit: 1em;
+$border: $neutral;
+$error: $condition-one;
+$success: $condition-two;

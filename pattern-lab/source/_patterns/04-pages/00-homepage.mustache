@@ -1,25 +1,30 @@
-<div class="main-wrapper">
+<div class="content-wrapper">
     <section class="sidebar">{{> organisms-sidebar-menu }}</section>
     <section class="main-content">
         <header>
             <div class="hero">
                 <div class="hero-content">
                     <h1>UX Framework</h1>
-                    <p>UX Framework is a unified UI language with guidance and resources for creating user experiences for Pearson applications. <a href="#foo">Learn more </a></p>
-                    <button class="pe-btn--btn_xlarge pe-btn__cta">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" aria-labelledby="b1" class="pe-icon--desktop-18">
-                            <title id="b1">Download Craft UI Kit</title>
-                            <use xlink:href="#desktop-18"></use>
-                        </svg>
-                        <span>Download the Craft UI Kit</span>
-                    </button>
-                    <a href="#foo">How does it work?</a>
+                    <p>UX Framework is a unified UI language with guidance and resources for creating user experiences for Pearson applications.</p>
+                    <a href="#foo">Learn More</a>
                 </div>
             </div>
         </header>
-        <section class="card-container"> {{> organisms-main-cards }} </section>
-        <section class="card-container update">{{> organisms-update-cards }}</section>
-        <section class="card-container roadmap">{{> organisms-roadmap-cards }}</section>
+        <section class="card-container">
+            <div class="cards">
+                {{> molecules-title-card(title-card-title: "Design", title-card-content: "Start working in Sketch with ready-made UI elements ranging from typography, colors, buttons to modals and more!", show-button: true, title-card-linktext: "How does it work?", button-text: "Download the Craft Library", show-icon: true, icon: "desktop-18")}}
+            </div>
+        </section>
+        <section class="card-container update">
+            <div class="cards">
+                {{> molecules-title-card(title-card-title: "Develop", title-card-content: "Working on a project? Grab the codes you need to build the applications with these pre-made elements.", show-button: true, button-text: "Go to Elements SDK", show-icon: true, icon: "point-next-18")}}
+            </div>
+        </section>
+        <section class="card-container roadmap">
+            <div class="cards">
+                {{> molecules-title-card(title-card-title: "Contribute", title-card-content: "Can't find the components you need?  Have great ideas for improving or modifying a component?  Learn about the process of adding a new component to the library.", show-button: true, button-text: "Learn More", icon: " ")}}
+            </div>
+        </section>
         <footer>
             <div class="footer-content text-align-center">
                 <p>Questions or feedback?  We are happy to help!</p>

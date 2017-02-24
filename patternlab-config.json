@@ -56,7 +56,7 @@
   "patternStateCascade": ["inprogress", "inreview", "complete", "uxboilerplate"],
   "patternStates": {
   },
-  "patternExportPatternPartials": ["atoms-name"],
+  "patternExportPatternPartials": ["organisms-sidebar-menu"],
   "patternExportDirectory": "../../dist/",
   "cacheBust": true,
   "starterkitSubDir": "dist",

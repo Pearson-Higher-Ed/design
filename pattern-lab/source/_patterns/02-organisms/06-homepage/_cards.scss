@@ -1,6 +1,16 @@
 .cards {
-  @include flex;
+  @include flex($justify-content:center);
   padding:5em;
+  
+  @media(max-width:1024px) {
+    padding:3em;
+  }
+  @media(max-width:768px) {
+    padding:2em;
+  }
+  @media(max-width:640px) {
+    padding:2em 1em;
+  }
   
   .title {
     @include flex;
@@ -9,5 +19,8 @@
   .content {
     @include flex;
     flex:2;
+  }
+  a {
+    display:block;
   }
 }

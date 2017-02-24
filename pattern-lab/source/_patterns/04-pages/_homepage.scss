@@ -1,14 +1,20 @@
-.main-wrapper {
+button {
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.content-wrapper {
   display:flex;
   height:100%;
+  width:100%;
   position:absolute;
   overflow:hidden;
+  border:1px solid $border;
 }
 
 .sidebar {
-  min-width:250px;
+  width:240px;
   border-right:1px solid $border;
-  flex:1;
   overflow:scroll;
   @media(max-width:960px) {
     display:none;
@@ -27,7 +33,9 @@
     color:white;
   }
   p {
+    padding:1em 0;
     color:white;
+    max-width:450px;
   }
   a {
     color:white;
@@ -56,9 +64,13 @@
 }
 
 .footer-content {
-  padding:5em 0;
+  padding:5em 1em;
+  @media(max-width:640px) {
+    padding:2em;
+  }
   h2 {
     margin-bottom: 2em;
+    word-wrap: break-word;
   }
   a {
     text-decoration: none;

@@ -1,0 +1,67 @@
+.main-wrapper {
+  display:flex;
+  height:100%;
+  position:absolute;
+  overflow:hidden;
+}
+
+.sidebar {
+  min-width:250px;
+  border-right:1px solid $border;
+  flex:1;
+  overflow:scroll;
+  @media(max-width:960px) {
+    display:none;
+  }
+}
+
+.main-content {
+  flex:3;
+  overflow:scroll;
+}
+
+.hero {
+  padding:10em 5em;
+  background-image: url('../images/hero_image.jpg');
+  h1 {
+    color:white;
+  }
+  p {
+    color:white;
+  }
+  a {
+    color:white;
+  }
+}
+
+.hero-content {
+  @include flex($flex-direction: column);
+  text-align:center;
+  
+  h1 {
+    margin-bottom:.5em;
+  }
+  
+  p {
+    margin-bottom: 1.5em;
+  }
+  
+  button {
+    margin-bottom:1em;
+  }
+}
+
+.card-container {
+  border-bottom: 1px solid $secondary;
+}
+
+.footer-content {
+  padding:5em 0;
+  h2 {
+    margin-bottom: 2em;
+  }
+  a {
+    text-decoration: none;
+    color:$neutral-two;
+  }
+}

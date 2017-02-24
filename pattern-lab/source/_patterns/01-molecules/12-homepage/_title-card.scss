@@ -1,9 +1,22 @@
 .title-card {
   padding:0 1em;
+  p {
+	padding:1em 0;
+	max-width:450px;
+  }
   h2 {
 	@extend h1;
 	& + h2 {
 	  margin-top:0;
+	}
+  }
+  button{
+	display:inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1em;
+	svg {
+	  margin-right:.5em;
 	}
   }
 }
