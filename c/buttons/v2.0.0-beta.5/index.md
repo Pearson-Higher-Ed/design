@@ -21,11 +21,11 @@ downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/19r4uvPAZpmXRwT_krIr9MqHLYC-Vgjah2kPDi9PYaQA/edit?usp=sharing
   - name: Sketch
-    link: ./assets/buttons.2.0.0-beta.4.sketch
+    link: ./assets/buttons.2.0.0-beta.5.sketch
 
 dependencies:
   - name: Colors
-    version: 2.0.0-beta.5
+    version: 2.0.0-beta.6
   - name: Typography
     version: 2.0.0-beta.5
 
@@ -50,7 +50,7 @@ blocks:
 
       **Default** is your basic button, it can appear multiple times in a given group.
 
-      **CTA** is your Call To Action button and should be used only in very specific instances such as Sign-In.  It takes a higher priority over the Primary button type.  It is the single most important action you can take on a page.  This can only be used ONCE per page.
+      **CTA** is your Call To Action button and should be used only in very specific instances such as Sign-In.  It takes a higher priority over the Primary button type.  It is the single most important action you can take on a page.  They can only be used ONCE per page.  **There is no disabled state for the CTA button type.**
 
       If a Default or Primary button increases in priority within the context of the same page, it can convert to a CTA button.
 
@@ -113,7 +113,7 @@ blocks:
 
   - type: two column
     text: |
-      In situations where link styled text is to be used in place of a button for the purposes of de-emphasizing an action (visual hierarchy).  The premise stands that links are to be used for navigation and buttons are to be used for actions.  The need for link styled text is conform to [Pearson Accessibility Guidelines for E-Learning #11 Semantic Markup][Accessibility]
+      In situations where link styled text is to be used in place of a button for the purposes of de-emphasizing an action (visual hierarchy), link style buttons should be used.  The premise stands that links are to be used for navigation and buttons are to be used for actions.  The need for a link styled button is conform to [Pearson Accessibility Guidelines for E-Learning (#11 Semantic Markup)][Accessibility]
 
       [Accessibility]: http://wps.pearsoned.com/accessibility/115/29601/7577872.cw/index.html#PG11
 
@@ -241,14 +241,24 @@ blocks:
     text: |
       ### Call to Action buttons
 
-      Normal
+      Normal Yellow
       : - [Sunshine Yellow (#FFB81C)](/design/c/colors/v2.0.0-beta.3/#rd-sunshine-yellow-FFB81C) fill
         - [Charcoal (#252525)](/design/c/colors/v2.0.0-beta.3/#rd-charcoal-252525) text color
         - No border
 
-      Hover/Active
+      Hover/Active Yellow
       : - [Sunflower Yellow (#FF9A19)](/design/c/colors/v2.0.0-beta.3/#rd-sunflower-yellow-FFF9A19) fill
         - [Charcoal (#252525)](/design/c/colors/v2.0.0-beta.3/#rd-charcoal-252525) text color
+        - No border
+
+      Normal Turquoise
+      : - [Digital Marine Turquoise](/design/c/colors/v2.0.0-beta.7/#rd-digital-marine-turquoise-19a6a4) fill
+        - [White](/design/c/typography/v2.0.0-beta.5/#rd-white-ffffff) button text
+        - No border
+
+      Hover/Active Turquoise
+      : - [Brackish Turquoise](/design/c/colors/v2.0.0-beta.7/#rd-brackish-turquoise-179599) fill
+        - [White](/design/c/typography/v2.0.0-beta.5/#rd-white-ffffff) button text
         - No border
 
       Disabled
