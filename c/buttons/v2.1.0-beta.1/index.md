@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Buttons
 section: Components
-version: 2.0.0-beta.5
+version: 2.1.0-beta.1
 status: active
 implemented: false
 people:
@@ -280,52 +280,11 @@ blocks:
     text: |
 
 changelog:
-  - version: 2.0.0-beta.4
+  - version: 2.1.0-beta.1
     changes: |
-      - ADDED: Color information for confirmation and error button states
-      - ADDED:  44px XLarge size button for <768px width screens
-      - CHANGED: Fix color discrepancy typos
-      - CHANGED: Update button text to reflect new changes in typography spec
-      - CHANGED: Increased color difference between CTA normal/hover states and reflected changes in color spec document
-
-  - version: 2.0.0-beta.3
-    changes: |
-      - ADDED: CTA button style
-      - ADDED: Disabled button explanations
-      - CHANGED: Default button bg fills for normal & hover states
-      - CHANGED: Disabled buttons for Primary & Default are now the same
-      - CHANGED: Dependency links
-
-  - version: 2.0.0-beta.2
-    changes: |
-      - ADDED: Confirmation button style
-
-  - version: 2.0.0-beta.1
-    changes: |
-      - CHANGED: Adopt new visual style
-
-  - version: 1.0.0-beta.5
-    changes: |
-      - ADDED: Dependency links
-
-  - version: 1.0.0-beta.4
-    changes: |
-      - ADDED: UXD Accessibility checklist link
-      - ADDED: Focus state details in the redlines section
-      - ADDED: Medium button size in anticipation of inputs
-
-  - version: 1.0.0-beta.3
-    changes: |
-      - ADDED: Illustrator UI mockup file
-      - FIXED: Proper link to elements SDK
-      - FIXED: Images aren't downsized
-
-  - version: 1.0.0-beta.2
-    linkable: false
-    changes: |
-      - ADDED: Sketch UI mockup file
-
-  - version: 1.0.0-beta.1
+      - ADDED: Turquoise CTA button option
+  - version: 2.0.0
+    changes: Updated for new branding
+  - version: 1.0.0
     changes: Initial version
-    linkable: false
 ---
