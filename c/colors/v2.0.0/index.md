@@ -5,7 +5,7 @@ section: Components
 redirect_from: /docs/ui-components/colors/
 version: 2.0.0
 status: active
-implemented: false
+implemented: true
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -55,6 +55,8 @@ colors:
       - Medium Gray
       - Strawberry Red
       - Hot Pink
+      - Digital Marine Turquoise
+      - Brackish Turquoise
   Medium Gray:
     hex: 6a7070
     uses: Intended as the secondary text color for light backgrounds.
@@ -95,9 +97,15 @@ colors:
       - White Gray
   Digital Marine Turquoise:
     hex: 19a6a4
-    uses: Indicate current day in calendars.
+    uses: Indicate current day in calendars.  CTA button background.
     a11y_complements:
       - Charcoal
+      - White
+  Brackish Turquoise:
+    hex:  179599
+    uses: CTA button background hover state.
+    a11y_complements:
+      - White
   White Gray:
     hex: f5f5f5
     uses: The standard background for within applications. Only secondary content should live directly on a White Gray background, preferring to use White.
@@ -170,6 +178,8 @@ blocks:
       - Sunshine Yellow
       - Sunflower Yellow
       - Digital Ice Blue
+      - Digital Marine Turquoise
+      - Brackish Turquoise
 
   - type: two column
     text: |
@@ -180,6 +190,8 @@ blocks:
           - Sunshine Yellow
           - Sunflower Yellow
           - Digital Ice Blue
+          - Digital Marine Turquoise
+          - Brackish Turquoise
 
   - type: section
     name: Neutral Palette
@@ -207,6 +219,7 @@ blocks:
     exports:
       - Strawberry Red
       - Digital Grass Green
+      - Hot Pink
 
   - type: two column
     text: |
@@ -217,7 +230,6 @@ blocks:
           - Strawberry Red
           - Digital Grass Green
           - Hot Pink
-          - Digital Marine Turquoise
 
   - type: section
     name: Exported Styles
@@ -240,6 +252,7 @@ blocks:
       - Digital Grass Green
       - Hot Pink
       - Digital Marine Turquoise
+      - Brackish Turquoise
 
 changelog:
   - version: 2.0.0
