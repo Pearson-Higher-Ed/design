@@ -1,8 +1,9 @@
 ---
 layout: component-yaml
-title: Email
+title: Email Templates
 section: Components
-version: 1.0.0-beta.1
+version: 1.0.0
+rebranded: true
 status: active
 implemented: true
 people:
@@ -215,7 +216,7 @@ blocks:
       Users are busy, so don’t make them read too much. Simplify the information to help users focus on the message.
 
       ### Calls to action
-      The main point of a call to action is to get users to do something. It should be more descriptive than “click here”. Start with command verbs to clarify what clicking a link or button will get to. For example:
+      The main point of a of call to action is to get users to do something. It should be more descriptive than “click here”. Start with command verbs to clarify what clicking a link or button will get to. For example:
 
       * Reset password
       * Order now
@@ -227,11 +228,13 @@ blocks:
 
       A general rule of thumb is to use only one button for the main call to action so it is clear to the users what they should do.
 
-      Unlike buttons, it’s easier to include links within the copy of your email so it doesn’t cause an abrupt halt. However, that makes links easy to miss. An easy way to do that is to lengthen the number of words covered in a link. Use a meaningful description for the link text instead of the URL.
+      Unlike buttons, it’s easier to include links within the copy of your email so it doesn’t cause an abrupt halt. However, that makes links easy to miss. An easy way to do that is to lengthen the number of words covered in a link. Besides, use meaningful description for the link text instead of the URL.
 
       [Learn more about best email design practices by MailChimp](http://templates.mailchimp.com/design/)
 
-
+changelog:
+  - version: 1.0.0
+    changes: Initial version
 
 
 
