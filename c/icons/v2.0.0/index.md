@@ -12,7 +12,8 @@ people:
   - role: Designer
     name: Van Yang
     email: van.yang@pearson.com
-implementation: https://pearson-elements-v0.surge.sh/elements/icons/
+implementation: https://pearson-elements-v1.surge.sh/elements/icons/
+implemented: true
 downloads:
   - name: Pearson-icons-1.3.sketch
     link: ./assets/Pearson_icons_1.3.sketch
