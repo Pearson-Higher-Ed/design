@@ -272,6 +272,9 @@ blocks:
       #### Colors
       Text is [Charcoal](/design/c/colors/v2.0.0-beta.4/#rd-charcoal) by default, [Medium Gray](/design/c/colors/v2.0.0-beta.4/#rd-medium-gray) should be used as the secondary color. Any other color can be used as long as it's paired with an appropriately contrasting background. See the [Colors](/design/c/colors) component for more details.
 
+      #### Weights
+      Text uses a normal weight unless otherwise specified.
+
     contents:
       - type: narrow image
         src: ./assets/redlines.ui.text.regular.png
@@ -320,8 +323,8 @@ blocks:
         - 28px line-height
 
 
-      #### Color
-      Use the same color scheme as UI Text.
+      #### Color and Weight
+      Use the same scheme as UI Text.
     contents:
       - type: narrow image
         src: ./assets/redlines.ui.heading.section.regular.png
@@ -354,8 +357,8 @@ blocks:
         - 38px line-height
         - Light weight
 
-      #### Colors
-      Use the same color scheme as UI Text.
+      #### Colors and Weights
+      Use the same scheme as UI Text.
     contents:
       - type: wide image
         src: ./assets/redlines.ui.heading.page.regular.png
