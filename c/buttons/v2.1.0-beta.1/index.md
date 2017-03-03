@@ -81,7 +81,7 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/disabled.example.png
-        caption: Examples of when to disable vs. hide buttons
+        caption: Examples of when to enable/disable vs. show/hide buttons
 
   - type: section
     name: Confirmation Buttons
