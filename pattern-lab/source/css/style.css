@@ -7363,197 +7363,204 @@ input:-ms-input-placeholder, .pe-proto.textbox .textarea:-ms-input-placeholder {
 }
 
 /* line 3, pattern-lab/scss/_helpers.scss */
-html {
+html, body {
   box-sizing: border-box;
+  font-size: 16px;
+}
+@media (max-width: 640px) {
+  /* line 3, pattern-lab/scss/_helpers.scss */
+  html, body {
+    font-size: 14px;
+  }
 }
 
-/* line 6, pattern-lab/scss/_helpers.scss */
+/* line 11, pattern-lab/scss/_helpers.scss */
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-/* line 14, pattern-lab/scss/_helpers.scss */
+/* line 19, pattern-lab/scss/_helpers.scss */
 .black-bg {
   background-color: #000;
 }
 
-/* line 18, pattern-lab/scss/_helpers.scss */
+/* line 23, pattern-lab/scss/_helpers.scss */
 .white-bg {
   background-color: #fff;
 }
 
-/* line 22, pattern-lab/scss/_helpers.scss */
+/* line 27, pattern-lab/scss/_helpers.scss */
 .main-bg {
   background-color: #047A9C;
 }
 
-/* line 26, pattern-lab/scss/_helpers.scss */
+/* line 31, pattern-lab/scss/_helpers.scss */
 .main-two-bg {
   background-color: #005A70;
 }
 
-/* line 30, pattern-lab/scss/_helpers.scss */
+/* line 35, pattern-lab/scss/_helpers.scss */
 .main-three-bg {
   background-color: #FFFFFF;
 }
 
-/* line 34, pattern-lab/scss/_helpers.scss */
+/* line 39, pattern-lab/scss/_helpers.scss */
 .main-four-bg {
   background-color: #F5F5F5;
 }
 
-/* line 38, pattern-lab/scss/_helpers.scss */
+/* line 43, pattern-lab/scss/_helpers.scss */
 .secondary-bg {
   background-color: #FFB81C;
 }
 
-/* line 42, pattern-lab/scss/_helpers.scss */
+/* line 47, pattern-lab/scss/_helpers.scss */
 .secondary-two-bg {
   background-color: #FF9A19;
 }
 
-/* line 46, pattern-lab/scss/_helpers.scss */
+/* line 51, pattern-lab/scss/_helpers.scss */
 .secondary-three-bg {
   background-color: #D6EBE8;
 }
 
-/* line 50, pattern-lab/scss/_helpers.scss */
+/* line 55, pattern-lab/scss/_helpers.scss */
 .neutral-bg {
   background-color: #C7C7C7;
 }
 
-/* line 54, pattern-lab/scss/_helpers.scss */
+/* line 59, pattern-lab/scss/_helpers.scss */
 .neutral-two-bg {
   background-color: #252525;
 }
 
-/* line 58, pattern-lab/scss/_helpers.scss */
+/* line 63, pattern-lab/scss/_helpers.scss */
 .neutral-three-bg {
   background-color: #6A7070;
 }
 
-/* line 62, pattern-lab/scss/_helpers.scss */
+/* line 67, pattern-lab/scss/_helpers.scss */
 .neutral-four-bg {
   background-color: #D9D9D9;
 }
 
-/* line 66, pattern-lab/scss/_helpers.scss */
+/* line 71, pattern-lab/scss/_helpers.scss */
 .neutral-five-bg {
   background-color: #E9E9E9;
 }
 
-/* line 70, pattern-lab/scss/_helpers.scss */
+/* line 75, pattern-lab/scss/_helpers.scss */
 .condition-one-bg {
   background-color: #DB0020;
 }
 
-/* line 74, pattern-lab/scss/_helpers.scss */
+/* line 79, pattern-lab/scss/_helpers.scss */
 .condition-two-bg {
   background-color: #038238;
 }
 
-/* line 80, pattern-lab/scss/_helpers.scss */
+/* line 85, pattern-lab/scss/_helpers.scss */
 .black {
   color: #000;
   fill: #000;
 }
 
-/* line 84, pattern-lab/scss/_helpers.scss */
+/* line 89, pattern-lab/scss/_helpers.scss */
 .white {
   color: #fff;
   fill: #fff;
 }
 
-/* line 88, pattern-lab/scss/_helpers.scss */
+/* line 93, pattern-lab/scss/_helpers.scss */
 .primary {
   color: #047A9C;
   fill: #047A9C;
 }
 
-/* line 92, pattern-lab/scss/_helpers.scss */
+/* line 97, pattern-lab/scss/_helpers.scss */
 .main-two {
   color: #005A70;
   fill: #005A70;
 }
 
-/* line 96, pattern-lab/scss/_helpers.scss */
+/* line 101, pattern-lab/scss/_helpers.scss */
 .main-three {
   color: #FFFFFF;
   fill: #FFFFFF;
 }
 
-/* line 100, pattern-lab/scss/_helpers.scss */
+/* line 105, pattern-lab/scss/_helpers.scss */
 .main-four {
   color: #F5F5F5;
   fill: #F5F5F5;
 }
 
-/* line 104, pattern-lab/scss/_helpers.scss */
+/* line 109, pattern-lab/scss/_helpers.scss */
 .secondary {
   color: #FFB81C;
   fill: #FFB81C;
 }
 
-/* line 108, pattern-lab/scss/_helpers.scss */
+/* line 113, pattern-lab/scss/_helpers.scss */
 .secondary-two {
   color: #FF9A19;
   fill: #FF9A19;
 }
 
-/* line 112, pattern-lab/scss/_helpers.scss */
+/* line 117, pattern-lab/scss/_helpers.scss */
 .secondary-three {
   color: #D6EBE8;
   fill: #D6EBE8;
 }
 
-/* line 116, pattern-lab/scss/_helpers.scss */
+/* line 121, pattern-lab/scss/_helpers.scss */
 .neutral {
   color: #C7C7C7;
   fill: #C7C7C7;
 }
 
-/* line 120, pattern-lab/scss/_helpers.scss */
+/* line 125, pattern-lab/scss/_helpers.scss */
 .neutral-two {
   color: #252525;
   fill: #252525;
 }
 
-/* line 124, pattern-lab/scss/_helpers.scss */
+/* line 129, pattern-lab/scss/_helpers.scss */
 .neutral-three {
   color: #6A7070;
   fill: #6A7070;
 }
 
-/* line 128, pattern-lab/scss/_helpers.scss */
+/* line 133, pattern-lab/scss/_helpers.scss */
 .neutral-four {
   color: #D9D9D9;
   fill: #D9D9D9;
 }
 
-/* line 132, pattern-lab/scss/_helpers.scss */
+/* line 137, pattern-lab/scss/_helpers.scss */
 .neutral-five {
   color: #E9E9E9;
   fill: #E9E9E9;
 }
 
-/* line 136, pattern-lab/scss/_helpers.scss */
+/* line 141, pattern-lab/scss/_helpers.scss */
 .condition-one {
   color: #DB0020;
   fill: #DB0020;
 }
 
-/* line 140, pattern-lab/scss/_helpers.scss */
+/* line 145, pattern-lab/scss/_helpers.scss */
 .condition-two {
   color: #038238;
   fill: #038238;
 }
 
-/* line 145, pattern-lab/scss/_helpers.scss */
+/* line 150, pattern-lab/scss/_helpers.scss */
 .text-align-center {
   text-align: center;
 }
 
-/* line 149, pattern-lab/scss/_helpers.scss */
+/* line 154, pattern-lab/scss/_helpers.scss */
 .flex-container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -7573,7 +7580,7 @@ html {
       -ms-flex-direction: row;
           flex-direction: row;
 }
-/* line 151, pattern-lab/scss/_helpers.scss */
+/* line 156, pattern-lab/scss/_helpers.scss */
 .flex-container.justify-flex-start {
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -8821,7 +8828,7 @@ table.pe-proto.small th, table.pe-proto.small td {
 
 /* line 1, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
 .nav-list {
-  padding: 1em 3em;
+  padding: 1em 2em;
   border-bottom: 1px solid #C7C7C7;
 }
 /* line 5, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
@@ -8833,13 +8840,14 @@ table.pe-proto.small th, table.pe-proto.small td {
 .nav-list .pe-list a {
   color: #252525;
   text-decoration: none;
+  font-size: 14px;
 }
-/* line 14, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
+/* line 15, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
 .nav-list .pe-list a:hover {
   color: #047A9C;
   text-decoration: underline;
 }
-/* line 20, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
+/* line 21, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
 .nav-list [type="button"] {
   border: 0;
   -webkit-appearance: none;
@@ -8895,12 +8903,52 @@ table.pe-proto.small th, table.pe-proto.small td {
 }
 
 /* line 2, pattern-lab/source/_patterns/02-organisms/06-homepage/_sidebar-menu.scss */
+.side-menu .menu-title {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  padding: 1em;
+  border-bottom: 1px solid #C7C7C7;
+}
+/* line 8, pattern-lab/source/_patterns/02-organisms/06-homepage/_sidebar-menu.scss */
 .side-menu h1, .side-menu .title-card h2, .title-card .side-menu h2 {
   color: #047A9C;
   font-weight: bold;
   font-size: 1em;
-  border-bottom: 1px solid #C7C7C7;
-  padding: 1em 3em;
+  margin-bottom: 0;
+}
+/* line 14, pattern-lab/source/_patterns/02-organisms/06-homepage/_sidebar-menu.scss */
+.side-menu button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  border: 0;
+}
+/* line 19, pattern-lab/source/_patterns/02-organisms/06-homepage/_sidebar-menu.scss */
+.side-menu button svg {
+  fill: #047A9C;
+}
+@media (min-width: 1280px) {
+  /* line 14, pattern-lab/source/_patterns/02-organisms/06-homepage/_sidebar-menu.scss */
+  .side-menu button {
+    display: none;
+  }
 }
 
 /* line 1, pattern-lab/source/_patterns/02-organisms/06-homepage/_cards.scss */
@@ -8927,22 +8975,20 @@ table.pe-proto.small th, table.pe-proto.small td {
 @media (max-width: 1024px) {
   /* line 1, pattern-lab/source/_patterns/02-organisms/06-homepage/_cards.scss */
   .cards {
-    padding: 3em;
+    padding: 4em 1em;
   }
 }
-@media (max-width: 768px) {
-  /* line 1, pattern-lab/source/_patterns/02-organisms/06-homepage/_cards.scss */
-  .cards {
-    padding: 2em;
-  }
+/* line 10, pattern-lab/source/_patterns/02-organisms/06-homepage/_cards.scss */
+.cards .title-card h2 {
+  font-size: 3em;
 }
 @media (max-width: 640px) {
-  /* line 1, pattern-lab/source/_patterns/02-organisms/06-homepage/_cards.scss */
-  .cards {
-    padding: 2em 1em;
+  /* line 10, pattern-lab/source/_patterns/02-organisms/06-homepage/_cards.scss */
+  .cards .title-card h2 {
+    font-size: 2em;
   }
 }
-/* line 15, pattern-lab/source/_patterns/02-organisms/06-homepage/_cards.scss */
+/* line 17, pattern-lab/source/_patterns/02-organisms/06-homepage/_cards.scss */
 .cards .title {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8966,7 +9012,7 @@ table.pe-proto.small th, table.pe-proto.small td {
       -ms-flex: 1;
           flex: 1;
 }
-/* line 19, pattern-lab/source/_patterns/02-organisms/06-homepage/_cards.scss */
+/* line 21, pattern-lab/source/_patterns/02-organisms/06-homepage/_cards.scss */
 .cards .content {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8990,12 +9036,12 @@ table.pe-proto.small th, table.pe-proto.small td {
       -ms-flex: 2;
           flex: 2;
 }
-/* line 23, pattern-lab/source/_patterns/02-organisms/06-homepage/_cards.scss */
+/* line 25, pattern-lab/source/_patterns/02-organisms/06-homepage/_cards.scss */
 .cards a {
   display: block;
 }
 
-/* line 1, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 2, pattern-lab/source/_patterns/04-pages/_homepage.scss */
 button {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -9011,7 +9057,7 @@ button {
           justify-content: center;
 }
 
-/* line 6, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 7, pattern-lab/source/_patterns/04-pages/_homepage.scss */
 .content-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -9024,20 +9070,34 @@ button {
   border: 1px solid #C7C7C7;
 }
 
-/* line 15, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 16, pattern-lab/source/_patterns/04-pages/_homepage.scss */
 .sidebar {
+  position: relative;
+  z-index: 2;
+  background-color: white;
   width: 240px;
   border-right: 1px solid #C7C7C7;
   overflow: scroll;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
-@media (max-width: 960px) {
-  /* line 15, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+@media (max-width: 1280px) {
+  /* line 16, pattern-lab/source/_patterns/04-pages/_homepage.scss */
   .sidebar {
-    display: none;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -240px;
   }
 }
+/* line 32, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+.sidebar.open {
+  left: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
 
-/* line 24, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 38, pattern-lab/source/_patterns/04-pages/_homepage.scss */
 .main-content {
   -webkit-box-flex: 3;
   -webkit-flex: 3;
@@ -9046,27 +9106,77 @@ button {
   overflow: scroll;
 }
 
-/* line 29, pattern-lab/source/_patterns/04-pages/_homepage.scss */
-.hero {
-  padding: 10em 5em;
-  background-image: url("../images/hero_image.jpg");
+/* line 44, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+.mobile-menu {
+  position: absolute;
+  background: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  padding: 1em;
 }
-/* line 32, pattern-lab/source/_patterns/04-pages/_homepage.scss */
-.hero h1, .hero .title-card h2, .title-card .hero h2 {
+/* line 51, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+.mobile-menu span {
   color: white;
 }
-/* line 35, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 53, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+.mobile-menu span.primary {
+  color: #047A9C;
+}
+@media (min-width: 1280px) {
+  /* line 44, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+  .mobile-menu {
+    display: none;
+  }
+}
+
+/* line 62, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+.hero {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 10px;
+  height: 362px;
+  background-image: url("../images/hero_image.jpg");
+}
+/* line 67, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+.hero h1, .hero .title-card h2, .title-card .hero h2 {
+  font-size: 3em;
+  color: white;
+}
+@media (max-width: 640px) {
+  /* line 67, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+  .hero h1, .hero .title-card h2, .title-card .hero h2 {
+    font-size: 2em;
+  }
+}
+/* line 74, pattern-lab/source/_patterns/04-pages/_homepage.scss */
 .hero p {
   padding: 1em 0;
   color: white;
   max-width: 450px;
 }
-/* line 40, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 79, pattern-lab/source/_patterns/04-pages/_homepage.scss */
 .hero a {
   color: white;
 }
 
-/* line 45, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 84, pattern-lab/source/_patterns/04-pages/_homepage.scss */
 .hero-content {
   display: -webkit-box;
   display: -webkit-flex;
@@ -9087,41 +9197,61 @@ button {
           flex-direction: column;
   text-align: center;
 }
-/* line 49, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 88, pattern-lab/source/_patterns/04-pages/_homepage.scss */
 .hero-content h1, .hero-content .title-card h2, .title-card .hero-content h2 {
   margin-bottom: .5em;
 }
-/* line 53, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 92, pattern-lab/source/_patterns/04-pages/_homepage.scss */
 .hero-content p {
   margin-bottom: 1.5em;
 }
-/* line 57, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 96, pattern-lab/source/_patterns/04-pages/_homepage.scss */
 .hero-content button {
   margin-bottom: 1em;
 }
 
-/* line 62, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 101, pattern-lab/source/_patterns/04-pages/_homepage.scss */
 .card-container {
   border-bottom: 1px solid #FFB81C;
 }
 
-/* line 66, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 105, pattern-lab/source/_patterns/04-pages/_homepage.scss */
 .footer-content {
   padding: 5em 1em;
 }
 @media (max-width: 640px) {
-  /* line 66, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+  /* line 105, pattern-lab/source/_patterns/04-pages/_homepage.scss */
   .footer-content {
     padding: 2em;
   }
 }
-/* line 71, pattern-lab/source/_patterns/04-pages/_homepage.scss */
-.footer-content h2 {
-  margin-bottom: 2em;
-  word-wrap: break-word;
-}
-/* line 75, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 113, pattern-lab/source/_patterns/04-pages/_homepage.scss */
 .footer-content a {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   text-decoration: none;
   color: #252525;
+  margin-bottom: .875em;
+  font-weight: bold;
+}
+/* line 119, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+.footer-content a.contact {
+  font-weight: 300;
+  font-size: 3em;
+}
+@media (max-width: 768px) {
+  /* line 119, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+  .footer-content a.contact {
+    font-size: 2em;
+  }
+}
+@media (max-width: 640px) {
+  /* line 119, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+  .footer-content a.contact {
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 2em;
+  }
 }

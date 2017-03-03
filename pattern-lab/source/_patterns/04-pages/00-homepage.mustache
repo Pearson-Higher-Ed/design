@@ -1,7 +1,8 @@
 <div class="content-wrapper">
-    <section class="sidebar">{{> organisms-sidebar-menu }}</section>
-    <section class="main-content">
+    <section id="sidebar" class="sidebar">{{> organisms-sidebar-menu }}</section>
+    <section id="content" class="main-content">
         <header>
+            <button id="openMainMenu" class="mobile-menu"><span id="bars" class="fa fa-bars fa-2x" aria-hidden="true"></span></button>
             <div class="hero">
                 <div class="hero-content">
                     <h1>UX Framework</h1>
@@ -10,7 +11,7 @@
                 </div>
             </div>
         </header>
-        <section class="card-container">
+        <section id="calculateOffset" class="card-container">
             <div class="cards">
                 {{> molecules-title-card(title-card-title: "Design", title-card-content: "Start working in Sketch with ready-made UI elements ranging from typography, colors, buttons to modals and more!", show-button: true, title-card-linktext: "How does it work?", button-text: "Download the Craft Library", show-icon: true, icon: "desktop-18")}}
             </div>
@@ -28,7 +29,7 @@
         <footer>
             <div class="footer-content text-align-center">
                 <p>Questions or feedback?  We are happy to help!</p>
-                <h2><a class="pe-page-title pe-page-title--small" href="mailto:pearson-design-accelerator@pearson.com">pearson-design-accelerator@pearson.com</a></h2>
+                <a class="contact" href="mailto:pearson-design-accelerator@pearson.com">pearson-design-accelerator@pearson.com</a>
                 <ul class="pe-list pe-list--unstyled">
                     <li><a href="#foo">About</a></li>
                     <li><a href="#foo">Getting Started</a></li>
@@ -42,3 +43,42 @@
         </footer>
     </section>
 </div>
+
+<script>
+    const  openBtn = document.getElementById('openMainMenu'),
+           closeBtn = document.getElementById('closeMainMenu'),
+           barsIcon = document.getElementById('bars'),
+           content = document.getElementById('content');
+
+    let timer = 0;
+
+    // toggles the class of a specific element
+    function toggle (element, className) {
+        document.getElementById(element).classList.toggle(className);
+    }
+
+    // opens the menu
+    openBtn.onclick = function(){
+        toggle('sidebar', 'open');
+    };
+
+    // closes the menu
+    closeBtn.onclick = function(){
+        toggle('sidebar', 'open');
+    };
+
+    // changes the menu icon color at a certain scroll position
+    content.addEventListener('scroll', function(event) {
+        if(timer) {
+            window.clearTimeout(timer);
+        }
+        timer = window.setTimeout(function() {
+            const position = event.target.scrollTop;
+            if (position >= 331) {
+                barsIcon.classList.add('primary');
+            } else {
+                barsIcon.classList.remove('primary');
+            }
+        }, 20);
+    });
+</script>

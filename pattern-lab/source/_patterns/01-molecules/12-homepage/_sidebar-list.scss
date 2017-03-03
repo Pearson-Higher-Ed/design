@@ -1,5 +1,5 @@
 .nav-list {
-  padding: 1em 3em;
+  padding: 1em 2em;
   border-bottom:1px solid $border;
   .pe-list {
 	&:not(.dropdown-list) {
@@ -10,6 +10,7 @@
 	a {
 	  color:$neutral-two;
 	  text-decoration: none;
+	  font-size: 14px;
 	
 	  &:hover {
 		color:$primary;

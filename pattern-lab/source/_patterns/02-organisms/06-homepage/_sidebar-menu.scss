@@ -1,9 +1,27 @@
 .side-menu {
+  .menu-title {
+	@include flex;
+	width:100%;
+	padding:1em;
+	border-bottom: 1px solid $border;
+  }
   h1 {
 	color:$primary;
 	font-weight: bold;
 	font-size:1em;
-	border-bottom: 1px solid $border;
-	padding: 1em 3em;
+	margin-bottom:0;
   }
+	button {
+	  appearance: none;
+	  background:none;
+	  border:0;
+	  
+	  svg {
+		fill: $primary;
+	  }
+	  
+	  @media(min-width:1280px) {
+		display:none;
+	  }
+	}
 }

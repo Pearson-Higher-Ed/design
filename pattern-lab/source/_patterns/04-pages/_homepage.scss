@@ -1,3 +1,4 @@
+
 button {
   display:inline-flex;
   align-items: center;
@@ -13,24 +14,62 @@ button {
 }
 
 .sidebar {
+  position:relative;
+  z-index:2;
+  background-color:white;
   width:240px;
   border-right:1px solid $border;
   overflow:scroll;
-  @media(max-width:960px) {
-    display:none;
+  transition: .5s;
+
+  @media(max-width:1280px) {
+    height:100%;
+    position:absolute;
+    top: 0;
+    left: -240px;
+  }
+  
+  &.open {
+    left:0;
+    transition: .5s;
   }
 }
 
 .main-content {
   flex:3;
   overflow:scroll;
+  
+}
+
+.mobile-menu {
+  position:absolute;
+  background:none;
+  appearance: none;
+  border:0;
+  padding:1em;
+  
+  span {
+    color: white;
+    &.primary {
+      color: $primary;
+    }
+  }
+  @media(min-width:1280px) {
+    display:none;
+  }
 }
 
 .hero {
-  padding:10em 5em;
+  @include flex($justify-content: center);
+  padding:10px;
+  height:362px;
   background-image: url('../images/hero_image.jpg');
   h1 {
+    font-size:3em;
     color:white;
+    @media(max-width:640px) {
+      font-size:2em;
+    }
   }
   p {
     padding:1em 0;
@@ -65,15 +104,29 @@ button {
 
 .footer-content {
   padding:5em 1em;
+  
   @media(max-width:640px) {
     padding:2em;
   }
-  h2 {
-    margin-bottom: 2em;
-    word-wrap: break-word;
-  }
+  
+  
   a {
+    display:inline-flex;
     text-decoration: none;
     color:$neutral-two;
+    margin-bottom:.875em;
+    font-weight:bold;
+    &.contact {
+      font-weight:300;
+      font-size: 3em;
+      @media(max-width:768px) {
+        font-size:2em;
+      }
+      @media(max-width:640px) {
+        font-size:1em;
+        font-weight: bold;
+        margin-bottom:2em;
+      }
+    }
   }
 }
