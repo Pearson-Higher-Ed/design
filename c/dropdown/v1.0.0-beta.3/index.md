@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Dropdown
 section: Components
-version: 1.0.0-beta.2
-status: deprecated
+version: 1.0.0-beta.3
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -84,6 +84,9 @@ blocks:
       : - Angle-down, unless the label text is a direct action (e.g. "Copy This Course" or "Post Status")
 
 changelog:
+  - version: 1.0.0-beta.3
+    changes: |
+      - CHANGED: Use new visual style.
   - version: 1.0.0-beta.2
     changes: |
       - CHANGED: Icon to use existing style
