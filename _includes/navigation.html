@@ -46,7 +46,7 @@
         {% for page in library %}
           {% if (page.url contains 'beta') or (page.private) or (page.status != 'active') %}
           {% else %}
-            <li><a href="{{site.baseurl}}{{page.url}}..">{{page.title}}</a></li>
+            <li><a href="{{site.baseurl}}{{page.url}}..">{{page.title}} - {{page.version}}</a></li>
           {% endif %}
         {% endfor %}
       </ul>
