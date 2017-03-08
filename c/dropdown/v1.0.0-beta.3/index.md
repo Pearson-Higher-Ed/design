@@ -17,9 +17,11 @@ downloads:
 
 dependencies:
   - name: typography
-    version: 1.0.0
+    version: 2.0.0
   - name: buttons
     version: 1.0.0
+  - name: colors
+    version: 2.0.0
 
 tagline: |
   A simple component for presenting multiple options in a condensed space.
@@ -32,34 +34,31 @@ usage_guidelines: |
 
 blocks:
   - type: section
-    name: Basic Dropdown
+    name: Dropdown menu
 
   - type: two column
     text: |
-      The basic dropdown opens into a simple list of textual options. Icons may be prepended at each line.
+      Opening a dropdown presents a simple list of textual options. These may be divided into logically related groups, and a single option may be indicated as selected with a checkmark.
+    contents:
+      - type: narrow image
+        src: ./assets/dropdown.png
+        caption: An example dropdown menu.
 
-      Dropdowns may be triggered by labels (except the bold variety) or buttons.
+  - type: section
+    name: Dropdown Triggers
+
+  - type: two column
+    text: |
+      Dropdowns can be indicated by an icon only if situated within an appropriate context like a course card or over a color picker. In other situations a text label should be used.
 
       If the trigger item is too far to the right the dropdown will shift to be right aligned.
     contents:
-      - type: wide image
-        src: ./assets/basic.dropdown.png
-        caption: A basic label dropdown; The hover effect for an item in the dropdown; Dropdown list with icons.
       - type: narrow image
-        src: ./assets/button.trigger.png
-        caption: Basic button dropdown.
+        src: ./assets/triggers-text.png
+        caption: Example of a textual dropdown trigger.
       - type: narrow image
-        src: ./assets/right.aligned.png
-        caption: Right aligned dropdown behavior.
-
-  - type: two column
-    text: |
-      ### Divider lines
-      Options within a dropdown may be grouped using divider lines.
-    contents:
-      - type: narrow image
-        src: ./assets/divider.line.png
-        caption: A dropdown with divider lines.
+        src: ./assets/triggers-icon.png
+        caption: Icon only triggers can be used in situations where there is sufficient context.
 
   - type: section
     name: Redlines
@@ -67,26 +66,40 @@ blocks:
   - type: two column
     text: |
       Dimensions
-      : - Standard widths are 180px or 250px
-        - Width can optionally be fluid below these sizes, with a minimum width that matches the triggering label or button
+      : - Standard width is 220px
 
       Spacing
-      : - 10px top and bottom padding
-        - 12px horizontal padding
+      : - 16px top and bottom padding
+        - 30px left padding, 26px right padding
         - 8px between items
-        - 8px between icons and options
+
+      Hover
+      : - Hovered item has a Moonlight background that extends 4px above and below the text
+
+      Divider
+      : - Groups may be divided by a 1px solid Alto line
+        - The divider line should have 12px above/below it
+
+      Border
+      : - 1px solid Concrete
+        - 2px border radius
 
       Alignment
       : - Left aligned by default
         - Right aligned if there is not room within the viewport for the dropdown
 
-      Icons
-      : - Angle-down, unless the label text is a direct action (e.g. "Copy This Course" or "Post Status")
+      Triggers
+      : - dropdown-open-18 for the icon
+        - UI Text - Basic, for any text used
+        - 4px spacing between trigger and dropdown
+    contents:
+      - type: wide image
+        src: ./assets/redlines.dropdown.png
 
 changelog:
   - version: 1.0.0-beta.3
     changes: |
-      - CHANGED: Use new visual style.
+      - CHANGED: Uses new visual style.
   - version: 1.0.0-beta.2
     changes: |
       - CHANGED: Icon to use existing style
