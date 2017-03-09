@@ -96,7 +96,7 @@ colors:
       - White
       - White Gray
   Digital Marine Turquoise:
-    hex: 19a6a4
+    hex: 19A5A3
     uses: Indicate current day in calendars.  CTA button background.
     a11y_complements:
       - Charcoal
@@ -258,6 +258,7 @@ changelog:
   - version: 2.0.0-beta.7
     changes: |
       - ADDED: Brackish Turquoise as CTA Button Hover state for Digital Marine Turquoise
+      - CHANGED: Digital Marine Turquoise hex value to pass accessibility requirements
   - version: 2.0.0-beta.6
     changes: |
       - ADDED: Hot Pink to the conditional palette.
