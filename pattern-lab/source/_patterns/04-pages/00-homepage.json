@@ -1,0 +1,134 @@
+{
+  "header": {
+    "title": "UX Framework",
+    "excerpt": "UX Framework is a unified UI language with guidance and resources for creating user experiences for Pearson applications",
+    "url": "#foo",
+    "link-text": "Learn More"
+  },
+
+  "navigation": [
+    {
+      "main": [
+        {
+          "url": "#foo",
+          "label": "About"
+        },
+        {
+          "url": "#foo",
+          "label": "Getting Started"
+        },
+        {
+          "url": "#foo",
+          "label": "Contribute"
+        },
+        {
+          "url": "#foo",
+          "label": "Resources"
+        },
+        {
+          "url": "#foo",
+          "label": "Development"
+        },
+        {
+          "url": "#foo",
+          "label": "FAQ"
+        },
+        {
+          "url": "#foo",
+          "label": "Contact"
+        }
+      ],
+      "items": [
+        {
+          "label": "Compounds",
+          "itemList": [
+            {
+              "label": "item one",
+              "url": "#foo"
+            },
+            {
+              "label": "item two",
+              "url": "#foo"
+            }
+          ]
+        },
+        {
+          "label": "Elements",
+          "itemList": [
+            {
+              "label": "item three",
+              "url": "#foo"
+            },
+            {
+              "label": "item four",
+              "url": "#foo"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "cards": [
+    {
+      "title": "Design",
+      "excerpt": "Start working in Sketch with ready-made UI elements ranging from typography, colors, buttons to modals and more!",
+      "show-button": true,
+      "show-icon": true,
+      "button-text": "Download",
+      "link-text": "Get Started",
+      "url": "#foo",
+      "icon": "point-next-18"
+    },
+    {
+      "title": "Develop",
+      "excerpt": "Working on a project? Grab the codes you need to build the applications with these pre-made elements.",
+      "show-button": true,
+      "show-icon": true,
+      "button-text": "Go to Elements SDK",
+      "link-text": "Get Started",
+      "url": "#foo",
+      "icon": "point-next-18"
+    },
+    {
+      "title": "Contribute",
+      "excerpt": "Can't find the components you need? Have great ideas for improving or modifying a component? Learn about the process of adding a new component to the library.",
+      "show-button": true,
+      "show-icon": false,
+      "button-text": "Learn More",
+      "link-text": "Get Started",
+      "url": "#foo",
+      "icon": ""
+    }
+  ],
+  "footerLinks": [
+    {
+      "url": "foo",
+      "label": "About"
+    },
+    {
+      "url": "foo",
+      "label": "Getting Started"
+    },
+    {
+      "url": "foo",
+      "label": "Contribute"
+    },
+    {
+      "url": "foo",
+      "label": "Resources"
+    },
+    {
+      "url": "foo",
+      "label": "Development"
+    },
+    {
+      "url": "foo",
+      "label": "FAQ"
+    },
+    {
+      "url": "foo",
+      "label": "contact"
+    }
+  ]
+}

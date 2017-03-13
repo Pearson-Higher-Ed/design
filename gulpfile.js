@@ -26,6 +26,7 @@ gulp.task('default', function(cb) {
     gulp.watch('pattern-lab/scss/**/*.scss', ['autoprefix']);
     gulp.watch('pattern-lab/source/_patterns/**/*.scss', ['autoprefix']);
     gulp.watch('pattern-lab/source/_patterns/**/**/*.scss', ['autoprefix']);
+    gulp.watch('pattern-lab/source/js/*.js', ['babel']);
     gulp.watch('ui/js/*.js', ['copy-js']);
     gulp.watch('ui/images/**/*', ['copy-img']);
 });

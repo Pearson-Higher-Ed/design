@@ -1,84 +1,24 @@
 <div class="content-wrapper">
-    <section id="sidebar" class="sidebar">{{> organisms-sidebar-menu }}</section>
+    <section id="sidebar" class="sidebar">{{> molecules-sidebar-list }}</section>
     <section id="content" class="main-content">
+        <div id="overlay" class="test"></div>
         <header>
             <button id="openMainMenu" class="mobile-menu"><span id="bars" class="fa fa-bars fa-2x" aria-hidden="true"></span></button>
-            <div class="hero">
-                <div class="hero-content">
-                    <h1>UX Framework</h1>
-                    <p>UX Framework is a unified UI language with guidance and resources for creating user experiences for Pearson applications.</p>
-                    <a href="#foo">Learn More</a>
-                </div>
-            </div>
+            {{> molecules-header }}
         </header>
         <section id="calculateOffset" class="card-container">
-            <div class="cards">
-                {{> molecules-title-card(title-card-title: "Design", title-card-content: "Start working in Sketch with ready-made UI elements ranging from typography, colors, buttons to modals and more!", show-button: true, title-card-linktext: "How does it work?", button-text: "Download the Craft Library", show-icon: true, icon: "desktop-18")}}
-            </div>
-        </section>
-        <section class="card-container update">
-            <div class="cards">
-                {{> molecules-title-card(title-card-title: "Develop", title-card-content: "Working on a project? Grab the codes you need to build the applications with these pre-made elements.", show-button: true, button-text: "Go to Elements SDK", show-icon: true, icon: "point-next-18")}}
-            </div>
-        </section>
-        <section class="card-container roadmap">
-            <div class="cards">
-                {{> molecules-title-card(title-card-title: "Contribute", title-card-content: "Can't find the components you need?  Have great ideas for improving or modifying a component?  Learn about the process of adding a new component to the library.", show-button: true, button-text: "Learn More", icon: " ")}}
-            </div>
+            {{> organisms-main-cards }}
         </section>
         <footer>
             <div class="footer-content text-align-center">
                 <p>Questions or feedback?  We are happy to help!</p>
                 <a class="contact" href="mailto:pearson-design-accelerator@pearson.com">pearson-design-accelerator@pearson.com</a>
                 <ul class="pe-list pe-list--unstyled">
-                    <li><a href="#foo">About</a></li>
-                    <li><a href="#foo">Getting Started</a></li>
-                    <li><a href="#foo">Contribute</a></li>
-                    <li><a href="#foo">Resources</a></li>
-                    <li><a href="#foo">Development</a></li>
-                    <li><a href="#foo">FAQ</a></li>
-                    <li><a href="#foo">Contact</a></li>
+                    {{# footerLinks }}
+                        <li><a href="{{ url }}">{{ label }}</a></li>
+                    {{/ footerLinks }}
                 </ul>
             </div>
         </footer>
     </section>
 </div>
-
-<script>
-    const  openBtn = document.getElementById('openMainMenu'),
-           closeBtn = document.getElementById('closeMainMenu'),
-           barsIcon = document.getElementById('bars'),
-           content = document.getElementById('content');
-
-    let timer = 0;
-
-    // toggles the class of a specific element
-    function toggle (element, className) {
-        document.getElementById(element).classList.toggle(className);
-    }
-
-    // opens the menu
-    openBtn.onclick = function(){
-        toggle('sidebar', 'open');
-    };
-
-    // closes the menu
-    closeBtn.onclick = function(){
-        toggle('sidebar', 'open');
-    };
-
-    // changes the menu icon color at a certain scroll position
-    content.addEventListener('scroll', function(event) {
-        if(timer) {
-            window.clearTimeout(timer);
-        }
-        timer = window.setTimeout(function() {
-            const position = event.target.scrollTop;
-            if (position >= 331) {
-                barsIcon.classList.add('primary');
-            } else {
-                barsIcon.classList.remove('primary');
-            }
-        }, 20);
-    });
-</script>

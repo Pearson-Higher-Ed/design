@@ -1,0 +1,38 @@
+.hero {
+  @include flex($justify-content: center);
+  padding:10px;
+  height:362px;
+  background-image: url('../images/hero_image.jpg');
+  h1 {
+	font-size:em(38);
+	color:white;
+	@media(max-width:640px) {
+	  font-size:2em;
+	}
+  }
+  p {
+	padding:1em 0;
+	color:white;
+	max-width:450px;
+  }
+  a {
+	color:white;
+  }
+}
+
+.hero-content {
+  @include flex($flex-direction: column);
+  text-align:center;
+  
+  h1 {
+	margin-bottom:.5em;
+  }
+  
+  p {
+	margin-bottom: 1.5em;
+  }
+  
+  button {
+	margin-bottom:1em;
+  }
+}

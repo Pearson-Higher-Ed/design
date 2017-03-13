@@ -59,45 +59,6 @@ button {
   }
 }
 
-.hero {
-  @include flex($justify-content: center);
-  padding:10px;
-  height:362px;
-  background-image: url('../images/hero_image.jpg');
-  h1 {
-    font-size:3em;
-    color:white;
-    @media(max-width:640px) {
-      font-size:2em;
-    }
-  }
-  p {
-    padding:1em 0;
-    color:white;
-    max-width:450px;
-  }
-  a {
-    color:white;
-  }
-}
-
-.hero-content {
-  @include flex($flex-direction: column);
-  text-align:center;
-  
-  h1 {
-    margin-bottom:.5em;
-  }
-  
-  p {
-    margin-bottom: 1.5em;
-  }
-  
-  button {
-    margin-bottom:1em;
-  }
-}
-
 .card-container {
   border-bottom: 1px solid $secondary;
 }
@@ -116,9 +77,10 @@ button {
     color:$neutral-two;
     margin-bottom:.875em;
     font-weight:bold;
+    font-size: em(14);
     &.contact {
       font-weight:300;
-      font-size: 3em;
+      font-size: em(38);
       @media(max-width:768px) {
         font-size:2em;
       }
@@ -128,5 +90,17 @@ button {
         margin-bottom:2em;
       }
     }
+  }
+}
+
+.overlay {
+  position: absolute;
+  top:0;
+  width:100%;
+  height:100%;
+  background-color: black;
+  opacity: 0.5;
+  @media (min-width:1280px) {
+    display:none;
   }
 }

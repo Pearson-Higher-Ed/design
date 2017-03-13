@@ -1,0 +1,28 @@
+.cards {
+  @include flex($justify-content:center);
+  padding:5em;
+  
+  @media(max-width:1024px) {
+    padding:4em 1em;
+  }
+  
+  .title-card {
+    h2 {
+      font-size:em(38);
+      @media(max-width:640px) {
+        font-size:2em;
+      }
+    }
+  }
+  .title {
+    @include flex;
+    flex:1
+  }
+  .content {
+    @include flex;
+    flex:2;
+  }
+  a {
+    display:block;
+  }
+}

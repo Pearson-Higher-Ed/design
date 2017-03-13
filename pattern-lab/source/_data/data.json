@@ -1,49 +1,290 @@
 {
-  "alert": {
-    "error": {
-      "label": "Error",
-      "content": "Uh oh, we weren't able to verify your email address. Try resending the email."
+  "key":"value",
+  "key2":"use this for variables you want to load globally",
+  "title":"Nullizzle shizznit velizzle, hizzle, suscipit own yo', gravida vizzle, arcu.",
+  "img":{
+    "avatar":{
+      "src":"http://placeimg.com/100/100/people",
+      "alt":"Avatar"
     },
-    "success": {
-      "label": "Success",
-      "content": "Yay!  Your message was successfully sent."
+    "square":{
+      "src":"http://placeimg.com/300/300/nature",
+      "alt":"Square"
+    },
+    "rectangle":{
+      "src":"http://placeimg.com/400/300/tech",
+      "alt":"Rectangle"
+    },
+    "landscape-4x3":{
+      "src":"http://placeimg.com/400/300/tech",
+      "alt":"4x3 Image"
+    },
+    "landscape-16x9":{
+      "src":"http://placeimg.com/640/360/tech",
+      "alt":"16x9 Image"
     }
   },
+  "headline":{
+    "short":"Lorizzle pimpin' dolizzle sit amet I",
+    "medium":"Rizzle adipiscing elizzle. Nullam sapien velizzle, shit volutpizzle, my"
+  },
+  "excerpt":{
+    "short":"Shizz fo shizzle mah nizzle fo rizzle, mah home g-dizzle, gravida vizzle, arcu. Pellentesque crunk tortizzle. Sed erizzle. Black izzle sheezy telliv.",
+    "medium":"Izzle crazy tempizzle sizzle. We gonna chung gangsta get down get down fo shizzle turpizzle. Away break it down black. Pellentesque bling bling rhoncus fo shizzle. In hac the bizzle platea dictumst. Black dapibizzle. Crackalackin.",
+    "long":"Curabitizzle fo shizzle diam quizzle nisi nizzle mollizzle. Suspendisse boofron. Morbi odio. Sure pizzle. Crazy orci. Shut the shizzle up maurizzle get down get down, check out this a, go to hizzle sit amizzle, malesuada izzle, pede. Pellentesque gravida. Vestibulizzle check it out mi, volutpat izzle, shiz sed, shiznit sempizzle, da bomb. Funky fresh in ipsum. Da bomb volutpat felis vizzle daahng dawg. Crizzle quis dope izzle fo shizzle my ni."
+  },
+  "description":"Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle. Maurizzle pellentesque its fo rizzle izzle turpis. Get down get down we gonna chung nizzle. Shizzlin dizzle eleifend rhoncizzle break it down. In yo ghetto platea dictumst. Bling bling dapibizzle. Curabitur break yo neck, yall fo, pretizzle eu, go to hizzle dope, own yo' vitae, nunc. Bizzle suscipizzle. Ass semper velit sizzle fo.",
+  "url":"http://lorizzle.nl/",
+  "name":{
+    "first":"Junius",
+    "firsti":"J",
+    "middle":"Marius",
+    "middlei":"M",
+    "last":"Koolen",
+    "lasti":"K"
+  },
+  "year":{
+    "long":"2013",
+    "short":"13"
+  },
+  "month":{
+    "long":"January",
+    "short":"Jan",
+    "digit":"01"
+  },
+  "dayofweek":{
+    "long":"Sunday",
+    "short":"Sun"
+  },
+  "day":{
+    "long":"01",
+    "short":"1",
+    "ordinal":"st"
+  },
+  "hour":{
+    "long":"06",
+    "short":"6",
+    "military":"06",
+    "ampm":"am"
+  },
+  "minute":{
+    "long":"20",
+    "short":"20"
+  },
+  "seconds":"31",
+  "alert":{
+    "error":{
+      "label":"Error",
+      "content":"Uh oh, we weren't able to verify your email address. Try resending the email."
+    },
+    "success":{
+      "label":"Success",
+      "content":"Yay!  Your message was successfully sent."
+    }
+  },
+  "header":{
+    "label":{
+      "one":"Help",
+      "two":"Sign in"
+    }
+  },
+  "slider":{
+    "icon":{
+      "one":"image-18",
+      "two":"image-24"
+    }
+  },
+  "modal":{
+    "text":{
+      "title":"Basic Title",
+      "content":"Bacon ipsum dolor amet tri-tip beef picanha, hamburger shank pork loin kielbasa frankfurter pastrami tongue turducken turkey. Pastrami tongue chuck jowl, chicken leberkas bresaola pork chop bacon andouille."
+    }
+  },
+  "btn-text":"Button Text",
+  "icon":"remove-sm-24",
+  "link-url":"#",
+  "avatar":{
+    "scale":{
+      "title":"Edit Photo",
+      "content":"Nice Photo!  Now use the photo editing tools to add that final touch"
+    }
+  },
+  "coachmark":{
+    "content":"Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.",
+    "link":"Got It",
+    "url":"#"
+  },
+  "navigation": [
+    {
+      "main": [
+        {
+          "label": "About",
+          "url": "#foo"
+        },
+        {
+          "label": "About",
+          "url": "#foo"
+        },
+        {
+          "label": "About",
+          "url": "#foo"
+        },
+        {
+          "label": "About",
+          "url": "#foo"
+        },
+        {
+          "label": "About",
+          "url": "#foo"
+        },
+        {
+          "label": "About",
+          "url": "#foo"
+        },
+        {
+          "label": "About",
+          "url": "#foo"
+        }
+      ]
+    }
+  ],
+  "title": "Design",
+  "excerpt": "Start working in Sketch with ready-made UI elements ranging from typography, colors, buttons to modals and more!",
+  "show-button": true,
+  "show-icon": true,
+  "button-text": "Download",
+  "link-text": "How does it work",
+  "url": "#foo",
+  "icon": "",
+
   "header": {
-    "label": {
-      "one": "Help",
-      "two": "Sign in"
+    "title": "UX Framework",
+    "excerpt": "UX Framework is a unified UI language with guidance and resources for creating user experiences for Pearson applications",
+    "url": "#foo",
+    "link-text": "Learn More"
+  },
+  "cards": [
+    {
+      "title": "Design",
+      "excerpt": "Start working in Sketch with ready-made UI elements ranging from typography, colors, buttons to modals and more!",
+      "show-button": true,
+      "show-icon": true,
+      "button-text": "Download",
+      "link-text": "How does it work",
+      "url": "#foo",
+      "icon": ""
+    },
+    {
+      "title": "Design",
+      "excerpt": "Start working in Sketch with ready-made UI elements ranging from typography, colors, buttons to modals and more!",
+      "show-button": true,
+      "show-icon": true,
+      "button-text": "Download",
+      "link-text": "How does it work",
+      "url": "#foo",
+      "icon": ""
+    },
+    {
+      "title": "Design",
+      "excerpt": "Start working in Sketch with ready-made UI elements ranging from typography, colors, buttons to modals and more!",
+      "show-button": true,
+      "show-icon": true,
+      "button-text": "Download",
+      "link-text": "How does it work",
+      "url": "#foo",
+      "icon": ""
     }
-  },
-  "slider": {
-    "icon": {
-      "one": "image-18",
-      "two": "image-24"
+  ],
+  "footerLinks": [
+    {
+      "url": "foo",
+      "label": "About"
+    },
+    {
+      "url": "foo",
+      "label": "Getting Started"
+    },
+    {
+      "url": "foo",
+      "label": "Contribute"
+    },
+    {
+      "url": "foo",
+      "label": "Resources"
+    },
+    {
+      "url": "foo",
+      "label": "Development"
+    },
+    {
+      "url": "foo",
+      "label": "FAQ"
+    },
+    {
+      "url": "foo",
+      "label": "contact"
     }
-  },
-  "modal": {
-    "text": {
-      "title": "Basic Title",
-      "content": "Bacon ipsum dolor amet tri-tip beef picanha, hamburger shank pork loin kielbasa frankfurter pastrami tongue turducken turkey. Pastrami tongue chuck jowl, chicken leberkas bresaola pork chop bacon andouille."
+  ],
+  "navigation": [
+    {
+      "main": [
+        {
+          "url": "#foo",
+          "label": "Test"
+        },
+        {
+          "url": "#foo",
+          "label": "Test"
+        },
+        {
+          "url": "#foo",
+          "label": "Test"
+        },
+        {
+          "url": "#foo",
+          "label": "Test"
+        },
+        {
+          "url": "#foo",
+          "label": "Test"
+        },
+        {
+          "url": "#foo",
+          "label": "Test"
+        },
+        {
+          "url": "#foo",
+          "label": "Test"
+        }
+      ],
+      "items": [
+        {
+          "itemTitle": "Main Item",
+          "itemList": [
+            {
+              "item": "sub item one",
+              "url": "#foo"
+            },
+            {
+              "item": "sub item two",
+              "url": "#foo"
+            }
+          ]
+        },
+        {
+          "itemTitle": "Main Item",
+          "itemList": [
+            {
+              "item": "sub item one",
+              "url": "#foo"
+            },
+            {
+              "item": "sub item two",
+              "url": "#foo"
+            }
+          ]
+        }
+      ]
     }
-  },
-  "btn-text": "Button Text",
-  "icon": "remove-sm-24",
-  "link-url": "#",
-  "avatar": {
-    "scale": {
-      "title": "Edit Photo",
-      "content": "Nice Photo!  Now use the photo editing tools to add that final touch"
-    }
-  },
-  "coachmark": {
-    "content": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.",
-    "link": "Got It",
-    "url": "#"
-  },
-  "title-card-title": "Title",
-  "title-card-content": "Content",
-  "title-card-url": "#foo",
-  "title-card-linktext": "Get Started",
-  "left-align": true
+  ]
 }

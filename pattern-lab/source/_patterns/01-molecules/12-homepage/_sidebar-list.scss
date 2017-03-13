@@ -1,12 +1,23 @@
 .nav-list {
   padding: 1em 2em;
   border-bottom:1px solid $border;
+	&.pe-list--unstyled {
+	  ul {
+		padding-left:0 !important;
+	  }
+	}
   .pe-list {
 	&:not(.dropdown-list) {
 	  padding-left:0;
 	  font-weight:600;
 	}
-	
+	li {
+	  margin-bottom:12px;
+	  padding-left:0;
+	  &:last-child {
+		margin-bottom:2em;
+	  }
+	}
 	a {
 	  color:$neutral-two;
 	  text-decoration: none;
@@ -24,5 +35,36 @@
 	background: none;
 	font-weight: 600;
 	padding-left: 0;
+	font-size: 14px;
+  }
+  [aria-expanded="false"] {
+	+ div {
+	  display:none;
+	}
+  }
+}
+
+.side-menu {
+  .menu-title {
+	@include flex;
+	width:100%;
+	padding:1em;
+	padding-left:2em;
+	border-bottom: 1px solid $border;
+  }
+  h1 {
+	color:$primary;
+	font-size:em(20);
+	margin-bottom:0;
+  }
+  button {
+	appearance: none;
+	background:none;
+	border:0;
+	
+	svg {
+	  fill: $primary;
+	}
+	
   }
 }
