@@ -1,0 +1,8 @@
+<div class="title-card text-align-center">
+    <h2>{{ title }}</h2>
+    <p>{{ excerpt }}</p>
+    {{# show-button }}
+        <button class="pe-btn--btn_xlarge pe-btn__cta">{{# show-icon }} {{> atoms-single-icon }} {{/ show-icon }}{{ button-text }}</button>
+    {{/ show-button }}
+    <a href="{{ url }}"> {{ link-text }}</a>
+</div>

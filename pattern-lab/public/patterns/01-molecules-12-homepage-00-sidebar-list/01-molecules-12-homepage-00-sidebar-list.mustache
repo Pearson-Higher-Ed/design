@@ -1,0 +1,33 @@
+<nav class="side-menu" aria-label="Site menu">
+    <div class="menu-title">
+        <h1 class="pe-label--bold">UX Framework</h1>
+    </div>
+    {{# navigation }}
+    <ul id="yes" class="pe-list pe-list--unstyled nav-list">
+        <li>
+            <div role="group" aria-labelledby="menu_compounds" id="compounds_list" class="o-panel--open">
+                <ul class="pe-list pe-list--unstyled">
+                    {{# main }}
+                        <li><a href="{{ url }}" data-focused="false">{{ label }}</a></li>
+                    {{/ main }}
+                </ul>
+            </div>
+        </li>
+    </ul>
+    <ul class="pe-list pe-list--unstyled nav-list">
+        {{# items }}
+        <li>
+            <button type="button" aria-expanded="false" aria-controls="compounds_list" data-title="{{ label }}" data-focused="false">{{ label }}</button>
+            <div role="group" aria-labelledby="menu_compounds" id="compounds_list" class="o-panel--open">
+                <ul class="pe-list pe-list--unstyled dropdown-list">
+                    {{# itemList }}
+                        <li><a href="{{ url }}" data-focused="false">{{ label }}</a></li>
+                    {{/itemList}}
+                </ul>
+            </div>
+        </li>
+        {{/items}}
+    </ul>
+    {{/ navigation }}
+</nav>
+
