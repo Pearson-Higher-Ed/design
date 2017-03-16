@@ -1,0 +1,6 @@
+@mixin pe-aside {
+  margin-bottom: $pe-aside-margin;
+  padding: $pe-aside-padding;
+  background: $pe-aside-bg;
+  border-left: $pe-aside-border-left;
+}

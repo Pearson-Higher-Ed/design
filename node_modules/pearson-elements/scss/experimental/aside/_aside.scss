@@ -1,0 +1,25 @@
+@import './variables';
+@import './mixins';
+
+.pe-aside {
+  @include pe-aside;
+  
+  h1 {
+    font-size: 1.25rem;
+  }
+  
+  h2 {
+    font-size: 1.1rem;
+  }
+  
+  h3 {
+    font-size: 1rem;
+  }
+  
+  h4,
+  h5,
+  h6 {
+    font-size: 0.8rem;
+  }
+}
+

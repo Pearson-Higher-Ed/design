@@ -1,0 +1,7 @@
+/coverage/
+/src/
+/.babelrc
+/.editorconfig
+/.eslintrc.yml
+/.gitignore
+/.travis.yml
