@@ -39,26 +39,48 @@ blocks:
   - type: two column
     text: |
       Opening a dropdown presents a simple list of textual options. These may be divided into logically related groups, and a single option may be indicated as selected with a checkmark.
+
+      ### Groupings
+      Logically related options may be grouped together for easy scanning.
+
+      ### Selected option
+      When a dropdown contains actions that edit some piece of data, you may use a checkmark to indicate the current state of the value being edited.
     contents:
       - type: narrow image
         src: ./assets/dropdown.png
-        caption: An example dropdown menu.
+        caption: The various options for the dropdown menu. Options may be grouped, and checkmarks may be used when editing data.
 
   - type: section
     name: Dropdown Triggers
 
   - type: two column
     text: |
-      Dropdowns can be indicated by an icon only if situated within an appropriate context like a course card or over a color picker. In other situations a text label should be used.
+      Dropdowns should generally be indicated by UI Text or a button  paired with an icon. Just the icon may be used if situated within an appropriate context like a course card or over a color picker.
 
       If the trigger item is too far to the right the dropdown will shift to be right aligned.
     contents:
       - type: narrow image
-        src: ./assets/triggers-text.png
-        caption: Example of a textual dropdown trigger.
+        src: ./assets/triggers.png
+        caption: The various trigger types available.
       - type: narrow image
-        src: ./assets/triggers-icon.png
-        caption: Icon only triggers can be used in situations where there is sufficient context.
+        src: ./assets/triggers-alignment.png
+        caption: Menus are left aligned with the trigger unless there isn't enough space.
+
+  - type: section
+    name: Responsive behavior
+
+  - type: two column
+    text: |
+      At the extra small breakpoint, the dropdown switches from a menu that drops down to a modal that slides up with a list of options. For UI Text and button triggers the dropdown icon also becomes optional.
+
+      The dropdown page should have a descriptive title explaining the context for the options presented.
+    contents:
+      - type: narrow image
+        src: ./assets/mobile-menu.png
+        caption: An example of a dropdown menu at the extra small breakpoint.
+      - type: narrow image
+        src: ./assets/mobile-menu-check.png
+        caption: A mobile dropdown with a selection indicator.
 
   - type: section
     name: Redlines
@@ -70,7 +92,7 @@ blocks:
 
       Spacing
       : - 16px top and bottom padding
-        - 30px left padding, 26px right padding
+        - 24px left and right padding
         - 8px between items
 
       Hover
@@ -78,7 +100,13 @@ blocks:
 
       Divider
       : - Groups may be divided by a 1px solid Alto line
-        - The divider line should have 12px above/below it
+        - The divider line should have 12px between it and any text above/below it
+
+      Checkmark
+      : - Uses the check-sm-18 icon
+        - 16px left padding around the icon
+        - 8px right padding
+        - Text content is shifted right to make room for the icon (30px left padding)
 
       Border
       : - 1px solid Concrete
@@ -91,10 +119,46 @@ blocks:
       Triggers
       : - dropdown-open-18 for the icon
         - UI Text - Basic, for any text used
-        - 4px spacing between trigger and dropdown
+        - 2px spacing between trigger and dropdown
+        - Any button type is valid
     contents:
       - type: wide image
         src: ./assets/redlines.dropdown.png
+
+  - type: two column
+    text: |
+      ### Responsive redlines
+
+      Breakpoint
+      : - Use this style for the extra small breakpoint
+
+      Dimensions
+      : - Full viewport width and height (below the header)
+
+      Spacing
+      : - List items have 24px padding on all sides
+        - The title has 24px vertical padding
+        - Close icon has a minimum of 12px left padding and 24px of right padding
+
+      Icons
+      : - Close icon is remove-lg-18
+        - Check mark is check-sm-18
+
+      Colors
+      : - Title background is Off White
+        - Divider under title is 1px solid Moonlight
+        - Divider within options is 1px solid Concrete
+
+      Check mark
+      : - The checkmark has 24px of left padding and 8px on the right
+        - This pushes the options and any divider lines to the right, for a total right padding of 42px
+
+      Animation
+      : - The whole mobile menu should slide up from the bottom of the screen with an animation
+
+    contents:
+      - type: wide image
+        src: ./assets/redlines.mobile-menu.png
 
 changelog:
   - version: 1.0.0-beta.4
