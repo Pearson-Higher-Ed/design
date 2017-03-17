@@ -133,7 +133,7 @@ blocks:
               - Resend Verification Email
               - Reset Password"
 
-            ### Don't:
+          ### Don't:
             - Use link style buttons as part of a grouping with other buttons (button bars, save/cancel).
             - Use link style buttons for navigation.
 
@@ -146,33 +146,38 @@ blocks:
     contents:
       - type: text
         content: |
-          ###Do:
+          ### Do:
             - Keep text short. Use as few words as possible.
-          Examples
-            - Next
-            - Save
-            - Create
-            - View
-            - Edit
-            - Learn more
-            - Study
-            - Review
-            - Delete
-            - Cancel
-            - Close
+
+              Examples
+
+                - Next
+                - Save
+                - Create
+                - View
+                - Edit
+                - Learn more
+                - Study
+                - Review
+                - Delete
+                - Cancel
+                - Close
+
             - Use sentence case.
             - Capitalize proper nouns.
             - Use specific action-oriented text for CTAs.
-            Examples
-              - Activate
-              - Create account
-              - Sign in
-              - Reset password
-              - Submit
-              - Resend Verification Email
-              - Go to Dashboard
 
-          ###Be sure to:
+              Examples
+              
+                - Activate
+                - Create account
+                - Sign in
+                - Reset password
+                - Submit
+                - Resend Verification Email
+                - Go to Dashboard
+
+          ### Be sure to:
             - Look across the experience and check for consistent use of labels.
             - Reserve enough space in the label for translation to other languages.
             - Avoid excessive use of exclamation points (!).
