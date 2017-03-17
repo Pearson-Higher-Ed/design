@@ -7592,6 +7592,21 @@ html, body {
           justify-content: flex-start;
 }
 
+/* line 162, pattern-lab/scss/_helpers.scss */
+.small-padding {
+  padding: 0 0.75em;
+}
+
+/* line 166, pattern-lab/scss/_helpers.scss */
+.margin-left {
+  margin-left: 1em;
+}
+
+/* line 170, pattern-lab/scss/_helpers.scss */
+.margin-bottom-triple {
+  margin-bottom: 2em;
+}
+
 /* line 1, pattern-lab/scss/_flex.scss */
 .align-self-flex-end {
   -webkit-align-self: flex-end;
@@ -9050,6 +9065,49 @@ table.pe-proto.small th, table.pe-proto.small td {
   margin-bottom: 1em;
 }
 
+@media (min-width: 1280px) {
+  /* line 1, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
+  .usage-content-box {
+    margin-top: 2em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media (min-width: 768px) {
+  /* line 7, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
+  .usage-content-box .image-list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media (min-width: 1280px) {
+  /* line 12, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
+  .usage-content-box p {
+    min-width: 370px;
+    max-width: 370px;
+    margin-right: 20px;
+  }
+}
+@media (min-width: 1280px) {
+  /* line 19, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
+  .usage-content-box div {
+    margin-right: 1em;
+  }
+}
+/* line 25, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
+.usage-content-box img {
+  margin-right: 1em;
+  max-width: 100%;
+}
+/* line 29, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
+.usage-content-box img {
+  margin-bottom: 1em;
+}
+
 /* line 1, pattern-lab/source/_patterns/02-organisms/06-homepage/_main-cards.scss */
 .cards {
   display: -webkit-box;
@@ -9140,7 +9198,7 @@ table.pe-proto.small th, table.pe-proto.small td {
   display: block;
 }
 
-/* line 2, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 2, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 button {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -9156,7 +9214,7 @@ button {
           justify-content: center;
 }
 
-/* line 7, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 7, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .content-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -9169,7 +9227,7 @@ button {
   border: 1px solid #C7C7C7;
 }
 
-/* line 16, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 16, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .sidebar {
   position: relative;
   z-index: 2;
@@ -9181,7 +9239,7 @@ button {
   transition: .5s;
 }
 @media (max-width: 1280px) {
-  /* line 16, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+  /* line 16, pattern-lab/source/_patterns/03-templates/_homepage.scss */
   .sidebar {
     height: 100%;
     position: absolute;
@@ -9189,14 +9247,14 @@ button {
     left: -240px;
   }
 }
-/* line 32, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 32, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .sidebar.open {
   left: 0;
   -webkit-transition: .5s;
   transition: .5s;
 }
 
-/* line 38, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 38, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .main-content {
   -webkit-box-flex: 3;
   -webkit-flex: 3;
@@ -9205,7 +9263,7 @@ button {
   overflow: scroll;
 }
 
-/* line 44, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 44, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .mobile-menu {
   position: absolute;
   background: none;
@@ -9215,37 +9273,37 @@ button {
   border: 0;
   padding: 1em;
 }
-/* line 51, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 51, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .mobile-menu span {
   color: white;
 }
-/* line 53, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 53, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .mobile-menu span.primary {
   color: #047A9C;
 }
-@media (min-width: 1280px) {
-  /* line 44, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+@media (min-width: 1281px) {
+  /* line 44, pattern-lab/source/_patterns/03-templates/_homepage.scss */
   .mobile-menu {
     display: none;
   }
 }
 
-/* line 62, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 62, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .card-container {
   border-bottom: 1px solid #FFB81C;
 }
 
-/* line 66, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 66, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .footer-content {
   padding: 5em 1em;
 }
 @media (max-width: 640px) {
-  /* line 66, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+  /* line 66, pattern-lab/source/_patterns/03-templates/_homepage.scss */
   .footer-content {
     padding: 2em;
   }
 }
-/* line 74, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 74, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .footer-content a {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -9257,19 +9315,19 @@ button {
   font-weight: bold;
   font-size: 0.875em;
 }
-/* line 81, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 81, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .footer-content a.contact {
   font-weight: 300;
   font-size: 2.375em;
 }
 @media (max-width: 768px) {
-  /* line 81, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+  /* line 81, pattern-lab/source/_patterns/03-templates/_homepage.scss */
   .footer-content a.contact {
     font-size: 2em;
   }
 }
 @media (max-width: 640px) {
-  /* line 81, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+  /* line 81, pattern-lab/source/_patterns/03-templates/_homepage.scss */
   .footer-content a.contact {
     font-size: 1em;
     font-weight: bold;
@@ -9277,7 +9335,7 @@ button {
   }
 }
 
-/* line 96, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 96, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .overlay {
   position: absolute;
   top: 0;
@@ -9286,9 +9344,277 @@ button {
   background-color: black;
   opacity: 0.5;
 }
-@media (min-width: 1280px) {
-  /* line 96, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+@media (min-width: 1281px) {
+  /* line 96, pattern-lab/source/_patterns/03-templates/_homepage.scss */
   .overlay {
     display: none;
+  }
+}
+
+/* line 1, pattern-lab/source/_patterns/03-templates/_components.scss */
+.bar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 56px;
+  padding: 1em;
+  background-color: #005A70;
+}
+/* line 7, pattern-lab/source/_patterns/03-templates/_components.scss */
+.bar .menu-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/* line 12, pattern-lab/source/_patterns/03-templates/_components.scss */
+.bar .mobile-menu {
+  position: relative;
+  padding: 0;
+  margin-right: 1em;
+}
+/* line 18, pattern-lab/source/_patterns/03-templates/_components.scss */
+.bar span {
+  color: white;
+}
+/* line 21, pattern-lab/source/_patterns/03-templates/_components.scss */
+.bar span a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (min-width: 1280px) {
+  /* line 28, pattern-lab/source/_patterns/03-templates/_components.scss */
+  .actions {
+    width: 370px;
+  }
+}
+
+/* line 33, pattern-lab/source/_patterns/03-templates/_components.scss */
+.info-panel {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/* line 35, pattern-lab/source/_patterns/03-templates/_components.scss */
+.info-panel .summary {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+/* line 37, pattern-lab/source/_patterns/03-templates/_components.scss */
+.info-panel .summary h1, .info-panel .summary .title-card h2, .title-card .info-panel .summary h2 {
+  margin-right: 12px;
+}
+@media (min-width: 1280px) {
+  /* line 42, pattern-lab/source/_patterns/03-templates/_components.scss */
+  .info-panel .content-box:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 50, pattern-lab/source/_patterns/03-templates/_components.scss */
+  .feature-panel {
+    padding-bottom: 3em;
+    border-bottom: 1px solid #C7C7C7;
+  }
+}
+@media (min-width: 1280px) {
+  /* line 50, pattern-lab/source/_patterns/03-templates/_components.scss */
+  .feature-panel {
+    margin-top: -390px;
+  }
+}
+@media (min-width: 1280px) {
+  /* line 58, pattern-lab/source/_patterns/03-templates/_components.scss */
+  .feature-panel .grouped {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  /* line 64, pattern-lab/source/_patterns/03-templates/_components.scss */
+  .feature-panel .grouped .content-box {
+    width: 370px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* line 75, pattern-lab/source/_patterns/03-templates/_components.scss */
+.usage-styles .content-box {
+  padding-bottom: 3em;
+  border-bottom: 1px solid #C7C7C7;
+}
+
+/* line 81, pattern-lab/source/_patterns/03-templates/_components.scss */
+.grouped {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* line 85, pattern-lab/source/_patterns/03-templates/_components.scss */
+.grouped.flex-start {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+/* line 88, pattern-lab/source/_patterns/03-templates/_components.scss */
+.grouped.flex-start > div {
+  width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+/* line 94, pattern-lab/source/_patterns/03-templates/_components.scss */
+.grouped.baseline {
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+@media (min-width: 768px) {
+  /* line 81, pattern-lab/source/_patterns/03-templates/_components.scss */
+  .grouped {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+@media (min-width: 768px) {
+  /* line 109, pattern-lab/source/_patterns/03-templates/_components.scss */
+  .grouped .description {
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  /* line 115, pattern-lab/source/_patterns/03-templates/_components.scss */
+  .grouped .actions {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+/* line 122, pattern-lab/source/_patterns/03-templates/_components.scss */
+.content-box {
+  margin-top: 3em;
+}
+/* line 125, pattern-lab/source/_patterns/03-templates/_components.scss */
+.content-box:last-child {
+  padding-bottom: 3em;
+  border-bottom: 1px solid #C7C7C7;
+}
+@media (min-width: 768px) {
+  /* line 128, pattern-lab/source/_patterns/03-templates/_components.scss */
+  .content-box:last-child.no-border {
+    border: 0;
+  }
+}
+/* line 134, pattern-lab/source/_patterns/03-templates/_components.scss */
+.content-box img {
+  max-width: 100%;
+}
+
+/* line 139, pattern-lab/source/_patterns/03-templates/_components.scss */
+.no-underline {
+  text-decoration: none;
+}
+
+/* line 143, pattern-lab/source/_patterns/03-templates/_components.scss */
+.align-self-right {
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+}
+
+/* line 147, pattern-lab/source/_patterns/03-templates/_components.scss */
+.content-padding {
+  padding: 0 0.75em;
+}
+@media (min-width: 1280px) {
+  /* line 147, pattern-lab/source/_patterns/03-templates/_components.scss */
+  .content-padding {
+    padding: 3em;
   }
 }

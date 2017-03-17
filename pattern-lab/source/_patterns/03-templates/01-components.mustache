@@ -1,0 +1,76 @@
+<div class="components content-wrapper main-four-bg">
+    <section id="sidebar" class="sidebar">{{> molecules-sidebar-list }}</section>
+    <section id="content" class="main-content">
+        <div id="overlay" class="test"></div>
+        <header class="bar">
+            <div class="menu-container">
+                <button id="openMainMenu" class="mobile-menu"><span id="bars" class="fa fa-bars fa-2x" aria-hidden="true"></span></button>
+                <span>{{ menuTitle }}</span>
+            </div>
+            <span class="pe-xl--visible align-self-end"><a href="#">Question or feedback?</a></span>
+        </header>
+        <main class="content-padding">
+            <section class="info-panel">
+                <div class="grouped">
+                    <div class="summary">
+                        <h1>{{ pageTitle }}</h1>
+                        <span>{{ version }}</span>
+                    </div>
+                    <div class="description">
+                        <p>{{ pageDescription }}</p>
+                    </div>
+                    <div class="actions">
+                        {{# actionButtons }}
+                            <button class="pe-btn__primary pe-btn--btn_large">{{ button-text }}</button>
+                        {{/actionButtons}}
+                    </div>
+                </div>
+                <div class="content-box">
+                    <h2 class="pe-label pe-label--bold">{{ guidelinesLabel }}</h2>
+                    {{# guidelinesDescription }}
+                        <p>{{ paragraph }}</p>
+                    {{/guidelinesDescription}}
+                </div>
+                <div class="content-box">
+                    <ul class="pe-list pe-list--unstyled">
+                        {{# sectionAnchors }}
+                            <li class="pe-title pe-title--small"><a href="{{ url }}" class="no-underline">{{ label }}</a></li>
+                        {{/sectionAnchors}}
+                    </ul>
+                </div>
+            </section>
+            <section class="feature-panel">
+                <div class="grouped flex-start baseline">
+                    <div class="content-box">
+                        <h2 class="pe-label pe-label--bold">{{ featuresLabel }}</h2>
+                        <ul class="pe-list">
+                            {{# featureList }}
+                                <li>{{ label }}</li>
+                            {{/featureList}}
+                        </ul>
+                    </div>
+                {{# infoLinks }}
+                    <div class="content-box no-border">
+                        {{> molecules-title-link }}
+                    </div>
+                {{/infoLinks}}
+                </div>
+            </section>
+            <section class="usage-styles">
+                {{# typesUsageStyles }}
+                    <div class="content-box">
+                        {{> molecules-heading-content }}
+                    </div>
+                {{/typesUsageStyles}}
+            </section>
+            <footer>
+                <div class="content-box">
+                    {{# changeLog }}
+                        <h2 class="margin-bottom-triple">{{ title }}</h2>
+                        {{> molecules-change-log }}
+                    {{/changeLog}}
+                </div>
+            </footer>
+        </main>
+    </section>
+</div>

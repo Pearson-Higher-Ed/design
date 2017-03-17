@@ -7561,6 +7561,21 @@ html, body {
   justify-content: flex-start;
 }
 
+/* line 162, pattern-lab/scss/_helpers.scss */
+.small-padding {
+  padding: 0 0.75em;
+}
+
+/* line 166, pattern-lab/scss/_helpers.scss */
+.margin-left {
+  margin-left: 1em;
+}
+
+/* line 170, pattern-lab/scss/_helpers.scss */
+.margin-bottom-triple {
+  margin-bottom: 2em;
+}
+
 /* line 1, pattern-lab/scss/_flex.scss */
 .align-self-flex-end {
   align-self: flex-end;
@@ -8653,6 +8668,43 @@ table.pe-proto.small th, table.pe-proto.small td {
   margin-bottom: 1em;
 }
 
+@media (min-width: 1280px) {
+  /* line 1, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
+  .usage-content-box {
+    margin-top: 2em;
+    display: flex;
+  }
+}
+@media (min-width: 768px) {
+  /* line 7, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
+  .usage-content-box .image-list {
+    display: flex;
+  }
+}
+@media (min-width: 1280px) {
+  /* line 12, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
+  .usage-content-box p {
+    min-width: 370px;
+    max-width: 370px;
+    margin-right: 20px;
+  }
+}
+@media (min-width: 1280px) {
+  /* line 19, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
+  .usage-content-box div {
+    margin-right: 1em;
+  }
+}
+/* line 25, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
+.usage-content-box img {
+  margin-right: 1em;
+  max-width: 100%;
+}
+/* line 29, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
+.usage-content-box img {
+  margin-bottom: 1em;
+}
+
 /* line 1, pattern-lab/source/_patterns/02-organisms/06-homepage/_main-cards.scss */
 .cards {
   display: flex;
@@ -8698,14 +8750,14 @@ table.pe-proto.small th, table.pe-proto.small td {
   display: block;
 }
 
-/* line 2, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 2, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
-/* line 7, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 7, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .content-wrapper {
   display: flex;
   height: 100%;
@@ -8715,7 +8767,7 @@ button {
   border: 1px solid #C7C7C7;
 }
 
-/* line 16, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 16, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .sidebar {
   position: relative;
   z-index: 2;
@@ -8726,7 +8778,7 @@ button {
   transition: .5s;
 }
 @media (max-width: 1280px) {
-  /* line 16, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+  /* line 16, pattern-lab/source/_patterns/03-templates/_homepage.scss */
   .sidebar {
     height: 100%;
     position: absolute;
@@ -8734,19 +8786,19 @@ button {
     left: -240px;
   }
 }
-/* line 32, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 32, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .sidebar.open {
   left: 0;
   transition: .5s;
 }
 
-/* line 38, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 38, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .main-content {
   flex: 3;
   overflow: scroll;
 }
 
-/* line 44, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 44, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .mobile-menu {
   position: absolute;
   background: none;
@@ -8754,37 +8806,37 @@ button {
   border: 0;
   padding: 1em;
 }
-/* line 51, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 51, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .mobile-menu span {
   color: white;
 }
-/* line 53, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 53, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .mobile-menu span.primary {
   color: #047A9C;
 }
-@media (min-width: 1280px) {
-  /* line 44, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+@media (min-width: 1281px) {
+  /* line 44, pattern-lab/source/_patterns/03-templates/_homepage.scss */
   .mobile-menu {
     display: none;
   }
 }
 
-/* line 62, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 62, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .card-container {
   border-bottom: 1px solid #FFB81C;
 }
 
-/* line 66, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 66, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .footer-content {
   padding: 5em 1em;
 }
 @media (max-width: 640px) {
-  /* line 66, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+  /* line 66, pattern-lab/source/_patterns/03-templates/_homepage.scss */
   .footer-content {
     padding: 2em;
   }
 }
-/* line 74, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 74, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .footer-content a {
   display: inline-flex;
   text-decoration: none;
@@ -8793,19 +8845,19 @@ button {
   font-weight: bold;
   font-size: 0.875em;
 }
-/* line 81, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 81, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .footer-content a.contact {
   font-weight: 300;
   font-size: 2.375em;
 }
 @media (max-width: 768px) {
-  /* line 81, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+  /* line 81, pattern-lab/source/_patterns/03-templates/_homepage.scss */
   .footer-content a.contact {
     font-size: 2em;
   }
 }
 @media (max-width: 640px) {
-  /* line 81, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+  /* line 81, pattern-lab/source/_patterns/03-templates/_homepage.scss */
   .footer-content a.contact {
     font-size: 1em;
     font-weight: bold;
@@ -8813,7 +8865,7 @@ button {
   }
 }
 
-/* line 96, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+/* line 96, pattern-lab/source/_patterns/03-templates/_homepage.scss */
 .overlay {
   position: absolute;
   top: 0;
@@ -8822,9 +8874,186 @@ button {
   background-color: black;
   opacity: 0.5;
 }
-@media (min-width: 1280px) {
-  /* line 96, pattern-lab/source/_patterns/04-pages/_homepage.scss */
+@media (min-width: 1281px) {
+  /* line 96, pattern-lab/source/_patterns/03-templates/_homepage.scss */
   .overlay {
     display: none;
+  }
+}
+
+/* line 1, pattern-lab/source/_patterns/03-templates/_components.scss */
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 56px;
+  padding: 1em;
+  background-color: #005A70;
+}
+/* line 7, pattern-lab/source/_patterns/03-templates/_components.scss */
+.bar .menu-container {
+  display: flex;
+  align-items: center;
+}
+/* line 12, pattern-lab/source/_patterns/03-templates/_components.scss */
+.bar .mobile-menu {
+  position: relative;
+  padding: 0;
+  margin-right: 1em;
+}
+/* line 18, pattern-lab/source/_patterns/03-templates/_components.scss */
+.bar span {
+  color: white;
+}
+/* line 21, pattern-lab/source/_patterns/03-templates/_components.scss */
+.bar span a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (min-width: 1280px) {
+  /* line 28, pattern-lab/source/_patterns/03-templates/_components.scss */
+  .actions {
+    width: 370px;
+  }
+}
+
+/* line 33, pattern-lab/source/_patterns/03-templates/_components.scss */
+.info-panel {
+  flex-direction: column;
+}
+/* line 35, pattern-lab/source/_patterns/03-templates/_components.scss */
+.info-panel .summary {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+/* line 37, pattern-lab/source/_patterns/03-templates/_components.scss */
+.info-panel .summary h1, .info-panel .summary .title-card h2, .title-card .info-panel .summary h2 {
+  margin-right: 12px;
+}
+@media (min-width: 1280px) {
+  /* line 42, pattern-lab/source/_patterns/03-templates/_components.scss */
+  .info-panel .content-box:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 50, pattern-lab/source/_patterns/03-templates/_components.scss */
+  .feature-panel {
+    padding-bottom: 3em;
+    border-bottom: 1px solid #C7C7C7;
+  }
+}
+@media (min-width: 1280px) {
+  /* line 50, pattern-lab/source/_patterns/03-templates/_components.scss */
+  .feature-panel {
+    margin-top: -390px;
+  }
+}
+@media (min-width: 1280px) {
+  /* line 58, pattern-lab/source/_patterns/03-templates/_components.scss */
+  .feature-panel .grouped {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  /* line 64, pattern-lab/source/_patterns/03-templates/_components.scss */
+  .feature-panel .grouped .content-box {
+    width: 370px;
+    display: flex;
+    align-self: flex-end;
+    flex-direction: column;
+  }
+}
+
+/* line 75, pattern-lab/source/_patterns/03-templates/_components.scss */
+.usage-styles .content-box {
+  padding-bottom: 3em;
+  border-bottom: 1px solid #C7C7C7;
+}
+
+/* line 81, pattern-lab/source/_patterns/03-templates/_components.scss */
+.grouped {
+  flex-direction: column;
+  display: flex;
+}
+/* line 85, pattern-lab/source/_patterns/03-templates/_components.scss */
+.grouped.flex-start {
+  justify-content: flex-start;
+}
+/* line 88, pattern-lab/source/_patterns/03-templates/_components.scss */
+.grouped.flex-start > div {
+  width: 100%;
+  flex: 1;
+}
+/* line 94, pattern-lab/source/_patterns/03-templates/_components.scss */
+.grouped.baseline {
+  align-items: baseline;
+}
+@media (min-width: 768px) {
+  /* line 81, pattern-lab/source/_patterns/03-templates/_components.scss */
+  .grouped {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 768px) {
+  /* line 109, pattern-lab/source/_patterns/03-templates/_components.scss */
+  .grouped .description {
+    order: 3;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  /* line 115, pattern-lab/source/_patterns/03-templates/_components.scss */
+  .grouped .actions {
+    order: 2;
+  }
+}
+
+/* line 122, pattern-lab/source/_patterns/03-templates/_components.scss */
+.content-box {
+  margin-top: 3em;
+}
+/* line 125, pattern-lab/source/_patterns/03-templates/_components.scss */
+.content-box:last-child {
+  padding-bottom: 3em;
+  border-bottom: 1px solid #C7C7C7;
+}
+@media (min-width: 768px) {
+  /* line 128, pattern-lab/source/_patterns/03-templates/_components.scss */
+  .content-box:last-child.no-border {
+    border: 0;
+  }
+}
+/* line 134, pattern-lab/source/_patterns/03-templates/_components.scss */
+.content-box img {
+  max-width: 100%;
+}
+
+/* line 139, pattern-lab/source/_patterns/03-templates/_components.scss */
+.no-underline {
+  text-decoration: none;
+}
+
+/* line 143, pattern-lab/source/_patterns/03-templates/_components.scss */
+.align-self-right {
+  align-self: flex-end;
+}
+
+/* line 147, pattern-lab/source/_patterns/03-templates/_components.scss */
+.content-padding {
+  padding: 0 0.75em;
+}
+@media (min-width: 1280px) {
+  /* line 147, pattern-lab/source/_patterns/03-templates/_components.scss */
+  .content-padding {
+    padding: 3em;
   }
 }

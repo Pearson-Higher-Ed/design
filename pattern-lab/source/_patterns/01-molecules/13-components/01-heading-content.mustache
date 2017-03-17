@@ -1,0 +1,13 @@
+<h2>{{ title }}</h2>
+<div class="usage-content-box">
+    {{# textList }}
+        <p>{{ excerpt }}</p>
+    {{/ textList }}
+    <div class="image-list">
+    {{# imageList }}
+        <div>
+            <img src="{{ url }}" alt="title">
+        </div>
+    {{/ imageList }}
+    </div>
+</div>

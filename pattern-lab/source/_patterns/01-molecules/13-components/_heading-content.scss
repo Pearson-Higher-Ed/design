@@ -1,0 +1,32 @@
+.usage-content-box {
+  @media(min-width:1280px) {
+	margin-top:2em;
+	display:flex;
+  };
+  
+  .image-list {
+	@media(min-width:768px) {
+	  display:flex;
+	}
+  }
+  p {
+	@media(min-width:1280px) {
+	  min-width:370px;
+	  max-width:370px;
+	  margin-right:20px;
+	};
+  }
+  div {
+	@media(min-width:1280px) {
+	  margin-right:1em;
+	}
+  }
+  
+  img {
+	margin-right:1em;
+	max-width:100%;
+  }
+  img {
+	margin-bottom:1em;
+  }
+}

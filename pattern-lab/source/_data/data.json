@@ -1,7 +1,155 @@
 {
+  "menuTitle": "Menu Title",
+  "pageTitle": "Page Title",
+  "version": "version 0.0.0",
+  "pageDescription": "Page desrcription text here",
+  "actionButtons": [
+    {
+      "button-text": "Button"
+    },
+    {
+      "button-text": "Button"
+    }
+  ],
+  "guidelinesLabel": "Guidelines Label",
+  "guidelinesDescription": [
+    {
+      "paragraph": "Guidelines Description"
+    }
+  ],
+  "sectionAnchors": [
+    {
+      "url": "#foo",
+      "label": "Label One"
+    },
+    {
+      "url": "#foo",
+      "label": "Label Two"
+    },
+    {
+      "url": "#foo",
+      "label": "Label Three"
+    },
+    {
+      "url": "#foo",
+      "label": "Label Four"
+    }
+  ],
+  "featuresLabel": "Features Label",
+  "featureList": [
+    {
+      "label": "Feature One"
+    },
+    {
+      "label": "Feature Two"
+    },
+    {
+      "label": "Feature Three"
+    },
+    {
+      "label": "Feature Four"
+    }
+  ],
+  "infoLinks": [
+    {
+      "label": "Description",
+      "titleLink": [
+        {
+          "url": "#foo",
+          "label": "Label One"
+        },
+        {
+          "url": "#foo",
+          "label": "Label Two"
+        }
+      ]
+    },
+    {
+      "label": "Description",
+      "titleLink": [
+        {
+          "url": "#foo",
+          "label": "Label One"
+        },
+        {
+          "url": "#foo",
+          "label": "Label Two"
+        }
+      ]
+    },
+    {
+      "label": "Description",
+      "titleLink": [
+        {
+          "url": "#foo",
+          "label": "Label One"
+        },
+        {
+          "url": "#foo",
+          "label": "Label Two"
+        }
+      ]
+    }
+  ],
+  "typesUsageStyles": [
+    {
+      "title": "Title",
+      "textList": [
+        {
+          "excerpt":"Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle. Maurizzle pellentesque its fo rizzle izzle turpis. Get down get down we gonna chung nizzle. Shizzlin dizzle eleifend rhoncizzle break it down. In yo ghetto platea dictumst. Bling bling dapibizzle. Curabitur break yo neck, yall fo, pretizzle eu, go to hizzle dope, own yo' vitae, nunc. Bizzle suscipizzle. Ass semper velit sizzle fo."
+        }
+      ],
+      "imageList": [
+        {
+          "url": "http://placehold.it/760x300"
+        }
+      ]
+    },
+    {
+      "title": "Title",
+      "textList": [
+        {
+          "excerpt":"Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle. Maurizzle pellentesque its fo rizzle izzle turpis. Get down get down we gonna chung nizzle. Shizzlin dizzle eleifend rhoncizzle break it down. In yo ghetto platea dictumst. Bling bling dapibizzle. Curabitur break yo neck, yall fo, pretizzle eu, go to hizzle dope, own yo' vitae, nunc. Bizzle suscipizzle. Ass semper velit sizzle fo."
+        }
+      ],
+      "imageList": [
+        {
+          "url": "http://placehold.it/370x150"
+        },
+        {
+          "url": "http://placehold.it/370x150"
+        }
+      ]
+    }
+  ],
+  "changeLog": [
+    {
+      "label": "this is a link",
+      "url": "#foo",
+      "changeList": [
+        {
+          "label": "change one"
+        },
+        {
+          "label": "change two"
+        },
+        {
+          "label": "change three"
+        }
+      ]
+    }
+  ],
   "key":"value",
   "key2":"use this for variables you want to load globally",
-  "title":"Nullizzle shizznit velizzle, hizzle, suscipit own yo', gravida vizzle, arcu.",
+  "title": "Title",
+  "buttonText": "Button",
+  "boldLabel": "Bold Label",
+  "url": "#foo",
+  "label": "label",
+  "show-button": true,
+  "show-icon": true,
+  "button-text": "Download",
+  "link-text": "How does it work",
   "img":{
     "avatar":{
       "src":"http://placeimg.com/100/100/people",
@@ -34,7 +182,6 @@
     "long":"Curabitizzle fo shizzle diam quizzle nisi nizzle mollizzle. Suspendisse boofron. Morbi odio. Sure pizzle. Crazy orci. Shut the shizzle up maurizzle get down get down, check out this a, go to hizzle sit amizzle, malesuada izzle, pede. Pellentesque gravida. Vestibulizzle check it out mi, volutpat izzle, shiz sed, shiznit sempizzle, da bomb. Funky fresh in ipsum. Da bomb volutpat felis vizzle daahng dawg. Crizzle quis dope izzle fo shizzle my ni."
   },
   "description":"Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle. Maurizzle pellentesque its fo rizzle izzle turpis. Get down get down we gonna chung nizzle. Shizzlin dizzle eleifend rhoncizzle break it down. In yo ghetto platea dictumst. Bling bling dapibizzle. Curabitur break yo neck, yall fo, pretizzle eu, go to hizzle dope, own yo' vitae, nunc. Bizzle suscipizzle. Ass semper velit sizzle fo.",
-  "url":"http://lorizzle.nl/",
   "name":{
     "first":"Junius",
     "firsti":"J",
@@ -114,49 +261,7 @@
     "link":"Got It",
     "url":"#"
   },
-  "navigation": [
-    {
-      "main": [
-        {
-          "label": "About",
-          "url": "#foo"
-        },
-        {
-          "label": "About",
-          "url": "#foo"
-        },
-        {
-          "label": "About",
-          "url": "#foo"
-        },
-        {
-          "label": "About",
-          "url": "#foo"
-        },
-        {
-          "label": "About",
-          "url": "#foo"
-        },
-        {
-          "label": "About",
-          "url": "#foo"
-        },
-        {
-          "label": "About",
-          "url": "#foo"
-        }
-      ]
-    }
-  ],
-  "title": "Design",
-  "excerpt": "Start working in Sketch with ready-made UI elements ranging from typography, colors, buttons to modals and more!",
-  "show-button": true,
-  "show-icon": true,
-  "button-text": "Download",
-  "link-text": "How does it work",
-  "url": "#foo",
   "icon": "",
-
   "header": {
     "title": "UX Framework",
     "excerpt": "UX Framework is a unified UI language with guidance and resources for creating user experiences for Pearson applications",

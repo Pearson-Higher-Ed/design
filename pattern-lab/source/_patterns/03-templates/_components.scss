@@ -1,0 +1,153 @@
+.bar {
+  @include flex;
+  height:56px;
+  padding:1em;
+  background-color: $primary-two;
+  
+  .menu-container {
+	display: flex;
+	align-items: center;
+  }
+  
+  .mobile-menu {
+	position:relative;
+	padding:0;
+	margin-right:1em;
+  }
+  
+  span {
+	color:white;
+	
+	a {
+	  color:white;
+	  text-decoration: none;
+	}
+  }
+}
+
+.actions {
+  @media(min-width:1280px) {
+	width:370px;
+  }
+}
+.info-panel {
+  flex-direction: column;
+  .summary {
+	@include flex($justify-content: flex-start);
+	h1 {
+	  margin-right:12px;
+	}
+  }
+  .content-box {
+	&:last-child {
+	  @media(min-width:1280px) {
+		border-bottom: 0;
+	  }
+	}
+  }
+}
+
+.feature-panel {
+  @media(min-width:768px) {
+	padding-bottom:3em;
+	border-bottom: 1px solid $border;
+  }
+  @media(min-width:1280px) {
+	margin-top:-390px;
+  }
+  .grouped {
+	@media(min-width:1280px) {
+	  flex-direction: column;
+	  align-items: flex-end;
+	  justify-content: flex-end;
+	  
+	  .content-box {
+		width:370px;
+		display:flex;
+		align-self: flex-end;
+		flex-direction: column;
+	  }
+	}
+  }
+}
+
+.usage-styles {
+  .content-box {
+	padding-bottom:3em;
+	border-bottom:1px solid $border;
+  }
+}
+
+.grouped {
+  flex-direction: column;
+  display: flex;
+  
+  &.flex-start {
+	justify-content: flex-start;
+	
+	> div {
+	  width:100%;
+	  flex:1;
+	}
+  }
+  
+  &.baseline {
+	align-items: baseline;
+  }
+  
+  @media(min-width:768px) {
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+  }
+  .summary {
+	@media(min-width:768px) {
+	  
+	}
+  }
+  .description {
+	@media(min-width:768px) {
+	order:3;
+	  width:100%;
+	}
+  }
+  .actions {
+	@media(min-width:768px) {
+	order:2;
+	}
+  }
+}
+
+.content-box {
+  margin-top:3em;
+  
+  &:last-child {
+	padding-bottom: 3em;
+	border-bottom: 1px solid $border;
+	&.no-border {
+	  @media(min-width:768px) {
+		border:0;
+	  }
+	}
+  }
+  img {
+	max-width:100%;
+  }
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.align-self-right {
+  align-self: flex-end;
+}
+
+.content-padding {
+  padding: 0 em(12);
+  
+  @media(min-width:1280px) {
+	padding: 3em;
+  }
+}
