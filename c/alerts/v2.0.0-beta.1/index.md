@@ -47,6 +47,9 @@ blocks:
       - type: wide image
         src: ./assets/alert_over.png
         caption: The message should appear in the upper corner as part of the normal page load.
+      - type: wide video
+        src: ./assets/animation.mp4
+        caption: Example of the animation for displaying and dismissing a dynamic alert.
 
   - type: two column
     text: |
@@ -96,7 +99,7 @@ blocks:
         src: ./assets/alert_all.png
         caption:
 
-  
+
 
 
 changelog:
