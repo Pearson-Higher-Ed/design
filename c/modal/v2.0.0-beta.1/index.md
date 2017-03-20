@@ -78,7 +78,7 @@ blocks:
     text: |
 
       ### Dismissing the modal
-      Modals retain focus until dismissed or a certain action has been taken. You must provide an explicit way to close the modal by providing buttons or the “X” depending on the level of importance of the content.
+      Modals retain focus until dismissed or a certain action has been taken. You must provide a visible, focusable and clickable way to close the modal. There are different approaches you can take depending on the level of importance of the modal:
 
       * __Modal with actions__
 
@@ -92,8 +92,10 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/modal_with_actions_mobile.png
+        caption: Modal with actions (Mobile)
       - type: narrow image
         src: ./assets/modal_without_actions_mobile.png
+        caption: Modal without actions (Mobile)
 
 
   - type: two column
@@ -109,8 +111,10 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/modal_with_actions_scrolling_mobile.png
+        caption: Modal with actions (Mobile)
       - type: narrow image
         src: ./assets/modal_without_actions_scrolling_mobile.png
+        caption: Modal without actions (Mobile)
 
 
   - type: two column
@@ -179,11 +183,13 @@ blocks:
         - [Medium Grey #6a7070](/design/c/colors/v2.0.0-beta.7/#rd-medium-gray)
 
       "X" icon
-      : - size: 18px
-        - touch target: 44x44px
+      : - size: [remove-sm-24](/design/c/icons/v2.0.0-beta.4)
+        - touch target: 36px (It's smaller than 44px because there is additional touch area outside the modal to accommodate for that. This allows more room for heading.)
 
-  - type: two column
-    text: |
+      Overlay
+      : - [Charcoal #252525](/design/c/colors/v2.0.0-beta.7/#rd-charcoal) at 85%
+
+
       ### Spacing
 
       * __Desktop__ (Viewport >= 768px): Wide spacing
