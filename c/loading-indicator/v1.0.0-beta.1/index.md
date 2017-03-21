@@ -4,9 +4,8 @@ title: Loading Indicator
 section: Components
 redirect_from: /docs/ui-components/loading-indicator/
 version: 1.0.0-beta.1
-status: beta
+status: active
 implemented: false
-private: true
 people:
   - role: Product Owner
     name: Joe Macaluso
