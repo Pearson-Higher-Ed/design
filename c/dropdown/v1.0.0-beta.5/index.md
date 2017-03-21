@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Dropdown
 section: Components
-version: 1.0.0-beta.4
-status: deprecated
+version: 1.0.0-beta.5
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -13,7 +13,9 @@ people:
     email: parker.malenke@pearson.com
 downloads:
   - name: UXD Accessibility Checklist
-    link: ""
+    link: https://docs.google.com/a/pearson.com/document/d/1qZwBsbH1uFSwAJVoJZhRE2R_5aneK462ii3lPcp4tcY/edit?usp=sharing
+  - name: Sketch File
+    link: ./assets/dropdown.sketch
 
 dependencies:
   - name: typography
@@ -21,6 +23,8 @@ dependencies:
   - name: buttons
     version: 1.0.0
   - name: colors
+    version: 2.0.0
+  - name: icons
     version: 2.0.0
 
 tagline: |
@@ -75,8 +79,8 @@ blocks:
 
       The dropdown page should have a descriptive title explaining the context for the options presented.
     contents:
-      - type: narrow image
-        src: ./assets/mobile-menu.png
+      - type: narrow video
+        src: ./assets/animation.mp4
         caption: An example of a dropdown menu at the extra small breakpoint.
       - type: narrow image
         src: ./assets/mobile-menu-check.png
@@ -95,8 +99,9 @@ blocks:
         - 24px left and right padding
         - 8px between items
 
-      Hover
-      : - Hovered item has a Moonlight background that extends 4px above and below the text
+      Focus/Hover
+      : - A focused or hovered item has a Moonlight background that extends 4px above and below the text
+        - Triggers use the default focus behavior for buttons or links
 
       Divider
       : - Groups may be divided by a 1px solid Alto line
@@ -154,13 +159,21 @@ blocks:
         - This pushes the options and any divider lines to the right, for a total right padding of 42px
 
       Animation
-      : - The whole mobile menu should slide up from the bottom of the screen with an animation
+      : - The whole mobile menu should slide up from the bottom of the screen
+        - Use a duration of 0.3s
+        - Easing is cubic-bezier(0.77, 0, 0.175, 1)
+        - Same transition for entry and exit
 
     contents:
       - type: wide image
         src: ./assets/redlines.mobile-menu.png
 
 changelog:
+  - version: 1.0.0-beta.5
+    changes: |
+      - UPDATED: Clean up dependencies, add a11y checklist, get ready for governance
+      - ADDED: Redlines for animation
+
   - version: 1.0.0-beta.4
     changes: |
       - ADDED: Specific style for mobile dropdowns
