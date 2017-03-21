@@ -2,33 +2,96 @@ const openBtn = document.getElementById('openMainMenu'),
       barsIcon = document.getElementById('bars'),
       sidebar = document.getElementById('sidebar'),
       content = document.getElementById('content'),
-      overlay = document.getElementById('overlay');
+      overlay = document.getElementById('overlay'),
+      firstNavItem = document.getElementById('About'),
+      lastNavButton = document.querySelector('#dropdownNav li:last-child button'),
+      lastListItem = document.querySelector('#dropdownNav li:last-child button + div ul li:last-child a'),
+      anchor = document.querySelectorAll('#sidebar a'),
+      buttons = document.querySelectorAll('#sidebar button'),
+      navLinks = [];
 
 let   timer = 0,
       counter = 0;
 
-// helper function to cycle through list items
-function cycleElements(element, callback) {
-    return element.forEach(item => {
+
+// return item from loop
+function loopElements (element, callback) {
+   return element.forEach(function(item){
         callback(item);
     })
 }
 
+function closeMenu() {
+    sidebar.classList.remove('open');
+    overlay.classList.remove('overlay');
+    setTimeout(function(){
+        sidebar.classList.add('js-hide');
+        openBtn.focus();
+    }, 500)
+}
+
+function focusTarget() {
+    "use strict";
+
+}
+
+loopElements(anchor, function(a) {
+    return navLinks.push(a);
+});
+
+loopElements(buttons, function(button) {
+    return navLinks.push(button);
+});
+
+// Loops focus of navigation items
+loopElements(navLinks, function(item){
+    item.onfocus = function(event){
+        const target = event.target;
+        if (target.getAttribute('data-focused') === 'false') {
+            target.setAttribute('data-focused', 'true');
+        } else if (target.getAttribute('data-focused') === 'true') {
+            target.setAttribute('data-focused', 'false');
+        }
+    };
+    item.onblur = function(event) {
+        const target = event.target;
+        if (target.getAttribute('data-focused') === 'false') {
+            target.setAttribute('data-focused', 'true');
+        } else if (target.getAttribute('data-focused') === 'true') {
+            target.setAttribute('data-focused', 'false');
+        }
+
+        if (sidebar.classList.contains('open')) {
+            if (target === lastNavButton && target.getAttribute('aria-expanded') === 'false') {
+                firstNavItem.focus();
+            } else if (target === lastListItem && lastNavButton.getAttribute('aria-expanded') === 'true') {
+                firstNavItem.focus();
+            }
+        }
+
+    }
+});
+
+
 // toggles the menu
 content.addEventListener('click', event => {
     if (event.target === barsIcon || event.target === openBtn) {
-        sidebar.classList.add('open');
-        overlay.classList.add('overlay');
-    } else if (event.target !== barsIcon || event.target !== openBtn) {
-        sidebar.classList.remove('open');
-        overlay.classList.remove('overlay');
+        sidebar.classList.remove('js-hide');
+        setTimeout(function(){
+            sidebar.classList.add('open');
+            overlay.classList.add('overlay');
+            firstNavItem.focus();
+        }, 100);
+
+    } else if (sidebar.classList.contains('open')) {
+        closeMenu();
     }
 });
+
 
 // toggles submenu items
 sidebar.addEventListener('click', event => {
     const ariaExpanded = event.target.getAttribute('aria-expanded');
-
     if (ariaExpanded === 'false') {
         event.target.setAttribute('aria-expanded', 'true');
     } else if (ariaExpanded === 'true') {
@@ -36,6 +99,7 @@ sidebar.addEventListener('click', event => {
     }
 
 });
+
 
 // changes the menu icon color at a certain scroll position
 content.addEventListener('scroll', event => {
@@ -52,29 +116,16 @@ content.addEventListener('scroll', event => {
     }, 20);
 });
 
-// accessibility - keyup and keydown cycling.
-window.addEventListener("keydown", function (event) {
-    const focusedElement = document.activeElement;
 
-    if (event.defaultPrevented) {
-        return;
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    if (evt.key === 'Escape' || evt.key === 'Esc') {
+        if (sidebar.classList.contains('open')) {
+            closeMenu();
+        } else {
+            return
+        }
     }
-    switch (event.key) {
-        case "ArrowDown":
-            console.log('arrow-down');
-            break;
-
-        case "ArrowUp":
-            console.log('arrow-up');
-            // Do something for "up arrow" key press.
-
-            break;
-        default:
-            return;
-    }
-    event.preventDefault();
-}, true);
-
-
+};
 
 

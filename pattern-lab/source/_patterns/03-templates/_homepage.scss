@@ -32,6 +32,14 @@ button {
   &.open {
     left:0;
     transition: .5s;
+
+  }
+  
+  &.js-hide {
+    visibility:hidden;
+    @media(min-width:1280px) {
+      visibility: visible;
+    }
   }
 }
 

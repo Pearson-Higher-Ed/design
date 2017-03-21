@@ -5,9 +5,18 @@
   };
   
   .image-list {
+	img {
+	  margin-right:0;
+	
+	  @media(min-width:768px) {
+		margin-right:1em;
+	  }
+	  max-width:100%;
+	}
 	@media(min-width:768px) {
 	  display:flex;
 	}
+	
   }
   p {
 	@media(min-width:1280px) {
@@ -22,10 +31,7 @@
 	}
   }
   
-  img {
-	margin-right:1em;
-	max-width:100%;
-  }
+  
   img {
 	margin-bottom:1em;
   }
