@@ -108,16 +108,18 @@ blocks:
       When the modal content exceeds the height of the viewport the scrollable area will automatically expand to include just enough space for scrolling, without scrolling the page below.
 
       * __Modal with actions:__ sticky buttons
+        [Click here to play with the prototype](https://preview.uxpin.com/4b90bc323219879d681c381bdc71e1d80adc9ab0#/pages/67336979/simulate/no-panels)
         Buttons should remain accessible by default. It’s important to inform the users up-front that actions are required, so the buttons will be anchored on the bottom of the page. The scroll bar will be visible by default to suggest scrolling.
 
       * __Modal without action:__ page scroll
+        [Click here to play with the prototype](https://preview.uxpin.com/4b90bc323219879d681c381bdc71e1d80adc9ab0#/pages/67336990/simulate/no-panels)
 
     contents:
       - type: narrow video
         src: ./assets/Prototype_modal_mobile_with_actions.mp4
         caption: Modal with actions (Mobile)
-      - type: narrow image
-        src: ./assets/modal_without_actions_scrolling_mobile.png
+      - type: narrow video
+        src: ./assets/Prototype_modal_mobile_without_actions.mp4
         caption: Modal without actions (Mobile)
 
 
