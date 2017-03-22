@@ -15,8 +15,9 @@ people:
     email: linda.tsai@pearson.com
 
 dependencies:
-  - name: Buttons
-    version: 1.0.0
+  - name: typography
+    version: 2.0.0
+
 
 downloads:
   - name: UX Accessibility Checklist
@@ -35,11 +36,14 @@ blocks:
 
   - type: two column
     text: |
-      Modals retain focus until dismissed or a certain action has been taken. Use them sparingly because they are interruptive. Modals can be used to
+      Modals are used when it is necessary to interrupt users with a message or request for certain actions. Modals retain focus until dismissed or a certain action has been taken, such as:
 
       * __Confirmation acknowledgement__ from users regarding the consequences followed by their decision
-      * __Provide additional information__
-      * __Ask for a decision__
+      * __Providing additional information__
+      * __Asking for a decision__
+
+
+      Use them sparingly as they are interruptive which could potentially create frustration.
 
 
     contents:
@@ -51,7 +55,7 @@ blocks:
     text: |
 
       ### Modals is different from alerts
-      Modals interrupt users by blocking the current view while alerts co-exist on the page and do not stop users from continuing the process. Do not use modals when alerts are more appropriate as modals are relatively intrusive.
+      It's easy to confuse [alerts](/design/c/alerts/beta/) with modals. Modals interrupt users by blocking the current view while alerts co-exist on the page and do not stop users from continuing the process. Do not use modals when alerts are more appropriate as modals are relatively intrusive.
 
 
   - type: section
@@ -129,14 +133,6 @@ blocks:
       ### Avoid nested scroll within a modal
       Scrolling inside a modal can become a usability issue on narrow devices and is not recommended.
 
-  - type: section
-    name: Responsive Design
-
-  - type: two column
-    text: |
-
-      ### Design changes at breakpoint = 768px
-      The modal is responsive to accommodate all device sizes. See how spacing and button size change at breakpoint of 768px.
 
   - type: section
     name: Actions
@@ -144,23 +140,49 @@ blocks:
   - type: two column
     text: |
 
-      Buttons are positioned according to the type of actions:
+      ### Button placement
+
+      Follow the [buttons guidance](/design/c/buttons/beta/) for how to place buttons and see how to deal with specific cases. In general, there are two types of actions:
 
       * __Affirmative actions__ are placed on the right and continues the process. They are actions that are desired by users or the application.
 
       * __Dismissive actions__ are placed on the left and return the user to the previous screen or step in the process.
 
-      __Destructive actions may be affirmative actions__
 
-      In some situations, destructive actions such as "delete" or “leave” may be affirmative actions. For example, when a student attempts to leave the page in the middle of a quiz, and is asked to confirm if the student acknowledges the consequences of leaving the page at this point. Since prior to seeing the modal, the student clicks on the “Exit” button indicates that the student desires to leave the page, so the “leave” button should be placed on the right to help the student continue with the process as expected.
-
-
-      __Avoid having more than two buttons__
+      ### Avoid having more than two buttons
 
 
     contents:
       - type: wide image
         src: ./assets/modal_button_types.png
+
+
+  - type: section
+    name: Responsive Behavior
+
+  - type: two column
+    text: |
+
+      The modal is responsive to accommodate all device sizes.
+
+      __Desktop__ (Viewport >= 768px)
+
+      - Standard spacing
+      - Standard buttons (Width is dependent upon the length of the label)
+
+      __Mobile__ (Viewport < 768px)
+
+      - Compact spacing
+      - Expanded buttons (Occupies the full row to allow larger touch target)
+
+    contents:
+      - type: wide image
+        src: ./assets/modal_1.png
+        caption: Desktop (Viewport >= 768px)
+      - type: narrow image
+        src: ./assets/modal_small.png
+        caption: Mobile (Viewport < 768px)
+
 
   - type: section
     name: Specs
@@ -169,8 +191,8 @@ blocks:
     text: |    
 
       Dimensions
-      : - Width: auto
-        - Height: auto
+      : - Height: auto
+        - Width: auto
         - Max Width: 600px
         - Margin: 6.25%
 
@@ -183,17 +205,27 @@ blocks:
         - [Medium Grey #6a7070](/design/c/colors/v2.0.0-beta.7/#rd-medium-gray)
 
       "X" icon
-      : - size: [remove-sm-24](/design/c/icons/v2.0.0-beta.4)
-        - touch target: 36px (It's smaller than 44px because there is additional touch area outside the modal to accommodate for that. This allows more room for heading.)
+      : - Size: [remove-sm-24](/design/c/icons/v2.0.0-beta.4)
+        - Touch target: 36px (See notes below)
+
+      Spacing (Responsive)
+      : - Viewport >= 768px: Standard spacing
+        - Viewport < 768px: Compact spacing
+
+      Buttons (Responsive)
+      : - Style and size: [Large Buttons](/design/c/buttons/v2.1.0-beta.2/#rd-large-button)
+        - Width (Viewport >= 768px): Standard or expanded
+        - Width (Viewport < 768px): Expanded
+
 
       Overlay
-      : - [Charcoal #252525](/design/c/colors/v2.0.0-beta.7/#rd-charcoal) at 85%
+      : - [Charcoal #252525](/design/c/colors/v2.0.0-beta.7/#rd-charcoal)
+        - Opacity: 85%
 
 
-      ### Spacing
+      __Note: The touch target for "X"__ is smaller than the minimal size of 44px because there is additional touch area outside the modal to accommodate for that. This allows more room for heading.
 
-      * __Desktop__ (Viewport >= 768px): Wide spacing
-      * __Mobile__ (Viewport < 768px): Compact spacing
+
 
     contents:
       - type: wide image
@@ -202,15 +234,15 @@ blocks:
   - type: two column
     text: |  
 
-      ### Button size
+      ### Button Width
 
       * __Standard Buttons__ (Desktop)
 
-        Width of the buttons are determined by the text length of the labels.
+        Button width is determined by the length of the label.
 
       * __Expanded Buttons__ (Desktop or mobile)
 
-        Buttons expands to take up the full width of the parent container. This is to maximize the touch target.
+        Buttons expand to take up the full width of the parent container to maximize touch area.
 
 
     contents:
@@ -237,6 +269,17 @@ blocks:
 
       * __Modal with buttons:__ sticky buttons
       * __Modal without buttons:__ page scroll
+
+
+    contents:
+      - type: wide image
+        src: ./assets/modal_scrolling_specs.png
+      - type: wide image
+        src: ./assets/modal_without_actions_scrolling.png  
+        caption: Modal with buttons (Desktop)
+      - type: narrow image
+        src: ./assets/modal_without_actions_scrolling_mobile.png
+        caption: Modal without buttons (Mobile)
 
 
 changelog:
