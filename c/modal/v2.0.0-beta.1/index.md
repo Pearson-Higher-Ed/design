@@ -17,11 +17,15 @@ people:
 dependencies:
   - name: typography
     version: 2.0.0
+  - name: colors
+    version: 2.0.0-beta.7
+  - name: icons
+    version: 2.0.0-beta.4
 
 
 downloads:
   - name: UX Accessibility Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/1PRuQGU_AlpPkWBGA5gJuOTEG3pu9xEp5_H7Z2dD7YMw/edit?usp=sharing
+    link: https://docs.google.com/document/d/1FJSGR24EpDlRvk1Ve-AjFPy-BE-qoW5ePE7Tt-CPtzs/edit
   - name: Sketch
     link: ./assets/UXF_modal_3.sketch
 
@@ -108,10 +112,13 @@ blocks:
       When the modal content exceeds the height of the viewport the scrollable area will automatically expand to include just enough space for scrolling, without scrolling the page below.
 
       * __Modal with actions:__ sticky buttons
+
         [Click here to play with the prototype](https://preview.uxpin.com/4b90bc323219879d681c381bdc71e1d80adc9ab0#/pages/67336979/simulate/no-panels)
+
         Buttons should remain accessible by default. It’s important to inform the users up-front that actions are required, so the buttons will be anchored on the bottom of the page. The scroll bar will be visible by default to suggest scrolling.
 
       * __Modal without action:__ page scroll
+
         [Click here to play with the prototype](https://preview.uxpin.com/4b90bc323219879d681c381bdc71e1d80adc9ab0#/pages/67336990/simulate/no-panels)
 
     contents:
