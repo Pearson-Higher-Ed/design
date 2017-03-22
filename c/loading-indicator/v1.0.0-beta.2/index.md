@@ -3,7 +3,7 @@ layout: component-yaml
 title: Loading Indicator
 section: Components
 redirect_from: /docs/ui-components/loading-indicator/
-version: 1.0.0-beta.1
+version: 1.0.0-beta.2
 status: active
 implemented: false
 people:
@@ -14,12 +14,10 @@ people:
     name: Ed Zee
     email: edward.zee@pearson.com
 dependencies:
-  - name: Icons
-    version: 1.2.0-beta.1
   - name: Colors
-    version: 2.0.0-beta.7
+    version: 2.0.0
   - name: Typography
-    version: 2.0.0-beta.9
+    version: 2.0.0
 downloads:
   - name: UX Accessibility Checklist
     link:
@@ -32,22 +30,19 @@ features:
   - Accessibility compliant
   - Animated loading indicator
 usage_guidelines: |
-  Use a loading indicator to show that a page is in the process of loading.
+  Use a loading indicator to show that a page is in the process of loading or an action is being completed.
 
 blocks:
   - type: section
-    name: General Usage Guidelines
+    name: Loading Indicator
 
   - type: two column
     text: |
-      A loading indicator is comprised of a:
-      : - Background container
-        - Spinner icon
-        - Label
+      A loading indicator provides visual feedback to users that they have initiated a process and it holds their attention for processes that take longer than one second.
 
-      A loading indicator:
-      : - Provides visual feedback to users that they have initiated a process and it holds their attention for processes that take longer than one second. (Do not use a loading indicator for processes that take less than one second since this may confuse users.)
-        - Should always appear over the content area and be vertically and horizontally centered in the viewport.
+      (Do not use a loading indicator for processes that take less than one second since this may confuse users.)
+
+      Only one indicator should appear on the page at a time.
 
       There is no visual lightbox effect, however, the user cannot interact with the UI while loading is in process.
 
@@ -55,6 +50,9 @@ blocks:
       - type: wide image
         src: ./assets/positioning.png
         caption: Loading indicator should always appear over the content area.
+      - type: narrow video
+        src: ./assets/animation.mp4
+        caption: Example of the loading animation.
 
   - type: section
     name: Redlines
@@ -62,20 +60,34 @@ blocks:
   - type: two column
     text: |
       Positioning
-      : - Vertically and horizontally centered
+      : - Vertically and horizontally centered in the viewport
         - Always on top of contents
 
-      Spacing
-      : - 20px spacing on either side of the icon and text
+      Sizing and spacing
+        - Chip is 200px wide and 70px tall
+        - Text and indicator and centered in the chip
         - 12px spacing between icon and text
 
       Colors
       : - Background Color: [Charcoal](/design/c/colors/v2.0.0/#rd-charcoal-252525)
         - Text: [White](/design/c/colors/v2.0.0/#rd-white-ffffff)
-        - Spinner Icon: [Digital Marine Turquoise](/design/c/colors/v2.0.0/#rd-digital-marine-turquoise-19A5A3)
+        - Spinner: [Digital Marine Turquoise](/design/c/colors/v2.0.0/#rd-digital-marine-turquoise-19A5A3)
+
+      Typography
+      : - UI Text - Basic
+
+      Spinner
+      : - Composed of 8 circles arranged equally around a circle
+        - Each dot is a 4px circle
+        - The large spinner fits inside a 28px box
 
       Animation
-      : - Spinner icon should rotate in a clockwise direction.
+      : - Dots take 0.2s to grow and 0.2s to shrink
+        - The next dot in sequence starts growing as soon as the previous dot starts shrinking
+        - The animation proceeds in a clockwise direction
+
+      Behavior
+      : - While the spinner is displayed none of the UI behind it should be interactive
 
     contents:
       - type: wide image
@@ -91,6 +103,10 @@ blocks:
         caption: Loading indicator animation.
 
 changelog:
+  - version: 1.0.0-beta.2
+    changes: |
+      - ADDED: Animation detail
+
   - version: 1.0.0-beta.1
     changes: Initial version
 ---
