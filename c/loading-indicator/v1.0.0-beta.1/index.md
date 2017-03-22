@@ -4,8 +4,9 @@ title: Loading Indicator
 section: Components
 redirect_from: /docs/ui-components/loading-indicator/
 version: 1.0.0-beta.1
-status: active
+status: beta
 implemented: false
+private: true
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -32,7 +33,7 @@ features:
   - Accessibility compliant
   - Animated loading indicator
 usage_guidelines: |
-  Use a loading indicator to show that a page is in the process of loading.
+  Use a loading indicator to inform the user that the page will take some time to load.
 
 blocks:
   - type: section
@@ -40,21 +41,18 @@ blocks:
 
   - type: two column
     text: |
-      A loading indicator is comprised of a:
-      : - Background container
-        - Spinner icon
-        - Label
+      Loading indicators are comprised of a background container, a spinner icon, and loading indication text.
 
-      A loading indicator:
-      : - Provides visual feedback to users that they have initiated a process and it holds their attention for processes that take longer than one second. (Do not use a loading indicator for processes that take less than one second since this may confuse users.)
-        - Should always appear over the content area and be vertically and horizontally centered in the viewport.
+      The loading indicator component is to be used to provide visual feedback to the user that they have initiated a process.
 
-      There is no visual lightbox effect, however, the user cannot interact with the UI while loading is in process.
+      Loading indicators are to be used for processes that will take longer than one second.  We do this to keep the user's attention.  Do not use loading indicators for processes that are faster than one second as this may cause users to wonder what they missed if the indicator disappears too quickly.
+
+      The loading indicator should always sit over any page contents.  It should be positioned vertically and horizontally centered in the viewport.
 
     contents:
       - type: wide image
         src: ./assets/positioning.png
-        caption: Loading indicator should always appear over the content area.
+        caption: Loading indicator always sits over any page contents.
 
   - type: section
     name: Redlines
@@ -81,10 +79,6 @@ blocks:
       - type: wide image
         src: ./assets/redlines.png
         caption: Loading indicator redlines.
-
-      - type: narrow image
-        src: ./assets/spinner.png
-        caption: Spinner detail.
 
       - type: narrow image
         src: ./assets/animation.png
