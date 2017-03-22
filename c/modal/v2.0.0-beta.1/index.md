@@ -23,7 +23,7 @@ downloads:
   - name: UX Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1PRuQGU_AlpPkWBGA5gJuOTEG3pu9xEp5_H7Z2dD7YMw/edit?usp=sharing
   - name: Sketch
-    link: ./assets/modal.sketch
+    link: ./assets/UXF_modal_3.sketch
 
 tagline: |
   Modal interrupts the user with a message or request for certain actions with a block of content on top of the main view.
@@ -113,8 +113,8 @@ blocks:
       * __Modal without action:__ page scroll
 
     contents:
-      - type: narrow image
-        src: ./assets/modal_with_actions_scrolling_mobile.png
+      - type: narrow video
+        src: ./assets/Prototype_modal_mobile_with_actions.mp4
         caption: Modal with actions (Mobile)
       - type: narrow image
         src: ./assets/modal_without_actions_scrolling_mobile.png
