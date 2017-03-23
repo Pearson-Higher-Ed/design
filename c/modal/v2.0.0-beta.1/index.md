@@ -40,14 +40,15 @@ blocks:
 
   - type: two column
     text: |
-      Modals are used when it is necessary to interrupt users with a message or request for certain actions. Modals retain focus until dismissed or a certain action has been taken, such as:
+      Use modals when it is necessary to interrupt users with a message or request for certain actions.
+      For example:
 
       * __Confirmation acknowledgement__ from users regarding the consequences followed by their decision
       * __Providing additional information__
       * __Asking for a decision__
 
 
-      Use them sparingly as they are interruptive which could potentially create frustration.
+      Use them sparingly as they are interruptive. For screen reader users, it is especially frustrating because they’ll lose their place in the application.
 
 
     contents:
@@ -58,21 +59,21 @@ blocks:
   - type: two column
     text: |
 
-      ### Modals is different from alerts
-      It's easy to confuse [alerts](/design/c/alerts/beta/) with modals. Modals interrupt users by blocking the current view while alerts co-exist on the page and do not stop users from continuing the process. Do not use modals when alerts are more appropriate as modals are relatively intrusive.
+      ### Modals vs. alerts
+      It’s easy to confuse [alerts](/design/c/alerts/beta/) with modals. Modals interrupt users by blocking the current view while alerts coexist on the page and do not stop the user flow. Don’t use modals when alerts are more appropriate as modals are intrusive.
 
 
   - type: section
-    name: Content
+    name: Components
 
   - type: two column
     text: |
 
       Modals contains three parts:
 
-      * __Header__ is not needed when the message can be clearly delivered with just the content.
+      * __Header__ is optional. Designers should use their best judgment to create a clear message.
       * __Content__
-      * __Actions__ are optional. When there is no actions provided, the “X” must be provided so it’s clear to the users how to dismiss the modal.
+      * __Actions__ are optional. When there isn’t a button, you must include the “X” as a way to dismiss the modals to meet accessibility requirements.
 
     contents:
       - type: wide image
@@ -86,15 +87,17 @@ blocks:
     text: |
 
       ### Dismissing the modal
-      Modals retain focus until dismissed or a certain action has been taken. You must provide a visible, focusable and clickable way to close the modal. There are different approaches you can take depending on the level of importance of the modal:
+      Modals retain focus until dismissed or a certain action has been taken. Provide a visible and focusable way to close the modal.
 
-      * __Modal with actions__
+      Here are two different approaches:
 
-        In situations where an action is required from users, we will force users to make a selection. In this case, the “X” won’t be provided. Clicking outside of the modal will not close the modal, either. Ex: Confirm with the user about deleting a course because it is an destructive action.
+      * __Modals with actions__
 
-      * __Modal without action__
+        When an action is required from users, force them to make a decision by clicking a button. Don’t include the “X” or allow the users to click outside the modal to dismiss it.
 
-        When the content is relatively less critical, meaning it won’t make much difference if users ignore the content, then buttons are not needed. Users can simply select the “X” or outside the modal to close the modal. Ex: Show additional information about a teacher to help student choose a class
+      * __Modals without actions__
+
+        For less critical content, meaning it won’t make much difference if users ignore the content, then you don’t need to include buttons. Users can simply click the “X” or click outside the modal to dismiss it. For example, a modal that displays additional information about a teacher to help students choose a class doesn’t need action buttons.
 
 
     contents:
@@ -111,15 +114,16 @@ blocks:
       ### Scrolling Modals
       When the modal content exceeds the height of the viewport the scrollable area will automatically expand to include just enough space for scrolling, without scrolling the page below.
 
-      * __Modal with actions:__ sticky buttons
 
-        [Click here to play with the prototype](https://preview.uxpin.com/4b90bc323219879d681c381bdc71e1d80adc9ab0#/pages/67336979/simulate/no-panels)
+      * __Modals with actions:__ Sticky buttons
 
-        Buttons should remain accessible by default. It’s important to inform the users up-front that actions are required, so the buttons will be anchored on the bottom of the page. The scroll bar will be visible by default to suggest scrolling.
+        [Interact with the prototype](https://preview.uxpin.com/4b90bc323219879d681c381bdc71e1d80adc9ab0#/pages/67336979/simulate/no-panels)
 
-      * __Modal without action:__ page scroll
+        The buttons must be accessible upfront so that users know that they are expected to take an action.
 
-        [Click here to play with the prototype](https://preview.uxpin.com/4b90bc323219879d681c381bdc71e1d80adc9ab0#/pages/67336990/simulate/no-panels)
+      * __Modal without action:__ Scrolling page
+
+        [Interact with the prototype](https://preview.uxpin.com/4b90bc323219879d681c381bdc71e1d80adc9ab0#/pages/67336990/simulate/no-panels)
 
     contents:
       - type: narrow video
@@ -134,13 +138,13 @@ blocks:
     text: |
 
       ### Avoid long content
-      Modals are not designed for displaying long content, especially when we want the users to actually read the content. Consider in-line expansion within the originating page or displaying the information on a separate page for better user experience.
+      Modals are not designed for displaying long content, especially when we want the users to actually read the content. Consider in-line expansion within the originating page or displaying the information on a separate page for a better user experience.
 
       ### Avoid modals launching modals
-      Launching a modal within a modal adds complexity. If they are needed to complete a task, consider using a separate page for these tasks.
+      Launching a modal within a modal adds complexity and is not a good user experience. Look for alternative solutions. For example, consider creating a separate page for tasks.
 
       ### Avoid nested scroll within a modal
-      Scrolling inside a modal can become a usability issue on narrow devices and is not recommended.
+      On narrow devices, there isn't enough horizontal room for a scrolling area inside modal if the modal happens to exceed the viewport as well. This would become a usability issue.
 
 
   - type: section
@@ -151,15 +155,8 @@ blocks:
 
       ### Button placement
 
-      Follow the [buttons guidance](/design/c/buttons/beta/) for how to place buttons and see how to deal with specific cases. In general, there are two types of actions:
-
-      * __Affirmative actions__ are placed on the right and continues the process. They are actions that are desired by users or the application.
-
-      * __Dismissive actions__ are placed on the left and return the user to the previous screen or step in the process.
-
-
-      ### Avoid having more than two buttons
-
+      See the [buttons component](/design/c/buttons/beta/) for how to place the buttons.
+      Avoid having more than two buttons in a modal to keep it simple for users.
 
     contents:
       - type: wide image
@@ -172,7 +169,7 @@ blocks:
   - type: two column
     text: |
 
-      The modal is responsive to accommodate all device sizes.
+      This modal adjusts to different screen sizes.
 
       __Desktop__ (Viewport >= 768px)
 
@@ -217,6 +214,10 @@ blocks:
       : - Size: [remove-sm-24](/design/c/icons/v2.0.0-beta.4)
         - Touch target: 36px (See notes below)
 
+      Line
+      : - Thickness: 1px
+        - [Concrete #c7c7c7](/design/c/colors/v2.0.0-beta.7/#rd-concrete)
+        
       Spacing (Responsive)
       : - Viewport >= 768px: Standard spacing
         - Viewport < 768px: Compact spacing
@@ -226,10 +227,13 @@ blocks:
         - Width (Viewport >= 768px): Standard or expanded
         - Width (Viewport < 768px): Expanded
 
-
       Overlay
       : - [Charcoal #252525](/design/c/colors/v2.0.0-beta.7/#rd-charcoal)
         - Opacity: 85%
+
+      Scroll Bar
+      : - Default scroll bar by browser
+        - Must be visible by default (Before scrolling)
 
 
       __Note: The touch target for "X"__ is smaller than the minimal size of 44px because there is additional touch area outside the modal to accommodate for that. This allows more room for heading.
