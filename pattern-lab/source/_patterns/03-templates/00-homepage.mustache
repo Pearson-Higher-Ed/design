@@ -1,9 +1,9 @@
 <div class="content-wrapper">
-    <section id="sidebar" class="sidebar">{{> molecules-sidebar-list }}</section>
+    <section id="sidebar" class="sidebar js-hide">{{> molecules-sidebar-list }}</section>
     <section id="content" class="main-content">
         <div id="overlay"></div>
         <header>
-            <button id="openMainMenu" class="mobile-menu"><span id="bars" class="fa fa-bars fa-2x" aria-hidden="true"></span></button>
+            <button id="openMainMenu" class="mobile-menu"><span id="sr-menu" class="sr-only">Menu</span><span id="bars" class="fa fa-bars fa-2x" title="Menu" aria-hidden="true"></span></button>
             {{> molecules-header }}
         </header>
         <section id="calculateOffset" class="card-container">

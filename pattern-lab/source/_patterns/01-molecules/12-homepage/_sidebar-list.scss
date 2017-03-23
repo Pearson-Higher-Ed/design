@@ -1,5 +1,5 @@
 .nav-list {
-  padding: 1em 2em;
+  padding: 1em;
   border-bottom:1px solid $border;
 	&.pe-list--unstyled {
 	  ul {
@@ -46,11 +46,13 @@
 
 .side-menu {
   .menu-title {
-	@include flex;
+	@include flex($justify-content: flex-start);
 	width:100%;
-	padding:1em;
-	padding-left:2em;
 	border-bottom: 1px solid $border;
+  }
+  .mobile-menu-in-bar {
+	padding:1em;
+	color:$primary;
   }
   h1 {
 	color:$primary;

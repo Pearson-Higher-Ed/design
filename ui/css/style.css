@@ -8511,7 +8511,7 @@ table.pe-proto.small th, table.pe-proto.small td {
 
 /* line 1, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
 .nav-list {
-  padding: 1em 2em;
+  padding: 1em;
   border-bottom: 1px solid #C7C7C7;
 }
 /* line 5, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
@@ -8561,26 +8561,29 @@ table.pe-proto.small th, table.pe-proto.small td {
 .side-menu .menu-title {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-direction: row;
   width: 100%;
-  padding: 1em;
-  padding-left: 2em;
   border-bottom: 1px solid #C7C7C7;
 }
-/* line 55, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
+/* line 53, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
+.side-menu .mobile-menu-in-bar {
+  padding: 1em;
+  color: #047A9C;
+}
+/* line 57, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
 .side-menu h1, .side-menu .title-card h2, .title-card .side-menu h2 {
   color: #047A9C;
   font-size: 1.25em;
   margin-bottom: 0;
 }
-/* line 60, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
+/* line 62, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
 .side-menu button {
   appearance: none;
   background: none;
   border: 0;
 }
-/* line 65, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
+/* line 67, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
 .side-menu button svg {
   fill: #047A9C;
 }

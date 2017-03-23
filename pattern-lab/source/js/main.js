@@ -1,9 +1,10 @@
 const openBtn = document.getElementById('openMainMenu'),
       barsIcon = document.getElementById('bars'),
+      barsIcon2 = document.getElementById('bars2'),
       sidebar = document.getElementById('sidebar'),
       content = document.getElementById('content'),
       overlay = document.getElementById('overlay'),
-      firstNavItem = document.getElementById('About'),
+      firstNavItem = document.getElementById('openMainMenu2'),
       lastNavButton = document.querySelector('#dropdownNav li:last-child button'),
       lastListItem = document.querySelector('#dropdownNav li:last-child button + div ul li:last-child a'),
       anchor = document.querySelectorAll('#sidebar a'),
@@ -11,16 +12,11 @@ const openBtn = document.getElementById('openMainMenu'),
       navLinks = [];
 
 let   timer = 0,
-      counter = 0;
+      counter = 0,
+        poop = false;
 
 
-// return item from loop
-function loopElements (element, callback) {
-   return element.forEach(function(item){
-        callback(item);
-    })
-}
-
+// closes the menu
 function closeMenu() {
     sidebar.classList.remove('open');
     overlay.classList.remove('overlay');
@@ -30,47 +26,64 @@ function closeMenu() {
     }, 500)
 }
 
-function focusTarget() {
-    "use strict";
 
+// toggles the data-focus attribute
+function toggleDataFocus(event) {
+    const target = event.target;
+    if (target.getAttribute('data-focused') === 'false') {
+        target.setAttribute('data-focused', 'true');
+    } else if (target.getAttribute('data-focused') === 'true') {
+        target.setAttribute('data-focused', 'false');
+    }
 }
 
-loopElements(anchor, function(a) {
-    return navLinks.push(a);
-});
 
-loopElements(buttons, function(button) {
-    return navLinks.push(button);
-});
+// close the menu when escape is pressed
+window.onkeydown = function(event) {
+    if (event.key === "Escape" || event.key === 'Esc'){
+        if (sidebar.classList.contains('open')) {
+            closeMenu();
+        }
+    }
+};
 
-// Loops focus of navigation items
-loopElements(navLinks, function(item){
-    item.onfocus = function(event){
-        const target = event.target;
-        if (target.getAttribute('data-focused') === 'false') {
-            target.setAttribute('data-focused', 'true');
-        } else if (target.getAttribute('data-focused') === 'true') {
-            target.setAttribute('data-focused', 'false');
+
+// captures focus and toggles focus
+sidebar.addEventListener('focus', function(event) {
+    toggleDataFocus(event);
+
+        firstNavItem.onkeydown = function(event) {
+            if (event.shiftKey === true && event.key === "Tab") {
+                setTimeout(function(){
+                    lastNavButton.focus();
+                }, 500)
+            }
+        };
+
+}, true);
+
+
+// captures blur and toggles blur
+sidebar.addEventListener('blur', function(event) {
+    const target = event.target;
+    toggleDataFocus(event);
+    if (sidebar.classList.contains('open') === true) {
+        if (target === lastNavButton && target.getAttribute('aria-expanded') === 'false') {
+            firstNavItem.focus();
+        } else if (lastNavButton.getAttribute('aria-expanded') === 'true' && target === lastListItem) {
+            firstNavItem.focus();
+        }
+    }
+    firstNavItem.onkeydown = function(event) {
+        if (event.shiftKey === true && event.key === "Tab") {
+            setTimeout(function(){
+                lastNavButton.focus();
+            }, 500)
         }
     };
-    item.onblur = function(event) {
-        const target = event.target;
-        if (target.getAttribute('data-focused') === 'false') {
-            target.setAttribute('data-focused', 'true');
-        } else if (target.getAttribute('data-focused') === 'true') {
-            target.setAttribute('data-focused', 'false');
-        }
 
-        if (sidebar.classList.contains('open')) {
-            if (target === lastNavButton && target.getAttribute('aria-expanded') === 'false') {
-                firstNavItem.focus();
-            } else if (target === lastListItem && lastNavButton.getAttribute('aria-expanded') === 'true') {
-                firstNavItem.focus();
-            }
-        }
 
-    }
-});
+}, true);
 
 
 // toggles the menu
@@ -96,9 +109,12 @@ sidebar.addEventListener('click', event => {
         event.target.setAttribute('aria-expanded', 'true');
     } else if (ariaExpanded === 'true') {
         event.target.setAttribute('aria-expanded', 'false');
+    } else if (event.target === firstNavItem || event.target === barsIcon2) {
+        closeMenu();
     }
 
 });
+
 
 
 // changes the menu icon color at a certain scroll position
@@ -117,15 +133,5 @@ content.addEventListener('scroll', event => {
 });
 
 
-document.onkeydown = function(evt) {
-    evt = evt || window.event;
-    if (evt.key === 'Escape' || evt.key === 'Esc') {
-        if (sidebar.classList.contains('open')) {
-            closeMenu();
-        } else {
-            return
-        }
-    }
-};
 
 
