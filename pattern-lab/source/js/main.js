@@ -7,13 +7,12 @@ const openBtn = document.getElementById('openMainMenu'),
       firstNavItem = document.getElementById('openMainMenu2'),
       lastNavButton = document.querySelector('#dropdownNav li:last-child button'),
       lastListItem = document.querySelector('#dropdownNav li:last-child button + div ul li:last-child a'),
+      list = document.querySelector('#dropdownNav li:last-child button + div ul li:last-child'),
       anchor = document.querySelectorAll('#sidebar a'),
-      buttons = document.querySelectorAll('#sidebar button'),
-      navLinks = [];
+      buttons = document.querySelectorAll('#sidebar button');
 
 let   timer = 0,
-      counter = 0,
-        poop = false;
+      counter = 0;
 
 
 // closes the menu
@@ -51,14 +50,34 @@ window.onkeydown = function(event) {
 // captures focus and toggles focus
 sidebar.addEventListener('focus', function(event) {
     toggleDataFocus(event);
-
         firstNavItem.onkeydown = function(event) {
-            if (event.shiftKey === true && event.key === "Tab") {
+            if (lastNavButton.getAttribute('aria-expanded') === 'false' && event.shiftKey === true && event.key === "Tab") {
                 setTimeout(function(){
                     lastNavButton.focus();
-                }, 500)
+                }, 10)
+            } else if (lastNavButton.getAttribute('aria-expanded') === 'true' && event.shiftKey === true && event.key === "Tab") {
+                setTimeout(function(){
+                    lastListItem.focus();
+                }, 10)
             }
         };
+
+        lastNavButton.onkeydown = function(event) {
+            if (event.target.getAttribute('aria-expanded') === 'false' && event.shiftKey === true && event.key === "Tab") {
+                setTimeout(function(){
+                    document.getElementById("Compounds").focus();
+                }, 10)
+            }
+        };
+
+        lastListItem.onkeydown = function(event) {
+            if (event.shiftKey === true && event.key === "Tab") {
+                setTimeout(function(){
+                    document.getElementById("three").focus();
+                }, 10)
+            }
+
+        }
 
 }, true);
 
@@ -74,15 +93,6 @@ sidebar.addEventListener('blur', function(event) {
             firstNavItem.focus();
         }
     }
-    firstNavItem.onkeydown = function(event) {
-        if (event.shiftKey === true && event.key === "Tab") {
-            setTimeout(function(){
-                lastNavButton.focus();
-            }, 500)
-        }
-    };
-
-
 }, true);
 
 
@@ -94,7 +104,8 @@ content.addEventListener('click', event => {
             sidebar.classList.add('open');
             overlay.classList.add('overlay');
             firstNavItem.focus();
-        }, 100);
+        }, 10);
+        firstNavItem.focus();
 
     } else if (sidebar.classList.contains('open')) {
         closeMenu();

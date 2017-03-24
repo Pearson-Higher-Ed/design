@@ -43,10 +43,12 @@
           "label": "Compounds",
           "itemList": [
             {
+              "id": "one",
               "label": "item one",
               "url": "#foo"
             },
             {
+              "id": "two",
               "label": "item two",
               "url": "#foo"
             }
@@ -56,10 +58,12 @@
           "label": "Elements",
           "itemList": [
             {
+              "id": "three",
               "label": "item three",
               "url": "#foo"
             },
             {
+              "id": "four",
               "label": "item four",
               "url": "#foo"
             }
