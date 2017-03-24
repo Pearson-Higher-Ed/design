@@ -43,7 +43,7 @@ blocks:
       Use modals when it is necessary to interrupt users with a message or request for certain actions.
       For example:
 
-      * __Confirmation acknowledgement__ from users regarding the consequences followed by their decision
+      * __Confirming__ that users understands the consequences followed by their decision
       * __Providing additional information__
       * __Asking for a decision__
 
@@ -87,7 +87,7 @@ blocks:
     text: |
 
       ### Dismissing the modal
-      Modals retain focus until dismissed or a certain action has been taken. Provide a visible and focusable way to close the modal.
+      Modals retain focus, including keyboard focus, until a certain action has been taken. Provide a visible and focusable way to close the modal.
 
       Here are two different approaches:
 
@@ -194,6 +194,11 @@ blocks:
     name: Specs
 
   - type: two column
+    text: |
+
+      [See specs on Zeplin](https://zpl.io/1I2TYO). For access, contact Linda (linda.tsai@pearson.com)
+
+  - type: two column
     text: |    
 
       Dimensions
@@ -217,14 +222,14 @@ blocks:
       Line
       : - Thickness: 1px
         - [Concrete #c7c7c7](/design/c/colors/v2.0.0-beta.7/#rd-concrete)
-        
+
       Spacing (Responsive)
       : - Viewport >= 768px: Standard spacing
         - Viewport < 768px: Compact spacing
 
       Buttons (Responsive)
       : - Style and size: [Large Buttons](/design/c/buttons/v2.1.0-beta.2/#rd-large-button)
-        - Width (Viewport >= 768px): Standard or expanded
+        - Width (Viewport >= 768px): Standard
         - Width (Viewport < 768px): Expanded
 
       Overlay
@@ -249,11 +254,11 @@ blocks:
 
       ### Button Width
 
-      * __Standard Buttons__ (Desktop)
+      * __Desktop__ (Viewport >= 768px): Standard
 
         Button width is determined by the length of the label.
 
-      * __Expanded Buttons__ (Desktop or mobile)
+      * __Mobile__ (Viewport < 768px): Expanded
 
         Buttons expand to take up the full width of the parent container to maximize touch area.
 
