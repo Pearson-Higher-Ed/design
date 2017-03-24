@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Buttons
 section: Components
-version: 2.1.0-beta.2
-status: deprecated
+version: 2.1.0-beta.3
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -182,6 +182,29 @@ blocks:
             - Reserve enough space in the label for translation to other languages.
             - Avoid excessive use of exclamation points (!).
 
+
+  - type: section
+    name: Button Placement
+
+  - type: two column
+    text: |  
+
+      Buttons are positioned according to the type of actions:
+
+      * __Affirmative actions__ are placed on the right and continues the process. They are actions that are desired by users or the application.
+
+      * __Dismissive actions__ are placed on the left and return the user to the previous screen or step in the process.
+
+      __Destructive actions may be affirmative actions__
+
+      In some situations, destructive actions such as "delete" or “leave” may be affirmative actions. For example, when a student attempts to leave the page in the middle of a quiz, and is asked to confirm if the student acknowledges the consequences of leaving the page at this point. Since prior to seeing the modal, the student clicks on the “Exit” button indicates that the student desires to leave the page, so the “leave” button should be placed on the right to help the student continue with the process as expected.        
+
+    contents:
+      - type: wide image
+        src: ./assets/modal_button_types.png  
+
+
+
   - type: section
     name: Redlines
 
@@ -328,6 +351,9 @@ blocks:
     text: |
 
 changelog:
+  - version: 2.1.0-beta.3
+    changes: |
+      - ADDED: Button placement guidelines
   - version: 2.1.0-beta.1
     changes: |
       - ADDED: Turquoise CTA button option
