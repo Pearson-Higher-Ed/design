@@ -129,7 +129,7 @@ blocks:
     contents:
       - type: narrow video
         src: ./assets/Prototype_modal_mobile_with_actions.mp4
-        caption: Modal with actions (Mobile)
+        caption: Modal with actions (Mobile). This prototype failed to show the scroll bar due to technical limitation, but the actual build should have the scroll bar visible at all times for this modal.
       - type: narrow video
         src: ./assets/Prototype_modal_mobile_without_actions.mp4
         caption: Modal without actions (Mobile)
@@ -241,15 +241,13 @@ blocks:
 
       Scroll Bar
       : - Default scroll bar by browser
-        - Must be visible by default (Before scrolling)
+        - For modals with actions, make the scroll bar visible at all times
 
 
       __Note: The touch target for "X"__ is smaller than the minimal size of 44px because there is additional touch area outside the modal to accommodate for that. This allows more room for heading.
 
 
-      __Native Mobile Apps__
-
-      Use the native modal. The specs in this documentation is for responsive web mobile design.
+      __Use the native modal for native mobile apps.__ The specs in this documentation is for responsive web mobile design.
 
 
 
