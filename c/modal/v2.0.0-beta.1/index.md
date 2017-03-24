@@ -43,9 +43,10 @@ blocks:
       Use modals when it is necessary to interrupt users with a message or request for certain actions.
       For example:
 
-      * __Confirming__ that users understands the consequences followed by their decision
+      * __Confirming decisions__ E.g., “Are you sure?” moment.
       * __Providing additional information__
-      * __Asking for a decision__
+      * __Asking for a decision__ or complete a task at an important part of their workflow.
+      * __Asking for feedback__ E.g., "How would you rate this course?"
 
 
       Use them sparingly as they are interruptive. For screen reader users, it is especially frustrating because they’ll lose their place in the application.
@@ -169,6 +170,8 @@ blocks:
   - type: two column
     text: |
 
+      For native mobile apps, use the native modal. The specs in this documentation is for responsive web mobile design.
+
       This modal adjusts to different screen sizes.
 
       __Desktop__ (Viewport >= 768px)
@@ -242,6 +245,11 @@ blocks:
 
 
       __Note: The touch target for "X"__ is smaller than the minimal size of 44px because there is additional touch area outside the modal to accommodate for that. This allows more room for heading.
+
+
+      __Native Mobile Apps__
+
+      Use the native modal. The specs in this documentation is for responsive web mobile design.
 
 
 
