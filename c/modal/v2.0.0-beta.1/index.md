@@ -46,7 +46,7 @@ blocks:
       * __Confirming decisions__ E.g., “Are you sure?” moment.
       * __Providing additional information__
       * __Asking for a decision__ or complete a task at an important part of their workflow.
-      * __Asking for feedback__ E.g., "How would you rate this course?"
+      * __Asking for feedback__ E.g., "How would you rate this tutorial?"
 
 
       Use them sparingly as they are interruptive. For screen reader users, it is especially frustrating because they’ll lose their place in the application.
