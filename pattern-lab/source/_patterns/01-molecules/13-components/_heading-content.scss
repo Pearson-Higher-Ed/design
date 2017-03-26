@@ -2,27 +2,46 @@
   @media(min-width:1280px) {
 	margin-top:2em;
 	display:flex;
+	justify-content: flex;
   };
   
-  .image-list {
+  .media-list {
+	.video {
+	  max-width:320px;
+	}
+	video {
+	  max-width:100%;
+	}
+	div {
+	  &.img-small {
+		width:320px;
+	  }
+	  &.img-large {
+		max-width:720px;
+		min-width:320px;
+	  }
+	}
 	img {
 	  margin-right:0;
-	
+	  background:white;
+	  
 	  @media(min-width:768px) {
 		margin-right:1em;
 	  }
 	  max-width:100%;
 	}
+	
+	
 	@media(min-width:768px) {
 	  display:flex;
 	}
 	
   }
-  p {
+  p, dl, ul, li, ul li p {
 	@media(min-width:1280px) {
 	  min-width:370px;
 	  max-width:370px;
-	  margin-right:20px;
+	  margin-right:2em;
 	};
   }
   div {

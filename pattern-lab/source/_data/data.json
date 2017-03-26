@@ -139,6 +139,7 @@
       ]
     }
   ],
+  "componentImagePath": "../../images/components/",
   "key":"value",
   "key2":"use this for variables you want to load globally",
   "title": "Title",
@@ -335,56 +336,60 @@
       "main": [
         {
           "url": "#foo",
-          "label": "Test"
+          "label": "About"
         },
         {
           "url": "#foo",
-          "label": "Test"
+          "label": "Getting Started"
         },
         {
           "url": "#foo",
-          "label": "Test"
+          "label": "Contribute"
         },
         {
           "url": "#foo",
-          "label": "Test"
+          "label": "Resources"
         },
         {
           "url": "#foo",
-          "label": "Test"
+          "label": "Development"
         },
         {
           "url": "#foo",
-          "label": "Test"
+          "label": "FAQ"
         },
         {
           "url": "#foo",
-          "label": "Test"
+          "label": "Contact"
         }
       ],
       "items": [
         {
-          "itemTitle": "Main Item",
+          "label": "Compounds",
           "itemList": [
             {
-              "item": "sub item one",
+              "id": "one",
+              "label": "item one",
               "url": "#foo"
             },
             {
-              "item": "sub item two",
+              "id": "two",
+              "label": "item two",
               "url": "#foo"
             }
           ]
         },
         {
-          "itemTitle": "Main Item",
+          "label": "Elements",
           "itemList": [
             {
-              "item": "sub item one",
+              "id": "three",
+              "label": "item three",
               "url": "#foo"
             },
             {
-              "item": "sub item two",
+              "id": "four",
+              "label": "item four",
               "url": "#foo"
             }
           ]

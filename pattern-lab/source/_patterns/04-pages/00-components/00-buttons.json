@@ -1,0 +1,301 @@
+{
+  "menuTitle":"Elements - Buttons",
+  "pageTitle":"Buttons",
+  "version":"V2.1.0-beta.3",
+  "pageDescription":"This component defines the standard visual style for buttons.",
+  "actionButtons":[
+    {
+      "button-text":"Sketch File"
+    },
+    {
+      "button-text":"Code"
+    }
+  ],
+  "guidelinesLabel":"Usage Guidelines",
+  "guidelinesDescription":[
+    {
+      "paragraph":"Every instance of a button should come from this component. See the sections below for information about when to each each type of button."
+    }
+  ],
+  "featuresLabel":"Feature List",
+  "featureList":[
+    {
+      "label":"Single collection of all button styles"
+    },
+    {
+      "label":"Primary and Default button types"
+    },
+    {
+      "label":"Default and Large button sizes"
+    },
+    {
+      "label":"Guaranteed compliance with Accessibility contrast requirements"
+    }
+  ],
+  "infoLinks":[
+    {
+      "label":"Contributors",
+      "titleLink":[
+        {
+          "url":"#foo",
+          "label":"Joe Macaluso"
+        },
+        {
+          "url":"#foo",
+          "label":"Ed Zee"
+        },
+        {
+          "url":"#foo",
+          "label":"Parker Malenke"
+        },
+        {
+          "url":"#foo",
+          "label":"Eajaz"
+        }
+      ]
+    },
+    {
+      "label":"Dependancies",
+      "titleLink":[
+        {
+          "url":"#foo",
+          "label":"Colors@^2.0.0-beta.6"
+        },
+        {
+          "url":"#foo",
+          "label":"Typography@^2.0.0-beta.5"
+        }
+      ]
+    },
+    {
+      "label":"Downloads",
+      "titleLink":[
+        {
+          "url":"#foo",
+          "label":"UXD Accessibility Checklist"
+        },
+        {
+          "url":"#foo",
+          "label":"Sketch"
+        }
+      ]
+    }
+  ],
+  "typesUsageStyles":[
+    {
+      "contentList":[
+        {
+          "title":"Button Types",
+          "url":"button-types",
+          "html":"<p>Buttons come in several different types. Each defines a normal, active/hover, and disabled state.</p><p><strong>Primary</strong> indicates the main call to action and should only appear once per group of buttons.</p><p><strong>Default</strong> is your basic button, it can appear multiple times in a given group.</p><p><strong>CTA</strong> is your Call To Action button and should be used only in very specific instances such as Sign-In.  It takes a higher priority over the Primary button type.  It is the single most important action you can take on a page.  They can only be used ONCE per page.  <strong>There is no disabled state for the CTA button type.</strong></p><p>If a Default or Primary button increases in priority within the context of the same page, it can convert to a CTA button.</p>",
+          "showImage":true,
+          "imageList":[
+            {
+              "size":"large",
+              "url":"buttons/button-types.png"
+            }
+          ],
+          "showVideo":false
+        }
+      ]
+    },
+    {
+      "contentList":[
+        {
+          "title":"Button Sizes",
+          "url":"button-sizes",
+          "html":"<p>Buttons come in small, large and xlarge sizes. Prefer the small size but feel free to use the large size where they would fit better with surrounding content. Both small large button sizes are meant to pair with equally sized inputs.  XLarge buttons are to be used when the UI appears on a mobile device or screen smaller than 768px width (tablet portrait view).</p>",
+          "showImage":true,
+          "imageList":[
+            {
+              "size":"small",
+              "url":"buttons/button-sizes.png"
+            }
+          ],
+          "showVideo":false
+        }
+      ]
+    },
+    {
+      "contentList":[
+        {
+          "title":"Disabled Buttons",
+          "url":"disabled-buttons",
+          "html":"<p>Use a disabled button only if an action on the current screen can enable it (action possibility).  A disabled button should only appear when contextually relevant.  If the button is not needed for the task at hand, it should be hidden.</p><p>If a bank of 2 or more buttons is present but can only be enabled by direct action on the same screen, it can be hidden and only shown when enabled to give emphasis of new controls available to the user.</p>",
+          "showImage":true,
+          "imageList":[
+            {
+              "size":"large",
+              "url":"buttons/disabled-buttons.png"
+            }
+          ],
+          "showVideo":false
+        }
+      ]
+    },
+    {
+      "contentList":[
+        {
+          "title":"Confirmation Buttons",
+          "url":"confirmation-buttons",
+          "html":"<p>In situations where the user should receive feedback that the action initiated by a button was successful use the Confirmation Button style which integrates feedback.</p><p>For simple binary confirmation feedback, this type of button is sufficient—an additional alert or message is unnecessary.  Use Digital Grass Green #038238 from the Conditional Palette in the Colors specification.</p>",
+          "showImage":true,
+          "showVideo":true,
+          "videoList":[
+            {
+              "url":"http://pearson-higher-ed.github.io/design/c/buttons/v2.1.0-beta.3/assets/confirmation.long.mov",
+              "caption":"If the action takes longer than 500ms then the loader is displayed until the action completes."
+            },
+            {
+              "url":"http://pearson-higher-ed.github.io/design/c/buttons/v2.1.0-beta.3/assets/confirmation.long.mov",
+              "caption":"If the action takes longer than 500ms then the loader is displayed until the action completes."
+            }
+          ]
+        },
+        {
+          "title":"Error Style",
+          "url":"confirmation-buttons",
+          "html": "<p>If the action failed to complete, there is an error state for the button which should be paired with an explanatory alert.  Use Strawberry Red #DB0020 from the Conditional Palette in the Colors specification.</p>",
+          "showImage":true,
+          "showVideo":true,
+          "videoList":[
+            {
+              "url":"http://pearson-higher-ed.github.io/design/c/buttons/v2.1.0-beta.3/assets/confirmation.long.mov",
+              "caption":"If the action takes longer than 500ms then the loader is displayed until the action completes."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "contentList":[
+        {
+          "title":"Link Style Buttons",
+          "url":"link-style-buttons",
+          "textList":[
+            {
+              "excerpt":"Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle. Maurizzle pellentesque its fo rizzle izzle turpis. Get down get down we gonna chung nizzle. Shizzlin dizzle eleifend rhoncizzle break it down. In yo ghetto platea dictumst. Bling bling dapibizzle. Curabitur break yo neck, yall fo, pretizzle eu, go to hizzle dope, own yo' vitae, nunc. Bizzle suscipizzle. Ass semper velit sizzle fo."
+            }
+          ],
+          "imageList":[
+            {
+              "size":"small",
+              "url":"http://placehold.it/370x150"
+            },
+            {
+              "size":"small",
+              "url":"http://placehold.it/370x150"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "contentList":[
+        {
+          "title":"Button Labels",
+          "url":"button-labels",
+          "textList":[
+            {
+              "excerpt":"Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle. Maurizzle pellentesque its fo rizzle izzle turpis. Get down get down we gonna chung nizzle. Shizzlin dizzle eleifend rhoncizzle break it down. In yo ghetto platea dictumst. Bling bling dapibizzle. Curabitur break yo neck, yall fo, pretizzle eu, go to hizzle dope, own yo' vitae, nunc. Bizzle suscipizzle. Ass semper velit sizzle fo."
+            }
+          ],
+          "imageList":[
+            {
+              "size":"small",
+              "url":"http://placehold.it/370x150"
+            },
+            {
+              "size":"small",
+              "url":"http://placehold.it/370x150"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "contentList":[
+        {
+          "title":"Button Placement",
+          "url":"button-placement",
+          "html":"<p>Buttons are positioned according to the type of actions:</p><ul><li><p><strong>Affirmative actions</strong> are placed on the right and continues the process. They are actions that are desired by users or the application.</p></li><li><p><strong>Dismissive actions</strong> are placed on the left and return the user to the previous screen or step in the process.</p></li></ul><p><strong>Destructive actions may be affirmative actions</strong></p><p>In some situations, destructive actions such as “delete” or “leave” may be affirmative actions. For example, when a student attempts to leave the page in the middle of a quiz, and is asked to confirm if the student acknowledges the consequences of leaving the page at this point. Since prior to seeing the modal, the student clicks on the “Exit” button indicates that the student desires to leave the page, so the “leave” button should be placed on the right to help the student continue with the process as expected.</p>",
+          "showImage":true,
+          "imageList":[
+            {
+              "size":"large",
+              "url":"buttons/button-placement.png"
+            }
+          ],
+          "showVideo":false
+        }
+      ]
+    },
+    {
+      "contentList":[
+        {
+          "title":"Redlines",
+          "url":"redlines",
+          "html":"<h3>Sizes</h3><dl><dt>Standard button</dt><dd><ul><li>28px tall</li><li>12px horizontal padding</li><li><a href='/design/c/typography/v2.0.0-beta.2/#rd-basic-label'>Basic label font</a></li></ul></dd><dt>Large button</dt><dd><ul><li>36px tall</li><li>20px horizontal padding</li><li><a href='/design/c/typography/v2.0.0-beta.2/#rd-large-label'>large label font</a></li></ul></dd><dt>XLarge button</dt><dd><ul><li>44px tall</li><li>20px horizontal padding</li><li><a href='/design/c/typography/v2.0.0-beta.2/#rd-large-label'>large label font</a></li></ul></dd></dl>",
+          "showImage":true,
+          "imageList":[
+            {
+              "size":"small",
+              "url":"buttons/redlines.png"
+            }
+          ],
+          "showVideo":false,
+          "redlineTable": true
+        }
+      ]
+    }
+  ],
+  "changeLog":{
+    "title":"Changelog",
+    "changes":[
+      {
+        "showLink":false,
+        "showLabel":true,
+        "label":"2.1.0-beta.3",
+        "url":"#foo",
+        "changeList":[
+          {
+            "label":"ADDED: Button placement guidelines"
+          }
+        ]
+      },
+      {
+        "showLink":true,
+        "showLabel":false,
+        "label":"2.1.0-beta.1",
+        "url":"#foo",
+        "changeList":[
+          {
+            "label":"ADDED: Turquoise CTA button option"
+          }
+        ]
+      },
+      {
+        "showLink":true,
+        "showLabel":false,
+        "label":"2.0.0",
+        "url":"#foo",
+        "changeList":[
+          {
+            "label":"Updated for new branding"
+          }
+        ]
+      },
+      {
+        "showLink":true,
+        "showLabel":false,
+        "label":"1.0.0",
+        "url":"#foo",
+        "changeList":[
+          {
+            "label":"Initial version"
+          }
+        ]
+      }
+    ]
+  }
+}

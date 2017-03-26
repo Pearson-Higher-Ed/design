@@ -33,9 +33,12 @@
                 </div>
                 <div class="content-box">
                     <ul class="pe-list pe-list--unstyled">
-                        {{# sectionAnchors }}
-                            <li class="pe-title pe-title--small"><a href="{{ url }}" class="no-underline">{{ label }}</a></li>
-                        {{/sectionAnchors}}
+                        {{# typesUsageStyles }}
+                            {{# contentList }}
+                            <li class="pe-title pe-title--small"><a href="#{{ url }}" class="no-underline">{{ title }}</a></li>
+                            {{/ contentList }}
+                        {{/typesUsageStyles}}
+                        <li class="pe-title pe-title--small"><a href="#change-log" class="no-underline">Changelog</a></li>
                     </ul>
                 </div>
             </section>
@@ -58,16 +61,20 @@
             </section>
             <section class="usage-styles">
                 {{# typesUsageStyles }}
-                    <div class="content-box">
-                        {{> molecules-heading-content }}
-                    </div>
-                {{/typesUsageStyles}}
+                        <div class="content-box">
+                            {{# contentList }}
+                                {{> molecules-heading-content }}
+                            {{/ contentList }}
+                        </div>
+                {{/ typesUsageStyles }}
             </section>
             <footer>
                 <div class="content-box">
                     {{# changeLog }}
-                        <h2 class="margin-bottom-triple">{{ title }}</h2>
-                        {{> molecules-change-log }}
+                        <h2 id="change-log" class="margin-bottom-triple">{{ title }}</h2>
+                        {{# changes}}
+                            {{> molecules-change-log }}
+                        {{/ changes}}
                     {{/changeLog}}
                 </div>
             </footer>

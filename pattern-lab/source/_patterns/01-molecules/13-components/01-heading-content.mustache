@@ -1,13 +1,44 @@
-<h2>{{ title }}</h2>
+<h2 id="{{ url }}">{{ title }}</h2>
 <div class="usage-content-box">
-    {{# textList }}
-        <p>{{ excerpt }}</p>
-    {{/ textList }}
-    <div class="image-list">
-    {{# imageList }}
-        <div>
-            <img src="{{ url }}" alt="title">
-        </div>
-    {{/ imageList }}
+    <div>
+        {{{ html }}}
+    </div>
+    <div class="media-list">
+        {{# showImage }}
+            {{# imageList }}
+                <div class="img-{{ size }}">
+                    <img src="{{ componentImagePath }}{{ url }}" alt="title">
+                </div>
+            {{/ imageList }}
+        {{/ showImage }}
+
+        {{# showVideo }}
+            {{# videoList }}
+                <div class="video text-align-center">
+                    <video src="{{ url }}" loop="" controls=""></video>
+                    <label class="pe-copy pe-copy--small">{{ caption }}</label>
+                </div>
+            {{/videoList}}
+        {{/ showVideo }}
     </div>
 </div>
+{{# redlineTable }}
+    <table class="pe-proto small">
+        <thead>
+        <tr>
+            <th>Last Name</th>
+            <th>First Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Picard</td>
+            <td>Jean-Luc</td>
+        </tr>
+        <tr>
+            <td>Picard</td>
+            <td>Jean-Luc</td>
+        </tr>
+        </tbody>
+    </table>
+{{/ redlineTable }}

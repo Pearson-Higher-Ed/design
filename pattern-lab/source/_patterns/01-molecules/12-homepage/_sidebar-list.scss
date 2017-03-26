@@ -51,13 +51,22 @@
 	border-bottom: 1px solid $border;
   }
   .mobile-menu-in-bar {
-	padding:1em;
+	display:block;
 	color:$primary;
+	padding:1em;
+	
+	@media(min-width:1280px) {
+	  display:none;
+	  padding:1em;
+	}
   }
   h1 {
 	color:$primary;
 	font-size:em(20);
 	margin-bottom:0;
+	@media(min-width:1280px) {
+	  padding:.5em 1em;
+	}
   }
   button {
 	appearance: none;

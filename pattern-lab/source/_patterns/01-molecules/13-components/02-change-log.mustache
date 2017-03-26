@@ -1,5 +1,6 @@
-<a href="{{ url }}">{{ label }}</a>
-<ul class="pe-list pe-list--unstyled">
+{{# showLink }}<a href="{{ url }}">{{ label }}</a>{{/ showLink }}
+{{# showLabel }}<strong>{{ label }}</strong>{{/ showLabel }}
+<ul class="pe-list pe-list--unstyled margin-bottom-double">
     {{# changeList }}
         <li>{{ label }}</li>
     {{/ changeList }}

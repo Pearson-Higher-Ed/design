@@ -7607,6 +7607,11 @@ html, body {
   margin-bottom: 2em;
 }
 
+/* line 174, pattern-lab/scss/_helpers.scss */
+.margin-bottom-double {
+  margin-bottom: 1.5em;
+}
+
 /* line 1, pattern-lab/scss/_flex.scss */
 .align-self-flex-end {
   -webkit-align-self: flex-end;
@@ -8915,16 +8920,30 @@ table.pe-proto.small th, table.pe-proto.small td {
 }
 /* line 53, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
 .side-menu .mobile-menu-in-bar {
-  padding: 1em;
+  display: block;
   color: #047A9C;
+  padding: 1em;
 }
-/* line 57, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
+@media (min-width: 1280px) {
+  /* line 53, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
+  .side-menu .mobile-menu-in-bar {
+    display: none;
+    padding: 1em;
+  }
+}
+/* line 63, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
 .side-menu h1, .side-menu .title-card h2, .title-card .side-menu h2 {
   color: #047A9C;
   font-size: 1.25em;
   margin-bottom: 0;
 }
-/* line 62, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
+@media (min-width: 1280px) {
+  /* line 63, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
+  .side-menu h1, .side-menu .title-card h2, .title-card .side-menu h2 {
+    padding: .5em 1em;
+  }
+}
+/* line 71, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
 .side-menu button {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -8932,7 +8951,7 @@ table.pe-proto.small th, table.pe-proto.small td {
   background: none;
   border: 0;
 }
-/* line 67, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
+/* line 76, pattern-lab/source/_patterns/01-molecules/12-homepage/_sidebar-list.scss */
 .side-menu button svg {
   fill: #047A9C;
 }
@@ -9076,22 +9095,44 @@ table.pe-proto.small th, table.pe-proto.small td {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: flex;
+    -webkit-justify-content: flex;
+        -ms-flex-pack: flex;
+            justify-content: flex;
   }
 }
-/* line 8, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
-.usage-content-box .image-list img {
+/* line 9, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
+.usage-content-box .media-list .video {
+  max-width: 320px;
+}
+/* line 12, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
+.usage-content-box .media-list video {
+  max-width: 100%;
+}
+/* line 16, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
+.usage-content-box .media-list div.img-small {
+  width: 320px;
+}
+/* line 19, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
+.usage-content-box .media-list div.img-large {
+  max-width: 720px;
+  min-width: 320px;
+}
+/* line 24, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
+.usage-content-box .media-list img {
   margin-right: 0;
+  background: white;
   max-width: 100%;
 }
 @media (min-width: 768px) {
-  /* line 8, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
-  .usage-content-box .image-list img {
+  /* line 24, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
+  .usage-content-box .media-list img {
     margin-right: 1em;
   }
 }
 @media (min-width: 768px) {
-  /* line 7, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
-  .usage-content-box .image-list {
+  /* line 8, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
+  .usage-content-box .media-list {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -9099,20 +9140,20 @@ table.pe-proto.small th, table.pe-proto.small td {
   }
 }
 @media (min-width: 1280px) {
-  /* line 21, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
-  .usage-content-box p {
+  /* line 40, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
+  .usage-content-box p, .usage-content-box dl, .usage-content-box ul, .usage-content-box li, .usage-content-box ul li p {
     min-width: 370px;
     max-width: 370px;
-    margin-right: 20px;
+    margin-right: 2em;
   }
 }
 @media (min-width: 1280px) {
-  /* line 28, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
+  /* line 47, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
   .usage-content-box div {
     margin-right: 1em;
   }
 }
-/* line 35, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
+/* line 54, pattern-lab/source/_patterns/01-molecules/13-components/_heading-content.scss */
 .usage-content-box img {
   margin-bottom: 1em;
 }
