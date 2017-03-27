@@ -5,12 +5,27 @@
 	justify-content: flex;
   };
   
+  ul {
+	@extend .pe-list;
+	@extend .pe-styled-lists-heading--unordered;
+  }
+  dt {
+	margin-bottom:.5em;
+	padding-top: 1em;
+  }
+  
   .media-list {
+	overflow:hidden;
 	.video {
 	  max-width:320px;
+	  margin-bottom:1em;
+	  @media(min-width:768px) {
+		margin-right:1em;
+	  }
 	}
 	video {
 	  max-width:100%;
+	 
 	}
 	div {
 	  &.img-small {

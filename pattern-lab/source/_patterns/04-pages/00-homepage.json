@@ -11,10 +11,10 @@
       "excerpt": "Start working in Sketch with ready-made UI elements ranging from typography, colors, buttons to modals and more!",
       "show-button": true,
       "show-icon": true,
-      "button-text": "Download",
+      "button-text": "Download the craft library",
       "link-text": "Get Started",
       "url": "#foo",
-      "icon": "point-next-18"
+      "material-icon": "file_download"
     },
     {
       "title": "Develop",
@@ -24,7 +24,7 @@
       "button-text": "Go to Elements SDK",
       "link-text": "Get Started",
       "url": "#foo",
-      "icon": "point-next-18"
+      "material-icon": "arrow_forward"
     },
     {
       "title": "Contribute",
@@ -34,7 +34,7 @@
       "button-text": "Learn More",
       "link-text": "Get Started",
       "url": "#foo",
-      "icon": ""
+      "material-icon": "file_download"
     }
   ],
   "footerLinks": [

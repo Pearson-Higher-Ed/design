@@ -71,8 +71,7 @@ lastNavButton.onkeydown = (event) => {
                 lastFirstItem.focus();
             }
         }
-        if (event.keyCode == 32) {
-            console.log(event.keyCode);
+        if (event.keyCode === 32) {
             lastNavButton.click();
         }
     }

@@ -1,4 +1,4 @@
-<h2 id="{{ url }}">{{ title }}</h2>
+{{# showHeadingTitle }}<h2 id="{{ url }}">{{ title }}</h2>{{/ showHeadingTitle }}
 <div class="usage-content-box">
     <div>
         {{{ html }}}
@@ -20,25 +20,37 @@
                 </div>
             {{/videoList}}
         {{/ showVideo }}
+        <div class="media-fulllist">
+            {{# showList }}
+                {{# list }}
+                    <div class="list">
+                        <h3> {{ title }} </h3>
+                        <ul class="pe-list pe-styled-lists--unordered">
+                            {{# listItems }}
+                            <li>{{ item }}{{# subList }}<ul>{{# list }}<li>{{ item }}</li>{{/list}}</ul>{{/subList}}</li>
+                            {{/ listItems }}
+                        </ul>
+                    </div>
+                {{/ list }}
+            {{/showList}}
+        </div>
     </div>
 </div>
 {{# redlineTable }}
-    <table class="pe-proto small">
+    <table class="pe-proto">
         <thead>
         <tr>
-            <th>Last Name</th>
-            <th>First Name</th>
+            <th>Available Styles</th>
+            <th>Reference As</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>Picard</td>
-            <td>Jean-Luc</td>
-        </tr>
-        <tr>
-            <td>Picard</td>
-            <td>Jean-Luc</td>
-        </tr>
+        {{# tableRow }}
+            <tr>
+                <td>{{ cellOne }}</td>
+                <td>{{ cellTwo }}</td>
+            </tr>
+        {{/ tableRow }}
         </tbody>
     </table>
 {{/ redlineTable }}

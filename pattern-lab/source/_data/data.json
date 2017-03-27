@@ -3,6 +3,7 @@
   "pageTitle": "Page Title",
   "version": "version 0.0.0",
   "pageDescription": "Page desrcription text here",
+  "showHeadingTitle": true,
   "actionButtons": [
     {
       "button-text": "Button"

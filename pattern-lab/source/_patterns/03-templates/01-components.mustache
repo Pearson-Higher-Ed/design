@@ -4,10 +4,10 @@
         <div id="overlay" class="test"></div>
         <header class="bar">
             <div class="menu-container">
-                <button id="openMainMenu" class="mobile-menu"><span id="bars" class="fa fa-bars fa-2x" aria-hidden="true"></span></button>
+                <button tabindex='1' id="openMainMenu" class="mobile-menu"><span id="sr-menu" class="sr-only">Menu</span><span id="bars" class="material-icons" aria-hidden="true" title="Menu">menu</span></button>
                 <span>{{ menuTitle }}</span>
             </div>
-            <span class="pe-xl--visible align-self-end"><a href="#">Question or feedback?</a></span>
+            <span class="pe-xl--visible align-self-end"><a href="#">{{> atoms-material-icon(material-icon: "chat_bubble_outline")}}Question or feedback?</a></span>
         </header>
         <main class="content-padding">
             <section class="info-panel">
@@ -21,25 +21,53 @@
                     </div>
                     <div class="actions">
                         {{# actionButtons }}
-                            <button class="pe-btn__primary pe-btn--btn_large">{{ button-text }}</button>
+                            <button class="pe-btn__primary pe-btn--btn_large">{{> atoms-material-icon }} {{ button-text }}</button>
                         {{/actionButtons}}
                     </div>
                 </div>
-                <div class="content-box">
-                    <h2 class="pe-label pe-label--bold">{{ guidelinesLabel }}</h2>
-                    {{# guidelinesDescription }}
-                        <p>{{ paragraph }}</p>
-                    {{/guidelinesDescription}}
-                </div>
-                <div class="content-box">
-                    <ul class="pe-list pe-list--unstyled">
-                        {{# typesUsageStyles }}
-                            {{# contentList }}
-                            <li class="pe-title pe-title--small"><a href="#{{ url }}" class="no-underline">{{ title }}</a></li>
-                            {{/ contentList }}
-                        {{/typesUsageStyles}}
-                        <li class="pe-title pe-title--small"><a href="#change-log" class="no-underline">Changelog</a></li>
-                    </ul>
+                <div class="flex justify-space-between">
+                    <div class="summary-box">
+                        <div class="content-box">
+                            <h2 class="pe-label pe-label--bold">{{ guidelinesLabel }}</h2>
+                            {{# guidelinesDescription }}
+                                <p>{{ paragraph }}</p>
+                            {{/guidelinesDescription}}
+                        </div>
+                        <div class="content-box">
+                            <ul class="pe-list pe-list--unstyled">
+                                {{# typesUsageStyles }}
+                                    {{# contentList }}
+                                        {{# showHeadingTitle }}
+                                            <li class="pe-title pe-title--small"><a href="#{{ url }}" class="no-underline">{{ title }}</a></li>
+                                        {{/showHeadingTitle}}
+                                    {{/ contentList }}
+                                {{/typesUsageStyles}}
+                                <li class="pe-title pe-title--small"><a href="#change-log" class="no-underline">Changelog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="feature-box">
+                        <div class="grouped flex-start baseline">
+                            <div class="actions">
+                                {{# actionButtons }}
+                                    <button class="pe-btn__primary pe-btn--btn_large">{{> atoms-material-icon }} {{ button-text }}</button>
+                                {{/actionButtons}}
+                            </div>
+                            <div class="content-box">
+                                <h2 class="pe-label pe-label--bold">{{ featuresLabel }}</h2>
+                                <ul class="pe-list">
+                                    {{# featureList }}
+                                        <li>{{ label }}</li>
+                                    {{/featureList}}
+                                </ul>
+                            </div>
+                            {{# infoLinks }}
+                                <div class="content-box no-border">
+                                    {{> molecules-title-link }}
+                                </div>
+                            {{/infoLinks}}
+                        </div>
+                    </div>
                 </div>
             </section>
             <section class="feature-panel">

@@ -48,10 +48,11 @@
   .menu-title {
 	@include flex($justify-content: flex-start);
 	width:100%;
+	height:56px;
 	border-bottom: 1px solid $border;
   }
   .mobile-menu-in-bar {
-	display:block;
+	display:flex;
 	color:$primary;
 	padding:1em;
 	

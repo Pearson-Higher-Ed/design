@@ -5,9 +5,11 @@
   "pageDescription":"This component defines the standard visual style for buttons.",
   "actionButtons":[
     {
+      "material-icon": "file_download",
       "button-text":"Sketch File"
     },
     {
+      "material-icon": "code",
       "button-text":"Code"
     }
   ],
@@ -172,19 +174,60 @@
         {
           "title":"Link Style Buttons",
           "url":"link-style-buttons",
-          "textList":[
+          "html": "<p>If the action failed to complete, there is an error state for the button which should be paired with an explanatory alert.  Use Strawberry Red #DB0020 from the Conditional Palette in the Colors specification.</p>",
+          "showImage":false,
+          "showVideo":false,
+          "showList":[
             {
-              "excerpt":"Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle. Maurizzle pellentesque its fo rizzle izzle turpis. Get down get down we gonna chung nizzle. Shizzlin dizzle eleifend rhoncizzle break it down. In yo ghetto platea dictumst. Bling bling dapibizzle. Curabitur break yo neck, yall fo, pretizzle eu, go to hizzle dope, own yo' vitae, nunc. Bizzle suscipizzle. Ass semper velit sizzle fo."
-            }
-          ],
-          "imageList":[
-            {
-              "size":"small",
-              "url":"http://placehold.it/370x150"
+              "list": [
+                {
+                  "title": "Do",
+                  "listItems": [
+                    {
+                      "item": "Use link style buttons to de-emphasize less important actions."
+                    },
+                    {
+                      "item": "Use link style buttons to trigger an action."
+                    },
+                    {
+                      "item": "Indicate in design specification the presence of a link style button to your developer."
+                    },
+                    {
+                      "item": "Use the same visual styling as link text. See typography specification document. Examples:",
+                      "subList": true,
+                      "list":[
+                        {
+                          "item": "Edit"
+                        },
+                        {
+                          "item": "Dismiss"
+                        },
+                        {
+                          "item": "Resend Verification Email"
+                        },
+                        {
+                          "item": "Reset Password"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "size":"small",
-              "url":"http://placehold.it/370x150"
+              "list": [
+                {
+                  "title": "Don't",
+                  "listItems": [
+                    {
+                      "item": "Use link style buttons as part of a grouping with other buttons (button bars, save/cancel)."
+                    },
+                    {
+                      "item": "Use link style buttons for navigation."
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -195,19 +238,105 @@
         {
           "title":"Button Labels",
           "url":"button-labels",
-          "textList":[
+          "html": "<p>If the action failed to complete, there is an error state for the button which should be paired with an explanatory alert.  Use Strawberry Red #DB0020 from the Conditional Palette in the Colors specification.</p>",
+          "showImage":false,
+          "showVideo":false,
+          "showList":[
             {
-              "excerpt":"Fizzle crazy tortor. Sed rizzle. Ass pimpin' dolor dapibizzle turpis tempizzle fo shizzle my nizzle. Maurizzle pellentesque its fo rizzle izzle turpis. Get down get down we gonna chung nizzle. Shizzlin dizzle eleifend rhoncizzle break it down. In yo ghetto platea dictumst. Bling bling dapibizzle. Curabitur break yo neck, yall fo, pretizzle eu, go to hizzle dope, own yo' vitae, nunc. Bizzle suscipizzle. Ass semper velit sizzle fo."
-            }
-          ],
-          "imageList":[
-            {
-              "size":"small",
-              "url":"http://placehold.it/370x150"
+              "list": [
+                {
+                  "title": "Do",
+                  "listItems": [
+                    {
+                      "item": "Keep text short. Use as few words as possible. Examples:",
+                      "subList": true,
+                      "list":[
+                        {
+                          "item": "Next"
+                        },
+                        {
+                          "item": "Save"
+                        },
+                        {
+                          "item": "Create"
+                        },
+                        {
+                          "item": "View"
+                        },
+                        {
+                          "item": "Learn More"
+                        },
+                        {
+                          "item": "Study"
+                        },
+                        {
+                          "item": "Review"
+                        },
+                        {
+                          "item": "Delete"
+                        },
+                        {
+                          "item": "Cancel"
+                        },
+                        {
+                          "item": "Close"
+                        }
+                      ]
+                    },
+                    {
+                      "item": "Use Sentence Case"
+                    },
+                    {
+                      "item": "Capitalize Proper Nouns"
+                    },
+                    {
+                      "item": "Use specific action-oriented text for CTAs. Examples:",
+                      "subList": true,
+                      "list":[
+                        {
+                          "item": "Activate"
+                        },
+                        {
+                          "item": "Create Account"
+                        },
+                        {
+                          "item": "Sign in"
+                        },
+                        {
+                          "item": "Reset Password"
+                        },
+                        {
+                          "item": "Submit"
+                        },
+                        {
+                          "item": "Resend Verification Email"
+                        },
+                        {
+                          "item": "Go to Dashboard"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "size":"small",
-              "url":"http://placehold.it/370x150"
+              "list": [
+                {
+                  "title": "Be sure to ",
+                  "listItems": [
+                    {
+                      "item": "Look across the experience and check for consistent use of labels."
+                    },
+                    {
+                      "item": "Reserve enough space in the label for translation to other languages."
+                    },
+                    {
+                      "item": "Avoid excessive use of exclamation points (!)."
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -244,7 +373,40 @@
             }
           ],
           "showVideo":false,
-          "redlineTable": true
+          "redlineTable": true,
+          "tableRow": [
+            {
+             "cellOne": "Standard Button",
+              "cellTwo": "[](/design/c/buttons/v2.1.0-beta.3/#rd-standard-button)"
+            },
+            {
+              "cellOne": "Large Button",
+              "cellTwo": "[](/design/c/buttons/v2.1.0-beta.3/#rd-large-button)"
+            },
+            {
+              "cellOne": "XLarge Button",
+              "cellTwo": "[](/design/c/buttons/v2.1.0-beta.3/#rd-xlarge-button)"
+            }
+          ]
+        },
+        {
+          "showHeadingTitle": false,
+          "html": "<h3>Primary buttons</h3><dl><dt>Normal</dt><dd><ul><li><a href='/design/c/colors/v2.0.0-beta.3/#rd-digital-pearson-blue-047a9c'>Digital Pearson Blue (#047A9C)</a> fill</li><li><a href='/design/c/typography/v2.0.0-beta.5/#rd-white-ffffff'>White</a> button text</li><li>No border</li></ul></dd><dt>Hover/Active</dt><dd><ul><li><a href='/design/c/colors/v2.0.0-beta.3/#rd-ink/blue-005a70'>Ink Blue (#005A70)</a> fill</li><li><a href='/design/c/typography/v2.0.0-beta.5/#rd-white-ffffff'>White</a> button text</li><li>No border</li></ul></dd><dt>Disabled</dt><dd><ul><li><a href='/design/c/colors/v2.0.0-beta.3/#rd-digital-moonlight-e9e9e9'>Moonlight (#E9E9E9)</a> fill</li><li><a href='/design/c/colors/v.2.0.0-beta.3/#rd-concrete-c7c7c7'>Concrete (#C7C7C7)</a> button text</li><li>No border</li></ul></dd><dt>Focus</dt><dd><ul><li>Use the browser default style</li></ul></dd></dl>",
+          "showImage":true,
+          "imageList":[
+            {
+              "size":"large",
+              "url":"buttons/redlines.primary.png"
+            }
+          ],
+          "showVideo":false,
+          "redlineTable": true,
+          "tableRow": [
+            {
+              "cellOne": "Primary Button",
+              "cellTwo": "[](/design/c/buttons/v2.1.0-beta.3/#rd-primary-button)"
+            }
+          ]
         }
       ]
     }
