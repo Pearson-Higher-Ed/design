@@ -2,13 +2,10 @@
 layout: component-yaml
 title: Coach Marks
 section: Components
-version: 1.0.0-beta.1
-status: deprecated
+version: 1.0.0-beta.2
+status: active
 implemented: false
 people:
-  - role: Product Owner
-    name: Pramit Sanyal
-    email: pramit.sanyal@pearson.com
   - role: Interaction Design
     name: Albert Christy
     email: albert.christy@pearson.com
@@ -25,7 +22,7 @@ downloads:
     link:
 
 tagline: |
-  This component informs the user of a new feature, nudges a user to use features or guides the user through a multistep process.
+  This component informs the user of a new feature, nudges a user to use a feature or guides the user through a multistep process.
 
 features:
   - Coach Mark and background attributes
@@ -245,6 +242,9 @@ blocks:
         caption: Variant Numbering Tour Coach Mark
 
 changelog:
+  - version: 1.0.0-beta.2
+    changes: |
+      - UPDATED: Uses new visual aesthetic
   - version: 1.0.0-beta.1
     changes: |
       - CHANGED: Initial Creation
