@@ -2,13 +2,10 @@
 layout: component-yaml
 title: Coach Marks
 section: Components
-version: 1.0.0-beta.1
-status: deprecated
+version: 1.0.0-beta.2
+status: active
 implemented: false
 people:
-  - role: Product Owner
-    name: Pramit Sanyal
-    email: pramit.sanyal@pearson.com
   - role: Interaction Design
     name: Albert Christy
     email: albert.christy@pearson.com
@@ -25,7 +22,7 @@ downloads:
     link:
 
 tagline: |
-  This component informs the user of a new feature, nudges a user to use features or guides the user through a multistep process.
+  This component informs the user of a new feature, nudges a user to use a feature or guides the user through a multistep process.
 
 features:
   - Coach Mark and background attributes
@@ -47,6 +44,21 @@ blocks:
       - type: narrow image
         src: ./assets/single.instance.png
         caption: The single instance coach mark.
+
+  - type: section
+    name: Uses
+
+  - type: two column
+    text: |
+      The coach mark is used to inform and instruct the user. It can either appear automatically, such as when a user visits a page for the first time or a new feature is added, or in response to user action, like activating an info icon.
+
+      Be careful not to use the coach mark to provide help content that would be better served by the [Contextual Help](http://pearson-higher-ed.github.io/design/c/contextual-help/) component. The info coach mark should only be used to clarify the meaning of a section of the page. Prefer to use [information text](http://pearson-higher-ed.github.io/design/c/inputs/#information-error-text) if the target is a form input.
+
+      One reason to break this guideline is if the amount of information would be unwieldy below the input, as in the example here.
+    contents:
+      - type: narrow image
+        src: ./assets/info.example.png
+        caption: An example of using a Coach Mark when there's too much information to put under the input.
 
   - type: section
     name: Tour
@@ -75,18 +87,6 @@ blocks:
         caption: Alternate tour design with number in title.
 
   - type: section
-    name: < 480px Viewport
-
-  - type: two column
-    text: |
-      At the extra small breakpoint < 480px the arrow is removed and the coach mark is centered onto the screen under the focus.
-
-    contents:
-      - type: narrow image
-        src: ./assets/mobile.under480.png
-        caption: The coach mark arrow is removed in this mobile view.
-
-  - type: section
     name: Target Highlight and Modal Functionality
 
   - type: two column
@@ -112,139 +112,44 @@ blocks:
 
   - type: two column
     text: |
-      ### Single
-
-      #### ≥ 480px
-
-      Dimensions - Bubble
-      : - 300px wide
-        - Height varies by content
-        - 4px radius
-
-      Dimensions - Arrow
-      : - 15px high
-        - 30px wide
-
-      Shadow
-      : - 0px h-shadow
-        - 1px v-shadow
-        - 10 blur
-        - 0 spread
-
       Spacing
-      : - Title, Body left aligned
-        - close "x" and "Got it" link right aligned
-        - 20px padding top, left and bottom
-        - 25px padding right
-        - 10px padding right for close "x"
-        - 20px between Title and Body
-        - 15px between Body and "Got it" link.
+      : - 20px vertical padding
+        - 24px horizontal padding
+        - 4px between title and message
+        - 24px between message and dismissal link
 
-      Background
-      : - White (#FFFFFF)
+      Dimensions
+      : - 280px wide at every viewport
+
+      Arrow
+      : - 16px wide, 8px tall
+        - Prefer to position the arrow in the center of the box, or 32px from either side
+        - If necessary the arrow may be positioned as close as 20px from either end
+        - Prefer arrows to point downwards rather than upwards
+        - Arrow never points out of either side
+
+      Close icon
+      : - remove-sm-18
+        - Centered in a 44x44 px tap target in the upper right corner
+
+      Colors
+      : - Digital Ice Blue background color
+        - All text is Charcoal
 
       Typography
-      : - Title is Bold Label Pitch
-        - Body is Basic Body Small Variant
-        - Link is Basic Body Link
-
-      States
-      : - Links use the browser default style for focus
-        - Hovering shows the hand icon, but otherwise no style change
-
-      #### < 480px
-
-      Dimensions - Arrow
-      : - None
-
-      Align
-      : - Centered on Screen
+      : - Title is UI Text - Bold
+        - Message is UI Text - Basic
+        - Links are link styles UI Text - Basic
 
     contents:
-      - type: narrow image
-        src: ./assets/redlines.singleinstance1.png
-        caption: Single Instance Coachmark ≥ 480px
-      - type: narrow image
-        src: ./assets/redlines.singleinstance2.png
-        caption: Single Instance Coachmark ≥ 480px
-      - type: narrow image
-        src: ./assets/redlines.singleinstance.small.png
-        caption: Single Instance Coachmark < 480px
-
-  - type: two column
-    text: |
-      ### Tour
-
-      #### ≥ 480px
-
-      Dimensions - Bubble
-      : - 300px wide
-        - Height varies by content
-        - 4px radius
-
-      Dimensions - Arrow
-      : - 15px high
-        - 30px wide
-
-      Spacing
-      : - Title, Body left aligned
-        - close "x" and "Got it" link right aligned
-        - 20px padding top, left and bottom
-        - 25px padding right
-        - 10px padding right for close "x"
-        - 20px between Title and Body
-        - 15px between Body and "Got it" link.
-
-      Background
-      : - White (#FFFFFF)
-
-      Typography
-      : - Title is Bold Label Pitch
-        - Body is Basic Body Small Variant
-        - Links are Basic Body Link
-        - Numbering is Small Label Gray No. 1
-
-      Dimmed Browser
-      : - Black 20% Opacity
-
-      Variant Numbering
-      : - 30px high
-        - 30px wide
-        - background Basic Blue
-        - border 1px Sky Blue
-        - Large Label Bold White
-        - 14px padding right
-
-      States
-      : - Links use the browser default style for focus
-        - Hovering shows the hand icon, but otherwise no style change
-
-      #### < 480px
-
-      Dimensions - Arrow
-      : - None
-
-      Align
-      : - Centered on Screen
-
-      #### Target Highlight and Background Dim
-
-      Highlight
-      : - | box-shadow 0 0 0 9999999px rgba (0,0, .4)
-
-      The Highlight is created by focusing on the div and dimming the rest of the screen by adding a giant box shadow that encompasses the screen.
-
-
-    contents:
-      - type: narrow image
-        src: ./assets/redlines.tour1.png
-      - type: narrow image
-        src: ./assets/redlines.tour2.png
-      - type: narrow image
-        src: ./assets/redlines.tour.alt.png
-        caption: Variant Numbering Tour Coach Mark
+      - type: wide image
+        src: ./assets/redlines.single.png
+        caption: Single Instance Coach Mark
 
 changelog:
+  - version: 1.0.0-beta.2
+    changes: |
+      - UPDATED: Uses new visual aesthetic
   - version: 1.0.0-beta.1
     changes: |
       - CHANGED: Initial Creation
