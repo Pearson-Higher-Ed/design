@@ -5,13 +5,12 @@ const openBtn = document.getElementById('openMainMenu'),
     content = document.getElementById('content'),
     overlay = document.getElementById('overlay'),
     firstNavItem = document.getElementById('openMainMenu2'),
-    lastNavButton = document.querySelector('#dropdownNav li:last-child button'),
-    lastListItem = document.querySelector('#dropdownNav li:last-child button + div ul li:last-child a'),
-    secondLastListItem = document.getElementById("three");
+    lastNavButton = document.querySelector('#dropdownNav > li:last-child button'),
+    lastListItem = document.querySelector('#dropdownNav li:last-child li:last-child a'),
+    lastFirstItem =  document.querySelector('#dropdownNav > li:last-child li:first-child a');
 
 let timer = 0,
     counter = 0;
-
 
 // helper that closes the menu
 function closeMenu() {
@@ -34,6 +33,61 @@ function toggleDataFocus(event) {
     }
 }
 
+function reverseFocus (obj, shiftPressed, callback) {
+    obj.onkeydown = (event) => {
+        if (event.shiftKey === shiftPressed && sidebar.classList.contains('open')) {
+            event.preventDefault();
+            if (event.key === 'Tab') {
+                callback();
+            }
+        }
+    };
+}
+
+
+firstNavItem.onkeydown = (event) => {
+    if (event.shiftKey === true && sidebar.classList.contains('open')) {
+        event.preventDefault();
+        if (event.key === 'Tab') {
+            if (lastNavButton.getAttribute('aria-expanded') === 'false') {
+                lastNavButton.focus();
+            } else if (lastNavButton.getAttribute('aria-expanded') === 'true') {
+                lastListItem.focus();
+            }
+        }
+    }
+
+};
+
+
+lastNavButton.onkeydown = (event) => {
+    if (event.shiftKey === false && sidebar.classList.contains('open')) {
+        event.preventDefault();
+
+        if (event.key === 'Tab') {
+            if (lastNavButton.getAttribute('aria-expanded') === 'false') {
+                firstNavItem.focus();
+            } else if (lastNavButton.getAttribute('aria-expanded') === 'true') {
+                lastFirstItem.focus();
+            }
+        }
+        if (event.keyCode == 32) {
+            console.log(event.keyCode);
+            lastNavButton.click();
+        }
+    }
+};
+
+
+lastListItem.onkeydown = (event) => {
+    if (event.shiftKey === false && sidebar.classList.contains('open')) {
+        event.preventDefault();
+        if (event.key === 'Tab') {
+            firstNavItem.focus();
+        }
+    }
+};
+
 
 // close the menu when escape is pressed
 window.onkeydown = (event) => {
@@ -45,67 +99,17 @@ window.onkeydown = (event) => {
 };
 
 
-// keyboard focus and blur
-// cycle through menu
-sidebar.addEventListener('focus', (event) => {
+//keyboard toggle aria expanded attributes
+sidebar.addEventListener('blur', (event) => {
     toggleDataFocus(event);
-    firstNavItem.onkeydown = (event) => {
-        const ariaExpanded = lastNavButton.getAttribute('aria-expanded'),
-            shiftKey = event.shiftKey,
-            keyPress = event.key;
-
-        if (ariaExpanded === 'false' && shiftKey === true && keyPress === "Tab") {
-            setTimeout(() => {
-                lastNavButton.focus();
-            }, 10)
-        } else if (ariaExpanded === 'true' && shiftKey === true && keyPress === "Tab") {
-            setTimeout(() => {
-                lastListItem.focus();
-            }, 10)
-        }
-    };
-
-    lastNavButton.onkeydown = (event) => {
-        const ariaExpanded = event.target.getAttribute('aria-expanded'),
-            shiftKey = event.shiftKey,
-            keyPress = event.key;
-
-        if (ariaExpanded === 'false' && shiftKey === true && keyPress === "Tab") {
-            setTimeout(() => {
-                document.getElementById("Compounds").focus();
-            }, 10)
-        }
-    };
-
-    lastListItem.onkeydown = (event) => {
-        const shiftKey = event.shiftKey,
-            keyPress = event.key;
-
-        if (shiftKey === true && keyPress === "Tab") {
-            setTimeout(() => {
-                document.getElementById("three").focus();
-            }, 10)
-        }
-
-    }
-
 }, true);
 
 
 // keyboard toggle aria expanded attributes
-sidebar.addEventListener('blur', (event) => {
-    const target = event.target,
-        sidebarOpen = sidebar.classList.contains('open');
-
-    toggleDataFocus(event);
-    if (sidebarOpen === true) {
-        if (target === lastNavButton && target.getAttribute('aria-expanded') === 'false') {
-            firstNavItem.focus();
-        } else if (lastNavButton.getAttribute('aria-expanded') === 'true' && target === lastListItem) {
-            firstNavItem.focus();
-        }
-    }
+sidebar.addEventListener('focus', (event) => {
+toggleDataFocus(event);
 }, true);
+
 
 
 // opens the menu and sets focus to first item.
@@ -117,7 +121,7 @@ content.addEventListener('click', event => {
             sidebar.classList.add('open');
             overlay.classList.add('overlay');
             firstNavItem.focus();
-        }, 10);
+        }, 100);
         firstNavItem.focus();
 
     } else if (sidebar.classList.contains('open')) {
@@ -155,7 +159,3 @@ content.addEventListener('scroll', event => {
         }
     }, 20);
 });
-
-
-
-
