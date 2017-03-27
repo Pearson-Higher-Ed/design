@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Dropdown
 section: Components
-version: 1.0.0-beta.5
-status: deprecated
+version: 1.0.0-beta.6
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -138,7 +138,7 @@ blocks:
       : - Use this style for the extra small breakpoint
 
       Dimensions
-      : - Full viewport width and height (below the header)
+      : - Full viewport width and height (covering the header)
 
       Spacing
       : - List items have 24px padding on all sides
@@ -169,6 +169,9 @@ blocks:
         src: ./assets/redlines.mobile-menu.png
 
 changelog:
+  - version: 1.0.0-beta.6
+    changes: |
+      - FIXED: Mobile menu properly covers the header
   - version: 1.0.0-beta.5
     changes: |
       - UPDATED: Clean up dependencies, add a11y checklist, get ready for governance
