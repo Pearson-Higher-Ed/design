@@ -18,9 +18,9 @@ dependencies:
   - name: typography
     version: 2.0.0
   - name: colors
-    version: 2.0.0-beta.7
+    version: 2.0.0
   - name: icons
-    version: 2.0.0-beta.4
+    version: 2.0.0
 
 
 downloads:
@@ -138,11 +138,12 @@ blocks:
   - type: two column
     text: |
 
+      ### Don't allow modals launching modals
+      Launching a modal within a modal adds complexity and confusion for the users. Look for alternative solutions such as creating a separate page for the task.
+
+
       ### Avoid long content
       Modals are not designed for displaying long content, especially when we want the users to actually read the content. Consider in-line expansion within the originating page or displaying the information on a separate page for a better user experience.
-
-      ### Avoid modals launching modals
-      Launching a modal within a modal adds complexity and is not a good user experience. Look for alternative solutions. For example, consider creating a separate page for tasks.
 
       ### Avoid nested scroll within a modal
       On narrow devices, there isn't enough horizontal room for a scrolling area inside modal if the modal happens to exceed the viewport as well. This would become a usability issue.
@@ -300,7 +301,7 @@ blocks:
         src: ./assets/modal_scrolling_specs.png
       - type: wide image
         src: ./assets/modal_without_actions_scrolling.png  
-        caption: Modal with buttons (Desktop)
+        caption: Modal without buttons (Desktop)
       - type: narrow image
         src: ./assets/modal_without_actions_scrolling_mobile.png
         caption: Modal without buttons (Mobile)
