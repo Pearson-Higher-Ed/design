@@ -33,22 +33,10 @@ function toggleDataFocus(event) {
     }
 }
 
-function reverseFocus (obj, shiftPressed, callback) {
-    obj.onkeydown = (event) => {
-        if (event.shiftKey === shiftPressed && sidebar.classList.contains('open')) {
-            event.preventDefault();
-            if (event.key === 'Tab') {
-                callback();
-            }
-        }
-    };
-}
-
-
 firstNavItem.onkeydown = (event) => {
     if (event.shiftKey === true && sidebar.classList.contains('open')) {
         event.preventDefault();
-        if (event.key === 'Tab') {
+        if (event.key === 'Tab' || event.which === 9) {
             if (lastNavButton.getAttribute('aria-expanded') === 'false') {
                 lastNavButton.focus();
             } else if (lastNavButton.getAttribute('aria-expanded') === 'true') {
@@ -60,28 +48,30 @@ firstNavItem.onkeydown = (event) => {
 };
 
 
-lastNavButton.onkeydown = (event) => {
+lastNavButton.onkeypress = (event) => {
     if (event.shiftKey === false && sidebar.classList.contains('open')) {
         event.preventDefault();
 
-        if (event.key === 'Tab') {
+        if (event.key === 'Tab' || event.which === 9) {
             if (lastNavButton.getAttribute('aria-expanded') === 'false') {
                 firstNavItem.focus();
             } else if (lastNavButton.getAttribute('aria-expanded') === 'true') {
                 lastFirstItem.focus();
             }
         }
-        if (event.keyCode === 32) {
+
+        if (event.keyCode === 32 || event.which === 32) {
             lastNavButton.click();
         }
+
     }
 };
 
 
-lastListItem.onkeydown = (event) => {
+lastListItem.onkeypress = (event) => {
     if (event.shiftKey === false && sidebar.classList.contains('open')) {
         event.preventDefault();
-        if (event.key === 'Tab') {
+        if (event.key === 'Tab' || event.which === 9) {
             firstNavItem.focus();
         }
     }
@@ -89,8 +79,8 @@ lastListItem.onkeydown = (event) => {
 
 
 // close the menu when escape is pressed
-window.onkeydown = (event) => {
-    if (event.key === "Escape" || event.key === 'Esc') {
+window.onkeypress = (event) => {
+    if (event.key === "Escape" || event.key === 'Esc'  || event.which === 27) {
         if (sidebar.classList.contains('open')) {
             closeMenu();
         }
@@ -106,7 +96,7 @@ sidebar.addEventListener('blur', (event) => {
 
 // keyboard toggle aria expanded attributes
 sidebar.addEventListener('focus', (event) => {
-toggleDataFocus(event);
+    toggleDataFocus(event);
 }, true);
 
 

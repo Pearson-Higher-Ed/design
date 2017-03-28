@@ -33,6 +33,9 @@
 
 .actions {
   display:flex;
+  @media(min-width:768px) and (max-width:1279px){
+	order:2;
+  }
   @media(min-width:1280px) {
 	display:none;
 	width:370px;
@@ -161,12 +164,13 @@
   }
   .summary {
 	@media(min-width:768px) {
-	  
+	
 	}
   }
   .description {
 	@media(min-width:768px) {
 	  width:100%;
+	  order:3;
 	}
   }
 }

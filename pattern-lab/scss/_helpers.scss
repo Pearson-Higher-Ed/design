@@ -3,6 +3,7 @@
 html, body {
   box-sizing: border-box;
   font-size:16px;
+  -webkit-overflow-scrolling: touch;
   
   @media(max-width:640px) {
     font-size:14px;
