@@ -68,7 +68,7 @@ blocks:
             | ![](./assets/icons24/clock-24-2x.png) | clock-18 | clock-24 |
             | ![](./assets/icons24/delete-24-2x.png) | delete-18 | delete-24 |
             | ![](./assets/icons24/desktop-24-2x.png) | desktop-18 | desktop-24 |
-            | ![](./assets/icons24/ellispse-24-2x.png) | ellispse-18 | ellispse-24 |
+            | ![](./assets/icons24/ellipsis-24-2x.png) | ellipsis-18 | ellipsis-24 |
             | ![](./assets/icons24/email-24-2x.png) | email-18 | email-24 |
             | ![](./assets/icons24/file-24-2x.png) | file-18 | file-24 |
             | ![](./assets/icons24/font-lg-24-2x.png) | font-lg-18 | font-lg-24 |
@@ -204,7 +204,7 @@ changelog:
     changes: |
       - RENAMED: dropdown-open-lg, chevron-back-lg
       - TWEAKED: checkbox, radio-button
-      - ADDED: dropdown-open-sm, chevron-back-sm, sort, ellispse
+      - ADDED: dropdown-open-sm, chevron-back-sm, sort, ellipsis
   - version: 2.0.0-beta.4
     changes: |
       - ADDED: Notification icons.
