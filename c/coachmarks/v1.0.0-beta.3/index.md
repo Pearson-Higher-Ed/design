@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Coach Marks
 section: Components
-version: 1.0.0-beta.2
-status: deprecated
+version: 1.0.0-beta.3
+status: active
 implemented: false
 people:
   - role: Interaction Design
@@ -147,6 +147,9 @@ blocks:
         caption: Single Instance Coach Mark
 
 changelog:
+  - version: 1.0.0-beta.3
+    changes: |
+      - UPDATED: Simplified features to match current use cases, make single dismiss option
   - version: 1.0.0-beta.2
     changes: |
       - UPDATED: Uses new visual aesthetic
