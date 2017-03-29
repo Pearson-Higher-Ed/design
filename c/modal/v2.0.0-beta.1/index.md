@@ -27,7 +27,7 @@ downloads:
   - name: UX Accessibility Checklist
     link: https://docs.google.com/document/d/1FJSGR24EpDlRvk1Ve-AjFPy-BE-qoW5ePE7Tt-CPtzs/edit
   - name: Sketch
-    link: ./assets/UXF_modal_3.sketch
+    link: ./assets/UXF_modal_4.sketch
 
 tagline: |
   Modal interrupts the user with a message or request for certain actions with a block of content on top of the main view.
@@ -256,6 +256,28 @@ blocks:
       - type: wide image
         src: ./assets/modal_specs.png
 
+
+  - type: two column
+    text: |   
+
+      ### Scrolling Modals
+      When the modal content exceeds the height of the viewport the scrollable area will automatically expand to include just enough space for scrolling, without scrolling the page below.
+
+      * __Modal with buttons:__ sticky buttons
+      * __Modal without buttons:__ page scroll
+
+
+    contents:
+      - type: wide image
+        src: ./assets/modal_scrolling_specs.png
+      - type: wide image
+        src: ./assets/modal_without_actions_scrolling.png  
+        caption: Modal without buttons (Desktop)
+      - type: narrow image
+        src: ./assets/modal_without_actions_scrolling_mobile.png
+        caption: Modal without buttons (Mobile)
+
+
   - type: two column
     text: |  
 
@@ -286,30 +308,9 @@ blocks:
         src: ./assets/modal_buttons_with_long_text.png
 
 
-  - type: two column
-    text: |   
-
-      ### Scrolling Modals
-      When the modal content exceeds the height of the viewport the scrollable area will automatically expand to include just enough space for scrolling, without scrolling the page below.
-
-      * __Modal with buttons:__ sticky buttons
-      * __Modal without buttons:__ page scroll
-
-
-    contents:
-      - type: wide image
-        src: ./assets/modal_scrolling_specs.png
-      - type: wide image
-        src: ./assets/modal_without_actions_scrolling.png  
-        caption: Modal without buttons (Desktop)
-      - type: narrow image
-        src: ./assets/modal_without_actions_scrolling_mobile.png
-        caption: Modal without buttons (Mobile)
-
-
 changelog:
 
-  - version: 2.0.0.-beta.1
+  - version: 2.0.0-beta.1
     changes: |
       - Re-skinned with the latest styles
       - ADDED: Sticky buttons for long content
