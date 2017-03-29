@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Coach Marks
 section: Components
-version: 1.0.0-beta.3
-status: deprecated
+version: 1.0.0-beta.4
+status: active
 implemented: false
 people:
   - role: Interaction Design
@@ -27,9 +27,9 @@ tagline: |
   This component informs the user of a new feature, nudges a user to use a feature or guides the user through a multistep process.
 
 features:
-  - Coach Mark and background attributes
-  - Consistent guidelines on when to use the single coach mark vs. coach mark tour
-  - Guidelines on positioning the coach mark to the highlighted feature
+  - Contextual message for instructing or drawing attention
+  - Way to present small pieces of contextual information
+  - Two different dismissal options
 
 usage_guidelines: |
   Coach marks should be used sparingly in the application to avoid coach mark chains. Information presented in a coach mark should be short and sweet, focusing on one key function.
@@ -98,13 +98,13 @@ blocks:
         - Centered in a 44x44 px tap target in the upper right corner
 
       Colors
-      : - Digital Ice Blue background color
-        - All text is Charcoal
+      : - [Digital Ice Blue](/design/c/colors/v2.0.0/#rd-digital-ice-blue) background color
+        - All text is [Charcoal](/design/c/colors/v2.0.0/#rd-charcoal)
 
       Typography
-      : - Title is UI Text - Bold
-        - Message is UI Text - Basic
-        - Links are link styles UI Text - Basic
+      : - Title is [UI Text - Bold](/design/c/typography/v2.0.0/#rd-ui-text-bold)
+        - Message is [UI Text - Basic](/design/c/typography/v2.0.0/#rd-ui-text-basic)
+        - Links are [link styled](/design/c/typography/v2.0.0/#rd-links) [UI Text - Basic](/design/c/typography/v2.0.0/#rd-ui-text-basic), but overridden to use [Charcoal](/design/c/colors/v2.0.0/#rd-charcoal) for both active and hover for contrast purposes
 
       Info Trigger
       : - Use info-fill-18
@@ -115,6 +115,9 @@ blocks:
         caption: Single Instance Coach Mark
 
 changelog:
+  - version: 1.0.0-beta.4
+    changes: |
+      - CHANGED: Dismissal link to meet contrast reqs.
   - version: 1.0.0-beta.3
     changes: |
       - UPDATED: Simplified features to match current use cases, make single dismiss option
