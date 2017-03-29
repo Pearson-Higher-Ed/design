@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Dropdown
 section: Components
-version: 1.0.0-beta.6
-status: deprecated
+version: 1.0.0-beta.7
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -25,7 +25,7 @@ dependencies:
   - name: colors
     version: 2.0.0
   - name: icons
-    version: 2.0.0
+    version: 2.1.0
 
 tagline: |
   A simple component for presenting multiple options in a condensed space.
@@ -77,7 +77,7 @@ blocks:
     text: |
       At the extra small breakpoint, the dropdown switches from a menu that drops down to a modal that slides up with a list of options. For UI Text and button triggers the dropdown icon also becomes optional.
 
-      The dropdown page should have a descriptive title explaining the context for the options presented.
+      The dropdown page should have a descriptive title explaining the context for the options presented, although it is optional.
     contents:
       - type: narrow video
         src: ./assets/animation.mp4
@@ -100,21 +100,25 @@ blocks:
         - 8px between items
 
       Focus/Hover
-      : - A focused or hovered item has a Moonlight background that extends 4px above and below the text
+      : - A focused or hovered item has a [Moonlight](/design/c/colors/v2.0.0/#rd-moonlight) background that extends 4px above and below the text
         - Triggers use the default focus behavior for buttons or links
 
       Divider
-      : - Groups may be divided by a 1px solid Alto line
+      : - Groups may be divided by a 1px solid [Alto](/design/c/colors/v2.0.0/#rd-alto) line
         - The divider line should have 12px between it and any text above/below it
+
+      Typography
+      : - Options use the [UI Text - Basic](/design/c/typography/v2.0.0/#rd-ui-text-basic) style
 
       Checkmark
       : - Uses the check-sm-18 icon
         - 16px left padding around the icon
         - 8px right padding
-        - Text content is shifted right to make room for the icon (30px left padding)
+        - Text content is shifted right to make room for the icon (34px left padding)
+        - This expanded spacing should be used any time it is possible for an option to be checked, i.e. don't start with the narrower space and then shift text over to make room for a check mark
 
       Border
-      : - 1px solid Concrete
+      : - 1px solid [Concrete](/design/c/colors/v2.0.0/#rd-concrete)
         - 2px border radius
 
       Alignment
@@ -122,8 +126,8 @@ blocks:
         - Right aligned if there is not room within the viewport for the dropdown
 
       Triggers
-      : - dropdown-open-18 for the icon
-        - UI Text - Basic, for any text used
+      : - dropdown-open-sm-18 for the icon if combined with text, use dropdown-open-sm-24 if standalone
+        - [UI Text - Basic](/design/c/typography/v2.0.0/#rd-ui-text-basic), for any text used
         - 2px spacing between trigger and dropdown
         - Any button type is valid
     contents:
@@ -149,10 +153,14 @@ blocks:
       : - Close icon is remove-lg-18
         - Check mark is check-sm-18
 
+      Typography
+      : - Options use the [UI Text - Large](/design/c/typography/v2.0.0/#rd-ui-text-large) style
+        - The title is a [UI Heading - Section - Small](/design/c/typography/v2.0.0/#rd-ui-headings-section-basic)
+
       Colors
-      : - Title background is Off White
-        - Divider under title is 1px solid Moonlight
-        - Divider within options is 1px solid Concrete
+      : - Title background is [White Gray](/design/c/colors/v2.0.0/#rd-white-gray)
+        - Divider under title is 1px solid [Moonlight](/design/c/colors/v2.0.0/#rd-moonlight)
+        - Divider within options is 1px solid [Concrete](/design/c/colors/v2.0.0/#rd-concrete)
 
       Check mark
       : - The checkmark has 24px of left padding and 8px on the right
@@ -169,6 +177,9 @@ blocks:
         src: ./assets/redlines.mobile-menu.png
 
 changelog:
+  - version: 1.0.0-beta.7
+    changes: |
+      - UPDATED: Use proper icon, clarify redlines
   - version: 1.0.0-beta.6
     changes: |
       - FIXED: Mobile menu properly covers the header
