@@ -27,7 +27,7 @@ downloads:
   - name: UX Accessibility Checklist
     link: https://docs.google.com/document/d/1FJSGR24EpDlRvk1Ve-AjFPy-BE-qoW5ePE7Tt-CPtzs/edit
   - name: Sketch
-    link: ./assets/UXF_modal_3.sketch
+    link: ./assets/UXF_modal_4.sketch
 
 tagline: |
   Modal interrupts the user with a message or request for certain actions with a block of content on top of the main view.
