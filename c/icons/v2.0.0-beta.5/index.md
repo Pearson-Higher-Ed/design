@@ -202,9 +202,9 @@ blocks:
 changelog:
   - version: 2.0.0-beta.5
     changes: |
-      - RENAMED: dropdown-open-lg, chevron-back-lg
+      - RENAMED: dropdown-lg, chevron-lg
       - TWEAKED: checkbox, radio-button
-      - ADDED: dropdown-open-sm, chevron-back-sm, sort, ellipsis
+      - ADDED: dropdown-sm, chevron-sm, sort, ellipsis
   - version: 2.0.0-beta.4
     changes: |
       - ADDED: Notification icons.
