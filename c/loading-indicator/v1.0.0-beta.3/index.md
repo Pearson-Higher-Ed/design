@@ -3,8 +3,8 @@ layout: component-yaml
 title: Loading Indicator
 section: Components
 redirect_from: /docs/ui-components/loading-indicator/
-version: 1.0.0-beta.2
-status: deprecated
+version: 1.0.0-beta.3
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -20,7 +20,7 @@ dependencies:
     version: 2.0.0
 downloads:
   - name: UX Accessibility Checklist
-    link:
+    link: https://docs.google.com/a/pearson.com/document/d/1BygpweQJc6NV58izkcJRAc_QXh5lSRDyzHHU6qRCq-g/edit?usp=sharing
   - name: Sketch
     link: ./assets/loading-indicator.sketch
 
@@ -64,8 +64,8 @@ blocks:
         - Always on top of contents
 
       Sizing and spacing
-        - Chip is 200px wide and 70px tall
-        - Text and indicator and centered in the chip
+      : - Chip is 200px wide and 70px tall
+        - Text and indicator are centered in the chip
         - 12px spacing between icon and text
 
       Colors
@@ -79,7 +79,7 @@ blocks:
       Spinner
       : - Composed of 8 circles arranged equally around a circle
         - Each dot is a 4px circle
-        - The large spinner fits inside a 28px box
+        - The spinner fits inside a 28px box
 
       Animation
       : - Dots take 0.2s to grow and 0.2s to shrink
@@ -103,6 +103,11 @@ blocks:
         caption: Loading indicator animation.
 
 changelog:
+  - version: 1.0.0-beta.3
+    changes: |
+      - ADDED: Accessibility checklist
+      - FIXED: Redline formatting
+
   - version: 1.0.0-beta.2
     changes: |
       - ADDED: Animation detail
