@@ -3,8 +3,8 @@ layout: component-yaml
 title: Colors
 section: Components
 redirect_from: /docs/ui-components/colors/
-version: 2.1.0-beta.1
-status: deprecated
+version: 2.1.0-beta.2
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -128,8 +128,8 @@ colors:
     a11y_complements:
       - Charcoal
   Digital Ice Blue:
-    hex: d6ebe8
-    uses: Alternative background for screens with minimal content, such as sign in.
+    hex: DAF0ED
+    uses: Alternative background for screens with minimal content, such as sign in. Also used for mild attention grabbing, for example in coach marks.
     a11y_complements:
       - Charcoal
       - Ink Blue
@@ -255,6 +255,9 @@ blocks:
       - Brackish Turquoise
 
 changelog:
+  - version: 2.1.0-beta.2
+    changes: |
+      - CHANGED: Digital Ice Blue hex value to standout better against gray backgrounds
   - version: 2.1.0-beta.1
     changes: |
       - ADDED: Brackish Turquoise as CTA Button Hover state for Digital Marine Turquoise
