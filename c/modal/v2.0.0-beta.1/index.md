@@ -222,13 +222,13 @@ blocks:
         - xs: Compact
 
       Header
-      : - md: [Large Section Heading](/design/c/typography/v2.0.0/#rd-ui-headings-section-large) 24pt
-        - sd: [Basic Section Heading](/design/c/typography/v2.0.0/#rd-ui-headings-section-basic) 20pt
-        - xs: [Basic Section Heading](/design/c/typography/v2.0.0/#rd-ui-headings-section-basic) 20pt
+      : - md: [Large Section Heading](/design/c/typography/v2.0.0/#rd-ui-headings-section-large) 24px
+        - sd: [Basic Section Heading](/design/c/typography/v2.0.0/#rd-ui-headings-section-basic) 20px
+        - xs: [Basic Section Heading](/design/c/typography/v2.0.0/#rd-ui-headings-section-basic) 20px
         - [Charcoal](/design/c/colors/v2.0.0-beta.7/#rd-charcoal)
 
       Content
-      : - [Basic Body](/design/c/typography/v2.0.0/#rd-basic-body) 14pt
+      : - [Basic Body](/design/c/typography/v2.0.0/#rd-basic-body) 14px
         - [Charcoal](/design/c/colors/v2.0.0-beta.7/#rd-charcoal)
 
       Border Radius

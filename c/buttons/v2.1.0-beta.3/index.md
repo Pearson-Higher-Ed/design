@@ -191,7 +191,7 @@ blocks:
 
       Buttons are positioned according to the type of actions:
 
-      * __Affirmative actions__ are placed on the right and continues the process. They are actions that are desired by users or the application.
+      * __Affirmative actions__ are placed on the right and continue the process. They are actions that are desired by users or the application.
 
       * __Dismissive actions__ are placed on the left and return the user to the previous screen or step in the process.
 
