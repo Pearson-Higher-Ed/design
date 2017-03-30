@@ -59,8 +59,8 @@ blocks:
             | ![](./assets/icons24/capslock-24-2x.png) | capslock-18 | capslock-24 |
             | ![](./assets/icons24/check-lg-24-2x.png) | check-lg-18 | check-lg-24 |
             | ![](./assets/icons24/check-sm-24-2x.png) | check-sm-18 | check-sm-24 |
-            | ![](./assets/icons24/chevron-back-lg-24-2x.png) | chevron-back-lg-18 | chevron-back-lg-24 |
-            | ![](./assets/icons24/chevron-next-lg-24-2x.png) | chevron-next-lg-18 | chevron-next-lg-24 |
+            | ![](./assets/icons24/chevron-back-24-2x.png) | chevron-back-18 | chevron-back-24 |
+            | ![](./assets/icons24/chevron-next-24-2x.png) | chevron-next-18 | chevron-next-24 |
             | ![](./assets/icons24/chevron-back-sm-24-2x.png) | chevron-back-sm-18 | chevron-back-sm-24 |
             | ![](./assets/icons24/chevron-next-sm-24-2x.png) | chevron-next-sm-18 | chevron-next-sm-24 |
             | ![](./assets/icons24/point-back-24-2x.png) | point-back-18 | point-back-24 |
@@ -106,8 +106,8 @@ blocks:
             | ![](./assets/icons24/checkbox-off-24-2x.png) | checkbox-off-18 | checkbox-off-24 |
             | ![](./assets/icons24/checkbox-on-24-2x.png) | checkbox-on-18 | checkbox-on-24 |
             | ![](./assets/icons24/checkbox-tristate-24-2x.png) | checkbox-tristate-18 | checkbox-tristate-24 |
-            | ![](./assets/icons24/dropdown-close-lg-24-2x.png) | dropdown-close-lg-18 | dropdown-close-lg-24 |
-            | ![](./assets/icons24/dropdown-open-lg-24-2x.png) | dropdown-open-lg-18 | dropdown-open-lg-24 |
+            | ![](./assets/icons24/dropdown-close-24-2x.png) | dropdown-close-18 | dropdown-close-24 |
+            | ![](./assets/icons24/dropdown-open-24-2x.png) | dropdown-open-18 | dropdown-open-24 |
             | ![](./assets/icons24/dropdown-close-sm-24-2x.png) | dropdown-close-sm-18 | dropdown-close-sm-24 |
             | ![](./assets/icons24/dropdown-open-sm-24-2x.png) | dropdown-open-sm-18 | dropdown-open-sm-24 |
             | ![](./assets/icons24/favorite-off-24-2x.png) | favorite-off-18 | favorite-off-24 |
@@ -202,7 +202,6 @@ blocks:
 changelog:
   - version: 2.0.0-beta.5
     changes: |
-      - RENAMED: dropdown-lg, chevron-lg
       - TWEAKED: checkbox, radio-button
       - ADDED: dropdown-sm, chevron-sm, sort, ellipsis
   - version: 2.0.0-beta.4
