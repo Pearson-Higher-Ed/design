@@ -197,6 +197,7 @@ blocks:
 
       ### Breakpoints
 
+
       - md = Medium Devices and Above (>= 768px)
       - sd = Small Devices (480px - 768px)
       - xs = Extra Small Devices (320px - 480px)
@@ -229,6 +230,9 @@ blocks:
       Content
       : - [Basic Body](/design/c/typography/v2.0.0/#rd-basic-body) 14pt
         - [Charcoal](/design/c/colors/v2.0.0-beta.7/#rd-charcoal)
+
+      Border Radius
+      : - 2px
 
       Button
       : - [Large Buttons](/design/c/buttons/v2.1.0-beta.2/#rd-large-button)
@@ -290,16 +294,11 @@ blocks:
   - type: two column
     text: |  
 
-      ### Button Width
+      ### Responsive Buttons  
 
-      Medium Devices and Above (>= 768px)
-      : Default (fixed padding)
-
-      Small Devices (480px - 768px)
-      : Expanded (takes up the full width of the container)
-
-      Extra Small Devices (320px - 480px)
-      : Expanded
+      - __Medium Devices and Above (>= 768px):__ Default (fixed padding)
+      - __Small Devices (480px - 768px):__ Expanded (takes up the full width of the container)
+      - __Extra Small Devices (320px - 480px):__ Expanded
 
 
     contents:
