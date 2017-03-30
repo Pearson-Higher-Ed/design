@@ -104,10 +104,10 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/modal_with_actions_mobile.png
-        caption: Modal with actions (Mobile)
+        caption: Modal with actions
       - type: narrow image
         src: ./assets/modal_without_actions_mobile.png
-        caption: Modal without actions (Mobile)
+        caption: Modal without actions
 
 
   - type: two column
@@ -171,27 +171,22 @@ blocks:
   - type: two column
     text: |
 
+
+      The layout changes at the following breakpoints. In short, the modal has a more compact spacing, wider buttons, and smaller font size on narrow devices.
+
+      - 768px
+      - 480px
+      - 320px
+
       For native mobile apps, use the native modal. The specs in this documentation is for responsive web mobile design.
-
-      This modal adjusts to different screen sizes.
-
-      __Desktop__ (Viewport >= 768px)
-
-      - Standard spacing
-      - Standard buttons (Width is dependent upon the length of the label)
-
-      __Mobile__ (Viewport < 768px)
-
-      - Compact spacing
-      - Expanded buttons (Occupies the full row to allow larger touch target)
 
     contents:
       - type: wide image
         src: ./assets/modal_1.png
-        caption: Desktop (Viewport >= 768px)
+        caption: Modal on desktop (Viewport >= 768px)
       - type: narrow image
         src: ./assets/modal_small.png
-        caption: Mobile (Viewport < 768px)
+        caption: Modal on iPhone 5 (Viewport = 320dp)
 
 
   - type: section
@@ -200,55 +195,62 @@ blocks:
   - type: two column
     text: |
 
-      [See specs on Zeplin](https://zpl.io/1I2TYO). For access, contact Linda (linda.tsai@pearson.com)
+      ### Breakpoints
+
+
+      - md = Medium Devices and Above (>= 768px)
+      - sd = Small Devices (480px - 768px)
+      - xs = Extra Small Devices (320px - 480px)
+
 
   - type: two column
-    text: |    
+    text: |  
 
-      Dimensions
-      : - Height: auto
-        - Width: auto
-        - Max Width: 600px
-        - Margin: 6.25%
+      Width
+      : - md and up: 600px
+        - sd: 440px
+        - xs: Auto
 
-      Heading Text
-      : - [Basic Section Heading](/design/c/typography/v2.0.0/#rd-ui-headings-section-basic)
-        - [Charcoal #252525](/design/c/colors/v2.0.0-beta.7/#rd-charcoal)
+      Margin
+      : - md: 60px
+        - sd: 40px
+        - xs: 20px
 
-      Content Text
-      : - [Basic Body](/design/c/typography/v2.0.0/#rd-basic-body)  
-        - [Medium Grey #6a7070](/design/c/colors/v2.0.0-beta.7/#rd-medium-gray)
+      Spacing
+      : - md and up: Spacious
+        - sd: Compact
+        - xs: Compact
+
+      Header
+      : - md: [Large Section Heading](/design/c/typography/v2.0.0/#rd-ui-headings-section-large) 24pt
+        - sd: [Basic Section Heading](/design/c/typography/v2.0.0/#rd-ui-headings-section-basic) 20pt
+        - xs: [Basic Section Heading](/design/c/typography/v2.0.0/#rd-ui-headings-section-basic) 20pt
+        - [Charcoal](/design/c/colors/v2.0.0-beta.7/#rd-charcoal)
+
+      Content
+      : - [Basic Body](/design/c/typography/v2.0.0/#rd-basic-body) 14pt
+        - [Charcoal](/design/c/colors/v2.0.0-beta.7/#rd-charcoal)
+
+      Border Radius
+      : - 2px
+
+      Button
+      : - [Large Buttons](/design/c/buttons/v2.1.0-beta.2/#rd-large-button)
 
       "X" icon
       : - Size: [remove-sm-24](/design/c/icons/v2.0.0-beta.4)
         - Touch target: 36px (See notes below)
 
-      Line
-      : - Thickness: 1px
-        - [Concrete #c7c7c7](/design/c/colors/v2.0.0-beta.7/#rd-concrete)
-
-      Spacing (Responsive)
-      : - Viewport >= 768px: Standard spacing
-        - Viewport < 768px: Compact spacing
-
-      Buttons (Responsive)
-      : - Style and size: [Large Buttons](/design/c/buttons/v2.1.0-beta.2/#rd-large-button)
-        - Width (Viewport >= 768px): Standard
-        - Width (Viewport < 768px): Expanded
-
       Overlay
-      : - [Charcoal #252525](/design/c/colors/v2.0.0-beta.7/#rd-charcoal)
+      : - [Charcoal](/design/c/colors/v2.0.0-beta.7/#rd-charcoal)
         - Opacity: 85%
-
-      Scroll Bar
-      : - Default scroll bar by browser
-        - For modals with actions, make the scroll bar visible at all times
 
 
       __Note: The touch target for "X"__ is smaller than the minimal size of 44px because there is additional touch area outside the modal to accommodate for that. This allows more room for heading.
 
-
       __Use the native modal for native mobile apps.__ The specs in this documentation is for responsive web mobile design.
+
+      __[See specs on Zeplin](https://zpl.io/1I2TYO).__ For access, contact Linda (linda.tsai@pearson.com)
 
 
 
@@ -266,10 +268,21 @@ blocks:
       * __Modal with buttons:__ sticky buttons
       * __Modal without buttons:__ page scroll
 
+  - type: two column
+    text: |   
+
+      Scroll Bar
+      : - Default scroll bar by browser
+        - If possible, make the scroll bar visible even when user is not scrolling
+
+      Line
+      : - Thickness: 1px
+        - [Concrete](/design/c/colors/v2.0.0-beta.7/#rd-concrete)
 
     contents:
       - type: wide image
         src: ./assets/modal_scrolling_specs.png
+        caption: Modal with buttons
       - type: wide image
         src: ./assets/modal_without_actions_scrolling.png  
         caption: Modal without buttons (Desktop)
@@ -281,15 +294,11 @@ blocks:
   - type: two column
     text: |  
 
-      ### Button Width
+      ### Responsive Buttons  
 
-      * __Desktop__ (Viewport >= 768px): Standard
-
-        Button width is determined by the length of the label.
-
-      * __Mobile__ (Viewport < 768px): Expanded
-
-        Buttons expand to take up the full width of the parent container to maximize touch area.
+      - __Medium Devices and Above (>= 768px):__ Default (fixed padding)
+      - __Small Devices (480px - 768px):__ Expanded (takes up the full width of the container)
+      - __Extra Small Devices (320px - 480px):__ Expanded
 
 
     contents:
