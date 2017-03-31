@@ -243,7 +243,7 @@ blocks:
 
       Overlay
       : - [Charcoal](/design/c/colors/v2.0.0-beta.7/#rd-charcoal)
-        - Opacity: 85%
+        - Opacity: 60%
 
 
       __Note: The touch target for "X"__ is smaller than the minimal size of 44px because there is additional touch area outside the modal to accommodate for that. This allows more room for heading.
