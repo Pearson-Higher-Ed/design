@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Coach Marks
 section: Components
-version: 1.0.0-beta.4
-status: deprecated
+version: 1.0.0-beta.5
+status: active
 implemented: false
 people:
   - role: Interaction Design
@@ -101,6 +101,11 @@ blocks:
       : - [Digital Ice Blue](/design/c/colors/v2.0.0/#rd-digital-ice-blue) background color
         - All text is [Charcoal](/design/c/colors/v2.0.0/#rd-charcoal)
 
+      Drop shadow
+      : - Shifted 3px downwards
+        - rgba(0, 0, 0, 0.25) color
+        - 7px blur, 0px spread
+
       Typography
       : - Title is [UI Text - Bold](/design/c/typography/v2.0.0/#rd-ui-text-bold)
         - Message is [UI Text - Basic](/design/c/typography/v2.0.0/#rd-ui-text-basic)
@@ -115,6 +120,9 @@ blocks:
         caption: Single Instance Coach Mark
 
 changelog:
+  - version: 1.0.0-beta.5
+    changes: |
+      - ADDED: Redline spec for drop shadow
   - version: 1.0.0-beta.4
     changes: |
       - CHANGED: Dismissal link to meet contrast reqs.
