@@ -55,8 +55,8 @@ blocks:
     text: |
       At responsive sizes the alert occupies the entire top of the viewport.
     contents:
-      - type: wide image
-        src: ./assets/alerts_spec_popover_mobile.png
+      - type: narrow image
+        src: ./assets/alert_mobile_over.png
         caption: Responsive popover alert.
 
   - type: section
@@ -79,13 +79,10 @@ blocks:
 
       The error and warning will stay visible till the alerts is cleared.
 
-    contents:
+    contents:      
         - type: wide image
           src: ./assets/alert_fullpage.png
           caption: The message should appear under the Pearson header, with full width of the screen area.
-        - type: narrow image
-          src: ./assets/alert_mobile 2.png
-          caption: Example of responsive version of the page level alert.
 
   - type: section
     name: Content (task) level alerts
@@ -164,28 +161,19 @@ blocks:
     contents:
 
       - type: wide image
+        src: ./assets/alerts_spec.png
+
+      - type: wide image
         src: ./assets/alerts_spec_popover.png
-        caption: Popover alert
-
-      - type: wide image
-        src: ./assets/alerts_spec_popover_mobile.png
-        caption: Popover alert
-
-      - type: wide image
-        src: ./assets/alerts_spec_desktop 1.png
-        caption: Content ( task ) level alert
-
-      - type: wide image
-        src: ./assets/alerts_spec_mobile1.png
-        caption: Responsive version content(task)level alert
+        caption: Popover alerts
 
       - type: wide image
         src: ./assets/alerts_spec_desktop 2.png
-        caption: Page level alert
+        caption: Screen level alerts
 
       - type: wide image
-        src: ./assets/alerts_spec_mobile2.png
-        caption: Responsive version page level alert
+        src: ./assets/alerts_spec_desktop 1.png
+        caption: Content(task)level alert
 
 
 
