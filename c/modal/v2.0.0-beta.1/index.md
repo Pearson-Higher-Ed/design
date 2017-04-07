@@ -245,6 +245,10 @@ blocks:
       : - [Charcoal](/design/c/colors/v2.0.0-beta.7/#rd-charcoal)
         - Opacity: 60%
 
+      Focus behavior
+      : - Follow [the default behaviors for "X" defined in the drawer](/design/c/drawer/v2.0.0-beta.2)
+        - Follow [the default behaviors for buttons](/design/c/buttons/v2.1.0-beta.3)
+
 
       __Note: The touch target for "X"__ is smaller than the minimal size of 44px because there is additional touch area outside the modal to accommodate for that. This allows more room for heading.
 
