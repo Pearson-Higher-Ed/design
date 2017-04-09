@@ -185,7 +185,7 @@ blocks:
         src: ./assets/modal_1.png
         caption: Modal on desktop (Viewport >= 768px)
       - type: narrow image
-        src: ./assets/modal_small.png
+        src: ./assets/modal_with_actions_mobile.png
         caption: Modal on iPhone 5 (Viewport = 320dp)
 
 
