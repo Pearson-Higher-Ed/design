@@ -178,7 +178,7 @@ blocks:
       - 480px
       - 320px
 
-      For native mobile apps, use the native modal. The specs in this documentation is for responsive web mobile design.
+      For native mobile apps, use the native modal. The guideline in this documentation is for responsive web mobile design.
 
     contents:
       - type: wide image
@@ -190,7 +190,7 @@ blocks:
 
 
   - type: section
-    name: Specs
+    name: Redlines
 
   - type: two column
     text: |
