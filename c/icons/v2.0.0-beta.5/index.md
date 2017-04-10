@@ -103,6 +103,8 @@ blocks:
 
             | Toggle  |      |      |
             | :-----: | :--- | :--- |
+            | ![](./assets/icons24/bookmark-off-24-2x.png) | bookmark-off-18 | bookmark-off-24 |
+            | ![](./assets/icons24/bookmark-on-24-2x.png) | bookmark-on-18 | bookmark-on-24 |
             | ![](./assets/icons24/checkbox-off-24-2x.png) | checkbox-off-18 | checkbox-off-24 |
             | ![](./assets/icons24/checkbox-on-24-2x.png) | checkbox-on-18 | checkbox-on-24 |
             | ![](./assets/icons24/checkbox-tristate-24-2x.png) | checkbox-tristate-18 | checkbox-tristate-24 |
