@@ -15,6 +15,8 @@ people:
     email: linda.tsai@pearson.com
 
 dependencies:
+  - name: buttons
+    version: 2.1.0-beta.3
   - name: typography
     version: 2.0.0
   - name: colors
