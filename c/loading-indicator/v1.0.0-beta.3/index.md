@@ -80,8 +80,8 @@ blocks:
 
       Spinner
       : - Composed of 8 circles arranged equally around a circle
-        - Each dot is a 4px circle
-        - The spinner fits inside a 28px box
+        - Each dot is a 4px circle except for the larger dot which is 6px
+        - The spinner fits inside a 30px box
 
       Animation
       : - Dots take 0.2s to grow and 0.2s to shrink
