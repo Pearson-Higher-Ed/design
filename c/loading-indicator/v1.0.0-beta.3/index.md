@@ -67,6 +67,8 @@ blocks:
       : - Chip is 200px wide and 70px tall
         - Text and indicator are centered in the chip
         - 12px spacing between icon and text
+        - Text may wrap to multiple lines if needed, should stay vertically centered
+        - Chip has 20px margins that force text to wrap
 
       Colors
       : - Background Color: [Charcoal](/design/c/colors/v2.0.0/#rd-charcoal-252525)
