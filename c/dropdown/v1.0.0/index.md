@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Dropdown
 section: Components
-version: 1.0.0-beta.7
-status: deprecated
+version: 1.0.0
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -177,27 +177,6 @@ blocks:
         src: ./assets/redlines.mobile-menu.png
 
 changelog:
-  - version: 1.0.0-beta.7
-    changes: |
-      - UPDATED: Use proper icon, clarify redlines
-  - version: 1.0.0-beta.6
-    changes: |
-      - FIXED: Mobile menu properly covers the header
-  - version: 1.0.0-beta.5
-    changes: |
-      - UPDATED: Clean up dependencies, add a11y checklist, get ready for governance
-      - ADDED: Redlines for animation
-
-  - version: 1.0.0-beta.4
-    changes: |
-      - ADDED: Specific style for mobile dropdowns
-  - version: 1.0.0-beta.3
-    changes: |
-      - CHANGED: Uses new visual style.
-  - version: 1.0.0-beta.2
-    changes: |
-      - CHANGED: Icon to use existing style
-      - ADDED: Option to include dividers between options
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: Initial Version
 ---
