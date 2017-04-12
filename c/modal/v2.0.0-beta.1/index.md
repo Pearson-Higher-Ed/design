@@ -74,7 +74,7 @@ blocks:
 
       Modals contains three parts:
 
-      * __Header__ is optional. Designers should use their best judgment to create a clear message.
+      * __Header__ is optional. Designers should use their best judgment to create a clear message. Note that even if a visual title is not provided some sort of name needs to be given to development so it can be coded in for screen reader access.
       * __Content__
       * __Actions__ are optional. When there isn’t a button, you must include the “X” as a way to dismiss the modals to meet accessibility requirements.
 
@@ -284,6 +284,9 @@ blocks:
       Line
       : - Thickness: 1px
         - [Concrete](/design/c/colors/v2.0.0-beta.7/#rd-concrete)
+
+      Focus Behavior
+      : - For sticky buttons, the scrollable area must be focusable and scrollable via the keyboard
 
     contents:
       - type: wide image
