@@ -3,8 +3,11 @@ body {
 }
 
 .block {
+  // temporary
+  overflow: hidden;
+  
   @include pe-responsive-breakpoint(xs) {
-    width: 90%;
+    margin: 0 10px;
     max-width: 370px;
   }
   @include pe-responsive-breakpoint(md) {
@@ -18,15 +21,11 @@ body {
   @include clearfix;
 
   + .block {
-    margin-top: 60px;
+    // margin-top: 60px;
   }
 
   &:last-child {
     margin-bottom: 60px;
-  }
-
-  a {
-    @include pe-link;
   }
 
   @import "blocks/article_header";

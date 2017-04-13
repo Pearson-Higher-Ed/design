@@ -1,46 +1,47 @@
 &.overview {
-  h2 { @include hl1; }
-  h3 { @include hl3; }
 
-  & > div {
+  .tagline {
     width: 100%;
-    @include pe-responsive-breakpoint(md) {
-      width: auto;
+    margin: 12px 0 0 0;
+  }
+
+  .buttons {
+    margin-top: 28px;
+
+    a + a {
+      margin-left: 16px;
     }
-    @include clearfix;
+  }
+
+  .usage_guidelines {
+    margin-top: 60px;
   }
 
   .toc {
-    width: 100%;
-    margin-top: 40px;
-    @include pe-responsive-breakpoint(lg) {
-      width: 220px;
-      margin-top: 0;
-    }
-    @include pe-responsive-breakpoint(xl) {
-      width: 370px;
-    }
+    margin-top: 60px;
+
+    padding-bottom: 80px;
+    border-bottom: 2px solid $pe-color-alto;
 
     ul {
       list-style-type: none;
       padding: 0;
       margin: 0;
 
-      @extend .pe-title, .pe-title--small;
+      @extend .pe-title;
 
       a {
         text-decoration: none;
-        color: pe-color(hyperdrive);
+      }
+
+      li + li {
+        margin-top: 16px;
       }
     }
   }
 
-  .tagline {
-    width: 100%;
-    margin: 0;
-    @include pe-responsive-breakpoint(md) {
-      width: 760px;
-    }
+  .features {
+    margin-top: 60px;
   }
 
   .description {
@@ -52,6 +53,18 @@
     }
   }
 
+  .dependencies {
+    margin-top: 40px;
+  }
+
+  .other {
+    margin-top: 40px;
+
+    padding-bottom: 60px;
+    border-bottom: 2px solid $pe-color-alto;
+  }
+
+
   .info {
     margin: 20px 0;
     width: 100%;
@@ -61,32 +74,9 @@
     }
   }
 
-  .feature_list {
-    width: 100%;
-    @extend .pe-copy;
-    @include pe-responsive-breakpoint(md) {
-      width: 370px;
-      float: left;
-    }
-    ul {
-      @include pe-ulist;
-    }
-  }
 
-  .usage {
-    width: 100%;
-    margin-top: 20px;
-    @extend .pe-copy;
-    @include pe-responsive-breakpoint(md) {
-      width: 370px;
-      margin: 0 0 0 20px;
-      float: left;
-    }
 
-    h3 + p {
-      margin-top: 0;
-    }
-  }
+
 
   .article_info {
     margin-top: 40px;
@@ -113,31 +103,6 @@
 
       .person:nth-of-type(2n+1) {
         margin-left: 0;
-      }
-    }
-
-    .dependencies {
-      width: 175px;
-      float: left;
-      clear: both;
-      margin-top: 20px;
-      @include pe-responsive-breakpoint(md) {
-        margin-left: 20px;
-        margin-top: 0;
-        clear: none;
-      }
-    }
-
-    .downloads {
-      margin-top: 20px;
-      width: 100%;
-      clear: both;
-      float: left;
-      @include pe-responsive-breakpoint(md) {
-        width: 175px;
-        clear: none;
-        margin-left: 20px;
-        margin-top: 0;
       }
     }
   }
