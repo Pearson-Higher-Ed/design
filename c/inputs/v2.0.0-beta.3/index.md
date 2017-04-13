@@ -5,6 +5,7 @@ section: Components
 status: deprecated
 version: 2.0.0-beta.3
 private: true
+implemented: false
 people:
   - role: Product Owner
     name: Joe Macaluso

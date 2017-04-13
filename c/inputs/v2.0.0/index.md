@@ -5,6 +5,7 @@ section: Components
 status: active
 version: 2.0.0
 rebranded: true
+implemented: true
 people:
   - role: Product Owner
     name: Joe Macaluso

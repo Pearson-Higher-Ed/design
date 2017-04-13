@@ -5,7 +5,7 @@ section: Components
 redirect_from: /docs/ui-components/application-header/
 version: 1.0.0-beta.5
 status: deprecated
-implemented: false
+implemented: true
 people:
   - role: Product Owner
     name: Joe Macaluso
