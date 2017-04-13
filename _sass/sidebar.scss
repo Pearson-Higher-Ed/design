@@ -65,19 +65,6 @@
   }
 }
 
-.top-level-content {
-  margin-left: 0;
-  transition: margin-left 0.3s;
-
-  // &.open {
-  //   margin-left: 240px;
-  // }
-
-  @include pe-responsive-breakpoint(xl) {
-    margin-left: 240px;
-  }
-}
-
 .ultimate-header {
   @extend .pe-title--small;
   color: $pe-color-white;
