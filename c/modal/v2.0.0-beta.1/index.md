@@ -201,7 +201,7 @@ blocks:
 
 
       - md = Medium Devices and Above (>= 768px)
-      - sd = Small Devices (480px - 768px)
+      - sm = Small Devices (480px - 768px)
       - xs = Extra Small Devices (320px - 480px)
 
 
@@ -210,22 +210,21 @@ blocks:
 
       Width
       : - md and up: 600px
-        - sd: 440px
+        - sm: 440px
         - xs: Auto
 
       Margin
       : - md: 60px
-        - sd: 40px
+        - sm: 40px
         - xs: 20px
 
       Spacing
-      : - md and up: Spacious
-        - sd: Compact
-        - xs: Compact
+      : - md devices have a more generous spacing (see illustration on the right)
+        - sm and xs devices have a more compact layout (see illustration on the left)
 
       Header
       : - md: [Large Section Heading](/design/c/typography/v2.0.0/#rd-ui-headings-section-large) 24px
-        - sd: [Basic Section Heading](/design/c/typography/v2.0.0/#rd-ui-headings-section-basic) 20px
+        - sm: [Basic Section Heading](/design/c/typography/v2.0.0/#rd-ui-headings-section-basic) 20px
         - xs: [Basic Section Heading](/design/c/typography/v2.0.0/#rd-ui-headings-section-basic) 20px
         - [Charcoal](/design/c/colors/v2.0.0-beta.7/#rd-charcoal)
 
