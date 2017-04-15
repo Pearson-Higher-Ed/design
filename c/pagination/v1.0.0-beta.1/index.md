@@ -16,6 +16,14 @@ people:
     name: Lynn Chang
     email: lynn.chang@pearson.com
 
+dependencies:
+  - name: Typography
+    version: 2.0.0-beta.9
+  - name: Colors
+    version: 2.0.0-beta.5
+  - name: Icons
+    version: 2.0.0-beta.4
+
 tagline: |
   This component defines the standard visual style for the pagination element.
 features:
@@ -59,9 +67,9 @@ blocks:
       : - Page number: 44x44px
 
       Page Number style
-      : - Normal: Basic UI Text: 14px/18px(#6A7070)
-        - Selected: Bold UI Text 14/18px (#252525), border 2px
-        - Hover: Basic UI Text: 14px/18px(#6A7070), border 2px
+      : - Normal: Basic UI Text: 14px/18px[Medium Gray](/design/c/colors/v2.1.0-beta.2/#rd-medium-gray)
+        - Selected: Bold UI Text 14/18px [Charcoal](/design/c/colors/v2.1.0-beta.2/#rd-charcoal), border 2px
+        - Hover: Basic UI Text: 14px/18px[Medium Gray](/design/c/colors/v2.1.0-beta.2/#rd-medium-gray), border 2px
 
     contents:
     - type: wide image
@@ -76,9 +84,9 @@ blocks:
         - Ellipses: 44x32px
 
       Page Number style
-      : - Normal: Basic UI Text: 14px/18px(#6A7070)
-        - Selected: Bold UI Text 14/18px (#252525), border 2px
-        - Hover: Basic UI Text: 14px/18px(#6A7070), border 2px
+      : - Normal: Basic UI Text: 14px/18px[Medium Gray](/design/c/colors/v2.1.0-beta.2/#rd-medium-gray)
+        - Selected: Bold UI Text 14/18px [Charcoal](/design/c/colors/v2.1.0-beta.2/#rd-charcoal), border 2px
+        - Hover: Basic UI Text: 14px/18px[Medium Gray](/design/c/colors/v2.1.0-beta.2/#rd-medium-gray), border 2px
 
 
     contents:
