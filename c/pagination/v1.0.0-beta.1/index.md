@@ -2,7 +2,6 @@
 layout: component-yaml
 title: Pagination
 section: Components
-redirect_from: /docs/ui-components/calendar/
 status: active
 version: 1.0.0-beta.1
 people:

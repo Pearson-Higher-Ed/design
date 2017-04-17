@@ -1,4 +1,4 @@
 ---
-title: Calendar
+title: Pagination
 layout: component-beta
 ---
