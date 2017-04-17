@@ -4,6 +4,7 @@ title: Icons
 section: Components
 version: 2.0.0-beta.4
 status: deprecated
+implemented: false
 people:
   - role: Product Owner
     name: Joe Macaluso

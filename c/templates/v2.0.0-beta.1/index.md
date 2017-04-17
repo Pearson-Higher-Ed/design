@@ -4,6 +4,7 @@ title: Templates
 section: Components
 version: 2.0.0-beta.1
 status: active
+implemented: true
 people:
   - role: Product Owner
     name: Joe Macaluso

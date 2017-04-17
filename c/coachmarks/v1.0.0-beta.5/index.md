@@ -4,7 +4,7 @@ title: Coach Marks
 section: Components
 version: 1.0.0-beta.5
 status: active
-implemented: false
+implemented: true
 people:
   - role: Interaction Design
     name: Albert Christy
