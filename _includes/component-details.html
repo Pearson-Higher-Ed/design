@@ -24,12 +24,31 @@
     <div class="block article_header">
       <h1 class="pe-page-title">{{page.title}}</h1>
       <span class="pe-label pe-label--large">v{{page.version}}</span>
+
+      <div class="buttons pe-xs--hidden pe-sm--hidden">
+        {% if page.sketch %}
+          {% assign sketch_file = page.sketch %}
+        {% else %}
+          {% for download in page.downloads %}
+            {% if download.link contains '.sketch' %}
+              {% assign sketch_file = download.link %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+        <a class="pe-btn__primary--btn_large" href="{{ sketch_file }}">Sketch File</a>
+
+        {% if page.implementation %}
+          <a href="{{ page.implementation }}" class="pe-btn__primary--btn_large">Code</a>
+        {% endif %}
+      </div>
     </div>
 
     <div class="block overview">
       <p class="pe-label pe-label--large tagline">{{page.tagline}}</p>
 
-      <div class="buttons">
+      <div class="buttons pe-xs--visible pe-sm--visible">
         {% if page.sketch %}
           {% assign sketch_file = page.sketch %}
         {% else %}

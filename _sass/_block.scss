@@ -5,18 +5,19 @@ body {
 .block {
   // temporary
   overflow: hidden;
-  
-  @include pe-responsive-breakpoint(xs) {
-    margin: 0 10px;
-    max-width: 370px;
-  }
+
+  padding: 0 10px;
+  margin: 0 auto;
+  max-width: 480px;
+
   @include pe-responsive-breakpoint(md) {
     width: 760px;
     max-width: none;
+    padding: 0;
   }
+
   @include pe-responsive-breakpoint(lg) { width: 1000px; }
   @include pe-responsive-breakpoint(xl) { width: 1160px; }
-  margin: 0 auto;
 
   @include clearfix;
 
