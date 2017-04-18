@@ -2,7 +2,6 @@
 
   @include pe-responsive-breakpoint(md) {
     padding-bottom: 60px;
-    border-bottom: 2px solid $pe-color-alto;
   }
 
   .tagline {
@@ -90,7 +89,6 @@
     margin-top: 60px;
 
     @include pe-responsive-breakpoint(md to lg) {
-      // @include four-col-metadata;
       @include make-grid-child(6);
       float: left;
     }
@@ -118,7 +116,6 @@
     margin-top: 40px;
 
     padding-bottom: 60px;
-    border-bottom: 2px solid $pe-color-alto;
 
     @include pe-responsive-breakpoint(md to lg) {
       margin-top: 60px;

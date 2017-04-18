@@ -1,9 +1,17 @@
 &.changelog {
+
+  border-top: 2px solid $pe-color-alto;
+  padding-top: 60px;
+
+  h2 {
+    margin-bottom: 24px;
+  }
+
   ul {
     @include pe-ulist;
   }
 
   ul + h3 {
-    margin-top: 30px;
+    margin-top: 24px;
   }
 }

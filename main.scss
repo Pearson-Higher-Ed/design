@@ -2,6 +2,7 @@
 # So Jekyll sees this file
 ---
 
+$pe-fonts-path: "./fonts/";
 @import "../node_modules/pearson-elements/scss/elements";
 
 @import "utility";
@@ -26,7 +27,7 @@ html {
 }
 
 body {
-  background-color: pe-color('off-white');
+  background-color: $pe-color-white-gray;
 }
 
 .pull-right {
