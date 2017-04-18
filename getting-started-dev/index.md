@@ -2,6 +2,7 @@
 layout: article
 title: Developer Guide
 section: use
+order: 2
 ---
 
 Components are being hosted on NPM under the [@pearson-components organization][npm-org]. The majority will be available
@@ -12,7 +13,7 @@ in public scope, but some will be privately scoped and require credentials to in
 We plan to offer two SDKs which package a set of commonly used components together for easy installation and usage.
 
 ### Elements
-Elements SDK consists of pure CSS (precompiled from SCSS) and includes the core set of components for setting up a 
+Elements SDK consists of pure CSS (precompiled from SCSS) and includes the core set of components for setting up a
 website with Elemental Design. This list includes components such as:
 
 - Buttons
@@ -31,7 +32,7 @@ Compounds SDK will include commonly used components that leverage javascript for
 
 [elements]: https://www.npmjs.com/package/pearson-elements
 [npm-org]: https://www.npmjs.com/~pearson-ux
-[ddocs]: https://pearson-elements-v0.surge.sh/getting-started/
+[ddocs]: https://pearson-elements-v1.surge.sh/getting-started/
 [ghub]: https://github.com/pearson-higher-ed/elements/
 
 ## Consuming
@@ -90,21 +91,21 @@ Compounds SDK will include commonly used components that leverage javascript for
 [compoundsNG]: https://github.com/Pearson-Higher-Ed/compounds-ng
 
 ## Contributing
-Read the [Component Creation Guide][creation] to learn about the process of adding a new component to the library. The 
+Read the [Component Creation Guide][creation] to learn about the process of adding a new component to the library. The
 development standards are currently being determined, for now please follow the [Origami principles][oprinciples]. If you
  are contributing to the Elements SDK follow [these guidelines][eprinciples] as well.
 
 Note: Specifically for adding icons to ElementsSDK, first the icons must be approved by Elements' UX members. After that, you may follow the [instructions in the Elements README][ghubreadme].
 
 Development specific requirements will eventually be added to the [Library Membership Specification][spec]. In the meantime,
- one principle to keep in mind is that components should not do any data fetching themselves, rather they should expect 
+ one principle to keep in mind is that components should not do any data fetching themselves, rather they should expect
  data to be passed through eventing or properties.
 
 [creation]: {{site.baseurl}}/component-creation-guide
 [ghubreadme]: https://github.com/Pearson-Higher-Ed/elements#adding-icons
 [spec]: {{site.baseurl}}/membership-spec
 [oprinciples]: https://origami.pearsoned.com/docs/overview/principles/
-[eprinciples]: https://github.com/Pearson-Higher-Ed/elements/blob/v0/CONTRIBUTING.md
+[eprinciples]: https://github.com/Pearson-Higher-Ed/docs/blob/master/origami-contributions.md
 
 ## Other Important Links
 

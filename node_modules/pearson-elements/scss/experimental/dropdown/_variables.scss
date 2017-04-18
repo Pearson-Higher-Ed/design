@@ -1,0 +1,19 @@
+// Dropdowns
+$pe-dropdown-z-index: 1001 !default;
+$pe-dropdown-menu-bg: pe-color(white);
+$pe-dropdown-menu-border: rgba(0, 0, 0, 0.15) !default;
+$pe-dropdown-menu-divider-bg: $pe-dropdown-menu-border;
+$pe-dropdown-menu-link-color: pe-color(gray-no-1);
+$pe-dropdown-menu-link-hover-color: pe-color(white);
+$pe-dropdown-menu-link-hover-bg: pe-color(boring);
+$pe-dropdown-menu-link-disabled-color: pe-color(boring);
+
+
+// inverse
+$pe-dropdown-menu-bg-inverse: pe-color(gutenberg-black);
+$pe-dropdown-menu-border-inverse: pe-color(gutenberg-black);
+$pe-dropdown-menu-link-color-inverse: pe-color(gray-wash);
+$pe-dropdown-menu-link-hover-color-inverse: pe-color(brightly-lit);
+$pe-dropdown-menu-link-hover-bg-inverse: pe-color(asphalt);
+$pe-dropdown-menu-link-disabled-color-inverse: pe-color(smoke-gray);
+$pe-dropdown-menu-divider-bg-inverse: pe-color(gray-wash);

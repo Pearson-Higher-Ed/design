@@ -1,0 +1,22 @@
+// Header
+$pe-header-z-index: 1000 !default;
+$pe-header-logo-sprite-name: 'pearson-sprite.svg' !default;
+$pe-header-height: 44px !default;
+$pe-header-height-lg: 54px !default;
+$pe-header-bg: pe-color(black) !default;
+$pe-header-text-color: pe-color(white) !default;
+$pe-header-link-color: pe-color(hairline-gray) !default;
+$pe-header-link-hover-color: pe-color(off-white) !default;
+
+$pe-header-brand-font-size: 1.25rem !default;
+
+$pe-header-logo-sprite-height: 16px !default;
+$pe-header-logo-margin-x: 14px !default;
+
+$pe-header-nav-link-active-bg: pe-color(full-moon) !default;
+$pe-header-nav-link-padding-x: 15px !default;
+
+$pe-header-bg-inverse: #f2f2f2 !default;
+$pe-header-link-color-inverse: #000000 !default;
+$pe-header-link-hover-color-inverse: #595959 !default;
+$pe-header-nav-link-active-bg-inverse: #e6e6e6 !default;

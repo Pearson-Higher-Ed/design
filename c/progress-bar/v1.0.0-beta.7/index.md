@@ -38,7 +38,7 @@ downloads:
     link: ./assets/SketchProgressBarComponent.zip
   - name: .illustrator mockup
     link: ./assets/IllustratorProgressBarComponent.zip    
-  - name: Accessiblity Checklist
+  - name: Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1k9ZciQifxzfafy90mTjYHIFzvztl2fz17XzYKbi2v-A/edit?usp=sharing
 
 # Overview information for the component
@@ -47,7 +47,7 @@ tagline: |
 description:
 features:
   - Complete vs Incomplete Status
-  - Compliance with Accessiblity
+  - Compliance with Accessibility
 usage_guidelines: |
   Every instance of a Progress Bar should use this component.  Future versions of the progress bar will include more detailed meta information.
 

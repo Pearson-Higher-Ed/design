@@ -5,7 +5,7 @@ section: Components
 redirect_from: /docs/ui-components/avatar-display/
 version: 1.0.0
 status: active
-implemented: false
+implemented: true
 people:
   - role: Product Owner
     name: Joe Macaluso
