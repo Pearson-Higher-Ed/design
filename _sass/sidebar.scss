@@ -22,7 +22,7 @@
     @include _sidebarOpen;
   }
 
-  @include pe-responsive-breakpoint(xl) {
+  @media (min-width: 1460px) {
     @include _sidebarOpen;
   }
 
@@ -77,7 +77,7 @@
   transition: left 0.3s;
   z-index: 6;
 
-  @include pe-responsive-breakpoint(xl) {
+  @media (min-width: 1460px) {
     left: 240px;
 
     .burger {

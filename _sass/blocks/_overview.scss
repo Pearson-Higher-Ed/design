@@ -1,8 +1,17 @@
 &.overview {
 
+  @include pe-responsive-breakpoint(md) {
+    padding-bottom: 60px;
+    border-bottom: 2px solid $pe-color-alto;
+  }
+
   .tagline {
     width: 100%;
     margin: 12px 0 0 0;
+
+    @include pe-responsive-breakpoint(md) {
+      margin-top: 28px;
+    }
   }
 
   .buttons {
@@ -10,6 +19,10 @@
 
     a + a {
       margin-left: 16px;
+    }
+
+    @include pe-responsive-breakpoint(md) {
+      display: none;
     }
   }
 
@@ -38,23 +51,67 @@
         margin-top: 16px;
       }
     }
+
+    @include pe-responsive-breakpoint(xl) {
+      border: none;
+      padding: 0;
+    }
+  }
+
+  @include pe-responsive-breakpoint(xl) {
+    @include make-grid-parent;
+
+    .left {
+      @include make-grid-child(8);
+      float: left;
+    }
+
+    .right {
+      @include make-grid-child(4);
+      float: left;
+    }
+  }
+
+
+  @mixin four-col-metadata {
+    box-sizing: border-box;
+    width: 25%;
+    padding: 0 10px;
+    float: left;
+  }
+
+  @include pe-responsive-breakpoint(md to lg) {
+    .right {
+      @include make-grid-parent;
+    }
   }
 
   .features {
     margin-top: 60px;
-  }
 
-  .description {
-    width: 100%;
-    margin: 20px 0 40px;
-    @extend .pe-copy;
-    @include pe-responsive-breakpoint(md) {
-      width: 760px;
+    @include pe-responsive-breakpoint(md to lg) {
+      // @include four-col-metadata;
+      @include make-grid-child(6);
+      float: left;
+    }
+
+    @include pe-responsive-breakpoint(xl) {
+      margin-top: 28px;
     }
   }
 
   .dependencies {
     margin-top: 40px;
+
+    @include pe-responsive-breakpoint(md to lg) {
+      margin-top: 60px;
+      @include make-grid-child(3);
+      float: left;
+    }
+
+    @include pe-responsive-breakpoint(xl) {
+      margin-top: 24px;
+    }
   }
 
   .other {
@@ -62,48 +119,49 @@
 
     padding-bottom: 60px;
     border-bottom: 2px solid $pe-color-alto;
-  }
 
+    @include pe-responsive-breakpoint(md to lg) {
+      margin-top: 60px;
+      @include make-grid-child(3);
+      float: left;
+    }
 
-  .info {
-    margin: 20px 0;
-    width: 100%;
-    @include clearfix;
     @include pe-responsive-breakpoint(md) {
-      width: 760px;
+      border: none;
+      padding-bottom: 0;
+    }
+
+    @include pe-responsive-breakpoint(xl) {
+      margin-top: 24px;
     }
   }
 
-
-
-
-
-  .article_info {
-    margin-top: 40px;
-    @include pe-responsive-breakpoint(md) { width: 760px; }
-    @include clearfix;
-
-    .people {
-      width: 100%;
-      @include pe-responsive-breakpoint(md) {
-        width: auto;
-        max-width: 370px;
-        float: left;
-      }
-      .person {
-        width: 46%;
-        margin-left: 4%;
-        @include pe-responsive-breakpoint(sm) {
-          width: 175px;
-          margin-left: 20px;
-        }
-        margin-bottom: 8px;
-        float: left;
-      }
-
-      .person:nth-of-type(2n+1) {
-        margin-left: 0;
-      }
-    }
-  }
+  // .article_info {
+  //   margin-top: 40px;
+  //   @include pe-responsive-breakpoint(md) { width: 760px; }
+  //   @include clearfix;
+  //
+  //   .people {
+  //     width: 100%;
+  //     @include pe-responsive-breakpoint(md) {
+  //       width: auto;
+  //       max-width: 370px;
+  //       float: left;
+  //     }
+  //     .person {
+  //       width: 46%;
+  //       margin-left: 4%;
+  //       @include pe-responsive-breakpoint(sm) {
+  //         width: 175px;
+  //         margin-left: 20px;
+  //       }
+  //       margin-bottom: 8px;
+  //       float: left;
+  //     }
+  //
+  //     .person:nth-of-type(2n+1) {
+  //       margin-left: 0;
+  //     }
+  //   }
+  // }
 }

@@ -25,7 +25,7 @@
       <h1 class="pe-page-title">{{page.title}}</h1>
       <span class="pe-label pe-label--large">v{{page.version}}</span>
 
-      <div class="buttons pe-xs--hidden pe-sm--hidden">
+      <div class="buttons">
         {% if page.sketch %}
           {% assign sketch_file = page.sketch %}
         {% else %}
@@ -46,80 +46,90 @@
     </div>
 
     <div class="block overview">
-      <p class="pe-label pe-label--large tagline">{{page.tagline}}</p>
 
-      <div class="buttons pe-xs--visible pe-sm--visible">
-        {% if page.sketch %}
-          {% assign sketch_file = page.sketch %}
-        {% else %}
-          {% for download in page.downloads %}
-            {% if download.link contains '.sketch' %}
-              {% assign sketch_file = download.link %}
-              {% break %}
-            {% endif %}
+      <div class="left">
+
+        <p class="pe-label pe-label--large tagline">{{page.tagline}}</p>
+
+        <div class="buttons">
+          {% if page.sketch %}
+            {% assign sketch_file = page.sketch %}
+          {% else %}
+            {% for download in page.downloads %}
+              {% if download.link contains '.sketch' %}
+                {% assign sketch_file = download.link %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+
+          <a class="pe-btn__primary--btn_large" href="{{ sketch_file }}">Sketch File</a>
+
+          {% if page.implementation %}
+            <a href="{{ page.implementation }}" class="pe-btn__primary--btn_large">Code</a>
+          {% endif %}
+        </div>
+
+        <div class="usage_guidelines">
+          <p><span class="pe-label pe-label--bold">Usage Guidelines</span></p>
+          {% if page.usage_guidelines %}
+            {{page.usage_guidelines | markdownify}}
+          {% endif %}
+        </div>
+
+        <div class="toc">
+          <ul>
+            {% for heading in page.blocks %}
+              {% if heading.type == 'section' %}
+                <li><a href="#{{heading.name | slugify}}">{{heading.name}}</a></li>
+              {% endif %}
+            {% endfor %}
+            <li><a href="#changelog">Changelog</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="right">
+
+        <div class="features">
+          <p><span class="pe-label pe-label--bold">Features</span></p>
+          <ul class="pe-list pe-styled-lists--unordered">
+            {% for feature in page.features %}
+              <li>{{ feature }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="dependencies">
+          <p><span class="pe-label pe-label--bold">Dependencies</span></p>
+          {% for dependency in page.dependencies %}
+            <p><a href="{{site.baseurl}}/c/{{dependency.name | slugify}}/v{{dependency.version}}">{{dependency.name}}@^{{dependency.version}}</a></p>
           {% endfor %}
-        {% endif %}
+          {% unless page.dependencies and page.dependencies != empty %}
+            <p>None</p>
+          {% endunless %}
+        </div>
 
-        <a class="pe-btn__primary--btn_large" href="{{ sketch_file }}">Sketch File</a>
+        <div class="other">
+          {% if page.a11y_checklist %}
+            {% assign a11y = page.a11y_checklist %}
+          {% else %}
+            {% for download in page.downloads %}
+              {% if download.name contains "ccessib" %}
+                {% assign a11y = download.link %}
+                {% break %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
 
-        {% if page.implementation %}
-          <a href="{{ page.implementation }}" class="pe-btn__primary--btn_large">Code</a>
-        {% endif %}
+          <p><span class="pe-label pe-label--bold">Other</span></p>
+          <p><a href="{{a11y}}">UX Accessibility Checklist</a></p>
+        </div>
+        
       </div>
 
-      <div class="usage_guidelines">
-        <p><span class="pe-label pe-label--bold">Usage Guidelines</span></p>
-        {% if page.usage_guidelines %}
-          {{page.usage_guidelines | markdownify}}
-        {% endif %}
-      </div>
-
-      <div class="toc">
-        <ul>
-          {% for heading in page.blocks %}
-            {% if heading.type == 'section' %}
-              <li><a href="#{{heading.name | slugify}}">{{heading.name}}</a></li>
-            {% endif %}
-          {% endfor %}
-          <li><a href="#changelog">Changelog</a></li>
-        </ul>
-      </div>
-
-      <div class="features">
-        <p><span class="pe-label pe-label--bold">Features</span></p>
-        <ul class="pe-list pe-styled-lists--unordered">
-          {% for feature in page.features %}
-            <li>{{ feature }}</li>
-          {% endfor %}
-        </ul>
-      </div>
-
-      <div class="dependencies">
-        <p><span class="pe-label pe-label--bold">Dependencies</span></p>
-        {% for dependency in page.dependencies %}
-          <p><a href="{{site.baseurl}}/c/{{dependency.name | slugify}}/v{{dependency.version}}">{{dependency.name}}@^{{dependency.version}}</a></p>
-        {% endfor %}
-        {% unless page.dependencies and page.dependencies != empty %}
-          <p>None</p>
-        {% endunless %}
-      </div>
-
-      <div class="other">
-        {% if page.a11y_checklist %}
-          {% assign a11y = page.a11y_checklist %}
-        {% else %}
-          {% for download in page.downloads %}
-            {% if download.name contains "ccessib" %}
-              {% assign a11y = download.link %}
-              {% break %}
-            {% endif %}
-          {% endfor %}
-        {% endif %}
-
-        <p><span class="pe-label pe-label--bold">Other</span></p>
-        <p><a href="{{a11y}}">UX Accessibility Checklist</a></p>
-      </div>
-
+      {% comment %}
       <div class="article_info">
         <div class="people">
           {% for person in page.people %}
@@ -129,8 +139,9 @@
           </div>
           {% endfor %}
         </div>
-
       </div>
+      {% endcomment %}
+
     </div>
 
     {% for block in page.blocks %}

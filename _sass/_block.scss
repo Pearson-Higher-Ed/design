@@ -2,10 +2,7 @@ body {
   background-color: pe-color(off-white);
 }
 
-.block {
-  // temporary
-  overflow: hidden;
-
+.blocks {
   padding: 0 10px;
   margin: 0 auto;
   max-width: 480px;
@@ -16,10 +13,12 @@ body {
     padding: 0;
   }
 
-  @include pe-responsive-breakpoint(lg) { width: 1000px; }
-  @include pe-responsive-breakpoint(xl) { width: 1160px; }
+  @include pe-responsive-breakpoint(xl) { width: 1150px; }
+}
 
-  @include clearfix;
+.block {
+  // temporary
+  overflow: hidden;
 
   + .block {
     // margin-top: 60px;

@@ -31,3 +31,16 @@
   @extend .pe-label;
   @extend .pe-label--bold;
 }
+
+
+@mixin make-grid-parent {
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+@mixin make-grid-child($cols, $max: 12) {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: percentage($cols/$max);
+  box-sizing: border-box;
+}
