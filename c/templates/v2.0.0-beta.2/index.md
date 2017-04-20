@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Templates
 section: Components
-version: 2.0.0-beta.1
-status: deprecated
+version: 2.0.0-beta.2
+status: active
 implemented: true
 people:
   - role: Product Owner
@@ -57,7 +57,7 @@ blocks:
       Templates define set layout areas which are designed to work with the [Presentation Strategies](/design/c/presentation-strategies/beta) component for actually filling them with content.
 
       ### Responsive Behavior
-      Templates are designed to work at each breakpoint, adjusting the arrangement of content areas as appropriate. For more complex designs you may specify different templates for each breakpoint.
+      Each template can be used at any breakpoint, although some will be more suited to larger or smaller viewports. Designers should specify which template applies to each breakpoint when designing a page.
     contents:
       - type: narrow image
         src: ./assets/stacked.png
@@ -73,11 +73,30 @@ blocks:
 
   - type: two column
     text: |
+      ### 12 column
       The simplest page template, it takes up the full 12 columns available at every breakpoint.
     contents:
       - type: wide image
         src: ./assets/single.column.png
-        caption: The single column layout.
+        caption: The 12 column layout.
+
+  - type: two column
+    text: |
+      ### 10 Column
+      Use this slightly narrower single column for content which would look stretched if it took up all 12 columns.
+    contents:
+      - type: wide image
+        src: ./assets/10.column.png
+        caption: A 10 column template.
+
+  - type: two column
+    text: |
+      ### Static Columns
+      The static column presents a single column of fixed width which is centered in the page. It comes in three different sizes (small at 440px, medium at 600px, and large at 800px) and is handy for presenting modals or small pieces of content like sign in forms.
+    contents:
+      - type: wide image
+        src: ./assets/static.column.png
+        caption: A column of static width at larger viewports.
 
   - type: section
     name: Two Column
@@ -86,30 +105,35 @@ blocks:
 
   - type: two column
     text: |
-      This template devotes 8 columns to a main content area and the remaining 4 to a sidebar which appears on either side (prefer the right where it makes sense). At medium and smaller breakpoints the content areas stack (sidebar on top if it was to the left of the content area, underneath if it was to the right).
+      ### 4/8 Template
+      This template devotes 8 columns to a main content area and the remaining 4 to a sidebar which appears on either side (prefer the right where it makes sense).
     contents:
       - type: wide image
         src: ./assets/two.column.png
-        caption: The two column layout at larger breakpoints.
-      - type: narrow image
-        src: ./assets/two.column.responsive.png
-        caption: Responsive view with the main content on top (occurs with a right-hand sidebar).
-      - type: narrow image
-        src: ./assets/two.column.responsive.alt.png
-        caption: Sidebar content on top (occurs with a left-hand sidebar).
-
-  - type: section
-    name: Static Column
-    exports:
-      - Static column
+        caption: The 4/8 column template with the sidebar on the right.
 
   - type: two column
     text: |
-      The static column presents a single column of fixed width which is centered in the page. At smaller breakpoints it transitions to full width fluid behavior. This column comes in two different sizes (small at 480px and large at 800px) and is handy for presenting modals or small pieces of content like sign in forms.
+      ### 6/6 template
+      Evenly splits the page between two equal columns.
     contents:
       - type: wide image
-        src: ./assets/static.column.png
-        caption: A column of static width at larger viewports.
+        src: ./assets/6.6.column.png
+        caption: The 6/6 column template provides two equal width content areas
+
+  - type: section
+    name: Three Column
+
+  - type: two column
+    text: |
+      ### 4/4/4 Template
+      Evenly splits the page into three equal columns.
+    contents:
+      - type: wide image
+        src: ./assets/4.4.4.column.png
+        caption: Example of the three column template.
+
+
 
   - type: section
     name: Redlines
@@ -132,48 +156,50 @@ blocks:
       - type: narrow image
         src: ./assets/spacing.png
         caption: The three types of spacing available with grid width borders.
+
   - type: two column
     text: |
       ### Single column
-      Dimensions
-      : - Full [12 column](/design/c/grid/v1.0.0-beta.2/#rd-grid) width at all breakpoints
+      12 Column
+      : - Full [12 column](/design/c/grid/v1.0.0/#rd-grid) width at all breakpoints
 
-      Responsive
-      : - Maintain full [12 column](/design/c/grid/v1.0.0-beta.2/#rd-grid) width
+      10 Column
+      : - Occupies the interior [10 columns](/design/c/grid/v1.0.0/#rd-grid) at all breakpoints
+
+      Static Column
+      : - Occupies a fixed width which is centered in the page
+        - Small is 440px, medium is 600px, large is 800px
+        - These should not be used at viewports that are too narrow
+
     contents:
       - type: wide image
         src: ./assets/single.column.png
-        caption: The single column template.
+        caption: The single column template. Each variation simply offers a different width which may be dynamic based on the viewport or static.
 
   - type: two column
     text: |
       ### Two column
-      Dimensions
-      : - Main area is [8 grid columns](/design/c/grid/v1.0.0-beta.2/#rd-grid) wide, sidebar is [4 columns](/design/c/grid/v1.0.0-beta.2/#rd-grid)
+      4/8 Template
+      : - Main area is [8 grid columns](/design/c/grid/v1.0.0/#rd-grid) wide, sidebar is [4 columns](/design/c/grid/v1.0.0/#rd-grid)
         - Prefer to locate the sidebar on the right, but both are acceptable
 
-      Responsive
-      : - At [medium](/design/c/breakpoints/v1.0.0/#rd-medium) and smaller breakpoints stack the two columns
-        - The two content areas should stack based on their order in the DOM, e.g. a left hand sidebar would end up on top in a responsive view.
+      6/6 Template
+      : - The two content areas each occupy [6 grid columns](/design/c/grid/v1.0.0/#rd-grid)
+
     contents:
       - type: wide image
         src: ./assets/two.column.png
-        caption: The two column template.
+        caption: An example two column template that divides the page into two content areas.
 
   - type: two column
     text: |
-      ### Static column
-      Dimensions
-      : - The large size is 800px wide at [large](/design/c/breakpoints/v1.0.0/#rd-large) breakpoints and larger
-        - The small size is 480px wide at [medium](/design/c/breakpoints/v1.0.0/#rd-medium) breakpoints and larger
-
-      Responsive
-      : - Below the breakpoints mentioned above, both sizes become [10 grid columns](/design/c/grid/v1.0.0-beta.2/#rd-grid) wide and centered
-        - Below the [small](/design/c/breakpoints/v1.0.0/#rd-small) breakpoint both sizes become the full [12 column](/design/c/grid/v1.0.0-beta.2/#rd-grid) width
+      ### Three column
+      4/4/4 Template
+      : - Three content areas each occupy [4 grid column](/design/c/grid/v1.0.0/#rd-grid)
     contents:
       - type: wide image
-        src: ./assets/static.column.png
-        caption: The static column template.
+        src: ./assets/4.4.4.column.png
+        caption: Example of the three equal column template.
 
   - type: style table
     styles:
@@ -182,6 +208,12 @@ blocks:
       - Static column
 
 changelog:
+  - version: 2.0.0-beta.2
+    changes: |
+      - CHANGED: Updated to no longer require a full responsive specification for each template. Instead designers can mix and match different templates at each breakpoint.
+      - CHANGED: The 480px wide static column is now 440px wide.
+      - ADDED: 600px static column template.
+      - ADDED: Three equal column template.
   - version: 2.0.0-beta.1
     changes: |
       - REMOVED: Option for two column layout to switch DOM order of main and sidebar ares.
