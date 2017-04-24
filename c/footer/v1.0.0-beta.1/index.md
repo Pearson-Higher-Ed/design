@@ -3,7 +3,7 @@ layout: component-yaml
 title: Footer
 section: Components
 version: 1.0.0-beta.1
-status: Active
+status: active
 implemented: false
 people:
   - role: Interaction Design
