@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Coach Marks
 section: Components
-version: 1.0.0-beta.5
-status: deprecated
+version: 1.0.0-beta.6
+status: active
 implemented: true
 people:
   - role: Interaction Design
@@ -63,7 +63,7 @@ blocks:
       Be careful not to use the coach mark to provide help content that would be better served by the [Contextual Help](http://pearson-higher-ed.github.io/design/c/contextual-help/) component.
 
       ### Instructional
-      When the coach mark instructs the user about a piece of the UI make sure to write the copy in accordance with [accessibility guideline #18](http://wps.pearsoned.com/accessibility/115/29601/7577872.cw/#PG18) by refering to the semantic names of the UI rather than visual appearance. For example, "Click the Start Button" vs "Click the Blue Button".
+      Write the copy in accordance with [accessibility guideline #18](http://wps.pearsoned.com/accessibility/115/29601/7577872.cw/#PG18) by refering to the semantic names of the UI rather than visual appearance. For example, "Click **Start**" vs "Click the Blue Button".
 
       ### Dismissing
       Either the link or close icon should always be present, but the coach mark may also be dismissed when the user interacts with the targeted part of the UI. This is mostly useful for introducing new features or prompting users to take a specific action.
@@ -120,6 +120,9 @@ blocks:
         caption: Single Instance Coach Mark
 
 changelog:
+  - version: 1.0.0-beta.6
+    changes: |
+      - CHANGED: Text in examples to align with UA guidelines
   - version: 1.0.0-beta.5
     changes: |
       - ADDED: Redline spec for drop shadow
