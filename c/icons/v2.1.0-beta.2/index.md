@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Icons
 section: Components
-version: 2.0.0-beta.6
-status: active
+version: 2.1.0-beta.2
+status: deprecated
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -203,33 +203,16 @@ blocks:
 
 
 changelog:
-  - version: 2.0.0-beta.6
+  - version: 2.1.0-beta.2
     changes: |
-      - TWEAKED: border line-weight for help-outline and info-outline
       - ADDED: edit-18, edit-24
-  - version: 2.0.0-beta.5
+      - TWEAKED: border line-weight for help-outline and info-outline
+  - version: 2.1.0-beta.1
     changes: |
       - TWEAKED: checkbox, radio-button
       - ADDED: dropdown-sm, chevron-sm, sort, ellipsis
-  - version: 2.0.0-beta.4
-    changes: |
-      - ADDED: Notification icons.
-  - version: 2.0.0-beta.3
-    changes: |
-      - ADDED: Caps lock icons.
-      - ADDED: HEX links to colors section
-  - version: 2.0.0-beta.2
-    changes: |
-      - ADDED: checkbox tri-state, dropdown, font settings, list, lock, note, pivots, pointers, tip, and zooms.
-      - ADDED: class names for white and blue icons.
-      - TWEAKED: bolder line-weight for 18px and 24px.
-      - REMOVED: newspaper, pin, and suitcase.
-  - version: 2.0.0-beta.1
-    changes: |
-      New Pearson UI Icons
-  - version: 1.2.0-beta.1
-    changes: |
-      - ADDED: search-plus, search-minus, bell, clock-o
+  - version: 2.0.0
+    changes: Updated icons to use new branding style
   - version: 1.1.0
     changes: |
       - ADDED: question-circle, caret-right, caret-down, light-bulb-o, and icons for archive action, plus reading, business case, video, and image content types

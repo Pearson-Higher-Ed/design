@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Icons
 section: Components
-version: 2.0.0-beta.5
+version: 2.1.0
 status: active
 people:
   - role: Product Owner
@@ -13,8 +13,8 @@ people:
     email: van.yang@pearson.com
 implementation: https://pearson-elements-v0.surge.sh/elements/icons/
 downloads:
-  - name: Pearson-icons-1.4.sketch
-    link: ./assets/Pearson_icons_1.4.sketch
+  - name: Pearson-icons-1.5.sketch
+    link: ./assets/Pearson_icons_1.5.sketch
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/15RLoDS-Qlu_Qz1W8UNuiHu3OtdNZ8kzKm_7jecoP5So/edit?usp=sharing
 dependencies:
@@ -68,6 +68,7 @@ blocks:
             | ![](./assets/icons24/clock-24-2x.png) | clock-18 | clock-24 |
             | ![](./assets/icons24/delete-24-2x.png) | delete-18 | delete-24 |
             | ![](./assets/icons24/desktop-24-2x.png) | desktop-18 | desktop-24 |
+            | ![](./assets/icons24/edit-24-2x.png) | edit-18 | edit-24 |
             | ![](./assets/icons24/ellipsis-24-2x.png) | ellipsis-18 | ellipsis-24 |
             | ![](./assets/icons24/email-24-2x.png) | email-18 | email-24 |
             | ![](./assets/icons24/file-24-2x.png) | file-18 | file-24 |
@@ -202,29 +203,12 @@ blocks:
 
 
 changelog:
-  - version: 2.0.0-beta.5
+  - version: 2.1.0
     changes: |
-      - TWEAKED: checkbox, radio-button
-      - ADDED: dropdown-sm, chevron-sm, sort, ellipsis
-  - version: 2.0.0-beta.4
-    changes: |
-      - ADDED: Notification icons.
-  - version: 2.0.0-beta.3
-    changes: |
-      - ADDED: Caps lock icons.
-      - ADDED: HEX links to colors section
-  - version: 2.0.0-beta.2
-    changes: |
-      - ADDED: checkbox tri-state, dropdown, font settings, list, lock, note, pivots, pointers, tip, and zooms.
-      - ADDED: class names for white and blue icons.
-      - TWEAKED: bolder line-weight for 18px and 24px.
-      - REMOVED: newspaper, pin, and suitcase.
-  - version: 2.0.0-beta.1
-    changes: |
-      New Pearson UI Icons
-  - version: 1.2.0-beta.1
-    changes: |
-      - ADDED: search-plus, search-minus, bell, clock-o
+      - ADDED: dropdown-sm, chevron-sm, sort, ellipsis, edit
+      - TWEAKED: checkbox, radio-button, help-outline, info-outline
+  - version: 2.0.0
+    changes: Updated icons to use new branding style
   - version: 1.1.0
     changes: |
       - ADDED: question-circle, caret-right, caret-down, light-bulb-o, and icons for archive action, plus reading, business case, video, and image content types
