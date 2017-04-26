@@ -3,8 +3,8 @@ layout: component-yaml
 title: Loading Indicator
 section: Components
 redirect_from: /docs/ui-components/loading-indicator/
-version: 1.0.0-beta.3
-status: deprecated
+version: 1.0.0
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -105,15 +105,6 @@ blocks:
         caption: Loading indicator animation.
 
 changelog:
-  - version: 1.0.0-beta.3
-    changes: |
-      - ADDED: Accessibility checklist
-      - FIXED: Redline formatting
-
-  - version: 1.0.0-beta.2
-    changes: |
-      - ADDED: Animation detail
-
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: Initial version
 ---
