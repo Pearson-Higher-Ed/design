@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Coach Marks
 section: Components
-version: 1.0.0-beta.6
-status: deprecated
+version: 1.0.0
+status: active
 implemented: true
 people:
   - role: Interaction Design
@@ -120,22 +120,7 @@ blocks:
         caption: Single Instance Coach Mark
 
 changelog:
-  - version: 1.0.0-beta.6
+  - version: 1.0.0
     changes: |
-      - CHANGED: Text in examples to align with UA guidelines
-  - version: 1.0.0-beta.5
-    changes: |
-      - ADDED: Redline spec for drop shadow
-  - version: 1.0.0-beta.4
-    changes: |
-      - CHANGED: Dismissal link to meet contrast reqs.
-  - version: 1.0.0-beta.3
-    changes: |
-      - UPDATED: Simplified features to match current use cases, make single dismiss option
-  - version: 1.0.0-beta.2
-    changes: |
-      - UPDATED: Uses new visual aesthetic
-  - version: 1.0.0-beta.1
-    changes: |
-      - CHANGED: Initial Creation
+      - CHANGED: Initial version
 ---
