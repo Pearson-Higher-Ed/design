@@ -44,7 +44,9 @@ blocks:
 
   - type: two column
     text: |
-      When a message needs to be displayed upon page load (there was an error confirming an email address, for example) the alert should appear statically in the upper left corner of the page ( or center in mobile). This location makes it  noticeable even when the user's screen is magnified.
+      When a message is displayed upon page load, for example if there was an error confirming an email address, the alert should appear statistically in the upper left corner of the page or if on a mobile device the message will appear in the center of the mobile devices screen.  The location will make it noticeable even when the user screen is magnified.
+
+      This message can simply be closed by clicking on the close button or it will auto close the window upon time out.
 
     contents:
       - type: wide image
@@ -53,7 +55,7 @@ blocks:
 
   - type: two column
     text: |
-      At responsive sizes the alert occupies the entire top of the viewport.
+      At responsive sizes the alert occupies the top part of the viewport.
     contents:
       - type: narrow image
         src: ./assets/alert_mobile_over.png
@@ -69,20 +71,6 @@ blocks:
       - type: wide video
         src: ./assets/animation.mp4
         caption: The animation for showing/dismissing a dynamic alert.
-
-  - type: section
-    name: Page level alerts
-
-  - type: two column
-    text: |
-      The message should appear under the Pearson header, which will push all the content down below it.
-
-      The error and warning will stay visible till the alerts is cleared.
-
-    contents:      
-        - type: wide image
-          src: ./assets/alert_fullpage.png
-          caption: The message should appear under the Pearson header, with full width of the screen area.
 
   - type: section
     name: Content (task) level alerts
@@ -173,7 +161,7 @@ blocks:
 
       - type: wide image
         src: ./assets/alerts_spec_desktop 1.png
-        caption: Content(task)level alert
+        caption: Content(task) level alert
 
 
 

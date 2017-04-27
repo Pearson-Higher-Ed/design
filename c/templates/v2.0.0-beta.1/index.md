@@ -3,7 +3,7 @@ layout: component-yaml
 title: Templates
 section: Components
 version: 2.0.0-beta.1
-status: active
+status: deprecated
 implemented: true
 people:
   - role: Product Owner
