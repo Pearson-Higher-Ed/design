@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Buttons
 section: Components
-version: 2.1.0-beta.3
-status: deprecated
+version: 2.1.0-beta.4
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -21,7 +21,7 @@ downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/19r4uvPAZpmXRwT_krIr9MqHLYC-Vgjah2kPDi9PYaQA/edit?usp=sharing
   - name: Sketch
-    link: ./assets/buttons.2.0.0-beta.5.sketch
+    link: ./assets/buttons.2.1.0-beta.4.sketch
 
 dependencies:
   - name: Colors
@@ -32,8 +32,8 @@ dependencies:
 tagline: This component defines the standard visual style for buttons.
 features:
   - Single collection of all button styles
-  - Primary and Default button types
-  - Default and Large button sizes
+  - Primary, Default, and CTA button types
+  - Default/Large, Medium and Small button sizes
   - Guaranteed compliance with Accessibility contrast requirements
 usage_guidelines: |
   Every instance of a button should come from this component. See the sections below for information about when to each each type of button.
@@ -64,9 +64,9 @@ blocks:
 
   - type: two column
     text: |
-      Buttons come in small, large and xlarge sizes. Prefer the small size but feel free to use the large size where they would fit better with surrounding content. Both small large button sizes are meant to pair with equally sized inputs.  XLarge buttons are to be used when the UI appears on a mobile device or screen smaller than 768px width (tablet portrait view).
+      Buttons come in small, medium and large/default sizes. Prefer the large size but feel free to use the small size where they would fit better with surrounding content. Medium button sizes are meant to pair with equally sized inputs.  Large/default buttons are to be used when the UI appears on a mobile device or screen smaller than 768px width (tablet portrait view).
     contents:
-      - type: narrow image
+      - type: wide image
         src: ./assets/sizes.png
         caption: The three button sizes.
 
@@ -211,17 +211,17 @@ blocks:
   - type: two column
     text: |
       ### Sizes
-      Standard button
-      : - 28px tall
+      Small button
+      : - 32px tall
         - 12px horizontal padding
         - [Basic label font](/design/c/typography/v2.0.0-beta.2/#rd-basic-label)
 
-      Large button
+      Medium button - Use only with input fields
       : - 36px tall
-        - 20px horizontal padding
-        - [large label font](/design/c/typography/v2.0.0-beta.2/#rd-large-label)
+        - 12px horizontal padding
+        - [Basic label font](/design/c/typography/v2.0.0-beta.2/#rd-large-label)
 
-      XLarge button
+      Large/Default button
       : - 44px tall
         - 20px horizontal padding
         - [large label font](/design/c/typography/v2.0.0-beta.2/#rd-large-label)
@@ -231,9 +231,9 @@ blocks:
         src: ./assets/redlines.sizes.png
 
     exports:
-      - Standard Button
-      - Large Button
-      - XLarge Button
+      - Small Button
+      - Medium Button
+      - Large/default Button
 
   - type: two column
     text: |
@@ -282,12 +282,12 @@ blocks:
       ### Default buttons
 
       Normal
-      : - [Alto (#D9D9D9)](/design/c/colors/v2.0.0-beta.3/#rd-alto-d9d9d9) fill
+      : - [Alto (#E9E9E9)](/design/c/colors/v2.0.0-beta.3/#rd-alto-d9d9d9) fill
         - [Charcoal (#252525)](/design/c/colors/v2.0.0-beta.3/#rd-charcoal-252525) text color
         - No border
 
       Hover/Active
-      : - [Concrete (#C7C7C7)](/design/c/colors/v2.0.0-beta.3/#rd-concrete-c7c7c7) fill
+      : - [Concrete (#D9D9D9)](/design/c/colors/v2.0.0-beta.3/#rd-concrete-c7c7c7) fill
         - [Charcoal (#252525)](/design/c/colors/v2.0.0-beta.3/#rd-charcoal-252525) text color
         - No border
 
