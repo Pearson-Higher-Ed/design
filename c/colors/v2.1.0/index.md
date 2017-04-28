@@ -3,8 +3,8 @@ layout: component-yaml
 title: Colors
 section: Components
 redirect_from: /docs/ui-components/colors/
-version: 2.1.0-beta.2
-status: deprecated
+version: 2.1.0
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -15,7 +15,6 @@ people:
     email: parker.malenke@pearson.com
   - role: Designer
     name: Ed Zee
-implementation: https://www.npmjs.com/package/pearson-elements
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1UmxPd4C895le-5PxkKoYrlxJ2WXlpZcftp44Pn6qkWQ/edit?usp=sharing
@@ -255,11 +254,9 @@ blocks:
       - Brackish Turquoise
 
 changelog:
-  - version: 2.1.0-beta.2
+  - version: 2.1.0
     changes: |
       - CHANGED: Digital Ice Blue hex value to standout better against gray backgrounds
-  - version: 2.1.0-beta.1
-    changes: |
       - ADDED: Brackish Turquoise as CTA Button Hover state for Digital Marine Turquoise
       - CHANGED: Digital Marine Turquoise hex value to pass accessibility requirements
   - version: 2.0.0
