@@ -2,6 +2,7 @@
 layout: component-yaml
 title: Pagination
 section: Components
+redirect_from: /docs/ui-components/calendar/
 status: active
 version: 1.0.0-beta.1
 people:
@@ -14,6 +15,12 @@ people:
   - role: Designer
     name: Lynn Chang
     email: lynn.chang@pearson.com
+
+downloads:
+  - name: UXD Accessibility Checklist
+    link: https://docs.google.com/a/pearson.com/document/d/1zMbyMPRZcVNGwx13Tkhb4bjhPQq-s3YtQxf7D0LHZyw/edit?usp=sharing
+  - name: .sketch mockup
+    link: ./assets/pagination.sketch
 
 dependencies:
   - name: Typography
@@ -36,7 +43,7 @@ blocks:
 
   - type: two column
     text: |
-      Provide pagination control to browse from page to page. Let the user browse to the previous and next pages by providing links to such actions. Also, provide links to the absolute start and end of the dataset (first and last).
+      Provide pagination control to browse from page to page. Let the user browse to the previous and next pages by providing links to such actions.
 
     contents:
       - type: narrow image
@@ -63,12 +70,19 @@ blocks:
       ### Basic Pagination
 
       Spacing
-      : - Page number: 44x44px
+      : - Page number: width 44px(min), height 44px
+        - Page number padding: 18px to left/right
+        - Underline (selective state): 6px
+        - Ellipses: width 32px , height 44px
 
       Page Number style
       : - Normal: Basic UI Text: 14px/18px[Medium Gray](/design/c/colors/v2.1.0-beta.2/#rd-medium-gray)
         - Selected: Bold UI Text 14/18px [Charcoal](/design/c/colors/v2.1.0-beta.2/#rd-charcoal), border 2px
+        - Selected border below:  [Charcoal](/design/c/colors/v2.1.0-beta.2/#rd-charcoal), border 2px
         - Hover: Basic UI Text: 14px/18px[Medium Gray](/design/c/colors/v2.1.0-beta.2/#rd-medium-gray), border 2px
+        - Hover border below: [Medium Gray](/design/c/colors/v2.1.0-beta.2/#rd-medium-gray), border 2px
+        - Focus: Basic UI Text: 14px/18px[Medium Gray](/design/c/colors/v2.1.0-beta.2/#rd-medium-gray), border 2px
+        - Focus border below: Basic UI Text: 14px/18px[Medium Gray](/design/c/colors/v2.1.0-beta.2/#rd-medium-gray), border 2px
 
     contents:
     - type: wide image
@@ -76,17 +90,14 @@ blocks:
 
   - type: two column
     text: |
-      ### Date States
+      ### Compact Pagination
 
       Spacing
-      : - Page number: 44x44px
-        - Ellipses: 44x32px
+      : - Page number: width 44(min), height 44px
+        - Page number padding: 12px left/right
 
       Page Number style
-      : - Normal: Basic UI Text: 14px/18px[Medium Gray](/design/c/colors/v2.1.0-beta.2/#rd-medium-gray)
-        - Selected: Bold UI Text 14/18px [Charcoal](/design/c/colors/v2.1.0-beta.2/#rd-charcoal), border 2px
-        - Hover: Basic UI Text: 14px/18px[Medium Gray](/design/c/colors/v2.1.0-beta.2/#rd-medium-gray), border 2px
-
+      : Basic UI Text: 14px/18px[Medium Gray](/design/c/colors/v2.1.0-beta.2/#rd-medium-gray)
 
     contents:
       - type: wide image
