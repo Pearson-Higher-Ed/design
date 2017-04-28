@@ -3,7 +3,7 @@ layout: component-yaml
 title: Coach Marks
 section: Components
 version: 1.0.0-beta.6
-status: active
+status: deprecated
 implemented: true
 people:
   - role: Interaction Design
