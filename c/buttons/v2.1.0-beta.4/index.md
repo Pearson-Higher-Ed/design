@@ -64,7 +64,7 @@ blocks:
 
   - type: two column
     text: |
-      Buttons come in small, medium and large/default sizes. Prefer the large size but feel free to use the small size where they would fit better with surrounding content. Medium button sizes are meant to pair with equally sized inputs.  Large/default buttons are to be used when the UI appears on a mobile device or screen smaller than 768px width (tablet portrait view).
+      Buttons come in small, medium and large/default sizes. Prefer the standard/large size but feel free to use the small size where they would fit better with surrounding content. Medium button sizes are meant to only pair with equally sized inputs.  Standard/Large buttons are to be used when the UI appears on a mobile device or screen smaller than 768px width (tablet portrait view).
     contents:
       - type: wide image
         src: ./assets/sizes.png
@@ -197,7 +197,9 @@ blocks:
 
       __Destructive actions may be affirmative actions__
 
-      In some situations, destructive actions such as "delete" or “leave” may be affirmative actions. For example, when a student attempts to leave the page in the middle of a quiz, and is asked to confirm if the student acknowledges the consequences of leaving the page at this point. Since prior to seeing the modal, the student clicks on the “Exit” button indicates that the student desires to leave the page, so the “leave” button should be placed on the right to help the student continue with the process as expected.        
+      In some situations, destructive actions such as "delete" or “leave” may be affirmative actions. For example, when a student attempts to leave the page in the middle of a quiz, and is asked to confirm if the student acknowledges the consequences of leaving the page at this point. Since prior to seeing the modal, the student clicks on the “Exit” button indicates that the student desires to leave the page, so the “leave” button should be placed on the right to help the student continue with the process as expected.    
+
+      __Adjacent buttons are always spaced 16px apart__    
 
     contents:
       - type: wide image
@@ -219,9 +221,9 @@ blocks:
       Medium button - Use only with input fields
       : - 36px tall
         - 12px horizontal padding
-        - [Basic label font](/design/c/typography/v2.0.0-beta.2/#rd-large-label)
+        - [Basic label font](/design/c/typography/v2.0.0-beta.2/#rd-basic-label)
 
-      Large/Default button
+      Standard/Large button
       : - 44px tall
         - 20px horizontal padding
         - [large label font](/design/c/typography/v2.0.0-beta.2/#rd-large-label)
@@ -233,7 +235,7 @@ blocks:
     exports:
       - Small Button
       - Medium Button
-      - Large/default Button
+      - Standard/Large Button
 
   - type: two column
     text: |
@@ -242,28 +244,26 @@ blocks:
 
   - type: style table
     styles:
-      - Standard Button
-      - Large Button
-      - XLarge Button
+      - Standard/Large Button
+      - Medium Button
+      - Small Button
 
   - type: two column
     text: |
       ### Primary buttons
 
       Normal
-      : - [Digital Pearson Blue (#047A9C)](/design/c/colors/v2.0.0-beta.3/#rd-digital-pearson-blue-047a9c) fill
+      : - [Digital Marine Turquoise (#19A6A4)](/design/c/colors/v2.0.0-beta.3/#rd-digital-marine-turquoise-19a6a4) fill
         - [White](/design/c/typography/v2.0.0-beta.5/#rd-white-ffffff) button text
         - No border
 
       Hover/Active
-      : - [Ink Blue (#005A70)](/design/c/colors/v2.0.0-beta.3/#rd-ink/blue-005a70) fill
+      : - [Brackish Turquoise (#179599)](/design/c/colors/v2.0.0-beta.3/#rd-brackish-turquoise-179599) fill
         - [White](/design/c/typography/v2.0.0-beta.5/#rd-white-ffffff) button text
         - No border
 
       Disabled
-      : - [Moonlight (#E9E9E9)](/design/c/colors/v2.0.0-beta.3/#rd-digital-moonlight-e9e9e9) fill
-        - [Concrete (#C7C7C7)](/design/c/colors/v.2.0.0-beta.3/#rd-concrete-c7c7c7) button text
-        - No border
+      : - No disabled state
 
       Focus
       : - Use the browser default style
@@ -282,14 +282,14 @@ blocks:
       ### Default buttons
 
       Normal
-      : - [Alto (#E9E9E9)](/design/c/colors/v2.0.0-beta.3/#rd-alto-d9d9d9) fill
+      : - [Moonlight (#E9E9E9)](/design/c/colors/v2.0.0-beta.3/#rd-digital-moonlight-e9e9e9) fill
         - [Charcoal (#252525)](/design/c/colors/v2.0.0-beta.3/#rd-charcoal-252525) text color
-        - No border
+        - 1px [Concrete (#C7C7C7)](/design/c/colors/v2.0.0-beta.3/#rd-concrete-c7c7c7) border
 
       Hover/Active
-      : - [Concrete (#D9D9D9)](/design/c/colors/v2.0.0-beta.3/#rd-concrete-c7c7c7) fill
+      : - [Alto (#D9D9D9)](/design/c/colors/v2.0.0-beta.3/#rd-alto-d9d9d9) fill
         - [Charcoal (#252525)](/design/c/colors/v2.0.0-beta.3/#rd-charcoal-252525) text color
-        - No border
+        - 1px [Concrete (#C7C7C7)](/design/c/colors/v2.0.0-beta.3/#rd-concrete-c7c7c7) border
 
       Disabled
       : - [Moonlight (#E9E9E9)](/design/c/colors/v2.0.0-beta.3/#rd-digital-moonlight-e9e9e9) fill
@@ -322,16 +322,6 @@ blocks:
         - [Charcoal (#252525)](/design/c/colors/v2.0.0-beta.3/#rd-charcoal-252525) text color
         - No border
 
-      Normal Turquoise
-      : - [Digital Marine Turquoise](/design/c/colors/v2.0.0-beta.7/#rd-digital-marine-turquoise-19a6a4) fill
-        - [White](/design/c/typography/v2.0.0-beta.5/#rd-white-ffffff) button text
-        - No border
-
-      Hover/Active Turquoise
-      : - [Brackish Turquoise](/design/c/colors/v2.0.0-beta.7/#rd-brackish-turquoise-179599) fill
-        - [White](/design/c/typography/v2.0.0-beta.5/#rd-white-ffffff) button text
-        - No border
-
       Disabled
       : - No disabled state
 
@@ -351,9 +341,15 @@ blocks:
     text: |
 
 changelog:
+  - version: 2.1.0-beta.4
+    changes: |
+      - ADDED: Borders on default buttons
+      - UPDATED: Primary and CTA button styles
+      - UPDATED: Button sizes now meet accessibility requirements
   - version: 2.1.0-beta.3
     changes: |
       - ADDED: Button placement guidelines
+      - REMOVED: Link style buttons; Just use link text
   - version: 2.1.0-beta.1
     changes: |
       - ADDED: Turquoise CTA button option
