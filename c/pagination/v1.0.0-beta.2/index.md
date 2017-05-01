@@ -2,8 +2,9 @@
 layout: component-yaml
 title: Pagination
 section: Components
-status: deprecated
-version: 1.0.0-beta.1
+redirect_from: /docs/ui-components/calendar/
+status: active
+version: 1.0.0-beta.2
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -23,16 +24,17 @@ downloads:
 
 dependencies:
   - name: Typography
-    version: 2.0.0-beta.9
+    version: 2.0.0
   - name: Colors
-    version: 2.0.0-beta.5
+    version: 2.1.0
   - name: Icons
-    version: 2.0.0-beta.4
+    version: 2.1.0
 
 tagline: |
   This component defines the standard visual style for the pagination element.
 features:
   - Defines all state styles (hover, selected, highlighted range, disabled)
+  - Provides a compact style for responsive or space limited use cases
 usage_guidelines: |
   Pagination provides the user with a natural break from reading or scanning the contents of the dataset, and allows them to re-evaluate whether they wish to continue looking through more data, or navigate away from the page.
 
@@ -69,19 +71,36 @@ blocks:
       ### Basic Pagination
 
       Spacing
-      : - Page number: width 44px(min), height 44px
-        - Page number padding: 18px to left/right
-        - Underline (selective state): 6px
+      : - Page number and arrow buttons: min-width of 44px, height of 44px
         - Ellipses: width 32px , height 44px
+        - An underline appears 6px below the text
 
-      Page Number style
-      : - Normal: Basic UI Text: 14px/18px[Medium Gray](/design/c/colors/v2.1.0-beta.2/#rd-medium-gray)
-        - Selected: Bold UI Text 14/18px [Charcoal](/design/c/colors/v2.1.0-beta.2/#rd-charcoal), border 2px
-        - Selected border below:  [Charcoal](/design/c/colors/v2.1.0-beta.2/#rd-charcoal), border 2px
-        - Hover: Basic UI Text: 14px/18px[Medium Gray](/design/c/colors/v2.1.0-beta.2/#rd-medium-gray), border 2px
-        - Hover border below: [Medium Gray](/design/c/colors/v2.1.0-beta.2/#rd-medium-gray), border 2px
-        - Focus: Basic UI Text: 14px/18px[Medium Gray](/design/c/colors/v2.1.0-beta.2/#rd-medium-gray), border 2px
-        - Focus border below: Basic UI Text: 14px/18px[Medium Gray](/design/c/colors/v2.1.0-beta.2/#rd-medium-gray), border 2px
+      Typography
+      : - Default text is [UI Text - Basic](/design/c/typography/v2.0.0/#rd-ui-text-basic)
+
+      Normal page style
+      : - [UI Text - Basic](/design/c/typography/v2.0.0/#rd-ui-text-basic)
+        - [Medium Gray](/design/c/colors/v2.1.0/#rd-medium-gray)
+
+      Selected style
+      : - [UI Text - Bold](/design/c/typography/v2.0.0/#rd-ui-text-bold)
+        - 2px underline
+        - Text and underline are [Charcoal](/design/c/colors/v2.1.0/#rd-charcoal)
+
+      Hover style
+      : - Add a [Medium Gray](/design/c/colors/v2.1.0/#rd-medium-gray), 2px underline to the normal style
+
+      Focus
+      : - Use the browser default focus outline
+        - Also use the hover style
+
+      Icons
+      : - chevron-next-sm-18
+        - chevron-back-sm-18
+        - ellipsis-18
+
+      Arrows
+      : - Forward/Back arrow are inside a 28px diameter [concrete](/design/c/colors/v2.1.0/#rd-concrete) circle
 
     contents:
     - type: wide image
@@ -92,11 +111,11 @@ blocks:
       ### Compact Pagination
 
       Spacing
-      : - Page number: width 44(min), height 44px
-        - Page number padding: 12px left/right
+      : - Next/Prev buttons are 12px from the current location
 
-      Page Number style
-      : Basic UI Text: 14px/18px[Medium Gray](/design/c/colors/v2.1.0-beta.2/#rd-medium-gray)
+      Location info
+      : - Uses [UI Text - Basic](/design/c/typography/v2.0.0/#rd-ui-text-basic) style
+        - Should either say "Page X of Y" or current range: "X&nbsp;–&nbsp;Y of Z"
 
     contents:
       - type: wide image
@@ -104,6 +123,10 @@ blocks:
 
 
 changelog:
+  - version: 1.0.0-beta.2
+    changes: |
+      - UPDATE: Redlines to include more detail
+      - ADDED: Sketch file download
   - version: 1.0.0-beta.1
     changes: Initial version
 ---
