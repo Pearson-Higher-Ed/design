@@ -70,7 +70,7 @@ blocks:
     text: |
       Represents the default signed in experience. Expands on the Signed Out Mode by making the Pearson Logo a home link (currently [www.console.pearson.com](http://console.pearson.com)) and including the *User Menu*.
 
-      The User Menu is labelled with the user's first name and contains Account Settings, Policy, Sign Out, and Role Toggle options. At widths less than 768px the user's name is replaced with a profile icon.
+      The User Menu is labelled with the user's first name and contains Account Settings, Policy, and Sign Out options. At widths less than 768px the user's name is replaced with a profile icon.
 
       Use this mode when the user logs in to a standard Pi session and needs a default header experience.
 
@@ -82,15 +82,6 @@ blocks:
       - type: narrow image
         src: ./assets/basic.mode.mobile.png
         caption: Mobile version of the header is slightly shorter.
-
-  - type: two column
-    text: |
-      ### Role Toggle
-      In the rare situation that a user plays the role of an instructor for some material and a student for a different set of material, the role toggle allows them to switch between these two different modes.
-    contents:
-      - type: wide image
-        src: ./assets/role.switcher.png
-        caption: Example of the modal that allows users to select the specific role they want to take on.
 
   - type: section
     name: Integration Mode
@@ -191,6 +182,7 @@ blocks:
       Account Menu
       : - Opens the standard drawer
         - Links are [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic) with the standard link style
+        - Sign out button is a Large Primary button
 
       States
       : - Same as Signed Out Mode
@@ -221,7 +213,6 @@ changelog:
   - version: 2.1.0-beta.1
     changes: |
       - ADDED: Terms of Use and Privacy Policy links
-      - ADDED: Role Selector links
 
   - version: 2.0.0
     changes: |
