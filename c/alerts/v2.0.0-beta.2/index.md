@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Alerts
 section: Components
-version: 2.0.0-beta.1
-status: deprecated
+version: 2.0.0-beta.2
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -165,6 +165,9 @@ blocks:
 
 
 changelog:
+  - version: 2.0.0-beta.2
+    changes: |
+      - UPDATED: Animation video uses latest copy
   - version: 2.0.0-beta.1
     changes: |
       - CHANGED: New visual design. adding more alert types
