@@ -2,8 +2,9 @@
 layout: component-yaml
 title: Pagination
 section: Components
-status: deprecated
-version: 1.0.0-beta.2
+redirect_from: /docs/ui-components/calendar/
+status: active
+version: 1.0.0
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -122,10 +123,6 @@ blocks:
 
 
 changelog:
-  - version: 1.0.0-beta.2
-    changes: |
-      - UPDATE: Redlines to include more detail
-      - ADDED: Sketch file download
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: Initial version
 ---
