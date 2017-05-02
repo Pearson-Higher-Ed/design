@@ -10,7 +10,6 @@
   z-index: 10;
 
   transform: translateX(-240px);
-  // visibility: hidden;
   transition: transform 0.3s;
 
   @mixin _sidebarOpen {
@@ -83,5 +82,11 @@
     .burger {
       display: none;
     }
+  }
+}
+
+.top-level-content {
+  @media (min-width: 1460px) {
+    margin-left: 240px;
   }
 }
