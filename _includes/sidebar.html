@@ -83,8 +83,8 @@
 
 </div>
 
-<div class="ultimate-header">
-  <img class="burger" src="{{site.baseurl}}/assets/burger.svg"> {{page.title}}
+<div class="ultimate-header {% if include.invisible %}invisible{% endif %}">
+  <img class="burger" src="{{site.baseurl}}/assets/burger.svg"> {% unless include.invisible %}{{page.title}}{% endunless %}
 </div>
 
 <script type="text/javascript">
