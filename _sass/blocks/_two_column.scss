@@ -30,18 +30,28 @@
   // Redline styles
   dl {
     @include clearfix;
+    @include pe-responsive-breakpoint(md to lg) {
+      display: inline-block;
+    }
 
     dt {
+      float: left;
+      clear: both;
       width: 40%;
-      // @include pe-responsive-breakpoint(xl) {
-      //   font-style: normal;
-      //   width: 40%;
-      // }
+      @include pe-responsive-breakpoint(md to lg) {
+        width: 240px;
+      }
     }
 
     dd {
       width: 60%;
-      // @include pe-responsive-breakpoint(xl) { width: 60%; }
+      float: left;
+      @include pe-responsive-breakpoint(md to lg) {
+        width: auto;
+        overflow: hidden;
+        min-width: 200px;
+        float: none;
+      }
 
       ul {
         margin: 0;
@@ -52,7 +62,6 @@
     }
 
     dt, dd {
-      float: left;
       padding: 10px 0;
       margin: 0;
       @extend .pe-label, .pe-label--small;
