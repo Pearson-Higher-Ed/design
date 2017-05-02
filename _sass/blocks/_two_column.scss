@@ -66,7 +66,6 @@
       margin: 0;
       @extend .pe-label, .pe-label--small;
       border-top: 1px solid $pe-color-alto;
-      // @include pe-responsive-breakpoint(xl) { border-top: 1px solid pe-color(hairline-gray); }
     }
 
     dt:first-of-type,
@@ -74,66 +73,12 @@
       padding-top: 0;
       border-top: none;
     }
-
-    // dd + dt {
-    //   clear: both;
-    // }
   }
 
   @include pe-responsive-breakpoint(xl) {
     @include make-grid-child(4);
     float: left;
   }
-
-  // // TODO switch to using mixins or something for typography
-  // @extend .pe-copy--small;
-  // @include pe-responsive-breakpoint(xs) {
-  //   width: 100%;
-  //   margin-bottom: 20px;
-  // }
-  // @include pe-responsive-breakpoint(md) {
-  //   width: 440px;
-  //   margin-left: 60px;
-  // }
-  // @include pe-responsive-breakpoint(lg) {
-  //   width: 210px;
-  //   float: left;
-  //   margin-bottom: 0;
-  //   margin-left: 0;
-  //   // @extend .pe-label--small;
-  // }
-  // @include pe-responsive-breakpoint(xl) {
-  //   width: 320px;
-  //   // @extend .pe-copy--small;
-  // }
-
-
-  // & > p:first-child {
-  //   margin-top: 0;
-  // }
-  //
-  // p + p,
-  // p + ul,
-  // p + ol {
-  //   margin-top: 12px;
-  // }
-  //
-  // h3 { @include hl3; }
-  // h4 { @include hl4; }
-  // h5 { @include hl5; }
-  // h6 { @include hl6; }
-  //
-  // & > ul {
-  //   @include pe-ulist;
-  //
-  //   & + p {
-  //     margin-top: 12px;
-  //   }
-  // }
-  //
-  // dl {
-  //   @include redline-list;
-  // }
 }
 
 .content {

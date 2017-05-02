@@ -132,33 +132,4 @@
       margin-top: 24px;
     }
   }
-
-  // .article_info {
-  //   margin-top: 40px;
-  //   @include pe-responsive-breakpoint(md) { width: 760px; }
-  //   @include clearfix;
-  //
-  //   .people {
-  //     width: 100%;
-  //     @include pe-responsive-breakpoint(md) {
-  //       width: auto;
-  //       max-width: 370px;
-  //       float: left;
-  //     }
-  //     .person {
-  //       width: 46%;
-  //       margin-left: 4%;
-  //       @include pe-responsive-breakpoint(sm) {
-  //         width: 175px;
-  //         margin-left: 20px;
-  //       }
-  //       margin-bottom: 8px;
-  //       float: left;
-  //     }
-  //
-  //     .person:nth-of-type(2n+1) {
-  //       margin-left: 0;
-  //     }
-  //   }
-  // }
 }
