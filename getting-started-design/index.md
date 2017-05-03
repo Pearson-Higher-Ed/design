@@ -3,6 +3,7 @@ layout: article
 title: Designer Guide
 section: use
 order: 1
+in_footer: true
 ---
 
 Elemental Design makes it easy for your designs to maintain consistency with the broader product ecosystem and frees you up to focus on solving unique challenges. Leveraging existing work in components is pretty straightforward:

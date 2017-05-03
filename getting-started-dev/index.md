@@ -3,6 +3,7 @@ layout: article
 title: Developer Guide
 section: use
 order: 2
+in_footer: true
 ---
 
 Components are being hosted on NPM under the [@pearson-components organization][npm-org]. The majority will be available
