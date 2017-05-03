@@ -68,7 +68,7 @@ blocks:
       Alerts can also appear dynamically in response to user actions like submitting a form, choosing an option, or completing an assignment. In this case the alert will animate down from the top.
     contents:
       - type: wide video
-        src: ./assets/animation.mp4
+        src: ./assets/animation_alert.mp4
         caption: The animation for showing/dismissing a dynamic alert.
 
   - type: section
