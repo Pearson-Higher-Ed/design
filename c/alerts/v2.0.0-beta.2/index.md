@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Alerts
 section: Components
-version: 2.0.0-beta.1
-status: deprecated
+version: 2.0.0-beta.2
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -68,7 +68,7 @@ blocks:
       Alerts can also appear dynamically in response to user actions like submitting a form, choosing an option, or completing an assignment. In this case the alert will animate down from the top.
     contents:
       - type: wide video
-        src: ./assets/animation.mp4
+        src: ./assets/animation_alert.mp4
         caption: The animation for showing/dismissing a dynamic alert.
 
   - type: section
@@ -165,6 +165,9 @@ blocks:
 
 
 changelog:
+  - version: 2.0.0-beta.2
+    changes: |
+      - UPDATED: Animation video uses latest copy
   - version: 2.0.0-beta.1
     changes: |
       - CHANGED: New visual design. adding more alert types
