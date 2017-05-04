@@ -17,12 +17,7 @@ body {
 }
 
 .block {
-  // temporary
   overflow: hidden;
-
-  + .block {
-    // margin-top: 60px;
-  }
 
   &:last-child {
     margin-bottom: 60px;
