@@ -2,8 +2,6 @@
 <html class="core">
   {% include header.html %}
   <body>
-    {% include construction.html %}
-    {% include navigation.html %}
 
     {% assign max_major = 0 %}
     {% assign max_minor = 0 %}
@@ -42,6 +40,8 @@
 
     {% capture latest_version %}{{max_major}}.{{max_minor}}.{{max_patch}}-beta.{{max_beta}}{% endcapture %}
     {% assign page = (site.pages | where: "title", page.title | where: "version", latest_version | first) %}
+
+    {% include sidebar.html %}
 
     {% include component-details.html beta="true" %}
 
