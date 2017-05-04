@@ -18,6 +18,43 @@
       document.querySelector('section.toc').appendChild(toc.cloneNode(true));
     }
   </script>
+
+  <script type="text/javascript">
+    var headings = document
+                      .querySelector('.article article')
+                      .querySelectorAll('h2');
+
+    window.addEventListener('scroll', function(e) {
+      var scrolledAmount = window.scrollY
+        , centerOffset = document.documentElement.clientHeight / 2
+        , topToCenter = scrolledAmount + centerOffset;
+
+      var bestDelta = Number.MAX_SAFE_INTEGER;
+      var bestID = '';
+      for (var i = 0; i < headings.length; i++) {
+        var heading = headings.item(i)
+          , distFromTop = heading.getBoundingClientRect().top + scrolledAmount
+          , delta = topToCenter - distFromTop;
+
+        if (delta < bestDelta && delta > 0) {
+          bestDelta = delta;
+          bestID = heading.id;
+        }
+      }
+
+      document.querySelectorAll('section.toc .active').forEach(function(x) {
+        x.classList.remove('active');
+      });
+
+      document
+        .querySelector('section.toc #markdown-toc-' + bestID)
+        .classList
+        .add('active');
+
+    });
+
+  </script>
+
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
