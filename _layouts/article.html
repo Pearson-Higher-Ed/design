@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html class="core">
 {% include header.html %}
-<body>
-  {% include construction.html %}
-  {% include navigation.html %}
+<body class="article">
+  {% include sidebar.html %}
 
-  <div class="article">
-    <h1 class="pe-title pe-title--extra-large">{{page.title}}</h1>
+  <div class="top-level-content">
+    <div class="parent">
+      <section class="toc">
+      </section>
 
-    {{content}}
+      <article>
+        <h1>{{page.title}}</h1>
+
+        {{content}}
+      </article>
+    </div>
   </div>
 
   <script type="text/javascript">
