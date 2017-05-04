@@ -20,7 +20,7 @@ downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1Zx7iuaBbjVis_m6p5yXxBxXhJFCYSagSgb-v6D9HaX8/edit?usp=sharing
   - name: .sketch mockup
-    link: ./assets/alerts.mockup.sketch
+    link: ./assets/alerts.sketch
 
 dependencies:
   - name: Colors
@@ -136,6 +136,14 @@ blocks:
       : - Title is [Bold Text](/design/c/typography/v2.0.0/#rd-bold-text)
         - Message is [Basic Body Copy](/design/c/typography/v2.0.0-beta.3/#rd-basic-body)
 
+      "X" icons
+      : - Size [remove-sm-24](design/c/icons/v2.0.0-beta.4/)
+        - Touch area 44x44
+
+      Alert/warning icons
+      : - alert/warning icon [warning-24](design/c/icons/v2.0.0-beta.4/)
+        - success icon [check-sm-24](design/c/icons/v2.0.0-beta.4/)
+
       Animation
       : - Drop in uses an ease-in-out easing curve with a duration of 300ms
         - Slide out uses an ease-in easing curve with a duration of 200ms
@@ -153,10 +161,6 @@ blocks:
       - type: wide image
         src: ./assets/alerts_spec_popover.png
         caption: Popover alerts
-
-      - type: wide image
-        src: ./assets/alerts_spec_desktop 2.png
-        caption: Screen level alerts
 
       - type: wide image
         src: ./assets/alerts_spec_desktop 1.png
