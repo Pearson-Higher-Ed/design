@@ -20,6 +20,16 @@
 </script>
 
 <div class="top-level-content">
+
+  {% if page.version contains 'beta' and page.status == 'active' %}
+    <div class="banner warn">This version has not been approved yet. <a href="./..">Go to the latest approved version</a>.</div>
+  {% endif %}
+
+  {% if page.status != 'active' %}
+    <div class="banner warn">This version is outdated. <a href="./..">Go to the latest approved version</a>.</div>
+  {% endif %}
+
+
   <div class="blocks">
     <div class="block article_header">
       <h1 class="pe-page-title">{{page.title}}</h1>
