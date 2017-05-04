@@ -7,6 +7,8 @@ section: learn
 
 In a nutshell, the UX Framework defines a **unified visual voice** for Pearson’s applications and provides a library of components that **makes implementing the voice quick and easy**.
 
+* TOC
+{:toc}
 
 ## Goals
 **Consistency** and **Efficiency** are the primary objectives of the Framework.

@@ -9,3 +9,5 @@ sections:
   - Components
 gems:
   - jekyll-redirect-from
+kramdown:
+  toc_levels: '2'
