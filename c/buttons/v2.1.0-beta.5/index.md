@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Buttons
 section: Components
-version: 2.1.0-beta.4
-status: deprecated
+version: 2.1.0-beta.5
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -19,15 +19,15 @@ people:
 implementation: https://pearson-elements-v0.surge.sh/elements/buttons/
 downloads:
   - name: UXD Accessibility Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/19r4uvPAZpmXRwT_krIr9MqHLYC-Vgjah2kPDi9PYaQA/edit?usp=sharing
+    link: https://docs.google.com/a/pearson.com/document/d/1eSGAoNb7F1A8iA_DqLQfSP_TxzuV0V2yTAK8ksDeQBU/edit?usp=sharing
   - name: Sketch
     link: ./assets/buttons.2.1.0-beta.4.sketch
 
 dependencies:
   - name: Colors
-    version: 2.0.0-beta.6
+    version: 2.1.0
   - name: Typography
-    version: 2.0.0-beta.5
+    version: 2.0.0
 
 tagline: This component defines the standard visual style for buttons.
 features:
@@ -36,7 +36,7 @@ features:
   - Default/Large, Medium and Small button sizes
   - Guaranteed compliance with Accessibility contrast requirements
 usage_guidelines: |
-  Every instance of a button should come from this component. See the sections below for information about when to each each type of button.
+  Every instance of a button should come from this component. See the sections below for information about when to use each type of button.
 
 blocks:
   - type: section
@@ -64,7 +64,7 @@ blocks:
 
   - type: two column
     text: |
-      Buttons come in small, medium and large/default sizes. Prefer the standard/large size but feel free to use the small size where they would fit better with surrounding content. Medium button sizes are meant to only pair with equally sized inputs.  Standard/Large buttons are to be used when the UI appears on a mobile device or screen smaller than 768px width (tablet portrait view).
+      Buttons come in small, medium and large/default sizes. The standard/large size is preferred, but feel free to use the small size where they would fit better with surrounding content. Medium button sizes are meant to only pair with equally sized inputs.  Standard/Large buttons are to be used when the UI appears on a mobile device or screen smaller than 768px width (tablet portrait view).
     contents:
       - type: wide image
         src: ./assets/sizes.png
@@ -84,54 +84,27 @@ blocks:
         caption: Examples of when to enable/disable vs. show/hide buttons
 
   - type: section
-    name: Confirmation Buttons
-
-  - type: two column
-    text: |
-      In situations where the user should receive feedback that the action initiated by a button was successful use the Confirmation Button style which integrates feedback.
-
-      For simple binary confirmation feedback, this type of button is sufficient—an additional alert or message is unnecessary.  Use Digital Grass Green #038238 from the Conditional Palette in the Colors specification.
-    contents:
-      - type: narrow video
-        src: ./assets/confirmation.short.mov
-        caption: The loading indicator should appear for at least 500ms to provide the proper context.
-      - type: narrow video
-        src: ./assets/confirmation.long.mov
-        caption: If the action takes longer than 500ms then the loader is displayed until the action completes.
-
-  - type: two column
-    text: |
-      ### Error style
-      If the action failed to complete, there is an error state for the button which should be paired with an explanatory alert.  Use Strawberry Red #DB0020 from the Conditional Palette in the Colors specification.
-    contents:
-      - type: narrow video
-        src: ./assets/error.short.mov
-        caption: If the action results in an error that can be presented within the button context as well. Make sure to pair this with an explanatory alert.
-
-  - type: section
     name: Link Style Buttons
 
   - type: two column
     text: |
-      In situations where link styled text is to be used in place of a button for the purposes of de-emphasizing an action (visual hierarchy), link style buttons should be used.  The premise stands that links are to be used for navigation and buttons are to be used for actions.  The need for a link styled button is conform to [Pearson Accessibility Guidelines for E-Learning (#11 Semantic Markup)][Accessibility]
+      In situations where link styled text is to be used in place of a button for the purposes of de-emphasizing an action (visual hierarchy), link style buttons should be used.  The premise stands that links are to be used for navigation and buttons are to be used for actions.  The need for a link styled button is conform to [Pearson Accessibility Guidelines for E-Learning (#11 Semantic Markup)][Accessibility]:
 
       [Accessibility]: http://wps.pearsoned.com/accessibility/115/29601/7577872.cw/index.html#PG11
 
-      *Identify roles (e.g. heading, numbered list, bulleted list, data table, paragraph, emphasized text) of page elements using conventions for the media type. (And do not misidentify roles by using those conventions solely for their visual effects.)*
+      > *Identify roles (e.g. heading, numbered list, bulleted list, data table, paragraph, emphasized text) of page elements using conventions for the media type. (And do not misidentify roles by using those conventions solely for their visual effects.)*
     contents:
       - type: text
         content: |
 
           ### Do:
             - Use link style buttons to de-emphasize less important actions.
+
+              *Examples*: Edit, Dismiss, Resend Verification Email, Reset Password
+
             - Use link style buttons to trigger an action.
             - Indicate in design specification the presence of a link style button to your developer.
             - Use the same visual styling as link text.  [See typography specification document.](http://pearson-higher-ed.github.io/design/c/typography/)
-            Examples:
-              - Edit
-              - Dismiss
-              - Resend Verification Email
-              - Reset Password"
 
           ### Don't:
             - Use link style buttons as part of a grouping with other buttons (button bars, save/cancel).
@@ -142,40 +115,20 @@ blocks:
 
   - type: two column
     text: |
-      A button is meant to direct users into taking an action. Help users by writing button labels that clearly explain what each button does.
+      A button is meant to direct users into taking the action you want them to take. Help users by writing button labels that clearly explain what each button does.
     contents:
       - type: text
         content: |
           ### Do:
             - Keep text short. Use as few words as possible.
 
-              Examples
-
-                - Next
-                - Save
-                - Create
-                - View
-                - Edit
-                - Learn more
-                - Study
-                - Review
-                - Delete
-                - Cancel
-                - Close
+              *Examples*: Next, Save, Create, View, Edit, Learn more, Study, Review, Delete, Cancel, Close
 
             - Use sentence case.
             - Capitalize proper nouns.
             - Use specific action-oriented text for CTAs.
 
-              Examples
-
-                - Activate
-                - Create account
-                - Sign in
-                - Reset password
-                - Submit
-                - Resend Verification Email
-                - Go to Dashboard
+              *Examples*: Activate, Create account, Sign in, Reset password, Submit, Resend Verification Email, Go to Dashboard
 
           ### Be sure to:
             - Look across the experience and check for consistent use of labels.
@@ -216,17 +169,17 @@ blocks:
       Small button
       : - 32px tall
         - 12px horizontal padding
-        - [Basic label font](/design/c/typography/v2.0.0-beta.2/#rd-basic-label)
+        - [UI Text - Basic](/design/c/typography/v2.0.0/#rd-ui-text-basic)
 
       Medium button - Use only with input fields
       : - 36px tall
         - 12px horizontal padding
-        - [Basic label font](/design/c/typography/v2.0.0-beta.2/#rd-basic-label)
+        - [UI Text - Basic](/design/c/typography/v2.0.0/#rd-ui-text-basic)
 
       Standard/Large button
       : - 44px tall
         - 20px horizontal padding
-        - [large label font](/design/c/typography/v2.0.0-beta.2/#rd-large-label)
+        - [UI Heading - Section - Small](/design/c/typography/v2.0.0/#rd-ui-headings-section-basic)
 
     contents:
       - type: narrow image
@@ -253,13 +206,13 @@ blocks:
       ### Primary buttons
 
       Normal
-      : - [Digital Marine Turquoise (#19A6A4)](/design/c/colors/v2.0.0-beta.3/#rd-digital-marine-turquoise-19a6a4) fill
-        - [White](/design/c/typography/v2.0.0-beta.5/#rd-white-ffffff) button text
+      : - [Digital Marine Turquoise (#19A6A4)](/design/c/colors/v2.1.0/#rd-digital-marine-turquoise) fill
+        - [White](/design/c/colors/v2.1.0/#rd-white) button text
         - No border
 
       Hover/Active
-      : - [Brackish Turquoise (#179599)](/design/c/colors/v2.0.0-beta.3/#rd-brackish-turquoise-179599) fill
-        - [White](/design/c/typography/v2.0.0-beta.5/#rd-white-ffffff) button text
+      : - [Brackish Turquoise (#179599)](/design/c/colors/v2.1.0/#rd-brackish-turquoise) fill
+        - [White](/design/c/colors/v2.1.0/#rd-white) button text
         - No border
 
       Disabled
@@ -282,18 +235,18 @@ blocks:
       ### Default buttons
 
       Normal
-      : - [Moonlight (#E9E9E9)](/design/c/colors/v2.0.0-beta.3/#rd-digital-moonlight-e9e9e9) fill
-        - [Charcoal (#252525)](/design/c/colors/v2.0.0-beta.3/#rd-charcoal-252525) text color
-        - 1px [Concrete (#C7C7C7)](/design/c/colors/v2.0.0-beta.3/#rd-concrete-c7c7c7) border
+      : - [Moonlight (#E9E9E9)](/design/c/colors/v2.1.0/#rd-digital-moonlight) fill
+        - [Charcoal (#252525)](/design/c/colors/v2.1.0/#rd-charcoal) text color
+        - 1px [Concrete (#C7C7C7)](/design/c/colors/v2.1.0/#rd-concrete) border
 
       Hover/Active
-      : - [Alto (#D9D9D9)](/design/c/colors/v2.0.0-beta.3/#rd-alto-d9d9d9) fill
-        - [Charcoal (#252525)](/design/c/colors/v2.0.0-beta.3/#rd-charcoal-252525) text color
-        - 1px [Concrete (#C7C7C7)](/design/c/colors/v2.0.0-beta.3/#rd-concrete-c7c7c7) border
+      : - [Alto (#D9D9D9)](/design/c/colors/v2.1.0/#rd-alto) fill
+        - [Charcoal (#252525)](/design/c/colors/v2.1.0/#rd-charcoal) text color
+        - 1px [Concrete (#C7C7C7)](/design/c/colors/v2.1.0/#rd-concrete) border
 
       Disabled
-      : - [Moonlight (#E9E9E9)](/design/c/colors/v2.0.0-beta.3/#rd-digital-moonlight-e9e9e9) fill
-        - [Concrete (#C7C7C7)](/design/c/colors/v.2.0.0-beta.3/#rd-concrete-c7c7c7) button text
+      : - [Moonlight (#E9E9E9)](/design/c/colors/v2.1.0/#rd-digital-moonlight) fill
+        - [Concrete (#C7C7C7)](/design/c/colors/v2.1.0/#rd-concrete) button text
         - No border
 
       Focus
@@ -313,13 +266,13 @@ blocks:
       ### Call to Action buttons
 
       Normal Yellow
-      : - [Sunshine Yellow (#FFB81C)](/design/c/colors/v2.0.0-beta.3/#rd-sunshine-yellow-FFB81C) fill
-        - [Charcoal (#252525)](/design/c/colors/v2.0.0-beta.3/#rd-charcoal-252525) text color
+      : - [Sunshine Yellow (#FFB81C)](/design/c/colors/v2.1.0/#rd-sunshine-yellow) fill
+        - [Charcoal (#252525)](/design/c/colors/v2.1.0/#rd-charcoal) text color
         - No border
 
       Hover/Active Yellow
-      : - [Sunflower Yellow (#FF9A19)](/design/c/colors/v2.0.0-beta.3/#rd-sunflower-yellow-FFF9A19) fill
-        - [Charcoal (#252525)](/design/c/colors/v2.0.0-beta.3/#rd-charcoal-252525) text color
+      : - [Sunflower Yellow (#FF9A19)](/design/c/colors/v2.1.0/#rd-sunflower-yellow) fill
+        - [Charcoal (#252525)](/design/c/colors/v2.1.0/#rd-charcoal) text color
         - No border
 
       Disabled
@@ -341,6 +294,10 @@ blocks:
     text: |
 
 changelog:
+  - version: 2.1.0-beta.5
+    changes: |
+      - UPDATED: Cleaned up documentation, removed outdated reference to confirmation buttons
+      - UPDATED: New a11y checklist for the new version.
   - version: 2.1.0-beta.4
     changes: |
       - ADDED: Borders on default buttons
