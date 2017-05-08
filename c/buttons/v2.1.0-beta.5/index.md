@@ -19,7 +19,7 @@ people:
 implementation: https://pearson-elements-v0.surge.sh/elements/buttons/
 downloads:
   - name: UXD Accessibility Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/19r4uvPAZpmXRwT_krIr9MqHLYC-Vgjah2kPDi9PYaQA/edit?usp=sharing
+    link: https://docs.google.com/a/pearson.com/document/d/1eSGAoNb7F1A8iA_DqLQfSP_TxzuV0V2yTAK8ksDeQBU/edit?usp=sharing
   - name: Sketch
     link: ./assets/buttons.2.1.0-beta.4.sketch
 
@@ -36,7 +36,7 @@ features:
   - Default/Large, Medium and Small button sizes
   - Guaranteed compliance with Accessibility contrast requirements
 usage_guidelines: |
-  Every instance of a button should come from this component. See the sections below for information about when to each each type of button.
+  Every instance of a button should come from this component. See the sections below for information about when to use each type of button.
 
 blocks:
   - type: section
@@ -64,7 +64,7 @@ blocks:
 
   - type: two column
     text: |
-      Buttons come in small, medium and large/default sizes. Prefer the standard/large size but feel free to use the small size where they would fit better with surrounding content. Medium button sizes are meant to only pair with equally sized inputs.  Standard/Large buttons are to be used when the UI appears on a mobile device or screen smaller than 768px width (tablet portrait view).
+      Buttons come in small, medium and large/default sizes. The standard/large size is preferred, but feel free to use the small size where they would fit better with surrounding content. Medium button sizes are meant to only pair with equally sized inputs.  Standard/Large buttons are to be used when the UI appears on a mobile device or screen smaller than 768px width (tablet portrait view).
     contents:
       - type: wide image
         src: ./assets/sizes.png
@@ -99,14 +99,12 @@ blocks:
 
           ### Do:
             - Use link style buttons to de-emphasize less important actions.
+
+              *Examples*: Edit, Dismiss, Resend Verification Email, Reset Password
+
             - Use link style buttons to trigger an action.
             - Indicate in design specification the presence of a link style button to your developer.
             - Use the same visual styling as link text.  [See typography specification document.](http://pearson-higher-ed.github.io/design/c/typography/)
-            Examples:
-              - Edit
-              - Dismiss
-              - Resend Verification Email
-              - Reset Password"
 
           ### Don't:
             - Use link style buttons as part of a grouping with other buttons (button bars, save/cancel).
@@ -117,7 +115,7 @@ blocks:
 
   - type: two column
     text: |
-      A button is meant to direct users into taking an action. Help users by writing button labels that clearly explain what each button does.
+      A button is meant to direct users into taking the action you want them to take. Help users by writing button labels that clearly explain what each button does.
     contents:
       - type: text
         content: |
@@ -299,6 +297,7 @@ changelog:
   - version: 2.1.0-beta.5
     changes: |
       - UPDATED: Cleaned up documentation, removed outdated reference to confirmation buttons
+      - UPDATED: New a11y checklist for the new version.
   - version: 2.1.0-beta.4
     changes: |
       - ADDED: Borders on default buttons
