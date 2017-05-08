@@ -1,10 +1,10 @@
 ---
 layout: component-yaml
-title: Tabs
+title: Tab Style Navigation
 section: Components
 redirect_from: "/docs/ui-components/tabs/"
 version: 1.0.0-beta.2
-status: active
+status: deprecated
 implemented: false
 people:
   - role: Product Owner
