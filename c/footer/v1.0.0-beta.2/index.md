@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Footer
 section: Components
-version: 1.0.0-beta.1
-status: deprecated
+version: 1.0.0-beta.2
+status: active
 implemented: false
 people:
   - role: Interaction Design
@@ -92,6 +92,9 @@ blocks:
 
 
 changelog:
+  - version: 1.0.0-beta.2
+    changes: |
+      - CHANGED: "All rights reserved." -> "All Rights Reserved." per UA guidance
   - version: 1.0.0-beta.1
     changes: Initial version
 ---
