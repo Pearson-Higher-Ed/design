@@ -7,6 +7,9 @@ order: 4
 
 Most aspects of Elemental Design are given version numbers in order to clearly communicate changes and support dependencies between components.
 
+* TOC
+{:toc}
+
 ## Anatomy of a Version Number
 Version numbers follow a specific scheme which can inform you about the differences between two difference versions. All versions include three numbers, each separated by a period like so:
 

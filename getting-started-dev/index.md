@@ -9,6 +9,9 @@ in_footer: true
 Components are being hosted on NPM under the [@pearson-components organization][npm-org]. The majority will be available
 in public scope, but some will be privately scoped and require credentials to install.
 
+* TOC
+{:toc}
+
 ## SDKs
 
 We plan to offer two SDKs which package a set of commonly used components together for easy installation and usage.
