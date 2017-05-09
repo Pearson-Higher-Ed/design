@@ -23,7 +23,7 @@
     @include pe-responsive-breakpoint(xl) {
       display: block;
       position: fixed;
-      @include make-grid-child(3);
+      @include make-grid-child(3, 12, true);
 
       top: 216px;
       left: 50%;

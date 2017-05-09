@@ -38,9 +38,15 @@
   margin-right: -10px;
 }
 
-@mixin make-grid-child($cols, $max: 12) {
+@mixin make-grid-child($cols, $max: 12, $static: false) {
   padding-left: 10px;
   padding-right: 10px;
-  width: percentage($cols/$max);
+  @if $static {
+    @include pe-responsive-breakpoint(xl) {
+      width: $cols/$max * 1150px;
+    }
+  } @else {
+    width: percentage($cols/$max);
+  }
   box-sizing: border-box;
 }
