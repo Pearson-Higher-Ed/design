@@ -4,7 +4,7 @@ title: Contextual Help
 section: Components
 redirect_from: /docs/ui-components/contextual-help/
 version: 1.0.0
-status: active
+status: deprecated
 implemented: false
 implementation: https://www.npmjs.com/package/@pearson-components/contextual-help
 people:

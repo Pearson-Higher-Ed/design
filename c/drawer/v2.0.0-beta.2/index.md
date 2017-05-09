@@ -3,7 +3,7 @@ layout: component-yaml
 title: Drawer
 section: Components
 version: 2.0.0-beta.2
-status: active
+status: deprecated
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -67,7 +67,7 @@ blocks:
     text: |
       If the drawer is presenting a list of items, selecting one of them should transition the drawer to the detail view. This adds a back label and icon for returning to the originating view.
 
-      The drawer should retain state on close, i.e. closing the drawer on a detail view and then reopening the same drawer will return the user to that detail view.
+      The drawer should retain state on close, i.e. closing the drawer on a detail view and then reopening the same drawer will return the user to that detail view. However, refreshing the page will reset the state.
     contents:
       - type: wide image
         src: ./assets/detail.view.2x.png

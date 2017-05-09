@@ -3,7 +3,7 @@ layout: component-yaml
 title: Buttons
 section: Components
 version: 2.0.0-beta.2
-status: active
+status: deprecated
 implemented: false
 people:
   - role: Product Owner
@@ -76,6 +76,12 @@ blocks:
       In situations where the user should receive feedback that the action initiated by a button was successful use the Confirmation Button style which integrates feedback.
 
       For simple binary confirmation feedback, this type of button is sufficient—an additional alert or message is unnecessary.
+
+      ### Button Reset
+      If the action may be repeated, then the button can reset to it's original state after presenting the success message. If it's a one-off action then it should remain in the message state.
+
+      ### Page Navigation
+      Should the user be navigated to another page after success?
     contents:
       - type: narrow video
         src: ./assets/confirmation.short.mov

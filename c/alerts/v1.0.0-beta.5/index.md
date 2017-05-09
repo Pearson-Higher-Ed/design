@@ -4,8 +4,8 @@ title: Alerts
 section: Components
 redirect_from: /docs/ui-components/application-header/
 version: 1.0.0-beta.5
-status: active
-implemented: false
+status: deprecated
+implemented: true
 people:
   - role: Product Owner
     name: Joe Macaluso

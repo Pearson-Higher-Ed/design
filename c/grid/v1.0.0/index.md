@@ -4,6 +4,7 @@ title: Grid
 section: Components
 version: 1.0.0
 status: active
+implemented: true
 people:
   - role: Product Owner
     name: Joe Macaluso

@@ -4,7 +4,7 @@ title: Contextual Help
 section: Components
 redirect_from: /docs/ui-components/contextual-help/
 version: 2.0.0-beta.3
-status: active
+status: deprecated
 implemented: false
 people:
   - role: Product Owner
@@ -20,6 +20,8 @@ downloads:
     link: ./assets/contextual-help.mockup.sketch
   - name: .ai
     link: ./assets/contextual-help.mockup.ai
+  - name: Authoring Guidelines
+    https: https://docs.google.com/document/d/1tQVifP2ynJhHlg7R-Odk2Ej1qQxMs0SQ67fYzTlYjM8/edit?ts=578397b6
 
 dependencies:
   - name: Drawer
@@ -32,7 +34,7 @@ dependencies:
     version: 1.1.0
 
 tagline: |
-  Presents help and support articles within the product experience so that users can answer their questions without the interruption of opening a separate help system in a new tab.
+  Contextual help presents help and support articles within the product experience so that users can answer their questions without the interruption of opening a separate help system in a new tab.
 usage_guidelines: |
   Every URL in the Next Gen platform should use the Contextual Help component, at a minimum configuring the two default items in the Help List.
 
@@ -87,6 +89,9 @@ blocks:
       Selecting the "Help" link in the [App Header](/design/c/application-header/v2.0.0-beta.2/#rd-signed-out-mode) will open the Help List. You can also navigate directly to an article (either a standalone article or one from the list) through embedded activation.
 
       A Help icon or a "Learn more" link can be used to activate an article from within the page. These should be positioned near the relevant portion of the page. Avoid mixing and matching both styles in the same page.
+
+      Selecting the embedded activation will launch a particular article in the drawer, but not the full help list.
+
     contents:
       - type: wide image
         src: ./assets/embedded-activation.png
@@ -104,6 +109,16 @@ blocks:
       - type: narrow image
         src: ./assets/help-according-2x.png
         caption: Example of accordions.
+
+
+
+  - type: section
+    name: Writer's Guide
+
+  - type: two column
+    text: |
+      Use [the authoring guidelines](https://docs.google.com/document/d/1tQVifP2ynJhHlg7R-Odk2Ej1qQxMs0SQ67fYzTlYjM8/edit?ts=578397b6) when authoring articles for the Contextual Help component.
+
 
   - type: section
     name: Redlines
