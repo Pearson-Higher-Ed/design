@@ -13,4 +13,13 @@
       color: $pe-color-charcoal;
     }
   }
+
+  &.info {
+    background-color: $pe-color-digital-marine-turquoise;
+    color: $pe-color-white;
+
+    a {
+      color: $pe-color-white;
+    }
+  }
 }

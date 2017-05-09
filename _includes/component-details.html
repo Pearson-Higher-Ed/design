@@ -29,6 +29,19 @@
     <div class="banner warn">This version is outdated. <a href="./..">Go to the latest approved version</a>.</div>
   {% endif %}
 
+  {% if page.status == 'active' %}
+    {% unless page.version contains 'beta' %}
+      {% assign active_pages = site.pages | where: 'title', page.title | where: 'status', 'active' %}
+
+      {% for active_page in active_pages %}
+        {% if active_page.version contains 'beta' %}
+          <div class="banner info">There is a proposed update to this component. <a href="{{site.baseurl}}{{active_page.url}}">Go to the latest proposed version</a>.</div>
+          {% break %}
+        {% endif %}
+      {% endfor %}
+    {% endunless %}
+  {% endif %}
+
 
   <div class="blocks">
     <div class="block article_header">
