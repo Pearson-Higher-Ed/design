@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Alerts
 section: Components
-version: 2.0.0-beta.2
-status: deprecated
+version: 2.0.0-beta.3
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -39,13 +39,13 @@ usage_guidelines: |
 
 blocks:
   - type: section
-    name: Popover alerts (Static)
+    name: Static Alert
 
   - type: two column
     text: |
-      When a message is displayed upon page load, for example if there was an error confirming an email address, the alert should appear statistically in the upper left corner of the page or if on a mobile device the message will appear in the center of the mobile devices screen.  The location will make it noticeable even when the user screen is magnified.
+      When a message is displayed upon page load, for example if there was an error confirming an email address, the alert should appear statically in the upper left corner of the page or if on a mobile device the message will appear in the center of the mobile devices screen.  This location will make it noticeable even when the user screen is magnified.
 
-      This message can simply be closed by clicking on the close button or it will auto close the window upon time out.
+      This message can be closed by clicking on the close button.
 
     contents:
       - type: wide image
@@ -61,7 +61,7 @@ blocks:
         caption: Responsive popover alert.
 
   - type: section
-    name: Popover alerts (Dynamic Presentation)
+    name: Dynamic Alert
 
   - type: two column
     text: |
@@ -72,7 +72,7 @@ blocks:
         caption: The animation for showing/dismissing a dynamic alert.
 
   - type: section
-    name: Content (task) level alerts
+    name: Inline Alert
 
   - type: two column
     text: |
@@ -87,7 +87,7 @@ blocks:
           caption: Example of responsive version content level alert.
 
   - type: section
-    name: Alert Types
+    name: Variants
 
   - type: two column
     text: |
@@ -169,6 +169,9 @@ blocks:
 
 
 changelog:
+  - version: 2.0.0-beta.3
+    changes: |
+      - UPDATED: Clarified documentation based on a11y feedback
   - version: 2.0.0-beta.2
     changes: |
       - UPDATED: Animation video uses latest copy
