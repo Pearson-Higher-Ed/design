@@ -16,8 +16,10 @@ people:
     name: Parker Malenke
     email: parker.malenke@pearson.com
 downloads:
-  - name: calendar_1.0.sketch
-    link: ./assets/calendar_1.0.sketch
+  - name: calendar_2.0.sketch
+    link: ./assets/calendar_2.0.sketch
+  - name: UXD Accessibility Checklist
+    link: https://docs.google.com/a/pearson.com/document/d/19CpAK-nLRHPQ0w_qmUpXo5NjGZU7mBWszAHlB4Kxy94/edit?usp=sharing
 
 dependencies:
   - name: Colors
@@ -51,13 +53,13 @@ blocks:
 
   - type: two column
     text: |
-      ###Dates
+      ### Dates
       It's a normal state, available for user interaction.
 
-      ###Disabled
+      ### Disabled
       Use to indicate unselectable date, cannot incur a hover state.
 
-      ###Hover
+      ### Hover
       Indicates the user's mouse is located over a selectable date.
 
       ###Current
