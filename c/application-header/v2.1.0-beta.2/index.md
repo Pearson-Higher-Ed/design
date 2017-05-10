@@ -3,8 +3,8 @@ layout: component-yaml
 title: Application Header
 section: Components
 redirect_from: /docs/ui-components/application-header/
-version: 2.1.0-beta.1
-status: deprecated
+version: 2.1.0-beta.2
+status: active
 rebranded: true
 implemented: true
 people:
@@ -26,13 +26,13 @@ downloads:
 
 dependencies:
   - name: Colors
-    version: 2.0.0-beta.6
+    version: 2.1.0
   - name: Typography
-    version: 2.0.0-beta.9
+    version: 2.0.0
   - name: Breakpoints
     version: 1.0.0
   - name: Icons
-    version: 2.0.0-beta.4
+    version: 2.1.0
 
 tagline: |
   This component contains and displays global tools and navigation across the next gen platform.
@@ -73,6 +73,9 @@ blocks:
       The User Menu is labelled with the user's first name and contains Account Settings, Policy, and Sign Out options. At widths less than 768px the user's name is replaced with a profile icon.
 
       Use this mode when the user logs in to a standard Pi session and needs a default header experience.
+
+      ### Policy links
+      By default the header links to the standard Terms of Use and Privacy Policies. An application may include additional policy links if necessary below these.
 
     contents:
       - type: wide image
@@ -130,15 +133,18 @@ blocks:
         - Icons get a 44px square tap zone
 
       Background
-      : - [White Gray (#f5f5f5)](/design/c/colors/v2.0.0-beta.5/#rd-white-gray)
-        - 1px solid [Moonlight](/design/c/colors/v2.0.0-beta.5/#rd-moonlight) bottom border
+      : - [White Gray (#f5f5f5)](/design/c/colors/v2.1.0/#rd-white-gray)
+        - 1px solid [Moonlight](/design/c/colors/v2.1.0/#rd-moonlight) bottom border
 
       Typography
-      : - Links are [Bold UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-bold) in [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray)
+      : - Links are [Bold UI Text](/design/c/typography/v2.0.0/#rd-ui-text-bold) in [Medium Gray](/design/c/colors/v2.1.0/#rd-medium-gray)
 
       States
       : - Focusing an icon or link uses the default browser style
-        - Hovering or focusing an icon or link changes the color to [Charcoal (#252525)](/design/c/colors/v2.0.0-beta.5/#rd-charcoal)
+        - Hovering or focusing an icon or link changes the color to [Charcoal (#252525)](/design/c/colors/v2.1.0/#rd-charcoal)
+
+      Icons
+      : - Help icon is [help-fill-18](/design/c/icons/v2.1.0)
 
       #### < 768px ([Small and Extra Small viewports](/design/c/breakpoints/v1.0.0/#rd-small))
 
@@ -173,15 +179,15 @@ blocks:
       : - www.console.pearson.com
 
       Notifications
-      : - Uses notification-18 icon
+      : - Uses [notification-18](/design/c/icons/v2.1.0) icon
         - Badge dimensions are 16px tall with 6px horizontal padding
-        - Active badge is Hot Pink (#DA0474) background with [White](/design/c/colors/v2.0.0-beta.5/#rd-white) [Small Bold UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-small-bold)
-        - Inactive Badge is [White](/design/c/colors/v2.0.0-beta.5/#rd-white) background with [Charcoal](/design/c/colors/v2.0.0-beta.5/#rd-charcoal) text
-        - 2px [White Gray](/design/c/colors/v2.0.0-beta.5/#rd-white-gray) outer border
+        - Active badge is Hot Pink (#DA0474) background with [White](/design/c/colors/v2.1.0/#rd-white) [Small Bold UI Text](/design/c/typography/v2.0.0/#rd-ui-text-small-bold)
+        - Inactive Badge is [White](/design/c/colors/v2.1.0/#rd-white) background with [Charcoal](/design/c/colors/v2.1.0/#rd-charcoal) text
+        - 2px [White Gray](/design/c/colors/v2.1.0/#rd-white-gray) outer border
 
       Account Menu
       : - Opens the standard drawer
-        - Links are [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic) with the standard link style
+        - Links are [Basic UI Text](/design/c/typography/v2.0.0/#rd-ui-text-basic) with the standard link style
         - Sign out button is a Large Primary button
 
       States
@@ -210,6 +216,10 @@ blocks:
 
 
 changelog:
+  - version: 2.1.0-beta.2
+    changes: |
+      - UPDATED: Clarified additional policy links feature
+
   - version: 2.1.0-beta.1
     changes: |
       - ADDED: Terms of Use and Privacy Policy links
