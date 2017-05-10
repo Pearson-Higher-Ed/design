@@ -21,7 +21,7 @@ downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1eSGAoNb7F1A8iA_DqLQfSP_TxzuV0V2yTAK8ksDeQBU/edit?usp=sharing
   - name: Sketch
-    link: ./assets/buttons.2.1.0-beta.4.sketch
+    link: ./assets/buttons.2.1.0-beta.5.sketch
 
 dependencies:
   - name: Colors
@@ -156,7 +156,7 @@ blocks:
 
     contents:
       - type: wide image
-        src: ./assets/modal_button_types.png  
+        src: ./assets/modal.example.png  
 
 
 
