@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Buttons
 section: Components
-version: 2.1.0-beta.5
-status: deprecated
+version: 2.1.0
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -294,22 +294,12 @@ blocks:
     text: |
 
 changelog:
-  - version: 2.1.0-beta.5
+  - version: 2.1.0
     changes: |
-      - UPDATED: Cleaned up documentation, removed outdated reference to confirmation buttons
-      - UPDATED: New a11y checklist for the new version.
-  - version: 2.1.0-beta.4
-    changes: |
-      - ADDED: Borders on default buttons
-      - UPDATED: Primary and CTA button styles
-      - UPDATED: Button sizes now meet accessibility requirements
-  - version: 2.1.0-beta.3
-    changes: |
+      - CHANGED: Primary button to turquoise color
+      - CHANGED: Button sizing and fonts to maintain a11y contrast compliance
       - ADDED: Button placement guidelines
-      - REMOVED: Link style buttons; Just use link text
-  - version: 2.1.0-beta.1
-    changes: |
-      - ADDED: Turquoise CTA button option
+      - ADDED: Link button clarification
   - version: 2.0.0
     changes: Updated for new branding
   - version: 1.0.0
