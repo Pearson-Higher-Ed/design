@@ -12,6 +12,7 @@ Framer.Info =
 # Import file "framer"
 sketch = Framer.Importer.load("imported/framer@1x")
 
+
 sketch.Group.states.add "hidden",
 	maxY: 0
 	minX: 32
