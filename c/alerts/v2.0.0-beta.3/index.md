@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Alerts
 section: Components
-version: 2.0.0-beta.2
-status: deprecated
+version: 2.0.0-beta.3
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -24,28 +24,30 @@ downloads:
 
 dependencies:
   - name: Colors
-    version: 2.0.0-beta.4
+    version: 2.1.0
   - name: Typography
-    version: 2.0.0-beta.3
+    version: 2.0.0
 
 tagline: |
   Presents important feedback or information to users either in response to their actions or upon page load.
 features:
-  - Modes for page load and dynamic presentation
-  - Animated presentation
+  - Both global and inline styles
+  - Option for dynamic animation in response to user action
   - Error, information, and confirmation styles
 usage_guidelines: |
-  Simple confirmation acknowledgements that don't require additional detail should just use a confirmation button. If an error occurs or additional information is needed to clarify then the appropriate alert style may be dynamically presented.
+  Use global alerts for messages which are time sensitive but dismissible. The inline alerts may be used in this manner, or to provide more persistent information that relates to a particular region of the page.
 
 blocks:
   - type: section
-    name: Popover alerts (Static)
+    name: Static Global Alert
 
   - type: two column
     text: |
-      When a message is displayed upon page load, for example if there was an error confirming an email address, the alert should appear statistically in the upper left corner of the page or if on a mobile device the message will appear in the center of the mobile devices screen.  The location will make it noticeable even when the user screen is magnified.
+      When a message is displayed upon page load the alert will appear statically in the upper left corner of the viewport or if on a mobile device the message will appear across the top of the viewport.  Text in the upper left corner of desktop devices (rather than center) will help ensure screen magnification users do not miss the message upon page load.
 
-      This message can simply be closed by clicking on the close button or it will auto close the window upon time out.
+      This type of alert can always be dismissed by clicking on the close icon.
+
+      An example use case for this type of alert would be when the user clicks a confirmation link in their email which loads
 
     contents:
       - type: wide image
@@ -61,18 +63,27 @@ blocks:
         caption: Responsive popover alert.
 
   - type: section
-    name: Popover alerts (Dynamic Presentation)
+    name: Dynamic Global Alert
 
   - type: two column
     text: |
       Alerts can also appear dynamically in response to user actions like submitting a form, choosing an option, or completing an assignment. In this case the alert will animate down from the top.
+
+      Try to use this alert style sparingly, as it is fairly interruptive.
+
+      Example use cases which justify this alert style include:
+
+      - A user drops a student from a course roster, but the action fails due to a server error.
+      - A user initiates a course copy action, which proceeds in the background while they go edit another course. A dynamic alert notifies them when the task finishes.
+      - A user successfully edits an assignment, but due to backend limitations must be informed that it will take one hour before the changes are available to students.
+      - A user edits some settings in one application and needs to be reminded that these changes will not automatically propagate to separate applications that are used as part of the same flow.
     contents:
       - type: wide video
         src: ./assets/animation_alert.mp4
         caption: The animation for showing/dismissing a dynamic alert.
 
   - type: section
-    name: Content (task) level alerts
+    name: Inline Alert
 
   - type: two column
     text: |
@@ -87,7 +98,7 @@ blocks:
           caption: Example of responsive version content level alert.
 
   - type: section
-    name: Alert Types
+    name: Variants
 
   - type: two column
     text: |
@@ -169,6 +180,9 @@ blocks:
 
 
 changelog:
+  - version: 2.0.0-beta.3
+    changes: |
+      - UPDATED: Clarified documentation based on a11y feedback
   - version: 2.0.0-beta.2
     changes: |
       - UPDATED: Animation video uses latest copy
