@@ -42,9 +42,9 @@ blocks:
 
       (Do not use a loading indicator for processes that take less than one second since this may confuse users.)
 
-      Only one indicator should appear on the page at a time.
+      A single loading indicator can be used at the page level or multiple indicators can be applied to specific components on a page.
 
-      There is no visual lightbox effect, however, the user cannot interact with the UI while loading is in process.
+      A visual lightbox effect can applied to indicate to the user that they cannot interact with the UI while loading is in process.
 
     contents:
       - type: wide image
