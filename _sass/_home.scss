@@ -1,4 +1,6 @@
 body.home {
+  background-color: $pe-color-white;
+
   .top {
     padding: 100px 10px;
     text-align: center;
@@ -45,7 +47,7 @@ body.home {
     }
 
     h2 {
-      @extend .pe-title, .pe-title--large;
+      @extend .pe-page-title;
       margin-bottom: 28px;
     }
 
@@ -76,6 +78,7 @@ body.home {
     ul {
       list-style-type: none;
       text-align: center;
+      padding: 0;
     }
 
     li + li {

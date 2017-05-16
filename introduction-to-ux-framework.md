@@ -1,6 +1,7 @@
 ---
 layout: article
 title: Introduction to the UX Framework
+shortname: Introduction
 section: learn
 ---
 

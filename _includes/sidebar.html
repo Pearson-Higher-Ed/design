@@ -43,13 +43,18 @@
     {% endcase %}
   {% endfor %}
 
+  {% assign learn_pages = learn_pages | sort: 'title' %}
+  {% assign use_pages = use_pages | sort: 'title' %}
+  {% assign contribute_pages = contribute_pages | sort: 'title' %}
+  {% assign element_pages = element_pages | sort: 'title' %}
+
   <div class="sidebar-toc">
     <ul>
       <li>
         Learn
         <ul>
           {% for page in learn_pages %}
-            <li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+            <li><a href="{{site.baseurl}}{{page.url}}">{% if page.shortname %}{{page.shortname}}{% else %}{{page.title}}{% endif %}</a></li>
           {% endfor %}
         </ul>
       </li>
@@ -57,7 +62,7 @@
         Use
         <ul>
           {% for page in use_pages %}
-            <li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+            <li><a href="{{site.baseurl}}{{page.url}}">{% if page.shortname %}{{page.shortname}}{% else %}{{page.title}}{% endif %}</a></li>
           {% endfor %}
         </ul>
       </li>
@@ -65,7 +70,7 @@
         Contribute
         <ul>
           {% for page in contribute_pages %}
-            <li><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></li>
+            <li><a href="{{site.baseurl}}{{page.url}}">{% if page.shortname %}{{page.shortname}}{% else %}{{page.title}}{% endif %}</a></li>
           {% endfor %}
         </ul>
       </li>
@@ -73,7 +78,7 @@
         Elements
         <ul>
           {% for page in element_pages %}
-            <li><a href="{{site.baseurl}}{{page.url}}..">{{page.title}}</a></li>
+            <li><a href="{{site.baseurl}}{{page.url}}..">{% if page.shortname %}{{page.shortname}}{% else %}{{page.title}}{% endif %}</a></li>
           {% endfor %}
         </ul>
       </li>

@@ -22,7 +22,7 @@
 					{{chunk.text | markdownify}}
 
 					{% if chunk.button %}
-						<button type="button" class="pe-btn__cta--btn_large">{{chunk.button.title}}</button>
+						<a href="{{chunk.button.src}}" {% if chunk.button.new_tab %}target="_blank"{% endif %} class="pe-btn__cta--btn_large">{{chunk.button.title}}</a>
 					{% endif %}
 
 					<div class="links">

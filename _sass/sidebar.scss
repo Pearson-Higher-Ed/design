@@ -50,11 +50,11 @@
     // Set the top level items to be bold
     & > ul > li {
       @extend .pe-label--small, .pe-label--bold;
-      margin-top: 12px;
+      margin-top: 20px;
 
       & li {
         font-weight: normal;
-        margin-top: 8px;
+        margin-top: 12px;
       }
     }
 
