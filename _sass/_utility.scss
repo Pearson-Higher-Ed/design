@@ -50,3 +50,7 @@
   }
   box-sizing: border-box;
 }
+
+@function calc-grid-col-px($cols, $max: 12) {
+  @return $cols/$max * 1150px;
+}

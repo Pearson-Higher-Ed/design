@@ -1,5 +1,9 @@
 .article {
 
+  h1 {
+    margin-bottom: 28px;
+  }
+
   .parent {
     @include make-grid-parent;
     margin: 10px auto 0;
@@ -38,6 +42,12 @@
 
     a {
       text-decoration: none;
+      color: $pe-color-medium-gray;
+
+      &:hover {
+        color: $pe-color-ink-blue;
+        text-decoration: underline;
+      }
     }
 
     ul {
@@ -46,12 +56,13 @@
 
       a.active {
         @extend .pe-label--bold;
+        color: $pe-color-digital-pearson-blue;
       }
     }
   }
 
   article {
-    margin: 96px auto 0;
+    margin: 96px auto;
 
     @include make-grid-child(12);
 
@@ -112,13 +123,48 @@
       margin-top: 12px;
     }
   }
-  h2 { @include hl1;  }
-  h3 { @include hl2; }
-  h4 { @include hl3; }
+  h2 {
+    @extend .pe-title, .pe-label--bold;
+    margin-top: 100px;
+
+    & + h3 {
+      margin-top: 12px;
+    }
+  }
+  h3 {
+    @extend .pe-title, .pe-title--small;
+    margin-top: 40px;
+
+    & + h4 {
+      margin-top: 12px;
+    }
+  }
+  h4 { @extend .pe-label, .pe-label--large; }
   a { @include pe-link; }
 
-  ul { @include pe-ulist; }
-  ol { @include pe-olist; }
+  ul {
+    @extend .pe-list, .pe-styled-lists--unordered;
+
+    ul {
+      @extend .pe-list, .pe-styled-lists--unordered;
+    }
+
+    ol {
+      @extend .pe-list, .pe-styled-lists--ordered;
+    }
+  }
+
+  ol {
+    @extend .pe-list, .pe-styled-lists--ordered;
+
+    ol {
+      @extend .pe-list, .pe-styled-lists--ordered;
+    }
+
+    ul {
+      @extend .pe-list, .pe-styled-lists--unordered;
+    }
+  }
 
   ul + p,
   ol + p,

@@ -10,17 +10,41 @@
   margin-bottom: 60px;
 
   h3 {
-    @extend .pe-title;
-  }
-  h4 {
     @extend .pe-title, .pe-title--small;
   }
-  h5 {
+  h4 {
     @extend .pe-label, .pe-label--large;
+  }
+  h5 {
+    @extend .pe-label, .pe-label--bold;
   }
 
   ul {
-    @include pe-ulist;
+    @extend .pe-list, .pe-styled-lists--unordered;
+
+    ul {
+      @extend .pe-list, .pe-styled-lists--unordered;
+    }
+
+    ol {
+      @extend .pe-list, .pe-styled-lists--ordered;
+    }
+
+    & + p {
+      margin-top: 12px;
+    }
+  }
+
+  ol {
+    @extend .pe-list, .pe-styled-lists--ordered;
+
+    ol {
+      @extend .pe-list, .pe-styled-lists--ordered;
+    }
+
+    ul {
+      @extend .pe-list, .pe-styled-lists--unordered;
+    }
 
     & + p {
       margin-top: 12px;
@@ -155,7 +179,31 @@
     }
 
     ul {
-      @include pe-ulist;
+      @extend .pe-list, .pe-styled-lists--unordered;
+
+      ul {
+        @extend .pe-list, .pe-styled-lists--unordered;
+      }
+
+      ol {
+        @extend .pe-list, .pe-styled-lists--ordered;
+      }
+
+      & + p {
+        margin-top: 12px;
+      }
+    }
+
+    ol {
+      @extend .pe-list, .pe-styled-lists--ordered;
+
+      ol {
+        @extend .pe-list, .pe-styled-lists--ordered;
+      }
+
+      ul {
+        @extend .pe-list, .pe-styled-lists--unordered;
+      }
 
       & + p {
         margin-top: 12px;

@@ -61,13 +61,14 @@
     @include make-grid-parent;
 
     .left {
-      @include make-grid-child(8);
+      @include make-grid-child(7);
       float: left;
     }
 
     .right {
       @include make-grid-child(4);
       float: left;
+      margin-left: calc-grid-col-px(1);
     }
   }
 

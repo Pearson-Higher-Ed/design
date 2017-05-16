@@ -5,6 +5,8 @@
 $pe-fonts-path: "./fonts/";
 @import "../node_modules/pearson-elements/scss/elements";
 
+@import "temp";
+
 @import "utility";
 @import "typography/lists";
 @import "typography/headings";

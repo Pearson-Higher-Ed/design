@@ -77,8 +77,16 @@
       <li>
         Elements
         <ul>
-          {% for page in element_pages %}
-            <li><a href="{{site.baseurl}}{{page.url}}..">{% if page.shortname %}{{page.shortname}}{% else %}{{page.title}}{% endif %}</a></li>
+          {% for element in element_pages %}
+            <li {% if element.title == page.title %}class="selected"{% endif %}>
+              <a href="{{site.baseurl}}{{element.url}}..">
+                {% if element.shortname %}
+                  {{element.shortname}}
+                {% else %}
+                  {{element.title}}
+                {% endif %}
+              </a>
+            </li>
           {% endfor %}
         </ul>
       </li>

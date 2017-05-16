@@ -42,6 +42,10 @@
     {% endunless %}
   {% endif %}
 
+  {% if page.rebranded %}
+    <div class="banner warn">This component is part of a larger rebranding project. Please coordinate with the framework team before consuming it.</div>
+  {% endif %}
+
 
   <div class="blocks">
     <div class="block article_header">
@@ -72,7 +76,7 @@
 
       <div class="left">
 
-        <p class="pe-label pe-label--large tagline">{{page.tagline}}</p>
+        <p class="pe-copy pe-copy--large tagline">{{page.tagline}}</p>
 
         <div class="buttons">
           {% if page.sketch %}
@@ -93,12 +97,12 @@
           {% endif %}
         </div>
 
+        {% if page.usage_guidelines %}
         <div class="usage_guidelines">
           <p><span class="pe-label pe-label--bold">Usage Guidelines</span></p>
-          {% if page.usage_guidelines %}
-            {{page.usage_guidelines | markdownify}}
-          {% endif %}
+          {{page.usage_guidelines | markdownify}}
         </div>
+        {% endif %}
 
         <div class="toc">
           <ul>
@@ -115,6 +119,7 @@
 
       <div class="right">
 
+        {% if page.features %}
         <div class="features">
           <p><span class="pe-label pe-label--bold">Features</span></p>
           <ul class="pe-list pe-styled-lists--unordered">
@@ -123,6 +128,7 @@
             {% endfor %}
           </ul>
         </div>
+        {% endif %}
 
         <div class="dependencies">
           <p><span class="pe-label pe-label--bold">Dependencies</span></p>
@@ -146,7 +152,7 @@
             {% endfor %}
           {% endif %}
 
-          <p><span class="pe-label pe-label--bold">Other</span></p>
+          <p><span class="pe-label pe-label--bold">Downloads</span></p>
           <p><a href="{{a11y}}">UX Accessibility Checklist</a></p>
         </div>
 

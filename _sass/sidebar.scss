@@ -61,6 +61,11 @@
     & > ul > li > ul {
       margin-left: 12px;
     }
+
+    .selected {
+      color: $pe-color-digital-pearson-blue;
+      font-weight: bolder;
+    }
   }
 }
 

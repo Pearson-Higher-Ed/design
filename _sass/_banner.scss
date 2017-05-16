@@ -3,6 +3,18 @@
   text-align: center;
   padding: 16px 0;
 
+  & + .banner {
+    margin-top: 0;
+
+    &.warn {
+      border-top: 2px solid $pe-color-sunflower-yellow;
+    }
+
+    &.info {
+      border-top: 2px solid $pe-color-brackish-turquoise;
+    }
+  }
+
   @extend .pe-label;
 
   &.warn {
