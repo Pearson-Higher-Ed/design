@@ -3,7 +3,7 @@ layout: component-yaml
 title: Inputs
 section: Components
 redirect_from: /docs/ui-components/forms/
-status: active
+status: deprecated
 implemented: true
 implementation: https://www.npmjs.com/package/pearson-elements
 version: 1.0.0

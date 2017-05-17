@@ -55,19 +55,6 @@
 	<div id="library" class="library">
 		<header class="pe-title clearfix">
 			Library
-			<span class="pull-right clearfix">
-				<div class="pe-checkbox pe-checkbox--unchecked">
-			    <input type="checkbox" id="chk3" checked name="proposed"><label for="chk3">Proposed</label>
-			  </div>
-
-				<div class="pe-checkbox pe-checkbox--unchecked">
-			    <input type="checkbox" id="chk4" checked name="designed"><label for="chk4">Designed</label>
-			  </div>
-
-				<div class="pe-checkbox pe-checkbox--unchecked">
-			    <input type="checkbox" id="chk5" checked name="developed"><label for="chk5">Developed</label>
-			  </div>
-			</span>
 		</header>
 		{% assign component_names = (site.pages | where: "section", "Components") | map: "title" | uniq | sort %}
 
@@ -214,7 +201,7 @@
 							<a href="{{site.baseurl}}{{latest_component.url}}" class="version pe-label pe-label--small">
 								Code
 								<br />
-								v{{latest_version}}
+								v{{latest_impl_version}}
 							</a>
 						{% endif %}
 
@@ -240,53 +227,6 @@
 
 	  ga('create', 'UA-75266302-1', 'auto');
 	  ga('send', 'pageview');
-
-	</script>
-
-	<script>
-		// shortcut for getting a proper array of nodes back from a DOM selection
-		var queryArray = function(selector) {
-			nodes = document.querySelectorAll(selector);
-			nodesArray = [];
-			for (var i = 0; i < nodes.length; i++) {
-				nodesArray.push(nodes.item(i));
-			}
-			return nodesArray;
-		}
-
-		var hideComponent = function(node) { node.style.display = "none"; }
-		var showComponent = function(node) { node.style.display = "block"; }
-
-		// returns a map of 'filter name' => T/F for the currently selected filters
-		var getFilters = function() {
-			var inputs = queryArray('.library input');
-			return inputs.reduce(function(memo, input) {
-				memo[input.name] = input.checked;
-				return memo;
-			}, {});
-		}
-
-		// returns boolean for whether a component matches the current filters
-		var componentMeetsFilters = function(component, filters) {
-			return filters[component.dataset.status];
-		}
-
-		var onFilterChange = function(e) {
-			var components = queryArray('div.component'),
-			    filters = getFilters();
-
-			components.forEach(function(component) {
-				if (componentMeetsFilters(component, filters)) {
-					showComponent(component);
-				} else {
-					hideComponent(component);
-				}
-			});
-		}
-
-		queryArray(".library input").forEach(function(input) {
-			input.addEventListener("change", onFilterChange);
-		});
 
 	</script>
 </body>

@@ -3,7 +3,7 @@ layout: component-yaml
 title: Buttons
 section: Components
 version: 2.0.0-beta.4
-status: active
+status: deprecated
 implemented: false
 people:
   - role: Product Owner
@@ -107,6 +107,32 @@ blocks:
       - type: narrow video
         src: ./assets/error.short.mov
         caption: If the action results in an error that can be presented within the button context as well. Make sure to pair this with an explanatory alert.
+
+  - type: section
+    name: Link Style Buttons
+
+  - type: two column
+    text: |
+      Link style buttons can be used in place of a graphical button for the purposes of de-emphasizing an action (visual hierarchy).  However, the premise stands that links should be used for navigation and buttons should be used for actions.  Therefore, the need for link style buttons is to conform to [Pearson Accessibility Guidelines for E-Learning #11 Semantic Markup][Accessibility]
+
+      [Accessibility]: http://wps.pearsoned.com/accessibility/115/29601/7577872.cw/index.html#PG11
+
+      *Identify roles (e.g. heading, numbered list, bulleted list, data table, paragraph, emphasized text) of page elements using conventions for the media type. (And do not misidentify roles by using those conventions solely for their visual effects.)*
+
+    contents:
+        - type: text
+          content: |
+
+            ### Do's
+            - Do use link style buttons to de-emphasize less important actions.
+            - Do use link style buttons to trigger an action.
+            - Do indicate in design specification the presence of a link style button to your developer.
+            - Do use the same visual styling as link text.  [See typography specification document.](http://pearson-higher-ed.github.io/design/c/typography/)
+            - Examples: "Edit, Dismiss, Resend Confirmation Email, Reset Password"
+
+            ### Dont's
+            - Don't use link style buttons as part of a grouping with other buttons (button bars, save/cancel).
+            - Don't use link style buttons for navigation.
 
   - type: section
     name: Redlines

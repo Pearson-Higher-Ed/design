@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Inputs
 section: Components
-status: active
+status: deprecated
 version: 2.0.0-beta.4
 private: true
 people:
@@ -38,9 +38,7 @@ downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/13qcZKhRjvksN3oCb5xzKX48QJTtTeZGPQeom7xKKOfg/edit?usp=sharing
   - name: .sketch mockup
-    link: ./assets/inputs.mockup.sketch
-  - name: .ai mockup
-    link: ./assets/inputs.mockup.ai
+    link: ./assets/inputs.sketch
 
 blocks:
 
@@ -144,7 +142,7 @@ blocks:
         caption: Closed and opened select in the fancy style.
       - type: narrow image
         src: ./assets/Inputs_select_basic.png
-        caption: Closed an open select in the basic style.
+        caption: Closed and opened select in the basic style.
 
   - type: section
     name: Radio Buttons

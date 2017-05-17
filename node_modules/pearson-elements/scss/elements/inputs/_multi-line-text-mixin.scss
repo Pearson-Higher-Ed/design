@@ -1,0 +1,35 @@
+@mixin pe-placeholder {
+  &::-webkit-input-placeholder { @content }
+  &::-moz-placeholder { @content }
+  &:-moz-placeholder { @content }
+  &:-ms-input-placeholder { @content }
+};
+
+@mixin multiLineText() {
+
+  .pe-multiLineText {
+    border: $multiLineText-border;
+    font-size: $textInput-value-font-size;
+    background-color: $pe-color-white;
+    color: $pe-color-charcoal;
+    margin-top: $textInput-basic-marginTop;
+    line-height: $textInput-line-height;
+    padding: $multiLineText-padding;
+    resize: none;
+
+    @include pe-placeholder {
+      font-size   : $textInput-placeholder-font-size;
+      color       : $textInput-placeholder-color;
+      line-height : $textInput-line-height;
+    }
+
+    &:focus {
+      outline: none;
+      border: $textInput-basic-focus-border;
+      box-shadow: $textInput-basic-focus-boxShadow;
+      resize: both;
+      overflow: auto;
+    }
+  }
+
+};

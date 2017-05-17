@@ -3,7 +3,7 @@ layout: component-yaml
 title: Drawer
 section: Components
 version: 2.0.0-beta.2
-status: active
+status: deprecated
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -14,18 +14,16 @@ people:
 implementation: https://www.npmjs.com/package/pearson-elements
 downloads:
   - name: UXD Accessibility Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/1iO8WNiFa5pn6_JleXMUufIvIsXEbVHXsiYUcgxtW-iM/edit?usp=sharing
+    link: https://docs.google.com/a/pearson.com/document/d/1_v_Kv57A9blAQ1K7qEThcizcLAygdD1B_nl2LJ5TzqA/edit?usp=sharing
   - name: .sketch mockup
-    link: ./assets/drawer.mockup.sketch
-  - name: .ai mockup
-    link: ./assets/drawer.mockup.ai
+    link: ./assets/drawer-1.0.sketch
 dependencies:
   - name: Typography
     version: 2.0.0-beta.9
   - name: Icons
     version: 2.0.0-beta.3
   - name: Colors
-    version: 2.0.0-beta.4
+    version: 2.0.0-beta.6
   - name: Breakpoints
     version: 1.0.0
 tagline: |
@@ -69,7 +67,7 @@ blocks:
     text: |
       If the drawer is presenting a list of items, selecting one of them should transition the drawer to the detail view. This adds a back label and icon for returning to the originating view.
 
-      The drawer should retain state on close, i.e. closing the drawer on a detail view and then reopening the same drawer will return the user to that detail view.
+      The drawer should retain state on close, i.e. closing the drawer on a detail view and then reopening the same drawer will return the user to that detail view. However, refreshing the page will reset the state.
     contents:
       - type: wide image
         src: ./assets/detail.view.2x.png

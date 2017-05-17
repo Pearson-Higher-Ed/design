@@ -4,7 +4,7 @@ title: Buttons
 section: Components
 redirect_from: "/docs/ui-components/buttons/"
 version: 2.0.0-beta.1
-status: active
+status: deprecated
 implemented: false
 people:
   - role: Product Owner
@@ -23,14 +23,12 @@ downloads:
     link: https://docs.google.com/a/pearson.com/document/d/19r4uvPAZpmXRwT_krIr9MqHLYC-Vgjah2kPDi9PYaQA/edit?usp=sharing
   - name: Sketch
     link: ./assets/buttons.mockup.sketch
-  - name: Illustrator
-    link: ./assets/buttons.mockup.ai
 
 dependencies:
   - name: Colors
-    version: 2.0.0-beta.3
+    version: 2.0.0-beta.4
   - name: Typography
-    version: 2.0.0-beta.2
+    version: 2.0.0-beta.4
 
 tagline: This component defines the standard visual style for buttons.
 features:

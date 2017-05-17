@@ -1,4 +1,4 @@
 ---
 title: Dropdown
-layout: component-yaml
+layout: component-default
 ---

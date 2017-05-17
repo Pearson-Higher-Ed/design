@@ -3,7 +3,8 @@ layout: component-yaml
 title: Forms
 section: Components
 version: 1.0.0-beta.3
-status: active
+status: deprecated
+implemented: false
 people:
   - role: Product Owner
     name: Joe Macaluso
