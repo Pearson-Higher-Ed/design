@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html class="core">
+{% include header.html %}
+<body class="contact">
+  {% include sidebar.html %}
+
+  <div class="top-level-content">
+
+    <iframe id="forum_embed"
+      src="javascript:void(0)"
+      scrolling="no"
+      frameborder="0"
+      width="100%"
+      height="700">
+    </iframe>
+    <script type="text/javascript">
+      document.getElementById('forum_embed').src =
+         'https://groups.google.com/a/pearson.com/forum/embed/?place=forum/elemental-discuss'
+         + '&showsearch=true&showpopout=true&showtabs=false'
+         + '&parenturl=' + encodeURIComponent(window.location.href);
+    </script>
+
+  </div>
+</body>
