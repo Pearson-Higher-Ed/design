@@ -3,8 +3,8 @@ layout: component-yaml
 title: Loading Indicator
 section: Components
 redirect_from: /docs/ui-components/loading-indicator/
-version: 1.0.0-beta.3
-status: deprecated
+version: 1.1.0-beta.1
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -42,9 +42,7 @@ blocks:
 
       (Do not use a loading indicator for processes that take less than one second since this may confuse users.)
 
-      Only one indicator should appear on the page at a time.
-
-      There is no visual lightbox effect, however, the user cannot interact with the UI while loading is in process.
+      A single loading indicator can be used at the page level or multiple indicators can be applied to specific components on a page.
 
     contents:
       - type: wide image
@@ -54,13 +52,24 @@ blocks:
         src: ./assets/animation.mp4
         caption: Example of the loading animation.
 
+  - type: two column
+    text: |
+      ### Positioning
+
+      The loading indicator may apply to either the entire page or to just the section that is awaiting a server response.
+    contents:
+      - type: narrow image
+        src: ./assets/subset.png
+        caption: Example of the loading indicator being used for a single area of the page.
+
+
   - type: section
     name: Redlines
 
   - type: two column
     text: |
       Positioning
-      : - Vertically and horizontally centered in the viewport
+      : - Vertically and horizontally centered in the viewport or page subset
         - Always on top of contents
 
       Sizing and spacing
@@ -71,8 +80,8 @@ blocks:
         - Chip has 20px margins that force text to wrap
 
       Colors
-      : - Background Color: [Charcoal](/design/c/colors/v2.0.0/#rd-charcoal-252525)
-        - Text: [White](/design/c/colors/v2.0.0/#rd-white-ffffff)
+      : - Background Color: [Charcoal](/design/c/colors/v2.0.0/#rd-charcoal)
+        - Text: [White](/design/c/colors/v2.0.0/#rd-white)
         - Spinner: [Digital Marine Turquoise](/design/c/colors/v2.0.0/#rd-digital-marine-turquoise-19A5A3)
 
       Typography
@@ -88,8 +97,8 @@ blocks:
         - The next dot in sequence starts growing as soon as the previous dot starts shrinking
         - The animation proceeds in a clockwise direction
 
-      Behavior
-      : - While the spinner is displayed none of the UI behind it should be interactive
+      Light box
+      : - The region of the page the loader applies to should have a [White](/design/c/colors/v2.0.0/#rd-white) overlay at 80% opacity
 
     contents:
       - type: wide image
@@ -105,15 +114,10 @@ blocks:
         caption: Loading indicator animation.
 
 changelog:
-  - version: 1.0.0-beta.3
+  - version: 1.1.0-beta.1
     changes: |
-      - ADDED: Accessibility checklist
-      - FIXED: Redline formatting
-
-  - version: 1.0.0-beta.2
-    changes: |
-      - ADDED: Animation detail
-
-  - version: 1.0.0-beta.1
+      - ADDED: Overlay effect
+      - ADDED: Loading indicator may apply to a subset of the page
+  - version: 1.0.0
     changes: Initial version
 ---

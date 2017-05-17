@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Buttons
 section: Components
-version: 2.1.0
-status: deprecated
+version: 2.1.1
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -100,7 +100,7 @@ blocks:
           ### Do:
             - Use link style buttons to de-emphasize less important actions.
 
-              *Examples*: Edit, Dismiss, Resend Verification Email, Reset Password
+              *Examples*: Edit, Dismiss, Resend Verification Email, and Reset Password
 
             - Use link style buttons to trigger an action.
             - Indicate in design specification the presence of a link style button to your developer.
@@ -122,13 +122,13 @@ blocks:
           ### Do:
             - Keep text short. Use as few words as possible.
 
-              *Examples*: Next, Save, Create, View, Edit, Learn more, Study, Review, Delete, Cancel, Close
+              *Examples*: Next, Save, Create, View, Edit, Learn more, Study, Review, Delete, Cancel, and Close
 
             - Use sentence case.
             - Capitalize proper nouns.
             - Use specific action-oriented text for CTAs.
 
-              *Examples*: Activate, Create account, Sign in, Reset password, Submit, Resend Verification Email, Go to Dashboard
+              *Examples*: Activate, Create account, Sign in, Reset password, Submit, Resend Verification Email, and Go to Dashboard
 
           ### Be sure to:
             - Look across the experience and check for consistent use of labels.
@@ -294,6 +294,9 @@ blocks:
     text: |
 
 changelog:
+  - version: 2.1.1
+    changes: |
+      - FIXED: Typos and copy errors
   - version: 2.1.0
     changes: |
       - CHANGED: Primary button to turquoise color
