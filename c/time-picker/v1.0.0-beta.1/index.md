@@ -154,7 +154,6 @@ blocks:
   - type: two column
     text: |
       ### End Time Focus and Highlight w/ Selection
-      Times prior to the selected start time will not be in the list.
 
     contents:
         - type: wide image
