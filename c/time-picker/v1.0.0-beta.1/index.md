@@ -52,7 +52,7 @@ blocks:
       ### Default State
       The single time picker consists of a specialized input field (including the current supported time icon) and a input component.
 
-      By default the time-list is hidden until the user interacts with the time input field.
+      By default the dropdown is hidden until the user interacts with the time input field.
 
       The time input field should be pre-filled with placeholder text to indicate formatting of the numeric time (ex. hh:mm).
 
@@ -67,10 +67,10 @@ blocks:
       **Upon focus:**
 
       - The default text remains and a cursor appears within the field
-      - The time-list appears
+      - The dropdown appears
       - No time is selected by default
 
-      If the user closes the time-list without making a selection, it reverts back to Default State.
+      If the user closes the dropdown without making a selection, it reverts back to Default State.
 
     contents:
       - type: narrow image
@@ -82,14 +82,14 @@ blocks:
 
       **Upon focus:**
 
-      - The time-list appears and shows the selected time
+      - The dropdown appears and shows the selected time
       - The numeric time text in the field is highlighted
 
-      **The time-list closes when:**
+      **The dropdown closes when:**
 
-      - The user makes a selection from the time-list
+      - The user makes a selection from the dropdown
       - The user begins to manually type in a numeric time in the field
-      - Focus is lost from field or time-list
+      - Focus is lost from field or dropdown
 
       Note that for the first and second points, focus remains on the field until the user clicks elsewhere.
 
@@ -101,8 +101,8 @@ blocks:
     text: |
       ### Selected Date (no focus)
 
-      - If the user has made a selection and removed focus from the time-list or field, then the time field shows the numeric time.
-      - If a field with a previously selected time regains focus, the field and time-list switch to Focus State (w/ selected time).
+      - If the user has made a selection and removed focus from the dropdown or field, then the time field shows the numeric time.
+      - If a field with a previously selected time regains focus, the field and dropdown switch to Focus State (w/ selected time).
 
     contents:
       - type: narrow image
@@ -125,7 +125,7 @@ blocks:
 
     text: |
       ### Start Time Focus w/o Selection
-      When the user interacts with the start time input field, it gains focus and the time-list appears.
+      When the user interacts with the start time input field, it gains focus and the dropdown appears.
 
     contents:
       - type: wide image
@@ -144,7 +144,7 @@ blocks:
     text: |
       ### End Time Focus w/o Selection
 
-      Note that once the user has made a start time selection, focus should automatically switch to the end time and the time-list for the end time should open. Until the user actually does a mouseover on the time-list, only the selected start time will be highlighted.
+      Note that once the user has made a start time selection, focus should automatically switch to the end time and the dropdown for the end time should open. Time selected in the start time and prior will not be in the dropdown.
 
     contents:
         - type: wide image
