@@ -4,7 +4,7 @@ title: Colors
 section: Components
 redirect_from: /docs/ui-components/colors/
 version: 2.0.0
-status: active
+status: deprecated
 implemented: true
 people:
   - role: Product Owner
