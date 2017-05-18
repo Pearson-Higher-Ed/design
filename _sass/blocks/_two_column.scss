@@ -276,16 +276,16 @@
 
       td {
         @extend .pe-label;
-        border: 1px solid pe-color(brightly-lit);
-        padding: 10px;
+        border: 1px solid $pe-color-moonlight;
       }
 
-      th {
+      th, td {
         padding: 10px;
+        vertical-align: middle;
       }
 
       tbody tr:hover {
-        background-color: pe-color(brightly-lit);
+        background-color: $pe-color-moonlight;
       }
     }
   }
