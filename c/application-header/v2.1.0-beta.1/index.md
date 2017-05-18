@@ -4,7 +4,7 @@ title: Application Header
 section: Components
 redirect_from: /docs/ui-components/application-header/
 version: 2.1.0-beta.1
-status: active
+status: deprecated
 rebranded: true
 implemented: true
 people:
