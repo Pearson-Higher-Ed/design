@@ -28,8 +28,6 @@ dependencies:
     version: 2.0.0
   - name: Icons
     version: 2.0.0
-  - name: Colors
-    version: 2.0.0
 
 tagline: |
   This component defines the standard visual style for the calendar element.
