@@ -96,11 +96,11 @@ blocks:
       : - [White](/design/c/colors/v2.1.0/#rd-white)
 
       Month Label
-      : - Small Section Heading; [Charcoal](/design/c/colors/v2.1.0/#rd-charcoal)
-        - Padding-left 8px;
-        - Padding-right 8px;
+      : - Small Section Heading, [Charcoal](/design/c/colors/v2.1.0/#rd-charcoal)
+        - Padding-left 8px
+        - Padding-right 8px
         - 40px height
-        - Margin-below 8px;
+        - Margin-below 8px
         - Centered
 
       Controls
@@ -108,9 +108,9 @@ blocks:
         - chevron-next-18
         - Color, [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray)
         - Hover color, [Charcoal](/design/c/colors/v2.1.0/#rd-charcoal)
-        - Disabled color, [Alto](/design/c/colors/v2.1.0/#rd-alto), no hover state
+        - Disabled color, [Alto](/design/c/colors/v2.1.0/#rd-alto) (no hover state)
         - 40px height and width
-        - Margin-below 8px;
+        - Margin-below 8px
         - Centered
 
       Days of the Week
@@ -139,7 +139,7 @@ blocks:
         - 35px height
 
       Dates
-      : - Basic UI Text; [Charcoal](/design/c/colors/v2.1.0/#rd-charcoal)
+      : - Basic UI Text, [Charcoal](/design/c/colors/v2.1.0/#rd-charcoal)
         - Centered
 
       Dates (hover)
@@ -148,7 +148,7 @@ blocks:
         - Circle border-radius, 16px
 
       Current
-      : - Basic UI Text; [White](/design/c/colors/v2.1.0/#rd-white)
+      : - Basic UI Text, [White](/design/c/colors/v2.1.0/#rd-white)
         - Size, 38 x 38 pixel
         - Border, 1px solid [Concrete](/design/c/colors/v2.1.0/#rd-concrete)
 
@@ -158,16 +158,16 @@ blocks:
         - Circle border-radius, 16px
 
       Selected (no hover)
-      : - Bold UI Text; [White](/design/c/colors/v2.1.0/#rd-white)
+      : - Bold UI Text, [White](/design/c/colors/v2.1.0/#rd-white)
         - Circle size, 32 x 32 pixel
         - Circle background color, [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray)
         - Circle border-radius, 16px
 
       Disabled (no hover)
-      : - Basic UI Text; [Concrete](/design/c/colors/v2.1.0/#rd-concrete)
+      : - Basic UI Text, [Concrete](/design/c/colors/v2.1.0/#rd-concrete)
 
       Assignments
-      : - Basic UI Text; [Charcoal](/design/c/colors/v2.1.0/#rd-charcoal)
+      : - Basic UI Text, [Charcoal](/design/c/colors/v2.1.0/#rd-charcoal)
         - Circle size, 32 x 32 pixel
         - Circle border, 1px solid [Concrete](/design/c/colors/v2.1.0/#rd-concrete)
         - Circle border-radius, 16px
@@ -190,7 +190,7 @@ blocks:
       : - [Ink Blue](/design/c/colors/v2.1.0/#rd-ink-blue)
 
       Month Label
-      : - Small Section Heading; [White](/design/c/colors/v2.1.0/#rd-white)
+      : - Small Section Heading, [White](/design/c/colors/v2.1.0/#rd-white)
 
       Controls
       : - chevron-back-18
@@ -220,27 +220,27 @@ blocks:
       ### Date States (Ink Blue)
 
       Dates
-      : - Basic UI Text; [White](/design/c/colors/v2.1.0/#rd-white)
+      : - Basic UI Text, [White](/design/c/colors/v2.1.0/#rd-white)
 
       Dates (hover)
       : - Circle background color, [Digital Pearson Blue](/design/c/colors/v2.1.0/#rd-digital-pearson-blue)
 
       Current
-      : - Basic UI Text; [Charcoal](/design/c/colors/v2.1.0/#rd-charcoal)
+      : - Basic UI Text, [Charcoal](/design/c/colors/v2.1.0/#rd-charcoal)
         - Circle background color, [White](/design/c/colors/v2.1.0/#rd-white)
 
       Current (hover)
       : - Border, 1px solid [Concrete](/design/c/colors/v2.1.0/#rd-concrete)
 
       Selected (no hover)
-      : - Bold UI Text; [Charcoal](/design/c/colors/v2.1.0/#rd-charcoal)
+      : - Bold UI Text, [Charcoal](/design/c/colors/v2.1.0/#rd-charcoal)
         - Circle background color, [White](/design/c/colors/v2.1.0/#rd-white)
 
       Disabled (no hover)
-      : - Basic UI Text; [Digital Pearson Blue](/design/c/colors/v2.1.0/#rd-digital-pearson-blue)
+      : - Basic UI Text, [Digital Pearson Blue](/design/c/colors/v2.1.0/#rd-digital-pearson-blue)
 
       Assignments
-      : - Basic UI Text; [White](/design/c/colors/v2.1.0/#rd-white)
+      : - Basic UI Text, [White](/design/c/colors/v2.1.0/#rd-white)
         - Circle border, 1px solid [Concrete](/design/c/colors/v2.1.0/#rd-concrete)
 
       Assignments (hover)
