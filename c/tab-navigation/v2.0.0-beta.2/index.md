@@ -19,7 +19,7 @@ people:
 
 downloads:
   - name: UXD Accessibility Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/19r4uvPAZpmXRwT_krIr9MqHLYC-Vgjah2kPDi9PYaQA/edit?usp=sharing
+    link: https://docs.google.com/a/pearson.com/document/d/16--ARmN5JSXsDR20y-LnUo7wkLcZvIL0jq7DJZTR8wI/edit?usp=sharing
   - name: .sketch Mockups
     link: ./assets/tab_nav_2.0.0-beta2.sketch
 
