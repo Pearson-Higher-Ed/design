@@ -4,7 +4,7 @@ title: Tab Style Navigation
 section: Components
 redirect_from: "/docs/ui-components/tabs/"
 version: 2.0.0-beta.1
-status: active
+status: deprecated
 implemented: false
 people:
   - role: Product Owner
