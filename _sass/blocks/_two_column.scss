@@ -132,7 +132,6 @@
   .caption, .caption p {
     @extend .pe-label, .pe-label--small;
     margin-top: 6px;
-    text-align: center;
   }
 
   @include pe-responsive-breakpoint(md) {
