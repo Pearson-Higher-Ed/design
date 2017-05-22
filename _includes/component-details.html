@@ -35,7 +35,7 @@
 
       {% for active_page in active_pages %}
         {% if active_page.version contains 'beta' %}
-          <div class="banner info">There is a proposed update to this component. <a href="{{site.baseurl}}{{active_page.url}}">Go to the latest proposed version</a>.</div>
+          <div class="banner info">There is a proposed update to this component. <a href="{{site.baseurl}}{{active_page.url}}">Check out the latest proposed version</a>.</div>
           {% break %}
         {% endif %}
       {% endfor %}
