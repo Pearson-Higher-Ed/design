@@ -44,4 +44,20 @@
 		}
 		})(window.Element.prototype);
 	</script>
+
+	<script type="text/javascript">
+		if (!document.getElementById('pe-icons-sprite')) {
+			var pe_ajax = new XMLHttpRequest()
+				, url = "{{site.baseurl}}/node_modules/pearson-elements/assets/icons/p-icons-sprite-1.1.svg";
+			pe_ajax.open("GET", url, true);
+			pe_ajax.responseType = "document";
+			pe_ajax.onload = function(e) {
+				document.body.insertBefore(
+					pe_ajax.responseXML.documentElement,
+					document.body.childNodes[0]
+				);
+			}
+			pe_ajax.send();
+		}
+	</script>
 </head>
