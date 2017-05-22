@@ -68,6 +68,8 @@
 
         {% if page.implementation %}
           <a href="{{ page.implementation }}" class="pe-btn__primary--btn_large">Code</a>
+        {% else %}
+          <button disabled class="pe-btn--btn_large">Code pending</button>
         {% endif %}
       </div>
     </div>
@@ -94,6 +96,8 @@
 
           {% if page.implementation %}
             <a href="{{ page.implementation }}" class="pe-btn__primary--btn_large">Code</a>
+          {% else %}
+            <button disabled class="pe-btn--btn_large">Code pending</button>
           {% endif %}
         </div>
 

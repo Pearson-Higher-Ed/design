@@ -20,6 +20,10 @@
       margin-left: 16px;
     }
 
+    a + button {
+      margin-left: 16px;
+    }
+
     @include pe-responsive-breakpoint(md) {
       display: block;
       position: absolute;
