@@ -98,6 +98,17 @@
 
 <div class="ultimate-header {% if include.invisible %}invisible{% endif %}">
   <img class="burger" src="{{site.baseurl}}/assets/burger.svg"> {% unless include.invisible %}{{page.title}}{% endunless %}
+
+  {% unless include.invisible %}
+    <a href="{{site.baseurl}}/contact" class="contact">
+      <svg style="vertical-align:baseline"
+        aria-hidden="true"
+        focusable="false"
+        class="pe-icon--email-18">
+          <use xlink:href="#email-18"></use>
+      </svg>
+      Questions or Comments?</a>
+  {% endunless %}
 </div>
 
 <script type="text/javascript">
