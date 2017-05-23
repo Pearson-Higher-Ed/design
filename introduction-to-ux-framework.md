@@ -3,6 +3,7 @@ layout: article
 title: Introduction to the UX Framework
 shortname: Introduction
 section: learn
+in_footer: true
 ---
 
 
