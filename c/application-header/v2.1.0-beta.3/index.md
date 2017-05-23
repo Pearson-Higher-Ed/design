@@ -3,7 +3,7 @@ layout: component-yaml
 title: Application Header
 section: Components
 redirect_from: /docs/ui-components/application-header/
-version: 2.1.0-beta.2
+version: 2.1.0-beta.3
 status: deprecated
 rebranded: true
 implemented: true
@@ -33,6 +33,8 @@ dependencies:
     version: 1.0.0
   - name: Icons
     version: 2.1.0
+  - name: Drawer
+    version: 2.0.0
 
 tagline: |
   This component contains and displays global tools and navigation across the next gen platform.
@@ -186,7 +188,7 @@ blocks:
         - 2px [White Gray](/design/c/colors/v2.1.0/#rd-white-gray) outer border
 
       Account Menu
-      : - Opens the standard drawer
+      : - Opens the standard drawer (which will appear full height)
         - Links are [Basic UI Text](/design/c/typography/v2.0.0/#rd-ui-text-basic) with the standard link style
         - Sign out button is a Large Primary button
 
@@ -216,6 +218,10 @@ blocks:
 
 
 changelog:
+  - version: 2.1.0-beta.3
+    changes: |
+      - FIXED: Missing drawer dependency
+
   - version: 2.1.0-beta.2
     changes: |
       - UPDATED: Clarified additional policy links feature
