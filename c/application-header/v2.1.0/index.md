@@ -3,8 +3,8 @@ layout: component-yaml
 title: Application Header
 section: Components
 redirect_from: /docs/ui-components/application-header/
-version: 2.1.0-beta.3
-status: deprecated
+version: 2.1.0
+status: active
 rebranded: true
 implemented: true
 people:
@@ -218,15 +218,7 @@ blocks:
 
 
 changelog:
-  - version: 2.1.0-beta.3
-    changes: |
-      - FIXED: Missing drawer dependency
-
-  - version: 2.1.0-beta.2
-    changes: |
-      - UPDATED: Clarified additional policy links feature
-
-  - version: 2.1.0-beta.1
+  - version: 2.1.0
     changes: |
       - ADDED: Terms of Use and Privacy Policy links
 
