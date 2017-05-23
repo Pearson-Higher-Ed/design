@@ -1,24 +1,42 @@
 <!DOCTYPE html>
-<html class="core">
+<html class="core" style="height: 100%;">
 {% include header.html %}
 <body class="contact">
   {% include sidebar.html %}
 
   <div class="top-level-content">
+    <div class="table_substitute">
 
-    <iframe id="forum_embed"
-      src="javascript:void(0)"
-      scrolling="no"
-      frameborder="0"
-      width="100%"
-      height="700">
-    </iframe>
-    <script type="text/javascript">
-      document.getElementById('forum_embed').src =
-         'https://groups.google.com/a/pearson.com/forum/embed/?place=forum/elemental-discuss'
-         + '&showsearch=true&showpopout=true&showtabs=false'
-         + '&parenturl=' + encodeURIComponent(window.location.href);
-    </script>
+      <div class="intro_container">
+        <div class="wrapper">
+          <h1>Questions or feedback? Let us know!</h1>
 
+          <p>You may review previous discussion below, or start a new thread by sending an email to <a href="mailto:elemental-discuss@pearson.com">elemental-discuss@pearson.com</a></p>
+
+          <p>You can also chat with us in the following hipchat rooms:</p>
+
+          <ul>
+            <li><a href="https://pearson.hipchat.com/chat/room/3047637">UXF</a> (For design related questions)</li>
+            <li><a href="https://pearson.hipchat.com/chat/room/2931720">PDA Help</a> (For development related questions)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="frame_container">
+        <iframe id="forum_embed"
+          src="javascript:void(0)"
+          scrolling="no"
+          frameborder="0"
+          width="100%">
+        </iframe>
+      </div>
+      <script type="text/javascript">
+        document.getElementById('forum_embed').src =
+           'https://groups.google.com/a/pearson.com/forum/embed/?place=forum/elemental-discuss'
+           + '&showsearch=true&showpopout=true&showtabs=false'
+           + '&parenturl=' + encodeURIComponent(window.location.href);
+      </script>
+
+    </div>
   </div>
 </body>

@@ -1,7 +1,51 @@
 .contact {
+  height: 100%;
 
-  iframe {
+  .top-level-content {
+    height: 100%;
+  }
+
+  .table_substitute {
+    display: table;
+    height: 100%;
+    width: 100%;
+
+    .intro_container {
+      height: 100%;
+    }
+
+    .wrapper {
+      max-width: 1170px;
+      margin-top: 136px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 100px;
+    }
+
+    h1 {
+      @extend .pe-page-title;
+      margin-bottom: 60px;
+    }
+
+    p {
+      @extend .pe-copy, .pe-copy--large;
+    }
+
+    ul {
+      @extend .pe-list, .pe-styled-lists--unordered;
+    }
+  }
+
+  .frame_container {
     background-color: $pe-color-white;
+    text-align: center;
+    display: table-row;
+    height: 100%;
+
+    iframe {
+      max-width: 1170px;
+      height: 100%;
+    }
   }
 
 }
