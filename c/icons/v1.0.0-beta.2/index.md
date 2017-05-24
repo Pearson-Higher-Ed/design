@@ -1,5 +1,5 @@
 ---
-layout: component
+layout: component-yaml
 title: Icons
 section: Components
 version: 1.0.0-beta.2
