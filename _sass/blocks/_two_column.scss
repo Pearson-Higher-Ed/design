@@ -11,7 +11,12 @@
 
   h3 {
     @extend .pe-title, .pe-title--small;
+    margin-bottom: 12px;
   }
+  * + h3 { margin-top: 40px; }
+  h1 + h3,
+  h2 + h3 { margin-top: 6px; }
+
   h4 {
     @extend .pe-label, .pe-label--large;
   }
@@ -131,7 +136,7 @@
 
   .caption, .caption p {
     @extend .pe-label, .pe-label--small;
-    margin-top: 6px;
+    margin-top: 12px;
   }
 
   @include pe-responsive-breakpoint(md) {
