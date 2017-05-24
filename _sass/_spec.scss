@@ -56,7 +56,7 @@
   }
 
   h2 {
-    @include hl1;
+    @extend .pe-title, .pe-title--large;
     margin-bottom: 20px;
   }
 
@@ -64,16 +64,12 @@
     @extend .pe-copy;
   }
 
-  a {
-    @include pe-link;
-  }
-
   .reqs {
-    background-color: pe-color(white);
+    background-color: $pe-color-white;
     padding: 20px;
 
     h3 {
-      @include hl2;
+      @extend .pe-title;
     }
 
     & + .reqs {
@@ -143,7 +139,7 @@
         }
 
         ul {
-          @include pe-ulist;
+          @extend .pe-list, .pe-styled-lists--unordered;
         }
 
         p {

@@ -137,7 +137,6 @@
     }
   }
   h4 { @extend .pe-label, .pe-label--large; }
-  a { @include pe-link; }
 
   ul {
     @extend .pe-list, .pe-styled-lists--unordered;

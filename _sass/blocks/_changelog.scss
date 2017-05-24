@@ -8,7 +8,7 @@
   }
 
   ul {
-    @include pe-ulist;
+    @extend .pe-list, .pe-styled-lists--unordered;
   }
 
   ul + h3 {

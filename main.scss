@@ -6,15 +6,9 @@ $pe-fonts-path: "./fonts/";
 @import "../node_modules/pearson-elements/scss/elements";
 
 @import "utility";
-@import "typography/lists";
-@import "typography/headings";
-@import "typography/copy";
 
 // current styles
 @import "icons";
-@import "navigation";
-@import "toc";
-@import "alert";
 @import "home";
 @import "article";
 @import "block";
