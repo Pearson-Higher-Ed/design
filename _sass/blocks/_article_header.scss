@@ -11,6 +11,13 @@
 
   span {
     margin-left: 12px;
+
+    &.beta {
+      background-color: $pe-color-hot-pink;
+      padding: 0 8px;
+      border-radius: 3px;
+      color: white;
+    }
   }
 
   .buttons {
