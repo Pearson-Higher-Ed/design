@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Home
 chunks:
   - name: Design
     text: |
