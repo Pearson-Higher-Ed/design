@@ -22,12 +22,20 @@
 					{{chunk.text | markdownify}}
 
 					{% if chunk.button %}
-						<a href="{{chunk.button.src}}" {% if chunk.button.new_tab %}target="_blank"{% endif %} class="pe-btn__cta--btn_large">{{chunk.button.title}}</a>
+						{% assign first = chunk.button.src | slice: 0 %}
+						<a
+							href="{% if first == '/' %}{{site.baseurl}}{% endif %}{{chunk.button.src}}"
+							{% if chunk.button.new_tab %}
+								target="_blank"
+							{% endif %} class="pe-btn__cta--btn_large">
+								{{chunk.button.title}}
+						</a>
 					{% endif %}
 
 					<div class="links">
 						{% for link in chunk.links %}
-							<a href="{{link.src}}">{{link.title}}</a>
+							{% assign first = link.src | slice: 0 %}
+							<a href="{% if first == '/' %}{{site.baseurl}}{% endif %}{{link.src}}">{{link.title}}</a>
 						{% endfor %}
 					</div>
 				</div>

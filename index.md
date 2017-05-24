@@ -7,7 +7,7 @@ chunks:
 
       Remember to check the information on this site for more detailed information about the usage of individual components.
     button:
-      title: Get the UI Kit
+      title: Download the UI Kit for Sketch
       src: https://pearson.invisionapp.com/boards/7T37VMSCQS3R4/
       new_tab: true
 
@@ -20,10 +20,12 @@ chunks:
       new_tab: true
     links:
       - title: Learn more
+        src: /getting-started-dev
 
   - name: Contribute to the UX Framework
     text: |
       Can't find the component you need? Have great ideas for improving or modifying a component? Learn aobut the process of adding a new component to the library.
     button:
       title: Learn more
+      src: /component-creation-guide
 ---
