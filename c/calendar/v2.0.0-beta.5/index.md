@@ -33,6 +33,8 @@ tagline: |
   This component defines the standard visual style for the calendar element.
 features:
   - Defines all date state styles (hover, selected, highlighted range, disabled)
+  - White and blue variants
+  - Secondary indicator style for use cases like an assignment calendar
 usage_guidelines: |
   Every instance of a calendar element should come from this component.
 
