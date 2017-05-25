@@ -3,8 +3,8 @@ layout: component-yaml
 title: Calendar
 section: Components
 redirect_from: /docs/ui-components/calendar/
-status: deprecated
-version: 2.0.0-beta.5
+status: active
+version: 2.0.0
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -217,19 +217,10 @@ blocks:
 
 
 changelog:
-  - version: 2.0.0-beta.5
+  - version: 2.0.0
     changes: |
-      - UPDATED: Redlines to link to dependencies, clarify specs
-  - version: 2.0.0-beta.4
-    changes: |
-      - UPDATED: Redline images HEX to color labels, "35px" typo, and October to November.
-      - CHANGED: "Days of the Week" to Small UI Text and Ink Blue hover states to match white version.
-  - version: 2.0.0-beta.3
-    changes: Removed old functionality text and redundant specs in ink blue redlines.
-  - version: 2.0.0-beta.2
-    changes: Added square box to indicate current date. Updated style for selected date.
-  - version: 2.0.0-beta.1
-    changes: Rebranded version
+      - CHANGED: Visual style to match rebrand
+
   - version: 1.0.0-beta.1
     changes: Initial version
 ---

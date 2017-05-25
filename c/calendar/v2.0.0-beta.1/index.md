@@ -3,7 +3,7 @@ layout: component-yaml
 title: Calendar
 section: Components
 redirect_from: /docs/ui-components/calendar/
-status: active
+status: deprecated
 version: 2.0.0-beta.1
 people:
   - role: Product Owner
