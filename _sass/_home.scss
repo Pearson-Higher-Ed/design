@@ -1,200 +1,98 @@
 body.home {
-  background-color: pe-color(off-white);
-}
+  background-color: $pe-color-white;
 
-.hero {
-  background-color: pe-color(brightly-lit);
-  text-align: center;
-  padding: 50px 0;
+  .top {
+    padding: 100px 10px;
+    text-align: center;
+    background: url("./img/backer.png") center center no-repeat;
+    background-size: cover;
 
-  h1 {
-    margin: 0;
-  }
-
-  .welcome {
-    font-size: 48px;
-    font-weight: normal;
-    color: pe-color(gutenberg-black);
-  }
-
-  .to {
-    font-size: 30px;
-    font-weight: normal;
-    color: pe-color(pitch);
-    margin: 10px 0 0 0;
-    display: inline-block;
-  }
-
-  .name {
-    font-size: 90px;
-    font-weight: 100;
-    color: pe-color(hyperdrive);
-  }
-}
-
-.contents {
-  box-sizing: content-box;
-  width: 90%;
-  padding: 20px 5% 0;
-  @include pe-responsive-breakpoint(sm) {
-    width: 80%;
-    padding: 30px 10% 0;
-  }
-  @include pe-responsive-breakpoint(md) {
-    width: 70%;
-    padding: 40px 15% 0;
-  }
-  @include pe-responsive-breakpoint(lg) {
-    width: 90%;
-    padding: 40px 5% 0;
-  }
-  @include pe-responsive-breakpoint(xl) {
-    width: 80%;
-    padding: 50px 10% 0;
-  }
-  background-color: pe-color(off-white);
-
-  &:after {
-    content: "";
-    width: 100%;
-    display: inline-block;
-  }
-
-  .section {
-    float: left;
-    width: 100%;
-    margin: 20px 1.5% 0;
-    @include pe-responsive-breakpoint(lg) {
-      margin-top: 0;
-      width: 30.33333%;
+    .content {
+      margin: 0 auto;
+      @include pe-responsive-breakpoint(md) {
+        max-width: 500px;
+      }
     }
-    vertical-align: top;
-    color: pe-color(gutenberg-black);
 
-    header {
-      border-bottom: 3px solid pe-color(gutenberg-black);
+    h1 {
+      @extend .pe-page-title;
+      color: $pe-color-white;
+      margin-bottom: 24px;
     }
+
+    p {
+      color: $pe-color-white;
+    }
+
+    .links {
+      a {
+        color: $pe-color-white;
+      }
+    }
+  }
+
+
+
+  .chunk {
+    border-bottom: 2px solid $pe-color-sunflower-yellow;
+    padding: 80px 10px;
+
+    text-align: center;
+
+    .content {
+      margin: 0 auto;
+      @include pe-responsive-breakpoint(md) {
+        max-width: 500px;
+      }
+    }
+
+    h2 {
+      @extend .pe-page-title;
+      margin-bottom: 28px;
+    }
+
+    button {
+      margin-top: 24px;
+    }
+
+    .links {
+      margin-top: 16px;
+    }
+  }
+
+
+  .contact {
+    text-align: center;
+    padding: 80px 10px;
+
+    .address {
+      @extend .pe-page-title;
+      margin-top: 28px;
+    }
+  }
+
+
+  footer {
+    margin: 20px 0 80px;
 
     ul {
       list-style-type: none;
+      text-align: center;
       padding: 0;
     }
 
-    li {
-      margin: 10px 0;
+    li + li {
+      margin-top: 12px;
     }
 
     a {
-      color: pe-color('pitch');
       text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
-.library {
-  box-sizing: content-box;
-  width: 90%;
-  padding: 20px 5% 0;
-
-  @include pe-responsive-breakpoint(sm) {
-    width: 80%;
-    padding: 30px 10% 0;
-  }
-  @include pe-responsive-breakpoint(md) {
-    width: 70%;
-    padding: 40px 15% 0;
-  }
-  @include pe-responsive-breakpoint(lg) {
-    width: 90%;
-    padding: 40px 5% 0;
-  }
-  @include pe-responsive-breakpoint(xl) {
-    width: 80%;
-    padding: 50px 10% 0;
-  }
-  background-color: pe-color(off-white);
-
-  &:after {
-    content: "";
-    display: inline-block;
-    width: 100%;
-  }
-
-  header {
-    margin: 0 1.5% 20px;
-
-    border-bottom: 3px solid pe-color(gutenberg-black);
-
-    span > div {
-      display: inline-block;
-      margin-left: 20px;
-      margin-bottom: 4px;
-    }
-  }
-
-  .component {
-    width: 100%;
-    margin: 20px 1.5%;
-    @include pe-responsive-breakpoint(md) {
-      width: 47%;
-    }
-    @include pe-responsive-breakpoint(lg) {
-      width: 30.3333333%;
+      color: $pe-color-charcoal;
+      @extend .pe-label, .pe-label--small, .pe-label--bold;
     }
 
-    float: left;
-    display: block;
-    box-sizing: border-box;
-    border: 2px solid pe-color(gutenberg-black);
-    padding: 12px;
-    color: pe-color('pitch');
-    text-decoration: none;
-
-    & > a {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .data {
-      height: 2rem;
-      margin-top: 6px;
-      margin-bottom: 6px;
-      overflow: hidden;
-      position: relative;
-
-      &:after {
-        content: "";
-        text-align: right;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 30%;
-        height: 1rem;
-        background: linear-gradient(to right, rgba(242, 242, 242, 0), rgba(242, 242, 242, 1) 50%);
-      }
-    }
-
-    .versions p {
-      margin-bottom: 4px;
-    }
-
-    .version {
-      display: block;
-      padding: 5px 10px;
-      text-align: center;
-      border: 1px solid pe-color(hairline-gray);
-      border-radius: 3px;
-      float: left;
-      text-decoration: none;
-
-      & + .version {
-        margin-left: 8px;
-      }
+    a:hover {
+      text-decoration: underline;
     }
   }
 }

@@ -3,9 +3,13 @@ layout: article
 title: Designer Guide
 section: use
 order: 1
+in_footer: true
 ---
 
 Elemental Design makes it easy for your designs to maintain consistency with the broader product ecosystem and frees you up to focus on solving unique challenges. Leveraging existing work in components is pretty straightforward:
+
+* TOC
+{:toc}
 
 ## 1. Identify Components
 First you'll want to find components that would be helpful. There are a number of basic components which nearly any project will find useful:

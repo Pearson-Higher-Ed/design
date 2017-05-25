@@ -4,7 +4,7 @@ title: Modal
 section: Components
 redirect_from: /docs/ui-components/modal/
 version: 1.0.1
-status: active
+status: deprecated
 implemented: false
 people:
   - role: Product Owner

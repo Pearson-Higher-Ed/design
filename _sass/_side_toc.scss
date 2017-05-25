@@ -53,19 +53,19 @@
       max-width: 760px;
     }
 
-    h1 { @include hl1; }
-    h2 { @include hl2; }
-    h3 { @include hl3; }
-    h4 { @include hl4; }
-    p, ul, ol { @include pe-copy; }
+    h1 { @extend .pe-title, .pe-title--large; }
+    h2 { @extend .pe-title; }
+    h3 { @extend .pe-title, .pe-title--small; }
+    h4 { @extend .pe-label, .pe-label--large; }
+    p, ul, ol { @extend .pe-copy; }
     p {
       margin: 0;
       & + p {
         margin-top: 12px;
       }
     }
-    ul { @include pe-ulist; }
-    ol { @include pe-olist; }
+    ul { @extend .pe-list, .pe-styled-lists--unordered; }
+    ol { @extend .pe-list, .pe-styled-lists--ordered; }
 
     ul + p,
     ol + p,
@@ -87,7 +87,7 @@
       margin-top: 6px;
 
       p, ul, ol {
-        @include pe-label-small;
+        @extend .pe-label--small;
       }
     }
 

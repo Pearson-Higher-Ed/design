@@ -3,9 +3,12 @@ highlighter: rouge
 relative_permalinks: false
 baseurl: /design
 permalink: pretty
-exclude: [scss, node_modules, bower.json, Gruntfile.js, package.json, README.md]
+exclude: [scss, bower.json, Gruntfile.js, package.json, README.md]
 markdown: kramdown
 sections:
   - Components
 gems:
   - jekyll-redirect-from
+kramdown:
+  toc_levels: '2'
+include: [node_modules]

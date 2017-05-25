@@ -1,0 +1,118 @@
+.sidebar {
+  float: left;
+  width: 240px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+  border-right: 1px solid $pe-color-concrete;
+  background-color: $pe-color-white;
+  z-index: 30;
+
+  transform: translateX(-240px);
+  transition: transform 0.3s;
+
+  @mixin _sidebarOpen {
+    transform: translateX(0);
+    visibility: visible;
+  }
+
+  &.open {
+    @include _sidebarOpen;
+  }
+
+  @media (min-width: 1460px) {
+    @include _sidebarOpen;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  header {
+    @extend .pe-title--small;
+    color: $pe-color-digital-pearson-blue;
+    padding: 16px 36px;
+    border-bottom: 1px solid $pe-color-concrete;
+    margin: 0;
+  }
+
+  .sidebar-toc {
+    padding: 0 36px;
+    height: calc(100% - 58px);
+    overflow-y: scroll;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    // Set the top level items to be bold
+    & > ul > li {
+      @extend .pe-label--small, .pe-label--bold;
+      margin-top: 20px;
+
+      & li {
+        font-weight: normal;
+        margin-top: 12px;
+      }
+    }
+
+    & > ul > li > ul {
+      margin-left: 12px;
+    }
+
+    .selected {
+      color: $pe-color-digital-pearson-blue;
+      font-weight: bolder;
+    }
+  }
+}
+
+.ultimate-header {
+  @extend .pe-title--small;
+  color: $pe-color-white;
+  padding: 16px 36px;
+  background-color: $pe-color-ink-blue;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  transition: left 0.3s;
+  z-index: 26;
+
+  @media (min-width: 1460px) {
+    left: 240px;
+
+    .burger {
+      display: none;
+    }
+  }
+
+  &.invisible {
+    background: none;
+  }
+
+  .contact {
+    float: right;
+    color: $pe-color-white;
+    text-decoration: none;
+
+    &:hover {
+      color: $pe-color-white;
+    }
+
+    svg {
+      position: relative;
+      top: 2px;
+      margin-right: 4px;
+    }
+  }
+}
+
+.top-level-content {
+  @media (min-width: 1460px) {
+    margin-left: 240px;
+  }
+}

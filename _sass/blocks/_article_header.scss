@@ -1,0 +1,47 @@
+&.article_header {
+  margin-top: 120px;
+
+  @include pe-responsive-breakpoint(md) {
+    position: relative;
+  }
+
+  h1 {
+    display: inline;
+  }
+
+  span {
+    margin-left: 12px;
+
+    &.beta {
+      background-color: $pe-color-hot-pink;
+      padding: 0 8px;
+      border-radius: 3px;
+      color: white;
+    }
+  }
+
+  .buttons {
+    display: none;
+
+    a + a {
+      margin-left: 16px;
+    }
+
+    a + button {
+      margin-left: 16px;
+    }
+
+    @include pe-responsive-breakpoint(md) {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    @include pe-responsive-breakpoint(xl) {
+      right: none;
+      left: 780px; // Magic number based on 8/12 grid columns
+    }
+  }
+}

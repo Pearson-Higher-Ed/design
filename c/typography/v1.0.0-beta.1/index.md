@@ -1,5 +1,5 @@
 ---
-layout: component
+layout: component-yaml
 title: Typography
 section: Components
 redirect_from: "/docs/ui-components/typography/"

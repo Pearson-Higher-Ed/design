@@ -1,135 +1,138 @@
 <!DOCTYPE html>
 <html class="core">
 {% include header.html %}
-<body>
-  {% include construction.html %}
-  {% include navigation.html %}
+<body class="membership">
+  {% include sidebar.html %}
 
-  <div class="spec">
-    <div class="toc">
-      <ul>
-        <li>
-          <a href="#design-requirements">Design Requirements</a>
-          <ul>
-            {% for section in page.design_reqs %}
-            <li><a href="#{{section.name | slugify}}">{{section.name}}</a></li>
-            {% endfor %}
-          </ul>
-        </li>
-        <li>
-          <a href="#dev-requirements">Development Requirements</a>
-          <ul>
-            {% for section in page.dev_reqs %}
-            <li><a href="#{{section.name | slugify}}">{{section.name}}</a></li>
-            {% endfor %}
-          </ul>
-        </li>
-        <li><a href="#changelog">Changelog</a></li>
-      </ul>
-    </div>
-    <div class="specs">
-      <h1>{{page.title}}</h1>
-      <p>Version {{page.version}}</p>
+  <div class="top-level-content">
 
-      <div>
-        {{page.intro | markdownify}}
+    <div class="spec">
+      <div class="toc">
+        <ul>
+          <li>
+            <a href="#design-requirements">Design Requirements</a>
+            <ul>
+              {% for section in page.design_reqs %}
+              <li><a href="#{{section.name | slugify}}">{{section.name}}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+          <li>
+            <a href="#dev-requirements">Development Requirements</a>
+            <ul>
+              {% for section in page.dev_reqs %}
+              <li><a href="#{{section.name | slugify}}">{{section.name}}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+          <li><a href="#changelog">Changelog</a></li>
+        </ul>
       </div>
+      <div class="specs">
+        <h1>{{page.title}}</h1>
+        <p>Version {{page.version}}</p>
 
-      <h2 id="design-requirements">Design Requirements</h2>
-      {% for section in page.design_reqs %}
-      <div class="reqs">
-        <h3 id="{{section.name | slugify}}">{{section.name}}</h3>
-        {% if section.description %}<div class="description">{{section.description | markdownify}}</div>{% endif %}
+        <div>
+          {{page.intro | markdownify}}
+        </div>
 
-        {% for req in section.reqs %}
-        <div class="req">
-          <div>
-            {{req.req | markdownify}}
-            <div class="badge">
+        <h2 id="design-requirements">Design Requirements</h2>
+        {% for section in page.design_reqs %}
+        <div class="reqs">
+          <h3 id="{{section.name | slugify}}">{{section.name}}</h3>
+          {% if section.description %}<div class="description">{{section.description | markdownify}}</div>{% endif %}
+
+          {% for req in section.reqs %}
+          <div class="req">
+            <div>
+              {{req.req | markdownify}}
+              <div class="badge">
+                {% if req.type == 'mandatory' %}
+                  <span class="required">Mandatory</span>
+                {% else if req.type == 'suggested' %}
+                  <span class="should">Strongly Recommended</span>
+                {% endif %}
+              </div>
+            </div>
+
+            {% for extra in req.extras %}
+            <div class="explanation">
+              <button class="heading">{{extra.name}}</button>
+              <div class="content">{{extra.content | markdownify}}</div>
+            </div>
+            {% endfor %}
+
+            <div class="approvers">
+              <button class="heading">Approvers</button>
+              <div class="content">
+                <ul>
+                  {% for approver in req.approvers %}
+                  <li>{{approver}}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+        </div>
+        {% endfor %}
+
+
+        <h2 id="dev-requirements">Development Requirements</h2>
+        {% for section in page.dev_reqs %}
+        <div class="reqs">
+          <h3 id="{{section.name | slugify}}">{{section.name}}</h3>
+          {% if section.description %}<div class="description">{{section.description | markdownify}}</div>{% endif %}
+
+          {% for req in section.reqs %}
+          <div class="req">
+            <div>
+              {{req.req | markdownify}}
               {% if req.type == 'mandatory' %}
                 <span class="required">Mandatory</span>
               {% else if req.type == 'suggested' %}
                 <span class="should">Strongly Recommended</span>
               {% endif %}
             </div>
-          </div>
 
-          {% for extra in req.extras %}
-          <div class="explanation">
-            <button class="heading">{{extra.name}}</button>
-            <div class="content">{{extra.content | markdownify}}</div>
+            {% for extra in req.extras %}
+            <div class="explanation">
+              <button class="heading">{{extra.name}}</button>
+              <div class="content">{{extra.content | markdownify}}</div>
+            </div>
+            {% endfor %}
+
+            <div class="approvers">
+              <button class="heading">Approvers</button>
+              <div class="content">
+                <ul>
+                  {% for approver in req.approvers %}
+                  <li>{{approver}}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
           </div>
           {% endfor %}
 
-          <div class="approvers">
-            <button class="heading">Approvers</button>
-            <div class="content">
-              <ul>
-                {% for approver in req.approvers %}
-                <li>{{approver}}</li>
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
         </div>
         {% endfor %}
 
-      </div>
-      {% endfor %}
 
-
-      <h2 id="dev-requirements">Development Requirements</h2>
-      {% for section in page.dev_reqs %}
-      <div class="reqs">
-        <h3 id="{{section.name | slugify}}">{{section.name}}</h3>
-        {% if section.description %}<div class="description">{{section.description | markdownify}}</div>{% endif %}
-
-        {% for req in section.reqs %}
-        <div class="req">
-          <div>
-            {{req.req | markdownify}}
-            {% if req.type == 'mandatory' %}
-              <span class="required">Mandatory</span>
-            {% else if req.type == 'suggested' %}
-              <span class="should">Strongly Recommended</span>
-            {% endif %}
-          </div>
-
-          {% for extra in req.extras %}
-          <div class="explanation">
-            <button class="heading">{{extra.name}}</button>
-            <div class="content">{{extra.content | markdownify}}</div>
-          </div>
-          {% endfor %}
-
-          <div class="approvers">
-            <button class="heading">Approvers</button>
-            <div class="content">
-              <ul>
-                {% for approver in req.approvers %}
-                <li>{{approver}}</li>
-                {% endfor %}
-              </ul>
-            </div>
-          </div>
-        </div>
+        <h2 id="changelog">Changelog</h2>
+        {% for change in page.changelog %}
+          {% if change.version != page.version %}
+            <h3><a href="./v{{change.version}}">{{change.version}}</a></h3>
+          {% else %}
+            <h3>{{change.version}}</h3>
+          {% endif %}
+          {{change.changes | markdownify}}
         {% endfor %}
 
       </div>
-      {% endfor %}
-
-
-      <h2 id="changelog">Changelog</h2>
-      {% for change in page.changelog %}
-        {% if change.version != page.version %}
-          <h3><a href="./v{{change.version}}">{{change.version}}</a></h3>
-        {% else %}
-          <h3>{{change.version}}</h3>
-        {% endif %}
-        {{change.changes | markdownify}}
-      {% endfor %}
-
     </div>
+
   </div>
 
   <script type="text/javascript">

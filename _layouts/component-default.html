@@ -2,8 +2,6 @@
 <html class="core">
   {% include header.html %}
   <body>
-    {% include construction.html %}
-    {% include navigation.html %}
 
     {% assign max_major = 0 %}
     {% assign max_minor = 0 %}
@@ -35,6 +33,8 @@
     {% capture latest_version %}{{max_major}}.{{max_minor}}.{{max_patch}}{% endcapture %}
     {% assign page = (site.pages | where: "title", page.title | where: "version", latest_version | first) %}
 
+    {% include sidebar.html %}
+
     {% if page %}
       {% include component-details.html %}
     {% else %}
@@ -43,7 +43,7 @@
 
 
     <script>
-      var img = document.querySelectorAll("img:not([src*='{{page.version}}'])")
+      var img = document.querySelectorAll(".top-level-content img:not([src*='{{page.version}}'])")
       for (var i = 0; i < img.length; i++) {
         var newSrc = img.item(i).src.replace(/assets\//, 'v{{page.version}}/assets/')
         img.item(i).src = newSrc;

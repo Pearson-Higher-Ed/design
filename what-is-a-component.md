@@ -6,6 +6,9 @@ section: learn
 
 Components form the core idea of the UX Framework's philosophy. Each component packages together a set of style or functionality into a reusable unit which is offered to consumers in two parts: a *definition* which describes the features and design of the component and then an *implementation*, which includes all the code and development documentation necessary to actually incorporate the component into an end product.
 
+* TOC
+{:toc}
+
 ## Features of Components
 All members of the component library offer a standard set of features and functionality to consuming products. These include:
 

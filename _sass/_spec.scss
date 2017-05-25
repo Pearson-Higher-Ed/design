@@ -25,16 +25,15 @@
     box-sizing: border-box;
     width: 100%;
     margin-bottom: 60px;
+    @extend .pe-label;
     @include pe-responsive-breakpoint(lg) {
       width: 210px;
       float: left;
       padding-right: 40px;
-
-      @include pe-label;
     }
     @include pe-responsive-breakpoint(xl) {
       width: 320px;
-      @include pe-label-large;
+      // @extend .pe-label-large;
     }
 
     & > ul > li + li {
@@ -51,30 +50,26 @@
   }
 
   h1 {
-    @include pe-title;
-    @include pe-title-extra-large;
+    @extend .pe-title;
+    @extend .pe-page-title--small;
     margin-top: 0;
   }
 
   h2 {
-    @include hl1;
+    @extend .pe-title, .pe-title--large;
     margin-bottom: 20px;
   }
 
   p {
-    @include pe-copy;
-  }
-
-  a {
-    @include pe-link;
+    @extend .pe-copy;
   }
 
   .reqs {
-    background-color: pe-color(white);
+    background-color: $pe-color-white;
     padding: 20px;
 
     h3 {
-      @include hl2;
+      @extend .pe-title;
     }
 
     & + .reqs {
@@ -144,7 +139,7 @@
         }
 
         ul {
-          @include pe-ulist;
+          @extend .pe-list, .pe-styled-lists--unordered;
         }
 
         p {

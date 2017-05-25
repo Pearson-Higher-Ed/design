@@ -1,0 +1,37 @@
+.banner {
+  margin-top: 54px;
+  text-align: center;
+  padding: 16px 0;
+
+  & + .banner {
+    margin-top: 0;
+
+    &.warn {
+      border-top: 2px solid $pe-color-sunflower-yellow;
+    }
+
+    &.info {
+      border-top: 2px solid $pe-color-brackish-turquoise;
+    }
+  }
+
+  @extend .pe-label;
+
+  &.warn {
+    background-color: $pe-color-sunshine-yellow;
+    color: $pe-color-charcoal;
+
+    a {
+      color: $pe-color-charcoal;
+    }
+  }
+
+  &.info {
+    background-color: $pe-color-digital-marine-turquoise;
+    color: $pe-color-white;
+
+    a {
+      color: $pe-color-white;
+    }
+  }
+}

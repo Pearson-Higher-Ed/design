@@ -2,26 +2,28 @@
 # So Jekyll sees this file
 ---
 
+$pe-fonts-path: "./fonts/";
 @import "../node_modules/pearson-elements/scss/elements";
 
 @import "utility";
-@import "typography/lists";
-@import "typography/headings";
-@import "typography/copy";
 
 // current styles
 @import "icons";
-@import "navigation";
-@import "toc";
-@import "alert";
 @import "home";
 @import "article";
 @import "block";
 @import "spec";
 @import "side_toc";
+@import "sidebar";
+@import "banner";
+@import "contact";
+
+html {
+  font-size: 0.875rem;
+}
 
 body {
-  background-color: pe-color('off-white');
+  background-color: $pe-color-white-gray;
 }
 
 .pull-right {

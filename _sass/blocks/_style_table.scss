@@ -1,13 +1,14 @@
-.pe-table {
+.pe-style-table {
   width: 100%;
+  margin-bottom: 60px;
 
   th {
-    background: pe-color(brightly-lit);
+    background: $pe-color-moonlight;
     padding: 12px 20px;
-    border: 1px solid pe-color(hairline-gray);
+    border: 1px solid $pe-color-concrete;
     text-align: left;
-    @include pe-label;
-    @include pe-label-bold;
+    @extend .pe-label;
+    @extend .pe-label--bold;
 
     &:first-of-type {
       width: 390px;
@@ -16,14 +17,14 @@
 
   td {
     padding: 14px 20px;
-    border-bottom: 1px solid pe-color(hairline-gray);
-    background-color: pe-color(dirty-ice);
-    @include pe-label;
+    border-bottom: 1px solid $pe-color-concrete;
+    // background-color: pe-color(dirty-ice);
+    @extend .pe-label;
   }
 
   tr:nth-of-type(2n) {
     td {
-      background-color: pe-color(white);
+      background-color: $pe-color-white;
     }
   }
 }
