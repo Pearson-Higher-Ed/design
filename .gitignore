@@ -8,3 +8,4 @@ _site
 .bundle/config
 
 node_modules/*
+!node_modules/pearson-elements
