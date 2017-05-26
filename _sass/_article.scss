@@ -82,6 +82,10 @@
     #markdown-toc {
       @include pe-responsive-breakpoint(xl) {
         display: none;
+
+        & + * {
+          margin-top: 0;
+        }
       }
 
       @extend .pe-title, .pe-label--bold;
@@ -130,7 +134,7 @@
   }
   h3 {
     @extend .pe-title, .pe-title--small;
-    margin-top: 40px;
+    margin-top: 80px;
 
     & + h4 {
       margin-top: 12px;

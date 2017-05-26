@@ -115,7 +115,7 @@
   @include clearfix;
 
   & > div {
-    margin-top: 20px;
+    margin-top: 40px;
   }
 
   @include pe-responsive-breakpoint(xl) {
