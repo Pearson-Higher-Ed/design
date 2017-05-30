@@ -58,13 +58,13 @@
         {% else %}
           {% for download in page.downloads %}
             {% if download.link contains '.sketch' %}
-              {% assign sketch_file = download.link %}
+              {% capture url %}{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{download.link}}{% endcapture %}
               {% break %}
             {% endif %}
           {% endfor %}
         {% endif %}
 
-        <a class="pe-btn__primary--btn_large" href="{{ sketch_file }}">Sketch File</a>
+        <a class="pe-btn__primary--btn_large" href="{{ url }}">Sketch File</a>
 
         {% if page.implementation %}
           <a href="{{ page.implementation }}" class="pe-btn__primary--btn_large">Code</a>
