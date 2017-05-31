@@ -78,14 +78,13 @@
       @include make-grid-child(6);
     }
 
+    h1 + #markdown-toc + * {
+      margin-top: 0;
+    }
 
     #markdown-toc {
       @include pe-responsive-breakpoint(xl) {
         display: none;
-
-        & + * {
-          margin-top: 0;
-        }
       }
 
       @extend .pe-title, .pe-label--bold;
