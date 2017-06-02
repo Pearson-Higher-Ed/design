@@ -16,8 +16,8 @@ chunks:
     text: |
       Working on a project? Grab the code you need to build your application with pre-made components.
     button:
-      title: Go to Elements SDK
-      src: http://pearson-higher-ed.github.io/elements/elements/
+      title: Go to the library
+      src: https://www.npmjs.com/~pearson-ux
       new_tab: true
     links:
       - title: Learn more
