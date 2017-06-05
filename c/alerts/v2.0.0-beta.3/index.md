@@ -152,8 +152,8 @@ blocks:
         - Touch area 44x44
 
       Alert/warning icons
-      : - alert/warning icon [warning-24](design/c/icons/v2.0.0-beta.4/)
-        - success icon [check-sm-24](design/c/icons/v2.0.0-beta.4/)
+      : - alert/warning icon [warning-sm-18](design/c/icons/v2.0.0-beta.4/)
+        - success icon [check-sm-18](design/c/icons/v2.0.0-beta.4/)
 
       Animation
       : - Drop in uses an ease-in-out easing curve with a duration of 300ms
