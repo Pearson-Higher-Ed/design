@@ -77,7 +77,7 @@ blocks:
 
       __Destructive actions may be affirmative actions__
 
-      In some situations, destructive actions such as "delete" or “leave” may be affirmative actions. For example, a student is shown a modal to confirm that he/she acknowledges the consequences of leaving the page in the middle of a quiz. The fact that the modal is triggered by the student as he clicks on the “Exit” button implies a desires to leave the page. In this case, the "leave" button is considered an affirmative action.    
+      In some situations, destructive actions such as "delete" or “leave” may be affirmative actions. For example, a student is shown a modal to confirm the action and the consequences followed by leaving the quiz. The fact that the modal is triggered by the student as he clicks on the “Exit” button implies a desires to leave the page. In this case, the "leave" button is considered an affirmative action.    
 
 
     contents:
