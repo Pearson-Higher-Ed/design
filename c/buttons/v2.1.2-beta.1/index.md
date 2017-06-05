@@ -36,60 +36,41 @@ blocks:
     text: |
       There are three types of buttons.
 
-      * __Primary__ indicates the main call to action and should only appear once per group of buttons.
+      * __Default button__ is your basic button, it can appear multiple times in a given group.
 
-      * __Default__ is your basic button, it can appear multiple times in a given group.
+      * __Primary button__ indicates the main call to action and should only appear once per group of buttons.
 
-      * __Call To Action (CTA)__ is your Call To Action button and should be used only in very specific instances such as Sign-In.  It takes a higher priority over the Primary button type.  It is the single most important action you can take on a page.  They can only be used ONCE per page.  **There is no disabled state for the CTA button type.**
+      * __CTA button__ is your Call To Action button. It is the single most important action on the page and takes higher priority over the Primary button type. It should be used only in specific instances such as the Sign-In process. It can only be used once per page.
 
-      If a Default or Primary button increases in priority within the context of the same page, it can convert to a CTA button.
 
     contents:
       - type: wide image
         src: ./assets/types@2.png
-        caption: Three button types (Large)
 
   - type: section
-    name: Sizes
+    name: Size
 
   - type: two column
     text: |
-      Buttons come in small, medium and large/default sizes. The standard/large size is preferred, but feel free to use the small size where they would fit better with surrounding content. Medium button sizes are meant to only pair with equally sized inputs.  Standard/Large buttons are to be used when the UI appears on a mobile device or screen smaller than 768px width (tablet portrait view).
+      Buttons comes in three sizes:
+
+      * __Large (Standard):__ This is the default size. Use this size for touch devices to meet accessibility requirements.  
+      * __Medium:__ Medium buttons are only used to pair with equally sized input fields. Primary button is not available in this size.
+      * __Small:__ Only the default button style is available in this size.
+
     contents:
       - type: wide image
         src: ./assets/size@2.png
-        caption: Three button sizes
-
-
-
-
-
 
 
 
   - type: section
-    name: Disabled Buttons
+    name: Link style buttons
 
   - type: two column
     text: |
-      Use a disabled button only if an action on the current screen can enable it (action possibility).  A disabled button should only appear when contextually relevant.  If the button is not needed for the task at hand, it should be hidden.  
+      In situations where link styled text is to be used in place of a button for the purposes of de-emphasizing an action (visual hierarchy), link style buttons should be used.  The premise stands that links are to be used for navigation and buttons are to be used for actions.
 
-      If a bank of 2 or more buttons is present but can only be enabled by direct action on the same screen, it can be hidden and only shown when enabled to give emphasis of new controls available to the user.
-    contents:
-      - type: wide image
-        src: ./assets/disabled.example.png
-        caption: Examples of when to enable/disable vs. show/hide buttons
-
-  - type: section
-    name: Link Style Buttons
-
-  - type: two column
-    text: |
-      In situations where link styled text is to be used in place of a button for the purposes of de-emphasizing an action (visual hierarchy), link style buttons should be used.  The premise stands that links are to be used for navigation and buttons are to be used for actions.  The need for a link styled button is conform to [Pearson Accessibility Guidelines for E-Learning (#11 Semantic Markup)][Accessibility]:
-
-      [Accessibility]: http://wps.pearsoned.com/accessibility/115/29601/7577872.cw/index.html#PG11
-
-      > *Identify roles (e.g. heading, numbered list, bulleted list, data table, paragraph, emphasized text) of page elements using conventions for the media type. (And do not misidentify roles by using those conventions solely for their visual effects.)*
     contents:
       - type: text
         content: |
@@ -101,37 +82,11 @@ blocks:
 
             - Use link style buttons to trigger an action.
             - Indicate in design specification the presence of a link style button to your developer.
-            - Use the same visual styling as link text.  [See typography specification document.](http://pearson-higher-ed.github.io/design/c/typography/)
+            - Use the same [visual styling as link text](http://pearson-higher-ed.github.io/design/c/typography/)
 
           ### Don't:
             - Use link style buttons as part of a grouping with other buttons (button bars, save/cancel).
             - Use link style buttons for navigation.
-
-  - type: section
-    name: Labels
-
-  - type: two column
-    text: |
-      A button is meant to direct users into taking the action you want them to take. Help users by writing button labels that clearly explain what each button does.
-    contents:
-      - type: text
-        content: |
-          ### Do:
-            - Keep text short. Use as few words as possible.
-
-              *Examples*: Next, Save, Create, View, Edit, Learn more, Study, Review, Delete, Cancel, and Close
-
-            - Use sentence case.
-            - Capitalize proper nouns.
-            - Use specific action-oriented text for CTAs.
-
-              *Examples*: Activate, Create account, Sign in, Reset password, Submit, Resend Verification Email, and Go to Dashboard
-
-          ### Be sure to:
-            - Look across the experience and check for consistent use of labels.
-            - Reserve enough space in the label for translation to other languages.
-            - Avoid excessive use of exclamation points (!).
-
 
   - type: section
     name: Button placement
@@ -153,6 +108,31 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/modal.example.png  
+
+  - type: section
+    name: Button labels
+
+  - type: two column
+    text: |
+      A button is meant to direct users into taking certain actions. Help users by writing labels that clearly communicate what each button does.
+    contents:
+      - type: text
+        content: |
+          ### Do:
+            - Keep text short. Use as few words as possible.
+
+              *Examples*: Next, Save, Create, View, Edit, Learn more, Study, Review, Delete, Cancel, and Close
+
+            - Use sentence case.
+            - Capitalize proper nouns.
+            - Use specific action-oriented text for CTAs.
+
+              *Examples*: Activate, Create account, Sign in, Reset password, Submit, Resend Verification Email, and Go to Dashboard
+
+          ### Be sure to:
+            - Look across the experience and check for consistent use of labels.
+            - Reserve enough space in the label for translation to other languages.
+            - Avoid excessive use of exclamation points (!).
 
 
 
