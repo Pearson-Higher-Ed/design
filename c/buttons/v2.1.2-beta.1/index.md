@@ -63,31 +63,6 @@ blocks:
         src: ./assets/size@2.png
 
 
-
-  - type: section
-    name: Link style buttons
-
-  - type: two column
-    text: |
-      In situations where link styled text is to be used in place of a button for the purposes of de-emphasizing an action (visual hierarchy), link style buttons should be used.  The premise stands that links are to be used for navigation and buttons are to be used for actions.
-
-    contents:
-      - type: text
-        content: |
-
-          ### Do:
-            - Use link style buttons to de-emphasize less important actions.
-
-              *Examples*: Edit, Dismiss, Resend Verification Email, and Reset Password
-
-            - Use link style buttons to trigger an action.
-            - Indicate in design specification the presence of a link style button to your developer.
-            - Use the same [visual styling as link text](http://pearson-higher-ed.github.io/design/c/typography/)
-
-          ### Don't:
-            - Use link style buttons as part of a grouping with other buttons (button bars, save/cancel).
-            - Use link style buttons for navigation.
-
   - type: section
     name: Button placement
 
@@ -102,7 +77,7 @@ blocks:
 
       __Destructive actions may be affirmative actions__
 
-      In some situations, destructive actions such as "delete" or “leave” may be affirmative actions. For example, when a student attempts to leave the page in the middle of a quiz, and is asked to confirm if the student acknowledges the consequences of leaving the page at this point. Since prior to seeing the modal, the student clicks on the “Exit” button indicates that the student desires to leave the page, so the “leave” button should be placed on the right to help the student continue with the process as expected.    
+      In some situations, destructive actions such as "delete" or “leave” may be affirmative actions. For example, a student is shown a modal to confirm that he/she acknowledges the consequences of leaving the page in the middle of a quiz. The fact that the modal is triggered by the student as he clicks on the “Exit” button implies a desires to leave the page. In this case, the "leave" button is considered an affirmative action.    
 
 
     contents:
@@ -134,6 +109,30 @@ blocks:
             - Reserve enough space in the label for translation to other languages.
             - Avoid excessive use of exclamation points (!).
 
+
+  - type: section
+    name: Link style buttons
+
+  - type: two column
+    text: |
+      In situations where link styled text is to be used in place of a button for the purposes of de-emphasizing an action (visual hierarchy), link style buttons should be used.  The premise stands that links are to be used for navigation and buttons are to be used for actions.
+
+    contents:
+      - type: text
+        content: |
+
+          ### Do:
+            - Use link style buttons to de-emphasize less important actions.
+
+              *Examples*: Edit, Dismiss, Resend Verification Email, and Reset Password
+
+            - Use link style buttons to trigger an action.
+            - Indicate in design specification the presence of a link style button to your developer.
+            - Use the same [visual styling as link text](http://pearson-higher-ed.github.io/design/c/typography/)
+
+          ### Don't:
+            - Use link style buttons as part of a grouping with other buttons (button bars, save/cancel).
+            - Use link style buttons for navigation.
 
 
   - type: section
