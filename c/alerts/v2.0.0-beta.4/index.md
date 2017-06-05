@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Alerts
 section: Components
-version: 2.0.0-beta.3
-status: deprecated
+version: 2.0.0-beta.4
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -18,7 +18,7 @@ people:
 implementation:
 downloads:
   - name: UXD Accessibility Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/1Zx7iuaBbjVis_m6p5yXxBxXhJFCYSagSgb-v6D9HaX8/edit?usp=sharing
+    link: https://docs.google.com/a/pearson.com/document/d/1rzmNsspFnO8bdnLeHtMVWKSXJGzCy6KJ-e3v4513nZk/edit?usp=sharing
   - name: .sketch mockup
     link: ./assets/alerts.sketch
 
@@ -27,6 +27,8 @@ dependencies:
     version: 2.1.0
   - name: Typography
     version: 2.0.0
+  - name: Icons
+    version: 2.1.0
 
 tagline: |
   Presents important feedback or information to users either in response to their actions or upon page load.
@@ -43,7 +45,7 @@ blocks:
 
   - type: two column
     text: |
-      When a message is displayed upon page load the alert will appear statically in the upper left corner of the viewport or if on a mobile device the message will appear across the top of the viewport.  Text in the upper left corner of desktop devices (rather than center) will help ensure screen magnification users do not miss the message upon page load.
+      When a message is displayed upon page load the alert will appear anchored in the upper left corner of the viewport or if on a mobile device the message will appear across the top of the viewport. (It will stay in place as the user scrolls the page.)  Text in the upper left corner of desktop devices (rather than center) will help ensure screen magnification users do not miss the message upon page load.
 
       This type of alert can always be dismissed by clicking on the close icon.
 
@@ -69,7 +71,7 @@ blocks:
     text: |
       Alerts can also appear dynamically in response to user actions like submitting a form, choosing an option, or completing an assignment. In this case the alert will animate down from the top.
 
-      Try to use this alert style sparingly, as it is fairly interruptive.
+      Try to use this alert style sparingly, as it is fairly interruptive. For keyboard interactions, focus will automatically move from where the user is working to this alert-dialog element.
 
       Example use cases which justify this alert style include:
 
@@ -87,42 +89,33 @@ blocks:
 
   - type: two column
     text: |
-      The alert that applies to a specific task or section content will be displayed above or below where the action occurred.
+      The alert that applies to a specific task or section content will be displayed where the action occurred. These should only appear below the related content to preserve reading order.
+
+      ### Dismissing
+      By default the inline alert is also dismissable, but it can be made to display permanently if the information contained is persistently useful. An example would be a message saying that an email address hasn't been confirmed yet.
 
     contents:
         - type: wide image
           src: ./assets/alert_inline.png
           caption: The example of message appear below the content area.
-        - type: narrow image
-          src: ./assets/alert_mobile.png
-          caption: Example of responsive version content level alert.
 
   - type: section
     name: Variants
 
   - type: two column
     text: |
-      Warning
-      : - Use when an error occurred that cannot be resolve on the user end.
-        - Use when an issue that may or may not cause problems for the users, but the user should know about.
-        - Example: System alert
-
-      Error
-      : - Use to let user know that something has gone wrong and it needs to be resolved to complete the task. IT can also provide suggestions on how to proceed.
-        - Use to communicate an unsuccessful action
-        - Example: Form Error, login error, search error.
+      Warning/Error
+      : - Use for negative messages such as a system error or an incorrectly user action
+        - If the user needs to take some action in response to the error make sure to clearly state that.
 
       Success
       : - Use to tell user that a task has been completed successfully.
         - Use to let user know that everything is working property.
         - Example: Submitting a form, completing a quiz
-        - The success alert can be closed to save screen estate.
 
       Information
       : - Use to inform the user about something relevant: to share tips or suggestions.
-        - Use to let user know that everything is working property.
-        - Example: Information about the specific content
-        - The information alert can be closed to save screen estate.
+        - Example: Informing users that an email address hasn't been verified yet
 
     contents:
       - type: wide image
@@ -134,26 +127,28 @@ blocks:
 
   - type: two column
     text: |
+      ### Basic alert
+
       Dimensions
-      : - Color bar is 3px high
+      : - Color bar is 3px wide
         - Horizontal and bottom padding is 28px (desktop)
 
       Colors
-      : - Error and warning color is [Strawberry Red](/design/c/colors/v2.0.0-beta.7/#rd-strawberry-red)
-        - Success and information color is [Digital Marine Turquoise](/design/c/colors/v2.0.0-beta.7/#rd-digital-marine-turquoise)
-        - Background is [White](/design/c/colors/v2.0.0-beta.7/#rd-white)
+      : - Error and warning color is [Strawberry Red](/design/c/colors/v2.1.0/#rd-strawberry-red)
+        - Success and information color is [Digital Marine Turquoise](/design/c/colors/v2.1.0/#rd-digital-marine-turquoise)
+        - Background is [White](/design/c/colors/v2.1.0/#rd-white)
 
       Typography
       : - Title is [Bold Text](/design/c/typography/v2.0.0/#rd-bold-text)
-        - Message is [Basic Body Copy](/design/c/typography/v2.0.0-beta.3/#rd-basic-body)
+        - Message is [Basic Body Copy](/design/c/typography/v2.0.0/#rd-basic-body)
 
       "X" icons
-      : - Size [remove-sm-24](design/c/icons/v2.0.0-beta.4/)
+      : - Size [remove-sm-24](design/c/icons/v2.1.0/)
         - Touch area 44x44
 
       Alert/warning icons
-      : - alert/warning icon [warning-sm-18](design/c/icons/v2.0.0-beta.4/)
-        - success icon [check-sm-18](design/c/icons/v2.0.0-beta.4/)
+      : - alert/warning icon [warning-sm-18](design/c/icons/v2.1.0/)
+        - success icon [check-sm-18](design/c/icons/v2.1.0/)
 
       Animation
       : - Drop in uses an ease-in-out easing curve with a duration of 300ms
@@ -165,14 +160,36 @@ blocks:
         - Statically presented alerts should just be read and focused in the normal flow of the document
 
     contents:
-
       - type: wide image
         src: ./assets/alerts_spec.png
 
+  - type: two column
+    text: |
+      ### Global alerts
+      Dimensions
+      : - 580px wide at medium and larger breakpoints
+        - 440px wide at small breakpoints
+        - 100% width at extra small
+
+      Positioning
+      : - 32px down and right from the top left viewport corner at small and larger breakpoints
+        - 36px from the top with 25px horizontal margins at extra small breakpoints
+    contents:
       - type: wide image
         src: ./assets/alerts_spec_popover.png
         caption: Popover alerts
 
+  - type: two column
+    text: |
+      ### Inline alerts
+
+      Dimensions
+      : - At medium and large breakpoints, should have a min width of 440px, may expand to fit the content area
+        - 100% of content area at smaller breakpoints
+
+      Positioning
+      : - Left aligned within content area
+    contents:
       - type: wide image
         src: ./assets/alerts_spec_desktop 1.png
         caption: Content(task) level alert
@@ -180,6 +197,9 @@ blocks:
 
 
 changelog:
+  - version: 2.0.0-beta.4
+    changes: |
+      - UPDATED: Further clarified a11y documentation
   - version: 2.0.0-beta.3
     changes: |
       - UPDATED: Clarified documentation based on a11y feedback
