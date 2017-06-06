@@ -81,7 +81,7 @@ blocks:
 
     contents:
       - type: wide image
-        src: ./assets/button_placement_example.png  
+        src: ./assets/button_placement_example_old.png  
 
   - type: section
     name: Button labels
@@ -233,27 +233,16 @@ blocks:
 
   - type: two column
     text: |
-      ### Corner radius
-      All sizes use a 2px border radius.
-
-  - type: two column
-    text: |
-      ### Distance between buttons
-      * Large buttons: 12px
-      * Medium and small buttons: 8px
-
-    contents:
-      - type: wide image
-        src: ./assets/redline_distance@2.png
+      ### Corner radius: 2px
+      
+      ### Distance between buttons: 16px
 
 
 changelog:
   - version: 2.1.2
     changes: |
-      - CHANGED: Definition for distance between buttons
       - FIXED: Typos and copy errors
       - REPLACED: Old images with more clear and comprehensive visual presentation
-      - CHANGED: Button placement image so the buttons align to the left
       - SIMPLIFIED: Text and took out unnecessary information
   - version: 2.1.1
     changes: |
