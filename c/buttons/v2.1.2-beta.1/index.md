@@ -77,12 +77,11 @@ blocks:
 
       __Destructive actions may be affirmative actions__
 
-      In some situations, destructive actions such as "delete" or “leave” may be affirmative actions. For example, a student is shown a modal to confirm the action and the consequences followed by leaving the quiz. The fact that the modal is triggered by the student as he clicks on the “Exit” button implies a desires to leave the page. In this case, the "leave" button is considered an affirmative action.    
-
+      In some situations, destructive actions such as "delete" or “leave” may be affirmative actions. For example, an instructor attempts to delete a course. A modal shows up to confirm the action and make sure the instructor understand the consequences followed by the action. In such case, the "delete" button is an affirmative action.
 
     contents:
       - type: wide image
-        src: ./assets/modal.example.png  
+        src: ./assets/button_placement_example.png  
 
   - type: section
     name: Button labels
@@ -149,12 +148,12 @@ blocks:
       Medium
       : - 36px tall
         - 12px horizontal padding
-        - [UI Text - Basic](/design/c/typography/v2.0.0/#rd-ui-text-basic)
+        - [UI Text - Bold](/design/c/typography/v2.0.0/#rd-ui-text-bold)
 
       Small
       : - 32px tall
         - 12px horizontal padding
-        - [UI Text - Basic](/design/c/typography/v2.0.0/#rd-ui-text-basic)
+        - [UI Text - Bold](/design/c/typography/v2.0.0/#rd-ui-text-bold)
 
 
     contents:
@@ -168,12 +167,12 @@ blocks:
 
       Normal
       : - BG: [Moonlight (#E9E9E9)](/design/c/colors/v2.1.0/#rd-digital-moonlight)
-        - Text: [Charcoal (#252525)](/design/c/colors/v2.1.0/#rd-charcoal)
+        - Text: [Medium Gray (#6a7070)](/design/c/colors/v2.1.0/#rd-medium-gray)
         - Border: 1px [Concrete (#C7C7C7)](/design/c/colors/v2.1.0/#rd-concrete)
 
       Hover/Active
       : - BG: [Alto (#D9D9D9)](/design/c/colors/v2.1.0/#rd-alto)
-        - Text: [Charcoal (#252525)](/design/c/colors/v2.1.0/#rd-charcoal)
+        - Text: [Medium Gray (#6a7070)](/design/c/colors/v2.1.0/#rd-medium-gray)
         - Border: 1px [Concrete (#C7C7C7)](/design/c/colors/v2.1.0/#rd-concrete)
 
       Disabled
@@ -249,6 +248,13 @@ blocks:
 
 
 changelog:
+  - version: 2.1.2
+    changes: |
+      - CHANGED: Definition for distance between buttons
+      - FIXED: Typos and copy errors
+      - REPLACED: Old images with more clear and comprehensive visual presentation
+      - CHANGED: Button placement image so the buttons align to the left
+      - SIMPLIFIED: Text and took out unnecessary information
   - version: 2.1.1
     changes: |
       - FIXED: Typos and copy errors
