@@ -16,7 +16,7 @@ downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1eSGAoNb7F1A8iA_DqLQfSP_TxzuV0V2yTAK8ksDeQBU/edit?usp=sharing
   - name: Sketch
-    link: ./assets/Buttons_06042017.sketch
+    link: ./assets/Buttons_1.sketch
 
 dependencies:
   - name: Colors
@@ -234,7 +234,7 @@ blocks:
   - type: two column
     text: |
       ### Corner radius: 2px
-      
+
       ### Distance between buttons: 16px
 
 
