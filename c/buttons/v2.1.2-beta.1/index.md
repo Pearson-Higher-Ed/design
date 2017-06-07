@@ -81,7 +81,7 @@ blocks:
 
     contents:
       - type: wide image
-        src: ./assets/button_placement_example_old.png  
+        src: ./assets/button_placement_example.png  
 
   - type: section
     name: Button labels
@@ -163,6 +163,10 @@ blocks:
 
   - type: two column
     text: |
+      ### Corner radius: 2px
+
+  - type: two column
+    text: |
       ### Default buttons
 
       Normal
@@ -214,11 +218,11 @@ blocks:
     text: |
       ### CTA button (Call To Action)
 
-      Normal Yellow
+      Normal
       : - BG: [Sunshine Yellow (#FFB81C)](/design/c/colors/v2.1.0/#rd-sunshine-yellow)
         - Text: [Charcoal (#252525)](/design/c/colors/v2.1.0/#rd-charcoal)
 
-      Hover/Active Yellow
+      Hover/Active
       : - BG: [Sunflower Yellow (#FF9A19)](/design/c/colors/v2.1.0/#rd-sunflower-yellow)
         - Text: [Charcoal (#252525)](/design/c/colors/v2.1.0/#rd-charcoal)
 
@@ -233,10 +237,20 @@ blocks:
 
   - type: two column
     text: |
-      ### Corner radius: 2px
-
       ### Distance between buttons: 16px
 
+    contents:
+      - type: wide image
+        src: ./assets/redline_distance@2.png
+
+  - type: style table
+    styles:
+      - Standard/Large Button
+      - Medium Button
+      - Small Button
+      - Primary Button
+      - Default Button
+      - CTA Button
 
 changelog:
   - version: 2.1.2
