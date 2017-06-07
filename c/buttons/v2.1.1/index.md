@@ -16,7 +16,7 @@ people:
     name: Ed Zee
   - role: QA
     name: Eajaz
-implementation: https://pearson-elements-v0.surge.sh/elements/buttons/
+implementation: http://pearson-higher-ed.github.io/elements/elements/buttons/
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1eSGAoNb7F1A8iA_DqLQfSP_TxzuV0V2yTAK8ksDeQBU/edit?usp=sharing
