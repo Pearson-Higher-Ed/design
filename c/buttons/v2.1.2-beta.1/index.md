@@ -69,11 +69,15 @@ blocks:
   - type: two column
     text: |  
 
-      Buttons are positioned according to the type of actions:
+      Buttons are positioned relatively according to the type of actions:
 
       * __Affirmative actions__ are placed on the right and continue the process. They are actions that are desired by users or the application.
 
       * __Dismissive actions__ are placed on the left and return the user to the previous screen or step in the process.
+
+      __Align the button group to the right side of the container by default__
+
+      With that said, you still have the flexibility to align the button groups differently based on the use case and visual balance.
 
       __Destructive actions may be affirmative actions__
 
@@ -151,17 +155,17 @@ blocks:
       Large (Standard)
       : - 44px tall
         - 20px horizontal padding
-        - [UI Heading - Section - Small](/design/c/typography/v2.0.0/#rd-ui-headings-section-basic)
+        - 18px, Semibold (currently not in the UX Framework typography set)
 
       Medium
       : - 36px tall
         - 12px horizontal padding
-        - [UI Text - Bold](/design/c/typography/v2.0.0/#rd-ui-text-bold)
+        - [UI Text - Bold](/design/c/typography/v2.0.0/#rd-ui-text-bold): 14px, Semibold
 
       Small
       : - 32px tall
         - 12px horizontal padding
-        - [UI Text - Bold](/design/c/typography/v2.0.0/#rd-ui-text-bold)
+        - [UI Text - Bold](/design/c/typography/v2.0.0/#rd-ui-text-bold): 14px, Semibold
 
 
     contents:
