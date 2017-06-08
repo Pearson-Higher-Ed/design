@@ -34,7 +34,7 @@ blocks:
 
   - type: two column
     text: |
-      There are three types of buttons.
+      There are three types of buttons:
 
       * __Default button__ is your basic button, it can appear multiple times in a given group.
 
@@ -52,7 +52,7 @@ blocks:
 
   - type: two column
     text: |
-      Buttons comes in three sizes:
+      There are three sizes of buttons:
 
       * __Large (Standard):__ This is the default size. Use this size for touch devices to meet accessibility requirements.  
       * __Medium:__ Medium buttons are only used to pair with equally sized input fields. Primary button is not available in this size.
