@@ -69,11 +69,15 @@ blocks:
   - type: two column
     text: |  
 
-      Buttons are positioned according to the type of actions:
+      Buttons are positioned relatively according to the type of actions:
 
       * __Affirmative actions__ are placed on the right and continue the process. They are actions that are desired by users or the application.
 
       * __Dismissive actions__ are placed on the left and return the user to the previous screen or step in the process.
+
+      __Align the button group to the right side of the container by default__
+
+      With that said, you still have the flexibility to align the button groups differently based on the use case and visual balance.
 
       __Destructive actions may be affirmative actions__
 
@@ -108,6 +112,14 @@ blocks:
             - Reserve enough space in the label for translation to other languages.
             - Avoid excessive use of exclamation points (!).
 
+  - type: section
+    name: Disabled Buttons
+
+  - type: two column
+    text: |
+      Use a disabled button only if an action on the current screen can enable it (action possibility).  A disabled button should only appear when contextually relevant.  If the button is not needed for the task at hand, it should be hidden.  
+
+      If a bank of 2 or more buttons is present but can only be enabled by direct action on the same screen, it can be hidden and only shown when enabled to give emphasis of new controls available to the user.
 
   - type: section
     name: Link style buttons
@@ -143,17 +155,17 @@ blocks:
       Large (Standard)
       : - 44px tall
         - 20px horizontal padding
-        - [UI Heading - Section - Small](/design/c/typography/v2.0.0/#rd-ui-headings-section-basic)
+        - 18px, Semibold (currently not in the UX Framework typography set)
 
       Medium
       : - 36px tall
         - 12px horizontal padding
-        - [UI Text - Bold](/design/c/typography/v2.0.0/#rd-ui-text-bold)
+        - [UI Text - Bold](/design/c/typography/v2.0.0/#rd-ui-text-bold): 14px, Semibold
 
       Small
       : - 32px tall
         - 12px horizontal padding
-        - [UI Text - Bold](/design/c/typography/v2.0.0/#rd-ui-text-bold)
+        - [UI Text - Bold](/design/c/typography/v2.0.0/#rd-ui-text-bold): 14px, Semibold
 
 
     contents:
