@@ -2,6 +2,7 @@
 layout: component-yaml
 title: Drawer
 section: Components
+sdk: stand_alone
 version: 2.0.0
 rebranded: true
 status: active

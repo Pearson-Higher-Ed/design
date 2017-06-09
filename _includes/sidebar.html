@@ -10,6 +10,7 @@
   {% assign contribute_pages = '' | split: '' %}
   {% assign element_pages = '' | split: '' %}
   {% assign compound_pages = '' | split: '' %}
+  {% assign stand_alone_pages = '' | split: '' %}
 
   {% for page in site.pages %}
     {% comment %}
@@ -38,7 +39,12 @@
       {% when 'contribute' %}
         {% assign contribute_pages = contribute_pages | push: page %}
       {% when 'Components' %}
-        {% assign element_pages = element_pages | push: page %}
+        {% case page.sdk %}
+          {% when 'stand_alone' %}
+            {% assign stand_alone_pages = stand_alone_pages | push: page %}
+          {% else %}
+            {% assign element_pages = element_pages | push: page %}
+        {% endcase %}
       {% else %}
     {% endcase %}
   {% endfor %}
@@ -47,6 +53,7 @@
   {% assign use_pages = use_pages | sort: 'title' %}
   {% assign contribute_pages = contribute_pages | sort: 'title' %}
   {% assign element_pages = element_pages | sort: 'title' %}
+  {% assign stand_alone_pages = stand_alone_pages | sort: 'title' %}
 
   <div class="sidebar-toc">
     <ul>
@@ -90,7 +97,22 @@
           {% endfor %}
         </ul>
       </li>
-      <li>Compounds</li>
+      <li>
+        Stand alone components
+        <ul>
+          {% for entry in stand_alone_pages %}
+            <li {% if entry.title == page.title %}class="selected"{% endif %}>
+              <a href="{{site.baseurl}}{{entry.url}}..">
+                {% if entry.shortname %}
+                  {{entry.shortname}}
+                {% else %}
+                  {{entry.title}}
+                {% endif %}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </li>
     </ul>
   </div>
 
