@@ -210,7 +210,7 @@ blocks:
       ### Primary buttons
 
       Normal
-      : - BG: [Digital Marine Turquoise (#19A6A4)](/design/c/colors/v2.1.0/#rd-digital-marine-turquoise)
+      : - BG: [Digital Marine Turquoise (#19A5A3)](/design/c/colors/v2.1.0/#rd-digital-marine-turquoise)
         - Text: [White](/design/c/colors/v2.1.0/#rd-white)
 
       Hover/Active
