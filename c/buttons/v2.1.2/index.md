@@ -45,7 +45,7 @@ blocks:
 
     contents:
       - type: wide image
-        src: ./assets/types@2.png
+        src: ./assets/types@2.png  
 
   - type: section
     name: Size
