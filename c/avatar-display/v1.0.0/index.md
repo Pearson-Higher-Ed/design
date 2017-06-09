@@ -2,6 +2,7 @@
 layout: component-yaml
 title: Avatar Display
 section: Components
+sdk: stand_alone
 redirect_from: /docs/ui-components/avatar-display/
 version: 1.0.0
 status: active

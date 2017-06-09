@@ -2,6 +2,7 @@
 layout: component-yaml
 title: Notifications
 section: Components
+sdk: stand_alone
 version: 1.0.0
 rebranded: true
 status: active

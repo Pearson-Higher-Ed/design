@@ -5,54 +5,16 @@
     max-width: 370px;
   }
   @include pe-responsive-breakpoint(md) {
-    width: 760px;
-    max-width: none;
+    width: 80%;
+    max-width: 790px;
   }
   @include pe-responsive-breakpoint(lg) {
-    width: 1000px;
-  }
-  @include pe-responsive-breakpoint(xl) {
-    width: 1140px;
-  }
-
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  .toc {
-    box-sizing: border-box;
-    width: 100%;
-    margin-bottom: 60px;
-    @extend .pe-label;
-    @include pe-responsive-breakpoint(lg) {
-      width: 210px;
-      float: left;
-      padding-right: 40px;
-    }
-    @include pe-responsive-breakpoint(xl) {
-      width: 320px;
-      // @extend .pe-label-large;
-    }
-
-    & > ul > li + li {
-      margin-top: 20px;
-    }
-  }
-
-  .specs {
-    width: 100%;
-    @include pe-responsive-breakpoint(lg) {
-      width: 760px;
-      float: left;
-    }
+    width: 790px;
   }
 
   h1 {
-    @extend .pe-title;
-    @extend .pe-page-title--small;
-    margin-top: 0;
+    @extend .pe-page-title, .pe-page-title--small;
+    margin-top: 100px;
   }
 
   h2 {
@@ -65,91 +27,90 @@
   }
 
   .reqs {
-    background-color: $pe-color-white;
-    padding: 20px;
+    counter-reset: section;
 
     h3 {
-      @extend .pe-title;
+      @extend .pe-label, .pe-bold;
+      margin-bottom: 2px;
     }
-
-    & + .reqs {
-      margin-top: 40px;
-    }
-
-    .description {
-      font-style: italic;
-    }
-
-    .description + .req,
-    h3 + .req {
-      margin-top: 30px;
-    }
+    & + .reqs { margin-top: 18px; }
 
     .req {
-      margin-top: 60px;
-      & > div:first-of-type {
-        p {
-          font-weight: bold;
-          margin: 0;
+      cursor: pointer;
+      overflow: hidden;
+      padding: 6px 16px;
+      margin: 0 -16px;
+      transition: padding-top 0.3s
+                , padding-bottom 0.3s
+                , background-color 0.2s
+                , box-shadow 0.3s;
+
+      &:hover {
+        background-color: $pe-color-white;
+      }
+
+      &.open {
+        padding: 16px;
+        margin:  4px -16px 12px;
+
+        background-color: $pe-color-white;
+        box-shadow: 0 0 3px 0 rgba(0,0,0,0.20);
+      }
+
+      &[data-no-explanation="true"] {
+        cursor: default;
+
+        &:hover {
+          background-color: transparent;
         }
+      }
 
-        & + div {
-          margin-top: 20px;
+      .icon {
+        float: left;
+        height: 22px;
+        margin-right: 12px;
+
+        svg {
+          position: relative;
+          top: 1px;
         }
       }
 
-      .badge {
-        margin-top: 8px;
+      .item::before {
+        counter-increment: section;
+        content: counter(section)". ";
+        @extend .pe-copy;
+        float: left;
+        margin-right: 4px;
       }
 
-      .required {
-        background-color: hsl(352, 73%, 41%);
-        font-weight: normal;
-        color: white;
-        padding: 2px 8px;
-        border-radius: 3px;
-        font-size: 10px;
-        text-transform: uppercase;
-      }
+      .item {
+        overflow: hidden;
 
-      .should {
-        background-color: #EAB624;
-        font-weight: normal;
-        color: black;
-        padding: 2px 8px;
-        border-radius: 3px;
-        font-size: 10px;
-        text-transform: uppercase;
-      }
-
-      .explanation,
-      .approvers {
-        margin-top: 20px;
-        border-left: 2px solid #aaa;
-        padding-left: 10px;
-
-        .heading {
-          font-style: italic;
-          margin-bottom: 8px;
-          cursor: pointer;
-          background: none;
-          border: none;
-          padding: 0;
-          display: block;
+        .label > :last-child {
+          margin-bottom: 0;
         }
+      }
+
+      .explanation {
+        margin-top: 12px;
+        color: $pe-color-medium-gray;
 
         ul {
           @extend .pe-list, .pe-styled-lists--unordered;
+          color: $pe-color-medium-gray;
         }
 
         p {
           margin: 0;
+          color: $pe-color-medium-gray;
 
           & + p {
             margin-top: 8px;
           }
         }
       }
+
     }
   }
 }
