@@ -142,7 +142,7 @@
     sidebar.classList.add('open');
   }
 
-  document.addEventListener('click', function(e) {
+  document.addEventListener('click', function(event) {
     if (event.target.closest('.burger')) {
       openSidebar();
     } else if (!event.target.closest('.sidebar')) {
