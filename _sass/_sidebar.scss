@@ -14,7 +14,6 @@
 
   @mixin _sidebarOpen {
     transform: translateX(0);
-    visibility: visible;
   }
 
   &.open {
@@ -41,7 +40,7 @@
   .sidebar-toc {
     padding: 0 36px;
     height: calc(100% - 58px);
-    overflow-y: scroll;
+    overflow-y: auto;
 
     ul {
       list-style-type: none;
