@@ -490,6 +490,7 @@ changelog:
   - version: 2.1.0-beta.1
     changes: |
       - CHANGED: Icon for select input
+      - CHANGED: Active color from Pearson Digital Blue to Digital Marine Turquoise
   - version: 2.0.1
     changes: |
       - FIXED: Some images had disabled labels that don't match the actual design
