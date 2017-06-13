@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Inputs
 section: Components
-status: deprecated
-version: 2.0.0
+status: active
+version: 2.0.1
 rebranded: true
 implemented: true
 people:
@@ -484,6 +484,9 @@ blocks:
         src: ./assets/redlines.password.showhide.png
 
 changelog:
+  - version: 2.0.1
+    changes: |
+      - FIXED: Some images had disabled labels that don't match the actual design
   - version: 2.0.0
     changes: |
       Change design to align with new brand
