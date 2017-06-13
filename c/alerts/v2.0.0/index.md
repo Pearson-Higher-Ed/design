@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Alerts
 section: Components
-version: 2.0.0-beta.5
-status: deprecated
+version: 2.0.0
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -197,35 +197,7 @@ blocks:
 
 
 changelog:
-  - version: 2.0.0-beta.5
+  - version: 2.0.0
     changes: |
-      - REMOVED: Reference to alert-dialog
-  - version: 2.0.0-beta.4
-    changes: |
-      - UPDATED: Further clarified a11y documentation
-  - version: 2.0.0-beta.3
-    changes: |
-      - UPDATED: Clarified documentation based on a11y feedback
-  - version: 2.0.0-beta.2
-    changes: |
-      - UPDATED: Animation video uses latest copy
-  - version: 2.0.0-beta.1
-    changes: |
-      - CHANGED: New visual design. adding more alert types
-  - version: 1.0.0-beta.5
-    changes: |
-      - CHANGED: Uses basic CSS easing curves, rather than springs.
-  - version: 1.0.0-beta.4
-    changes: |
-      - FIXED: Accessibility verbiage is now more accurate
-      - FIXED: Spacing verbiage, other typos
-  - version: 1.0.0-beta.3
-    changes: |
-      - ADDED: Positioning details to redlines
-      - UPDATED: Keyboard and focus redlines.
-  - version: 1.0.0-beta.2
-    changes: |
-      - ADDED: Success style, redlines, a11y checklist
-  - version: 1.0.0-beta.1
-    changes: Initial version
+      - First rebranded version
 ---
