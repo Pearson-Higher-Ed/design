@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Inputs
 section: Components
-status: deprecated
-version: 2.0.0
+status: active
+version: 2.1.0-beta.1
 rebranded: true
 implemented: true
 people:
@@ -382,6 +382,9 @@ blocks:
 
       States
       : - Follow the styles defined for the Basic Single Line input for each state
+
+      Icons
+      : - Use the dropdown-open-sm-24 icon
     contents:
       - type: narrow image
         src: ./assets/redlines.select.basic.png
@@ -395,7 +398,7 @@ blocks:
         - Value is generally 10px above the underline
 
       Icons
-      : - Dropdown icon is the dropdown-open-18 icon
+      : - Dropdown icon is the dropdown-open-sm-24 icon
 
       Typography
       : - Label is [Small UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-small)
@@ -484,6 +487,13 @@ blocks:
         src: ./assets/redlines.password.showhide.png
 
 changelog:
+  - version: 2.1.0-beta.1
+    changes: |
+      - CHANGED: Icon for select input
+      - CHANGED: Active color from Pearson Digital Blue to Digital Marine Turquoise
+  - version: 2.0.1
+    changes: |
+      - FIXED: Some images had disabled labels that don't match the actual design
   - version: 2.0.0
     changes: |
       Change design to align with new brand
