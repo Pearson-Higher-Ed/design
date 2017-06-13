@@ -2,6 +2,7 @@
 layout: component-yaml
 title: Modal
 section: Components
+sdk: stand_alone
 redirect_from: /docs/ui-components/modal/
 version: 2.0.0
 status: active
