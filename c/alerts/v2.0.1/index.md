@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Alerts
 section: Components
-version: 2.0.0
-status: deprecated
+version: 2.0.1
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -143,7 +143,8 @@ blocks:
         - Message is [Basic Body Copy](/design/c/typography/v2.0.0/#rd-basic-body)
 
       "X" icons
-      : - Size [remove-sm-24](design/c/icons/v2.1.0/)
+      : - Size [close-sm-24](design/c/icons/v2.1.0/)
+        - Note the "-sm" size of this icon is actually 12px square
         - Touch area 44x44
 
       Alert/warning icons
@@ -197,6 +198,9 @@ blocks:
 
 
 changelog:
+  - version: 2.0.1
+    changes: |
+      - FIXED: Inconsistencies in the redlines
   - version: 2.0.0
     changes: |
       - First rebranded version
