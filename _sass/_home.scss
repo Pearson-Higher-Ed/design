@@ -32,6 +32,28 @@ body.home {
   }
 
 
+  .main-heroes {
+    margin-top: 40px;
+    
+    h2 {
+      @extend .pe-page-title;
+      margin-bottom: 28px;
+    }
+
+    & > div {
+      width: 50%;
+      box-sizing: border-box;
+      padding: 80px;
+      float: left;
+
+      &:first-child {
+        border-right: 1px solid $pe-color-concrete;
+      }
+    }
+
+    @include clearfix;
+  }
+
 
   .chunk {
     border-bottom: 2px solid $pe-color-sunflower-yellow;
