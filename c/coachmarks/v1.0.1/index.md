@@ -3,8 +3,8 @@ layout: component-yaml
 title: Coach Marks
 section: Components
 sdk: stand_alone
-version: 1.0.0
-status: deprecated
+version: 1.0.1
+status: active
 implemented: true
 people:
   - role: Interaction Design
@@ -83,6 +83,7 @@ blocks:
         - 24px horizontal padding
         - 4px between title and message
         - 24px between message and dismissal link
+        - 4px between arrow and target element
 
       Dimensions
       : - 280px wide at every viewport
@@ -121,6 +122,9 @@ blocks:
         caption: Single Instance Coach Mark
 
 changelog:
+  - version: 1.0.1
+    changes: |
+      - FIXED: Inconsistencies in sketch file
   - version: 1.0.0
     changes: |
       - CHANGED: Initial version
