@@ -83,6 +83,7 @@ blocks:
         - 24px horizontal padding
         - 4px between title and message
         - 24px between message and dismissal link
+        - 4px between arrow and target element
 
       Dimensions
       : - 280px wide at every viewport
