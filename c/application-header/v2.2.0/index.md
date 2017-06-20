@@ -4,8 +4,8 @@ title: Application Header
 section: Components
 sdk: stand_alone
 redirect_from: /docs/ui-components/application-header/
-version: 2.2.0-beta.1
-status: deprecated
+version: 2.2.0
+status: active
 rebranded: true
 implemented: true
 people:
@@ -219,7 +219,7 @@ blocks:
 
 
 changelog:
-  - version: 2.2.0-beta.1
+  - version: 2.2.0
     changes: |
       - CHANGED: Background color to white
 

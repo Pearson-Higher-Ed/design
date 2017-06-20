@@ -5,7 +5,7 @@ section: Components
 sdk: stand_alone
 redirect_from: /docs/ui-components/application-header/
 version: 2.1.0
-status: active
+status: deprecated
 rebranded: true
 implemented: true
 people:
