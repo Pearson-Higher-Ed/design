@@ -4,6 +4,7 @@ title: Dropdown
 section: Components
 version: 1.0.0
 status: active
+implementation: https://www.npmjs.com/package/pearson-compounds
 people:
   - role: Product Owner
     name: Joe Macaluso
