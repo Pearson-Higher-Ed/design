@@ -1,5 +1,45 @@
 .status {
+  max-width: 760px;
+  margin: 200px auto 0;
+
+  h1 { @extend .pe-page-title; }
+  h2 {
+    @extend .pe-title, .pe-bold;
+    margin-bottom: 24px;
+    margin-top: 48px;
+  }
+  h3 { @extend .pe-title, .pe-title--small; }
+  p { @extend .pe-copy, .pe-copy--large; }
+  ul {
+    @extend .pe-list, .pe-styled-lists--unordered;
+
+    &.top {
+      @extend .pe-copy, .pe-copy--large;
+    }
+  }
+
+  .left, .right {
+    width: 50%;
+    float: left;
+  }
+
   table {
-    margin-top: 100px;
+    clear: both;
+    display: inline-block;
+    width: 100%;
+    margin-top: 40px;
+
+    thead {
+      background-color: $pe-color-digital-ice-blue;
+    }
+
+    tbody {
+      background-color: $pe-color-white;
+    }
+
+    th, td {
+      border: 1px solid $pe-color-concrete;
+      padding: 12px 16px;
+    }
   }
 }
