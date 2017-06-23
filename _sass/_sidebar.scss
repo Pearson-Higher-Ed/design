@@ -111,6 +111,14 @@
       top: 2px;
       margin-right: 4px;
     }
+
+    .text {
+      display: none;
+
+      @include pe-responsive-breakpoint(md) {
+        display: inline;
+      }
+    }
   }
 }
 
