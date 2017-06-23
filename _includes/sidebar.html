@@ -58,9 +58,9 @@
     {% endcase %}
   {% endfor %}
 
-  {% assign learn_pages = learn_pages | sort: 'title' %}
-  {% assign use_pages = use_pages | sort: 'title' %}
-  {% assign contribute_pages = contribute_pages | sort: 'title' %}
+  {% assign learn_pages = learn_pages | sort: 'order' %}
+  {% assign use_pages = use_pages | sort: 'order' %}
+  {% assign contribute_pages = contribute_pages | sort: 'order' %}
   {% assign element_pages = element_pages | sort: 'title' %}
   {% assign stand_alone_pages = stand_alone_pages | sort: 'title' %}
 

@@ -1,6 +1,6 @@
 ---
 title: Component status
 layout: status
-data:
-  object: true
+section: use
+order: 4
 ---
