@@ -98,6 +98,10 @@
   transition: left 0.3s;
   z-index: 26;
 
+  .burger {
+    margin-right: 12px;
+  }
+
   @media (min-width: 1460px) {
     left: 240px;
 
