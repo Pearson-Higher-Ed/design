@@ -32,9 +32,18 @@
   header {
     @extend .pe-title--small;
     color: $pe-color-digital-pearson-blue;
-    padding: 16px 36px;
+    padding: 16px 26px 16px 36px;
     border-bottom: 1px solid $pe-color-concrete;
     margin: 0;
+
+    button {
+      float: right;
+      @include reset-button;
+      padding: 0;
+      color: inherit;
+      position: relative;
+      top: 3px;
+    }
   }
 
   .sidebar-toc {

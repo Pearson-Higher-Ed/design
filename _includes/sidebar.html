@@ -2,6 +2,15 @@
   <a href="{{site.baseurl}}/">
     <header>
       UX Framework
+
+      <button data-sidebar-closer="true">
+        <svg style="vertical-align:baseline"
+          aria-hidden="true"
+          focusable="false"
+          class="pe-icon--remove-lg-18">
+            <use xlink:href="#remove-lg-18"></use>
+        </svg>
+      </button>
     </header>
   </a>
 
@@ -133,7 +142,7 @@
   {% endunless %}
 </div>
 
-<div class="overlay"></div>
+<div class="overlay" data-sidebar-closer="true"></div>
 
 <script type="text/javascript">
   var sidebar = document.querySelector('.sidebar')
@@ -147,11 +156,13 @@
     overlay.classList.add('open');
   }
 
-  document.addEventListener('click', function(event) {
-    if (event.target.closest('.burger')) {
-      openSidebar();
-    } else if (!event.target.closest('.sidebar')) {
-      closeSidebar();
-    }
+  document.querySelectorAll('[data-sidebar-closer]').forEach(function(closer) {
+    closer.addEventListener('click', function(event) {
+      if (event.target.closest('.burger')) {
+        openSidebar();
+      } else if (!event.target.closest('.sidebar')) {
+        closeSidebar();
+      }
+    })
   });
 </script>
