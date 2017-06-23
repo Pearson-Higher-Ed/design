@@ -15,32 +15,23 @@
 			</div>
 		</div>
 
-		{% for chunk in page.chunks %}
-			<section class="chunk">
-				<div class="content">
-					<h2>{{chunk.name}}</h2>
-					{{chunk.text | markdownify}}
+		<div class="main-heroes">
+			<div class="design-hero">
+				<h2>Design</h2>
 
-					{% if chunk.button %}
-						{% assign first = chunk.button.src | slice: 0 %}
-						<a
-							href="{% if first == '/' %}{{site.baseurl}}{% endif %}{{chunk.button.src}}"
-							{% if chunk.button.new_tab %}
-								target="_blank"
-							{% endif %} class="pe-btn__cta--btn_large">
-								{{chunk.button.title}}
-						</a>
-					{% endif %}
+				<p>Start working in Sketch with ready-made UI components such as colors, buttons, and more! To see how a component works and behaves, please refer to the usage guidelines on this site.</p>
 
-					<div class="links">
-						{% for link in chunk.links %}
-							{% assign first = link.src | slice: 0 %}
-							<a href="{% if first == '/' %}{{site.baseurl}}{% endif %}{{link.src}}">{{link.title}}</a>
-						{% endfor %}
-					</div>
-				</div>
-			</section>
-		{% endfor %}
+				<a href="" class="pe-btn__primary--btn_large">Download UI Kit</a>
+			</div>
+
+			<div class="dev-hero">
+				<h2>Develop</h2>
+
+				<p>Just grab the code and you're ready to go! Build apps faster using our premade elements.</p>
+
+				<a href="" class="pe-btn__primary--btn_large">Go to Library</a>
+			</div>
+		</div>
 
 		<section class="contact">
 			<p>Questions or feedback? Check out the <a href="{{site.baseurl}}/contact">discussion board</a> or start a new thread by emailing us here:</p>
