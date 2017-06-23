@@ -43,6 +43,10 @@
       color: inherit;
       position: relative;
       top: 3px;
+
+      @media (min-width: 1460px) {
+        display: none;
+      }
     }
   }
 
