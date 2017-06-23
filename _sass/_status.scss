@@ -1,6 +1,6 @@
 .status {
   max-width: 760px;
-  margin: 200px auto 0;
+  margin: 100px auto 0;
 
   h1 { @extend .pe-page-title; }
   h2 {
@@ -23,9 +23,13 @@
     float: left;
   }
 
+  .table-container {
+    display: inline-block;
+    width: 100%;
+  }
+
   table {
     clear: both;
-    display: inline-block;
     width: 100%;
     margin-top: 40px;
 
