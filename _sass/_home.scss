@@ -75,7 +75,7 @@ body.home {
       @include pe-responsive-breakpoint(md) {
         position: absolute;
         top: 0;
-        bottom: 0;
+        bottom: 40px;
         right: 0;
 
         padding: 0 60px;
@@ -92,34 +92,6 @@ body.home {
     }
 
     @include clearfix;
-  }
-
-
-  .chunk {
-    border-bottom: 2px solid $pe-color-sunflower-yellow;
-    padding: 80px 10px;
-
-    text-align: center;
-
-    .content {
-      margin: 0 auto;
-      @include pe-responsive-breakpoint(md) {
-        max-width: 500px;
-      }
-    }
-
-    h2 {
-      @extend .pe-page-title;
-      margin-bottom: 28px;
-    }
-
-    button {
-      margin-top: 24px;
-    }
-
-    .links {
-      margin-top: 16px;
-    }
   }
 
 
