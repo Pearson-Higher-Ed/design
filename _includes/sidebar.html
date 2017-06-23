@@ -157,12 +157,13 @@
   }
 
   document.querySelector('.burger').addEventListener('click', function(event) {
-    openSidebar();
+    openSidebar()
   })
 
   document.querySelectorAll('[data-sidebar-closer]').forEach(function(closer) {
     closer.addEventListener('click', function(event) {
-      closeSidebar();
+      event.preventDefault()
+      closeSidebar()
     })
   });
 </script>
