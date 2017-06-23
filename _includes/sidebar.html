@@ -133,13 +133,18 @@
   {% endunless %}
 </div>
 
+<div class="overlay"></div>
+
 <script type="text/javascript">
-  var sidebar = document.querySelector('.sidebar');
+  var sidebar = document.querySelector('.sidebar')
+    , overlay = document.querySelector('.overlay');
   var closeSidebar = function() {
     sidebar.classList.remove('open');
+    overlay.classList.remove('open');
   };
   var openSidebar = function() {
     sidebar.classList.add('open');
+    overlay.classList.add('open');
   }
 
   document.addEventListener('click', function(event) {
