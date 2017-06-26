@@ -76,6 +76,11 @@ blocks:
       - The calendar appears. Note, the size of the input isn't tied to the width of the calendar popup.
       - No date is selected by default
 
+      **The calendar closes when:**
+
+      - The user makes a selection from the calendar
+      - Focus is lost from field or calendar when the user clicks elsewhere.
+
       If the user closes the calendar without making a selection, it reverts back to Default State.
 
     contents:
@@ -90,11 +95,6 @@ blocks:
 
       - The calendar appears and shows the selected date
       - The numeric date text in the field is highlighted
-
-      **The calendar closes when:**
-
-      - The user makes a selection from the calendar
-      - Focus is lost from field or calendar
 
       Note that for the first and second points, focus remains on the field until the user clicks elsewhere.
 
