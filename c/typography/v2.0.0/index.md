@@ -275,6 +275,8 @@ blocks:
       #### Weights
       Text uses a normal weight unless otherwise specified.
 
+      Note that bold styles are actually displayed using the semibold variant of Open Sans. Visual design has chosen the semibold variant as more appropriate for our current aesthetic, but it should still be used in the same semantic way as a bold font. Calling these styles "Bold" (not "Semibold") future proofs the typography component, making it easy to switch to another font that might not have a semibold variant.
+
     contents:
       - type: narrow image
         src: ./assets/redlines.ui.text.regular.png
