@@ -119,6 +119,9 @@ blocks:
       - Extra Large
 
 changelog:
+
+  - version: 1.0.1
+    ADDED: Added sketch file featuring art boards with grid layout setup for easier consumption.
   - version: 1.0.0
     changes: Initial version
 ---
