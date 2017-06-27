@@ -32,9 +32,14 @@
     clear: both;
     width: 100%;
     margin-top: 40px;
+    table-layout: fixed;
 
     thead {
       background-color: $pe-color-digital-ice-blue;
+
+      tr:last-child th {
+        font-weight: normal;
+      }
     }
 
     tbody {
