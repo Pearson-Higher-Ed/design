@@ -6,6 +6,8 @@ sdk: stand_alone
 version: 2.0.0
 rebranded: true
 status: active
+implemented: true
+implementation: https://github.com/Pearson-Higher-Ed/drawer/
 people:
   - role: Product Owner
     name: Joe Macaluso

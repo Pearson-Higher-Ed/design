@@ -9,7 +9,7 @@ people:
   - role: Interaction Design
     name: Parker Malenke
     email: parker.malenke@pearson.com
-implementation: https://www.npmjs.com/package/pearson-compounds
+implementation: https://github.com/Pearson-Higher-Ed/compounds/
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/12b6shy8-bqWRkYoQKiQbAIqcepyHqgjGmulx3dsjghs/edit?usp=sharing

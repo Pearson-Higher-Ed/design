@@ -7,7 +7,8 @@ redirect_from: /docs/ui-components/contextual-help/
 version: 2.0.0
 rebranded: true
 status: active
-implemented: false
+implemented: true
+implementation: https://github.com/Pearson-Higher-Ed/contextual-help/
 people:
   - role: Product Owner
     name: Joe Macaluso

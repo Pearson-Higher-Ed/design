@@ -4,7 +4,7 @@ title: Templates
 section: Components
 version: 2.0.0-beta.1
 status: deprecated
-implemented: true
+implemented: false
 people:
   - role: Product Owner
     name: Joe Macaluso

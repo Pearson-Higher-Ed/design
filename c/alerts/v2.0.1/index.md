@@ -4,7 +4,7 @@ title: Alerts
 section: Components
 version: 2.0.1
 status: active
-implemented: false
+implemented: true
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -15,7 +15,7 @@ people:
   - role: Visual Design
     name: Lynn Chang
     email: lynn.chang@pearson.com
-implementation:
+implementation: https://github.com/Pearson-Higher-Ed/alerts/
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1rzmNsspFnO8bdnLeHtMVWKSXJGzCy6KJ-e3v4513nZk/edit?usp=sharing

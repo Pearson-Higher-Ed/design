@@ -18,7 +18,7 @@ people:
   - role: Visual Design
     name: Meredith Williamson
     email: meredith.williamson@pearson.com
-implementation: https://origami.pearsoned.com/registry/components/o-app-header
+implementation: https://github.com/Pearson-Higher-Ed/app-header/
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1oxs4Mjp4xF27v_H7HvyQeonAXhFhKGB3XYQZh2SZ2Gs/edit?usp=sharing

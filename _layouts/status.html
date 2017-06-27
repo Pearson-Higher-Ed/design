@@ -161,6 +161,8 @@
             {% assign implemented_beta = latest_implemented_version | slice: -1 %}
             {% if implemented_beta == '0' %}
               {% assign latest_implemented_version = latest_implemented_version | split: '-' | first %}
+            {% elsif latest_implemented_version | split: '-' | first == latest_version %}
+              {% assign latest_implemented_version = latest_version %}
             {% endif %}
 
             <tr>
