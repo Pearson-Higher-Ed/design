@@ -40,9 +40,16 @@
       <div class="table-container">
         <table>
           <thead>
-            <th></th>
-            <th>Approved</th>
-            <th>Proposed</th>
+            <tr>
+              <th rowspan="2"></th>
+              <th colspan="2">Approved</th>
+              <th>Proposed</th>
+            </tr>
+            <tr>
+              <th>Not Implemented</th>
+              <th>Implemented</th>
+              <th></th>
+            </tr>
           </thead>
           <tbody>
 
@@ -151,25 +158,24 @@
             {% capture latest_beta_version %}{{b_max_major}}.{{b_max_minor}}.{{b_max_patch}}-beta.{{b_max_beta}}{% endcapture %}
             {% capture latest_implemented_version %}{{i_max_major}}.{{i_max_minor}}.{{i_max_patch}}-beta.{{i_max_beta}}{% endcapture %}
 
+            {% assign implemented_beta = latest_implemented_version | slice: -1 %}
+            {% if implemented_beta == '0' %}
+              {% assign latest_implemented_version = latest_implemented_version | split: '-' | first %}
+            {% endif %}
+
             <tr>
               <td>{{component.title}}</td>
               <td>
                 {% if latest_version == '0.0.0' %}
                   No approved version
-                {% else %}
+                {% elsif latest_version != latest_implemented_version %}
                   <a href="{{site.baseurl}}{{component.url}}../v{{latest_version}}/">{{latest_version}}</a>
                 {% endif %}
-
-                {% assign implemented_beta = latest_implemented_version | slice: -1 %}
-                {% if implemented_beta == '0' %}
-                  {% assign latest_implemented_version = latest_implemented_version | split: '-' | first %}
-                {% endif %}
-
-                {% if latest_implemented_version == '0.0.0' and latest_version != '0.0.0' %}
-                  (Not yet implemented)
-                {% elsif latest_implemented_version != latest_version %}
-                  (Latest implemented is <a href="{{site.baseurl}}{{component.url}}../v{{latest_implemented_version}}/">{{latest_implemented_version}}</a>)
-                {% endif %}
+              </td>
+              <td>
+                {% unless latest_implemented_version == '0.0.0' %}
+                  <a href="{{site.baseurl}}{{component.url}}../v{{latest_implemented_version}}/">{{latest_implemented_version}}</a>
+                {% endunless %}
               </td>
               <td>
                 {% if latest_beta_version == '0.0.0-beta.1' %}
