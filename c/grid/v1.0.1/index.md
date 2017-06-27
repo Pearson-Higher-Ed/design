@@ -14,6 +14,8 @@ people:
     email: parker.malenke@pearson.com
 implementation:
 downloads:
+  - name: Sketch
+    link: ./assets/Grid.sketch
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/11q6G511IezRBlTdHw92UyJPl46kgmHfeQt9kho_gA7k/edit?usp=sharing
 
