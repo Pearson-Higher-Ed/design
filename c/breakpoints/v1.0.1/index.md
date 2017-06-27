@@ -13,7 +13,7 @@ people:
     name: Parker Malenke
     email: parker.malenke@pearson.com
 
-implementation: https://www.npmjs.com/package/pearson-elements
+implementation: https://github.com/Pearson-Higher-Ed/elements/
 
 downloads:
   - name: Sketch
@@ -121,7 +121,8 @@ blocks:
 changelog:
 
   - version: 1.0.1
-    changes: Added sketch file featuring art boards with grid layout setup for easier consumption.
+    changes: |
+      - ADDED: Added sketch file featuring art boards with grid layout setup for easier consumption.
   - version: 1.0.0
     changes: Initial version
 ---

@@ -7,6 +7,7 @@ redirect_from: /docs/ui-components/avatar-display/
 version: 1.0.0
 status: active
 implemented: true
+implementation: https://github.com/Pearson-Higher-Ed/avatar-display/
 people:
   - role: Product Owner
     name: Joe Macaluso

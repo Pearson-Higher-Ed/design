@@ -4,14 +4,14 @@ title: Buttons
 section: Components
 version: 2.1.2
 status: active
-implemented: false
+implemented: true
 people:
   - role: Designer
     name: Parker Malenke
     email: parker.malenke@pearson.com
   - role: QA
     name: Eajaz
-implementation: http://pearson-higher-ed.github.io/elements/elements/buttons/
+implementation: https://github.com/Pearson-Higher-Ed/elements/
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1eSGAoNb7F1A8iA_DqLQfSP_TxzuV0V2yTAK8ksDeQBU/edit?usp=sharing
