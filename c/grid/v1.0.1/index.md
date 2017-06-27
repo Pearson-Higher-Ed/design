@@ -3,7 +3,7 @@ layout: component-yaml
 title: Grid
 section: Components
 version: 1.0.1
-status: active
+status: active 
 implemented: true
 people:
   - role: Product Owner
