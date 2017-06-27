@@ -489,7 +489,7 @@ blocks:
 changelog:
   - version: 2.1.0-beta.2
     changes: |
-    - CHANGED: Update Sketch file
+      - CHANGED: Update sketch file
   - version: 2.1.0-beta.1
     changes: |
       - CHANGED: Icon for select input
