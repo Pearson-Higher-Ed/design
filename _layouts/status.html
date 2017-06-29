@@ -133,7 +133,8 @@
                 {% endif %}
               {% endif %}
 
-              {% if version.status == 'active' %}
+              {% if version.version contains 'beta' %}
+              {% elsif version.status == 'active'  %}
 
                 {% assign semver = (version.version | split: '.') %}
                 {% assign major = (semver[0] | round) %}
