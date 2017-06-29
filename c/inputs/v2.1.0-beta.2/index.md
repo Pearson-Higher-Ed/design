@@ -266,18 +266,18 @@ blocks:
         - Place holders are [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic), [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
 
       Focus
-      : - Label is [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue)
-        - Border is 1px solid [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue)
-        - [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue) shadow with 5px blur
+      : - Label is [Medium Gray](/design/c/colors/v2.1.0/#rd-medium-gray)
+        - Border is 1px solid [Digital Marine Turquoise](/design/c/colors/v2.1.0/#rd-digital-marine-turquoise)
+        - [Digital Marine Turquoise](/design/c/colors/v2.1.0/#rd-digital-marine-turquoise) shadow with 5px blur
 
       Disabled
-      : - Value is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
+      : - Value is [Concrete (#c7c7c7)](/design/c/colors/v2.1.0/#rd-concrete)
         - Fill color is [Moonlight (#e9e9e9)](/design/c/colors/v2.0.0-beta.5/#rd-moonlight)
 
       Error
-      : - Label is [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
-        - Border is 1px solid [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
-        - Error text is [Small UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-small) in [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
+      : - Label is [Medium Gray](/design/c/colors/v2.1.0/#rd-medium-gray)
+        - Border is 1px solid [Strawberry Red (#db0020)](/design/c/colors/v2.1.0/#rd-strawberry-red)
+        - Error text is [Small UI Text](/design/c/typography/v2.1.0/#rd-ui-text-small) in [Strawberry Red (#db0020)](/design/c/colors/v2.1.0/#rd-strawberry-red)
         - Error text is 3px below the field
 
       Focused Error
@@ -314,8 +314,9 @@ blocks:
         - Underline is 1px solid [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
 
       Focus
-      : - Label is [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue)
-        - Underline is 4px solid [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue)
+      : - Label is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
+        - Underline is 4px solid [Digital Marine Turquoise](/design/c/colors/v2.1.0/#rd-digital-marine-turquoise)
+
         - The underline should animate out from the center of the input once the user clicks into the field
 
       Readonly
@@ -327,7 +328,8 @@ blocks:
         - Underline is 4px solid [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
 
       Error
-      : - Label and error text are [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
+      : - Label is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
+        - Error text is [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
         - Error text is 3px below the underline
         - Underline is 1px solid [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
 
@@ -431,7 +433,7 @@ blocks:
       States
       : - Radio border is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete) in most cases
         - Selected radios have an inner circle filled with [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray) in most cases
-        - Focused radios use [Digital Pearson Blue (#047A9C)](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue) borders
+        - Focused radios use [Digital Marine Turquoise](/design/c/colors/v2.1.0/#rd-digital-marine-turquoise) borders
         - Disabled radios use a [Moonlight (#e9e9e9)](/design/c/colors/v2.0.0-beta.5/#rd-moonlight) fill color
         - Disabled but selected radios have an inner circle filled with [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
 
@@ -457,7 +459,7 @@ blocks:
       States
       : - Box border is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete) in most cases
         - Selected checkboxes have a [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray) check mark in most cases
-        - Focused checkboxes use [Digital Pearson Blue (#047A9C)](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue) borders
+        - Focused checkboxes use [Digital Marine Turquoise](/design/c/colors/v2.1.0/#rd-digital-marine-turquoise) borders
         - Disabled checkboxes use a [Moonlight (#e9e9e9)](/design/c/colors/v2.0.0-beta.5/#rd-moonlight) fill color
         - Disabled but selected checkboxes have a [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete) check mark
     contents:
