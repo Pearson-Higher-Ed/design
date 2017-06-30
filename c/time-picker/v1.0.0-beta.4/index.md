@@ -75,7 +75,7 @@ blocks:
       **The dropdown closes when:**
 
       - The user makes a selection from the dropdown
-      - The user begins to manually type in a numeric time in the field
+      - The user begins to manually type in the field
       - Focus is lost from field or dropdown
 
       If the user closes the dropdown without making a selection, it reverts back to Default State.
@@ -96,7 +96,7 @@ blocks:
       **The dropdown closes when:**
 
       - The user makes a selection from the dropdown
-      - The user begins to manually type in a numeric time in the field
+      - The user begins to manually type in the field
       - Focus is lost from field or dropdown
 
       Note that for the first and second points, focus remains on the field until the user clicks elsewhere.
