@@ -78,7 +78,8 @@ blocks:
 
       **The calendar closes when:**
 
-      - The user makes a selection from the calendar
+      - The user makes a selection from the calendar.
+      - The user begins to manually type in the field.
       - Focus is lost from field or calendar when the user clicks elsewhere.
 
       If the user closes the calendar without making a selection, it reverts back to Default State.
@@ -98,7 +99,8 @@ blocks:
 
       **The calendar closes when:**
 
-      - The user makes a selection from the calendar
+      - The user makes a selection from the calendar.
+      - The user begins to manually type in the field.
       - Focus is lost from field or calendar when the user clicks elsewhere.
 
       Note that for the first and second points, focus remains on the field until the user clicks elsewhere.
