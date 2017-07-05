@@ -24,6 +24,21 @@
       margin-left: 16px;
     }
 
+    a.sketch {
+      svg {
+        position: relative;
+        top: 3px;
+      }
+    }
+
+    a.code {
+      svg {
+        width: 22px;
+        position: relative;
+        top: 3px;
+      }
+    }
+
     @include pe-responsive-breakpoint(md) {
       display: none;
     }
