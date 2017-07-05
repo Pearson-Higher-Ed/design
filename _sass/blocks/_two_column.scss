@@ -165,6 +165,20 @@
     }
   }
 
+  .media.border {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      box-shadow: 0 0 0 1px $pe-color-alto inset;
+    }
+  }
+
   // For code content
   pre {
     @extend .pe-code;

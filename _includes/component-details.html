@@ -254,7 +254,7 @@
 
             {% when 'wide image' %}
             <div class="image wide">
-              <div class="media">
+              <div class="media {% if item.border %}border{% endif %}">
                 <img src="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{item.src}}" />
               </div>
               {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
@@ -262,7 +262,7 @@
 
             {% when 'narrow image' %}
             <div class="image narrow">
-              <div class="media">
+              <div class="media {% if item.border %}border{% endif %}">
                 <img src="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{item.src}}" />
               </div>
               {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
@@ -270,7 +270,7 @@
 
             {% when 'ios image' or 'ios_image' or 'iOS image' or 'iOS_image' %}
             <div class="image ios">
-              <div class="media">
+              <div class="media {% if item.border %}border{% endif %}">
                 <img src="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{item.src}}" />
               </div>
               {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
@@ -278,7 +278,7 @@
 
             {% when 'android image' or 'android_image' %}
             <div class="image android">
-              <div class="media">
+              <div class="media {% if item.border %}border{% endif %}">
                 <img src="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{item.src}}" />
               </div>
               {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
@@ -286,7 +286,7 @@
 
             {% when 'wide video' %}
             <div class="image wide">
-              <div class="media">
+              <div class="media {% if item.border %}border{% endif %}">
                 <video src="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{item.src}}" loop controls/>
               </div>
               {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
@@ -294,7 +294,7 @@
 
             {% when 'narrow video' %}
             <div class="image narrow">
-              <div class="media">
+              <div class="media {% if item.border %}border{% endif %}">
                 <video src="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{item.src}}" loop controls/>
               </div>
               {% if item.caption %}<div class="caption">{{item.caption | markdownify}}</div>{% endif %}
