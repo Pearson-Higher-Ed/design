@@ -228,7 +228,7 @@ blocks:
   - type: two column
     text: |
       ### Manual Entry Completed
-      User completes manual entry by clicking off the input field, pressing the “Enter/Return” key, or pressing the “Tab” key.
+      User completes manual entry by blurring the input field.
 
     contents:
       - type: narrow image
@@ -285,7 +285,6 @@ changelog:
     changes: |
       - Redlines: Added width limits for input and dropdown.
       - Focus State with Manual Entry: Changed input to accept any characters
-      - Manual Entry Completed: Added “Enter/Return” and “Tab” key
   - version: 2.0.0-beta.4
     changes: Updated placeholder text and redlines. Added error message examples.
   - version: 2.0.0-beta.3
