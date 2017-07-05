@@ -3,7 +3,7 @@ layout: component-yaml
 title: Time Picker
 section: Components
 redirect_from: /docs/ui-components/time-picker/
-status: active
+status: deprecated
 version: 1.0.0-beta.3
 people:
   - role: Product Owner

@@ -3,8 +3,8 @@ layout: component-yaml
 title: Time Picker
 section: Components
 redirect_from: /docs/ui-components/time-picker/
-status: deprecated
-version: 1.0.0-beta.4
+status: active
+version: 1.0.0
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -280,15 +280,6 @@ blocks:
         src: ./assets/time-picker-redlines-2x.png
 
 changelog:
-  - version: 1.0.0-beta.4
-    changes: |
-     - Redlines: Added width limits for input and dropdown.
-     - Focus State with Manual Entry: Changed input to accept any characters
-     - Manual Entry Completed: Added "Enter/Return" and "Tab" key
-  - version: 1.0.0-beta.3
-    changes: Moved placeholder text into label and added error message examples.
-  - version: 1.0.0-beta.2
-    changes: Fixed typo and added redlines
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: Initial version
 ---
