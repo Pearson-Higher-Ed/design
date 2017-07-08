@@ -2,6 +2,15 @@
   <a href="{{site.baseurl}}/">
     <header>
       UX Framework
+
+      <button data-sidebar-closer="true">
+        <svg style="vertical-align:baseline"
+          aria-hidden="true"
+          focusable="false"
+          class="pe-icon--remove-lg-18">
+            <use xlink:href="#remove-lg-18"></use>
+        </svg>
+      </button>
     </header>
   </a>
 
@@ -49,9 +58,9 @@
     {% endcase %}
   {% endfor %}
 
-  {% assign learn_pages = learn_pages | sort: 'title' %}
-  {% assign use_pages = use_pages | sort: 'title' %}
-  {% assign contribute_pages = contribute_pages | sort: 'title' %}
+  {% assign learn_pages = learn_pages | sort: 'order' %}
+  {% assign use_pages = use_pages | sort: 'order' %}
+  {% assign contribute_pages = contribute_pages | sort: 'order' %}
   {% assign element_pages = element_pages | sort: 'title' %}
   {% assign stand_alone_pages = stand_alone_pages | sort: 'title' %}
 
@@ -129,24 +138,32 @@
         class="pe-icon--email-18">
           <use xlink:href="#email-18"></use>
       </svg>
-      Questions or Comments?</a>
+      <span class="text"> Questions or Comments?</span></a>
   {% endunless %}
 </div>
 
+<div class="overlay" data-sidebar-closer="true"></div>
+
 <script type="text/javascript">
-  var sidebar = document.querySelector('.sidebar');
+  var sidebar = document.querySelector('.sidebar')
+    , overlay = document.querySelector('.overlay');
   var closeSidebar = function() {
     sidebar.classList.remove('open');
+    overlay.classList.remove('open');
   };
   var openSidebar = function() {
     sidebar.classList.add('open');
+    overlay.classList.add('open');
   }
 
-  document.addEventListener('click', function(event) {
-    if (event.target.closest('.burger')) {
-      openSidebar();
-    } else if (!event.target.closest('.sidebar')) {
-      closeSidebar();
-    }
+  document.querySelector('.burger').addEventListener('click', function(event) {
+    openSidebar()
+  })
+
+  document.querySelectorAll('[data-sidebar-closer]').forEach(function(closer) {
+    closer.addEventListener('click', function(event) {
+      event.preventDefault()
+      closeSidebar()
+    })
   });
 </script>

@@ -15,11 +15,23 @@
     }
 
     .wrapper {
+      margin: 136px 10px 100px;
       max-width: 1170px;
-      margin-top: 136px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 100px;
+
+      @include pe-responsive-breakpoint(md) {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      @include pe-responsive-breakpoint(lg) {
+        margin-left: 40px;
+        margin-right: 40px;
+      }
+
+      @include pe-responsive-breakpoint(xl) {
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
 
     h1 {

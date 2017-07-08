@@ -6,6 +6,8 @@ sdk: stand_alone
 redirect_from: /docs/ui-components/calendar/
 status: active
 version: 1.0.0
+implemented: true
+implementation: https://github.com/Pearson-Higher-Ed/pagination/
 people:
   - role: Product Owner
     name: Joe Macaluso

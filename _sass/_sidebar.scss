@@ -32,9 +32,22 @@
   header {
     @extend .pe-title--small;
     color: $pe-color-digital-pearson-blue;
-    padding: 16px 36px;
+    padding: 16px 26px 16px 36px;
     border-bottom: 1px solid $pe-color-concrete;
     margin: 0;
+
+    button {
+      float: right;
+      @include reset-button;
+      padding: 0;
+      color: inherit;
+      position: relative;
+      top: 3px;
+
+      @media (min-width: 1460px) {
+        display: none;
+      }
+    }
   }
 
   .sidebar-toc {
@@ -85,6 +98,10 @@
   transition: left 0.3s;
   z-index: 26;
 
+  .burger {
+    margin-right: 12px;
+  }
+
   @media (min-width: 1460px) {
     left: 240px;
 
@@ -110,6 +127,31 @@
       position: relative;
       top: 2px;
       margin-right: 4px;
+    }
+
+    .text {
+      display: none;
+
+      @include pe-responsive-breakpoint(md) {
+        display: inline;
+      }
+    }
+  }
+}
+
+.overlay {
+  display: none;
+
+  &.open {
+    @media (max-width: 1459px) {
+      display: block;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 28;
     }
   }
 }

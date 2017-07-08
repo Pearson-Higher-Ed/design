@@ -4,8 +4,9 @@ title: Loading Indicator
 section: Components
 redirect_from: /docs/ui-components/loading-indicator/
 version: 1.0.0
-status: active
-implemented: false
+status: deprecated
+implemented: true
+implementation: https://github.com/Pearson-Higher-Ed/loadingindicator/
 people:
   - role: Product Owner
     name: Joe Macaluso

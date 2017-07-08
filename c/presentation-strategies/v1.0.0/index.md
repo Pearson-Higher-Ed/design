@@ -4,7 +4,7 @@ title: Presentation Strategies
 section: Components
 version: 1.0.0
 status: active
-implemented: true
+implemented: false
 people:
   - role: Product Owner
     name: Joe Macaluso

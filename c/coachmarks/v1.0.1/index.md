@@ -6,6 +6,7 @@ sdk: stand_alone
 version: 1.0.1
 status: active
 implemented: true
+implementation: https://github.com/Pearson-Higher-Ed/coach-mark/
 people:
   - role: Interaction Design
     name: Albert Christy
@@ -47,9 +48,11 @@ blocks:
       - type: narrow image
         src: ./assets/single.instance.link.png
         caption: The basic coach mark with a link to dismiss.
+        border: true
       - type: narrow image
         src: ./assets/single.instance.icon.png
         caption: Coach mark with the close icon.
+        border: true
 
   - type: section
     name: Usage

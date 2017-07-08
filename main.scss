@@ -14,9 +14,10 @@ $pe-fonts-path: "./fonts/";
 @import "block";
 @import "spec";
 @import "side_toc";
-@import "sidebar";
 @import "banner";
 @import "contact";
+@import "status";
+@import "sidebar";
 
 html {
   font-size: 0.875rem;

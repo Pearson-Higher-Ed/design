@@ -5,9 +5,9 @@ section: Components
 sdk: stand_alone
 redirect_from: /docs/ui-components/application-header/
 version: 2.2.0-beta.1
-status: active
+status: deprecated
 rebranded: true
-implemented: true
+implemented: false
 people:
   - role: Product Owner
     name: Joe Macaluso

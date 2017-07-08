@@ -4,7 +4,7 @@ title: Loading Indicator
 section: Components
 redirect_from: /docs/ui-components/loading-indicator/
 version: 1.1.0-beta.1
-status: active
+status: deprecated
 implemented: false
 people:
   - role: Product Owner

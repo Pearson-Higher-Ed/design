@@ -4,7 +4,6 @@ title: Email Templates
 section: Components
 version: 1.0.0-beta.1
 status: deprecated
-implemented: true
 people:
   - role: Designer
     name: Linda Tsai

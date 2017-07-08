@@ -7,6 +7,7 @@ version: 1.0.0
 rebranded: true
 status: active
 implemented: true
+implementation: https://bitbucket.pearson.com/projects/PDA/repos/notification-component/browse
 people:
   - role: Product Owner
     name: Joe Macaluso

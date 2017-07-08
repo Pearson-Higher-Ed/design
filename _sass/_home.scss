@@ -32,32 +32,66 @@ body.home {
   }
 
 
-
-  .chunk {
-    border-bottom: 2px solid $pe-color-sunflower-yellow;
-    padding: 80px 10px;
-
-    text-align: center;
-
-    .content {
-      margin: 0 auto;
-      @include pe-responsive-breakpoint(md) {
-        max-width: 500px;
-      }
-    }
+  .main-heroes {
+    margin-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+    border-bottom: 2px solid $pe-color-digital-marine-turquoise;
 
     h2 {
       @extend .pe-page-title;
       margin-bottom: 28px;
     }
 
-    button {
-      margin-top: 24px;
+    & > div {
+      text-align: center;
+      padding: 40px;
+      @include pe-responsive-breakpoint(sm) {
+        padding: 40px 80px;
+      }
+      @include pe-responsive-breakpoint(md) {
+        text-align: left;
+        width: 50%;
+        box-sizing: border-box;
+        padding: 80px 60px;
+        float: left;
+      }
+      @include pe-responsive-breakpoint(lg) {
+        padding: 80px 100px;
+      }
     }
 
-    .links {
-      margin-top: 16px;
+    .design-hero {
+      @include pe-responsive-breakpoint(md) {
+        border-right: 1px solid $pe-color-concrete;
+
+        a {
+          margin-top: 16px;
+        }
+      }
     }
+
+    .dev-hero {
+      @include pe-responsive-breakpoint(md) {
+        position: absolute;
+        top: 0;
+        bottom: 40px;
+        right: 0;
+
+        padding: 0 60px;
+        margin: 80px 0;
+
+        a {
+          position: absolute;
+          bottom: 0;
+        }
+      }
+      @include pe-responsive-breakpoint(lg) {
+        padding: 0 100px;
+      }
+    }
+
+    @include clearfix;
   }
 
 
