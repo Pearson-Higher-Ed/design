@@ -4,7 +4,7 @@ title: OS/Browser Check
 section: Components
 sdk: stand_alone
 redirect_from: /docs/ui-components/os-browser-check/
-version: 0.0.0
+version: 1.0.0-beta.1
 status: active
 implemented: true
 people:
@@ -32,6 +32,6 @@ usage_guidelines: |
   Only core components such as Buttons or Typography should depend directly on the colors component. Higher level components should get their colors indirectly from the core set of components. This makes it easy to update the color usage across the library.
 
 changelog:
-  - version: 0.0.0
-    changes: Initial version
+  - version: 1.0.0-beta.1
+    changes: Initial draft
 ---
