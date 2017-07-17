@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Tables
 section: Components
-status: active
+status: deprecated
 version: 1.0.0-beta.4
 people:
   - role: Product Owner
