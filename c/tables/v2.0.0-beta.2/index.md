@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Tables
 section: Components
-status: deprecated
-version: 2.0.0-beta.1
+status: active
+version: 2.0.0-beta.2
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -13,29 +13,28 @@ people:
     email: van.yang@pearson.com
 
 tagline: |
-  Provides standard designs and layouts for static (i.e. CSS-only) tables.
+  Provides standard designs and layouts for tables.
 features:
-  - Standard and small sizes
   - Hoverable rows
-  - Integration with inputs and buttons
-  - Secondary data line within each cell
-  - Three responsive strategies
-  - Sortable columns <span class="js-tag">JS</span>
-  - Selectable rows and a toolbar <span class="js-tag">JS</span>
+  - Responsive guidance
+  - Sortable columns
+  - Selectable rows
 usage_guidelines: |
-  Every instance of a static table should use this component. For more complex tables with sorting, filtering, etc. see the Interactive Table component.
+  Every instance of a basic table should use this component. Pair it with the toolbar component for more advanced use cases.
 
 dependencies:
   - name: Colors
     version: 2.0.0
   - name: Typography
     version: 2.0.0
+  - name: icons
+    version: 2.1.0
 
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1Gf0yr4nsNXLBJIFEHFDVYeI6495Nrwa1caKgvaM-7Bs/edit?usp=sharing
   - name: .sketch mockup
-    link: ./assets/tables.mockup.sketch
+    link: ./assets/tables.sketch
 
 blocks:
   - type: section
@@ -67,13 +66,19 @@ blocks:
       Clicking on a column heading sorts the table by the values in that column. Selecting the same column heading twice alternates between ascending and descending order.
 
       If a table has a default sort order it should display the relevant icon at initial presentation.
-
-      Sort icon positioning correlates with the alignment of the column it belongs to. A left-aligned column gets the icon on the right of the label, etc.
     contents:
       - type: wide image
         src: ./assets/sortable.table.hover.png
         caption: Example of a sortable table showing the header hover state.
 
+  - type: two column
+    text: |
+      ### Hoverable Rows
+      If you have a long table a row hover effect can be enabled which makes it easier to scan and parse.
+    contents:
+      - type: wide image
+        src: ./assets/hoverable.table.png
+        caption: Hovering a row can change its background color.
 
   - type: two column
     text: |
@@ -85,8 +90,35 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/Select Table Hover.png
-      - type: wide image
-        src: ./assets/Caption Controls.png
+        caption: Example of a selectable table. Hover effects are enabled by default. (Hovering selected rows adds the border effect.)
+
+  - type: section
+    name: Responsive strategies
+
+  - type: two column
+    text: |
+      There are several strategies for ensuring a table works at each breakpoint.
+
+  - type: two column
+    text: |
+      ### Removing columns
+      If you determine that certain fields in your table are optional in nature, you can simply remove them to reduce the overall table width until it fits in mobile viewports.
+    contents:
+      - type: narrow image
+        src: ./assets/responsive.remove.png
+
+  - type: two column  
+    text: |
+      ### Combining fields
+      Depending on the type of information presented, a simple way to fit tables into a smaller viewport is combining multiple columns into one. For example, dedicated First and Last name columns can be joined under 'Name'.
+    contents:
+      - type: narrow image
+        src: ./assets/responsive.combine.png
+
+  - type: two column
+    text: |
+      ### Switching designs
+      For larger, more complex tables with a lot of non-optional data it may be necessary to change from using a table to some other display strategy in the mobile view. For example, you may adopt a list view where each item  can be opened up to view its complete dataset.
 
   - type: section
     name: Redlines
@@ -98,7 +130,7 @@ blocks:
       Header
       : - 20px horizontal padding
         - 16px vertical padding
-        - [Basic UI Text](/design/c/typography/v2.0.0/#rd-ui-text-basic)
+        - [Bold UI Text](/design/c/typography/v2.0.0/#rd-ui-text-bold)
         - 1px solid [Alto](/design/c/colors/v2.1.0/#rd-alto) border above and below header row
         - Vertically aligned to the center (if a header wraps to two columns)
         - Headers are a non-optional feature of all table types (for accessibility compliance)
@@ -127,15 +159,11 @@ blocks:
         - Any sorted row should use the sort-down-18 and sort-up-18 icons, depending on the current sort order
 
       Positioning
-      : - Icons are 8px away from the text
-        - Place them on the right for Left aligned and Centered columns, on the left for Right aligned columns
+      : - Icons are 8px away from the text, always on the right
+        - For right aligned columns, align to the icon
 
       Hover
       : - Hovering a sortable column give the header a moonlight background
-        - It also swaps out the icon for whatever the state would be should the user click on the header
-
-      Sorted row
-      : - A sorted row will use the [Bold UI Text](/design/c/typography/v2.0.0/#rd-ui-text-bold) style
     contents:
       - type: wide image
         src: ./assets/redlines.sortable.png
@@ -146,6 +174,14 @@ blocks:
       Background
       : - Row background is [Moonlight](/design/c/colors/v2.1.0/#rd-moonlight)
 
+      Cursor
+      : - Pointer style (Hand with finger)
+    contents:
+      - type: wide image
+        src: ./assets/redlines.hoverable.png
+
+  - type: two column
+    text: |
       ### Selectable Row
       Colors
       : - Row background is [Digital Ice Blue](/design/c/colors/v2.1.0/#rd-digital-ice-blue)
@@ -173,6 +209,13 @@ blocks:
 
 
 changelog:
+  - version: 2.0.0-beta.2
+    changes: |
+      - CHANGED: Headers are always bold
+      - CHANGED: Hovering a header doesn't change the icons
+      - CHANGED: Icon alignment methods
+      - CHANGED: Selected row background color to digital ice blue
+      - FIXED: Checkmark focus effects
   - version: 2.0.0-beta.1
     changes: |
       - UPDATED: Style to reflect redesign
