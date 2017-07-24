@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Alerts
 section: Components
-version: 2.0.1
-status: deprecated
+version: 2.0.2
+status: active
 implemented: true
 people:
   - role: Product Owner
@@ -198,6 +198,9 @@ blocks:
 
 
 changelog:
+  - version: 2.0.2
+    changes: |
+      - TWEAKED: Copy in the dynamic alert animation
   - version: 2.0.1
     changes: |
       - FIXED: Inconsistencies in the redlines
