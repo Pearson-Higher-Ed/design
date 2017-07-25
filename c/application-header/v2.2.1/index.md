@@ -4,8 +4,8 @@ title: Application Header
 section: Components
 sdk: stand_alone
 redirect_from: /docs/ui-components/application-header/
-version: 2.2.0
-status: deprecated
+version: 2.2.1
+status: active
 rebranded: true
 implemented: true
 people:
@@ -134,6 +134,7 @@ blocks:
         - 15px from either end
         - 26px between link/icons
         - Icons get a 44px square tap zone
+        - Icons next to each other are positioned such that their tap zones are immediately adjacent
 
       Background
       : - [White (#ffffff)](/design/c/colors/v2.1.0/#rd-white)
@@ -173,10 +174,11 @@ blocks:
 
   - type: two column
     text: |
-      #### ≥ 1024px ([L and XL viewports](/design/c/breakpoints/v1.0.0/#rd-large))
+      #### ≥ 768px ([M, L, and XL viewports](/design/c/breakpoints/v1.0.0/#rd-large))
 
       Spacing and dimensions
       : - Follow Signed Out Mode specs
+        - Icons are positioned such that their tap zones are immediately adjacent
 
       Logo Link
       : - www.console.pearson.com
@@ -219,6 +221,12 @@ blocks:
 
 
 changelog:
+  - version: 2.2.1
+    changes: |
+      - FIXED: Clarified redlines
+      - FIXED: Breakpoints in the redlines
+      - ADDED: Symbols
+
   - version: 2.2.0
     changes: |
       - CHANGED: Background color to white
