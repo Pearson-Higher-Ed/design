@@ -3,7 +3,7 @@ layout: component-yaml
 title: Tables
 section: Components
 status: deprecated
-version: 2.0.0-beta.2
+version: 2.0.0-beta.3
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -163,7 +163,7 @@ blocks:
         - For right aligned columns, align to the icon
 
       Hover
-      : - Hovering a sortable column give the header a moonlight background
+      : - Hovering a sortable column gives the header a [moonlight](/design/c/colors/v2.1.0/#rd-moonlight) background
     contents:
       - type: wide image
         src: ./assets/redlines.sortable.png
@@ -197,7 +197,7 @@ blocks:
 
       Multi-select
       : - Once a single row is selected, the user may hold down shift, click or tap another row, and select every row in between the two
-        - A user may also hold down CMD or CTRL and manually select or unselect rows
+        - A user may also hold down CMD or CTRL and manually select or unselect individual rows
 
       Caption/Controls
       : - Any controls or captions which apply to the selected rows should be positioned 28px above or below the main table
@@ -209,6 +209,9 @@ blocks:
 
 
 changelog:
+  - version: 2.0.0-beta.3
+    changes: |
+      - FIXED: Typos
   - version: 2.0.0-beta.2
     changes: |
       - CHANGED: Headers are always bold
