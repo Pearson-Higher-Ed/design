@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Tables
 section: Components
-status: deprecated
-version: 2.0.0-beta.3
+status: active
+version: 2.0.0-beta.4
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -27,12 +27,14 @@ dependencies:
     version: 2.0.0
   - name: Typography
     version: 2.0.0
-  - name: icons
+  - name: Icons
     version: 2.1.0
+  - name: Inputs
+    version: 2.0.1
 
 downloads:
   - name: UXD Accessibility Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/1Gf0yr4nsNXLBJIFEHFDVYeI6495Nrwa1caKgvaM-7Bs/edit?usp=sharing
+    link: https://docs.google.com/a/pearson.com/document/d/1DhYpRmMpwgWh5ha75c-MOG3Z9dFHUMsVVxHSm3b0mQs/edit?usp=sharing
   - name: .sketch mockup
     link: ./assets/tables.sketch
 
@@ -85,7 +87,9 @@ blocks:
       ### Selectable Rows
       In cases where users may need to select and act on one or more rows you may add a checkbox column and include a toolbar at the top of the table.
 
-      Clicking or tapping any non-interactive part of a row will select that row. Holding down shift and selecting a second row will select all the intervening rows as well.
+      Clicking or tapping any non-interactive part of a row is a secondary method for selecting that row (this will also check the relevant checkmark, which is the primary method).
+
+      Holding down shift and selecting a second row will select all the intervening rows as well.
 
     contents:
       - type: wide image
@@ -195,20 +199,30 @@ blocks:
       : - Checkmark has 20px padding on the left, and uses the standard 20px padding of the cell contents on the right
         - Uses the standard checkmark input
 
-      Multi-select
-      : - Once a single row is selected, the user may hold down shift, click or tap another row, and select every row in between the two
-        - A user may also hold down CMD or CTRL and manually select or unselect individual rows
-
       Caption/Controls
       : - Any controls or captions which apply to the selected rows should be positioned 28px above or below the main table
+        - For example, this could be a toolbar or pagination control
+
+      Interaction
+      : - Any selected row will have an activated checkmark and the selected visual styles
+        - Checking the checkbox is the primary selection method
+        - Clicking or tapping on any non-interactive part of the row will also put it in a selected state (including checking the checkmark)
+        - If a single row is currently selected the user may hold down shift and select another row, causing all intervening rows to also be selected
     contents:
       - type: wide image
         src: ./assets/redlines.hoverable.selectable.png
+      - type: wide image
+        src: ./assets/redlines.captions.controls.png
 
 
 
 
 changelog:
+  - version: 2.0.0-beta.4
+    changes: |
+      - ADDED: Updated a11y checklist
+      - UPDATED: Dependency list to include inputs (for checkmark)
+      - UPDATED: Clarified that a checkbox is always required for selectable rows
   - version: 2.0.0-beta.3
     changes: |
       - FIXED: Typos
