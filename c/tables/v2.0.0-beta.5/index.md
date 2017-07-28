@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Tables
 section: Components
-status: deprecated
-version: 2.0.0-beta.4
+status: active
+version: 2.0.0-beta.5
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -218,6 +218,9 @@ blocks:
 
 
 changelog:
+  - version: 2.0.0-beta.5
+    changes: |
+      - FIXED: Error in redlines
   - version: 2.0.0-beta.4
     changes: |
       - ADDED: Updated a11y checklist
