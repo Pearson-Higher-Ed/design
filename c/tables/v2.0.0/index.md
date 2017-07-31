@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Tables
 section: Components
-status: deprecated
-version: 2.0.0-beta.5
+status: active
+version: 2.0.0
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -218,34 +218,14 @@ blocks:
 
 
 changelog:
-  - version: 2.0.0-beta.5
+  - version: 2.0.0
     changes: |
-      - FIXED: Error in redlines
-  - version: 2.0.0-beta.4
-    changes: |
-      - ADDED: Updated a11y checklist
-      - UPDATED: Dependency list to include inputs (for checkmark)
-      - UPDATED: Clarified that a checkbox is always required for selectable rows
-  - version: 2.0.0-beta.3
-    changes: |
-      - FIXED: Typos
-  - version: 2.0.0-beta.2
-    changes: |
-      - CHANGED: Headers are always bold
-      - CHANGED: Hovering a header doesn't change the icons
-      - CHANGED: Icon alignment methods
-      - CHANGED: Selected row background color to digital ice blue
-      - FIXED: Checkmark focus effects
-  - version: 2.0.0-beta.1
-    changes: |
-      - UPDATED: Style to reflect redesign
-      - REMOVED: Secondary data line within row
-      - REMOVED: Small table size
-      - REMOVED: Integration with buttons
-  - version: 1.1.0-beta.1
-    changes: |
-      - ADDED: Sortable column feature
-      - ADDED: Selectable rows and table toolbar features
+      - CHANGED: Visual style to reflect rebranded aesthetic
+      - ADDED: Sortable columns feature
+      - ADDED: Selectable row feature
+      - REMOVED: Secondary row feature
+      - REMOVED: Inline button/input feature
+      - REMOVED: Small table feature
   - version: 1.0.0
     changes: Initial Version
 ---
