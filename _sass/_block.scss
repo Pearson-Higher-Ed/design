@@ -1,34 +1,25 @@
-body {
-  background-color: pe-color(off-white);
-}
+.blocks {
+  padding: 0 10px;
+  margin: 0 auto;
+  max-width: 480px;
 
-.block {
-  @include pe-responsive-breakpoint(xs) {
-    width: 90%;
-    max-width: 370px;
-  }
   @include pe-responsive-breakpoint(md) {
     width: 760px;
     max-width: none;
+    padding: 0;
   }
-  @include pe-responsive-breakpoint(lg) { width: 1000px; }
-  @include pe-responsive-breakpoint(xl) { width: 1160px; }
-  margin: 0 auto;
 
-  @include clearfix;
+  @include pe-responsive-breakpoint(xl) { width: 1150px; }
+}
 
-  + .block {
-    margin-top: 60px;
-  }
+.block {
+  overflow: hidden;
 
   &:last-child {
     margin-bottom: 60px;
   }
 
-  a {
-    @include pe-link;
-  }
-
+  @import "blocks/article_header";
   @import "blocks/overview";
   @import "blocks/section";
   @import "blocks/two_column";

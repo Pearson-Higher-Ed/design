@@ -3,10 +3,14 @@ layout: article
 title: Developer Guide
 section: use
 order: 2
+in_footer: true
 ---
 
 Components are being hosted on NPM under the [@pearson-components organization][npm-org]. The majority will be available
 in public scope, but some will be privately scoped and require credentials to install.
+
+* TOC
+{:toc}
 
 ## SDKs
 

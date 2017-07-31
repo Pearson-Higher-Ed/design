@@ -3,7 +3,7 @@ layout: component-yaml
 title: Date Picker
 section: Components
 redirect_from: /docs/ui-components/date-picker/
-status: active
+status: deprecated
 version: 1.0.0-beta.1
 people:
   - role: Product Owner

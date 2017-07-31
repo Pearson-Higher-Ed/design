@@ -15,7 +15,7 @@ people:
     email: parker.malenke@pearson.com
   - role: Designer
     name: Ed Zee
-implementation: https://pearson-elements-v0.surge.sh/elements/typography/
+implementation: https://github.com/Pearson-Higher-Ed/elements/
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1gYypf7WpDkSSMsB29Qa9woJLdPsiwGIZ-u0LrH650Vs/edit?usp=sharing
@@ -274,6 +274,8 @@ blocks:
 
       #### Weights
       Text uses a normal weight unless otherwise specified.
+
+      Note that bold styles are actually displayed using the semibold variant of Open Sans. Visual design has chosen the semibold variant as more appropriate for our current aesthetic, but it should still be used in the same semantic way as a bold font. Calling these styles "Bold" (not "Semibold") future proofs the typography component, making it easy to switch to another font that might not have a semibold variant.
 
     contents:
       - type: narrow image

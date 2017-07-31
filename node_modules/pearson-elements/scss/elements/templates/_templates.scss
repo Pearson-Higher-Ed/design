@@ -1,6 +1,5 @@
 @import './variables';
 @import './mixins';
-@import '../grid/grid';
 
 // Templates
 @include generate-templates();

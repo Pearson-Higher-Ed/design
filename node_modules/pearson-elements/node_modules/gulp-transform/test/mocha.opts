@@ -1,3 +1,0 @@
---recursive
---reporter dot
---compilers js:babel-register,coffee:coffee-script/register

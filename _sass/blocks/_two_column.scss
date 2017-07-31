@@ -1,66 +1,125 @@
-// left column
-.text {
-  // TODO switch to using mixins or something for typography
-  @include pe-responsive-breakpoint(xs) {
-    width: 100%;
-    margin-bottom: 20px;
-    @include pe-copy-small;
-  }
-  @include pe-responsive-breakpoint(md) {
-    width: 440px;
-    margin-left: 60px;
-  }
-  @include pe-responsive-breakpoint(lg) {
-    width: 210px;
-    float: left;
-    margin-bottom: 0;
-    margin-left: 0;
-    @include pe-label-small;
-  }
+
+.two_column {
   @include pe-responsive-breakpoint(xl) {
-    width: 320px;
-    @include pe-copy-small;
+    @include make-grid-parent;
+  }
+}
+
+.text {
+  margin-top: 40px;
+  margin-bottom: 60px;
+
+  h3 {
+    @extend .pe-title, .pe-title--small;
+    margin-bottom: 12px;
+  }
+  * + h3 { margin-top: 40px; }
+  h1 + h3,
+  h2 + h3 { margin-top: 6px; }
+
+  h4 {
+    @extend .pe-label, .pe-label--large;
+  }
+  h5 {
+    @extend .pe-label, .pe-label--bold;
   }
 
+  ul {
+    @extend .pe-list, .pe-styled-lists--unordered;
 
-  & > p:first-child {
-    margin-top: 0;
-  }
+    ul {
+      @extend .pe-list, .pe-styled-lists--unordered;
+    }
 
-  p + p,
-  p + ul,
-  p + ol {
-    margin-top: 12px;
-  }
-
-  h3 { @include hl3; }
-  h4 { @include hl4; }
-  h5 { @include hl5; }
-  h6 { @include hl6; }
-
-  & > ul {
-    @include pe-ulist;
+    ol {
+      @extend .pe-list, .pe-styled-lists--ordered;
+    }
 
     & + p {
       margin-top: 12px;
     }
   }
 
+  ol {
+    @extend .pe-list, .pe-styled-lists--ordered;
+
+    ol {
+      @extend .pe-list, .pe-styled-lists--ordered;
+    }
+
+    ul {
+      @extend .pe-list, .pe-styled-lists--unordered;
+    }
+
+    & + p {
+      margin-top: 12px;
+    }
+  }
+
+  // Redline styles
   dl {
-    @include redline-list;
+    @include clearfix;
+    @include pe-responsive-breakpoint(md to lg) {
+      display: inline-block;
+    }
+
+    dt {
+      float: left;
+      clear: both;
+      width: 40%;
+      @include pe-responsive-breakpoint(md to lg) {
+        width: 240px;
+      }
+    }
+
+    dd {
+      width: 60%;
+      float: left;
+      @include pe-responsive-breakpoint(md to lg) {
+        width: auto;
+        overflow: hidden;
+        min-width: 200px;
+        float: none;
+      }
+
+      ul {
+        margin: 0;
+        li + li {
+          margin-top: 8px;
+        }
+      }
+    }
+
+    dt, dd {
+      padding: 10px 0;
+      margin: 0;
+      @extend .pe-label, .pe-label--small;
+      border-top: 1px solid $pe-color-alto;
+    }
+
+    dt:first-of-type,
+    dd:first-of-type {
+      padding-top: 0;
+      border-top: none;
+    }
+  }
+
+  @include pe-responsive-breakpoint(xl) {
+    @include make-grid-child(4);
+    float: left;
   }
 }
 
 .content {
-  @include pe-responsive-breakpoint(sm) { width: 100%; }
-  @include pe-responsive-breakpoint(md) { width: 760px; }
-  @include pe-responsive-breakpoint(lg) {
-    margin-left: 30px;
-    float: left;
-  }
-  @include pe-responsive-breakpoint(xl) { margin-left: 70px; }
+  margin-bottom: 60px;
+  @include clearfix;
 
-  > div {
+  & > div {
+    margin-top: 40px;
+  }
+
+  @include pe-responsive-breakpoint(xl) {
+    @include make-grid-child(8);
     float: left;
   }
 
@@ -69,126 +128,159 @@
     display: block;
   }
 
-  .caption {
-    @include pe-responsive-breakpoint(lg) { margin-left: 0; }
-    @include pe-label-small;
-    margin-top: 6px;
+  img {
+    width: 100%;
+    display: block;
+    background-color: $pe-color-white;
   }
 
-  .image {
-    img {
-      width: 100%;
-      display: block;
-      background-color: pe-color(white);
+  .caption, .caption p {
+    @extend .pe-label, .pe-label--small;
+    margin-top: 12px;
+  }
+
+  @include pe-responsive-breakpoint(md) {
+    .image.narrow {
+      max-width: 370px;
+    }
+
+    .image.ios {
+      max-width: 375px;
+    }
+
+    .image.android {
+      max-width: 360px;
+    }
+
+    .narrow {
+      float: left;
     }
   }
 
-  .image.narrow {
-    max-width: 370px;
-  }
-
-  .image.ios {
-    max-width: 375px;
-  }
-
-  .image.android {
-    max-width: 360px;
-  }
-
-  .image.wide:nth-child(n+2),
-  .image.wide + .image.narrow,
-  .image.wide + .image.ios,
-  .image.wide + .image.android {
-    margin-top: 30px;
-  }
-
-  .image.narrow + .image.narrow {
-    margin-top: 30px;
-    @include pe-responsive-breakpoint(md) {
-      margin-left: 20px;
+  @include pe-responsive-breakpoint(md to lg) {
+    // if it is a lone image, center it and it's caption
+    .image:first-child:nth-last-child(1) {
+      margin: 0 auto;
+      float: none;
     }
   }
 
-  .image.ios + .image.ios {
-    margin-top: 30px;
-    @include pe-responsive-breakpoint(md) {
-      margin-left: 10px;
+  .media.border {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      box-shadow: 0 0 0 1px $pe-color-alto inset;
     }
   }
 
-  .image.android + .image.android {
-    margin-top: 30px;
-    @include pe-responsive-breakpoint(md) {
-      margin-left: 40px;
-    }
-  }
-
-  .image.narrow:first-child + .image.narrow,
-  .image.ios:first-child + .image.ios,
-  .image.android:first-child + .image.android {
-    @include pe-responsive-breakpoint(md) {
-      margin-top: 0;
-    }
-  }
-
-  .image.narrow + .image.narrow + .image.narrow,
-  .image.ios + .image.ios + .image.ios,
-  .image.android + .image.android + .image.android {
-    margin-left: 0;
-    margin-top: 30px;
-    clear:both;
-  }
-
-  .image.narrow + .image.narrow + .image.narrow + .image.narrow {
-    @include pe-responsive-breakpoint(md) {
-      margin-left: 20px;
-    }
-    clear: none;
-  }
-
-  .image.ios + .image.ios + .image.ios + .image.ios {
-    @include pe-responsive-breakpoint(md) {
-      margin-left: 10px;
-    }
-    clear: none;
-  }
-
-  .image.android + .image.android + .image.android + .image.android {
-    @include pe-responsive-breakpoint(md) {
-      margin-left: 40px;
-    }
-    clear: none;
-  }
-
-  .image.narrow + .image.narrow + .image.narrow + .image.narrow + .image.narrow,
-  .image.ios + .image.ios + .image.ios + .image.ios + .image.ios,
-  .image.android + .image.android + .image.android + .image.android + .image.android {
-    margin-left: 0;
-  }
-
-  .image.narrow + .image.narrow + .image.narrow + .image.narrow + .image.narrow + .image.narrow {
-    @include pe-responsive-breakpoint(md) {
-      margin-left: 20px;
-    }
-  }
-
-  .image.ios + .image.ios + .image.ios + .image.ios + .image.ios + .image.ios {
-    @include pe-responsive-breakpoint(md) {
-      margin-left: 10px;
-    }
-  }
-
-  .image.android + .image.android + .image.android + .image.android + .image.android + .image.android {
-    @include pe-responsive-breakpoint(md) {
-      margin-left: 40px;
-    }
-  }
-
-
+  // For code content
   pre {
-    margin: 0;
-    @include pe-code;
+    @extend .pe-code;
   }
+
+  .text-content {
+    width: 100%;
+    h3 {
+      @extend .pe-title;
+    }
+    h4 {
+      @extend .pe-title, .pe-title--small;
+    }
+    h5 {
+      @extend .pe-label, .pe-label--large;
+    }
+
+    ul {
+      @extend .pe-list, .pe-styled-lists--unordered;
+
+      ul {
+        @extend .pe-list, .pe-styled-lists--unordered;
+      }
+
+      ol {
+        @extend .pe-list, .pe-styled-lists--ordered;
+      }
+
+      & + p {
+        margin-top: 12px;
+      }
+    }
+
+    ol {
+      @extend .pe-list, .pe-styled-lists--ordered;
+
+      ol {
+        @extend .pe-list, .pe-styled-lists--ordered;
+      }
+
+      ul {
+        @extend .pe-list, .pe-styled-lists--unordered;
+      }
+
+      & + p {
+        margin-top: 12px;
+      }
+    }
+  }
+
+
+
+
+
+  // Generate a bunch of CSS to keep narrow images properly aligned in the
+  // various arrangements they can occur in
+  $num-images: 10;
+  $narrow-selector: '.image.narrow';
+  $narrow-gutter: 20px;
+  $ios-selector: '.image.ios';
+  $ios-gutter: 10px;
+  $android-selector: '.image.android';
+  $android-gutter: 40px;
+
+  @include pe-responsive-breakpoint(md) {
+    @for $i from 1 to $num-images {
+      $narrow-build: $narrow-selector;
+      $ios-build: $ios-selector;
+      $android-build: $android-selector;
+      @for $j from 1 to $i {
+        $narrow-build: $narrow-build + ' + ' + $narrow-selector;
+        $ios-build: $ios-build + ' + ' + $ios-selector;
+        $android-build: $android-build + ' + ' + $android-selector;
+      }
+
+      @if $i % 2 == 0 {
+        #{$narrow-build} {
+          margin-left: $narrow-gutter;
+          clear: none;
+        }
+
+        #{$ios-build} {
+          margin-left: $ios-gutter;
+          clear: none;
+        }
+
+        #{$android-build} {
+          margin-left: $android-gutter;
+          clear: none;
+        }
+      } @else {
+        #{$narrow-build},
+        #{$ios-build},
+        #{$android-build} {
+          margin-left: 0;
+          clear: both;
+        }
+      }
+    }
+  }
+
+
 
   .table {
     width: 100%;
@@ -201,32 +293,17 @@
       }
 
       td {
-        @include pe-label;
-        border: 1px solid pe-color(brightly-lit);
-        padding: 10px;
+        @extend .pe-label;
+        border: 1px solid $pe-color-moonlight;
       }
 
-      th {
+      th, td {
         padding: 10px;
+        vertical-align: middle;
       }
 
       tbody tr:hover {
-        background-color: pe-color(brightly-lit);
-      }
-    }
-  }
-
-  .text-content {
-    width: 100%;
-    h3 { @include hl3; }
-    h4 { @include hl4; }
-    h5 { @include hl5; }
-
-    ul {
-      @include pe-ulist;
-
-      & + p {
-        margin-top: 12px;
+        background-color: $pe-color-moonlight;
       }
     }
   }
@@ -254,7 +331,7 @@
 
       .name {
         background-color: white;
-        @include pe-copy-small;
+        @extend .pe-copy--small;
         width: 210px;
         height: 70px;
         float: right;
@@ -291,7 +368,7 @@
         }
 
         & > div {
-          @include pe-copy-small;
+          @extend .pe-copy--small;
           p:first-of-type {
             margin-top: 0;
           }
@@ -326,7 +403,7 @@
           p {
             float: left;
             margin: 0;
-            @include pe-copy-small;
+            @extend .pe-copy--small;
           }
         }
       }

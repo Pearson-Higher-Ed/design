@@ -3,7 +3,7 @@ layout: component-yaml
 title: Alerts
 section: Components
 version: 2.0.0-beta.2
-status: active
+status: deprecated
 implemented: false
 people:
   - role: Product Owner
@@ -20,7 +20,7 @@ downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1Zx7iuaBbjVis_m6p5yXxBxXhJFCYSagSgb-v6D9HaX8/edit?usp=sharing
   - name: .sketch mockup
-    link: ./assets/alerts.sketch
+    link: ./assets/alert.sketch
 
 dependencies:
   - name: Colors

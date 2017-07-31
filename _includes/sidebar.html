@@ -1,0 +1,169 @@
+<div class="sidebar">
+  <a href="{{site.baseurl}}/">
+    <header>
+      UX Framework
+
+      <button data-sidebar-closer="true">
+        <svg style="vertical-align:baseline"
+          aria-hidden="true"
+          focusable="false"
+          class="pe-icon--remove-lg-18">
+            <use xlink:href="#remove-lg-18"></use>
+        </svg>
+      </button>
+    </header>
+  </a>
+
+  {% assign learn_pages = '' | split: '' %}
+  {% assign use_pages = '' | split: '' %}
+  {% assign contribute_pages = '' | split: '' %}
+  {% assign element_pages = '' | split: '' %}
+  {% assign compound_pages = '' | split: '' %}
+  {% assign stand_alone_pages = '' | split: '' %}
+
+  {% for page in site.pages %}
+    {% comment %}
+    Short circuit out pages we're not interested in.
+    {% endcomment %}
+
+    {% if page.status != nil %}
+      {% if page.status != 'active' %}
+        {% continue %}
+      {% endif %}
+    {% endif %}
+
+    {% if page.private == true %}
+      {% continue %}
+    {% endif %}
+
+    {% if page.url contains 'beta' %}
+      {% continue %}
+    {% endif %}
+
+    {% case page.section %}
+      {% when 'learn' %}
+        {% assign learn_pages = learn_pages | push: page %}
+      {% when 'use' %}
+        {% assign use_pages = use_pages | push: page %}
+      {% when 'contribute' %}
+        {% assign contribute_pages = contribute_pages | push: page %}
+      {% when 'Components' %}
+        {% case page.sdk %}
+          {% when 'stand_alone' %}
+            {% assign stand_alone_pages = stand_alone_pages | push: page %}
+          {% else %}
+            {% assign element_pages = element_pages | push: page %}
+        {% endcase %}
+      {% else %}
+    {% endcase %}
+  {% endfor %}
+
+  {% assign learn_pages = learn_pages | sort: 'order' %}
+  {% assign use_pages = use_pages | sort: 'order' %}
+  {% assign contribute_pages = contribute_pages | sort: 'order' %}
+  {% assign element_pages = element_pages | sort: 'title' %}
+  {% assign stand_alone_pages = stand_alone_pages | sort: 'title' %}
+
+  <div class="sidebar-toc">
+    <ul>
+      <li>
+        Learn
+        <ul>
+          {% for page in learn_pages %}
+            <li><a href="{{site.baseurl}}{{page.url}}">{% if page.shortname %}{{page.shortname}}{% else %}{{page.title}}{% endif %}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+      <li>
+        Use
+        <ul>
+          {% for page in use_pages %}
+            <li><a href="{{site.baseurl}}{{page.url}}">{% if page.shortname %}{{page.shortname}}{% else %}{{page.title}}{% endif %}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+      <li>
+        Contribute
+        <ul>
+          {% for page in contribute_pages %}
+            <li><a href="{{site.baseurl}}{{page.url}}">{% if page.shortname %}{{page.shortname}}{% else %}{{page.title}}{% endif %}</a></li>
+          {% endfor %}
+        </ul>
+      </li>
+      <li>
+        Elements
+        <ul>
+          {% for element in element_pages %}
+            <li {% if element.title == page.title %}class="selected"{% endif %}>
+              <a href="{{site.baseurl}}{{element.url}}..">
+                {% if element.shortname %}
+                  {{element.shortname}}
+                {% else %}
+                  {{element.title}}
+                {% endif %}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </li>
+      <li>
+        Stand alone components
+        <ul>
+          {% for entry in stand_alone_pages %}
+            <li {% if entry.title == page.title %}class="selected"{% endif %}>
+              <a href="{{site.baseurl}}{{entry.url}}..">
+                {% if entry.shortname %}
+                  {{entry.shortname}}
+                {% else %}
+                  {{entry.title}}
+                {% endif %}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="ultimate-header {% if include.invisible %}invisible{% endif %}">
+  <img class="burger" src="{{site.baseurl}}/assets/burger.svg"> {% unless include.invisible %}{{page.title}}{% endunless %}
+
+  {% unless include.invisible %}
+    <a href="{{site.baseurl}}/contact" class="contact">
+      <svg style="vertical-align:baseline"
+        aria-hidden="true"
+        focusable="false"
+        class="pe-icon--email-18">
+          <use xlink:href="#email-18"></use>
+      </svg>
+      <span class="text"> Questions or Comments?</span></a>
+  {% endunless %}
+</div>
+
+<div class="overlay" data-sidebar-closer="true"></div>
+
+<script type="text/javascript">
+  var sidebar = document.querySelector('.sidebar')
+    , overlay = document.querySelector('.overlay');
+  var closeSidebar = function() {
+    sidebar.classList.remove('open');
+    overlay.classList.remove('open');
+  };
+  var openSidebar = function() {
+    sidebar.classList.add('open');
+    overlay.classList.add('open');
+  }
+
+  document.querySelector('.burger').addEventListener('click', function(event) {
+    openSidebar()
+  })
+
+  document.querySelectorAll('[data-sidebar-closer]').forEach(function(closer) {
+    closer.addEventListener('click', function(event) {
+      event.preventDefault()
+      closeSidebar()
+    })
+  });
+</script>

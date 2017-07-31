@@ -2,6 +2,6 @@
   "name": "design",
   "private": true,
   "dependencies": {
-    "pearson-elements": "^0.7.0"
+    "pearson-elements": "^1.0.0"
   }
 }

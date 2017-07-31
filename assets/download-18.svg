@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="15px" viewBox="0 0 11 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
+    <title>download-18</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="download-18" transform="translate(-3.000000, -2.000000)" fill="#6A7070">
+            <path d="M13,15 L4,15 C3.448,15 3,15.447 3,16 C3,16.553 3.448,17 4,17 L13,17 C13.552,17 14,16.553 14,16 C14,15.447 13.552,15 13,15" id="icon"></path>
+            <path d="M8.85446312,13.854 C8.66046312,14.049 8.34146312,14.049 8.14646312,13.854 L3.14746312,8.852 C2.83246312,8.537 3.05546312,8 3.50146312,8 L6.00046312,8 L6.00046312,2.5 C6.00046312,2.224 6.22446312,2 6.50046312,2 L10.5004631,2 C10.7764631,2 11.0004631,2.224 11.0004631,2.5 L11.0004631,8 L13.5004631,8 C13.9454631,8 14.1684631,8.537 13.8544631,8.852 L8.85446312,13.854 Z" id="icon"></path>
+        </g>
+    </g>
+</svg>

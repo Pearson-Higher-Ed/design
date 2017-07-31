@@ -1,35 +1,169 @@
 .article {
-  margin: 60px auto;
-  width: 90%;
-  max-width: 370px;
-  @include pe-responsive-breakpoint(md) {
-    width: 50%;
-    max-width: none;
+
+  h1 {
+    margin-bottom: 28px;
   }
 
-  #markdown-toc {
-    @include toc;
-    border: 1px solid pe-color(royal-navy);
-    display: inline-block;
-    padding: 40px;
+  .parent {
+    @include make-grid-parent;
+    margin: 10px auto 0;
 
+    @include pe-responsive-breakpoint(md) {
+      width: 760px;
+    }
+
+    @include pe-responsive-breakpoint(lg) {
+      width: 960px;
+    }
+
+    @include pe-responsive-breakpoint(xl) {
+      width: 1150px;
+    }
+  }
+
+  section.toc {
+    display: none;
+
+    @include pe-responsive-breakpoint(xl) {
+      display: block;
+      position: fixed;
+      @include make-grid-child(3, 12, true);
+
+      top: 150px;
+      left: 50%;
+      margin-left: 1150px/2 * -1;
+    }
+
+    @media (min-width: 1460px) {
+      margin-left: 1150px/2 * -1 + 120;
+    }
+
+    @extend .pe-label, .pe-label--small;
+
+    a {
+      text-decoration: none;
+      color: $pe-color-medium-gray;
+
+      &:hover {
+        color: $pe-color-ink-blue;
+        text-decoration: underline;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 12px;
+      }
+
+      a.active {
+        @extend .pe-label--bold;
+        color: $pe-color-digital-pearson-blue;
+      }
+    }
+  }
+
+  article {
+    margin: 96px auto;
+
+    @include make-grid-child(12);
+
+    @include pe-responsive-breakpoint(sm) {
+      @include make-grid-child(10);
+    }
+
+    @include pe-responsive-breakpoint(xl) {
+      @include make-grid-child(6);
+    }
+
+    h1 + #markdown-toc + * {
+      margin-top: 0;
+    }
+
+    #markdown-toc {
+      @include pe-responsive-breakpoint(xl) {
+        display: none;
+      }
+
+      @extend .pe-title, .pe-label--bold;
+      color: $pe-color-digital-pearson-blue;
+
+      margin-top: 40px;
+      padding-bottom: 60px;
+      padding-left: 0;
+      border-bottom: 2px solid $pe-color-concrete;
+
+      a {
+        text-decoration: none;
+      }
+
+      &, & ul {
+        list-style-type: none;
+      }
+
+      li + li,
+      li > ul {
+        margin-top: 16px;
+      }
+
+      & > li > ul {
+        @extend .pe-label, .pe-label--large;
+        padding: 0;
+      }
+    }
   }
 
   p {
-    @include pe-copy;
-    @include pe-paragraph;
+    @extend .pe-copy;
+    @extend .pe-paragraph;
     margin: 0;
     & + p {
       margin-top: 12px;
     }
   }
-  h2 { @include hl1;  }
-  h3 { @include hl2; }
-  h4 { @include hl3; }
-  a { @include pe-link; }
+  h2 {
+    @extend .pe-title, .pe-label--bold;
+    margin-top: 100px;
 
-  ul { @include pe-ulist; }
-  ol { @include pe-olist; }
+    & + h3 {
+      margin-top: 12px;
+    }
+  }
+  h3 {
+    @extend .pe-title, .pe-title--small;
+    margin-top: 80px;
+
+    & + h4 {
+      margin-top: 12px;
+    }
+  }
+  h4 { @extend .pe-label, .pe-label--large; }
+
+  ul {
+    @extend .pe-list, .pe-styled-lists--unordered;
+
+    ul {
+      @extend .pe-list, .pe-styled-lists--unordered;
+    }
+
+    ol {
+      @extend .pe-list, .pe-styled-lists--ordered;
+    }
+  }
+
+  ol {
+    @extend .pe-list, .pe-styled-lists--ordered;
+
+    ol {
+      @extend .pe-list, .pe-styled-lists--ordered;
+    }
+
+    ul {
+      @extend .pe-list, .pe-styled-lists--unordered;
+    }
+  }
 
   ul + p,
   ol + p,

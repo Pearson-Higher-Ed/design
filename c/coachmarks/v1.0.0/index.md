@@ -2,8 +2,9 @@
 layout: component-yaml
 title: Coach Marks
 section: Components
+sdk: stand_alone
 version: 1.0.0
-status: active
+status: deprecated
 implemented: true
 people:
   - role: Interaction Design

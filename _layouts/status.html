@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="core">
+{% include header.html %}
+<body class="membership">
+  {% include sidebar.html %}
+
+  <div class="top-level-content">
+    <div class="status">
+      <h1>Component Status</h1>
+
+      <h2>Planned Components</h2>
+
+      <p>The following components are on the roadmap for UXF. No specific commitment has been made on timeline, but if you need a component sooner than later then <a href="http://pearson-higher-ed.github.io/design/contact/">get in touch</a> and we can work out a plan for getting it built and added to the lbirary.</p>
+
+      <ul class="top">
+        <li>Slider input</li>
+        <li>File uploader</li>
+        <li>Feedback widget</li>
+      </ul>
+
+
+      <h2>Design Versions</h2>
+
+      <div class="left">
+        <h3>Approved</h3>
+        <ul>
+          <li>Has passed governance review</li>
+          <li>Meets a set of quality benchmarks such as accessibility, usability, and responsiveness</li>
+        </ul>
+      </div>
+
+      <div class="right">
+        <h3>In Progress</h3>
+        <ul>
+          <li>Hasn't passed governance review</li>
+          <li>Proposed changes and improvements</li>
+        </ul>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th rowspan="2"></th>
+              <th colspan="2">Approved</th>
+              <th>In Progress</th>
+            </tr>
+            <tr>
+              <th>Not Implemented</th>
+              <th>Implemented</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+
+          {% assign components = site.pages | where: 'section', 'Components' | sort: 'title' %}
+          {% assign processed = '' | split: '' %}
+
+          {% for component in components %}
+            {% if processed contains component.title %}
+              {% continue %}
+            {% endif %}
+            {% assign processed = processed | push: component.title %}
+
+
+            {% assign versions = components | where: 'title', component.title %}
+            {% assign max_major = 0 %}
+            {% assign max_minor = 0 %}
+            {% assign max_patch = 0 %}
+
+            {% assign b_max_major = 0 %}
+            {% assign b_max_minor = 0 %}
+            {% assign b_max_patch = 0 %}
+            {% assign b_max_beta  = 1 %}
+
+            {% assign i_max_major = 0 %}
+            {% assign i_max_minor = 0 %}
+            {% assign i_max_patch = 0 %}
+            {% assign i_max_beta  = 0 %}
+
+            {% for version in versions %}
+              {% if version.version == nil %}
+                {% continue %}
+              {% endif %}
+
+              {% if version.version contains "beta" and version.status == 'active' %}
+
+                {% assign semver = (version.version | split: '.') %}
+                {% assign major = (semver[0] | round) %}
+                {% assign minor = (semver[1] | round) %}
+                {% assign patch = (semver[2] | split: '-' | first | round) %}
+                {% assign beta  = (semver[3] | round) %}
+
+                {% if major > b_max_major %}
+                  {% assign b_max_major = major %}
+                  {% assign b_max_minor = minor %}
+                  {% assign b_max_patch = patch %}
+                  {% assign b_max_beta  = beta %}
+                {% elsif major == b_max_major and minor > b_max_minor %}
+                  {% assign b_max_minor = minor %}
+                  {% assign b_max_patch = patch %}
+                  {% assign b_max_beta  = beta %}
+                {% elsif major == b_max_major and minor == b_max_minor and patch > b_max_patch %}
+                  {% assign b_max_patch = patch %}
+                  {% assign b_max_beta  = beta %}
+                {% elsif major == b_max_major and  minor == b_max_minor and patch == b_max_patch and beta > b_max_beta %}
+                  {% assign b_max_beta = beta %}
+                {% endif %}
+              {% endif %}
+
+              {% if version.implemented %}
+
+                {% assign semver = (version.version | split: '.') %}
+                {% assign major = (semver[0] | round) %}
+                {% assign minor = (semver[1] | round) %}
+                {% assign patch = (semver[2] | split: '-' | first | round) %}
+                {% assign beta  = (semver[3] | round) %}
+
+                {% if major > i_max_major %}
+                  {% assign i_max_major = major %}
+                  {% assign i_max_minor = minor %}
+                  {% assign i_max_patch = patch %}
+                  {% assign i_max_beta  = beta %}
+                {% elsif major == i_max_major and minor > i_max_minor %}
+                  {% assign i_max_minor = minor %}
+                  {% assign i_max_patch = patch %}
+                  {% assign i_max_beta  = beta %}
+                {% elsif major == i_max_major and minor == i_max_minor and patch > i_max_patch %}
+                  {% assign i_max_patch = patch %}
+                  {% assign i_max_beta  = beta %}
+                {% elsif major == i_max_major and  minor == i_max_minor and patch == i_max_patch and beta > i_max_beta %}
+                  {% assign i_max_beta = beta %}
+                {% endif %}
+              {% endif %}
+
+              {% if version.version contains 'beta' %}
+              {% elsif version.status == 'active'  %}
+
+                {% assign semver = (version.version | split: '.') %}
+                {% assign major = (semver[0] | round) %}
+                {% assign minor = (semver[1] | round) %}
+                {% assign patch = (semver[2] | split: '-' | first | round) %}
+
+                {% if major > max_major %}
+                  {% assign max_major = major %}
+                  {% assign max_minor = minor %}
+                  {% assign max_patch = patch %}
+                {% elsif major == max_major and minor > max_minor %}
+                  {% assign max_minor = minor %}
+                  {% assign max_patch = patch %}
+                {% elsif major == max_major and minor == max_minor and patch > max_patch %}
+                  {% assign max_patch = patch %}
+                {% endif %}
+              {% endif %}
+
+            {% endfor %}
+
+            {% capture latest_version %}{{max_major}}.{{max_minor}}.{{max_patch}}{% endcapture %}
+            {% capture latest_beta_version %}{{b_max_major}}.{{b_max_minor}}.{{b_max_patch}}-beta.{{b_max_beta}}{% endcapture %}
+            {% capture latest_implemented_version %}{{i_max_major}}.{{i_max_minor}}.{{i_max_patch}}-beta.{{i_max_beta}}{% endcapture %}
+
+            {% assign implemented_beta = latest_implemented_version | slice: -1 %}
+            {% if implemented_beta == '0' %}
+              {% assign latest_implemented_version = latest_implemented_version | split: '-' | first %}
+            {% elsif latest_implemented_version | split: '-' | first == latest_version %}
+              {% assign latest_implemented_version = latest_version %}
+            {% endif %}
+
+            <tr>
+              <td>{{component.title}}</td>
+              <td>
+                {% if latest_version == '0.0.0' %}
+                  No approved version
+                {% elsif latest_version != latest_implemented_version %}
+                  <a href="{{site.baseurl}}{{component.url}}../v{{latest_version}}/">{{latest_version}}</a>
+                {% endif %}
+              </td>
+              <td>
+                {% unless latest_implemented_version == '0.0.0' %}
+                  <a href="{{site.baseurl}}{{component.url}}../v{{latest_implemented_version}}/">{{latest_implemented_version}}</a>
+                {% endunless %}
+              </td>
+              <td>
+                {% if latest_beta_version == '0.0.0-beta.1' %}
+                  {% comment %}No active beta version{% endcomment %}
+                {% else %}
+                  <a href="{{site.baseurl}}{{component.url}}../v{{latest_beta_version}}/">{{latest_beta_version}}</a>
+                {% endif %}
+                </td>
+            </tr>
+
+          {% endfor %}
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -2,11 +2,13 @@
 layout: component-yaml
 title: Contextual Help
 section: Components
+sdk: stand_alone
 redirect_from: /docs/ui-components/contextual-help/
 version: 2.0.0
 rebranded: true
 status: active
-implemented: false
+implemented: true
+implementation: https://github.com/Pearson-Higher-Ed/contextual-help/
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -18,9 +20,7 @@ downloads:
   - name: UX Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1YjPJz6ZJgG6m4iJvtTFYuhIBGVuefHpzYx3H_lPU-vo/edit?usp=sharing
   - name: .sketch
-    link: ./assets/contextual-help.mockup.sketch
-  - name: .ai
-    link: ./assets/contextual-help.mockup.ai
+    link: ./assets/Help-2.0.sketch
 
 dependencies:
   - name: Drawer

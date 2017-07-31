@@ -7,7 +7,7 @@ section: Components
 title: Progress Bar
 
 # Status of the component (e.g. experimental, deprecated, etc.)
-status: active
+status: deprecated
 
 # Version (follow the component versioning guide)
 version: 1.0.0

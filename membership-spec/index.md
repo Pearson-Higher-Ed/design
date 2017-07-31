@@ -1,8 +1,8 @@
 ---
 layout: spec
-title: Library Membership Specification
+title: Component Quality Checklist
 section: contribute
-version: 2.1.0
+version: 2.2.0
 order: 1
 intro: |
   Every component listed in the Component Library must satisfy all the requirements contained in this document. To learn about submitting components for inclusion see the [Component Creation Guide][creation-guide].
@@ -17,7 +17,7 @@ design_reqs:
       Elemental Design and the Component Library are tools meant to serve the entirety of Pearson's next gen educational ecosystem.
     reqs:
       - req: |
-          U1: Components must reflect the needs of Pearson as a whole rather than just the needs of one product.
+          Components must reflect the needs of Pearson as a whole rather than just the needs of one product.
         type: mandatory
         extras:
           - name: Explanation
@@ -36,7 +36,7 @@ design_reqs:
       One of the main goals of Elemental Design, components should enable a variety of teams to work on different aspects of the Pearson ecosystem while still producing a consistent, coherent, and accessible experience.
     reqs:
       - req: |
-          C1: A component should not duplicate functionality found in an existing component, either in whole or in part.
+          A component should not duplicate functionality found in an existing component, either in whole or in part.
         type: suggested
         extras:
           - name: Explanation
@@ -47,18 +47,7 @@ design_reqs:
           - Parker Malenke (UX Design)
 
       - req: |
-          C2: A component must not duplicate functionality found in the following components: [Buttons](/design/c/buttons), [Breakpoints](/design/c/breakpoints), [Colors](/design/c/colors), [Icons](/design/c/icons), or [Typography](/design/c/typography).
-        type: mandatory
-        extras:
-          - name: Explanation
-            content: |
-              New components must leverage the existing functionality in these components by declaring them as dependencies, where needed.
-        approvers:
-          - Ed Zee (UX Design)
-          - Parker Malenke (UX Design)
-
-      - req: |
-          C3: A component must be reviewed by Meredith Williamson for visual consistency.
+          A component must be reviewed by Ed Zee or Van Yang for visual consistency.
         type: mandatory
         extras:
           - name: Note
@@ -68,14 +57,7 @@ design_reqs:
           - Meredith Williamson (UX Design)
 
       - req: |
-          C4: A component must be versioned according to the [Component Versioning Specification](/design/component-versioning).
-        type: mandatory
-        approvers:
-          - Ed Zee (UX Design)
-          - Parker Malenke (UX Design)
-
-      - req: |
-          C5: Components should keep configuration options to the minimum possible.
+          Components should keep configuration options to the minimum possible.
         type: suggested
         extras:
           - name: Explanation
@@ -88,7 +70,7 @@ design_reqs:
           - Parker Malenke (UX Design)
 
       - req: |
-          C6: A component and its image examples must be reviewed by Annie Persson and Claudia Quella for UI text usage and consistency.
+          UI copy in component documentation must be reviewed by Claudia Quella.
         type: mandatory
         approvers:
           - Annie Persson
@@ -101,7 +83,7 @@ design_reqs:
       Not only should our designs present a consistent and pleasing interface, but an intuitive and understandable one as well.
     reqs:
       - req: |
-          UE1: A component should be evaluated for usefulness, usability, and accessibility through feedback from users with the widest possible range of abilities.
+          A component should be evaluated for usefulness, usability, and accessibility through feedback from users with the widest possible range of abilities.
         type: suggested
         extras:
           - name: Explanation
@@ -115,15 +97,15 @@ design_reqs:
           - Chris Langston (Accessibility Research)
 
       - req: |
-          UE2: Where applicable, a component’s design should reflect the [Learning Design Principles](https://neo.pearson.com/groups/learning-design-higher-education/projects/learning-design-principles).
+          Where applicable, a component’s design should reflect the [Learning Design Principles](https://neo.pearson.com/groups/learning-design-higher-education/projects/learning-design-principles).
         type: suggested
         approvers:
-          - Tommy Bishop (Learning Design)
+          - Rachel Hashimshoni (Learning Design)
 
   - name: Accessible
     reqs:
       - req: |
-          A1: Components must conform to the [Pearson Accessibility Guidelines](http://wps.pearsoned.com/accessibility/115/29601/7577872.cw/index.html) (PAG). Designers must provide a [UXD Accessibility Checklist](https://docs.google.com/a/pearson.com/document/d/1Hqa-p_CePJ4x7O7ALOCWM88OaeODx9dP6gEko00sdxs/edit?usp=sharing) with each component that ensures that PAG has been considered during the design phase. This checklist also functions as fulfillment of PAG 42 - Documentation of Accessibility.
+          Components must conform to the [Pearson Accessibility Guidelines](http://wps.pearsoned.com/accessibility/115/29601/7577872.cw/index.html) (PAG).
         type: mandatory
         extras:
           - name: Explanation
@@ -143,14 +125,14 @@ design_reqs:
       Our users want to access our content from an increasingly diverse array of devices. Responsive design is a tried a true technique for delivering the optimal experience to each user regardless of their device.
     reqs:
       - req: |
-          R1: All components must function properly at each of the standard breakpoints defined in the [Breakpoints component](/design/c/breakpoints/).
+          All components must function properly at each of the standard breakpoints defined in the [Breakpoints component](/design/c/breakpoints/).
         type: mandatory
         approvers:
           - Ed Zee (UX Design)
           - Parker Malenke (UX Design)
 
       - req: |
-          R2: All touch targets should be at least 44 x 44 pixels in size (minimum dimensions 36 x 36 pixels).
+          All touch targets should be at least 44 x 44 pixels in size (minimum dimensions 36 x 36 pixels).
         type: mandatory
         extras:
           - name: Explanation
@@ -165,46 +147,39 @@ design_reqs:
       Components are meant to be used by numerous teams across the Pearson organization; it's important for these consumers to completely understand a component without resorting to ad hoc meetings or other private channels of communication.
     reqs:
       - req: |
-          D1: A component must include a set of redlines that completely detail every aspect of the design and behavior.
+          A component must include a set of redlines that completely detail every aspect of the design and behavior.
         type: mandatory
         approvers:
           - Ed Zee (UX Design)
           - Parker Malenke (UX Design)
 
       - req: |
-          D2: All features, configuration options, and usage guidelines for a component must be documented.
+          All features, configuration options, usage guidelines, and UI language patterns for a component must be documented.
         type: mandatory
         approvers:
           - Ed Zee (UX Design)
           - Parker Malenke (UX Design)
 
       - req: |
-          D3: Any changes in a new version of a component must be documented in a changelog.
+          New versions of a component must document changes in a changelog and follow the Component Version Guidelines
         type: mandatory
         approvers:
           - Ed Zee (UX Design)
           - Parker Malenke (UX Design)
 
       - req: |
-          D4: Any dependencies for a component must be listed and referenced at each place where they are used in the design.
+          Any dependencies for a component must be listed and referenced at each place where they are used in the design.
         type: mandatory
         approvers:
           - Ed Zee (UX Design)
           - Parker Malenke (UX Design)
 
       - req: |
-          D5: Each component must include a completed [UXD Accessibility Checklist](https://docs.google.com/a/pearson.com/document/d/1Hqa-p_CePJ4x7O7ALOCWM88OaeODx9dP6gEko00sdxs/edit?usp=sharing).
+          Each component must include a completed [UXD Accessibility Checklist](https://docs.google.com/a/pearson.com/document/d/1Hqa-p_CePJ4x7O7ALOCWM88OaeODx9dP6gEko00sdxs/edit?usp=sharing).
         type: mandatory
         approvers:
           - Isabelle Burkhart (Accessibility UX)
           - Chris Langston (Accessibility UX)
-
-      - req: |
-          D6: When applicable, a component must include UI text guidelines detailing standards and exceptions in UI language patterns and interactive behavior.
-        type: mandatory
-        approvers:
-          - Annie Persson
-          - Claudia Quella
 
 dev_reqs:
   - name: General
@@ -399,6 +374,12 @@ dev_reqs:
           - PDA Development team
 
 changelog:
+  - version: 2.2.0
+    changes: |
+      - CHANGED: C1 and C2 have been combined into a single requirement
+      - CHANGED: Visual Design reviewers
+      - CHANGED: Remove reference to UXD Accessibility Checklist from A1 to reduce duplication
+      - CHANGED: Merge D6 and D2 into a single, simplified requirement
   - version: 2.1.0
     changes: |
       - ADDED: Development specifications

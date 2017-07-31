@@ -86,6 +86,15 @@ blocks:
       - type: narrow image
         src: ./assets/labels.inverse.png
         caption: Inverse colors
+      - type: wide image
+        src: ./assets/labels.inverse.png
+        caption: Inverse colors
+      - type: narrow image
+        src: ./assets/labels.inverse.png
+        caption: Inverse colors
+      - type: narrow image
+        src: ./assets/labels.inverse.png
+        caption: Inverse colors
 
   - type: two column
     text: |
