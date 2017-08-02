@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Toolbar
 section: Components
-status: deprecated
-version: 1.0.0-beta.1
+status: active
+version: 1.0.0-beta.2
 people:
   - role: Designer
     name: Parker Malenke
@@ -114,6 +114,9 @@ blocks:
       - Showing action only upon selection... what if all items in the toolbar are actions? Give a message prompting to select? <-- testing candidate
 
 changelog:
+  - version: 1.0.0-beta.2
+    changes: |
+      - ADDED: Button group option
   - version: 1.0.0-beta.1
     changes: Initial version
 ---
