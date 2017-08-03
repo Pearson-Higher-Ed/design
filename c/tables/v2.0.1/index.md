@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Tables
 section: Components
-status: deprecated
-version: 2.0.0
+status: active
+version: 2.0.1
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -28,7 +28,7 @@ dependencies:
   - name: Typography
     version: 2.0.0
   - name: Icons
-    version: 2.1.0
+    version: 2.2.0
   - name: Inputs
     version: 2.0.1
 
@@ -159,7 +159,7 @@ blocks:
     text: |
       ### Sortable Table
       Icons
-      : - Any row that is sortable, but not currently sorted uses the sort-inactive-18 icon
+      : - Any row that is sortable, but not currently sorted uses the sortable-18 icon
         - Any sorted row should use the sort-down-18 and sort-up-18 icons, depending on the current sort order
 
       Positioning
@@ -218,6 +218,10 @@ blocks:
 
 
 changelog:
+  - version: 2.0.1
+    changes: |
+      - FIXED: Color error in redlines
+      - FIXED: Proper icon name
   - version: 2.0.0
     changes: |
       - CHANGED: Visual style to reflect rebranded aesthetic
