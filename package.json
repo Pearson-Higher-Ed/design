@@ -2,6 +2,9 @@
   "name": "design",
   "private": true,
   "dependencies": {
-    "pearson-elements": "^1.0.0"
+    "pearson-compounds": "^0.8.9",
+    "pearson-elements": "^1.0.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   }
 }

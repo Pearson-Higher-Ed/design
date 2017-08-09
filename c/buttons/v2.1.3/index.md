@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Buttons
 section: Components
-version: 2.1.2
+version: 2.1.3
 status: active
 implemented: true
 people:
@@ -208,6 +208,7 @@ blocks:
         src: ./assets/redline_types@2.png
     exports:
       - Default Button
+      - buttons--type--default
 
 
   - type: two column
@@ -230,6 +231,7 @@ blocks:
 
     exports:
       - Primary Button
+      - buttons--type--primary
 
   - type: two column
     text: |
@@ -251,6 +253,7 @@ blocks:
 
     exports:
       - CTA Button
+      - buttons--type--cta
 
   - type: two column
     text: |

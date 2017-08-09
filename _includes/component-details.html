@@ -232,6 +232,9 @@
       {% for export in block.exports %}
       <div id="rd-{{export | slugify}}"></div>
       {% endfor %}
+      {% for feature in block.features %}
+        <div id="{{feature.id}}"></div>
+      {% endfor %}
 
 
       {% case block.type %}
@@ -247,7 +250,43 @@
 
       {% when 'two column' or 'two_column' %}
       <div class="two_column">
-        <div class="text">{{block.text | markdownify}}</div>
+        <div class="text">
+          {{block.text | markdownify}}
+
+          {% for feature in block.features %}
+            <div class="feature" id="test">
+              {{feature.name}} <span id="{{feature.id}}-ddown"></span>
+            </div>
+            <script type="text/javascript">
+              var handleFeatureDropdown = function(featureID) {
+                return function(clicked) {
+                  var redlineHash = '#rd-{{feature.id | slugify}}'
+
+                  switch (clicked) {
+                    case 'Dev docs':
+                      break;
+                    case 'Redlines':
+                      location.hash = redlineHash
+                      break;
+                    default:
+                  }
+                }
+              }
+              var el = React.createElement(
+                Dropdown,
+                {
+                  dropdownControlLabel: 'Links for this feature',
+                  presentationType: 'icon',
+                  list: ['Dev docs', 'Redlines'],
+                  alignRight: true,
+                  changeHandler: handleFeatureDropdown('{{feature.id}}')
+                }
+              )
+
+              ReactDOM.render(el, document.getElementById('{{feature.id}}-ddown'))
+            </script>
+          {% endfor %}
+        </div>
         <div class="content">
           {% for item in block.contents %}
             {% case item.type %}
