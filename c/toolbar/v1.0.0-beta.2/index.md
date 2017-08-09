@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Toolbar
 section: Components
-status: deprecated
-version: 1.0.0-beta.1
+status: active
+version: 1.0.0-beta.2
 people:
   - role: Designer
     name: Parker Malenke
@@ -42,9 +42,41 @@ blocks:
 
       #### Spacing
       Related options should always be grouped with 16px between them. Logical groups of controls may be separated further by either a static 28px or a dynamic space which flexes with the size of the container.
+
+      For controls which are tightly related, you should use a button group to indicate this.
     contents:
       - type: wide image
         src: ./assets/basic.spacing.png
+
+  - type: section
+    name: Toolbar elements
+
+  - type: two column
+    text: |
+      Toolbars can contain any controls which pertain to editing, filtering, or modifying the related collection of items. Common elements include the following:
+
+  - type: two column
+    text: |
+      ### Buttons
+      Basic buttons would represent simple actions which could apply to either the full collection or just selected items.
+
+      ### Icons
+      You should generally prefer to use a textual button for actions, with two common exceptions:
+
+      1. You need to save space in a responsive context.
+      2. The action controls a binary state (e.g. locked/unlocked, starred/unstarred, etc.) and a visual indicator is desirable.
+
+      In any case, prefer to only use icons when commonly recognizable symbols exist for the action.
+
+      ### Inputs
+      In some cases you may need to gather input from a user, like a search field or a select control to filter the collection. You will need to include a proper label to ensure accessibility.
+
+      ### Button Groups
+      Button groups can be used to in situations where several actions are closely related or you need to conserve space.
+    contents:
+      - type: wide image
+        src: ./assets/toolbar.elements.png
+        caption: Examples of the commonly used toolbar controls.
 
   - type: section
     name: Multi-select
@@ -114,6 +146,9 @@ blocks:
       - Showing action only upon selection... what if all items in the toolbar are actions? Give a message prompting to select? <-- testing candidate
 
 changelog:
+  - version: 1.0.0-beta.2
+    changes: |
+      - ADDED: Button group option
   - version: 1.0.0-beta.1
     changes: Initial version
 ---
