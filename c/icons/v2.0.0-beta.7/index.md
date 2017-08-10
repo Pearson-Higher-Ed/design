@@ -201,7 +201,7 @@ blocks:
 
 
 changelog:
-  -version: 2.0.0-beta.7
+  - version: 2.0.0-beta.7
     changes: |
       - ADDED: sortable-18, sortable-24
   - version: 2.0.0-beta.6
