@@ -37,7 +37,7 @@ features:
   - Alerts messaging placement in a form
   - Multi step forms
   - Single column form layouts
-  - Multiple column form layouts with sections
+  - Form groups
   - Form in mobile screen
 usage_guidelines: |
   Any form should follow the structure and behavior laid out in this component.
@@ -51,6 +51,8 @@ blocks:
       The basic form consists of several parts: a *Form Name*, an optional *Alerts*, one or more *Input Fields*, and a *Next/Submit* button.
 
       ### Form Name
+
+      ### Form instruction
 
       ### Alerts message
       See error handling for more detail.
@@ -69,13 +71,13 @@ blocks:
         caption: A two column style form showing all the principle components.
       - type: wide image
         src: ./assets/form_basic_sections.png
-        caption: Example of form consist with sections.
+        caption: Example of form groups.
       - type: narrow image
         src: ./assets/form_mobile.png
         caption: Example of basic form in mobile screen
       - type: narrow image
         src: ./assets/form_mobile_sections.png
-        caption: Form with sections in mobile screen.
+        caption: Form groups in mobile screen.
 
 
   - type: section
