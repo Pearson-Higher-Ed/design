@@ -53,6 +53,7 @@ blocks:
       ### Form Name
 
       ### Form instruction
+      Instruction for filling out the form.
 
       ### Alerts message
       See error handling for more detail.
@@ -69,32 +70,51 @@ blocks:
       - type: wide image
         src: ./assets/form_basic.png
         caption: A two column style form showing all the principle components.
-      - type: wide image
-        src: ./assets/form_basic_sections.png
-        caption: Example of form groups.
-      - type: narrow image
-        src: ./assets/form_mobile.png
-        caption: Example of basic form in mobile screen
-      - type: narrow image
-        src: ./assets/form_mobile_sections.png
-        caption: Form groups in mobile screen.
 
+
+  - type: section
+    name: Form groups
+
+  - type: two column
+    text: |
+      If you have many fields, consider organizing related fields into groups. Each group can have a section title. The form groups consist sections titles and follow by separation line and input field.
+
+    contents:
+    - type: wide image
+      src: ./assets/form_basic_sections.png
+      caption: Form groups in mobile screen.
+
+
+  - type: section
+    name: Form in responsive
+
+  - type: two column
+    text: |
+      Mobile responsive is sharing he same spec the same spec as the desktop version. Except one column style only.
+
+
+    contents:
+    - type: narrow image
+      src: ./assets/form_mobile_sections.png
+      caption: Example of basic form in mobile screen
+    - type: narrow image
+      src: ./assets/form_mobile_error.png
+      caption: Example of form error in mobile screen
 
   - type: section
     name: Error Handling
 
   - type: two column
     text: |
-      Individual input fields should present their own errors following the styles dictated in the [inputs components](http://pearson-higher-ed.github.io/design/c/inputs/v2.0.0-beta.3/#labels). Fields with errors should always be accompanied by error text, unless a top level error message is sufficient to understand and fix the problems.
+      Individual input fields should present their own errors following the styles dictated in the [inputs components](http://pearson-higher-ed.github.io/design/c/inputs/#information-error-text). Fields with errors should always be accompanied by error text, unless a top level error message is sufficient to understand and fix the problems.
 
-      Top Level Errors relevant to the form as a whole may be presented above the first input and below the form name. Refer to [alerts components](http://http://pearson-higher-ed.github.io/design/c/alerts/)
+      Top Level Errors relevant to the form as a whole may be presented above the first input and below the form name. Refer to [alerts components](http://http://pearson-higher-ed.github.io/design/c/alerts/)  
+
     contents:
       - type: wide image
         src: ./assets/form_error.png
         caption: An example of error alert.    
-      - type: narrow image
-        src: ./assets/form_mobile_error.png
-        caption: Basic form with error alerts in mobile screen.
+
 
 
 
