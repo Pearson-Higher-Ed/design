@@ -16,8 +16,8 @@ people:
     name: Parker Malenke
     email: parker.malenke@pearson.com
 downloads:
-  - name: calendar_2.4.sketch
-    link: ./assets/calendar_2.4.sketch
+  - name: calendar_2.5.sketch
+    link: ./assets/calendar_2.5.sketch
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/19CpAK-nLRHPQ0w_qmUpXo5NjGZU7mBWszAHlB4Kxy94/edit?usp=sharing
 
@@ -136,7 +136,7 @@ blocks:
         - Does not apply to a selected or disabled date
 
       Current
-      : - 38px square outline
+      : - 38px square outline, including borders
         - 1px solid [Concrete](/design/c/colors/v2.1.0/#rd-concrete) border
 
       Selected
@@ -149,7 +149,7 @@ blocks:
         - No hover effect
 
       Secondary Indicator
-      : - 32px diameter circular outline
+      : - Circle diameter is 32px, including borders
         - 1px solid [Concrete](/design/c/colors/v2.1.0/#rd-concrete) border
 
     contents:
