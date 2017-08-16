@@ -95,8 +95,11 @@ blocks:
 
     contents:
     - type: narrow image
-      src: ./assets/form_mobile_sections.png
+      src: ./assets/form_mobile.png
       caption: Example of basic form in mobile screen
+    - type: narrow image
+      src: ./assets/form_mobile_sections.png
+      caption: Example of form group in mobile screen
     - type: narrow image
       src: ./assets/form_mobile_error.png
       caption: Example of form error in mobile screen
