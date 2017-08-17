@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Inputs
 section: Components
-status: deprecated
-version: 2.1.0-beta.2
+status: active
+version: 2.1.0-beta.3
 rebranded: true
 implemented: false
 people:
@@ -267,8 +267,8 @@ blocks:
 
       Focus
       : - Label is [Medium Gray](/design/c/colors/v2.1.0/#rd-medium-gray)
-        - Border is 1px solid [Digital Marine Turquoise](/design/c/colors/v2.1.0/#rd-digital-marine-turquoise)
-        - [Digital Marine Turquoise](/design/c/colors/v2.1.0/#rd-digital-marine-turquoise) shadow with 5px blur
+        - Border is 1px solid [Digital Pearson Blue](/design/c/colors/v2.1.0/#rd-digital-pearson-blue)
+        - [Digital Pearson Blue](/design/c/colors/v2.1.0/#rd-digital-pearson-blue) shadow with 5px blur
 
       Disabled
       : - Value is [Concrete (#c7c7c7)](/design/c/colors/v2.1.0/#rd-concrete)
@@ -315,7 +315,7 @@ blocks:
 
       Focus
       : - Label is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
-        - Underline is 4px solid [Digital Marine Turquoise](/design/c/colors/v2.1.0/#rd-digital-marine-turquoise)
+        - Underline is 4px solid [Digital Pearson Blue](/design/c/colors/v2.1.0/#rd-digital-pearson-blue)
 
         - The underline should animate out from the center of the input once the user clicks into the field
 
@@ -433,7 +433,7 @@ blocks:
       States
       : - Radio border is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete) in most cases
         - Selected radios have an inner circle filled with [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray) in most cases
-        - Focused radios use [Digital Marine Turquoise](/design/c/colors/v2.1.0/#rd-digital-marine-turquoise) borders
+        - Focused radios use [Digital Pearson Blue](/design/c/colors/v2.1.0/#rd-digital-pearson-blue) borders
         - Disabled radios use a [Moonlight (#e9e9e9)](/design/c/colors/v2.0.0-beta.5/#rd-moonlight) fill color
         - Disabled but selected radios have an inner circle filled with [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
 
@@ -459,7 +459,7 @@ blocks:
       States
       : - Box border is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete) in most cases
         - Selected checkboxes have a [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray) check mark in most cases
-        - Focused checkboxes use [Digital Marine Turquoise](/design/c/colors/v2.1.0/#rd-digital-marine-turquoise) borders
+        - Focused checkboxes use [Digital Pearson Blue](/design/c/colors/v2.1.0/#rd-digital-pearson-blue) borders
         - Disabled checkboxes use a [Moonlight (#e9e9e9)](/design/c/colors/v2.0.0-beta.5/#rd-moonlight) fill color
         - Disabled but selected checkboxes have a [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete) check mark
     contents:
@@ -489,6 +489,9 @@ blocks:
         src: ./assets/redlines.password.showhide.png
 
 changelog:
+  - version: 2.1.0-beta.3
+    changes: |
+      - CHANGED: Active color back to Pearson Digital Blue
   - version: 2.1.0-beta.2
     changes: |
       - CHANGED: Update sketch file
