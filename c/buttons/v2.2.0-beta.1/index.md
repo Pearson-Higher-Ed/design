@@ -184,7 +184,7 @@ blocks:
 
       Normal
       : - Background is [Moonlight](/design/c/colors/v2.1.0/#rd-digital-moonlight)
-        - Text is [Charcaol](/design/c/colors/v2.1.0/#rd-charcoal)
+        - Text is [Charcoal](/design/c/colors/v2.1.0/#rd-charcoal)
         - Border is 1px [Concrete](/design/c/colors/v2.1.0/#rd-concrete)
 
       Hover/Active
