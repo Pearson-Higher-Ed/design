@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Toolbar
 section: Components
-status: deprecated
-version: 1.0.0-beta.3
+status: active
+version: 1.0.0-beta.4
 people:
   - role: Designer
     name: Parker Malenke
@@ -208,6 +208,9 @@ blocks:
       - Showing action only upon selection... what if all items in the toolbar are actions? Give a message prompting to select? <-- testing candidate
 
 changelog:
+  - version: 1.0.0-beta.4
+    changes: |
+      - ADDED: Use case context to some examples
   - version: 1.0.0-beta.3
     changes: |
       - FIXED: Button labels to sentence case
