@@ -32,9 +32,9 @@ blocks:
       The basic toolbar simply provides an area to collect the buttons and inputs that modify your collection of items. For example, you may offer the ability to delete selected items, or filter the collection.
     contents:
       - type: wide image
-        src: ./assets/basic.toolbars.1.png
-      - type: wide image
         src: ./assets/basic.toolbars.2.png
+      - type: wide image
+        src: ./assets/basic.toolbars.1.png
       - type: wide image
         src: ./assets/basic.toolbars.3.png
         caption: Examples of basic toolbars.
@@ -116,9 +116,9 @@ blocks:
       If you have a manageable number of controls, simply moving them into two or more lines is a straightforward solution. In this case buttons and controls should always be fully justified and consume 100% of the available space. Try to avoid placing more than two items per row at the smallest breakpoints, and try to avoid using more than three rows total.
     contents:
       - type: narrow image
-        src: ./assets/responsive.1.png
-      - type: narrow image
         src: ./assets/responsive.2.png
+      - type: narrow image
+        src: ./assets/responsive.1.png
       - type: narrow image
         src: ./assets/responsive.3.png
         caption: A responsive implementation of the [basic table examples](#basic-toolbar) from above.
@@ -199,13 +199,6 @@ blocks:
       - type: wide image
         src: ./assets/redlines.drawer.drilldown.png
 
-  - type: two column
-    text: |
-      Notes:
-
-      - The select all component may need to become optional on mobile for space reasons, this matches the typical iOS convention at least
-      - Do we need a nested dropdown for collapsing actions?
-      - Showing action only upon selection... what if all items in the toolbar are actions? Give a message prompting to select? <-- testing candidate
 
 changelog:
   - version: 1.0.0-beta.4
