@@ -17,9 +17,7 @@
   {% assign learn_pages = '' | split: '' %}
   {% assign use_pages = '' | split: '' %}
   {% assign contribute_pages = '' | split: '' %}
-  {% assign element_pages = '' | split: '' %}
-  {% assign compound_pages = '' | split: '' %}
-  {% assign stand_alone_pages = '' | split: '' %}
+  {% assign component_pages = '' | split: '' %}
 
   {% for page in site.pages %}
     {% comment %}
@@ -48,12 +46,7 @@
       {% when 'contribute' %}
         {% assign contribute_pages = contribute_pages | push: page %}
       {% when 'Components' %}
-        {% case page.sdk %}
-          {% when 'stand_alone' %}
-            {% assign stand_alone_pages = stand_alone_pages | push: page %}
-          {% else %}
-            {% assign element_pages = element_pages | push: page %}
-        {% endcase %}
+          {% assign component_pages = component_pages | push: page %}
       {% else %}
     {% endcase %}
   {% endfor %}
@@ -61,8 +54,7 @@
   {% assign learn_pages = learn_pages | sort: 'order' %}
   {% assign use_pages = use_pages | sort: 'order' %}
   {% assign contribute_pages = contribute_pages | sort: 'order' %}
-  {% assign element_pages = element_pages | sort: 'title' %}
-  {% assign stand_alone_pages = stand_alone_pages | sort: 'title' %}
+  {% assign component_pages = component_pages | sort: 'title' %}
 
   <div class="sidebar-toc">
     <ul>
@@ -91,34 +83,26 @@
         </ul>
       </li>
       <li>
-        Elements
+        Components
         <ul>
-          {% for element in element_pages %}
-            <li {% if element.title == page.title %}class="selected"{% endif %}>
-              <a href="{{site.baseurl}}{{element.url}}..">
-                {% if element.shortname %}
-                  {{element.shortname}}
-                {% else %}
-                  {{element.title}}
-                {% endif %}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </li>
-      <li>
-        Stand alone components
-        <ul>
-          {% for entry in stand_alone_pages %}
-            <li {% if entry.title == page.title %}class="selected"{% endif %}>
-              <a href="{{site.baseurl}}{{entry.url}}..">
-                {% if entry.shortname %}
-                  {{entry.shortname}}
-                {% else %}
-                  {{entry.title}}
-                {% endif %}
-              </a>
-            </li>
+          {% for component in component_pages %}
+            {% if component.references == nil %}
+              <li {% if component.title == page.title %}class="selected"{% endif %}>
+                <a href="{{site.baseurl}}{{component.url}}..">
+                  {% if component.shortname %}
+                    {{component.shortname}}
+                  {% else %}
+                    {{component.title}}
+                  {% endif %}
+                </a>
+              </li>
+            {% else %}
+              <li>
+                <a href="{{site.baseurl}}/c/{{component.references}}">
+                  {{ component.title }}
+                </a>
+              </li>
+            {% endif %}
           {% endfor %}
         </ul>
       </li>
