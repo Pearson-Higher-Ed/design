@@ -86,15 +86,23 @@
         Components
         <ul>
           {% for component in component_pages %}
-            <li {% if component.title == page.title %}class="selected"{% endif %}>
-              <a href="{{site.baseurl}}{{component.url}}..">
-                {% if component.shortname %}
-                  {{component.shortname}}
-                {% else %}
-                  {{component.title}}
-                {% endif %}
-              </a>
-            </li>
+            {% if component.references == nil %}
+              <li {% if component.title == page.title %}class="selected"{% endif %}>
+                <a href="{{site.baseurl}}{{component.url}}..">
+                  {% if component.shortname %}
+                    {{component.shortname}}
+                  {% else %}
+                    {{component.title}}
+                  {% endif %}
+                </a>
+              </li>
+            {% else %}
+              <li>
+                <a href="{{site.baseurl}}/c/{{component.references}}">
+                  {{ component.title }}
+                </a>
+              </li>
+            {% endif %}
           {% endfor %}
         </ul>
       </li>
