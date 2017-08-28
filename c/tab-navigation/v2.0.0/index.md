@@ -3,8 +3,8 @@ layout: component-yaml
 title: Tab Style Navigation
 section: Components
 redirect_from: "/docs/ui-components/tabs/"
-version: 2.0.0-beta.4
-status: deprecated
+version: 2.0.0
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -25,7 +25,7 @@ downloads:
 
 dependencies:
   - name: Colors
-    version: 2.0.0-beta.7
+    version: 3.0.0
   - name: Typography
     version: 2.0.0
   - name: Dropdown
@@ -177,33 +177,7 @@ blocks:
           caption: Redlines for different tab states
 
 changelog:
-  - version: 2.0.0-beta.4
-    changes: |
-      - FIXED: Wording
-      - CHANGED: Images to be @2x
-
-  - version: 2.0.0-beta.3
-    changes: |      
-      - ADDED: Responsive web design capabilities and strategies.
-
-  - version: 2.0.0-beta.2
-    changes: |      
-      - UPDATED: Image of tab states to include all background options
-      - UPDATED: Changed Active/inactive indications from bold/regular font weights to two shades of color.
-      - UPDATED: Clarified documentation language
-
-  - version: 2.0.0-beta.1
-    changes: |
-      - UPDATED: Redesigned for rebrand
-      - UPDATED: Defined primarily for tab style navigation
-      - ADDED: Background color guidance
-      - REMOVED: Guidance for tab panel (accessibility concerns)
-      - REMOVED: Removed offloading dropdown (for now)
-
-  - version: 1.0.0-beta.2
-    changes: Updates to fix graphics, remove mobile, add container, adjust redlines, and shuffle.
-
-  - version: 1.0.0-beta.1
-    changes: Initial version
+  - version: 2.0.0
+    changes: Initial rebranded version
 
 ---
