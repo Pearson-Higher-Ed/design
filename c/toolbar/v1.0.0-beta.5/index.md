@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Toolbar
 section: Components
-status: deprecated
-version: 1.0.0-beta.4
+status: active
+version: 1.0.0-beta.5
 people:
   - role: Designer
     name: Parker Malenke
@@ -128,19 +128,7 @@ blocks:
   - type: two column
     text: |
       ### Condensing controls
-      In some cases you may have too many controls to reasonably fit in a multi-row layout. In this case you may combine less important controls under a "Tools" button which will open a drawer containing the remaining options.
-
-      #### "Tools" name
-      The preferred name for the overflow button is "Tools", but this can be customized based on your use case. Try to keep the name to a single word, and avoid the term "More" as that is used in other contexts.
-
-      #### Drawer features
-      The drawer has a few features that help replicate the functionality of more advanced controls. These include:
-
-      ##### Drill down menus
-      These function as a 1:1 replacement for dropdown menus, allowing the user to tap into an item and choose from a list of options.
-
-      ##### State icons
-      For controls which represent a binary such as locked/unlocked an icon may be included to indicate the current state.
+      In some cases you may have too many controls to reasonably fit in a multi-row layout. In this case the UXF team is exploring an overflow menu that would allow you to move the extra tools into a drawer with more room. This is likely to be an addition in version 1.1 of this component, pending feedback from the development team.
     contents:
       - type: narrow image
         src: ./assets/responsive.condensed.png
@@ -175,18 +163,6 @@ blocks:
         - Icons each reside within a 44px square tappable area
         - Related icons can be immediately adjacent
         - 16px can separate distinct groups of icons
-
-      Overflow drawer
-      : - Icon is ellipsis-24
-        - Uses the standard drawer
-        - Options are 28px below the header, 20px between each other
-        - Groupings indicated by 1px solid Alto lines
-
-      Overflow drilldown
-      : - Dropdowns may be replaced with a drill down feature in the drawer
-        - Use a chevron-next-18 icon to indicate this
-        - Selecting the option will open the detail view of the drawer with the contents of the dropdown
-        - The detail view uses the same typography and spacing as the root level
     contents:
       - type: wide image
         src: ./assets/redlines.elements.png
@@ -194,13 +170,12 @@ blocks:
         src: ./assets/redlines.spacing.png
       - type: wide image
         src: ./assets/redlines.spacing.icons.png
-      - type: wide image
-        src: ./assets/redlines.drawer.png
-      - type: wide image
-        src: ./assets/redlines.drawer.drilldown.png
 
 
 changelog:
+  - version: 1.0.0-beta.5
+    changes: |
+      - REMOVED: Overflow menu (temporarily)
   - version: 1.0.0-beta.4
     changes: |
       - ADDED: Use case context to some examples
