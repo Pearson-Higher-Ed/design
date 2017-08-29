@@ -80,7 +80,7 @@ blocks:
     text: |
       **Error** is when the field's content has some sort of error.
 
-      **Focused Error** is the focused version of the error state.
+      **Error(Focused)** is the focused version of the error state.
 
       **Error with info text** is used when additional details about the error are necessary. Note that space for one line of explanation is built into the input so no shifting is necessary.
     contents:
