@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Buttons
 section: Components
-version: 2.2.0-beta.1
-status: deprecated
+version: 2.2.0-beta.2
+status: active
 implemented: true
 people:
   - role: Designer
@@ -126,7 +126,7 @@ blocks:
 
   - type: two column
     text: |
-      In situations where link styled text is to be used in place of a button for the purposes of de-emphasizing an action (visual hierarchy), link style buttons should be used.  The premise stands that links are to be used for navigation and buttons are to be used for actions.
+      In situations where link styled text is to be used in place of a button for the purposes of de-emphasizing an action (visual hierarchy), link style buttons should be used.  The premise stands that links are to be used for navigation and buttons are to be used for actions. Link buttons should not appear in a situation where they could be disabled.
 
     contents:
       - type: text
@@ -265,6 +265,9 @@ blocks:
       - CTA Button
 
 changelog:
+  - version: 2.2.0-beta.2
+    changes: |
+      - UPDATED: Link style guidance disallows disabled version
   - version: 2.2.0-beta.1
     changes: |
       - CHANGED: Primary button color from Digital Marine Turquoise to Digital Pearson Blue
