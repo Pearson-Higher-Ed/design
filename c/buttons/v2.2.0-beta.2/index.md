@@ -117,9 +117,7 @@ blocks:
 
   - type: two column
     text: |
-      Use a disabled button only if an action on the current screen can enable it (action possibility).  A disabled button should only appear when contextually relevant.  If the button is not needed for the task at hand, it should be hidden.  
-
-      If a bank of 2 or more buttons is present but can only be enabled by direct action on the same screen, it can be hidden and only shown when enabled to give emphasis of new controls available to the user.
+      Prefer to use a disabled button only if an action on the current screen can enable it (action possibility).
 
   - type: section
     name: Link style buttons
@@ -268,6 +266,7 @@ changelog:
   - version: 2.2.0-beta.2
     changes: |
       - UPDATED: Link style guidance disallows disabled version
+      - CHANGED: Guidance to prefer disabled buttons vs hiding disabled actions
   - version: 2.2.0-beta.1
     changes: |
       - CHANGED: Primary button color from Digital Marine Turquoise to Digital Pearson Blue
