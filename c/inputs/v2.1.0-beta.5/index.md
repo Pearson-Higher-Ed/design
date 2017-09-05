@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Inputs
 section: Components
-status: deprecated
-version: 2.1.0-beta.4
+status: active
+version: 2.1.0-beta.5
 rebranded: true
 implemented: false
 people:
@@ -80,9 +80,7 @@ blocks:
     text: |
       **Error** is when the field's content has some sort of error.
 
-      **Error (Focused)** is the focused version of the error state.
-
-      **Error with info text** is used when additional details about the error are necessary. Note that space for one line of explanation is built into the input so no shifting is necessary.
+      **Error (Focused)** is the focused version of the error state. Note that in almost every case an error state should be accompanied by explanatory text. See the [Info/Error Text section](#information-error-text) section for more details.
     contents:
       - type: wide image
         src: ./assets/Inputs_error.png
@@ -489,6 +487,12 @@ blocks:
         src: ./assets/redlines.password.showhide.png
 
 changelog:
+  - version: 2.1.0-beta.5
+    changes: |
+      - FIXED: Redlines removed references to the turquoise color
+  - version: 2.1.0-beta.4
+    changes: |
+      - Various updates to color and wording
   - version: 2.1.0-beta.3
     changes: |
       - CHANGED: Active color back to Pearson Digital Blue
