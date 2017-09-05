@@ -5,7 +5,8 @@ section: Components
 redirect_from: "/docs/ui-components/tabs/"
 version: 2.0.0
 status: active
-implemented: false
+implemented: true
+implementation: https://github.com/Pearson-Higher-Ed/compounds
 people:
   - role: Product Owner
     name: Joe Macaluso
