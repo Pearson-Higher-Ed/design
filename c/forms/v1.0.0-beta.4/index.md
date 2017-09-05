@@ -38,7 +38,7 @@ features:
   - Multi step forms
   - Single column form layouts
   - Form groups
-  - Form in mobile screen
+  - Responsive form
 usage_guidelines: |
   Any form should follow the structure and behavior laid out in this component.
 
@@ -77,12 +77,12 @@ blocks:
 
   - type: two column
     text: |
-      If you have many fields, consider organizing related fields into groups. Each group can have a section title. The form groups consist sections titles and follow by separation line and input field.
+      If you have many fields, consider organizing related fields into groups. Each group can have a section title. The form groups consist sections titles and follow by horizontal line and input field.
 
     contents:
     - type: wide image
       src: ./assets/form_basic_sections.png
-      caption: Form groups in mobile screen.
+      caption: Example of form groups
 
 
   - type: section
@@ -131,14 +131,14 @@ blocks:
       : - Form name is some [Section UI Heading](/design/c/typography/v2.0.0-beta.7/#rd-ui-headings-section-basic), defaults to basic
 
       Spacing
-      : - 40px between Form Name and first input field
-        - 32px between all inputs (this includes space dedicated for one line of error text)
-        - 40px between the last input and the Next/Submit button
+      : - 36px between Form Name and first input field
+        - 36px between all inputs (this includes space dedicated for one line of error text)
+        - 52px between the last input and the Next/Submit button
         - For 2 column style, 20px between input fields
-        - For multiple sections form, 24px above and below separation line
-        - Form form with alert, 32px above and below the alert and form title/first input field.
+        - For multiple sections form, 16px above horizontal line and 26px below.
+        - Form form with alert, 36px above and below the alert and form title/first input field.
 
-      Separation line
+      Honzontal line
       : - 1px [Concrete](/design/c/colors/v2.1.0/#rd-concrete)
 
     contents:
