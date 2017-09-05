@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Buttons
 section: Components
-version: 2.1.2
-status: deprecated
+version: 2.2.0
+status: active
 implemented: true
 people:
   - role: Designer
@@ -54,9 +54,9 @@ blocks:
     text: |
       There are three sizes of buttons:
 
-      * __Large (Standard):__ This is the default size. Use this size for touch devices to meet accessibility requirements.  
-      * __Medium:__ Medium buttons are only used to pair with equally sized input fields. Primary button is not available in this size.
-      * __Small:__ Only the default button style is available in this size.
+      * __Extra Large:__ Use this button for important actions that are the primary focus of a page, for example 'Sign in' or 'Create account'.
+      * __Large:__ The standard button size, prefer this button as a default size unless there is a reason to go up or down.
+      * __Small:__ Try to avoid using this size if possible, but it is available for space constrained situations.
 
     contents:
       - type: wide image
@@ -117,16 +117,14 @@ blocks:
 
   - type: two column
     text: |
-      Use a disabled button only if an action on the current screen can enable it (action possibility).  A disabled button should only appear when contextually relevant.  If the button is not needed for the task at hand, it should be hidden.  
-
-      If a bank of 2 or more buttons is present but can only be enabled by direct action on the same screen, it can be hidden and only shown when enabled to give emphasis of new controls available to the user.
+      Prefer to use a disabled button only if an action on the current screen can enable it (action possibility).
 
   - type: section
     name: Link style buttons
 
   - type: two column
     text: |
-      In situations where link styled text is to be used in place of a button for the purposes of de-emphasizing an action (visual hierarchy), link style buttons should be used.  The premise stands that links are to be used for navigation and buttons are to be used for actions.
+      In situations where link styled text is to be used in place of a button for the purposes of de-emphasizing an action (visual hierarchy), link style buttons should be used.  The premise stands that links are to be used for navigation and buttons are to be used for actions. Link buttons should not appear in a situation where they could be disabled.
 
     contents:
       - type: text
@@ -152,48 +150,53 @@ blocks:
   - type: two column
     text: |
       ### Sizes
-      Large (Standard)
+      Extra Large
       : - 44px tall
         - 20px horizontal padding
-        - 18px, Semibold (currently not in the UX Framework typography set)
+        - [UI Section Heading - Small Bold](/design/c/typography/v2.1.0-beta.1/#rd-ui-headings-section-small-bold)
 
-      Medium
+      Large
       : - 36px tall
         - 12px horizontal padding
-        - [UI Text - Bold](/design/c/typography/v2.0.0/#rd-ui-text-bold): 14px, Semibold
+        - [UI Text - Bold](/design/c/typography/v2.0.0/#rd-ui-text-bold)
 
       Small
       : - 32px tall
         - 12px horizontal padding
-        - [UI Text - Bold](/design/c/typography/v2.0.0/#rd-ui-text-bold): 14px, Semibold
-
-
+        - [UI Text - Bold](/design/c/typography/v2.0.0/#rd-ui-text-bold)
     contents:
       - type: wide image
         src: ./assets/redline_size@2.png
+    exports:
+      - Standard/Large Button
+      - Small Button
+      - Medium Button
+      - Large Button
+      - Extra Large Button
 
 
   - type: two column
     text: |
-      ### Corner radius: 2px
+      ### Corners
+      2px border radius
 
   - type: two column
     text: |
       ### Default buttons
 
       Normal
-      : - BG: [Moonlight (#E9E9E9)](/design/c/colors/v2.1.0/#rd-digital-moonlight)
-        - Text: [Medium Gray (#6a7070)](/design/c/colors/v2.1.0/#rd-medium-gray)
-        - Border: 1px [Concrete (#C7C7C7)](/design/c/colors/v2.1.0/#rd-concrete)
+      : - Background is [Moonlight](/design/c/colors/v2.1.0/#rd-digital-moonlight)
+        - Text is [Charcoal](/design/c/colors/v2.1.0/#rd-charcoal)
+        - Border is 1px [Concrete](/design/c/colors/v2.1.0/#rd-concrete)
 
       Hover/Active
-      : - BG: [Alto (#D9D9D9)](/design/c/colors/v2.1.0/#rd-alto)
-        - Text: [Medium Gray (#6a7070)](/design/c/colors/v2.1.0/#rd-medium-gray)
-        - Border: 1px [Concrete (#C7C7C7)](/design/c/colors/v2.1.0/#rd-concrete)
+      : - Background becomes [Alto](/design/c/colors/v2.1.0/#rd-alto)
+        - Text and border are the same
 
       Disabled
-      : - BG: [Moonlight (#E9E9E9)](/design/c/colors/v2.1.0/#rd-digital-moonlight)
-        - Text: [Concrete (#C7C7C7)](/design/c/colors/v2.1.0/#rd-concrete)
+      : - Background remains [Moonlight](/design/c/colors/v2.1.0/#rd-digital-moonlight)
+        - Text is [Concrete](/design/c/colors/v2.1.0/#rd-concrete)
+        - No border
 
       Focus
       : - Browser default style
@@ -210,12 +213,11 @@ blocks:
       ### Primary buttons
 
       Normal
-      : - BG: [Digital Marine Turquoise (#19A5A3)](/design/c/colors/v2.1.0/#rd-digital-marine-turquoise)
-        - Text: [White](/design/c/colors/v2.1.0/#rd-white)
+      : - Background is [Digital Pearson Blue](/design/c/colors/v2.1.0/#rd-digital-pearson-blue)
+        - Text is [White](/design/c/colors/v2.1.0/#rd-white)
 
       Hover/Active
-      : - BG: [Brackish Turquoise (#179599)](/design/c/colors/v2.1.0/#rd-brackish-turquoise)
-        - Text: [White](/design/c/colors/v2.1.0/#rd-white)
+      : - Background becomes [Ink Blue](/design/c/colors/v2.1.0/#rd-ink-blue)
 
       Disabled
       : - No disabled state
@@ -231,12 +233,11 @@ blocks:
       ### CTA button (Call To Action)
 
       Normal
-      : - BG: [Sunshine Yellow (#FFB81C)](/design/c/colors/v2.1.0/#rd-sunshine-yellow)
-        - Text: [Charcoal (#252525)](/design/c/colors/v2.1.0/#rd-charcoal)
+      : - Background is [Sunshine Yellow](/design/c/colors/v2.1.0/#rd-sunshine-yellow)
+        - Text is [Charcoal](/design/c/colors/v2.1.0/#rd-charcoal)
 
       Hover/Active
-      : - BG: [Sunflower Yellow (#FF9A19)](/design/c/colors/v2.1.0/#rd-sunflower-yellow)
-        - Text: [Charcoal (#252525)](/design/c/colors/v2.1.0/#rd-charcoal)
+      : - Background becomes [Sunflower Yellow](/design/c/colors/v2.1.0/#rd-sunflower-yellow)
 
       Disabled
       : - No disabled state
@@ -249,7 +250,8 @@ blocks:
 
   - type: two column
     text: |
-      ### Distance between buttons: 16px
+      ### Button Spacing
+      Buttons are 16px apart by default
 
     contents:
       - type: wide image
@@ -257,14 +259,23 @@ blocks:
 
   - type: style table
     styles:
-      - Standard/Large Button
-      - Medium Button
       - Small Button
+      - Large Button
+      - Extra Large Button
       - Primary Button
       - Default Button
       - CTA Button
 
 changelog:
+  - version: 2.2.0
+    changes: |
+      - CHANGED: Primary button color from Digital Marine Turquoise to Digital Pearson Blue
+      - CHANGED: Size names now reflect dev names (Large &rarr; Extra Large, Medium &rarr; Large)
+      - CHANGED: Default button size is now 'Large'
+      - CHANGED: Guidance to prefer disabled buttons vs hiding disabled actions
+      - CHANGED: Link style guidance disallows disabled version
+      - ADDED: Large and Small version of Primary and CTA buttons
+      - FIXED: Default button color restored to Charcoal
   - version: 2.1.2
     changes: |
       - FIXED: Typos and copy errors
