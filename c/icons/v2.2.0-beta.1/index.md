@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Icons
 section: Components
-version: 2.0.0-beta.7
+version: 2.2.0-beta.1
 status: active
 people:
   - role: Product Owner
@@ -11,7 +11,7 @@ people:
   - role: Designer
     name: Van Yang
     email: van.yang@pearson.com
-implementation: https://pearson-elements-v0.surge.sh/elements/icons/
+implementation: https://github.com/Pearson-Higher-Ed/elements/
 downloads:
   - name: Pearson_icons_symbols_1.6.sketch
     link: ./assets/Pearson_icons_symbols_1.6.sketch
@@ -125,7 +125,7 @@ blocks:
             | ![](./assets/icons24/radio-button-on-24-2x.png) | radio-button-on-18 | radio-button-on-24 |
             | ![](./assets/icons24/show-off-24-2x.png) | show-off-18 | show-off-24 |
             | ![](./assets/icons24/show-on-24-2x.png) | show-on-18 | show-on-24 |
-            | ![](./assets/icons24/sortable-24-2x.png) | sortable-18 | sortable-24 |
+            | ![](./assets/icons24/sortable-24-2x.png) | sortable-18 | sortable-on-24 |
             | ![](./assets/icons24/sort-down-24-2x.png) | sort-down-18 | sort-down-24 |
             | ![](./assets/icons24/sort-up-24-2x.png) | sort-up-18 | sort-up-24 |
             | ![](./assets/icons24/view-list-24-2x.png) | view-list-18 | view-list-24 |
@@ -134,6 +134,9 @@ blocks:
             | ![](./assets/icons24/zoom-out-24-2x.png) | zoom-out-18 | zoom-out-24 |
 
 
+#            | ![](./assets/icons24/newspaper-24-2x.png) | newspaper-18 | newspaper-24 |
+#            | ![](./assets/icons24/pin-24-2x.png) | pin-18 | pin-24 |
+#            | ![](./assets/icons24/suitcase-24-2x.png) | suitcase-18 | suitcase-24 |
   - type: section
     name: Name Guide
 
@@ -201,36 +204,15 @@ blocks:
 
 
 changelog:
-  - version: 2.0.0-beta.7
+  - version: 2.2.0-beta.1
     changes: |
       - ADDED: sortable-18, sortable-24
-  - version: 2.0.0-beta.6
+  - version: 2.1.0
     changes: |
-      - TWEAKED: border line-weight for help-outline and info-outline
-      - ADDED: edit-18, edit-24
-  - version: 2.0.0-beta.5
-    changes: |
-      - TWEAKED: checkbox, radio-button
-      - ADDED: dropdown-sm, chevron-sm, sort, ellipsis
-  - version: 2.0.0-beta.4
-    changes: |
-      - ADDED: Notification icons.
-  - version: 2.0.0-beta.3
-    changes: |
-      - ADDED: Caps lock icons.
-      - ADDED: HEX links to colors section
-  - version: 2.0.0-beta.2
-    changes: |
-      - ADDED: checkbox tri-state, dropdown, font settings, list, lock, note, pivots, pointers, tip, and zooms.
-      - ADDED: class names for white and blue icons.
-      - TWEAKED: bolder line-weight for 18px and 24px.
-      - REMOVED: newspaper, pin, and suitcase.
-  - version: 2.0.0-beta.1
-    changes: |
-      New Pearson UI Icons
-  - version: 1.2.0-beta.1
-    changes: |
-      - ADDED: search-plus, search-minus, bell, clock-o
+      - ADDED: dropdown-sm, chevron-sm, sort, ellipsis, edit
+      - TWEAKED: checkbox, radio-button, help-outline, info-outline
+  - version: 2.0.0
+    changes: Updated icons to use new branding style
   - version: 1.1.0
     changes: |
       - ADDED: question-circle, caret-right, caret-down, light-bulb-o, and icons for archive action, plus reading, business case, video, and image content types

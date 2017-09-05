@@ -62,6 +62,10 @@
             {% endif %}
             {% assign processed = processed | push: component.title %}
 
+            {% if component.references %}
+              {% continue %}
+            {% endif %}
+
 
             {% assign versions = components | where: 'title', component.title %}
             {% assign max_major = 0 %}
@@ -165,6 +169,7 @@
             {% elsif latest_implemented_version | split: '-' | first == latest_version %}
               {% assign latest_implemented_version = latest_version %}
             {% endif %}
+
 
             <tr>
               <td>{{component.title}}</td>

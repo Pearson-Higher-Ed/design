@@ -594,7 +594,7 @@ blocks:
 changelog:
   - version: 2.1.0-beta.1
     changes: |
-      -
+      - ADDED: Small Bold Section UI Heading style
   - version: 2.0.0
     changes: |
       - CHANGED: Font family and size to match rebrand aesthetic
