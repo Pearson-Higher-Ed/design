@@ -164,11 +164,15 @@ blocks:
       : - 32px tall
         - 12px horizontal padding
         - [UI Text - Bold](/design/c/typography/v2.0.0/#rd-ui-text-bold)
-
-
     contents:
       - type: wide image
         src: ./assets/redline_size@2.png
+    exports:
+      - Standard/Large Button
+      - Small Button
+      - Medium Button
+      - Large Button
+      - Extra Large Button
 
 
   - type: two column
@@ -255,9 +259,9 @@ blocks:
 
   - type: style table
     styles:
-      - Standard/Large Button
-      - Medium Button
       - Small Button
+      - Large Button
+      - Extra Large Button
       - Primary Button
       - Default Button
       - CTA Button
