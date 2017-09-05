@@ -12,11 +12,10 @@ in public scope, but some will be privately scoped and require credentials to in
 * TOC
 {:toc}
 
-## SDKs
+## Elements SDK
 
-We plan to offer two SDKs which package a set of commonly used components together for easy installation and usage.
+We offer an SDK which packages together a set of commonly used components together for easy installation and usage.
 
-### Elements
 Elements SDK consists of pure CSS (precompiled from SCSS) and includes the core set of components for setting up a
 website with Elemental Design. This list includes components such as:
 
@@ -29,10 +28,6 @@ website with Elemental Design. This list includes components such as:
 In addition to the compiled CSS, Elements also installs the source SCSS files (and assets) in case you want to integrate
  it more directly into your existing build process. This also allows you to access some of the SCSS features in your own
 styles, such as the predefined color variables. Read more on [Github][ghub] or in the [developer documentation][ddocs].
-
-### Compounds
-Compounds SDK will include commonly used components that leverage javascript for enhanced functionality and interactivity.
- This SDK is in progress.
 
 [elements]: https://www.npmjs.com/package/pearson-elements
 [npm-org]: https://www.npmjs.com/~pearson-ux
