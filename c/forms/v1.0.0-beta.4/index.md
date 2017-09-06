@@ -59,7 +59,7 @@ blocks:
       See error handling for more detail.
 
       ### Input Fields
-      One or more input fields from the input component may be included in the form. Currently, these will all occupy 100% of the form width and stack with 32px of spacing between them.
+      One or more input fields from the input component may be included in the form. Currently, these will all occupy 100% of the form width and stack with 36px of spacing between them.
 
       ### Next/Submit Button
       This button should start out as a [default button](/design/c/buttons/v2.0.0-beta.4/#rd-default-button) and become a [primary](/design/c/buttons/v2.0.0-beta.4/#rd-primary-button) or [CTA](/design/c/buttons/v2.0.0-beta.4/#rd-cta-button) button once the form has been completely filled out.
@@ -96,13 +96,13 @@ blocks:
     contents:
     - type: narrow image
       src: ./assets/form_mobile.png
-      caption: Example of basic form in mobile screen
+      caption: Example of basic form
     - type: narrow image
       src: ./assets/form_mobile_sections.png
-      caption: Example of form group in mobile screen
+      caption: Example of form group
     - type: narrow image
       src: ./assets/form_mobile_error.png
-      caption: Example of form error in mobile screen
+      caption: Example of form error
 
   - type: section
     name: Error Handling
@@ -128,15 +128,22 @@ blocks:
     text: |
 
       Typography
-      : - Form name is some [Section UI Heading](/design/c/typography/v2.0.0-beta.7/#rd-ui-headings-section-basic), defaults to basic
+      : - Form name is [Section UI Heading](/design/c/typography/v2.0.0-beta.7/#rd-ui-headings-section-basic), defaults to basic
 
-      Spacing
+      Spacing - Medium devices or above
       : - 36px between Form Name and first input field
         - 36px between all inputs (this includes space dedicated for one line of error text)
         - 52px between the last input and the Next/Submit button
         - For 2 column style, 20px between input fields
         - For multiple sections form, 16px above horizontal line and 26px below.
         - Form form with alert, 36px above and below the alert and form title/first input field.
+
+      Spacing - Small and extra small devices
+      : - 24px between Form Name and first input field
+        - 24px between all inputs (this includes space dedicated for one line of error text)
+        - 44px between the last input and the Next/Submit button
+        - For multiple sections form, 16px above horizontal line and 24px below.
+        - Form form with alert, 24px above and below the alert and form title/first input field.
 
       Honzontal line
       : - 1px [Concrete](/design/c/colors/v2.1.0/#rd-concrete)
@@ -148,6 +155,8 @@ blocks:
         src: ./assets/redlines_form_sections.png
       - type: wide image
         src: ./assets/redlines_form_error.png
+      - type: wide image
+        src: ./assets/redlines_form_mobile.png
 
 changelog:
   - version: 1.0.0-beta.4
