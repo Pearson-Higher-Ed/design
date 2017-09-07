@@ -2,9 +2,9 @@
 layout: component-yaml
 title: Typography
 section: Components
-version: 2.1.0-beta.1
+version: 2.1.0-beta.2
 rebranded: true
-status: deprecated
+status: active
 implemented: true
 people:
   - role: Product Owner
@@ -62,6 +62,7 @@ blocks:
       - type: wide image
         src: ./assets/ui.text.example.png
         caption: Examples of how UI Text is used.
+        border: true
 
   - type: two column
     text: |
@@ -102,9 +103,11 @@ blocks:
       - type: wide image
         src: ./assets/section.ui.heading.example.png
         caption: Example of Section UI Heading usage.
+        border: true
       - type: wide image
         src: ./assets/page.ui.heading.example.png
         caption: Example of Page UI Heading usage.
+        border: true
 
   - type: two column
     text: |
@@ -592,6 +595,9 @@ blocks:
       - code, kbd tags
 
 changelog:
+  - version: 2.1.0-beta.2
+    changes: |
+      - CHANGED: Example images to match current designs
   - version: 2.1.0-beta.1
     changes: |
       - ADDED: Small Bold Section UI Heading style
