@@ -7,10 +7,10 @@ section: Components
 title: Progress Bar
 
 # Status of the component (e.g. experimental, deprecated, etc.)
-status: deprecated
+status: active
 
 # Version (follow the component versioning guide)
-version: 2.0.0-beta.1
+version: 2.0.0-beta.2
 
 # List the people involved
 people:
@@ -72,6 +72,27 @@ blocks:
         src: ./assets/progress.bars.png
 
   - type: section
+    name: Options
+
+  - type: two column
+    text: |
+      ### Alternative text alignment
+      The progress bar label is centered by default, but can be either left or right aligned if needed.
+    contents:
+      - type: narrow image
+        src: ./assets/left.aligned.png
+      - type: narrow image
+        src: ./assets/right.aligned.png
+
+  - type: two column
+    text: |
+      ### Loading animation
+      For situations where the process is likely to stall at one or more points for more than a second or two, an animation can be used to indicate that the system is still functioning.
+    contents:
+      - type: narrow video
+        src: ./assets/animation.mp4
+
+  - type: section
     name: Redlines
     exports:
       - Determinate Progress Bar
@@ -87,6 +108,11 @@ blocks:
 # Required. List out each version of the component and the changes made. Make
 # sure to follow the component versioning guide.
 changelog:
+  - version: 2.0.0-beta.2
+    changes: |
+      - ADDED: Alternate text alignment options
+      - ADDED: Animation option
+      - CHANGED: Visual style to make the progress vs track more distinct
   - version: 2.0.0-beta.1
     changes: |
       - CHANGED: Initial rebranding
