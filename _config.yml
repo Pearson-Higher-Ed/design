@@ -1,6 +1,7 @@
 name: UX Framework
 highlighter: rouge
 relative_permalinks: false
+url: http://pearson-higher-ed.github.io
 baseurl: /design
 permalink: pretty
 exclude: [scss, bower.json, Gruntfile.js, package.json, README.md]
