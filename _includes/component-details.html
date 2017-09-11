@@ -229,11 +229,20 @@
 
     {% for block in page.blocks %}
     <div class="block">
-      {% for export in block.exports %}
-      <div id="rd-{{export | slugify}}"></div>
-      {% endfor %}
       {% for feature in block.features %}
-        <div id="{{feature.id}}"></div>
+        <div id="{{page.title | slugify}}--{{feature | slugify}}"></div>
+      {% endfor %}
+      {% for feature in block.redlines %}
+        <div
+          id="{{page.title | slugify}}--{{feature | slugify}}-redlines">
+        </div>
+      {% endfor %}
+
+      {% comment %}
+      The exports tag is now deprecated in favor of features
+      {% endcomment %}
+      {% for export in block.exports %}
+        <div id="rd-{{export | slugify}}"></div>
       {% endfor %}
 
 
@@ -254,13 +263,14 @@
           {{block.text | markdownify}}
 
           {% for feature in block.features %}
-            <div class="feature" id="test">
-              {{feature.name}} <span id="{{feature.id}}-ddown"></span>
+            {% capture feature_id %}{{page.title | slugify}}--{{feature | slugify}}{% endcapture %}
+            <div class="feature" id="{{feature_id}}">
+              {{feature}} <span id="{{feature_id}}-ddown"></span>
             </div>
             <script type="text/javascript">
               var handleFeatureDropdown = function(featureID) {
                 return function(clicked) {
-                  var redlineHash = '#rd-{{feature.id | slugify}}'
+                  var redlineHash = '#{{feature_id}}-redlines'
 
                   switch (clicked) {
                     case 'Dev docs':
@@ -268,6 +278,8 @@
                     case 'Redlines':
                       location.hash = redlineHash
                       break;
+                    case 'Copy link':
+                      copyToClipboard('{{site.url}}{{site.baseurl}}{{page.url}}#{{feature_id}}')
                     default:
                   }
                 }
@@ -277,13 +289,13 @@
                 {
                   dropdownControlLabel: 'Links for this feature',
                   presentationType: 'icon',
-                  list: ['Dev docs', 'Redlines'],
+                  list: ['Redlines', 'Copy link'],
                   alignRight: true,
-                  changeHandler: handleFeatureDropdown('{{feature.id}}')
+                  changeHandler: handleFeatureDropdown('{{feature_id}}')
                 }
               )
 
-              ReactDOM.render(el, document.getElementById('{{feature.id}}-ddown'))
+              ReactDOM.render(el, document.getElementById('{{feature_id}}-ddown'))
             </script>
           {% endfor %}
         </div>
