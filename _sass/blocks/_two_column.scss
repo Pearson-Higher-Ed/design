@@ -128,6 +128,14 @@
       ul {
         z-index: 999;
         right: 0;
+        list-style-type: none;
+      }
+
+      button {
+        background: none;
+        border: none;
+        padding: none;
+        margin: none;
       }
     }
 

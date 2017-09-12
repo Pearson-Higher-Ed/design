@@ -268,6 +268,11 @@
               {{feature}} <span id="{{feature_id}}-ddown"></span>
             </div>
             <script type="text/javascript">
+
+              var redlineLink =
+                '{{site.baseurl}}{{page.url}}#{{feature_id}}-redlines'
+
+
               var handleFeatureDropdown = function(featureID) {
                 return function(clicked) {
                   var redlineHash = '#{{feature_id}}-redlines'
@@ -276,7 +281,6 @@
                     case 'Dev docs':
                       break;
                     case 'Redlines':
-                      location.hash = redlineHash
                       break;
                     case 'Copy link':
                       copyToClipboard('{{site.url}}{{site.baseurl}}{{page.url}}#{{feature_id}}')
@@ -285,21 +289,30 @@
                 }
               }
 
-              {% if page.no_redlines %}
-              var list = ['Copy link']
-              {% else %}
-              var list = ['Redlines', 'Copy link']
-              {% endif %}
+              var links = [
+                React.createElement(
+                  DropdownItem,
+                  {label: 'Copy link', type: 'button'}
+                )
+              ]
+
+              {% unless page.no_redlines %}
+                links.unshift(React.createElement(
+                  DropdownItem,
+                  {label: 'Redlines', type: 'link', url: redlineLink}
+                ))
+              {% endunless %}
 
               var el = React.createElement(
                 Dropdown,
                 {
-                  dropdownControlLabel: 'Links for this feature',
-                  presentationType: 'icon',
-                  list: list,
-                  alignRight: true,
+                  mobileTitle: 'Links for this feature',
+                  type: 'icon',
+                  label: 'icon text',
+                  id: 'fakeid',
                   changeHandler: handleFeatureDropdown('{{feature_id}}')
-                }
+                },
+                links
               )
 
               ReactDOM.render(el, document.getElementById('{{feature_id}}-ddown'))
