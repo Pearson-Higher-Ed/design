@@ -157,14 +157,14 @@ table {
 //
 
 a {
-  color: $pe-color-link;
+  color: $pe-color-digital-pearson-blue;
   text-decoration: underline;
 
   &:hover,
   &:active,
   &:focus,
   &.active {
-    color: $pe-color-link-hover;
+    color: $pe-color-ink-blue;
     text-decoration: none;
   }
 }
