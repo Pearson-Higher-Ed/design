@@ -122,6 +122,15 @@
       margin-top: 10px;
     }
 
+    .dropdown-container {
+      width: auto;
+
+      ul {
+        z-index: 999;
+        right: 0;
+      }
+    }
+
     ul {
       padding-left: 0;
       margin: 2px 0 0 0;
