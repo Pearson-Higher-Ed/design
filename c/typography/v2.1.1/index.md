@@ -2,9 +2,9 @@
 layout: component-yaml
 title: Typography
 section: Components
-version: 2.1.0
+version: 2.1.1
 rebranded: true
-status: deprecated
+status: active
 implemented: true
 people:
   - role: Product Owner
@@ -74,6 +74,12 @@ blocks:
       - type: narrow image
         src: ./assets/ui.text.regular.png
         caption: The five UI Text types
+    features:
+      - Basic UI Text
+      - Small UI Text
+      - Bold UI Text
+      - Large UI Text
+      - Small Bold UI Text
 
   - type: two column
     text: |
@@ -117,6 +123,9 @@ blocks:
       - type: wide image
         src: ./assets/page.ui.heading.sizes.png
         caption: Standard Page UI Heading sizes.
+    features:
+      - Basic Page UI Heading
+      - Small Page UI Heading
 
   - type: two column
     text: |
@@ -127,6 +136,12 @@ blocks:
         src: ./assets/section.ui.heading.sizes.png
         caption: |
           Standard Section UI Heading types in single and multiline versions.
+    features:
+      - Basic Section UI Heading
+      - Small Section UI Heading
+      - Small Bold Section UI Heading
+      - Bold Section UI Heading
+      - Large Section UI Heading
 
   - type: two column
     text: |
@@ -164,6 +179,9 @@ blocks:
         src: ./assets/copy.basic.png
       - type: narrow image
         src: ./assets/copy.large.png
+    features:
+      - Basic Body Copy
+      - Large Body Copy
 
   - type: two column
     text: |
@@ -174,6 +192,9 @@ blocks:
         src: ./assets/copy.lists.ordered.png
       - type: narrow image
         src: ./assets/copy.lists.unordered.png
+    features:
+      - Ordered List
+      - Unordered List
 
   - type: two column
     text: |
@@ -182,6 +203,8 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/copy.code.png
+    features:
+      - Code
 
   - type: two column
     text: |
@@ -200,6 +223,13 @@ blocks:
       - type: wide image
         src: ./assets/headings.png
         caption: All six Copy Heading levels.
+    features:
+      - Copy Heading Level 1
+      - Copy Heading Level 2
+      - Copy Heading Level 3
+      - Copy Heading Level 4
+      - Copy Heading Level 5
+      - Copy Heading Level 6
 
 
 
@@ -230,6 +260,17 @@ blocks:
         src: ./assets/inline.1.png
       - type: narrow image
         src: ./assets/inline.2.png
+    features:
+      - Link
+      - Emphasis/Italic
+      - Strong/Bold
+      - Deleted/Strikethrough
+      - Inserted
+      - Inline quote
+      - Subscript
+      - Superscript
+      - Highlight
+      - Inline code
 
   - type: two column
     text: |
@@ -239,6 +280,10 @@ blocks:
       * `<small>` (note: this element is used to represent side-comments and small print, including copyright and legal text, independent of its styled presentation)
       * `<time>`
       * `<abbr>`
+    features:
+      - Small tag
+      - Time tag
+      - Abbreviation tag
 
 
 
@@ -279,33 +324,25 @@ blocks:
       Text uses a normal weight unless otherwise specified.
 
       Note that bold styles are actually displayed using the semibold variant of Open Sans. Visual design has chosen the semibold variant as more appropriate for our current aesthetic, but it should still be used in the same semantic way as a bold font. Calling these styles "Bold" (not "Semibold") future proofs the typography component, making it easy to switch to another font that might not have a semibold variant.
-
     contents:
       - type: narrow image
         src: ./assets/redlines.ui.text.regular.png
-    exports:
-      - UI Text - Basic
-      - UI Text - Small
-      - UI Text - Small Bold
-      - UI Text - Large
-      - UI Text - Bold
-
-  - type: style table
-    styles:
-      - UI Text - Basic
-      - UI Text - Small
-      - UI Text - Small Bold
-      - UI Text - Large
-      - UI Text - Bold
+    redlines:
+      - Basic UI Text
+      - Small UI Text
+      - Bold UI Text
+      - Large UI Text
+      - Small Bold UI Text
 
   - type: two column
     text: |
       ### Section UI Headings
-    exports:
-      - UI Headings - Section - Basic
-      - UI Headings - Section - Small
-      - UI Headings - Section - Bold
-      - UI Headings - Section - Large
+    redlines:
+      - Basic Section UI Heading
+      - Small Section UI Heading
+      - Small Bold Section UI Heading
+      - Bold Section UI Heading
+      - Large Section UI Heading
 
   - type: two column
     text: |
@@ -340,20 +377,12 @@ blocks:
         src: ./assets/redlines.ui.heading.section.regular.png
         caption: Regular title sizes
 
-  - type: style table
-    styles:
-      - UI Headings - Section - Basic
-      - UI Headings - Section - Small
-      - UI Headings - Section - Small Bold
-      - UI Headings - Section - Bold
-      - UI Headings - Section - Large
-
   - type: two column
     text: |
       ### Page UI Headings
-    exports:
-      - UI Headings - Page - Basic
-      - UI Headings - Page - Small
+    redlines:
+      - Basic Page UI Heading
+      - Small Page UI Heading
 
   - type: two column
     text: |
@@ -373,11 +402,6 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/redlines.ui.heading.page.regular.png
-
-  - type: style table
-    styles:
-      - UI Headings - Page - Basic
-      - UI Headings - Page - Small
 
   - type: two column
     text: |
@@ -407,9 +431,9 @@ blocks:
       - type: narrow image
         src: ./assets/redlines.copy.large.png
         caption: Large body copy
-    exports:
-      - Basic Body
-      - Large Body
+    redlines:
+      - Basic Body Copy
+      - Large Body Copy
 
   - type: two column
     text: |
@@ -432,7 +456,7 @@ blocks:
         src: ./assets/redlines.copy.lists.ordered.png
       - type: narrow image
         src: ./assets/redlines.copy.lists.unordered.png
-    exports:
+    redlines:
       - Ordered List
       - Unordered List
 
@@ -450,15 +474,7 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/redlines.copy.code.png
-    exports:
-      - Code
-
-  - type: style table
-    styles:
-      - Basic Body
-      - Large Body
-      - Ordered List
-      - Unordered List
+    redlines:
       - Code
 
   - type: two column
@@ -501,21 +517,13 @@ blocks:
       - type: wide image
         src: ./assets/redlines.headings.png
     exports:
-      - Heading Level 1
-      - Heading Level 2
-      - Heading Level 3
-      - Heading Level 4
-      - Heading Level 5
-      - Heading Level 6
+      - Copy Heading Level 1
+      - Copy Heading Level 2
+      - Copy Heading Level 3
+      - Copy Heading Level 4
+      - Copy Heading Level 5
+      - Copy Heading Level 6
 
-  - type: style table
-    styles:
-      - Heading Level 1
-      - Heading Level 2
-      - Heading Level 3
-      - Heading Level 4
-      - Heading Level 5
-      - Heading Level 6
 
   - type: two column
     text: |
@@ -569,32 +577,26 @@ blocks:
         src: ./assets/redlines.inline.1.png
       - type: narrow image
         src: ./assets/redlines.inline.2.png
-    exports:
-      - small, time, abbr tags
-      - Links
-      - Highlighted Text
-      - Italic Text
-      - Bold Text
-      - Deleted Text
-      - Inserted Text
-      - Superscript, Subscript
-      - Inline Quoted Text
-      - code, kbd tags
+    redlines:
+      - Link
+      - Emphasis/Italic
+      - Strong/Bold
+      - Deleted/Strikethrough
+      - Inserted
+      - Inline quote
+      - Subscript
+      - Superscript
+      - Highlight
+      - Inline code
+      - Small tag
+      - Time tag
+      - Abbreviation tag
 
-  - type: style table
-    styles:
-      - small, time, abbr tags
-      - Links
-      - Highlighted Text
-      - Italic Text
-      - Bold Text
-      - Deleted Text
-      - Inserted Text
-      - Superscript, Subscript
-      - Inline Quoted Text
-      - code, kbd tags
 
 changelog:
+  - version: 2.1.1
+    changes: |
+      - ADDED: Feature links
   - version: 2.1.0
     changes: |
       - ADDED: Small Bold Section UI Heading style
