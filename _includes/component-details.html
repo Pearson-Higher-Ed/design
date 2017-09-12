@@ -284,12 +284,19 @@
                   }
                 }
               }
+
+              {% if page.no_redlines %}
+              var list = ['Copy link']
+              {% else %}
+              var list = ['Redlines', 'Copy link']
+              {% endif %}
+
               var el = React.createElement(
                 Dropdown,
                 {
                   dropdownControlLabel: 'Links for this feature',
                   presentationType: 'icon',
-                  list: ['Redlines', 'Copy link'],
+                  list: list,
                   alignRight: true,
                   changeHandler: handleFeatureDropdown('{{feature_id}}')
                 }
