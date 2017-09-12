@@ -3,8 +3,8 @@ layout: component-yaml
 title: Colors
 section: Components
 redirect_from: /docs/ui-components/colors/
-version: 3.0.0
-status: deprecated
+version: 3.0.1
+status: active
 implemented: true
 implementation: https://github.com/Pearson-Higher-Ed/elements/
 people:
@@ -19,6 +19,8 @@ people:
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1UmxPd4C895le-5PxkKoYrlxJ2WXlpZcftp44Pn6qkWQ/edit?usp=sharing
+
+no_redlines: true
 
 tagline: |
   Every color used in the Elemental Design library is defined in this component.
@@ -147,11 +149,7 @@ colors:
 blocks:
   - type: section
     name: Primary Palette
-    exports:
-      - Digital Pearson Blue
-      - Ink Blue
-      - White
-      - White Gray
+
 
   - type: two column
     text: |
@@ -163,14 +161,14 @@ blocks:
           - Ink Blue
           - White
           - White Gray
+    features:
+      - Digital Pearson Blue
+      - Ink Blue
+      - White
+      - White Gray
 
   - type: section
     name: Secondary Palette
-    exports:
-      - Sunshine Yellow
-      - Sunflower Yellow
-      - Digital Ice Blue
-      - Digital Marine Turquoise
 
   - type: two column
     text: |
@@ -182,15 +180,14 @@ blocks:
           - Sunflower Yellow
           - Digital Ice Blue
           - Digital Marine Turquoise
+    features:
+      - Sunshine Yellow
+      - Sunflower Yellow
+      - Digital Ice Blue
+      - Digital Marine Turquoise
 
   - type: section
     name: Neutral Palette
-    exports:
-      - Charcoal
-      - Medium Gray
-      - Concrete
-      - Alto
-      - Moonlight
 
   - type: two column
     text: |
@@ -203,12 +200,15 @@ blocks:
           - Concrete
           - Alto
           - Moonlight
+    features:
+      - Charcoal
+      - Medium Gray
+      - Concrete
+      - Alto
+      - Moonlight
 
   - type: section
     name: Conditional Palette
-    exports:
-      - Strawberry Red
-      - Digital Grass Green
 
   - type: two column
     text: |
@@ -219,30 +219,15 @@ blocks:
           - Strawberry Red
           - Digital Grass Green
           - Hot Pink
-
-  - type: section
-    name: Exported Styles
-
-  - type: style table
-    styles:
-      - Digital Pearson Blue
-      - Ink Blue
-      - White
-      - White Gray
-      - Sunshine Yellow
-      - Sunflower Yellow
-      - Digital Ice Blue
-      - Charcoal
-      - Medium Gray
-      - Concrete
-      - Alto
-      - Moonlight
+    features:
       - Strawberry Red
       - Digital Grass Green
       - Hot Pink
-      - Digital Marine Turquoise
 
 changelog:
+  - version: 3.0.1
+    changes: |
+      - ADDED: Feature links
   - version: 3.0.0
     changes: |
       - REMOVED: Brackish Turquoise

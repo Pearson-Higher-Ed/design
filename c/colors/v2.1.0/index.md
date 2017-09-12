@@ -4,7 +4,7 @@ title: Colors
 section: Components
 redirect_from: /docs/ui-components/colors/
 version: 2.1.0
-status: active
+status: deprecated
 implemented: true
 implementation: https://github.com/Pearson-Higher-Ed/elements/
 people:
