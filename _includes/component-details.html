@@ -495,3 +495,19 @@
     </div>
   </div>
 </div>
+
+{% if jekyll.environment != 'production' %}
+  <script type="text/javascript">
+    var links = document.querySelectorAll('.block a')
+    links.forEach(function(link) {
+      var href = link.href
+      console.log(href)
+      var crossLinkRegex =
+        /http\:\/\/pearson-higher-ed\.github\.io\/design\/c\//
+      if (crossLinkRegex.test(href)) {
+        console.log('tested', href.substr(34))
+        link.setAttribute('href', href.substr(34))
+      }
+    })
+  </script>
+{% endif %}
