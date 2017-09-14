@@ -4,8 +4,8 @@ title: Avatar Display
 section: Components
 sdk: stand_alone
 redirect_from: /docs/ui-components/avatar-display/
-version: 1.0.0
-status: deprecated
+version: 1.0.1
+status: active
 implemented: true
 implementation: https://github.com/Pearson-Higher-Ed/avatar-display/
 people:
@@ -65,6 +65,8 @@ blocks:
       - type: narrow image
         src: ./assets/circle-photo.png
         caption: Photo Avatar
+    features:
+      - Large Avatar
 
   - type: two column
     text: |
@@ -79,6 +81,8 @@ blocks:
       - type: narrow image
         src: ./assets/circle-photo-sm.png
         caption: Photo Avatar
+    features:
+      - Small Avatar
 
   - type: section
     name: Redlines
@@ -95,8 +99,10 @@ blocks:
       : - Border Radius: 50%
 
     contents:
-    - type: narrow image
-      src: ./assets/circle-photo-red.png
+      - type: narrow image
+        src: ./assets/circle-photo-red.png
+    redlines:
+      - Large Avatar
 
   - type: two column
     text: |
@@ -110,10 +116,15 @@ blocks:
       : - Border Radius: 50%
 
     contents:
-    - type: narrow image
-      src: ./assets/circle-photo-sm-red.png
+      - type: narrow image
+        src: ./assets/circle-photo-sm-red.png
+    redlines:
+      - Small Avatar
 
 changelog:
+  - version: 1.0.1
+    changes: |
+      - ADDED: Add feature links
   - version: 1.0.0
     changes: Initial version
 ---
