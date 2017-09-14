@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Inputs
 section: Components
-status: deprecated
-version: 2.1.0-beta.5
+status: active
+version: 2.1.0-beta.6
 rebranded: true
 implemented: false
 people:
@@ -80,7 +80,7 @@ blocks:
     text: |
       **Error** is when the field's content has some sort of error.
 
-      **Error (Focused)** is the focused version of the error state. Note that in almost every case an error state should be accompanied by explanatory text. See the [Info/Error Text section](#information-error-text) section for more details.
+      **Error (focused)** is the focused version of the error state. Note that in almost every case an error state should be accompanied by explanatory text. See the [Info/Error Text section](#information-error-text) section for more details.
     contents:
       - type: wide image
         src: ./assets/Inputs_error.png
@@ -278,10 +278,10 @@ blocks:
         - Error text is [Small UI Text](/design/c/typography/v2.1.0/#rd-ui-text-small) in [Strawberry Red (#db0020)](/design/c/colors/v2.1.0/#rd-strawberry-red)
         - Error text is 3px below the field
 
-      Focused Error
+      Error (focused)
       : - [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red) shadow with 4px blur
 
-      Readonly
+      Read only
       : - No input box
         - [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic) in [Charcoal](/design/c/colors/v2.0.0-beta.5/#rd-charcoal)
         - 8px below label
@@ -317,7 +317,7 @@ blocks:
 
         - The underline should animate out from the center of the input once the user clicks into the field
 
-      Readonly
+      Read only
       : - No underline or other decoration
         - Value is 8px below the label
 
@@ -331,7 +331,7 @@ blocks:
         - Error text is 3px below the underline
         - Underline is 1px solid [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
 
-      Focused Error
+      Error (focused)
       : - Underline is 4px solid [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
         - Underline is 7px below value
 
@@ -487,6 +487,9 @@ blocks:
         src: ./assets/redlines.password.showhide.png
 
 changelog:
+  - version: 2.1.0-beta.6
+    changes: |
+      - CHANGED:
   - version: 2.1.0-beta.5
     changes: |
       - FIXED: Redlines removed references to the turquoise color
