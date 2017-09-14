@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Footer
 section: Components
-version: 1.0.0
-status: deprecated
+version: 1.0.1
+status: active
 implemented: true
 people:
   - role: Interaction Design
@@ -17,9 +17,9 @@ downloads:
     link: ./assets/footer.sketch
 dependencies:
   - name: Colors
-    version: 2.0.0
+    version: 3.0.1
   - name: Typography
-    version: 2.0.0
+    version: 2.1.1
 
 tagline: |
   Makes policy information available on signed out pages.
@@ -54,7 +54,7 @@ blocks:
   - type: two column
     text: |
       ### Responsive behavior
-      At [small](/design/c/breakpoints/v1.0.0/#rd-small) [extra small](/design/c/breakpoints/v1.0.0/#rd-extra-small) breakpoints the copyright declaration moves to it's own line.
+      At [small](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--small) [extra small](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--extra-small) breakpoints the copyright declaration moves to it's own line.
     contents:
       - type: wide image
         src: ./assets/responsive.footer.png
@@ -75,13 +75,13 @@ blocks:
   - type: two column
     text: |
       Typography
-      : - [UI Text - Basic](/design/c/typography/v2.0.0/#rd-ui-text-basic) for all text at normal viewports
-        - Copyright declaration is [UI Text - Small](/design/c/typography/v2.0.0/#rd-ui-text-small) for [Small](/design/c/breakpoints/v1.0.0/#rd-small) and [Extra Small](/design/c/breakpoints/v1.0.0/#rd-extra-small) breakpoints
-        - Standard [Link Styles](/design/c/typography/v2.0.0/#rd-links)
+      : - [UI Text - Basic](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-ui-text) for all text at normal viewports
+        - Copyright declaration is [UI Text - Small](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--small-ui-text) for [Small](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--small) and [Extra Small](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--extra-small) breakpoints
+        - Standard [Link Styles](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--link)
 
       Colors
       : - Use standard typography colors for the basic footer
-        - Use [White](/design/c/colors/v2.0.0/#rd-white) for all text in the dark mode
+        - Use [White](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--white) for all text in the dark mode
 
       Spacing
       : - Footer should appear 24px above the bottom of the page
@@ -92,6 +92,9 @@ blocks:
 
 
 changelog:
+  - version: 1.0.1
+    changes: |
+      - ADDED: Feature links
   - version: 1.0.0
     changes: Initial version
 ---
