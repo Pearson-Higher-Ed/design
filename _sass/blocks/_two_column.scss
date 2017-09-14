@@ -327,23 +327,14 @@
 
     table {
       width: 100%;
+      @extend .pe-table;
+
+      thead, tbody {
+        background-color: $pe-color-white-gray;
+      }
 
       & + table {
-        margin-top: 40px;
-      }
-
-      td {
-        @extend .pe-label;
-        border: 1px solid $pe-color-moonlight;
-      }
-
-      th, td {
-        padding: 10px;
-        vertical-align: middle;
-      }
-
-      tbody tr:hover {
-        background-color: $pe-color-moonlight;
+        margin-top: 80px;
       }
     }
   }
