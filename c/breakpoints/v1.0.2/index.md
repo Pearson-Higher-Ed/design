@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Breakpoints
 section: Components
-version: 1.0.1
+version: 1.0.2
 status: active
 implemented: true
 people:
@@ -15,9 +15,9 @@ people:
 
 implementation: https://github.com/Pearson-Higher-Ed/elements/
 
+no_redlines: true
+
 downloads:
-  - name: Sketch
-    link: c/grid/v1.0.1/assets/Grid.sketch
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/11qC5a1zLuu5lreiNUSSX3djjS_KGsZxvg7H5TRyvFeU/edit?usp=sharing
 
@@ -52,7 +52,7 @@ blocks:
           | md   | 768px  | 1024px  |
           | lg   | 1024px | 1280px  |
           | xl   | 1280px | &infin; |
-    exports:
+    features:
       - Extra Small
       - Small
       - Medium
@@ -107,19 +107,11 @@ blocks:
           | Nexus 9 (Landscape)            | 1024px         | Large       |
           | Galaxy Tab 10 (Landscape)      | 1280px         | Extra large |
 
-  - type: section
-    name: Exported Styles
-
-  - type: style table
-    styles:
-      - Extra Small
-      - Small
-      - Medium
-      - Large
-      - Extra Large
-
 changelog:
-
+  - version: 1.0.2
+    changes: |
+      - ADDED: Feature links
+      - REMOVED: Non-functional sketch download link
   - version: 1.0.1
     changes: |
       - ADDED: Added sketch file featuring art boards with grid layout setup for easier consumption.
