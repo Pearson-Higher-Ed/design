@@ -113,15 +113,7 @@
     @extend %pe-textLabelInput__label;
     color : $textInput-error-focus-label-color;
   }
-
-  .pe-textLabelInput__label--label-disabled {
-    @extend %pe-textLabelInput__label;
-    color : $textInput-disable-text-color;
-  }
-
 };
-
-
 
 
 

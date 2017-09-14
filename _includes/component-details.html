@@ -58,28 +58,30 @@
         {% else %}
           {% for download in page.downloads %}
             {% if download.link contains '.sketch' %}
-              {% capture url %}{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{download.link}}{% endcapture %}
+              {% capture sketch_file %}{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{download.link}}{% endcapture %}
               {% break %}
             {% endif %}
           {% endfor %}
         {% endif %}
 
-        <a class="pe-btn__primary--btn_xlarge sketch" href="{{ url }}">
-          <svg style="vertical-align: baseline;"
-               aria-hidden="true"
-               focusable="false"
-               viewBox="0 0 18 18"
-               xmlns="http://www.w3.org/2000/svg"
-               xmlns:xlink="http://www.w3.org/1999/xlink"
-               class="pe-icon--download-18">
-            <path d="M13,15 L4,15 C3.448,15 3,15.447 3,16 C3,16.553 3.448,17 4,17 L13,17 C13.552,17 14,16.553 14,16 C14,15.447 13.552,15 13,15" id="icon"></path>
-            <path d="M8.85446312,13.854 C8.66046312,14.049 8.34146312,14.049 8.14646312,13.854 L3.14746312,8.852 C2.83246312,8.537 3.05546312,8 3.50146312,8 L6.00046312,8 L6.00046312,2.5 C6.00046312,2.224 6.22446312,2 6.50046312,2 L10.5004631,2 C10.7764631,2 11.0004631,2.224 11.0004631,2.5 L11.0004631,8 L13.5004631,8 C13.9454631,8 14.1684631,8.537 13.8544631,8.852 L8.85446312,13.854 Z" id="icon"></path>
-          </svg>
-          Sketch File
-        </a>
+        {% if sketch_file %}
+          <a class="pe-btn__primary--btn_large sketch" href="{{ sketch_file }}">
+            <svg style="vertical-align: baseline;"
+                 aria-hidden="true"
+                 focusable="false"
+                 viewBox="0 0 18 18"
+                 xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink"
+                 class="pe-icon--download-18">
+              <path d="M13,15 L4,15 C3.448,15 3,15.447 3,16 C3,16.553 3.448,17 4,17 L13,17 C13.552,17 14,16.553 14,16 C14,15.447 13.552,15 13,15" id="icon"></path>
+              <path d="M8.85446312,13.854 C8.66046312,14.049 8.34146312,14.049 8.14646312,13.854 L3.14746312,8.852 C2.83246312,8.537 3.05546312,8 3.50146312,8 L6.00046312,8 L6.00046312,2.5 C6.00046312,2.224 6.22446312,2 6.50046312,2 L10.5004631,2 C10.7764631,2 11.0004631,2.224 11.0004631,2.5 L11.0004631,8 L13.5004631,8 C13.9454631,8 14.1684631,8.537 13.8544631,8.852 L8.85446312,13.854 Z" id="icon"></path>
+            </svg>
+            Sketch File
+          </a>
+        {% endif %}
 
         {% if page.implementation %}
-          <a href="{{ page.implementation }}" class="pe-btn__primary--btn_xlarge code">
+          <a href="{{ page.implementation }}" class="pe-btn__primary--btn_large code">
             <svg style="vertical-align: baseline;"
                  aria-hidden="true"
                  focusable="false"
@@ -94,7 +96,7 @@
             Code
           </a>
         {% else %}
-          <button disabled class="pe-btn--btn_xlarge">Code pending</button>
+          <button disabled class="pe-btn--btn_large">Code pending</button>
         {% endif %}
       </div>
     </div>
@@ -106,33 +108,24 @@
         <p class="pe-copy pe-copy--large tagline">{{page.tagline}}</p>
 
         <div class="buttons">
-          {% if page.sketch %}
-            {% assign sketch_file = page.sketch %}
-          {% else %}
-            {% for download in page.downloads %}
-              {% if download.link contains '.sketch' %}
-                {% assign sketch_file = download.link %}
-                {% break %}
-              {% endif %}
-            {% endfor %}
+          {% if sketch_file %}
+            <a class="pe-btn__primary--btn_large sketch" href="{{ sketch_file }}">
+              <svg style="vertical-align: baseline;"
+                   aria-hidden="true"
+                   focusable="false"
+                   viewBox="0 0 18 18"
+                   xmlns="http://www.w3.org/2000/svg"
+                   xmlns:xlink="http://www.w3.org/1999/xlink"
+                   class="pe-icon--download-18">
+                <path d="M13,15 L4,15 C3.448,15 3,15.447 3,16 C3,16.553 3.448,17 4,17 L13,17 C13.552,17 14,16.553 14,16 C14,15.447 13.552,15 13,15" id="icon"></path>
+                <path d="M8.85446312,13.854 C8.66046312,14.049 8.34146312,14.049 8.14646312,13.854 L3.14746312,8.852 C2.83246312,8.537 3.05546312,8 3.50146312,8 L6.00046312,8 L6.00046312,2.5 C6.00046312,2.224 6.22446312,2 6.50046312,2 L10.5004631,2 C10.7764631,2 11.0004631,2.224 11.0004631,2.5 L11.0004631,8 L13.5004631,8 C13.9454631,8 14.1684631,8.537 13.8544631,8.852 L8.85446312,13.854 Z" id="icon"></path>
+              </svg>
+              Sketch File
+            </a>
           {% endif %}
 
-          <a class="pe-btn__primary--btn_xlarge sketch" href="{{ url }}">
-            <svg style="vertical-align: baseline;"
-                 aria-hidden="true"
-                 focusable="false"
-                 viewBox="0 0 18 18"
-                 xmlns="http://www.w3.org/2000/svg"
-                 xmlns:xlink="http://www.w3.org/1999/xlink"
-                 class="pe-icon--download-18">
-              <path d="M13,15 L4,15 C3.448,15 3,15.447 3,16 C3,16.553 3.448,17 4,17 L13,17 C13.552,17 14,16.553 14,16 C14,15.447 13.552,15 13,15" id="icon"></path>
-              <path d="M8.85446312,13.854 C8.66046312,14.049 8.34146312,14.049 8.14646312,13.854 L3.14746312,8.852 C2.83246312,8.537 3.05546312,8 3.50146312,8 L6.00046312,8 L6.00046312,2.5 C6.00046312,2.224 6.22446312,2 6.50046312,2 L10.5004631,2 C10.7764631,2 11.0004631,2.224 11.0004631,2.5 L11.0004631,8 L13.5004631,8 C13.9454631,8 14.1684631,8.537 13.8544631,8.852 L8.85446312,13.854 Z" id="icon"></path>
-            </svg>
-            Sketch File
-          </a>
-
           {% if page.implementation %}
-            <a href="{{ page.implementation }}" class="pe-btn__primary--btn_xlarge code">
+            <a href="{{ page.implementation }}" class="pe-btn__primary--btn_large code">
               <svg style="vertical-align: baseline;"
                    aria-hidden="true"
                    focusable="false"
@@ -147,7 +140,7 @@
               Code
             </a>
           {% else %}
-            <button disabled class="pe-btn--btn_xlarge">Code pending</button>
+            <button disabled class="pe-btn--btn_large">Code pending</button>
           {% endif %}
         </div>
 
@@ -229,8 +222,20 @@
 
     {% for block in page.blocks %}
     <div class="block">
+      {% for feature in block.features %}
+        <div id="{{page.title | slugify}}--{{feature | slugify}}"></div>
+      {% endfor %}
+      {% for feature in block.redlines %}
+        <div
+          id="{{page.title | slugify}}--{{feature | slugify}}-redlines">
+        </div>
+      {% endfor %}
+
+      {% comment %}
+      The exports tag is now deprecated in favor of features
+      {% endcomment %}
       {% for export in block.exports %}
-      <div id="rd-{{export | slugify}}"></div>
+        <div id="rd-{{export | slugify}}"></div>
       {% endfor %}
 
 
@@ -247,7 +252,66 @@
 
       {% when 'two column' or 'two_column' %}
       <div class="two_column">
-        <div class="text">{{block.text | markdownify}}</div>
+        <div class="text">
+          {{block.text | markdownify}}
+
+          {% for feature in block.features %}
+            {% capture feature_id %}{{page.title | slugify}}--{{feature | slugify}}{% endcapture %}
+            <div class="feature" id="{{feature_id}}">
+              {{feature}} <span id="{{feature_id}}-ddown"></span>
+            </div>
+            <script type="text/javascript">
+
+              var redlineLink =
+                '{{site.baseurl}}{{page.url}}#{{feature_id}}-redlines'
+
+
+              var handleFeatureDropdown = function(featureID) {
+                return function(clicked) {
+                  var redlineHash = '#{{feature_id}}-redlines'
+
+                  switch (clicked) {
+                    case 'Dev docs':
+                      break;
+                    case 'Redlines':
+                      break;
+                    case 'Copy link':
+                      copyToClipboard('{{site.url}}{{site.baseurl}}{{page.url}}#{{feature_id}}')
+                    default:
+                  }
+                }
+              }
+
+              var links = [
+                React.createElement(
+                  DropdownItem,
+                  {label: 'Copy link', type: 'button'}
+                )
+              ]
+
+              {% unless page.no_redlines %}
+                links.unshift(React.createElement(
+                  DropdownItem,
+                  {label: 'Redlines', type: 'link', url: redlineLink}
+                ))
+              {% endunless %}
+
+              var el = React.createElement(
+                Dropdown,
+                {
+                  mobileTitle: 'Links for this feature',
+                  type: 'icon',
+                  label: 'icon text',
+                  id: 'fakeid',
+                  changeHandler: handleFeatureDropdown('{{feature_id}}')
+                },
+                links
+              )
+
+              ReactDOM.render(el, document.getElementById('{{feature_id}}-ddown'))
+            </script>
+          {% endfor %}
+        </div>
         <div class="content">
           {% for item in block.contents %}
             {% case item.type %}
@@ -425,76 +489,16 @@
   </div>
 </div>
 
-<script type="text/javascript">
-  document.addEventListener('DOMContentLoaded', function(e){
-
-    var toggleColor = function(div) {
-      var name = div.children.item(0).children.item(0);
-      var bar = div.children.item(0);
-      var details = div.children.item(1);
-      var state = div.dataset.state;
-      var border = div.dataset.border === 'true';
-
-      if (state === 'closed') {
-        Velocity(details, {marginTop: 0}, [200, 25]);
-        Velocity(name, {translateY: 70}, {
-          easing: [250, 30],
-          begin: function() {
-            if (border) {
-              Velocity(name, {borderLeftColorAlpha: 0}, {duration: 50, queue: false});
-            }
-          },
-          complete: function() {
-            if (border) {
-              Velocity(name, {
-                borderTopColor: "#d0d0d0",
-                borderTopColorAlpha: 1
-              }, {duration: 50, queue: false});
-              Velocity(bar, {
-                borderBottomColor: "#d0d0d0",
-                borderBottomColorAlpha: 1
-              }, {duration: 50, queue: false});
-            }
-          }
-        });
-        div.dataset.state = 'open';
-      } else {
-        Velocity(details, {marginTop: '-='+details.clientHeight}, [200, 25]);
-        Velocity(name, {translateY: [0, 70]}, {
-          easing: [250, 30],
-          begin: function(){
-            if (border) {
-              Velocity(bar, {borderBottomColorAlpha: 0}, {duration: 50, queue: false});
-              Velocity(name, {borderTopColorAlpha: 0}, {duration: 50, queue: false});
-            }
-          },
-          complete: function() {
-            if (border) {
-              Velocity(name, {
-                borderLeftColor: "#d0d0d0",
-                borderLeftColorAlpha: 1
-              }, {duration: 50, queue: false});
-            }
-          }
-        });
-
-        div.dataset.state = 'closed';
+{% if jekyll.environment != 'production' %}
+  <script type="text/javascript">
+    var links = document.querySelectorAll('.block a')
+    links.forEach(function(link) {
+      var href = link.href
+      var crossLinkRegex =
+        /http\:\/\/pearson-higher-ed\.github\.io\/design\/c\//
+      if (crossLinkRegex.test(href)) {
+        link.setAttribute('href', href.substr(34))
       }
-    };
-
-    var colors = document.querySelectorAll('.color');
-    for (var i = 0; i < colors.length; i++) {
-      colors[i].addEventListener('click', function(e) {
-
-        var open = document.querySelectorAll('[data-state="open"]');
-        for (var i = 0; i < open.length; i++) {
-          if (open[i] !== e.currentTarget) toggleColor(open[i]);
-        }
-
-        toggleColor(e.currentTarget);
-      });
-      toggleColor(colors[i]);
-    }
-
-  });
-</script>
+    })
+  </script>
+{% endif %}

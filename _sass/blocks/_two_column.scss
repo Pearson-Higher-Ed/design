@@ -108,6 +108,46 @@
     @include make-grid-child(4);
     float: left;
   }
+
+  .feature {
+    background-color: $pe-color-digital-ice-blue;
+    border-left: 8px solid $pe-color-digital-marine-turquoise;
+    padding: 6px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    & + script + .feature {
+      margin-top: 10px;
+    }
+
+    .dropdown-container {
+      width: auto;
+
+      ul {
+        z-index: 999;
+        right: 0;
+        list-style-type: none;
+      }
+
+      button {
+        background: none;
+        border: none;
+        padding: none;
+        margin: none;
+      }
+    }
+
+    ul {
+      padding-left: 0;
+      margin: 2px 0 0 0;
+
+      li {
+        margin: 0;
+      }
+    }
+  }
 }
 
 .content {
@@ -287,23 +327,14 @@
 
     table {
       width: 100%;
+      @extend .pe-table;
+
+      thead, tbody {
+        background-color: $pe-color-white-gray;
+      }
 
       & + table {
-        margin-top: 40px;
-      }
-
-      td {
-        @extend .pe-label;
-        border: 1px solid $pe-color-moonlight;
-      }
-
-      th, td {
-        padding: 10px;
-        vertical-align: middle;
-      }
-
-      tbody tr:hover {
-        background-color: $pe-color-moonlight;
+        margin-top: 80px;
       }
     }
   }

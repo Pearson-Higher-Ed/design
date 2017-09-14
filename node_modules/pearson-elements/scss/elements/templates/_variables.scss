@@ -1,4 +1,3 @@
-
 // Templates
 //
 
@@ -28,6 +27,11 @@ $pe-static-template-medium-width-breakpoints : (
   sm : 480px,
   md : 768px
 );
+
+$pe-template__single-10col-width : percentage(10 / $pe-columns);
+
+$pe-template__double--main_half-width    : percentage(6 / $pe-columns);
+$pe-template__double--sidebar_half-width : percentage(6 / $pe-columns);
 
 $pe-template__static-medium-xs-width               : percentage(12 / $pe-columns);
 $pe-template__static-medium-sm-width               : 440px;

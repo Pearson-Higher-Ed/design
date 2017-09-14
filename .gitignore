@@ -9,3 +9,4 @@ _site
 
 node_modules/*
 !node_modules/pearson-elements
+!node_modules/pearson-compounds
