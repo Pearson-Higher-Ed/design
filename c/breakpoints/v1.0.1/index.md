@@ -16,8 +16,6 @@ people:
 implementation: https://github.com/Pearson-Higher-Ed/elements/
 
 downloads:
-  - name: Sketch
-    link: c/grid/v1.0.1/assets/Grid.sketch
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/11qC5a1zLuu5lreiNUSSX3djjS_KGsZxvg7H5TRyvFeU/edit?usp=sharing
 
