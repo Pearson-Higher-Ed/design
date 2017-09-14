@@ -20,9 +20,7 @@ downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1gYypf7WpDkSSMsB29Qa9woJLdPsiwGIZ-u0LrH650Vs/edit?usp=sharing
   - name: Sketch
-    link: ./assets/typography.mockup.sketch
-  - name: Illustrator
-    link: ./assets/typography.mockup.ai
+    link: ./assets/typography.sketch
 
 tagline: This component provides standard typographic styles for the platform.
 features:
