@@ -37,7 +37,7 @@ usage_guidelines: |
 
 dependencies:
   - name: Colors
-    version: 3.0.0
+    version: 3.0.1
 
 blocks:
   - type: section
@@ -84,7 +84,7 @@ blocks:
   - type: two column
     text: |
       ### Color Variants
-      Use [Charcoal](/design/c/colors/v3.0.0/#rd-charcoal) as the default primary color and [Medium Gray](/design/c/colors/v3.0.0/#rd-medium-gray) as the secondary gray. Prefer these defaults, but labels can use any color from the [Colors component](/design/c/colors), as long as they are over an appropriately contrasting background color.
+      Use [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal) as the default primary color and [Medium Gray](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--medium-gray) as the secondary gray. Prefer these defaults, but labels can use any color from the [Colors component](/design/c/colors), as long as they are over an appropriately contrasting background color.
 
   - type: two column
     text: |
@@ -146,7 +146,7 @@ blocks:
   - type: two column
     text: |
       ### Color Variants
-      UI Headings follow the same color guidelines as UI Text, using [Charcoal](/design/c/colors/v3.0.0/#rd-charcoal) by default and [Medium Gray](/design/c/colors/v3.0.0/#rd-medium-gray) as a secondary supplement. Prefer these, but use other colors where appropriate (make sure to pair with an accessible background).
+      UI Headings follow the same color guidelines as UI Text, using [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal) by default and [Medium Gray](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--medium-gray) as a secondary supplement. Prefer these, but use other colors where appropriate (make sure to pair with an accessible background).
 
       ### Allowed Inline Elements
       In general, UI Headings should not be styled beyond the basic styles listed above. If necessary, stick to the following list of inline elements.
@@ -318,7 +318,7 @@ blocks:
         - 20px line-height
 
       #### Colors
-      Text is [Charcoal](/design/c/colors/v3.0.0/#rd-charcoal) by default, [Medium Gray](/design/c/colors/v3.0.0/#rd-medium-gray) should be used as the secondary color. Any other color can be used as long as it's paired with an appropriately contrasting background. See the [Colors](/design/c/colors) component for more details.
+      Text is [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal) by default, [Medium Gray](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--medium-gray) should be used as the secondary color. Any other color can be used as long as it's paired with an appropriately contrasting background. See the [Colors](/design/c/colors) component for more details.
 
       #### Weights
       Text uses a normal weight unless otherwise specified.
@@ -419,7 +419,7 @@ blocks:
         - 24px line-height
 
       Color
-      : - [Charcoal](/design/c/colors/v3.0.0/#rd-charcoal)
+      : - [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal)
 
       Margins:
       : - Adjacent paragraphs are separated by 12px
@@ -469,8 +469,8 @@ blocks:
         - 20px line-height
 
       Color
-      : - [White Gray](/design/c/colors/v3.0.0/#rd-white-gray)
-        - [Ink Blue](/design/c/colors/v3.0.0/#rd-ink-blue) background-color
+      : - [White Gray](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--white-gray)
+        - [Ink Blue](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--ink-blue) background-color
     contents:
       - type: narrow image
         src: ./assets/redlines.copy.code.png
@@ -501,7 +501,7 @@ blocks:
       : - Match Large UI Text style
 
       #### Colors
-      All Copy Headings are [Charcoal](/design/c/colors/v3.0.0/#rd-charcoal).
+      All Copy Headings are [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal).
 
       #### Spacing
 
@@ -516,7 +516,7 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/redlines.headings.png
-    exports:
+    redlines:
       - Copy Heading Level 1
       - Copy Heading Level 2
       - Copy Heading Level 3
@@ -532,12 +532,12 @@ blocks:
       : - No visual change, these elements have semantic meaning only
 
       `<a>`
-      : - Generic link = [Digital Pearson Blue](/design/c/colors/v3.0.0/#rd-digital-pearson-blue) and underline
-        - Hover link = [Ink Blue](/design/c/colors/v3.0.0/#rd-ink-blue), no underline
+      : - Generic link = [Digital Pearson Blue](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--digital-pearson-blue) and underline
+        - Hover link = [Ink Blue](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--ink-blue), no underline
         - Focus states use the default browser style, and also adopt the hover style
 
       `<mark>`
-      : - [Sunshine Yellow](/design/c/colors/v3.0.0/#rd-sunshine-yellow) background-color
+      : - [Sunshine Yellow](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--sunshine-yellow) background-color
         - Only use within Body Copy
 
       `<em>, <i>`
@@ -570,7 +570,7 @@ blocks:
 
       `<code>, <kbd>`
       : - Monospace font stack
-        - [Moonlight](/design/c/colors/v3.0.0/#rd-moonlight) background-color
+        - [Moonlight](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--moonlight) background-color
         - 4px horizontal padding
     contents:
       - type: narrow image
