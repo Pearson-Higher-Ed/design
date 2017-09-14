@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Buttons
 section: Components
-version: 2.1.3
+version: 2.2.1
 status: active
 implemented: true
 people:
@@ -16,13 +16,13 @@ downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1eSGAoNb7F1A8iA_DqLQfSP_TxzuV0V2yTAK8ksDeQBU/edit?usp=sharing
   - name: Sketch
-    link: ./assets/Buttons_1.sketch
+    link: ./assets/Buttons.sketch
 
 dependencies:
   - name: Colors
-    version: 2.1.0
+    version: 3.0.1
   - name: Typography
-    version: 2.0.0
+    version: 2.1.1
 
 tagline: Buttons communicate the action that will occur when the user trigger them.
 features:
@@ -45,12 +45,9 @@ blocks:
       - type: wide image
         src: ./assets/types@2.png
     features:
-      - name: Default Button
-        id: buttons--type--default
-      - name: Primary Button
-        id: buttons--type--primary
-      - name: CTA Button
-        id: buttons--type--cta
+      - Default Button
+      - Primary Button
+      - CTA Button
 
   - type: section
     name: Size
@@ -59,13 +56,17 @@ blocks:
     text: |
       There are three sizes of buttons:
 
-      * __Large (Standard):__ This is the default size. Use this size for touch devices to meet accessibility requirements.  
-      * __Medium:__ Medium buttons are only used to pair with equally sized input fields. Primary button is not available in this size.
-      * __Small:__ Only the default button style is available in this size.
+      * __Extra Large:__ Use this button for important actions that are the primary focus of a page, for example 'Sign in' or 'Create account'.
+      * __Large:__ The standard button size, prefer this button as a default size unless there is a reason to go up or down.
+      * __Small:__ Try to avoid using this size if possible, but it is available for space constrained situations.
 
     contents:
       - type: wide image
         src: ./assets/size@2.png
+    features:
+      - Extra Large Button
+      - Large Button
+      - Small Button
 
 
   - type: section
@@ -122,16 +123,14 @@ blocks:
 
   - type: two column
     text: |
-      Use a disabled button only if an action on the current screen can enable it (action possibility).  A disabled button should only appear when contextually relevant.  If the button is not needed for the task at hand, it should be hidden.  
-
-      If a bank of 2 or more buttons is present but can only be enabled by direct action on the same screen, it can be hidden and only shown when enabled to give emphasis of new controls available to the user.
+      Prefer to use a disabled button only if an action on the current screen can enable it (action possibility).
 
   - type: section
     name: Link style buttons
 
   - type: two column
     text: |
-      In situations where link styled text is to be used in place of a button for the purposes of de-emphasizing an action (visual hierarchy), link style buttons should be used.  The premise stands that links are to be used for navigation and buttons are to be used for actions.
+      In situations where link styled text is to be used in place of a button for the purposes of de-emphasizing an action (visual hierarchy), link style buttons should be used.  The premise stands that links are to be used for navigation and buttons are to be used for actions. Link buttons should not appear in a situation where they could be disabled.
 
     contents:
       - type: text
@@ -144,7 +143,7 @@ blocks:
 
             - Use link style buttons to trigger an action.
             - Indicate in design specification the presence of a link style button to your developer.
-            - Use the same [visual styling as link text](http://pearson-higher-ed.github.io/design/c/typography/)
+            - Use the same [visual styling as link text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--link)
 
           ### Don't:
             - Use link style buttons as part of a grouping with other buttons (button bars, save/cancel).
@@ -157,48 +156,51 @@ blocks:
   - type: two column
     text: |
       ### Sizes
-      Large (Standard)
+      Extra Large
       : - 44px tall
         - 20px horizontal padding
-        - 18px, Semibold (currently not in the UX Framework typography set)
+        - [UI Section Heading - Small Bold](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--small-bold-section-ui-heading)
 
-      Medium
+      Large
       : - 36px tall
         - 12px horizontal padding
-        - [UI Text - Bold](/design/c/typography/v2.0.0/#rd-ui-text-bold): 14px, Semibold
+        - [UI Text - Bold](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--bold-ui-text)
 
       Small
       : - 32px tall
         - 12px horizontal padding
-        - [UI Text - Bold](/design/c/typography/v2.0.0/#rd-ui-text-bold): 14px, Semibold
-
-
+        - [UI Text - Bold](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--bold-ui-text)
     contents:
       - type: wide image
         src: ./assets/redline_size@2.png
+    redlines:
+      - Small Button
+      - Large Button
+      - Extra Large Button
 
 
   - type: two column
     text: |
-      ### Corner radius: 2px
+      ### Corners
+      2px border radius
 
   - type: two column
     text: |
       ### Default buttons
 
       Normal
-      : - BG: [Moonlight (#E9E9E9)](/design/c/colors/v2.1.0/#rd-digital-moonlight)
-        - Text: [Medium Gray (#6a7070)](/design/c/colors/v2.1.0/#rd-medium-gray)
-        - Border: 1px [Concrete (#C7C7C7)](/design/c/colors/v2.1.0/#rd-concrete)
+      : - Background is [Moonlight](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--moonlight)
+        - Text is [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal)
+        - Border is 1px [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
 
       Hover/Active
-      : - BG: [Alto (#D9D9D9)](/design/c/colors/v2.1.0/#rd-alto)
-        - Text: [Medium Gray (#6a7070)](/design/c/colors/v2.1.0/#rd-medium-gray)
-        - Border: 1px [Concrete (#C7C7C7)](/design/c/colors/v2.1.0/#rd-concrete)
+      : - Background becomes [Alto](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--alto)
+        - Text and border are the same
 
       Disabled
-      : - BG: [Moonlight (#E9E9E9)](/design/c/colors/v2.1.0/#rd-digital-moonlight)
-        - Text: [Concrete (#C7C7C7)](/design/c/colors/v2.1.0/#rd-concrete)
+      : - Background remains [Moonlight](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--moonlight)
+        - Text is [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
+        - No border
 
       Focus
       : - Browser default style
@@ -206,9 +208,8 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/redline_types@2.png
-    exports:
+    redlines:
       - Default Button
-      - buttons--type--default
 
 
   - type: two column
@@ -216,12 +217,11 @@ blocks:
       ### Primary buttons
 
       Normal
-      : - BG: [Digital Marine Turquoise (#19A5A3)](/design/c/colors/v2.1.0/#rd-digital-marine-turquoise)
-        - Text: [White](/design/c/colors/v2.1.0/#rd-white)
+      : - Background is [Digital Pearson Blue](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--digital-pearson-blue)
+        - Text is [White](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--white)
 
       Hover/Active
-      : - BG: [Brackish Turquoise (#179599)](/design/c/colors/v2.1.0/#rd-brackish-turquoise)
-        - Text: [White](/design/c/colors/v2.1.0/#rd-white)
+      : - Background becomes [Ink Blue](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--ink-blue)
 
       Disabled
       : - No disabled state
@@ -229,21 +229,19 @@ blocks:
       Focus
       : - Browser default style
 
-    exports:
+    redlines:
       - Primary Button
-      - buttons--type--primary
 
   - type: two column
     text: |
       ### CTA button (Call To Action)
 
       Normal
-      : - BG: [Sunshine Yellow (#FFB81C)](/design/c/colors/v2.1.0/#rd-sunshine-yellow)
-        - Text: [Charcoal (#252525)](/design/c/colors/v2.1.0/#rd-charcoal)
+      : - Background is [Sunshine Yellow](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--sunshine-yellow)
+        - Text is [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal)
 
       Hover/Active
-      : - BG: [Sunflower Yellow (#FF9A19)](/design/c/colors/v2.1.0/#rd-sunflower-yellow)
-        - Text: [Charcoal (#252525)](/design/c/colors/v2.1.0/#rd-charcoal)
+      : - Background becomes [Sunflower Yellow](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--sunflower-yellow)
 
       Disabled
       : - No disabled state
@@ -251,28 +249,32 @@ blocks:
       Focus
       : - Browser default style
 
-    exports:
+    redlines:
       - CTA Button
-      - buttons--type--cta
 
   - type: two column
     text: |
-      ### Distance between buttons: 16px
+      ### Button Spacing
+      Buttons are 16px apart by default
 
     contents:
       - type: wide image
         src: ./assets/redline_distance@2.png
 
-  - type: style table
-    styles:
-      - Standard/Large Button
-      - Medium Button
-      - Small Button
-      - Primary Button
-      - Default Button
-      - CTA Button
-
 changelog:
+  - version: 2.2.1
+    changes: |
+      - ADDED: Feature links
+      - FIXED: Error in small CTA button image
+  - version: 2.2.0
+    changes: |
+      - CHANGED: Primary button color from Digital Marine Turquoise to Digital Pearson Blue
+      - CHANGED: Size names now reflect dev names (Large &rarr; Extra Large, Medium &rarr; Large)
+      - CHANGED: Default button size is now 'Large'
+      - CHANGED: Guidance to prefer disabled buttons vs hiding disabled actions
+      - CHANGED: Link style guidance disallows disabled version
+      - ADDED: Large and Small version of Primary and CTA buttons
+      - FIXED: Default button color restored to Charcoal
   - version: 2.1.2
     changes: |
       - FIXED: Typos and copy errors
