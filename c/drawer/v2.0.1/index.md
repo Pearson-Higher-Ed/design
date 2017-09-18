@@ -3,9 +3,9 @@ layout: component-yaml
 title: Drawer
 section: Components
 sdk: stand_alone
-version: 2.0.0
+version: 2.0.1
 rebranded: true
-status: deprecated
+status: active
 implemented: true
 implementation: https://github.com/Pearson-Higher-Ed/drawer/
 people:
@@ -15,21 +15,20 @@ people:
   - role: Designer
     name: Van Yang
     email: van.yang@pearson.com
-implementation: https://www.npmjs.com/package/pearson-elements
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1_v_Kv57A9blAQ1K7qEThcizcLAygdD1B_nl2LJ5TzqA/edit?usp=sharing
   - name: .sketch mockup
-    link: ./assets/drawer-1.0.sketch
+    link: ./assets/drawer.sketch
 dependencies:
   - name: Typography
-    version: 2.0.0-beta.9
+    version: 2.1.1
   - name: Icons
-    version: 2.0.0-beta.3
+    version: 2.3.0
   - name: Colors
-    version: 2.0.0-beta.6
+    version: 3.0.1
   - name: Breakpoints
-    version: 1.0.0
+    version: 1.0.2
 tagline: |
   The drawer component offers a convenient method for presenting secondary information which doesn't need to be immediately visible.
 features:
@@ -102,27 +101,27 @@ blocks:
       ### Basic View
       Spacing
       : - 30px side, 25px top and 30px bottom margins around the content area
-        - 25px vertical margins below the title area, 30px side margins
-        - Drawer is 320px wide at the [Small breakpoint](/design/c/breakpoints/v1.0.0/#rd-small) and wider
-        - Drawer is 100% width at the [Extra Small breakpoint](/design/c/breakpoints/v1.0.0/#rd-extra-small)
+        - 20px vertical margins below the title area, 30px side margins, 25px top margin
+        - Drawer is 320px wide at the [Small breakpoint](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--small) and wider
+        - Drawer is 100% width at the [Extra Small breakpoint](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--extra-small)
         - Dividing lines may extend past the content area, up to 100% width
 
       Background
-      : - Default background is [white](/design/c/colors/v1.0.1/#rd-white-ffffff), may customized to an accessible color and extend to 100% width.
-        - Border is 1px solid [alto (#D9D9D9)](/design/c/colors/v2.0.0-beta.5/#rd-alto)
+      : - Default background is [white](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--white), may customized to an accessible color and extend to 100% width.
+        - Border is 1px solid [alto (#D9D9D9)](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--alto)
 
       Typography
-      : - Title is a [Basic section heading](/design/c/typography/v2.0.0-beta.9/#rd-ui-headings-section-basic)
+      : - Title is a [Basic section heading](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-section-ui-heading)
 
       Icons
       : - Close icon is remove-sm-24
         - A focused icon will use the standard browser outline for focus
 
       Shadow
-      : - box-shadow: 0 3px 5px 0 rgba(199,199,199,0.70);
+      : - box-shadow of 5px blur, rgba(199,199,199,0.70) color
 
       Title Separator
-      : - 1px solid [alto (#D9D9D9)](/design/c/colors/v2.0.0-beta.5/#rd-alto)
+      : - 1px solid [alto](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--alto)
 
       Keyboard Shortcuts
       : - Pressing escape should close the drawer in any mode
@@ -145,6 +144,11 @@ blocks:
       Title
       : - Use a static "Back" label
         - Focusing the "< Back" element will use the standard browser outline for focus
+        - Uses [Bold UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--bold-ui-text) in [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal)
+
+      Spacing
+      : - Generally the same spacing as the basic view
+        - 28px above the title and 25px below the title (should keep the close icon in the same place)
 
       Icon
       : - Pearson Icon (chevron-back-18)
@@ -209,6 +213,9 @@ blocks:
       - Detail View
 
 changelog:
+  - version: 2.0.1
+    changes: |
+      - ADDED: Feature links
   - version: 2.0.0
     changes: Apply new brand to existing component.
   - version: 1.0.0
