@@ -4,8 +4,8 @@ title: Application Header
 section: Components
 sdk: stand_alone
 redirect_from: /docs/ui-components/application-header/
-version: 2.2.1
-status: deprecated
+version: 2.2.2
+status: active
 rebranded: true
 implemented: true
 people:
@@ -27,15 +27,15 @@ downloads:
 
 dependencies:
   - name: Colors
-    version: 2.1.0
+    version: 3.0.1
   - name: Typography
-    version: 2.0.0
+    version: 2.0.1
   - name: Breakpoints
-    version: 1.0.0
+    version: 1.0.2
   - name: Icons
-    version: 2.1.0
+    version: 2.3.0
   - name: Drawer
-    version: 2.0.0
+    version: 2.0.1
 
 tagline: |
   This component contains and displays global tools and navigation across the next gen platform.
@@ -65,6 +65,8 @@ blocks:
       - type: wide image
         src: ./assets/signed.out.mode.png
         caption: The signed out header has one style that works for every breakpoint.
+    features:
+      - Signed Out Mode
 
   - type: section
     name: Basic Mode
@@ -88,6 +90,8 @@ blocks:
       - type: narrow image
         src: ./assets/basic.mode.mobile.png
         caption: Mobile version of the header is slightly shorter.
+    features:
+      - Basic Mode
 
   - type: section
     name: Integration Mode
@@ -101,6 +105,8 @@ blocks:
       - type: wide image
         src: ./assets/integration.mode.png
         caption: Integration mode
+    features:
+      - Integration Mode
 
   - type: section
     name: Redlines
@@ -108,16 +114,12 @@ blocks:
   - type: two column
     text: |
       ### Signed Out Mode
-    exports:
-      - Signed Out Mode
-
-  - type: style table
-    styles:
+    redlines:
       - Signed Out Mode
 
   - type: two column
     text: |
-      #### ≥ 768px ([medium and larger viewports](/design/c/breakpoints/v1.0.0/#rd-medium))
+      #### ≥ 768px ([medium and larger viewports](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--medium))
 
       Logo link
       : - No active link
@@ -137,20 +139,20 @@ blocks:
         - Icons next to each other are positioned such that their tap zones are immediately adjacent
 
       Background
-      : - [White (#ffffff)](/design/c/colors/v2.1.0/#rd-white)
-        - 1px solid [Moonlight](/design/c/colors/v2.1.0/#rd-moonlight) bottom border
+      : - [White (#ffffff)](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--white)
+        - 1px solid [Moonlight](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--moonlight) bottom border
 
       Typography
-      : - Links are [Bold UI Text](/design/c/typography/v2.0.0/#rd-ui-text-bold) in [Medium Gray](/design/c/colors/v2.1.0/#rd-medium-gray)
+      : - Links are [Bold UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--bold-ui-text) in [Medium Gray](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--medium-gray)
 
       States
       : - Focusing an icon or link uses the default browser style
-        - Hovering or focusing an icon or link changes the color to [Charcoal (#252525)](/design/c/colors/v2.1.0/#rd-charcoal)
+        - Hovering or focusing an icon or link changes the color to [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal)
 
       Icons
       : - Help icon is [help-fill-18](/design/c/icons/v2.1.0)
 
-      #### < 768px ([Small and Extra Small viewports](/design/c/breakpoints/v1.0.0/#rd-small))
+      #### < 768px ([Small and Extra Small viewports](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--small))
 
       Dimensions
       : - 60px tall
@@ -163,18 +165,14 @@ blocks:
         src: ./assets/redlines.signed.out.mode.png
 
   - type: two column
-    exports:
-      - Basic Mode
     text: |
       ### Basic Mode
-
-  - type: style table
-    styles:
+    redlines:
       - Basic Mode
 
   - type: two column
     text: |
-      #### ≥ 768px ([M, L, and XL viewports](/design/c/breakpoints/v1.0.0/#rd-large))
+      #### ≥ 768px ([M, L, and XL viewports](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--large))
 
       Spacing and dimensions
       : - Follow Signed Out Mode specs
@@ -186,19 +184,19 @@ blocks:
       Notifications
       : - Uses [notification-18](/design/c/icons/v2.1.0) icon
         - Badge dimensions are 16px tall with 6px horizontal padding
-        - Active badge is Hot Pink (#DA0474) background with [White](/design/c/colors/v2.1.0/#rd-white) [Small Bold UI Text](/design/c/typography/v2.0.0/#rd-ui-text-small-bold)
-        - Inactive Badge is [White](/design/c/colors/v2.1.0/#rd-white) background with [Charcoal](/design/c/colors/v2.1.0/#rd-charcoal) text
-        - 2px [White](/design/c/colors/v2.1.0/#rd-white) outer border
+        - Active badge is [Hot Pink](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--hot-pink) background with [White](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--white) [Small Bold UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--small-bold-ui-text)
+        - Inactive Badge is [Alto](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--alto) background with [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal) text
+        - 2px [White](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--white) outer border
 
       Account Menu
       : - Opens the standard drawer (which will appear full height)
-        - Links are [Basic UI Text](/design/c/typography/v2.0.0/#rd-ui-text-basic) with the standard link style
+        - Links are [Basic UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-ui-text) with the standard link style
         - Sign out button is a Large Primary button
 
       States
       : - Same as Signed Out Mode
 
-      #### < 768px ([Small and Extra Small viewports](/design/c/breakpoints/v1.0.0/#rd-small))
+      #### < 768px ([Small and Extra Small viewports](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--small))
 
       Profile icon
       : - User's name replaced with profile-18 icon
@@ -212,15 +210,15 @@ blocks:
       ### Integration Mode
 
       Identical to signed out mode, without the 'Sign In' link.
-    exports:
-      - Integration Mode
-
-  - type: style table
-    styles:
+    redlines:
       - Integration Mode
 
 
 changelog:
+  - version: 2.2.2
+    changes: |
+      - ADDED: Feature links
+      - FIXED: Notification background color
   - version: 2.2.1
     changes: |
       - FIXED: Clarified redlines
