@@ -62,6 +62,8 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/basic.view.2x.png
+    features:
+      - Basic View
 
   - type: section
     name: Detail View
@@ -74,6 +76,7 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/detail.view.2x.png
+    features: Detail View
 
   - type: two column
     text: |
@@ -135,7 +138,7 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/redlines.basic.view.2x.png
-    exports:
+    redlines:
       - Basic View
 
   - type: two column
@@ -162,7 +165,7 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/redlines.detail.view.2x.png
-    exports:
+    redlines:
       - Detail View
 
   - type: two column
@@ -207,15 +210,11 @@ blocks:
         - 0.4 seconds
         - ease-in-out
 
-  - type: style table
-    styles:
-      - Basic View
-      - Detail View
-
 changelog:
   - version: 2.0.1
     changes: |
       - ADDED: Feature links
+      - FIXED: Spacing redlines around the title in both views
   - version: 2.0.0
     changes: Apply new brand to existing component.
   - version: 1.0.0
