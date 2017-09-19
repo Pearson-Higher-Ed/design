@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Alerts
 section: Components
-version: 2.0.2
-status: deprecated
+version: 2.0.3
+status: active
 implemented: true
 people:
   - role: Product Owner
@@ -24,11 +24,11 @@ downloads:
 
 dependencies:
   - name: Colors
-    version: 2.1.0
+    version: 3.0.1
   - name: Typography
-    version: 2.0.0
+    version: 2.1.1
   - name: Icons
-    version: 2.1.0
+    version: 2.3.0
 
 tagline: |
   Presents important feedback or information to users either in response to their actions or upon page load.
@@ -134,13 +134,13 @@ blocks:
         - Horizontal and bottom padding is 28px (desktop)
 
       Colors
-      : - Error and warning color is [Strawberry Red](/design/c/colors/v2.1.0/#rd-strawberry-red)
-        - Success and information color is [Digital Marine Turquoise](/design/c/colors/v2.1.0/#rd-digital-marine-turquoise)
-        - Background is [White](/design/c/colors/v2.1.0/#rd-white)
+      : - Error and warning color is [Strawberry Red](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--strawberry-red)
+        - Success and information color is [Digital Marine Turquoise](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--digital-marine-turquoise)
+        - Background is [White](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--white)
 
       Typography
-      : - Title is [Bold Text](/design/c/typography/v2.0.0/#rd-bold-text)
-        - Message is [Basic Body Copy](/design/c/typography/v2.0.0/#rd-basic-body)
+      : - Title is [Bold UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--bold-ui-text)
+        - Message is [Basic Body Copy](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-body-copy)
 
       "X" icons
       : - Size [close-sm-24](design/c/icons/v2.1.0/)
@@ -185,19 +185,22 @@ blocks:
       ### Inline alerts
 
       Dimensions
-      : - At medium and large breakpoints, should have a min width of 440px, may expand to fit the content area
-        - 100% of content area at smaller breakpoints
+      : - At [medium and large breakpoints](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--medium), should have a min width of 440px, may expand to fit the content area
+        - 100% of content area at [smaller breakpoints](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--small)
 
       Positioning
       : - Left aligned within content area
     contents:
       - type: wide image
         src: ./assets/alerts_spec_desktop 1.png
-        caption: Content(task) level alert
+        caption: Content (task) level alert
 
 
 
 changelog:
+  - version: 2.0.3
+    changes: |
+      - ADDED: Feature links
   - version: 2.0.2
     changes: |
       - TWEAKED: Copy in the dynamic alert animation
