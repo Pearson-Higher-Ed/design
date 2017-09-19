@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Inputs
 section: Components
-status: deprecated
-version: 2.1.0-beta.1
+status: active
+version: 2.2.0-beta.1
 rebranded: true
 implemented: false
 people:
@@ -239,6 +239,24 @@ blocks:
         src: ./assets/inputs_password_2.png
         caption: And in the basic input style.
 
+  - type: two column
+    text: |
+      ## Phone number w/ country code
+      The Phone number with country code input is made up of two parts. The first is the dropdown for selecting country and the other is a form field for inputing the phone number. Together they operate as a single control.
+
+    contents:
+      - type: narrow image
+        src: ./assets/inputs_phone.png
+        caption: Show/Hide password feature in the fancy input style.
+      - type: narrow image
+        src: ./assets/inputs_phone_2.png
+        caption: And in the basic input style.
+      - type: narrow image
+        src: ./assets/inputs_phone_3.png
+        caption: Show/Hide password feature in the fancy input style.
+
+
+
   - type: section
     name: Redlines
 
@@ -266,18 +284,18 @@ blocks:
         - Place holders are [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic), [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
 
       Focus
-      : - Label is [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue)
-        - Border is 1px solid [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue)
-        - [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue) shadow with 5px blur
+      : - Label is [Medium Gray](/design/c/colors/v2.1.0/#rd-medium-gray)
+        - Border is 1px solid [Digital Pearson Blue](/design/c/colors/v2.1.0/#rd-digital-pearson-blue)
+        - [Digital Pearson Blue](/design/c/colors/v2.1.0/#rd-digital-pearson-blue) shadow with 5px blur
 
       Disabled
-      : - Value is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
+      : - Value is [Concrete (#c7c7c7)](/design/c/colors/v2.1.0/#rd-concrete)
         - Fill color is [Moonlight (#e9e9e9)](/design/c/colors/v2.0.0-beta.5/#rd-moonlight)
 
       Error
-      : - Label is [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
-        - Border is 1px solid [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
-        - Error text is [Small UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-small) in [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
+      : - Label is [Medium Gray](/design/c/colors/v2.1.0/#rd-medium-gray)
+        - Border is 1px solid [Strawberry Red (#db0020)](/design/c/colors/v2.1.0/#rd-strawberry-red)
+        - Error text is [Small UI Text](/design/c/typography/v2.1.0/#rd-ui-text-small) in [Strawberry Red (#db0020)](/design/c/colors/v2.1.0/#rd-strawberry-red)
         - Error text is 3px below the field
 
       Focused Error
@@ -314,8 +332,9 @@ blocks:
         - Underline is 1px solid [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
 
       Focus
-      : - Label is [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue)
-        - Underline is 4px solid [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue)
+      : - Label is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
+        - Underline is 4px solid [Digital Pearson Blue](/design/c/colors/v2.1.0/#rd-digital-pearson-blue)
+
         - The underline should animate out from the center of the input once the user clicks into the field
 
       Readonly
@@ -327,7 +346,8 @@ blocks:
         - Underline is 4px solid [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
 
       Error
-      : - Label and error text are [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
+      : - Label is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
+        - Error text is [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
         - Error text is 3px below the underline
         - Underline is 1px solid [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
 
@@ -431,7 +451,7 @@ blocks:
       States
       : - Radio border is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete) in most cases
         - Selected radios have an inner circle filled with [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray) in most cases
-        - Focused radios use [Digital Pearson Blue (#047A9C)](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue) borders
+        - Focused radios use [Digital Pearson Blue](/design/c/colors/v2.1.0/#rd-digital-pearson-blue) borders
         - Disabled radios use a [Moonlight (#e9e9e9)](/design/c/colors/v2.0.0-beta.5/#rd-moonlight) fill color
         - Disabled but selected radios have an inner circle filled with [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
 
@@ -457,7 +477,7 @@ blocks:
       States
       : - Box border is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete) in most cases
         - Selected checkboxes have a [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray) check mark in most cases
-        - Focused checkboxes use [Digital Pearson Blue (#047A9C)](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue) borders
+        - Focused checkboxes use [Digital Pearson Blue](/design/c/colors/v2.1.0/#rd-digital-pearson-blue) borders
         - Disabled checkboxes use a [Moonlight (#e9e9e9)](/design/c/colors/v2.0.0-beta.5/#rd-moonlight) fill color
         - Disabled but selected checkboxes have a [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete) check mark
     contents:
@@ -487,6 +507,12 @@ blocks:
         src: ./assets/redlines.password.showhide.png
 
 changelog:
+  - version: 2.1.0-beta.3
+    changes: |
+      - CHANGED: Active color back to Pearson Digital Blue
+  - version: 2.1.0-beta.2
+    changes: |
+      - CHANGED: Update sketch file
   - version: 2.1.0-beta.1
     changes: |
       - CHANGED: Icon for select input
