@@ -7,10 +7,10 @@ section: Components
 title: Progress Bar
 
 # Status of the component (e.g. experimental, deprecated, etc.)
-status: deprecated
+status: active
 
 # Version (follow the component versioning guide)
-version: 2.0.0-beta.2
+version: 2.0.0-beta.3
 
 # List the people involved
 people:
@@ -26,9 +26,9 @@ implementations:
 
 dependencies:
   - name: Colors
-    version: 3.0.0
+    version: 3.0.1
   - name: Typography
-    version: 2.0.0
+    version: 2.1.1
 
 # Any downloads available
 downloads:
@@ -70,6 +70,8 @@ blocks:
       # Images can be wide or narrow, wide images are 760px and narrow are 370px
       - type: narrow image
         src: ./assets/progress.bars.png
+    features:
+      - Basic Progress Bar
 
   - type: section
     name: Options
@@ -83,6 +85,9 @@ blocks:
         src: ./assets/left.aligned.png
       - type: narrow image
         src: ./assets/right.aligned.png
+    features:
+      - Left Aligned Progress Bar
+      - Right Aligned Progress Bar
 
   - type: two column
     text: |
@@ -91,6 +96,8 @@ blocks:
     contents:
       - type: narrow video
         src: ./assets/animation.mp4
+    features:
+      - Animated Progress Bar
 
   - type: section
     name: Redlines
@@ -99,15 +106,29 @@ blocks:
 
   - type: two column
     text: |
-      Forthcoming
+      Dimensions
+      : - Track is 4px wide
+        - Progress fill is 12px wide
 
-  - type: style table
-    styles:
-      - Determinate Progress Bar
+      Colors
+      : - Track is [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
+        - Fill is [Digital Marine Turquoise](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--digital-marine-turquoise)
+
+      Label
+      : - [Basic UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-ui-text) in [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal)
+        - Center aligned by default
+        - Options for left and right aligned positioning
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.progress.bar.png
 
 # Required. List out each version of the component and the changes made. Make
 # sure to follow the component versioning guide.
 changelog:
+  - version: 2.0.0-beta.3
+    changes: |
+      - ADDED: Feature links
+      - ADDED: Redlines
   - version: 2.0.0-beta.2
     changes: |
       - ADDED: Alternate text alignment options
