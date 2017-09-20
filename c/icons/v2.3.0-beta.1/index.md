@@ -136,16 +136,12 @@ blocks:
             | ![](./assets/icons24/zoom-in-24-2x.png) | zoom-in-18 | zoom-in-24 |
             | ![](./assets/icons24/zoom-out-24-2x.png) | zoom-out-18 | zoom-out-24 |
 
-
-#            | ![](./assets/icons24/newspaper-24-2x.png) | newspaper-18 | newspaper-24 |
-#            | ![](./assets/icons24/pin-24-2x.png) | pin-18 | pin-24 |
-#            | ![](./assets/icons24/suitcase-24-2x.png) | suitcase-18 | suitcase-24 |
   - type: section
     name: Name Guide
 
   - type: two column
     text: |
-        The name describes the **intended use, variation, pixel size,** and **scaling**.
+        The name describes the **intended use, variation,** and **pixel size**.
 
     contents:
         - type: wide image
@@ -156,12 +152,12 @@ blocks:
 
   - type: two column
     text: |
-      ### Standard Colors:
+      ### Standard Colors
 
       - [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray)
       - [White](/design/c/colors/v2.0.0-beta.5/#rd-white)
 
-      ### Status Colors: <span style="font-weight:normal;">*(optional)*</span>
+      ### Status Colors
 
       - [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.5/#rd-digital-pearson-blue) - primary or selected
       - [Digital Grass Green](/design/c/colors/v2.0.0-beta.5/#rd-digital-grass-green) - success or correct
@@ -192,18 +188,6 @@ blocks:
     contents:
         - type: wide image
           src: ./assets/touch-target.png
-
-  - type: section
-    name: Scaling
-
-  - type: two column
-    text: |
-      You can scale the icons up by **2x, 3x, 4x,** and **5x**. However, scaling them down or any .5x variation, the lines and shapes will become blurry.
-
-    contents:
-        - type: wide image
-          src: ./assets/scaling.png
-
 
 
 changelog:
