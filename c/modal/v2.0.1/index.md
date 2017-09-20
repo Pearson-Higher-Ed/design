@@ -176,11 +176,10 @@ blocks:
     text: |
 
 
-      The layout changes at the following breakpoints. In short, the modal has a more compact spacing, wider buttons, and smaller font size on narrow devices.
+      The layout changes at the following breakpoints. The modal has a more compact spacing, wider buttons, and smaller font size for header text on narrower devices.
 
       - 768px
       - 480px
-      - 320px
 
       For native mobile apps, use the native modal. The guideline in this documentation is for responsive web mobile design.
 
@@ -201,10 +200,8 @@ blocks:
 
       ### Breakpoints
 
-
-      - md = Medium Devices and Above (>= 768px)
-      - sm = Small Devices (480px - 768px)
-      - xs = Extra Small Devices (320px - 480px)
+      - 768px
+      - 480px
 
 
   - type: two column
@@ -216,18 +213,17 @@ blocks:
         - xs: Auto
 
       Margin
-      : - md: 60px
-        - sm: 40px
+      : - md and up: 60px
+        - sm: 20px
         - xs: 20px
 
       Spacing
       : - md devices have a more generous spacing (see illustration on the right)
         - sm and xs devices have a more compact layout (see illustration on the left)
 
-      Header
+      Header text
       : - md: [Large Section Heading](/design/c/typography/v2.0.0/#rd-ui-headings-section-large) 24px
-        - sm: [Basic Section Heading](/design/c/typography/v2.0.0/#rd-ui-headings-section-basic) 20px
-        - xs: [Basic Section Heading](/design/c/typography/v2.0.0/#rd-ui-headings-section-basic) 20px
+        - sm and xs: [Basic Section Heading](/design/c/typography/v2.0.0/#rd-ui-headings-section-basic) 20px
         - [Charcoal](/design/c/colors/v2.0.0-beta.7/#rd-charcoal)
 
       Content
@@ -242,7 +238,8 @@ blocks:
 
       "X" icon
       : - Size: [remove-sm-24](/design/c/icons/v2.0.0-beta.4)
-        - Touch target: 36px (See notes below)
+        - Touch target: 40x40px
+        - [Medium Gray](/design/c/colors/v2.0.0-beta.7/#rd-medium-gray)
 
       Overlay
       : - [Charcoal](/design/c/colors/v2.0.0-beta.7/#rd-charcoal)
@@ -252,13 +249,7 @@ blocks:
       : - Follow [the default behaviors for "X" defined in the drawer](/design/c/drawer/v2.0.0-beta.2)
         - Follow [the default behaviors for buttons](/design/c/buttons/v2.1.0-beta.3)
 
-
-      __Note: The touch target for "X"__ is smaller than the minimal size of 44px because there is additional touch area outside the modal to accommodate for that. This allows more room for heading.
-
       __Use the native modal for native mobile apps.__ The specs in this documentation is for responsive web mobile design.
-
-      __[See specs on Zeplin](https://zpl.io/1I2TYO).__ For access, contact Linda (linda.tsai@pearson.com)
-
 
 
     contents:
@@ -306,9 +297,8 @@ blocks:
 
       ### Responsive Buttons  
 
-      - __Medium Devices and Above (>= 768px):__ Default (fixed padding)
-      - __Small Devices (480px - 768px):__ Expanded (takes up the full width of the container)
-      - __Extra Small Devices (320px - 480px):__ Expanded
+      - __md and up:__ Default (fixed padding)
+      - __sm & xs:__ Expanded (filling up the full width of the container)
 
 
     contents:
