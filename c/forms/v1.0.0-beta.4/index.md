@@ -152,6 +152,8 @@ blocks:
       - type: wide image
         src: ./assets/redlines_form_basic.png
       - type: wide image
+        src: ./assets/redlines_form_fancy.png
+      - type: wide image
         src: ./assets/redlines_form_sections.png
       - type: wide image
         src: ./assets/redlines_form_error.png
