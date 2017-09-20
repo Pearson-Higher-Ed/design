@@ -198,7 +198,7 @@ blocks:
   - type: two column
     text: |
 
-      ### Breakpoints
+      ### [Breakpoints](/design/c/breakpoints/#widths)
 
       - 768px
       - 480px
