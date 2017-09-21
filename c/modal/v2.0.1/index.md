@@ -58,7 +58,7 @@ blocks:
 
     contents:
       - type: wide image
-        src: ./assets/modal_1.png
+        src: ./assets/modal_desktop_with_actions.png
 
 
   - type: two column
@@ -131,6 +131,8 @@ blocks:
         [Interact with the prototype](https://preview.uxpin.com/4b90bc323219879d681c381bdc71e1d80adc9ab0#/pages/67336990/simulate/no-panels)
 
     contents:
+      - type: wide image
+        src: ./assets/modal_desktop_with_actions_scrolling.png
       - type: narrow video
         src: ./assets/Prototype_modal_mobile_with_actions.mp4
         caption: Modal with actions (Mobile). This prototype failed to show the scroll bar due to technical limitation, but the actual build should have the scroll bar visible at all times for this modal.
@@ -238,7 +240,7 @@ blocks:
 
       "X" icon
       : - Size: [remove-sm-24](/design/c/icons/v2.0.0-beta.4)
-        - Touch target: 40x40px
+        - Touch target: 44x44px
         - [Medium Gray](/design/c/colors/v2.0.0-beta.7/#rd-medium-gray)
 
       Overlay
