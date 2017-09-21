@@ -101,8 +101,11 @@ blocks:
 
   - type: section
     name: Redlines
-    exports:
-      - Determinate Progress Bar
+    redlines:
+      - Basic Progress Bar
+      - Left Aligned Progress Bar
+      - Right Aligned Progress Bar
+      - Animated Progress Bar
 
   - type: two column
     text: |
