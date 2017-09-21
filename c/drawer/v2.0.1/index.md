@@ -117,7 +117,7 @@ blocks:
       : - Title is a [Basic section heading](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-section-ui-heading)
 
       Icons
-      : - Close icon is remove-sm-24
+      : - Close icon is [Remove-sm-24](http://pearson-higher-ed.github.io/design/c/icons/v2.3.0-beta.2/#icons--remove-sm)
         - A focused icon will use the standard browser outline for focus
 
       Shadow
@@ -154,7 +154,7 @@ blocks:
         - 28px above the title and 25px below the title (should keep the close icon in the same place)
 
       Icon
-      : - Pearson Icon (chevron-back-18)
+      : - [Chevron-back-18](http://pearson-higher-ed.github.io/design/c/icons/v2.3.0-beta.2/#icons--chevron-back) icon
         - 10px spacing between icon and label
 
       Focus Behavior
