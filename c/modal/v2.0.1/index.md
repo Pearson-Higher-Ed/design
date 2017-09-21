@@ -18,11 +18,11 @@ people:
 
 dependencies:
   - name: buttons
-    version: 2.1.0-beta.3
+    version: 2.2.1
   - name: typography
     version: 2.0.0
   - name: colors
-    version: 2.0.0
+    version: 3.0.1
   - name: icons
     version: 2.0.0
 
@@ -321,6 +321,12 @@ blocks:
 
 changelog:
 
+  - version: 2.0.1
+    changes: |
+      - CHANGED: Button style to match Buttons v2.2.1 (Blue buttons)
+      - CHANGED: Touch target for the "X" icon from 36x36px to 44x44px to meet accessibility standard
+      - CHANGED: Margin from auto to specific values (60/20/20 for different breakpoints)
+      - UPDATED: Button placement by moving the default button "Cancel" from the far left of the modal to the right. Note that it is still on the left relatively to the primary button.  
   - version: 2.0.0
     changes: |
       - Re-skinned with the latest styles
