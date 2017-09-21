@@ -118,9 +118,17 @@ blocks:
       : - [Basic UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-ui-text) in [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal)
         - Center aligned by default
         - Options for left and right aligned positioning
+
+      Animated fill
+      : - Stripes are 4px wide [Digital Ice Blue](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--digital-ice-blue)
+        - 8px spacing between stripes
+        - Set at 45° angle
+        - Stripes animate leftwards at a rate of 100px/6s
     contents:
       - type: narrow image
         src: ./assets/redlines.progress.bar.png
+      - type: narrow image
+        src: ./assets/redlines.animated.png
 
 # Required. List out each version of the component and the changes made. Make
 # sure to follow the component versioning guide.
