@@ -33,7 +33,7 @@ dependencies:
 # Any downloads available
 downloads:
   - name: Accessiblity Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/1k9ZciQifxzfafy90mTjYHIFzvztl2fz17XzYKbi2v-A/edit?usp=sharing
+    link: https://docs.google.com/a/pearson.com/document/d/1qpFi_MKpyKa8oqrQCfQnIxjQKNrZ5KRnpaZn2oNhf20/edit?usp=sharing
 
 # Overview information for the component
 tagline: |
