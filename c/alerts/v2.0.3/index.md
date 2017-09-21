@@ -49,12 +49,13 @@ blocks:
 
       This type of alert can always be dismissed by clicking on the close icon.
 
-      An example use case for this type of alert would be when the user clicks a confirmation link in their email which loads
+      An example use case for this type of alert would be when the user clicks a confirmation link in their email which loads a new window confirming that their address has been verified.
 
     contents:
       - type: wide image
         src: ./assets/alert_over.png
         caption: The message should appear in the upper corner as part of the normal page load.
+        border: true
 
   - type: two column
     text: |
@@ -63,6 +64,7 @@ blocks:
       - type: narrow image
         src: ./assets/alert_mobile_over.png
         caption: Responsive popover alert.
+        border: true
 
   - type: section
     name: Dynamic Global Alert
@@ -95,9 +97,10 @@ blocks:
       By default the inline alert is also dismissable, but it can be made to display permanently if the information contained is persistently useful. An example would be a message saying that an email address hasn't been confirmed yet.
 
     contents:
-        - type: wide image
-          src: ./assets/alert_inline.png
-          caption: The example of message appear below the content area.
+      - type: wide image
+        src: ./assets/alert_inline.png
+        caption: The example of message appear below the content area.
+        border: true
 
   - type: section
     name: Variants
@@ -131,7 +134,8 @@ blocks:
 
       Dimensions
       : - Color bar is 3px wide
-        - Horizontal and bottom padding is 28px (desktop)
+        - At [medium and larger](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--medium) breakpoints, horizontal and left padding is 28px, right padding is 36px
+        - At smaller breakpoints vertical padding is 24px and horizontal is 28px
 
       Colors
       : - Error and warning color is [Strawberry Red](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--strawberry-red)
@@ -143,13 +147,15 @@ blocks:
         - Message is [Basic Body Copy](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-body-copy)
 
       "X" icons
-      : - Size [close-sm-24](design/c/icons/v2.1.0/)
+      : - [Remove-sm-24](http://pearson-higher-ed.github.io/design/c/icons/v2.3.0-beta.2/#icons--remove-sm)
         - Note the "-sm" size of this icon is actually 12px square
-        - Touch area 44x44
+        - Touch area 44x44, positioned in the far upper right corner
+        - Icon is 8px away from the top and right edges at [medium and larger](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--medium) breakpoints, 4px at smaller
 
-      Alert/warning icons
-      : - alert/warning icon [warning-sm-18](design/c/icons/v2.1.0/)
-        - success icon [check-sm-18](design/c/icons/v2.1.0/)
+      Variant icons
+      : - Alert/warning icon is [warning-18](http://pearson-higher-ed.github.io/design/c/icons/v2.3.0-beta.2/#icons--warning)
+        - Success icon is [check-lg-18](http://pearson-higher-ed.github.io/design/c/icons/v2.3.0-beta.2/#icons--check-lg)
+        - 12px spacing between the icon and the text area
 
       Animation
       : - Drop in uses an ease-in-out easing curve with a duration of 300ms
@@ -168,13 +174,13 @@ blocks:
     text: |
       ### Global alerts
       Dimensions
-      : - 580px wide at medium and larger breakpoints
-        - 440px wide at small breakpoints
-        - 100% width at extra small
+      : - 580px wide at [medium and larger](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--medium) breakpoints
+        - 440px wide at [small](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--small) breakpoints
+        - 100% width at [extra small](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--extra-small)
 
       Positioning
-      : - 32px down and right from the top left viewport corner at small and larger breakpoints
-        - 36px from the top with 25px horizontal margins at extra small breakpoints
+      : - 32px down and right from the top left viewport corner at [small and larger](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--small) breakpoints
+        - 36px from the top with 24px horizontal margins at [extra small breakpoints](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--extra-small)
     contents:
       - type: wide image
         src: ./assets/alerts_spec_popover.png
