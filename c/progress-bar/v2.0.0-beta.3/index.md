@@ -7,10 +7,10 @@ section: Components
 title: Progress Bar
 
 # Status of the component (e.g. experimental, deprecated, etc.)
-status: deprecated
+status: active
 
 # Version (follow the component versioning guide)
-version: 2.0.0-beta.2
+version: 2.0.0-beta.3
 
 # List the people involved
 people:
@@ -26,14 +26,14 @@ implementations:
 
 dependencies:
   - name: Colors
-    version: 3.0.0
+    version: 3.0.1
   - name: Typography
-    version: 2.0.0
+    version: 2.1.1
 
 # Any downloads available
 downloads:
   - name: Accessiblity Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/1k9ZciQifxzfafy90mTjYHIFzvztl2fz17XzYKbi2v-A/edit?usp=sharing
+    link: https://docs.google.com/a/pearson.com/document/d/1qpFi_MKpyKa8oqrQCfQnIxjQKNrZ5KRnpaZn2oNhf20/edit?usp=sharing
 
 # Overview information for the component
 tagline: |
@@ -43,7 +43,7 @@ features:
   - Complete vs Incomplete Status
   - Compliance with Accessiblity
 usage_guidelines: |
-  Every instance of a Progress Bar should use this component.  Future versions of the progress bar will include more detailed meta information.
+  Whenever you need to indicate the progress of a system process such as uploading a file, copying a course, etc. use the Progress Bar to provide feedback to the user. This component should generally not be used to present a static "progress", prefer instead a single bar chart or similar design.
 
 # Main contents of the component definition
 # `blocks` is a list of the content chunks to display. Several different types
@@ -57,7 +57,7 @@ blocks:
   # The section type is added to the TOC and is used to delineate major chunks
   # of the article
   - type: section
-    name: Determinate Progress Bar
+    name: Basic Progress Bar
 
   - type: two column
     text: |
@@ -70,6 +70,8 @@ blocks:
       # Images can be wide or narrow, wide images are 760px and narrow are 370px
       - type: narrow image
         src: ./assets/progress.bars.png
+    features:
+      - Basic Progress Bar
 
   - type: section
     name: Options
@@ -83,6 +85,9 @@ blocks:
         src: ./assets/left.aligned.png
       - type: narrow image
         src: ./assets/right.aligned.png
+    features:
+      - Left Aligned Progress Bar
+      - Right Aligned Progress Bar
 
   - type: two column
     text: |
@@ -91,23 +96,50 @@ blocks:
     contents:
       - type: narrow video
         src: ./assets/animation.mp4
+    features:
+      - Animated Progress Bar
 
   - type: section
     name: Redlines
-    exports:
-      - Determinate Progress Bar
+    redlines:
+      - Basic Progress Bar
+      - Left Aligned Progress Bar
+      - Right Aligned Progress Bar
+      - Animated Progress Bar
 
   - type: two column
     text: |
-      Forthcoming
+      Dimensions
+      : - Track is 4px wide
+        - Progress fill is 12px wide
 
-  - type: style table
-    styles:
-      - Determinate Progress Bar
+      Colors
+      : - Track is [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
+        - Fill is [Digital Marine Turquoise](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--digital-marine-turquoise)
+
+      Label
+      : - [Basic UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-ui-text) in [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal)
+        - Center aligned by default
+        - Options for left and right aligned positioning
+
+      Animated fill
+      : - Stripes are 4px wide [Digital Ice Blue](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--digital-ice-blue)
+        - 8px spacing between stripes
+        - Set at 45° angle
+        - Stripes animate leftwards at a rate of 100px/6s
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.progress.bar.png
+      - type: narrow image
+        src: ./assets/redlines.animated.png
 
 # Required. List out each version of the component and the changes made. Make
 # sure to follow the component versioning guide.
 changelog:
+  - version: 2.0.0-beta.3
+    changes: |
+      - ADDED: Feature links
+      - ADDED: Redlines
   - version: 2.0.0-beta.2
     changes: |
       - ADDED: Alternate text alignment options
