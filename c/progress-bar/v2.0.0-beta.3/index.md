@@ -43,7 +43,7 @@ features:
   - Complete vs Incomplete Status
   - Compliance with Accessiblity
 usage_guidelines: |
-  Every instance of a Progress Bar should use this component.  Future versions of the progress bar will include more detailed meta information.
+  Whenever you need to indicate the progress of a system process such as uploading a file, copying a course, etc. use the Progress Bar to provide feedback to the user. This component should generally not be used to present a static "progress", prefer instead a single bar chart or similar design.
 
 # Main contents of the component definition
 # `blocks` is a list of the content chunks to display. Several different types
@@ -57,7 +57,7 @@ blocks:
   # The section type is added to the TOC and is used to delineate major chunks
   # of the article
   - type: section
-    name: Determinate Progress Bar
+    name: Basic Progress Bar
 
   - type: two column
     text: |
