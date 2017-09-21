@@ -150,7 +150,7 @@ blocks:
         - Hovering or focusing an icon or link changes the color to [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal)
 
       Icons
-      : - Help icon is [help-fill-18](/design/c/icons/v2.1.0)
+      : - Help icon is [help-fill-18](http://pearson-higher-ed.github.io/design/c/icons/v2.3.0-beta.2/#icons--help-fill)
 
       #### < 768px ([Small and Extra Small viewports](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--small))
 
@@ -182,7 +182,7 @@ blocks:
       : - www.console.pearson.com
 
       Notifications
-      : - Uses [notification-18](/design/c/icons/v2.1.0) icon
+      : - Uses [notification-18](http://pearson-higher-ed.github.io/design/c/icons/v2.3.0-beta.2/#icons--notification) icon
         - Badge dimensions are 16px tall with 6px horizontal padding
         - Active badge is [Hot Pink](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--hot-pink) background with [White](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--white) [Small Bold UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--small-bold-ui-text)
         - Inactive Badge is [Alto](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--alto) background with [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal) text
@@ -199,7 +199,7 @@ blocks:
       #### < 768px ([Small and Extra Small viewports](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--small))
 
       Profile icon
-      : - User's name replaced with profile-18 icon
+      : - User's name replaced with the [person-18](http://pearson-higher-ed.github.io/design/c/icons/v2.3.0-beta.2/#icons--person) icon
     contents:
       - type: wide image
         src: ./assets/redlines.basic.mode.png
