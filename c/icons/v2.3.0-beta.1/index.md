@@ -194,6 +194,7 @@ changelog:
   - version: 2.3.0-beta.1
     changes: |
       - ADDED: print-18, print-24, and updated pixel containers
+      - REMOVED: Scaling information
   - version: 2.2.0
     changes: |
       - ADDED: sortable-18, sortable-24

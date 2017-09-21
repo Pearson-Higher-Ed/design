@@ -229,18 +229,16 @@ blocks:
       - Zoom-in
       - Zoom-out
 
-
-
   - type: section
     name: Name Guide
 
   - type: two column
     text: |
-        The name describes the **intended use**, **variation**, and **pixel size**.
+      The name describes the **intended use**, **variation**, and **pixel size**.
 
     contents:
-        - type: wide image
-          src: ./assets/name-guide.png
+      - type: wide image
+        src: ./assets/name-guide.png
 
   - type: section
     name: Colors
@@ -259,8 +257,8 @@ blocks:
       - [Strawberry Red](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--strawberry-red) - error or wrong
 
     contents:
-        - type: wide image
-          src: ./assets/colors.png
+      - type: wide image
+        src: ./assets/colors.png
 
   - type: section
     name: Label Spacing
@@ -284,19 +282,6 @@ blocks:
         - type: wide image
           src: ./assets/touch-target.png
 
-  - type: section
-    name: Scaling
-
-  - type: two column
-    text: |
-      You can scale the icons up by **2x, 3x, 4x,** and **5x**. However, scaling them down or any .5x variation, the lines and shapes will become blurry.
-
-    contents:
-        - type: wide image
-          src: ./assets/scaling.png
-
-
-
 changelog:
   - version: 2.3.0-beta.2
     changes: |
@@ -305,6 +290,7 @@ changelog:
   - version: 2.3.0-beta.1
     changes: |
       - ADDED: print-18, print-24, and updated pixel containers
+      - REMOVED: Scaling information
   - version: 2.2.0
     changes: |
       - ADDED: sortable-18, sortable-24
