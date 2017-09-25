@@ -17,11 +17,21 @@ features:
 usage_guidelines: |
   Any collection of items that can be editing or modified by the user (e.g. table, list, grid view, etc.) should consider using this component.
 
-dependecies:
+downloads:
+  - name: UXD Accessibility Checklist
+    link: https://docs.google.com/a/pearson.com/document/d/1C4OLGTKcymGrromJEvNlptPCu1AnGyx5d6_lM-tmjQE/edit?usp=sharing
+  - name: Sketch file
+    link: ./assets/toolbar.sketch
+
+dependencies:
   - name: Buttons
-    version: 2.1.0
+    version: 2.2.1
+  - name: Icons
+    version: 2.3.0
   - name: Inputs
     version: 2.0.0
+  - name: Dropdown
+    version: 1.0.0
 
 blocks:
   - type: section
@@ -151,7 +161,7 @@ blocks:
   - type: two column
     text: |
       Elements
-      : - Buttons should be the large size
+      : - Buttons should be the [large size](http://pearson-higher-ed.github.io/design/c/buttons/v2.2.1/#buttons--large-button)
         - Prefer 24px icons
         - Inputs use the basic style and should include labels
         - Button groups use the same specs as standard buttons, but share a border and have square corners at the joints
@@ -176,7 +186,7 @@ blocks:
       ### Multi-select
 
       Checkmark Only
-      : - The checkmark-only option uses the Large Default button style with an enclosed check mark
+      : - The checkmark-only option uses the [Large](http://pearson-higher-ed.github.io/design/c/buttons/v2.2.1/#buttons--large-button) [Default](http://pearson-higher-ed.github.io/design/c/buttons/v2.2.1/#buttons--default-button) button style with an enclosed check mark
         - The checkmark should take on a tristate when one or more items of the collection are selected, but not all of the items are selected
 
       With Dropdown
@@ -197,6 +207,8 @@ changelog:
     changes: |
       - CHANGED: Multi-select dropdown shows checkmark
       - ADDED: Redlines for multi-select
+      - ADDED: UX a11y checklist
+      - ADDED: Sketch download
   - version: 1.0.0-beta.5
     changes: |
       - REMOVED: Overflow menu (temporarily)
