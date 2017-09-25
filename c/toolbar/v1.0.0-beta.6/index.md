@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Toolbar
 section: Components
-status: deprecated
-version: 1.0.0-beta.5
+status: active
+version: 1.0.0-beta.6
 people:
   - role: Designer
     name: Parker Malenke
@@ -171,8 +171,32 @@ blocks:
       - type: wide image
         src: ./assets/redlines.spacing.icons.png
 
+  - type: two column
+    text: |
+      ### Multi-select
+
+      Checkmark Only
+      : - The checkmark-only option uses the Large Default button style with an enclosed check mark
+        - The checkmark should take on a tristate when one or more items of the collection are selected, but not all of the items are selected
+
+      With Dropdown
+      : - Uses the button group style to add a dropdown to the checkmark button
+        - The horizontal spacing is customized in this case to be 12px (instead of a standard 20px)
+        - Uses standard dropdown with an icon-only trigger
+        - If the currently selected set of the collection matches one of the dropdown options, use the checkmark to indicate this
+        - If the current selection does not match an option, show no checkmark (and no empty space for one)
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.multi-select.1.png
+      - type: narrow image
+        src: ./assets/redlines.multi-select.2.png
+
 
 changelog:
+  - version: 1.0.0-beta.6
+    changes: |
+      - CHANGED: Multi-select dropdown shows checkmark
+      - ADDED: Redlines for multi-select
   - version: 1.0.0-beta.5
     changes: |
       - REMOVED: Overflow menu (temporarily)
