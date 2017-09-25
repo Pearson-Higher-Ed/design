@@ -3,7 +3,7 @@ layout: component-yaml
 title: Icons
 section: Components
 version: 2.3.0-beta.1
-status: active
+status: deprecated
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -191,9 +191,10 @@ blocks:
 
 
 changelog:
-  - version: 2.3.0
+  - version: 2.3.0-beta.1
     changes: |
       - ADDED: print-18, print-24, and updated pixel containers
+      - REMOVED: Scaling information
   - version: 2.2.0
     changes: |
       - ADDED: sortable-18, sortable-24

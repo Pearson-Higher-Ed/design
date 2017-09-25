@@ -3,7 +3,7 @@ layout: component-yaml
 title: Breakpoints
 section: Components
 version: 1.0.1
-status: active
+status: deprecated
 implemented: true
 people:
   - role: Product Owner

@@ -3,7 +3,7 @@ layout: component-yaml
 title: Alerts
 section: Components
 version: 2.0.2
-status: active
+status: deprecated
 implemented: true
 people:
   - role: Product Owner
