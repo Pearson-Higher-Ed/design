@@ -56,6 +56,8 @@ blocks:
         src: ./assets/alert_over.png
         caption: The message should appear in the upper corner as part of the normal page load.
         border: true
+    features:
+      - Static Global Alert
 
   - type: two column
     text: |
@@ -85,6 +87,8 @@ blocks:
       - type: wide video
         src: ./assets/animation_alert.mp4
         caption: The animation for showing/dismissing a dynamic alert.
+    features:
+      - Dynamic Global Alert
 
   - type: section
     name: Inline Alert
@@ -101,6 +105,8 @@ blocks:
         src: ./assets/alert_inline.png
         caption: The example of message appear below the content area.
         border: true
+    features:
+      - Inline Alert
 
   - type: section
     name: Variants
@@ -123,6 +129,10 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/alerts_all.png
+    features:
+      - Warning/Error Alert
+      - Success Alert
+      - Information Alert
 
 
   - type: section
@@ -134,8 +144,8 @@ blocks:
 
       Dimensions
       : - Color bar is 3px wide
-        - At [medium and larger](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--medium) breakpoints, horizontal and left padding is 28px, right padding is 36px
-        - At smaller breakpoints vertical padding is 24px and horizontal is 28px
+        - At [medium and larger](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--medium) breakpoints, vertical padding is 24px, left padding is 28px, right padding is 36px
+        - At smaller breakpoints vertical padding is 20px and horizontal is 28px
 
       Colors
       : - Error and warning color is [Strawberry Red](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--strawberry-red)
@@ -157,10 +167,6 @@ blocks:
         - Success icon is [check-lg-18](http://pearson-higher-ed.github.io/design/c/icons/v2.3.0-beta.2/#icons--check-lg)
         - 12px spacing between the icon and the text area
 
-      Animation
-      : - Drop in uses an ease-in-out easing curve with a duration of 300ms
-        - Slide out uses an ease-in easing curve with a duration of 200ms
-
       Focus Behavior
       : - Most alerts can just be announced by using ARIA alert roles and don't need special focus treatment
         - If an alert is particularly important, focus should be moved to the first element of the alert (and restored to it's original position upon dismissal)
@@ -169,6 +175,10 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/alerts_spec.png
+    redlines:
+      - Warning/Error Alert
+      - Success Alert
+      - Information Alert
 
   - type: two column
     text: |
@@ -181,10 +191,17 @@ blocks:
       Positioning
       : - 32px down and right from the top left viewport corner at [small and larger](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--small) breakpoints
         - 36px from the top with 24px horizontal margins at [extra small breakpoints](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--extra-small)
+
+      Animation (for Dynamic Global)
+      : - Drop in uses an ease-in-out easing curve with a duration of 300ms
+        - Slide out uses an ease-in easing curve with a duration of 200ms
     contents:
       - type: wide image
         src: ./assets/alerts_spec_popover.png
         caption: Popover alerts
+    redlines:
+      - Static Global Alert
+      - Dynamic Global Alert
 
   - type: two column
     text: |
@@ -200,6 +217,8 @@ blocks:
       - type: wide image
         src: ./assets/alerts_spec_desktop 1.png
         caption: Content (task) level alert
+    redlines:
+      - Inline Alert
 
 
 
