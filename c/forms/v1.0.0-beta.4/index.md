@@ -116,7 +116,6 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/form_error.png
-        caption: An example of error alert.    
 
   - type: section
     name: Redlines
@@ -141,7 +140,7 @@ blocks:
       Honzontal line
       : - 1px [Concrete](/design/c/colors/v2.1.0/#rd-concrete)
 
-      * Facey input style form is sharing the same spec as basic input style form. 
+      * Facey input style form is sharing the same spec as basic input style form.
 
     contents:
       - type: wide image
