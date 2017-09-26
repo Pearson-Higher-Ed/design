@@ -25,6 +25,8 @@ downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1ybTMXbm6ge_gTBQC8P9Vg8WAnWQOCmcE8G70QjTgQl0/edit?usp=sharing
 
+implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
+
 dependencies:
   - name: Inputs
     version: 2.0.0

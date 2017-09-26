@@ -12,7 +12,7 @@ people:
     name: Van Yang
     email: van.yang@pearson.com
 implemented: true
-implementation: https://github.com/Pearson-Higher-Ed/elements/
+implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
 downloads:
   - name: Pearson-icons-1.5.sketch
     link: ./assets/Pearson_icons_1.5.sketch

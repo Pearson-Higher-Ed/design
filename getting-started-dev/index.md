@@ -32,7 +32,7 @@ styles, such as the predefined color variables. Read more on [Github][ghub] or i
 [elements]: https://www.npmjs.com/package/pearson-elements
 [npm-org]: https://www.npmjs.com/~pearson-ux
 [ddocs]: https://pearson-elements-v1.surge.sh/getting-started/
-[ghub]: https://github.com/pearson-higher-ed/elements/
+[ghub]: https://github.com/pearson-higher-ed/elements-sdk/
 
 ## Consuming
 
@@ -101,7 +101,7 @@ Development specific requirements will eventually be added to the [Library Membe
  data to be passed through eventing or properties.
 
 [creation]: {{site.baseurl}}/component-creation-guide
-[ghubreadme]: https://github.com/Pearson-Higher-Ed/elements#adding-icons
+[ghubreadme]: https://github.com/Pearson-Higher-Ed/elements-sdk#adding-icons
 [spec]: {{site.baseurl}}/membership-spec
 [oprinciples]: https://origami.pearsoned.com/docs/overview/principles/
 [eprinciples]: https://github.com/Pearson-Higher-Ed/docs/blob/master/origami-contributions.md
