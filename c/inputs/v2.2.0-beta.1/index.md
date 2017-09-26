@@ -506,6 +506,32 @@ blocks:
       - type: narrow image
         src: ./assets/redlines.password.showhide.png
 
+  - type: two column
+    text: |
+      ### Phone number w/ country code
+
+      Spacing
+      : - Dropdown icon is 4px from the left edge of the text for both the fancy and basic styles
+        - Button flag icon is 10px from the top edge of the dropdown window
+        - Dropdown margins are 32px from the left edge and 24px from the right edge
+
+      Typography
+      : - Value text is [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic)
+
+      Icons
+      : - Dropdown use the dropdown-open-sm-24 icon
+
+      States
+      : - Box border is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
+
+      Active
+      : - Dropdown active selection background color [Moonlight (#e9e9e9)](/design/c/colors/v2.0.0-beta.5/#rd-moonlight)
+
+
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.inputs_phone.png
+
 changelog:
   - version: 2.1.0-beta.3
     changes: |
