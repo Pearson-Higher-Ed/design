@@ -6,7 +6,7 @@ status: active
 version: 2.0.1
 rebranded: true
 implemented: true
-implementation: https://github.com/Pearson-Higher-Ed/elements/
+implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
 people:
   - role: Product Owner
     name: Joe Macaluso

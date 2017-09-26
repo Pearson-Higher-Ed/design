@@ -11,7 +11,7 @@ people:
   - role: Designer
     name: Van Yang
     email: van.yang@pearson.com
-implementation: https://github.com/Pearson-Higher-Ed/elements/
+implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
 downloads:
   - name: Pearson_icons_symbols_1.7.sketch
     link: ./assets/Pearson_icons_symbols_1.7.sketch

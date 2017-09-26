@@ -21,6 +21,8 @@ downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/19CpAK-nLRHPQ0w_qmUpXo5NjGZU7mBWszAHlB4Kxy94/edit?usp=sharing
 
+implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
+
 dependencies:
   - name: Colors
     version: 2.0.0
