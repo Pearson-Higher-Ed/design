@@ -25,11 +25,23 @@ website with Elemental Design. This list includes components such as:
 - Breakpoints
 - Icons
 
+Elements SDK also provides a number of JavaScript (transpiled from ES6) based components that enhance the design
+specifications with certain functionalities that allow pieces of functionality to be dropped into an application.  These
+components are based upon the [React](https://facebook.github.io/react/) library, but are also designed to work within
+any application framework.  These components assume that the CSS portion of the Element SDK is also being implemented.  
+The list of JavaScript components includes:
+
+- Calendar
+- Dropdown
+- Footer
+- Buttons
+- Input fields (e.g. text input, radio/check group, select, etc.)
+
 In addition to the compiled CSS, Elements also installs the source SCSS files (and assets) in case you want to integrate
  it more directly into your existing build process. This also allows you to access some of the SCSS features in your own
 styles, such as the predefined color variables. Read more on [Github][ghub] or in the [developer documentation][ddocs].
 
-[elements]: https://www.npmjs.com/package/pearson-elements
+[elements]: https://www.npmjs.com/package/@pearson-components/elements-sdk
 [npm-org]: https://www.npmjs.com/~pearson-ux
 [ddocs]: https://pearson-elements-v1.surge.sh/getting-started/
 [ghub]: https://github.com/pearson-higher-ed/elements-sdk/
@@ -47,7 +59,7 @@ styles, such as the predefined color variables. Read more on [Github][ghub] or i
 
 1. Build your app using these recommendations: React, Redux, webpack, and Node v4+ toolchain
 2. Review components library and, at a minimum, use Typography, Colors, Icons, Responsive Utilities from the Elements SDK:
-- [Elements][elementsSDK]
+- [Elements SDK][elementsSDK]
 - [Other Components][otherComps]
 3. Review App Header and Contextual Help for possible inclusion
 4. Consume other components as needed using ‘npm install’ and component usage instructions. (See Team Scenario 4)
@@ -56,26 +68,26 @@ styles, such as the predefined color variables. Read more on [Github][ghub] or i
 
 1. Install npm2+ and identify how npm modules will work with your build process
 2. Review the Elements SDK and, at a minimum, use Typography, Colors, Icons, Responsive Utilities:
-- [Elements][elementsSDK]
+- [Elements SDK][elementsSDK]
 3. Review the other components in the Pearson Origami npm registry
 - [Other Components][otherComps]
 4. Consume other components as needed using ‘npm install’ and component usage instructions
 
-### Team Scenario 3: Adding Compounds SDK or React components to non-React Application
+### Team Scenario 3: Adding Elements SDK or React components to non-React Application
 1. Install npm2+ and identify how npm modules will work with your build process
 2. Add React/ReactDOM dependencies, via either script includes to page or npm installation
 3. For Angular 1.x apps, review the compounds-ng wrapper
 - [compounds-ng wrapper][compoundsNG]
-4. Review the [Compounds SDK][compoundsSDK]
+4. Review the JavaScript components in [Elements SDK][elementsSDK]
 5. Integrate npm installable App Header and Contextual Help
 6. Review the other components in the Pearson Origami npm registry
 - [Other Components][otherComps]
 7. Consume other components as needed using ‘npm install’ and component usage instructions
 
-### Team Scenario 4: Adding Compounds SDK or React components to existing React Application
+### Team Scenario 4: Adding Elements SDK or React components to existing React Application
 1. Install npm2+ and identify how npm modules will work with your build process
 2. If on React < 0.14, upgrade to React v15
-3. Review the [Compounds SDK][compoundsSDK]
+3. Review the JavaScript components in [Elements SDK][elementsSDK]
 4. Integrate npm installable App Header and Contextual Help if desired
 5. Review the other components in the Pearson Origami npm registry
 - [Other Components][otherComps]
@@ -84,8 +96,7 @@ styles, such as the predefined color variables. Read more on [Github][ghub] or i
 
 [o-intro]: https://docs.google.com/presentation/d/1Jco66Dk7p0b7z0uJ7SvuUqgtiyaeSCtR4JpFLUX4fSk/edit#slide=id.g11de0b299f_0_0
 [o-docs]: http://pearson-higher-ed.github.io/design/
-[elementsSDK]: https://www.npmjs.com/package/pearson-elements
-[compoundsSDK]: https://www.npmjs.com/package/pearson-compounds
+[elementsSDK]: https://www.npmjs.com/package/@pearson-components/elements-sdk
 [otherComps]: https://www.npmjs.com/org/pearson-components
 [compoundsNG]: https://github.com/Pearson-Higher-Ed/compounds-ng
 
@@ -94,7 +105,7 @@ Read the [Component Creation Guide][creation] to learn about the process of addi
 development standards are currently being determined, for now please follow the [Origami principles][oprinciples]. If you
  are contributing to the Elements SDK follow [these guidelines][eprinciples] as well.
 
-Note: Specifically for adding icons to ElementsSDK, first the icons must be approved by Elements' UX members. After that, you may follow the [instructions in the Elements README][ghubreadme].
+Note: Specifically for adding icons to Elements SDK, first the icons must be approved by UXF (PDA) team members. After that, you may follow the [instructions in the Elements SDK README][ghubreadme].
 
 Development specific requirements will eventually be added to the [Library Membership Specification][spec]. In the meantime,
  one principle to keep in mind is that components should not do any data fetching themselves, rather they should expect
