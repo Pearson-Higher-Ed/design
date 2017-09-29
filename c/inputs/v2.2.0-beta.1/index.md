@@ -242,18 +242,22 @@ blocks:
   - type: two column
     text: |
       ## Phone number w/ country code
-      The Phone number with country code input is made up of two parts. The first is the dropdown for selecting country and the other is a form field for inputing the phone number. Together they operate as a single control.
+      The Phone number with country code input is made up of two parts. The first is the dropdown button for selecting country and the other is a form field for inputing the phone number. Together they operate as a single control.
+
+      Note - If the user opts to backspace over the current active country code and then types in a new code the flag in the button should change to align with the newly typed code. This allows the user to type a country code and then a phone number, bypassing the county code dropdown.
+
+      Also, if there is a new country code typed in manually and then a new country is selected from the dropdown the listed country code should be changed to the new code selected from the dropdown.
 
     contents:
       - type: narrow image
         src: ./assets/inputs_phone.png
-        caption: Show/Hide password feature in the fancy input style.
+        caption: Fancy input style.
       - type: narrow image
         src: ./assets/inputs_phone_2.png
         caption: And in the basic input style.
       - type: narrow image
         src: ./assets/inputs_phone_3.png
-        caption: Show/Hide password feature in the fancy input style.
+        caption: Fancy input style dropdown.
 
 
 
@@ -511,9 +515,14 @@ blocks:
       ### Phone number w/ country code
 
       Spacing
-      : - Dropdown icon is 4px from the left edge of the text for both the fancy and basic styles
-        - Button flag icon is 10px from the top edge of the dropdown window
-        - Dropdown margins are 32px from the left edge and 24px from the right edge
+      : - Dropdown icon is 4px from the right edge of the text field for both the fancy and basic styles
+        - Button of the flag icon is 10px from the top edge of the dropdown window
+        - Dropdown margins are 34px from the left edge and 24px from the right edge
+
+      Sizes
+      : - The overall width of the dropdown is 250px
+        - The max height for the Dropdown before scroll bars are available is 250px
+        - Standard flag sizes are 20px wide by 10px tall
 
       Typography
       : - Value text is [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic)
@@ -521,7 +530,7 @@ blocks:
       Icons
       : - Dropdown use the dropdown-open-sm-24 icon
 
-      States
+      Border Color
       : - Box border is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
 
       Active
