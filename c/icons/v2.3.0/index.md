@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Icons
 section: Components
-version: 2.3.0-beta.2
-status: deprecated
+version: 2.3.0
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -283,13 +283,11 @@ blocks:
           src: ./assets/touch-target.png
 
 changelog:
-  - version: 2.3.0-beta.2
-    changes: |
-      - ADDED: Feature links
-      - CHANGED: Updated name guide
-  - version: 2.3.0-beta.1
+  - version: 2.3.0
     changes: |
       - ADDED: print-18, print-24, and updated pixel containers
+      - ADDED: Feature links
+      - CHANGED: Updated name guide
       - REMOVED: Scaling information
   - version: 2.2.0
     changes: |
