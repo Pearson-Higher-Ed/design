@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Toolbar
 section: Components
-status: deprecated
-version: 1.0.0-beta.6
+status: active
+version: 1.0.0
 people:
   - role: Designer
     name: Parker Malenke
@@ -138,6 +138,8 @@ blocks:
   - type: two column
     text: |
       ### Condensing controls
+      ***Potential Enhancement***
+
       In some cases you may have too many controls to reasonably fit in a multi-row layout. In this case the UXF team is exploring an overflow menu that would allow you to move the extra tools into a drawer with more room. This is likely to be an addition in version 1.1 of this component, pending feedback from the development team.
     contents:
       - type: narrow image
@@ -203,27 +205,6 @@ blocks:
 
 
 changelog:
-  - version: 1.0.0-beta.6
-    changes: |
-      - CHANGED: Multi-select dropdown shows checkmark
-      - ADDED: Redlines for multi-select
-      - ADDED: UX a11y checklist
-      - ADDED: Sketch download
-  - version: 1.0.0-beta.5
-    changes: |
-      - REMOVED: Overflow menu (temporarily)
-  - version: 1.0.0-beta.4
-    changes: |
-      - ADDED: Use case context to some examples
-  - version: 1.0.0-beta.3
-    changes: |
-      - FIXED: Button labels to sentence case
-      - ADDED: Details around icon positioning
-      - ADDED: Redlines
-      - CHANGED: Overflow drawer trigger name to "Tools" from "More"
-  - version: 1.0.0-beta.2
-    changes: |
-      - ADDED: Button group option
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: Initial version
 ---
