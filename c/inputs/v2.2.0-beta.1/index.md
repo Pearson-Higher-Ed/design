@@ -242,11 +242,20 @@ blocks:
   - type: two column
     text: |
       ## Phone number w/ country code
-      The Phone number with country code input is made up of two parts. The first is the dropdown button for selecting country and the other is a form field for inputing the phone number. Together they operate as a single control.
 
-      Note - If the user opts to backspace over the current active country code and then types in a new code the flag in the button should change to align with the newly typed code. This allows the user to type a country code and then a phone number, bypassing the county code dropdown.
+      ####The Phone number with country code input is made up of two parts that operate as a single control:
 
-      Also, if there is a new country code typed in manually and then a new country is selected from the dropdown the listed country code should be changed to the new code selected from the dropdown.
+      - Dropdown for selecting country
+
+      - Form field for inputting the phone number
+
+
+      ####Note the following behaviors:
+
+      - If the user manually changes the current active country code, the flag should change to align with the user entry.
+
+      - If the user selects a new county code from the dropdown, the country code text should change to match the dropdown value selected.
+
 
     contents:
       - type: narrow image
@@ -533,8 +542,10 @@ blocks:
       Border Color
       : - Box border is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
 
-      Active
-      : - Dropdown active selection background color [Moonlight (#e9e9e9)](/design/c/colors/v2.0.0-beta.5/#rd-moonlight)
+      Checkmark
+      : - Uses the check-sm-18 icon
+        - 16px left padding around the icon
+        -
 
 
     contents:
