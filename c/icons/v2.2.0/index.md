@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Icons
 section: Components
-version: 2.2.0-beta.1
+version: 2.2.0
 status: deprecated
 people:
   - role: Product Owner
@@ -204,7 +204,7 @@ blocks:
 
 
 changelog:
-  - version: 2.2.0-beta.1
+  - version: 2.2.0
     changes: |
       - ADDED: sortable-18, sortable-24
   - version: 2.1.0
@@ -221,4 +221,3 @@ changelog:
     changes: |
       Initial release
 ---
-``
