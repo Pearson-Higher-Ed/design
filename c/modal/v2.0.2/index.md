@@ -57,6 +57,9 @@ blocks:
 
       Use them sparingly as they are interruptive. For screen reader users, it is especially frustrating because they’ll lose their place in the application.
 
+    features:
+      - Basic Modal
+
 
     contents:
       - type: wide image
@@ -85,6 +88,10 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/modal_definition.png
+
+    features:
+      - Modal Header
+      - Modal Actions
 
 
   - type: section
