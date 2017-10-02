@@ -77,7 +77,7 @@ blocks:
     text: |
 
       Modals contains three parts:
-      
+
       * __Header__ is optional. Designers should use their best judgment to create a clear message. Note that even if a visual title is not provided some sort of name needs to be given to development so it can be coded in for screen reader access.
       * __Content__
       * __Actions__ are optional. When there isn’t a button, you must include the “X” as a way to dismiss the modals to meet accessibility requirements.
@@ -202,10 +202,12 @@ blocks:
   - type: two column
     text: |
 
-      ### [Breakpoints](/design/c/breakpoints/)
+      ### Responsive Behavior
+      The design of the modal changes at different [breakpoints](/design/c/breakpoints/):
 
-      - 768px
-      - 480px
+      - Medium device (md) and up (768px <= viewport)
+      - Small device (sm) (480px <= viewport < 768px)
+      - Extra small device (xs) (viewport < 480px)
 
 
   - type: two column
@@ -230,7 +232,7 @@ blocks:
         - sm and xs: [Basic Section UI Heading](/design/c/typography/v2.1.1/#typography--basic-section-ui-heading) 20px
         - [Charcoal](/design/c/colors/v3.0.1/#colors--charcoal)
 
-      Content
+      Content text
       : - [Basic Body Copy](/design/c/typography/v2.1.1/#typography--basic-body-copy) 14px
         - [Charcoal](/design/c/colors/v3.0.1/#colors--charcoal)
 
@@ -238,7 +240,7 @@ blocks:
       : - 2px
 
       Button
-      : - [Large](/design/c/buttons/v2.2.1/#buttons--large-button)[Primary Buttons](/design/c/buttons/v2.2.1/#buttons--primary-button)
+      : - [Primary Buttons](/design/c/buttons/v2.2.1/#buttons--primary-button) [(Large)](/design/c/buttons/v2.2.1/#buttons--large-button)
 
       "X" icon
       : - Size: [remove-sm-24](/design/c/icons/v2.3.0/#icons--remove-sm)
