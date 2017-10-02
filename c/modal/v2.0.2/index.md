@@ -203,7 +203,7 @@ blocks:
     text: |
 
       ### Responsive Behavior
-      The design of the modal changes at different [breakpoints](/design/c/breakpoints/):
+      They layout of the modal changes at different [breakpoints](/design/c/breakpoints/):
 
       - Medium device (md) and up (768px <= viewport)
       - Small device (sm) (480px <= viewport < 768px)
