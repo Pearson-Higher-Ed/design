@@ -88,7 +88,7 @@ blocks:
 
   - type: two column
     text: |
-      Mobile responsive is sharing he same spec the same spec as the desktop version. Except one column style only.
+      Mobile responsive is sharing the same spec as the desktop version. Except that it is one column style only.
 
     contents:
     - type: narrow image
