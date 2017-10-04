@@ -69,7 +69,7 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/form_basic.png
-        caption: A two column style form showing all the principle components.
+        caption: A two-column style form showing all the principle components.
 
 
   - type: section
@@ -83,15 +83,12 @@ blocks:
     - type: wide image
       src: ./assets/form_basic_sections.png
 
-
-
   - type: section
-    name: Form in responsive
+    name: Responsive forms
 
   - type: two column
     text: |
       Mobile responsive is sharing he same spec the same spec as the desktop version. Except one column style only.
-
 
     contents:
     - type: narrow image
@@ -100,9 +97,6 @@ blocks:
     - type: narrow image
       src: ./assets/form_mobile_sections.png
       caption: Form group (small and extra small devices)
-    - type: narrow image
-      src: ./assets/form_fancy_example.png
-      caption: Example of log in screen in fancy style
 
   - type: section
     name: Error Handling
@@ -137,10 +131,10 @@ blocks:
       Spacing - Small and extra small devices
       : - Sharing same spec as the Medium devices.
 
-      Honzontal line
+      Horizontal line
       : - 1px [Concrete](/design/c/colors/v2.1.0/#rd-concrete)
 
-      * Facey input style form is sharing the same spec as basic input style form.
+      * Fancy input style form is sharing the same spec as basic input style form.
 
     contents:
       - type: wide image
