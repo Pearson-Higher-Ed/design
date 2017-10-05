@@ -7,10 +7,10 @@ section: Components
 title: Progress Bar
 
 # Status of the component (e.g. experimental, deprecated, etc.)
-status: deprecated
+status: active
 
 # Version (follow the component versioning guide)
-version: 2.0.0-beta.3
+version: 2.0.0
 
 # List the people involved
 people:
@@ -136,18 +136,11 @@ blocks:
 # Required. List out each version of the component and the changes made. Make
 # sure to follow the component versioning guide.
 changelog:
-  - version: 2.0.0-beta.3
+  - version: 2.0.0
     changes: |
-      - ADDED: Feature links
-      - ADDED: Redlines
-  - version: 2.0.0-beta.2
-    changes: |
-      - ADDED: Alternate text alignment options
-      - ADDED: Animation option
-      - CHANGED: Visual style to make the progress vs track more distinct
-  - version: 2.0.0-beta.1
-    changes: |
-      - CHANGED: Initial rebranding
+      - CHANGED: Rebranded visual style
+      - ADDED: Animated option
+      - ADDED: Alternative text alignments
   - version: 1.0.0
     changes: |
       Initial version

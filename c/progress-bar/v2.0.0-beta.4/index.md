@@ -10,7 +10,7 @@ title: Progress Bar
 status: deprecated
 
 # Version (follow the component versioning guide)
-version: 2.0.0-beta.3
+version: 2.0.0-beta.4
 
 # List the people involved
 people:
@@ -95,7 +95,7 @@ blocks:
       For situations where the process is likely to stall at one or more points for more than a second or two, an animation can be used to indicate that the system is still functioning.
     contents:
       - type: narrow video
-        src: ./assets/animation.mp4
+        src: ./assets/animation.mp4 # https://codepen.io/anon/pen/yodMBb
     features:
       - Animated Progress Bar
 
@@ -136,6 +136,9 @@ blocks:
 # Required. List out each version of the component and the changes made. Make
 # sure to follow the component versioning guide.
 changelog:
+  - version: 2.0.0-beta.4
+    changes: |
+      - CHANGED: Example label in images
   - version: 2.0.0-beta.3
     changes: |
       - ADDED: Feature links
