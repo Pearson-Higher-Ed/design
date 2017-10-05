@@ -1,3 +1,7 @@
+# Important Notification  
+
+This repo is no longer undergoing active development and is in the process of being deprecated.  All future development should be done in the [Elements-SDK](https://github.com/Pearson-Higher-Ed/elements-sdk) repo.
+
 # Core Components for Pearson Web UX
 [![Build Status](https://travis-ci.org/Pearson-Higher-Ed/compounds.svg?branch=v0)](https://travis-ci.org/Pearson-Higher-Ed/compounds)
 
