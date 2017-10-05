@@ -227,7 +227,7 @@ blocks:
 
   - type: two column
     text: |
-      ## Password
+      ### Password
       The password input includes a show/hide option to turn off obfuscation. The value is hidden by default but may be revealed in lower security settings to make it easier for a user to type the intended password.
 
       Note the show/hide control is slightly different than the standard link style with the underline appearing on hover/focus. This is to mesh with the fancy form style better.
@@ -241,19 +241,18 @@ blocks:
 
   - type: two column
     text: |
-      ## Phone number w/ country code
+      ### Phone number w/ country code
 
-      ####The Phone number with country code input is made up of two parts that operate as a single control:
+      #### Construction
+      The Phone number with country code input is made up of two parts that operate as a single control:
 
       - Dropdown for selecting country
-
       - Form field for inputting the phone number
 
 
-      ####Note the following behaviors:
+      #### Behavior
 
       - If the user manually changes the current active country code, the flag should change to align with the user entry.
-
       - If the user selects a new county code from the dropdown, the country code text should change to match the dropdown value selected.
 
 
@@ -526,31 +525,17 @@ blocks:
       Spacing
       : - Dropdown icon is 4px from the right edge of the text field for both the fancy and basic styles
         - Button of the flag icon is 10px from the top edge of the dropdown window
-        - Dropdown margins are 34px from the left edge and 24px from the right edge
 
       Sizes
-      : - The overall width of the dropdown is 250px
-        - The max height for the Dropdown before scroll bars are available is 250px
+      : - The max height for the Dropdown before scroll bars are available is 250px
         - Standard flag sizes are 20px wide by 10px tall
 
-      Typography
-      : - Value text is [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic)
-
-      Icons
-      : - Dropdown use the dropdown-open-sm-24 icon
-
-      Border Color
-      : - Box border is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
-
-      Checkmark
-      : - Uses the check-sm-18 icon
-        - 16px left padding around the icon
-        -
-
+      Dropdown
+      : - Uses standard [dropdown component](http://pearson-higher-ed.github.io/design/c/dropdown/v1.1.0-beta.1/)
 
     contents:
       - type: narrow image
-        src: ./assets/redlines.inputs_phone.png
+        src: ./assets/redlines.phone.png
 
 changelog:
   - version: 2.1.0-beta.3
