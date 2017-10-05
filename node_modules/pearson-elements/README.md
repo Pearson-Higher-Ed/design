@@ -1,3 +1,6 @@
+# Important Notification
+This repo is no longer undergoing active development and is in the process of being deprecated.  All future development should be done in the [Elements-SDK](https://github.com/Pearson-Higher-Ed/elements-sdk) repo.
+
 # Pearson Elements
 [![Build Status](https://travis-ci.org/Pearson-Higher-Ed/elements.svg?branch=v0)](https://travis-ci.org/Pearson-Higher-Ed/elements)
 
