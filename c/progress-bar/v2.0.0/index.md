@@ -34,6 +34,8 @@ dependencies:
 downloads:
   - name: Accessiblity Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1qpFi_MKpyKa8oqrQCfQnIxjQKNrZ5KRnpaZn2oNhf20/edit?usp=sharing
+  - name: Sketch file
+    link: ./assets/ProgressBarComponent.sketch
 
 # Overview information for the component
 tagline: |
