@@ -131,19 +131,16 @@ blocks:
 
       * __Modals with actions:__ Sticky buttons
 
-        [Interact with the prototype](https://preview.uxpin.com/4b90bc323219879d681c381bdc71e1d80adc9ab0#/pages/67336979/simulate/no-panels)
-
         The buttons must be accessible upfront so that users know that they are expected to take an action.
 
       * __Modal without action:__ Scrolling page
 
-        [Interact with the prototype](https://preview.uxpin.com/4b90bc323219879d681c381bdc71e1d80adc9ab0#/pages/67336990/simulate/no-panels)
 
     contents:
       - type: wide image
         src: ./assets/modal_desktop_with_actions_scrolling.png
       - type: narrow video
-        src: ./assets/Prototype_modal_mobile_with_actions.mp4
+        src: ./assets/modal_scrolling modal_with actions.gif
         caption: Modal with actions (Mobile). This prototype failed to show the scroll bar due to technical limitation, but the actual build should have the scroll bar visible at all times for this modal.
       - type: narrow video
         src: ./assets/Prototype_modal_mobile_without_actions.mp4
@@ -269,6 +266,11 @@ blocks:
       - type: wide image
         src: ./assets/modal_specs.png
 
+    redlines:
+    - Basic Modal
+    - Modal Header
+    - Modal Actions
+
 
   - type: two column
     text: |   
@@ -335,6 +337,8 @@ changelog:
   - version: 2.0.3
     changes: |
       - UPDATED: UI copy in the example images
+      - ADDED: Link to redlines per feature
+      - UPDATED: The button style in the video example
   - version: 2.0.2
     changes: |
       - UPDATED: Dependencies (version number and links)
