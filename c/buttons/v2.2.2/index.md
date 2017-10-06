@@ -91,7 +91,7 @@ blocks:
 
     contents:
       - type: wide image
-        src: ./assets/button_placement_example.png  
+        src: ./assets/button_placement_example.png
 
   - type: section
     name: Button labels
