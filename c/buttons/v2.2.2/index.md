@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Buttons
 section: Components
-version: 2.2.1
-status: deprecated
+version: 2.2.2
+status: active
 implemented: true
 people:
   - role: Designer
@@ -262,6 +262,10 @@ blocks:
         src: ./assets/redline_distance@2.png
 
 changelog:
+
+  - version: 2.2.2
+    changes: |
+      - FIXED: UI text in the example image
   - version: 2.2.1
     changes: |
       - ADDED: Feature links
