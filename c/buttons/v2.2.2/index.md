@@ -24,7 +24,7 @@ dependencies:
   - name: Typography
     version: 2.1.1
 
-tagline: Buttons communicate the action that will occur when the user trigger them.
+tagline: Buttons communicate the action that will occur when the user triggers them.
 features:
 usage_guidelines:
 
