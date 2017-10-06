@@ -132,7 +132,8 @@ blocks:
       * __Modals with actions:__ Sticky buttons
 
         The buttons must be accessible upfront so that users know that they are expected to take an action.
-        Interact with [prototype](https://pearson.invisionapp.com/share/BPDUFEYWZ#/257173380_prototype_Modal_with_actions_scrolling_mobile)
+
+        [Interact with the prototype](https://pearson.invisionapp.com/share/BPDUFEYWZ#/257173380_prototype_Modal_with_actions_scrolling_mobile)
 
       * __Modal without action:__ Scrolling page
 
@@ -140,7 +141,7 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/modal_desktop_with_actions_scrolling.png
-      - type: narrow video
+      - type: narrow image
         src: ./assets/modal_scrolling modal_with actions.gif
         caption: Modal with actions (Mobile). This prototype failed to show the scroll bar due to technical limitation, but the actual build should have the scroll bar visible at all times for this modal.
       - type: narrow video
