@@ -132,6 +132,7 @@ blocks:
       * __Modals with actions:__ Sticky buttons
 
         The buttons must be accessible upfront so that users know that they are expected to take an action.
+        Interact with [prototype](https://pearson.invisionapp.com/share/BPDUFEYWZ#/257173380_prototype_Modal_with_actions_scrolling_mobile)
 
       * __Modal without action:__ Scrolling page
 
