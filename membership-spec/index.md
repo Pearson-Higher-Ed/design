@@ -210,7 +210,7 @@ dev_reqs:
         extras:
           - name: Explanation
             content: |
-              The archetype implements best practices like testing, linting, bundling, transpiling ES6 to ES5, etc. It codifies a long list of decisions that you no longer have to make to get rolling saving you from wiring it all together into an automated development environment and build process.
+              The archetype implements best practices like testing, linting, bundling, transpiling ES6 to ES5, etc. It codifies a long list of decisions that you no longer have to make, saving you from wiring it all together into an automated development environment and build process.
         approvers:
           - PDA Development team
 
