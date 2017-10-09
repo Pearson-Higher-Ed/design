@@ -21,19 +21,28 @@ website with Elemental Design. This list includes components such as:
 
 - Buttons
 - Colors
+- Forms
 - Typography
 - Breakpoints
 - Icons
+- Inputs
+- Responsive-utilities
 
-Elements SDK also provides a number of JavaScript (transpiled from ES6) based components that enhance the design
-specifications with certain functionalities that allow pieces of functionality to be dropped into an application.  These
+Elements SDK also provides a number of React (transpiled from ES6) based components that enhance the design
+specifications with certain functionalities that allow them to be dropped into an application.  These
 components are based upon the [React](https://facebook.github.io/react/) library, but are also designed to work within
 any application framework.  These components assume that the CSS portion of the Element SDK is also being implemented.  
-The list of JavaScript components includes:
+The list of React components includes:
 
 - Calendar
 - Dropdown
 - Footer
+- StaticAlert
+- Tabs
+- loadingSpinner
+- Table
+- DatePicker
+- TimePicker
 - Buttons
 - Input fields (e.g. text input, radio/check group, select, etc.)
 
@@ -54,45 +63,6 @@ styles, such as the predefined color variables. Read more on [Github][ghub] or i
 - [Review Origami documentation][o-docs]
 - [Review Component Documentation][ddocs]
 - Identify missing components and work with PDA team to request or contribute
-
-### Team Scenario 1: Brand New Application
-
-1. Build your app using these recommendations: React, Redux, webpack, and Node v4+ toolchain
-2. Review components library and, at a minimum, use Typography, Colors, Icons, Responsive Utilities from the Elements SDK:
-- [Elements SDK][elementsSDK]
-- [Other Components][otherComps]
-3. Review App Header and Contextual Help for possible inclusion
-4. Consume other components as needed using ‘npm install’ and component usage instructions. (See Team Scenario 4)
-
-### Team Scenario 2: Adding Elements SDK or vanilla JS components to any Existing Application
-
-1. Install npm2+ and identify how npm modules will work with your build process
-2. Review the Elements SDK and, at a minimum, use Typography, Colors, Icons, Responsive Utilities:
-- [Elements SDK][elementsSDK]
-3. Review the other components in the Pearson Origami npm registry
-- [Other Components][otherComps]
-4. Consume other components as needed using ‘npm install’ and component usage instructions
-
-### Team Scenario 3: Adding Elements SDK or React components to non-React Application
-1. Install npm2+ and identify how npm modules will work with your build process
-2. Add React/ReactDOM dependencies, via either script includes to page or npm installation
-3. For Angular 1.x apps, review the compounds-ng wrapper
-- [compounds-ng wrapper][compoundsNG]
-4. Review the JavaScript components in [Elements SDK][elementsSDK]
-5. Integrate npm installable App Header and Contextual Help
-6. Review the other components in the Pearson Origami npm registry
-- [Other Components][otherComps]
-7. Consume other components as needed using ‘npm install’ and component usage instructions
-
-### Team Scenario 4: Adding Elements SDK or React components to existing React Application
-1. Install npm2+ and identify how npm modules will work with your build process
-2. If on React < 0.14, upgrade to React v15
-3. Review the JavaScript components in [Elements SDK][elementsSDK]
-4. Integrate npm installable App Header and Contextual Help if desired
-5. Review the other components in the Pearson Origami npm registry
-- [Other Components][otherComps]
-6. Consume other components as needed using ‘npm install’ and component usage instructions
-
 
 [o-intro]: https://docs.google.com/presentation/d/1Jco66Dk7p0b7z0uJ7SvuUqgtiyaeSCtR4JpFLUX4fSk/edit#slide=id.g11de0b299f_0_0
 [o-docs]: http://pearson-higher-ed.github.io/design/
