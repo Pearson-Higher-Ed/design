@@ -80,7 +80,7 @@ blocks:
     text: |
       **Error** is when the field's content has some sort of error.
 
-      **Error (focused)** is the focused version of the error state. Note that in almost every case an error state should be accompanied by explanatory text. See the [Info/Error Text section](#information-error-text) section for more details.
+      **Error (focused)** is the focused version of the error state. Note that in almost every case an error state should be accompanied by explanatory text. See the [Informational/Error Text section](#informational-error-text) section for more details.
     contents:
       - type: wide image
         src: ./assets/Inputs_error.png
@@ -196,7 +196,7 @@ blocks:
 
 
   - type: section
-    name: Information/Error Text
+    name: Informational/Error Text
 
   - type: two column
     text: |
@@ -204,20 +204,20 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/Inputs_info.png
-        caption: Info text for both fancy and basic styled inputs.
+        caption: Informational text for both fancy and basic styled inputs.
 
   - type: two column
     text: |
       Any fields that have an error should explain the error with additional text below the field. In this case it is colored red and paired with an error state on the form.
 
-      If necessary, information and error text may appear simultaneously, with error text following the informational.
+      If necessary, informational and error text may appear simultaneously, with error text appearing last.
     contents:
       - type: narrow image
         src: ./assets/Inputs_error_text.png
         caption: Error text.
       - type: narrow image
         src: ./assets/Inputs_error_text_2.png
-        caption: Simultaneous display of info and error text.
+        caption: Simultaneous display of informational and error text.
 
 
   - type: section
@@ -281,6 +281,10 @@ blocks:
       Error (focused)
       : - [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red) shadow with 4px blur
 
+      Informational Text
+      : - Small UI Text in Charcoal
+        - 3px below the field
+
       Read only
       : - No input box
         - [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic) in [Charcoal](/design/c/colors/v2.0.0-beta.5/#rd-charcoal)
@@ -334,6 +338,10 @@ blocks:
       Error (focused)
       : - Underline is 4px solid [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
         - Underline is 7px below value
+
+      Informational Text
+      : - Small UI Text in Charcoal
+        - 3px below field
 
     contents:
       - type: narrow image
@@ -489,7 +497,7 @@ blocks:
 changelog:
   - version: 2.1.0-beta.6
     changes: |
-      - CHANGED:
+      - CHANGED: Further wording edits
   - version: 2.1.0-beta.5
     changes: |
       - FIXED: Redlines removed references to the turquoise color
