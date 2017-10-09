@@ -99,6 +99,9 @@ blocks:
       - type: narrow image
         src: ./assets/Inputs_text_basic.png
         caption: Basic single line text inputs.
+    features:
+      - Basic Single Line Input
+      - Fancy Single Line Input
 
   - type: two column
     text: |
@@ -122,6 +125,8 @@ blocks:
       - type: narrow image
         src: ./assets/Inputs_multiline_value.png
         caption: Multiple line input with a value. Note this input has the handle for vertical resizing.
+    features:
+      - Multiple Line Input
 
   - type: section
     name: Select
@@ -134,7 +139,6 @@ blocks:
 
       The popup will follow the browser default style.
 
-
     contents:
       - type: narrow image
         src: ./assets/Inputs_select_fancy.png
@@ -142,6 +146,9 @@ blocks:
       - type: narrow image
         src: ./assets/Inputs_select_basic.png
         caption: Closed and opened select in the basic style.
+    features:
+      - Basic Select Input
+      - Fancy Select Input
 
   - type: section
     name: Radio Buttons
@@ -158,6 +165,8 @@ blocks:
       - type: narrow image
         src: ./assets/Inputs_radiobutton.png
         caption: Various radio button states.
+    features:
+      - Radio Button Input
 
   - type: section
     name: Checkboxes
@@ -174,6 +183,8 @@ blocks:
       - type: narrow image
         src: ./assets/Inputs_checkbox.png
         caption: Various checkbox states.
+    features:
+      - Checkbox Input
 
   - type: section
     name: Labels
@@ -193,6 +204,8 @@ blocks:
       - type: narrow image
         src: ./assets/Inputs_optional_2.png
         caption: Example using (optional) label in a form.
+    features:
+      - Required/Optional Label
 
 
   - type: section
@@ -205,6 +218,9 @@ blocks:
       - type: narrow image
         src: ./assets/Inputs_info.png
         caption: Informational text for both fancy and basic styled inputs.
+    features:
+      - Informational Text
+      - Error Text
 
   - type: two column
     text: |
@@ -236,6 +252,8 @@ blocks:
       - type: narrow image
         src: ./assets/inputs_password_2.png
         caption: And in the basic input style.
+    features:
+      - Password Input
 
   - type: section
     name: Redlines
@@ -294,6 +312,11 @@ blocks:
         src: ./assets/redlines.text.basic.1.png
       - type: narrow image
         src: ./assets/redlines.text.basic.2.png
+    redlines:
+      - Basic Single Line Input
+      - Required/Optional Label
+      - Informational Text
+      - Error Text
 
   - type: two column
     text: |
@@ -348,6 +371,8 @@ blocks:
         src: ./assets/redlines.text.fancy.1.png
       - type: narrow image
         src: ./assets/redlines.text.fancy.2.png
+    redlines:
+      - Fancy Single Line Input
 
 
   - type: two column
@@ -367,6 +392,8 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/redlines.text.multiple.png
+    redlines:
+      - Multiple Line Input
 
   - type: two column
     text: |
@@ -396,6 +423,8 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/redlines.select.basic.png
+    redlines:
+      - Basic Select Input
 
   - type: two column
     text: |
@@ -420,6 +449,8 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/redlines.select.fancy.png
+    redlines:
+      - Fancy Select Input
 
   - type: two column
     text: |
@@ -446,6 +477,8 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/redlines.radiobuttons.png
+    redlines:
+      - Radio Button Input
 
   - type: two column
     text: |
@@ -471,9 +504,8 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/redlines.checkboxes.png
-
-    exports:
-      - Checkbox
+    redlines:
+      - Checkbox Input
 
   - type: two column
     text: |
@@ -493,6 +525,8 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/redlines.password.showhide.png
+    redlines:
+      - Password Input
 
 changelog:
   - version: 2.1.0-beta.6
