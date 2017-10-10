@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Inputs
 section: Components
-status: deprecated
-version: 2.1.0-beta.6
+status: active
+version: 2.1.0
 rebranded: true
 implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
 people:
@@ -529,26 +529,10 @@ blocks:
       - Password Input
 
 changelog:
-  - version: 2.1.0-beta.6
-    changes: |
-      - CHANGED: Further wording edits
-      - ADDED: Feature links
-  - version: 2.1.0-beta.5
-    changes: |
-      - FIXED: Redlines removed references to the turquoise color
-  - version: 2.1.0-beta.4
-    changes: |
-      - Various updates to color and wording
-  - version: 2.1.0-beta.3
-    changes: |
-      - CHANGED: Active color back to Pearson Digital Blue
-  - version: 2.1.0-beta.2
-    changes: |
-      - CHANGED: Update sketch file
-  - version: 2.1.0-beta.1
+  - version: 2.1.0
     changes: |
       - CHANGED: Icon for select input
-      - CHANGED: Active color from Pearson Digital Blue to Digital Marine Turquoise
+      - ADDED: Feature links
   - version: 2.0.1
     changes: |
       - FIXED: Some images had disabled labels that don't match the actual design
