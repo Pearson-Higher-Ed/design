@@ -3,8 +3,8 @@ layout: component-yaml
 title: Coach Marks
 section: Components
 sdk: stand_alone
-version: 1.0.1
-status: deprecated
+version: 1.0.2
+status: active
 implemented: true
 implementation: https://github.com/Pearson-Higher-Ed/coach-mark/
 people:
@@ -18,12 +18,12 @@ downloads:
     link: ./assets/coach.mark.mockup.sketch
 
 dependencies:
-  - name: colors
-    version: 2.1.0
-  - name: typography
-    version: 2.0.0
-  - name: icons
-    version: 2.0.0
+  - name: Colors
+    version: 3.0.1
+  - name: Typography
+    version: 2.1.1
+  - name: Icons
+    version: 2.3.0
 
 tagline: |
   This component informs the user of a new feature, nudges a user to use a feature or guides the user through a multistep process.
@@ -53,6 +53,9 @@ blocks:
         src: ./assets/single.instance.icon.png
         caption: Coach mark with the close icon.
         border: true
+    features:
+      - Link Coach Mark
+      - Icon Coach Mark
 
   - type: section
     name: Usage
@@ -99,12 +102,12 @@ blocks:
         - Arrow never points out of either side
 
       Close icon
-      : - remove-sm-18
+      : - [remove-sm-18](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--bold-ui-text)
         - Centered in a 44x44 px tap target in the upper right corner
 
       Colors
-      : - [Digital Ice Blue](/design/c/colors/v2.0.0/#rd-digital-ice-blue) background color
-        - All text is [Charcoal](/design/c/colors/v2.0.0/#rd-charcoal)
+      : - [Digital Ice Blue](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--digital-ice-blue) background color
+        - All text is [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal)
 
       Drop shadow
       : - Shifted 3px downwards
@@ -112,19 +115,25 @@ blocks:
         - 7px blur, 0px spread
 
       Typography
-      : - Title is [UI Text - Bold](/design/c/typography/v2.0.0/#rd-ui-text-bold)
-        - Message is [UI Text - Basic](/design/c/typography/v2.0.0/#rd-ui-text-basic)
-        - Links are [link styled](/design/c/typography/v2.0.0/#rd-links) [UI Text - Basic](/design/c/typography/v2.0.0/#rd-ui-text-basic), but overridden to use [Charcoal](/design/c/colors/v2.0.0/#rd-charcoal) for both active and hover for contrast purposes
+      : - Title is [Bold UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--bold-ui-text)
+        - Message is [Basic UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-ui-text)
+        - Links are [link styled](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--link) [Basic UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-ui-text), but overridden to use [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal) for both active and hover for contrast purposes
 
       Info Trigger
-      : - Use info-fill-18
+      : - Use the [info-fill-18](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--bold-ui-text) icon
 
     contents:
       - type: wide image
         src: ./assets/redlines.single.png
         caption: Single Instance Coach Mark
+    redlines:
+      - Link Coach Mark
+      - Icon Coach Mark
 
 changelog:
+  - version: 1.0.2
+    changes: |
+      - ADDED: Feature links
   - version: 1.0.1
     changes: |
       - FIXED: Inconsistencies in sketch file
