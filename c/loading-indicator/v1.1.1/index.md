@@ -4,8 +4,8 @@ title: Loading Indicator
 section: Components
 sdk: stand_alone
 redirect_from: /docs/ui-components/loading-indicator/
-version: 1.1.0
-status: deprecated
+version: 1.1.1
+status: active
 implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
 people:
   - role: Product Owner
@@ -16,9 +16,9 @@ people:
     email: edward.zee@pearson.com
 dependencies:
   - name: Colors
-    version: 2.0.0
+    version: 3.0.1
   - name: Typography
-    version: 2.0.0
+    version: 2.1.1
 downloads:
   - name: UX Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1BygpweQJc6NV58izkcJRAc_QXh5lSRDyzHHU6qRCq-g/edit?usp=sharing
@@ -52,6 +52,8 @@ blocks:
       - type: narrow video
         src: ./assets/animation.mp4
         caption: Example of the loading animation.
+    features:
+      - Basic Loading Indicator
 
   - type: two column
     text: |
@@ -62,6 +64,8 @@ blocks:
       - type: narrow image
         src: ./assets/subset.png
         caption: Example of the loading indicator being used for a single area of the page.
+    features:
+      - Section Loading Indicator
 
 
   - type: section
@@ -81,12 +85,12 @@ blocks:
         - Chip has 20px margins that force text to wrap
 
       Colors
-      : - Background Color: [Charcoal](/design/c/colors/v2.0.0/#rd-charcoal)
-        - Text: [White](/design/c/colors/v2.0.0/#rd-white)
-        - Spinner: [Digital Marine Turquoise](/design/c/colors/v2.0.0/#rd-digital-marine-turquoise-19A5A3)
+      : - Background Color: [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal)
+        - Text: [White](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--white)
+        - Spinner: [Digital Marine Turquoise](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--digital-marine-turquoise)
 
       Typography
-      : - UI Text - Basic
+      : - [Basic UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-ui-text)
 
       Spinner
       : - Composed of 8 circles arranged equally around a circle
@@ -99,7 +103,7 @@ blocks:
         - The animation proceeds in a clockwise direction
 
       Light box
-      : - The region of the page the loader applies to should have a [White](/design/c/colors/v2.0.0/#rd-white) overlay at 80% opacity
+      : - The region of the page the loader applies to should have a [White](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--white) overlay at 80% opacity
 
     contents:
       - type: wide image
@@ -113,8 +117,14 @@ blocks:
       - type: narrow image
         src: ./assets/animation.png
         caption: Loading indicator animation.
+    redlines:
+      - Basic Loading Indicator
+      - Section Loading Indicator
 
 changelog:
+  - version: 1.1.1
+    changes: |
+      - ADDED: Feature Links
   - version: 1.1.0
     changes: |
       - ADDED: Overlay effect
