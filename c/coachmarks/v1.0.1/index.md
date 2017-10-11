@@ -4,7 +4,7 @@ title: Coach Marks
 section: Components
 sdk: stand_alone
 version: 1.0.1
-status: active
+status: deprecated
 implemented: true
 implementation: https://github.com/Pearson-Higher-Ed/coach-mark/
 people:

@@ -8,7 +8,7 @@ order: 3
 * TOC
 {:toc}
 
-Each component is designed to be useful and high quality from the beginning, but the nature of software these days is to always change and evolve. Elemental Design understands this and includes several features to make updates easy, for both creators and consumers.
+Each component is designed to be useful and of high quality from the beginning, but the nature of software these days is to change and evolve. Elemental Design understands this and includes several features to make updates easy, for both creators and consumers.
 
 One of the key tools in managing change is the [Component Versioning system][versions]. This enables clear communication about the type and extent of a change and allows component consumers to choose an update rate that works for them. Modifications are classified as:
 

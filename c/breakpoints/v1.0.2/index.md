@@ -13,7 +13,7 @@ people:
     name: Parker Malenke
     email: parker.malenke@pearson.com
 
-implementation: https://github.com/Pearson-Higher-Ed/elements/
+implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
 
 no_redlines: true
 

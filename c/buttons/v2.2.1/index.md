@@ -3,7 +3,7 @@ layout: component-yaml
 title: Buttons
 section: Components
 version: 2.2.1
-status: active
+status: deprecated
 implemented: true
 people:
   - role: Designer
@@ -11,7 +11,7 @@ people:
     email: parker.malenke@pearson.com
   - role: QA
     name: Eajaz
-implementation: https://github.com/Pearson-Higher-Ed/elements/
+implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1eSGAoNb7F1A8iA_DqLQfSP_TxzuV0V2yTAK8ksDeQBU/edit?usp=sharing

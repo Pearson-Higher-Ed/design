@@ -6,8 +6,7 @@ sdk: stand_alone
 version: 1.0.0
 rebranded: true
 status: active
-implemented: true
-implementation: https://bitbucket.pearson.com/projects/PDA/repos/notification-component/browse
+implementation: https://github.com/Pearson-Higher-Ed/notification-component
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -15,7 +14,6 @@ people:
   - role: Designer
     name: Van Yang
     email: van.yang@pearson.com
-implementation:
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1mO6K4RV0GKQzrLp1PpHibzrsnIVq0ImdPZ1ZISlWZ1o/edit?usp=sharing

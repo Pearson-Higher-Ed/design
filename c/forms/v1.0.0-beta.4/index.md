@@ -69,7 +69,7 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/form_basic.png
-        caption: A two column style form showing all the principle components.
+        caption: A two-column style form showing all the principle components.
 
 
   - type: section
@@ -82,27 +82,24 @@ blocks:
     contents:
     - type: wide image
       src: ./assets/form_basic_sections.png
-      caption: Example of form groups
-
 
   - type: section
-    name: Form in responsive
+    name: Responsive forms
 
   - type: two column
     text: |
-      Mobile responsive is sharing he same spec the same spec as the desktop version. Except one column style only.
-
+      Mobile responsive is sharing the same spec as the desktop version. Except that it is one column style only.
 
     contents:
     - type: narrow image
       src: ./assets/form_mobile.png
-      caption: Example of basic form
+      caption: Basic form (small and extra small devices)
     - type: narrow image
       src: ./assets/form_mobile_sections.png
-      caption: Example of form group
+      caption: Form group (small and extra small devices)
     - type: narrow image
-      src: ./assets/form_mobile_error.png
-      caption: Example of form error
+      src: ./assets/form_fancy_example.png
+      caption: Example of the log in screen with fancy style form fields
 
   - type: section
     name: Error Handling
@@ -116,10 +113,6 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/form_error.png
-        caption: An example of error alert.    
-
-
-
 
   - type: section
     name: Redlines
@@ -136,17 +129,15 @@ blocks:
         - 52px between the last input and the Next/Submit button
         - For 2 column style, 20px between input fields
         - For multiple sections form, 16px above horizontal line and 26px below.
-        - Form form with alert, 36px above and below the alert and form title/first input field.
+        - Form form with alert, 28px above and below the alert and form title/first input field.
 
       Spacing - Small and extra small devices
-      : - 24px between Form Name and first input field
-        - 24px between all inputs (this includes space dedicated for one line of error text)
-        - 44px between the last input and the Next/Submit button
-        - For multiple sections form, 16px above horizontal line and 24px below.
-        - Form form with alert, 24px above and below the alert and form title/first input field.
+      : - Sharing same spec as the Medium devices.
 
-      Honzontal line
+      Horizontal line
       : - 1px [Concrete](/design/c/colors/v2.1.0/#rd-concrete)
+
+      * Fancy input style form is sharing the same spec as basic input style form.
 
     contents:
       - type: wide image
@@ -158,10 +149,12 @@ blocks:
       - type: wide image
         src: ./assets/redlines_form_mobile.png
 
+
 changelog:
   - version: 1.0.0-beta.4
     changes: |
       - UPDATED: Change input style to basic
+      - Adding responsive form
   - version: 1.0.0-beta.3
     changes: |
       - UPDATED: Error images to match latest input error style

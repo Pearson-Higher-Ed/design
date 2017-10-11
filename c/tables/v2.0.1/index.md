@@ -22,6 +22,8 @@ features:
 usage_guidelines: |
   Every instance of a basic table should use this component. Pair it with the toolbar component for more advanced use cases.
 
+implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
+
 dependencies:
   - name: Colors
     version: 2.0.0

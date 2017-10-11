@@ -76,7 +76,7 @@ export default class Tabs extends Component {
 
       return (
         <li key={i} role="presentation" onFocus={() => this.setState({ tabId: `_${uuid.v1()}`})}>
-          <a href="#"
+          <a
              role="tab"
              id={this.state.tabId}
              tabIndex={tabI}

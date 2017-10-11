@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Toolbar
 section: Components
-status: active
+status: deprecated
 version: 1.0.0-beta.5
 people:
   - role: Designer

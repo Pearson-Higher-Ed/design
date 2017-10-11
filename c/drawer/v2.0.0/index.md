@@ -5,7 +5,7 @@ section: Components
 sdk: stand_alone
 version: 2.0.0
 rebranded: true
-status: active
+status: deprecated
 implemented: true
 implementation: https://github.com/Pearson-Higher-Ed/drawer/
 people:
