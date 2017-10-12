@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Dropdown
 section: Components
-version: 1.1.0-beta.1
-status: deprecated
+version: 1.1.0-beta.2
+status: active
 implemented: true
 implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
 people:
@@ -20,14 +20,14 @@ downloads:
     link: ./assets/dropdown.sketch
 
 dependencies:
-  - name: typography
-    version: 2.0.0
-  - name: buttons
-    version: 1.0.0
-  - name: colors
-    version: 2.0.0
-  - name: icons
-    version: 2.1.0
+  - name: Typography
+    version: 2.1.1
+  - name: Buttons
+    version: 2.2.2
+  - name: Colors
+    version: 3.0.1
+  - name: Icons
+    version: 2.3.0
 
 tagline: |
   A simple component for presenting multiple options in a condensed space.
@@ -61,6 +61,11 @@ blocks:
       - type: narrow image
         src: ./assets/scroll.png
         caption: If the menu contains a significant number of items it may cap the height and use a scroll bar.
+    features:
+      - Basic Dropdown
+      - Grouped Menu
+      - Selectable Menu
+      - Scrollable Menu
 
   - type: section
     name: Dropdown Triggers
@@ -77,6 +82,10 @@ blocks:
       - type: narrow image
         src: ./assets/triggers-alignment.png
         caption: Menus are left aligned with the trigger unless there isn't enough space.
+    features:
+      - Text Trigger
+      - Icon Trigger
+      - Button Trigger
 
   - type: section
     name: Responsive behavior
@@ -109,45 +118,59 @@ blocks:
         - 8px between items
 
       Focus/Hover
-      : - A focused or hovered item has a [Moonlight](/design/c/colors/v2.0.0/#rd-moonlight) background that extends 4px above and below the text
+      : - A focused or hovered item has a [Moonlight](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--moonlight) background that extends 4px above and below the text
         - Triggers use the default focus behavior for buttons or links
 
       Divider
-      : - Groups may be divided by a 1px solid [Alto](/design/c/colors/v2.0.0/#rd-alto) line
+      : - Groups may be divided by a 1px solid [Alto](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--alto) line
         - The divider line should have 12px between it and any text above/below it
 
       Typography
-      : - Options use the [UI Text - Basic](/design/c/typography/v2.0.0/#rd-ui-text-basic) style
+      : - Options use the [Basic UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-ui-text) style
 
       Checkmark
-      : - Uses the check-sm-18 icon
+      : - Uses the [check-sm-18](http://pearson-higher-ed.github.io/design/c/icons/v2.3.0/#icons--check-sm) icon
         - 16px left padding around the icon
         - 8px right padding
         - Text content is shifted right to make room for the icon (34px left padding)
         - This expanded spacing should be used any time it is possible for an option to be checked, i.e. don't start with the narrower space and then shift text over to make room for a check mark
 
       Border
-      : - 1px solid [Concrete](/design/c/colors/v2.0.0/#rd-concrete)
+      : - 1px solid [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
         - 2px border radius
 
       Alignment
       : - Left aligned by default
         - Right aligned if there is not room within the viewport for the dropdown
 
-      Triggers
-      : - dropdown-open-sm-18 for the icon if combined with text, use dropdown-open-sm-24 if standalone
-        - [UI Text - Basic](/design/c/typography/v2.0.0/#rd-ui-text-basic), for any text used
-        - 2px spacing between trigger and dropdown
-        - Any button type is valid
-
       Scrollbar
       : - Use the native scrollbar
         - Height may be capped at different sizes depending on the content, prefer a height of 300px though
     contents:
-      - type: wide image
+      - type: narrow image
         src: ./assets/redlines.dropdown.png
       - type: narrow image
         src: ./assets/redlines.scroll.png
+    redlines:
+      - Basic Dropdown
+      - Grouped Menu
+      - Selectable Menu
+      - Scrollable Menu
+
+  - type: two column
+    text: |
+      Triggers
+      : - [dropdown-open-sm-18](http://pearson-higher-ed.github.io/design/c/icons/v2.3.0/#icons--dropdown-open-sm) for the icon if combined with text, use [dropdown-open-sm-24](http://pearson-higher-ed.github.io/design/c/icons/v2.3.0/#icons--dropdown-open-sm) if standalone
+        - [Basic UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-ui-text), for any text used
+        - 2px spacing between trigger and dropdown
+        - Any [button](http://pearson-higher-ed.github.io/design/c/buttons/) type is valid
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.triggers.png
+    redlines:
+      - Text Trigger
+      - Icon Trigger
+      - Button Trigger
 
   - type: two column
     text: |
@@ -165,17 +188,17 @@ blocks:
         - Close icon has a minimum of 12px left padding and 24px of right padding
 
       Icons
-      : - Close icon is remove-lg-18
-        - Check mark is check-sm-18
+      : - Close icon is [remove-lg-18](http://pearson-higher-ed.github.io/design/c/icons/v2.3.0/#icons--remove-lg)
+        - Check mark is [check-sm-18](http://pearson-higher-ed.github.io/design/c/icons/v2.3.0/#icons--check-sm)
 
       Typography
-      : - Options use the [UI Text - Large](/design/c/typography/v2.0.0/#rd-ui-text-large) style
-        - The title is a [UI Heading - Section - Small](/design/c/typography/v2.0.0/#rd-ui-headings-section-basic)
+      : - Options use the [Large UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--large-ui-text) style
+        - The title is a [Small Section UI Heading](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--small-section-ui-heading)
 
       Colors
-      : - Title background is [White Gray](/design/c/colors/v2.0.0/#rd-white-gray)
-        - Divider under title is 1px solid [Moonlight](/design/c/colors/v2.0.0/#rd-moonlight)
-        - Divider within options is 1px solid [Concrete](/design/c/colors/v2.0.0/#rd-concrete)
+      : - Title background is [White Gray](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--white-gray)
+        - Divider under title is 1px solid [Moonlight](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--moonlight)
+        - Divider within options is 1px solid [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
 
       Check mark
       : - The checkmark has 24px of left padding and 8px on the right
@@ -192,6 +215,9 @@ blocks:
         src: ./assets/redlines.mobile-menu.png
 
 changelog:
+  - version: 1.1.0-beta.2
+    changes: |
+      - ADDED: Feature links
   - version: 1.1.0-beta.1
     changes: |
       - ADDED: Feature to allow the menu to scroll for situations with many options
