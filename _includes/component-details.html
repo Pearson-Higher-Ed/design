@@ -243,7 +243,7 @@
 
       {% when 'section' %}
       <div class="section">
-        <h2 class="pe-title" id="{{block.name | slugify}}"><b>{{block.name}}</b></h2>
+        <h2 class="pe-title pe-bold" id="{{block.name | slugify}}">{{block.name}}</h2>
         {% if block.javascript %}
           <span class="js-tag" style="vertical-align: middle; margin-bottom: 8px;">Requires Javascript</span>
         {% endif %}
@@ -476,7 +476,7 @@
     {% endfor %}
 
     <div class="block changelog">
-      <h2 class="pe-title" id="changelog"><b>Changelog</b></h2>
+      <h2 class="pe-title pe-bold" id="changelog">Changelog</h2>
       {% for change in page.changelog %}
         {% if change.version != page.version and change.linkable != false %}
           <h3 class="pe-title"><a href="{% if include.beta or include.in_dir %}.{% endif %}./v{{change.version}}">{{change.version}}</a></h3>
