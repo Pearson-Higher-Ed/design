@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Dropdown
 section: Components
-version: 1.1.0-beta.2
-status: deprecated
+version: 1.1.0
+status: active
 implemented: true
 implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
 people:
@@ -215,12 +215,10 @@ blocks:
         src: ./assets/redlines.mobile-menu.png
 
 changelog:
-  - version: 1.1.0-beta.2
-    changes: |
-      - ADDED: Feature links
-  - version: 1.1.0-beta.1
+  - version: 1.1.0
     changes: |
       - ADDED: Feature to allow the menu to scroll for situations with many options
+      - ADDED: Feature links
   - version: 1.0.0
     changes: Initial Version
 ---
