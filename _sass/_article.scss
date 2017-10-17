@@ -165,6 +165,15 @@
     }
   }
 
+  img.wide {
+    width: 100%;
+
+    @include pe-responsive-breakpoint(xl) {
+      width: 200%;
+      margin-left: -50%;
+    }
+  }
+
   ul + p,
   ol + p,
   p + ul,
