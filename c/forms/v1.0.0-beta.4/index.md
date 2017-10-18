@@ -147,6 +147,8 @@ blocks:
       - type: wide image
         src: ./assets/redlines_form_error.png
       - type: wide image
+        src: ./assets/redlines_form_fancy.png
+      - type: wide image
         src: ./assets/redlines_form_mobile.png
 
 
