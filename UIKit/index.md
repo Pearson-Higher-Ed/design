@@ -1,6 +1,7 @@
 ---
 title: UI Kit
 layout: article
+section: use
 ---
 
 The UI Kit is a single sketch file which contains mockups and symbols of all the UXF components for easy inclusion in your designs. It is updated periodically with the latest component designs.
