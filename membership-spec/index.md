@@ -70,7 +70,7 @@ design_reqs:
           - Parker Malenke (UX Design)
 
       - req: |
-          UI copy in component documentation must be reviewed by Claudia Quella.
+          UI copy in component images must be reviewed by Claudia Quella.
         type: mandatory
         approvers:
           - Annie Persson
