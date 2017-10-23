@@ -129,10 +129,11 @@ blocks:
         - 52px between the last input and the Next/Submit button
         - For 2 column style, 20px between input fields
         - For multiple sections form, 16px above horizontal line and 26px below.
-        - Form form with alert, 28px above and below the alert and form title/first input field.
+        - For form with alert, 24px above and below the alert and form title/first input field.
+        - For form with formation text, 24px above and below the information text and form title/first input field.
 
       Spacing - Small and extra small devices
-      : - Sharing same spec as the Medium devices.
+      : - Sharing same spec as the medium devices.
 
       Horizontal line
       : - 1px [Concrete](/design/c/colors/v2.1.0/#rd-concrete)
