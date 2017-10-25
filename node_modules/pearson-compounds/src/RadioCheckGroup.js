@@ -6,7 +6,7 @@ class RadioCheckGroup extends Component {
 
   constructor(props){
     super(props);
-    this.state = {};
+    this.state = { checkboxSelectedOptions:[] };
 
     this.groupHandler = _groupHandler.bind(this);
   }
@@ -56,32 +56,24 @@ RadioCheckGroup.propTypes = {
   legendText      : PropTypes.string.isRequired,
   options         : PropTypes.object.isRequired,
   inputType       : PropTypes.string.isRequired,
+  inputType       : PropTypes.string.isRequired,
   changeHandler   : PropTypes.func.isRequired,
+  name            : PropTypes.string,
   selectedOptions : PropTypes.array
 };
 
 
 function _groupHandler (e) {
     const newSelection                 = e.target.value;
-    const { selectedOptions }          = this.state;
+    const { selectedOptions }          = this.props;
     const { inputType, changeHandler } = this.props;
 
     let newSelectionArray;
 
-    if(inputType === 'radio'){
-      if(selectedOptions.indexOf(newSelection) > -1) {
-        newSelectionArray = selectedOptions.filter(s => s !== newSelection)
-      } else {
-        newSelectionArray = [newSelection];
-      }
-    }
-
-    if(inputType === 'checkbox'){
-      if(this.state.checkboxSelectedOptions.indexOf(newSelection) > -1) {
-        newSelectionArray = this.state.checkboxSelectedOptions.filter(s => s !== newSelection)
-      } else {
-        newSelectionArray = [...this.state.checkboxSelectedOptions, newSelection];
-      }
+    if(selectedOptions.indexOf(newSelection) > -1) {
+      newSelectionArray = selectedOptions.filter(s => s !== newSelection)
+    } else {
+      newSelectionArray = (inputType === 'radio') ? [newSelection] : [...selectedOptions, newSelection];
     }
 
     this.setState({ selectedOptions: newSelectionArray });

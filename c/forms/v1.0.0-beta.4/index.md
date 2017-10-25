@@ -21,15 +21,15 @@ downloads:
 
 dependencies:
   - name: Typography
-    version: 2.0.0
+    version: 2.1.1
   - name: Buttons
-    version: 2.1.2
+    version: 2.2.2
   - name: Inputs
-    version: 2.0.1
-  - name: Colors
     version: 2.1.0
+  - name: Colors
+    version: 3.0.1
   - name: Alerts
-    version: 2.0.2
+    version: 2.0.3
 
 tagline: |
   Provides standard structure and behavior for multiple input forms.
@@ -62,7 +62,7 @@ blocks:
       One or more input fields from the input component may be included in the form. Currently, these will all occupy 100% of the form width and stack with 36px of spacing between them.
 
       ### Next/Submit Button
-      This button should start out as a [default button](/design/c/buttons/v2.0.0-beta.4/#rd-default-button) and become a [primary](/design/c/buttons/v2.0.0-beta.4/#rd-primary-button) or [CTA](/design/c/buttons/v2.0.0-beta.4/#rd-cta-button) button once the form has been completely filled out.
+      This button should start out as a [default button](/design/c/buttons/v2.2.2/#buttons--default-button) and become a [primary](/design/c/buttons/v2.2.2/#buttons--primary-button) or [CTA](/design/c/buttons/v2.2.2/#buttons--cta-button) button once the form has been completely filled out.
 
       If the form is broken up into multiple pages, use a "Continue" or "Next" button to advance in the form series. Maintain the same Form Name between each page. You should also include some UI for returning to previous steps in the process, where possible.
 
@@ -97,6 +97,9 @@ blocks:
     - type: narrow image
       src: ./assets/form_mobile_sections.png
       caption: Form group (small and extra small devices)
+    - type: narrow image
+      src: ./assets/form_fancy_example.png
+      caption: Example of the log in screen with fancy style form fields
 
   - type: section
     name: Error Handling
@@ -126,13 +129,17 @@ blocks:
         - 52px between the last input and the Next/Submit button
         - For 2 column style, 20px between input fields
         - For multiple sections form, 16px above horizontal line and 26px below.
-        - Form form with alert, 28px above and below the alert and form title/first input field.
+        - For form with alert, 24px above and below the alert and form title/first input field.
+        - For form with formation text, 24px above and below the information text and form title/first input field.
 
       Spacing - Small and extra small devices
-      : - Sharing same spec as the Medium devices.
+      : - Sharing same spec as the medium devices.
 
       Horizontal line
       : - 1px [Concrete](/design/c/colors/v2.1.0/#rd-concrete)
+
+      Buttons
+      : - Use [large button](/design/c/buttons/v2.2.2/#buttons--large-button)
 
       * Fancy input style form is sharing the same spec as basic input style form.
 
@@ -144,12 +151,16 @@ blocks:
       - type: wide image
         src: ./assets/redlines_form_error.png
       - type: wide image
+        src: ./assets/redlines_form_fancy.png
+      - type: wide image
         src: ./assets/redlines_form_mobile.png
 
 
 changelog:
   - version: 1.0.0-beta.4
     changes: |
+      - UPDATED: Change X-large buttons to large buttons
+      - Adding Fancy style input form spec
       - UPDATED: Change input style to basic
       - Adding responsive form
   - version: 1.0.0-beta.3

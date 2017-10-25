@@ -5,7 +5,7 @@ section: Components
 sdk: stand_alone
 redirect_from: /docs/ui-components/loading-indicator/
 version: 1.1.0
-status: active
+status: deprecated
 implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
 people:
   - role: Product Owner

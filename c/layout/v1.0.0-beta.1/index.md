@@ -3,7 +3,7 @@ layout: component-yaml
 title: Layout
 section: Components
 version: 1.0.0-beta.1
-status: active
+status: deprecated
 people:
   - role: Designer
     name: Parker Malenke

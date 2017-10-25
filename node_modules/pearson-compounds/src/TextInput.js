@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes            from 'prop-types';
 
 
-class TextInput extends Component {
+export default class TextInput extends Component {
 
   constructor(props) {
     super(props);
@@ -21,7 +21,11 @@ class TextInput extends Component {
   }
 
   componentDidMount() {
-    this.applyTextInputStyles();
+    this.applyTextInputStyles(this.props.inputState);
+  }
+
+  componentWillReceiveProps(nextProps){
+    this.applyTextInputStyles(nextProps.inputState);
   }
 
   render() {
@@ -41,8 +45,8 @@ class TextInput extends Component {
           type             = {passwordTypeSelector}
           placeholder      = {placeholder}
           className        = {inputStyle}
-          aria-invalid     = {inputState === 'error'}
           aria-describedby = {ariaDescribedby}
+          aria-invalid     = {inputState === 'error'}
           disabled         = {inputState === 'disabled'}
           readOnly         = {inputState === 'readOnly'}
           onFocus          = {() => this.setState({labelStyleTmp:labelFocusStyle})}
@@ -60,19 +64,17 @@ class TextInput extends Component {
   }
 }
 
-export default TextInput;
-
 
 TextInput.propTypes = {
   id                 : PropTypes.string.isRequired,
   labelText          : PropTypes.string.isRequired,
+  changeHandler      : PropTypes.func.isRequired,
   placeholder        : PropTypes.string,
   'aria-describedby' : PropTypes.string,
-  'aria-invalid'     : PropTypes.bool,
-  changeHandler      : PropTypes.func.isRequired,
   inputState         : PropTypes.string,
   infoMessage        : PropTypes.string,
   errorMessage       : PropTypes.string,
+  'aria-invalid'     : PropTypes.bool,
   fancy              : PropTypes.bool,
   password           : PropTypes.bool
 };
@@ -90,9 +92,9 @@ function _togglePassword() {
 
 };
 
-function _applyTextInputStyles() {
+function _applyTextInputStyles( inputState ) {
   let { labelStyle, inputStyle, spanStyle, butttonStyle, labelFocusStyle, labelStyleTmp } = this.state;
-  const { fancy, inputState } = this.props;
+  const { fancy } = this.props;
 
   switch (inputState) {
     case 'error':
@@ -123,8 +125,6 @@ function _applyTextInputStyles() {
       labelFocusStyle = 'pe-textLabelInput__label--label_focus';
   };
 
-  labelStyleTmp = labelStyle;
-
-  this.setState({labelStyle, labelStyleTmp, inputStyle, spanStyle, butttonStyle, labelFocusStyle});
+  this.setState({labelStyle, labelStyleTmp:labelStyle, inputStyle, spanStyle, butttonStyle, labelFocusStyle});
 
 };

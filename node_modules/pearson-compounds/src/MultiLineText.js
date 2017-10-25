@@ -2,19 +2,22 @@ import React, { Component } from 'react';
 import PropTypes            from 'prop-types';
 
 
-class MultiLineText extends Component {
+export default class MultiLineText extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = { inputState : 'default' };
 
     this.applyMultiLineStyles = _applyMultiLineStyles.bind(this);
   }
 
   componentDidMount() {
-    this.applyMultiLineStyles();
+    this.applyMultiLineStyles(this.props.inputState);
   }
 
+  componentWillReceiveProps(nextProps){
+    this.applyMultiLineStyles(nextProps.inputState);
+  }
 
   render() {
 
@@ -27,19 +30,20 @@ class MultiLineText extends Component {
       return (
         <div>
           <label className={labelFocusStyleTmp} htmlFor={id}>{labelText}</label>
-          <textarea className   = {inputStyle}
-                    id          = {id}
-                    cols        = "30"
-                    rows        = "5"
-                    placeholder = {placeholder}
-                    aria-invalid     = {inputState === 'error'}
-                    aria-describedby = {ariaDescribedby}
-                    disabled         = {inputState === 'disabled'}
-                    readOnly         = {inputState === 'readOnly'}
-                    onFocus     = {() => this.setState({labelFocusStyleTmp:labelFocusStyle})}
-                    onBlur      = {() => this.setState({labelFocusStyleTmp:labelStyle})}
-                    onChange    = {changeHandler}
-                    >
+          <textarea
+            className        = {inputStyle}
+            id               = {id}
+            cols             = "30"
+            rows             = "5"
+            placeholder      = {placeholder}
+            aria-invalid     = {inputState === 'error'}
+            aria-describedby = {ariaDescribedby}
+            disabled         = {inputState === 'disabled'}
+            readOnly         = {inputState === 'readOnly'}
+            onFocus          = {() => this.setState({labelFocusStyleTmp:labelFocusStyle})}
+            onBlur           = {() => this.setState({labelFocusStyleTmp:labelStyle})}
+            onChange         = {changeHandler}
+          >
           </textarea>
             {infoMessage  && <span id={`infoMsg-${id}`} className="pe-input--info_message">{infoMessage}</span>}
             {inputState === 'error' && errorMessage && <span id={`errMsg-${id}`} className="pe-input--error_message">{errorMessage}</span>}
@@ -51,24 +55,22 @@ class MultiLineText extends Component {
 }
 
 
-export default MultiLineText;
-
 
 MultiLineText.propTypes = {
-  id           : PropTypes.string.isRequired,
-  labelText    : PropTypes.string.isRequired,
-  placeholder  : PropTypes.string.isRequired,
+  id                 : PropTypes.string.isRequired,
+  labelText          : PropTypes.string.isRequired,
+  placeholder        : PropTypes.string.isRequired,
+  infoMessage        : PropTypes.string,
+  errorMessage       : PropTypes.string,
+  inputState         : PropTypes.string,
   'aria-describedby' : PropTypes.string,
-  'aria-invalid'     : PropTypes.bool,
-  infoMessage  : PropTypes.string,
-  errorMessage : PropTypes.string
+  'aria-invalid'     : PropTypes.bool
 };
 
 
-function _applyMultiLineStyles() {
+function _applyMultiLineStyles(inputState) {
 
   let { labelStyle, inputStyle, labelFocusStyle, labelFocusStyleTmp } = this.state;
-  const { inputState } = this.props;
 
   switch (inputState) {
     case 'error':
@@ -92,8 +94,6 @@ function _applyMultiLineStyles() {
       labelFocusStyle = 'pe-textLabelInput__label--label_focus';
   };
 
-  labelFocusStyleTmp = labelStyle;
-
-  this.setState({labelStyle, inputStyle, labelFocusStyle, labelFocusStyleTmp});
+  this.setState({labelStyle, inputStyle, labelFocusStyle, labelFocusStyleTmp:labelStyle});
 
 };

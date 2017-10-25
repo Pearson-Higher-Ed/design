@@ -70,7 +70,7 @@ design_reqs:
           - Parker Malenke (UX Design)
 
       - req: |
-          UI copy in component documentation must be reviewed by Claudia Quella.
+          UI copy in component images must be reviewed by Claudia Quella.
         type: mandatory
         approvers:
           - Annie Persson
@@ -210,7 +210,7 @@ dev_reqs:
         extras:
           - name: Explanation
             content: |
-              The starter kit implements best practices like testing, linting, bundling, transpiling ES6 to ES5, etc. It codifies a long list of decisions that you no longer have to make to get rolling. It saves you from the long, painful process of wiring it all together into an automated development environment and build process.
+              The archetype implements best practices like testing, linting, bundling, transpiling ES6 to ES5, etc. It codifies a long list of decisions that you no longer have to make, saving you from wiring it all together into an automated development environment and build process.
         approvers:
           - PDA Development team
 
@@ -235,9 +235,9 @@ dev_reqs:
         extras:
           - name: Explanation
             content: |
-              All teams are expected to re-use available elements and compounds in the npm registry. When developing a new component it is required to check the npm registry to ensure if a similar component already exists. If one exists it is necessary to reach out to the team and discuss potential updates to the original component before trying to create your own.
+              All teams are expected to re-use available components from the Elements SDK in the npm registry. When developing a new component it is required to check the npm registry to ensure if a similar component already exists. If one exists it is necessary to reach out to the team and discuss potential updates to the original component before trying to create your own.
 
-              When creating a new component it is recommended to use existing sub components and element required to create a new component. The key idea behind this is to reuse components wherever applicable.
+              When creating a new component it is recommended to use existing sub components and elements. The key idea behind this is to reuse components wherever applicable.
         approvers:
           - PDA Development team
 
@@ -246,7 +246,7 @@ dev_reqs:
       Elemental Design and the Component Library are tools meant to serve the entirety of Pearson's next gen educational ecosystem.
     reqs:
       - req: |
-          A1: Rendered HTML must be comply with the HTML5 specification.
+          A1: Rendered HTML must comply with the HTML5 specification.
         type: mandatory
         extras:
           - name: Explanation
@@ -314,7 +314,7 @@ dev_reqs:
       All the functional automated tests for Elements SDK / Compounds SDK / Origami V2 components should be contributed to "ux-test-platform" repository, and the PR will be reviewed and merged only by PDA team
     reqs:
       - req: |
-          T1: All components must have at least 80% code coverage. Component should have 100% coverage whenever possible.
+          T1: All components must have at least 80% code coverage.
         type: mandatory
         approvers:
           - PDA QA team
@@ -327,7 +327,7 @@ dev_reqs:
         approvers:
           - PDA QA team
       - req: |
-          How to Contribute: You can fork the repo or create a branch out of master and make your changes, create a Pull Request for your changes to merge into this Original master branch. Click the [following link](https://neo.pearson.com/docs/DOC-607807#jive_content_id_How_to_contribute_to_this_repo) to see more details on how to contribute.
+          How to Contribute: You can fork the repo or create a branch out of master and make your changes, create a Pull Request for your changes to merge into the master branch. Click the [following link](https://neo.pearson.com/docs/DOC-607807#jive_content_id_How_to_contribute_to_this_repo) to see more details on how to contribute.
 
         type: optional
         approvers:
@@ -369,7 +369,7 @@ dev_reqs:
             content: |
               When prompting the user for personal data such as email address, username, password or payment information, always serve the page with the form on it using HTTPS, and send the form submission to an HTTPS URL.
 
-              It’s often considered OK to serve forms on insecure pages as long as the form posts to a secure destination. This is not acceptable, because an attacker can modify the page that serves the form, to simply change the form post destination.
+              It’s often considered OK to serve forms on insecure pages as long as the form posts to a secure destination. This is not acceptable, because an attacker can modify the page that serves the form and change the form post destination.
         approvers:
           - PDA Development team
 

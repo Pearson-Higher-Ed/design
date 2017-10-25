@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Inputs
 section: Components
-status: active
+status: deprecated
 version: 2.0.1
 rebranded: true
 implemented: true
