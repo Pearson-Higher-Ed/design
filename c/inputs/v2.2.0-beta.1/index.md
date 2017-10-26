@@ -244,16 +244,14 @@ blocks:
       ### Phone number w/ country code
 
       #### Construction
-      The Phone number with country code input is made up of two parts that operate as a single control:
+      The Phone number with country code input is made up of two parts that operate together to provide a complete phone number:
 
-      - Dropdown for selecting country
+      - Dropdown for selecting country code
       - Form field for inputting the phone number
 
 
       #### Behavior
-
-      - If the user manually changes the current active country code, the flag should change to align with the user entry.
-      - If the user selects a new county code from the dropdown, the country code text should change to match the dropdown value selected.
+      The dropdown controls the displayed country code, and then the user can input to unique portion of the number in the input box.
 
 
     contents:
