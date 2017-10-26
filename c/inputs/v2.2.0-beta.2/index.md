@@ -257,19 +257,10 @@ blocks:
   - type: two column
     text: |
       ### Phone number w/ country code
-
-      #### Construction
-      The Phone number with country code input is made up of two parts that operate as a single control:
+      The Phone number with country code input is made up of two parts that operate together to provide a phone number value:
 
       - Dropdown for selecting country
       - Form field for inputting the phone number
-
-
-      #### Behavior
-
-      - If the user manually changes the current active country code, the flag should change to align with the user entry.
-      - If the user selects a new county code from the dropdown, the country code text should change to match the dropdown value selected.
-
 
     contents:
       - type: narrow image
@@ -281,6 +272,8 @@ blocks:
       - type: narrow image
         src: ./assets/inputs_phone_3.png
         caption: Fancy input style dropdown.
+    features:
+      - Phone Number Input
 
 
   - type: section
@@ -561,8 +554,9 @@ blocks:
       ### Phone number w/ country code
 
       Spacing
-      : - Dropdown icon is 4px from the right edge of the text field for both the fancy and basic styles
-        - Button of the flag icon is 10px from the top edge of the dropdown window
+      : - 4px between dropdown and country code
+        - 4px between country code and input
+        - Flag is 8px below label and 10px above dropdown
 
       Sizes
       : - The max height for the Dropdown before scroll bars are available is 250px
@@ -571,9 +565,14 @@ blocks:
       Dropdown
       : - Uses standard [dropdown component](http://pearson-higher-ed.github.io/design/c/dropdown/v1.1.0-beta.1/)
 
+      Behavior
+      : - Choosing a country in the dropdown updates the country code displayed next to the input
+
     contents:
       - type: narrow image
         src: ./assets/redlines.phone.png
+    redlines:
+      - Phone Number Input
 
 changelog:
   - version: 2.2.0-beta.2
