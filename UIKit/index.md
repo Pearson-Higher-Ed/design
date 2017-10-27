@@ -4,9 +4,9 @@ layout: article
 section: use
 ---
 
-{% include uikit-download.html type='cta' btn_size='xlarge' %} <a class="pe-btn--btn_xlarge" href="https://sketch.cloud/s/qepzy/all/page-1/ui-kit" style="margin-left: 16px;">View Fullscreen</a>
+{% include uikit-download.html type='cta' btn_size='xlarge' %} <a class="pe-btn--btn_xlarge" href="https://sketch.cloud/s/qepzy/all/page-1/ui-kit" target="_blank" style="margin-left: 16px;">View Fullscreen</a>
 
-Sep 26, 2017
+Oct 26, 2017
 
  * Modal: Fixed the position of the "X" icon
  * Email Template: NEW
