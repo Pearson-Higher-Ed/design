@@ -37,7 +37,7 @@ dependencies:
 
 downloads:
   - name: UXD Accessibility Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/13qcZKhRjvksN3oCb5xzKX48QJTtTeZGPQeom7xKKOfg/edit?usp=sharing
+    link: https://docs.google.com/a/pearson.com/document/d/1AI3oAtEYhGvIH0YkbbU1FJXeO30u2jHd5M80RvqqGiE/edit?usp=sharing
   - name: .sketch mockup
     link: ./assets/inputs.sketch
 
