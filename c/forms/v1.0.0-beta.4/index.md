@@ -48,20 +48,20 @@ blocks:
 
   - type: two column
     text: |
-      The basic form consists of several parts: a *Form Name*, an optional *Alerts*, one or more *Input Fields*, and a *Next/Submit* button.
+      The basic form consists of several parts: a *Form Name*, an optional *Alerts message*, one or more *input fields*, and *primary/secondary* action buttons.
 
       ### Form Name
 
-      ### Form instruction
+      ### Form instructions
       Instruction for filling out the form.
 
-      ### Alerts message
-      See error handling for more detail.
+      ### Alert message
+      See error handling for more details.
 
-      ### Input Fields
+      ### Input fields
       One or more input fields from the input component may be included in the form. Currently, these will all occupy 100% of the form width and stack with 36px of spacing between them.
 
-      ### Next/Submit Button
+      ### Buttons
       This button should start out as a [default button](/design/c/buttons/v2.2.2/#buttons--default-button) and become a [primary](/design/c/buttons/v2.2.2/#buttons--primary-button) or [CTA](/design/c/buttons/v2.2.2/#buttons--cta-button) button once the form has been completely filled out.
 
       If the form is broken up into multiple pages, use a "Continue" or "Next" button to advance in the form series. Maintain the same Form Name between each page. You should also include some UI for returning to previous steps in the process, where possible.
@@ -69,7 +69,7 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/form_basic.png
-        caption: A two-column style form showing all the principle components.
+        caption: A two-column style form showing all the principle components
 
 
   - type: section
@@ -129,10 +129,11 @@ blocks:
         - 52px between the last input and the Next/Submit button
         - For 2 column style, 20px between input fields
         - For multiple sections form, 16px above horizontal line and 26px below.
-        - Form form with alert, 28px above and below the alert and form title/first input field.
+        - For form with alert, 24px above and below the alert and form title/first input field.
+        - For form with formation text, 24px above and below the information text and form title/first input field.
 
       Spacing - Small and extra small devices
-      : - Sharing same spec as the Medium devices.
+      : - Sharing same spec as the medium devices.
 
       Horizontal line
       : - 1px [Concrete](/design/c/colors/v2.1.0/#rd-concrete)

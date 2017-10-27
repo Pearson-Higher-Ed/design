@@ -2,10 +2,10 @@
 layout: component-yaml
 title: Inputs
 section: Components
-status: deprecated
-version: 2.2.0-beta.1
+status: active
+version: 2.2.0-beta.2
 rebranded: true
-implemented: false
+implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -28,11 +28,11 @@ usage_guidelines: |
 
 dependencies:
   - name: Colors
-    version: 1.0.1
+    version: 3.0.1
   - name: Typography
-    version: 1.0.0
-  - name: Buttons
-    version: 1.0.0
+    version: 2.1.1
+  - name: Icons
+    version: 2.3.0
 
 
 downloads:
@@ -80,9 +80,7 @@ blocks:
     text: |
       **Error** is when the field's content has some sort of error.
 
-      **Focused Error** is the focused version of the error state.
-
-      **Error with info text** is used when additional details about the error are necessary. Note that space for one line of explanation is built into the input so no shifting is necessary.
+      **Error (focused)** is the focused version of the error state. Note that in almost every case an error state should be accompanied by explanatory text. See the [Informational/Error Text section](#informational-error-text) section for more details.
     contents:
       - type: wide image
         src: ./assets/Inputs_error.png
@@ -101,6 +99,9 @@ blocks:
       - type: narrow image
         src: ./assets/Inputs_text_basic.png
         caption: Basic single line text inputs.
+    features:
+      - Basic Single Line Input
+      - Fancy Single Line Input
 
   - type: two column
     text: |
@@ -124,6 +125,8 @@ blocks:
       - type: narrow image
         src: ./assets/Inputs_multiline_value.png
         caption: Multiple line input with a value. Note this input has the handle for vertical resizing.
+    features:
+      - Multiple Line Input
 
   - type: section
     name: Select
@@ -135,8 +138,6 @@ blocks:
       A default value can be set for the select element if it's recommended for most users.  Bear in mind that a user can easily overlook a preselected item, so use caution when doing so.
 
       The popup will follow the browser default style.
-
-
     contents:
       - type: narrow image
         src: ./assets/Inputs_select_fancy.png
@@ -144,6 +145,9 @@ blocks:
       - type: narrow image
         src: ./assets/Inputs_select_basic.png
         caption: Closed and opened select in the basic style.
+    features:
+      - Basic Select Input
+      - Fancy Select Input
 
   - type: section
     name: Radio Buttons
@@ -160,6 +164,8 @@ blocks:
       - type: narrow image
         src: ./assets/Inputs_radiobutton.png
         caption: Various radio button states.
+    features:
+      - Radio Button Input
 
   - type: section
     name: Checkboxes
@@ -176,6 +182,8 @@ blocks:
       - type: narrow image
         src: ./assets/Inputs_checkbox.png
         caption: Various checkbox states.
+    features:
+      - Checkbox Input
 
   - type: section
     name: Labels
@@ -195,10 +203,12 @@ blocks:
       - type: narrow image
         src: ./assets/Inputs_optional_2.png
         caption: Example using (optional) label in a form.
+    features:
+      - Required/Optional Label
 
 
   - type: section
-    name: Information/Error Text
+    name: Informational/Error Text
 
   - type: two column
     text: |
@@ -206,20 +216,23 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/Inputs_info.png
-        caption: Info text for both fancy and basic styled inputs.
+        caption: Informational text for both fancy and basic styled inputs.
+    features:
+      - Informational Text
+      - Error Text
 
   - type: two column
     text: |
       Any fields that have an error should explain the error with additional text below the field. In this case it is colored red and paired with an error state on the form.
 
-      If necessary, information and error text may appear simultaneously, with error text following the informational.
+      If necessary, informational and error text may appear simultaneously, with error text appearing last.
     contents:
       - type: narrow image
         src: ./assets/Inputs_error_text.png
         caption: Error text.
       - type: narrow image
         src: ./assets/Inputs_error_text_2.png
-        caption: Simultaneous display of info and error text.
+        caption: Simultaneous display of informational and error text.
 
 
   - type: section
@@ -238,21 +251,16 @@ blocks:
       - type: narrow image
         src: ./assets/inputs_password_2.png
         caption: And in the basic input style.
+    features:
+      - Password Input
 
   - type: two column
     text: |
       ### Phone number w/ country code
+      The Phone number with country code input is made up of two parts that operate together to provide a phone number value:
 
-      #### Construction
-      The Phone number with country code input is made up of two parts that operate together to provide a complete phone number:
-
-      - Dropdown for selecting country code
+      - Dropdown for selecting country
       - Form field for inputting the phone number
-
-
-      #### Behavior
-      The dropdown controls the displayed country code, and then the user can input to unique portion of the number in the input box.
-
 
     contents:
       - type: narrow image
@@ -264,7 +272,8 @@ blocks:
       - type: narrow image
         src: ./assets/inputs_phone_3.png
         caption: Fancy input style dropdown.
-
+    features:
+      - Phone Number Input
 
 
   - type: section
@@ -287,39 +296,48 @@ blocks:
         - 6px vertical space between field and label
 
       Active
-      : - 1px solid [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete) border
-        - [White (#ffffff)](/design/c/colors/v2.0.0-beta.5/#rd-white) background
-        - [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic) ([Charcoal](/design/c/colors/v2.0.0-beta.5/#rd-charcoal)) for the value
-        - [Small UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-small) in [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray) for the label
-        - Place holders are [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic), [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
+      : - 1px solid [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete) border
+        - [White](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--white) background
+        - [Basic UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-ui-text) ([Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal)) for the value
+        - [Small UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--small-ui-text) in [Medium Gray](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--medium-gray) for the label
+        - Place holders are [Basic UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-ui-text), [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
 
       Focus
-      : - Label is [Medium Gray](/design/c/colors/v2.1.0/#rd-medium-gray)
-        - Border is 1px solid [Digital Pearson Blue](/design/c/colors/v2.1.0/#rd-digital-pearson-blue)
-        - [Digital Pearson Blue](/design/c/colors/v2.1.0/#rd-digital-pearson-blue) shadow with 5px blur
+      : - Label is [Medium Gray](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--medium-gray)
+        - Border is 1px solid [Digital Pearson Blue](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--digital-pearson-blue)
+        - [Digital Pearson Blue](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--digital-pearson-blue) shadow with 5px blur
 
       Disabled
-      : - Value is [Concrete (#c7c7c7)](/design/c/colors/v2.1.0/#rd-concrete)
-        - Fill color is [Moonlight (#e9e9e9)](/design/c/colors/v2.0.0-beta.5/#rd-moonlight)
+      : - Value is [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
+        - Fill color is [Moonlight](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--moonlight)
 
       Error
-      : - Label is [Medium Gray](/design/c/colors/v2.1.0/#rd-medium-gray)
-        - Border is 1px solid [Strawberry Red (#db0020)](/design/c/colors/v2.1.0/#rd-strawberry-red)
-        - Error text is [Small UI Text](/design/c/typography/v2.1.0/#rd-ui-text-small) in [Strawberry Red (#db0020)](/design/c/colors/v2.1.0/#rd-strawberry-red)
+      : - Label is [Medium Gray](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--medium-gray)
+        - Border is 1px solid [Strawberry Red](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--strawberry-red)
+        - Error text is [Small UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--small-ui-text) in [Strawberry Red](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--strawberry-red)
         - Error text is 3px below the field
 
-      Focused Error
-      : - [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red) shadow with 4px blur
+      Error (focused)
+      : - [Strawberry Red](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--strawberry-red) shadow with 4px blur
 
-      Readonly
+      Informational Text
+      : - [Small UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--small-ui-text) in [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal)
+        - 3px below the field
+
+      Read only
       : - No input box
-        - [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic) in [Charcoal](/design/c/colors/v2.0.0-beta.5/#rd-charcoal)
+        - [Basic UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-ui-text) in [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal)
         - 8px below label
     contents:
       - type: narrow image
         src: ./assets/redlines.text.basic.1.png
       - type: narrow image
         src: ./assets/redlines.text.basic.2.png
+    redlines:
+      - Basic Single Line Input
+      - Required/Optional Label
+      - Informational Text
+      - Error Text
 
   - type: two column
     text: |
@@ -331,45 +349,51 @@ blocks:
         - Value is 7px above underline when focused or disabled
 
       Typography
-      : - Label is [Small UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-small)
-        - Value and placeholder text is [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic)
-        - Error text is [Small UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-small)
+      : - Label is [Small UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--small-ui-text)
+        - Value and placeholder text is [Basic UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-ui-text)
+        - Error text is [Small UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--small-ui-text)
 
       Active
-      : - Label is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
-        - Value is [Charcoal](/design/c/colors/v2.0.0-beta.5/#rd-charcoal)
-        - Placeholder text is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
-        - Underline is 1px solid [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
+      : - Label is [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
+        - Value is [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal)
+        - Placeholder text is [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
+        - Underline is 1px solid [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
 
       Focus
-      : - Label is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
-        - Underline is 4px solid [Digital Pearson Blue](/design/c/colors/v2.1.0/#rd-digital-pearson-blue)
+      : - Label is [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
+        - Underline is 4px solid [Digital Pearson Blue](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--digital-pearson-blue)
 
         - The underline should animate out from the center of the input once the user clicks into the field
 
-      Readonly
+      Read only
       : - No underline or other decoration
         - Value is 8px below the label
 
       Disabled
-      : - Value is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
-        - Underline is 4px solid [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
+      : - Value is [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
+        - Underline is 4px solid [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
 
       Error
-      : - Label is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
-        - Error text is [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
+      : - Label is [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
+        - Error text is [Strawberry Red](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--strawberry-red)
         - Error text is 3px below the underline
-        - Underline is 1px solid [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
+        - Underline is 1px solid [Strawberry Red](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--strawberry-red)
 
-      Focused Error
-      : - Underline is 4px solid [Strawberry Red (#db0020)](/design/c/colors/v2.0.0-beta.5/#rd-strawberry-red)
+      Error (focused)
+      : - Underline is 4px solid [Strawberry Red](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--strawberry-red)
         - Underline is 7px below value
+
+      Informational Text
+      : - [Small UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--small-ui-text) in [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal)
+        - 3px below field
 
     contents:
       - type: narrow image
         src: ./assets/redlines.text.fancy.1.png
       - type: narrow image
         src: ./assets/redlines.text.fancy.2.png
+    redlines:
+      - Fancy Single Line Input
 
 
   - type: two column
@@ -381,14 +405,16 @@ blocks:
         - Value has 14px horizontal padding, 9px vertical padding
 
       Typography
-      : - Label is [Small UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-small)
-        - Value and placeholder text is [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic)
+      : - Label is [Small UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--small-ui-text)
+        - Value and placeholder text is [Basic UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-ui-text)
 
       States
       : - Follow the styles defined for the Basic Single Line input for each state
     contents:
       - type: narrow image
         src: ./assets/redlines.text.multiple.png
+    redlines:
+      - Multiple Line Input
 
   - type: two column
     text: |
@@ -404,8 +430,8 @@ blocks:
         - 14px of horizontal padding
 
       Typography
-      : - Label is [Small UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-small)
-        - Value is [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic)
+      : - Label is [Small UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--small-ui-text)
+        - Value is [Basic UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-ui-text)
 
       Behavior
       : - Activating the select should use the default browser popup
@@ -414,10 +440,12 @@ blocks:
       : - Follow the styles defined for the Basic Single Line input for each state
 
       Icons
-      : - Use the dropdown-open-sm-24 icon
+      : - Use the [dropdown-open-sm-24](http://pearson-higher-ed.github.io/design/c/icons/v2.3.0/#icons--dropdown-open-sm) icon
     contents:
       - type: narrow image
         src: ./assets/redlines.select.basic.png
+    redlines:
+      - Basic Select Input
 
   - type: two column
     text: |
@@ -428,11 +456,11 @@ blocks:
         - Value is generally 10px above the underline
 
       Icons
-      : - Dropdown icon is the dropdown-open-sm-24 icon
+      : - Dropdown icon is the [dropdown-open-sm-24](http://pearson-higher-ed.github.io/design/c/icons/v2.3.0/#icons--dropdown-open-sm) icon
 
       Typography
-      : - Label is [Small UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-small)
-        - Value and placeholder text is [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic)
+      : - Label is [Small UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--small-ui-text)
+        - Value and placeholder text is [Basic UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-ui-text)
 
       Behavior
       : - Activating the select should use the default browser popup
@@ -442,6 +470,8 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/redlines.select.fancy.png
+    redlines:
+      - Fancy Select Input
 
   - type: two column
     text: |
@@ -452,22 +482,24 @@ blocks:
         - Multiple options are separated by 14px of vertical space
 
       Typography
-      : - Option value is [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic)
+      : - Option value is [Basic UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-ui-text)
 
       Icons
-      : - Unselected radios use the radio-button-off-18 icon
-        - Selected radios use the radio-button-on-18 icon
+      : - Unselected radios use the [radio-button-off-18](http://pearson-higher-ed.github.io/design/c/icons/v2.3.0/#icons--radio-button-off) icon
+        - Selected radios use the [radio-button-on-18](http://pearson-higher-ed.github.io/design/c/icons/v2.3.0/#icons--radio-button-on) icon
 
       States
-      : - Radio border is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete) in most cases
-        - Selected radios have an inner circle filled with [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray) in most cases
-        - Focused radios use [Digital Pearson Blue](/design/c/colors/v2.1.0/#rd-digital-pearson-blue) borders
-        - Disabled radios use a [Moonlight (#e9e9e9)](/design/c/colors/v2.0.0-beta.5/#rd-moonlight) fill color
-        - Disabled but selected radios have an inner circle filled with [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete)
+      : - Radio border is [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete) in most cases
+        - Selected radios have an inner circle filled with [Medium Gray](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--medium-gray) in most cases
+        - Focused radios use [Digital Pearson Blue](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--digital-pearson-blue) borders
+        - Disabled radios use a [Moonlight](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--moonlight) fill color
+        - Disabled but selected radios have an inner circle filled with [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
 
     contents:
       - type: narrow image
         src: ./assets/redlines.radiobuttons.png
+    redlines:
+      - Radio Button Input
 
   - type: two column
     text: |
@@ -478,24 +510,23 @@ blocks:
         - Multiple options are separated by 14px of vertical space
 
       Typography
-      : - Option value is [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic)
+      : - Option value is [Basic UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-ui-text)
 
       Icons
-      : - Unselected checkboxes use the checkbox-off-18 icon
-        - Selected checkboxes use the checkbox-on-18 icon
+      : - Unselected checkboxes use the [checkbox-off-18](http://pearson-higher-ed.github.io/design/c/icons/v2.3.0/#icons--checkbox-off) icon
+        - Selected checkboxes use the [checkbox-on-18](http://pearson-higher-ed.github.io/design/c/icons/v2.3.0/#icons--checkbox-on) icon
 
       States
-      : - Box border is [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete) in most cases
-        - Selected checkboxes have a [Medium Gray](/design/c/colors/v2.0.0-beta.5/#rd-medium-gray) check mark in most cases
-        - Focused checkboxes use [Digital Pearson Blue](/design/c/colors/v2.1.0/#rd-digital-pearson-blue) borders
-        - Disabled checkboxes use a [Moonlight (#e9e9e9)](/design/c/colors/v2.0.0-beta.5/#rd-moonlight) fill color
-        - Disabled but selected checkboxes have a [Concrete (#c7c7c7)](/design/c/colors/v2.0.0-beta.5/#rd-concrete) check mark
+      : - Box border is [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete) in most cases
+        - Selected checkboxes have a [Medium Gray](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--medium-gray) check mark in most cases
+        - Focused checkboxes use [Digital Pearson Blue](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--digital-pearson-blue) borders
+        - Disabled checkboxes use a [Moonlight](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--moonlight) fill color
+        - Disabled but selected checkboxes have a [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete) check mark
     contents:
       - type: narrow image
         src: ./assets/redlines.checkboxes.png
-
-    exports:
-      - Checkbox
+    redlines:
+      - Checkbox Input
 
   - type: two column
     text: |
@@ -506,23 +537,26 @@ blocks:
         - Link is 14px from the right edge in the basic style
 
       Typography
-      : - Link is [Basic UI Text](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-basic) in [Digital Pearson Blue](/design/c/colors/v2.0.0-beta.4/#rd-digital-pearson-blue)
+      : - Link is [Basic UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--basic-ui-text) in [Digital Pearson Blue](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--digital-pearson-blue)
 
       Focus
-      : - Hovering or focusing the link changes it to [Ink Blue](/design/c/colors/v2.0.0-beta.5/#rd-ink-blue) and adds an underline
+      : - Hovering or focusing the link changes it to [Ink Blue](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--ink-blue) and adds an underline
         - Any browser default focus indicator is also preserved
 
     contents:
       - type: narrow image
         src: ./assets/redlines.password.showhide.png
+    redlines:
+      - Password Input
 
   - type: two column
     text: |
       ### Phone number w/ country code
 
       Spacing
-      : - Dropdown icon is 4px from the right edge of the text field for both the fancy and basic styles
-        - Button of the flag icon is 10px from the top edge of the dropdown window
+      : - 4px between dropdown and country code
+        - 4px between country code and input
+        - Flag is 8px below label and 10px above dropdown
 
       Sizes
       : - The max height for the Dropdown before scroll bars are available is 250px
@@ -531,21 +565,26 @@ blocks:
       Dropdown
       : - Uses standard [dropdown component](http://pearson-higher-ed.github.io/design/c/dropdown/v1.1.0-beta.1/)
 
+      Behavior
+      : - Choosing a country in the dropdown updates the country code displayed next to the input
+
     contents:
       - type: narrow image
         src: ./assets/redlines.phone.png
+    redlines:
+      - Phone Number Input
 
 changelog:
-  - version: 2.1.0-beta.3
+  - version: 2.2.0-beta.2
     changes: |
-      - CHANGED: Active color back to Pearson Digital Blue
-  - version: 2.1.0-beta.2
+      - CHANGED: Phone number input to no longer prefill the input
+  - version: 2.2.0-beta.1
     changes: |
-      - CHANGED: Update sketch file
-  - version: 2.1.0-beta.1
+      - ADDED: Phone number input
+  - version: 2.1.0
     changes: |
       - CHANGED: Icon for select input
-      - CHANGED: Active color from Pearson Digital Blue to Digital Marine Turquoise
+      - ADDED: Feature links
   - version: 2.0.1
     changes: |
       - FIXED: Some images had disabled labels that don't match the actual design

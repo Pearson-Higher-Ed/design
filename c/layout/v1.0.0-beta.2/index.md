@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Layout
 section: Components
-version: 1.0.0-beta.1
-status: deprecated
+version: 1.0.0-beta.2
+status: active
 people:
   - role: Designer
     name: Parker Malenke
@@ -16,12 +16,14 @@ downloads:
 
 dependencies:
   - name: breakpoints
-    version: 1.0.0
+    version: 1.0.2
+
+no_redlines: true
 
 tagline: |
   A set of standards and guidelines for laying out pages.
 features:
-  - Includes standard breakpoints
+  - Built on the standard breakpoints
   - Handy 12 column grid that can support many layouts
   - Guidance on standard layouts and how to communicate with developers
 usage_guidelines: |
@@ -46,13 +48,15 @@ blocks:
       - type: wide image
         src: ./assets/illustration.png
         caption: The key parts of the grid.
+    features:
+      - Grid
 
   - type: section
     name: Breakpoints
 
   - type: two column
     text: |
-      All pages should provide full functionality and content regardless of screen size. There are five standard breakpoints which your layout should support. Your layout can only change at these breakpoints and should use the shape of your content to decide how to adapt.
+      All pages should provide full functionality and content regardless of screen size. There are [five standard breakpoints](http://pearson-higher-ed.github.io/design/c/breakpoints/v1.0.2/#breakpoints--extra-small) which your layout should support. Your layout can only change at these breakpoints and should use the shape of your content to decide how to adapt.
     contents:
       - type: table
         content: |
@@ -87,6 +91,8 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/single.content.zone.png
+    features:
+      - Single Content Zone
 
   - type: two column
     text: |
@@ -95,6 +101,8 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/dual.content.zone.png
+    features:
+      - Dual Content Zone
 
   - type: two column
     text: |
@@ -103,12 +111,17 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/triple.content.zone.png
+    features:
+      - Triple Content Zone
 
 
 
 
 
 changelog:
+  - version: 1.0.0-beta.2
+    changes: |
+      - UPDATED: Example image for clarity
   - version: 1.0.0-beta.1
     changes: Initial version.
 ---
