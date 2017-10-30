@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Inputs
 section: Components
-status: active
+status: deprecated
 version: 2.1.0
 rebranded: true
 implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
