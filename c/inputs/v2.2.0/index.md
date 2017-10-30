@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Inputs
 section: Components
-status: deprecated
-version: 2.2.0-beta.2
+status: active
+version: 2.2.0
 rebranded: true
 implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
 people:
@@ -575,10 +575,7 @@ blocks:
       - Phone Number Input
 
 changelog:
-  - version: 2.2.0-beta.2
-    changes: |
-      - CHANGED: Phone number input to no longer prefill the input
-  - version: 2.2.0-beta.1
+  - version: 2.2.0
     changes: |
       - ADDED: Phone number input
   - version: 2.1.0
