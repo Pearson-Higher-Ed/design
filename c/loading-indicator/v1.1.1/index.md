@@ -6,7 +6,8 @@ sdk: stand_alone
 redirect_from: /docs/ui-components/loading-indicator/
 version: 1.1.1
 status: active
-implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
+implemented: true
+implementation: https://github.com/Pearson-Higher-Ed/loading-indicator
 people:
   - role: Product Owner
     name: Joe Macaluso
