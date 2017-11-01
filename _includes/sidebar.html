@@ -48,7 +48,6 @@
         {% assign contribute_pages = contribute_pages | push: page %}
       {% when 'Components' %}
           {% if listed_components contains page.title %}
-            {{ 'Duplicate found: ' | append: page.title | warn }}
             {% continue %}
           {% endif %}
 

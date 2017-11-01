@@ -22,7 +22,8 @@ people:
     email: jr.harrell@pearson.com
 
 # Links to any implementations of the component
-implementations:
+implemented: true
+implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
 
 dependencies:
   - name: Colors

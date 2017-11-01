@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Inputs
 section: Components
-status: active
+status: deprecated
 version: 2.2.0-beta.1
 rebranded: true
 implemented: false
@@ -227,7 +227,7 @@ blocks:
 
   - type: two column
     text: |
-      ## Password
+      ### Password
       The password input includes a show/hide option to turn off obfuscation. The value is hidden by default but may be revealed in lower security settings to make it easier for a user to type the intended password.
 
       Note the show/hide control is slightly different than the standard link style with the underline appearing on hover/focus. This is to mesh with the fancy form style better.
@@ -241,19 +241,29 @@ blocks:
 
   - type: two column
     text: |
-      ## Phone number w/ country code
-      The Phone number with country code input is made up of two parts. The first is the dropdown for selecting country and the other is a form field for inputing the phone number. Together they operate as a single control.
+      ### Phone number w/ country code
+
+      #### Construction
+      The Phone number with country code input is made up of two parts that operate together to provide a complete phone number:
+
+      - Dropdown for selecting country code
+      - Form field for inputting the phone number
+
+
+      #### Behavior
+      The dropdown controls the displayed country code, and then the user can input to unique portion of the number in the input box.
+
 
     contents:
       - type: narrow image
         src: ./assets/inputs_phone.png
-        caption: Show/Hide password feature in the fancy input style.
+        caption: Fancy input style.
       - type: narrow image
         src: ./assets/inputs_phone_2.png
         caption: And in the basic input style.
       - type: narrow image
         src: ./assets/inputs_phone_3.png
-        caption: Show/Hide password feature in the fancy input style.
+        caption: Fancy input style dropdown.
 
 
 
@@ -505,6 +515,25 @@ blocks:
     contents:
       - type: narrow image
         src: ./assets/redlines.password.showhide.png
+
+  - type: two column
+    text: |
+      ### Phone number w/ country code
+
+      Spacing
+      : - Dropdown icon is 4px from the right edge of the text field for both the fancy and basic styles
+        - Button of the flag icon is 10px from the top edge of the dropdown window
+
+      Sizes
+      : - The max height for the Dropdown before scroll bars are available is 250px
+        - Standard flag sizes are 20px wide by 10px tall
+
+      Dropdown
+      : - Uses standard [dropdown component](http://pearson-higher-ed.github.io/design/c/dropdown/v1.1.0-beta.1/)
+
+    contents:
+      - type: narrow image
+        src: ./assets/redlines.phone.png
 
 changelog:
   - version: 2.1.0-beta.3
