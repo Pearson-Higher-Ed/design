@@ -41,10 +41,13 @@ blocks:
       * __Primary button__ indicates the main call to action and should only appear once per group of buttons.
 
       * __CTA button__ is your Call To Action button. It is the single most important action on the page and takes higher priority over the Primary button type. It should be used only in specific instances such as the Sign-In process. It can only be used once per page.
+
+      * __Tertiary button__ is for reduced importance actions which should be de-emphasized compared to the default button type.
     contents:
       - type: wide image
         src: ./assets/types@2.png
     features:
+      - Tertiary Button
       - Default Button
       - Primary Button
       - CTA Button
