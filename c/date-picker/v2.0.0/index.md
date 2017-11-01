@@ -5,6 +5,7 @@ section: Components
 redirect_from: /docs/ui-components/date-picker/
 status: active
 version: 2.0.0
+implemented: true
 people:
   - role: Product Owner
     name: Joe Macaluso
