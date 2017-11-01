@@ -64,7 +64,6 @@ blocks:
       - type: wide image
         src: ./assets/size@2.png
     features:
-      - Extra Large Button
       - Large Button
       - Small Button
 
@@ -73,7 +72,7 @@ blocks:
     name: Button placement
 
   - type: two column
-    text: |  
+    text: |
 
       Buttons are positioned relatively according to the type of actions:
 
@@ -150,122 +149,125 @@ blocks:
             - Use link style buttons for navigation.
 
 
-  - type: section
-    name: Redlines
-
-  - type: two column
-    text: |
-      ### Sizes
-      Extra Large
-      : - 44px tall
-        - 20px horizontal padding
-        - [UI Section Heading - Small Bold](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--small-bold-section-ui-heading)
-
-      Large
-      : - 36px tall
-        - 12px horizontal padding
-        - [UI Text - Bold](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--bold-ui-text)
-
-      Small
-      : - 32px tall
-        - 12px horizontal padding
-        - [UI Text - Bold](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--bold-ui-text)
-    contents:
-      - type: wide image
-        src: ./assets/redline_size@2.png
-    redlines:
-      - Small Button
-      - Large Button
-      - Extra Large Button
-
-
-  - type: two column
-    text: |
-      ### Corners
-      2px border radius
-
-  - type: two column
-    text: |
-      ### Default buttons
-
-      Normal
-      : - Background is [Moonlight](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--moonlight)
-        - Text is [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal)
-        - Border is 1px [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
-
-      Hover/Active
-      : - Background becomes [Alto](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--alto)
-        - Text and border are the same
-
-      Disabled
-      : - Background remains [Moonlight](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--moonlight)
-        - Text is [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
-        - No border
-
-      Focus
-      : - Browser default style
-
-    contents:
-      - type: wide image
-        src: ./assets/redline_types@2.png
-    redlines:
-      - Default Button
-
-
-  - type: two column
-    text: |
-      ### Primary buttons
-
-      Normal
-      : - Background is [Digital Pearson Blue](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--digital-pearson-blue)
-        - Text is [White](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--white)
-
-      Hover/Active
-      : - Background becomes [Ink Blue](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--ink-blue)
-
-      Disabled
-      : - No disabled state
-
-      Focus
-      : - Browser default style
-
-    redlines:
-      - Primary Button
-
-  - type: two column
-    text: |
-      ### CTA button (Call To Action)
-
-      Normal
-      : - Background is [Sunshine Yellow](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--sunshine-yellow)
-        - Text is [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal)
-
-      Hover/Active
-      : - Background becomes [Sunflower Yellow](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--sunflower-yellow)
-
-      Disabled
-      : - No disabled state
-
-      Focus
-      : - Browser default style
-
-    redlines:
-      - CTA Button
-
-  - type: two column
-    text: |
-      ### Button Spacing
-      Buttons are 16px apart by default
-
-    contents:
-      - type: wide image
-        src: ./assets/redline_distance@2.png
+  # - type: section
+  #   name: Redlines
+  #
+  # - type: two column
+  #   text: |
+  #     ### Sizes
+  #     Extra Large
+  #     : - 44px tall
+  #       - 20px horizontal padding
+  #       - [UI Section Heading - Small Bold](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--small-bold-section-ui-heading)
+  #
+  #     Large
+  #     : - 36px tall
+  #       - 12px horizontal padding
+  #       - [UI Text - Bold](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--bold-ui-text)
+  #
+  #     Small
+  #     : - 32px tall
+  #       - 12px horizontal padding
+  #       - [UI Text - Bold](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--bold-ui-text)
+  #   contents:
+  #     - type: wide image
+  #       src: ./assets/redline_size@2.png
+  #   redlines:
+  #     - Small Button
+  #     - Large Button
+  #     - Extra Large Button
+  #
+  #
+  # - type: two column
+  #   text: |
+  #     ### Corners
+  #     2px border radius
+  #
+  # - type: two column
+  #   text: |
+  #     ### Default buttons
+  #
+  #     Normal
+  #     : - Background is [Moonlight](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--moonlight)
+  #       - Text is [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal)
+  #       - Border is 1px [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
+  #
+  #     Hover/Active
+  #     : - Background becomes [Alto](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--alto)
+  #       - Text and border are the same
+  #
+  #     Disabled
+  #     : - Background remains [Moonlight](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--moonlight)
+  #       - Text is [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
+  #       - No border
+  #
+  #     Focus
+  #     : - Browser default style
+  #
+  #   contents:
+  #     - type: wide image
+  #       src: ./assets/redline_types@2.png
+  #   redlines:
+  #     - Default Button
+  #
+  #
+  # - type: two column
+  #   text: |
+  #     ### Primary buttons
+  #
+  #     Normal
+  #     : - Background is [Digital Pearson Blue](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--digital-pearson-blue)
+  #       - Text is [White](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--white)
+  #
+  #     Hover/Active
+  #     : - Background becomes [Ink Blue](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--ink-blue)
+  #
+  #     Disabled
+  #     : - No disabled state
+  #
+  #     Focus
+  #     : - Browser default style
+  #
+  #   redlines:
+  #     - Primary Button
+  #
+  # - type: two column
+  #   text: |
+  #     ### CTA button (Call To Action)
+  #
+  #     Normal
+  #     : - Background is [Sunshine Yellow](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--sunshine-yellow)
+  #       - Text is [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal)
+  #
+  #     Hover/Active
+  #     : - Background becomes [Sunflower Yellow](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--sunflower-yellow)
+  #
+  #     Disabled
+  #     : - No disabled state
+  #
+  #     Focus
+  #     : - Browser default style
+  #
+  #   redlines:
+  #     - CTA Button
+  #
+  # - type: two column
+  #   text: |
+  #     ### Button Spacing
+  #     Buttons are 16px apart by default
+  #
+  #   contents:
+  #     - type: wide image
+  #       src: ./assets/redline_distance@2.png
 
 changelog:
 
   - version: 3.0.0-beta.1
     changes: |
-      - 
+      - CHANGED: Large button size to 40px
+      - REMOVED: Extra large button size
+      - CHANGED: Button visual styling
+      - ADDED: Tertiary button type
 
   - version: 2.2.2
     changes: |
