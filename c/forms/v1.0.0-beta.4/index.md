@@ -3,7 +3,7 @@ layout: component-yaml
 title: Forms
 section: Components
 version: 1.0.0-beta.4
-status: deprecated
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -44,13 +44,13 @@ usage_guidelines: |
 
 blocks:
   - type: section
-    name: Basic Form
+    name: Basic form
 
   - type: two column
     text: |
       The basic form consists of several parts: a *Form Name*, an optional *Alerts message*, one or more *input fields*, and *primary/secondary* action buttons.
 
-      ### Form Name
+      ### Form name
 
       ### Form instructions
       Instruction for filling out the form.
@@ -102,7 +102,7 @@ blocks:
       caption: Example of the log in screen with fancy style form fields
 
   - type: section
-    name: Error Handling
+    name: Error handling
 
   - type: two column
     text: |
