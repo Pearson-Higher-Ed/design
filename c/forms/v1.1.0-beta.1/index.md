@@ -99,7 +99,7 @@ blocks:
       caption: Form group (small and extra small devices)
     - type: narrow image
       src: ./assets/form_fancy_example.png
-      caption: Example of the log in screen with fancy style form fields
+      caption: Example of the Sign in screen with fancy style form fields
 
   - type: section
     name: Error handling
