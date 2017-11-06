@@ -48,7 +48,7 @@ blocks:
 
   - type: two column
     text: |
-      The basic form consists of several parts: a *form Name*, an optional *alerts message*, one or more *input fields*, and *primary/secondary* action buttons.
+      The basic form consists of several parts: a *form name*, an optional *alert message*, one or more *input fields*, and *primary/secondary* action buttons.
 
       ### Form name
 
