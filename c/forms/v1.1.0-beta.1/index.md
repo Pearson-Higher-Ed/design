@@ -48,14 +48,14 @@ blocks:
 
   - type: two column
     text: |
-      The basic form consists of several parts: a *Form Name*, an optional *Alerts message*, one or more *input fields*, and *primary/secondary* action buttons.
+      The basic form consists of several parts: a *form Name*, an optional *alerts message*, one or more *input fields*, and *primary/secondary* action buttons.
 
       ### Form name
 
       ### Form instructions
-      Instruction for filling out the form.
+      Instructions for filling out the form.
 
-      ### Alert message
+      ### Alert messages
       See error handling for more details.
 
       ### Input fields
@@ -69,7 +69,7 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/form_basic.png
-        caption: A two-column style form showing all the principle components
+        caption: A two-column style form showing all the principal components
 
 
   - type: section
