@@ -4,7 +4,7 @@ title: Forms
 section: Components
 version: 1.0.0
 rebranded: true
-status: deprecated
+status: active
 implemented: true
 implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
 people:

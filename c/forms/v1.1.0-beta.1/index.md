@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Forms
 section: Components
-version: 1.0.0-beta.4
+version: 1.1.0-beta.1
 status: active
 implemented: false
 people:
