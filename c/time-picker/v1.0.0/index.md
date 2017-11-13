@@ -5,6 +5,7 @@ section: Components
 redirect_from: /docs/ui-components/time-picker/
 status: active
 version: 1.0.0
+implemented: true
 people:
   - role: Product Owner
     name: Joe Macaluso

@@ -3,7 +3,7 @@ layout: component-yaml
 title: Dropdown
 section: Components
 version: 1.0.0
-status: active
+status: deprecated
 implemented: true
 implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
 people:

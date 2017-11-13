@@ -18,6 +18,7 @@
   {% assign use_pages = '' | split: '' %}
   {% assign contribute_pages = '' | split: '' %}
   {% assign component_pages = '' | split: '' %}
+  {% assign listed_components = '' | split: '' %}
 
   {% for page in site.pages %}
     {% comment %}
@@ -46,7 +47,12 @@
       {% when 'contribute' %}
         {% assign contribute_pages = contribute_pages | push: page %}
       {% when 'Components' %}
+          {% if listed_components contains page.title %}
+            {% continue %}
+          {% endif %}
+
           {% assign component_pages = component_pages | push: page %}
+          {% assign listed_components = listed_components | push: page.title %}
       {% else %}
     {% endcase %}
   {% endfor %}
@@ -55,6 +61,7 @@
   {% assign use_pages = use_pages | sort: 'order' %}
   {% assign contribute_pages = contribute_pages | sort: 'order' %}
   {% assign component_pages = component_pages | sort: 'title' %}
+
 
   <div class="sidebar-toc">
     <ul>
