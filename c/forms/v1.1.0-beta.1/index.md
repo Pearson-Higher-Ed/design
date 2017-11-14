@@ -25,7 +25,7 @@ dependencies:
   - name: Buttons
     version: 2.2.2
   - name: Inputs
-    version: 2.1.0
+    version: 2.2.0
   - name: Colors
     version: 3.0.1
   - name: Alerts
@@ -59,7 +59,7 @@ blocks:
       See error handling for more details.
 
       ### Input fields
-      One or more input fields from the input component may be included in the form. Currently, these will all occupy 100% of the form width and stack with 36px of spacing between them.
+      One or more input field from the input component may be include in the form. Input fields can be laid out in one "or" multiple columns within the form.
 
       ### Buttons
       This button should start out as a [default button](/design/c/buttons/v2.2.2/#buttons--default-button) and become a [primary](/design/c/buttons/v2.2.2/#buttons--primary-button) or [CTA](/design/c/buttons/v2.2.2/#buttons--cta-button) button once the form has been completely filled out.
