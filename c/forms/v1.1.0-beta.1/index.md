@@ -55,7 +55,7 @@ blocks:
       ### Form instructions
       Instructions for filling out the form.
 
-      ### Alert messages
+      ### Alert message
       See error handling for more details.
 
       ### Input fields
@@ -88,7 +88,7 @@ blocks:
 
   - type: two column
     text: |
-      Mobile responsive is sharing the same spec as the desktop version. Except that it is one column style only.
+      Mobile responsive is sharing the same spec as the desktop version. Except that it is one column style only. All the input fields will be stacked and cover 100% of the form width.
 
     contents:
     - type: narrow image
@@ -123,7 +123,7 @@ blocks:
       Typography
       : - Form name is [Section UI Heading](/design/c/typography/v2.0.0-beta.7/#rd-ui-headings-section-basic), defaults to basic
 
-      Spacing - Medium devices or above
+      Spacing
       : - 36px between Form Name and first input field
         - 36px between all inputs (this includes space dedicated for one line of error text)
         - 52px between the last input and the Next/Submit button
@@ -131,9 +131,6 @@ blocks:
         - For multiple sections form, 16px above horizontal line and 26px below.
         - For form with alert, 24px above and below the alert and form title/first input field.
         - For form with formation text, 24px above and below the information text and form title/first input field.
-
-      Spacing - Small and extra small devices
-      : - Sharing same spec as the medium devices.
 
       Horizontal line
       : - 1px [Concrete](/design/c/colors/v2.1.0/#rd-concrete)
@@ -152,11 +149,11 @@ blocks:
         src: ./assets/redlines_form_error.png
       - type: wide image
         src: ./assets/redlines_form_fancy.png
-      - type: wide image
-        src: ./assets/redlines_form_mobile.png
-
 
 changelog:
+  - version: 1.1.0-beta.1
+    changes: |
+      - UPDATED: Delete responsive spec
   - version: 1.0.0-beta.4
     changes: |
       - UPDATED: Change X-large buttons to large buttons
