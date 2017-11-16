@@ -18,6 +18,8 @@ people:
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1O7YP1xc9QtHbVB4sugeWG585RXJbNZIT81H5EBPH9ps/edit?usp=sharing
+  - name: .sketch mockup
+    link: ./assets/forms.sketch
 
 dependencies:
   - name: Typography
@@ -70,7 +72,8 @@ blocks:
       - type: wide image
         src: ./assets/form_basic.png
         caption: A two-column style form showing all the principal components
-
+    features:
+        - Alert message
 
   - type: section
     name: Form groups
@@ -113,6 +116,8 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/form_error.png
+    redlines:
+      - Alert message
 
   - type: section
     name: Redlines
@@ -127,13 +132,7 @@ blocks:
       : - 36px between Form Name and first input field
         - 36px between all inputs (this includes space dedicated for one line of error text)
         - 52px between the last input and the Next/Submit button
-        - For 2 column style, 20px between input fields
-        - For multiple sections form, 16px above horizontal line and 26px below.
-        - For form with alert, 24px above and below the alert and form title/first input field.
-        - For form with formation text, 24px above and below the information text and form title/first input field.
-
-      Horizontal line
-      : - 1px [Concrete](/design/c/colors/v2.1.0/#rd-concrete)
+        - For form with information text, 24px above and below the information text and form title/first input field.
 
       Buttons
       : - Use [large button](/design/c/buttons/v2.2.2/#buttons--large-button)
@@ -144,16 +143,48 @@ blocks:
       - type: wide image
         src: ./assets/redlines_form_basic.png
       - type: wide image
-        src: ./assets/redlines_form_sections.png
-      - type: wide image
         src: ./assets/redlines_form_error.png
       - type: wide image
         src: ./assets/redlines_form_fancy.png
+
+  - type: two column
+    text: |
+
+      Typography
+      : - Section name is [Section UI Heading](/design/c/typography/v2.0.0-beta.7/#rd-ui-headings-section-basic), defaults to basic
+
+      Spacing
+      : - 24px between the form name and the alert.
+        - 24px between the alert and first input.
+
+    contents:
+      - type: wide image
+        src: ./assets/redlines_form_error.png
+
+  - type: two column
+    text: |
+
+      Typography
+      : - Section name is [Section UI Heading](/design/c/typography/v2.0.0-beta.7/#rd-ui-headings-section-basic), defaults to basic
+
+      Spacing
+      : - 16px between Section name and horizontal line.
+        - 36px between horizontal line and first input.
+
+      Horizontal line
+      : - 1px [Concrete](/design/c/colors/v2.1.0/#rd-concrete)
+
+    contents:
+        - type: wide image
+          src: ./assets/redlines_form_sections.png
+
+
 
 changelog:
   - version: 1.1.0-beta.1
     changes: |
       - UPDATED: Delete responsive spec
+      - Adding: feature links
   - version: 1.0.0-beta.4
     changes: |
       - UPDATED: Change X-large buttons to large buttons
