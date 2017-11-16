@@ -58,7 +58,7 @@ blocks:
       Instructions for filling out the form.
 
       ### Alert message
-      See error handling for more details.
+      See [error handling](#Error-handling)section for more details.
 
       ### Input fields
       One or more input field from the input component may be include in the form. Input fields can be laid out in one "or" multiple columns within the form.
@@ -73,6 +73,7 @@ blocks:
         src: ./assets/form_basic.png
         caption: A two-column style form showing all the principal components
     features:
+        - Basic form
         - Alert message
 
   - type: section
@@ -84,7 +85,9 @@ blocks:
 
     contents:
     - type: wide image
-      src: ./assets/form_basic_sections.png
+      src: ./assets/form_basic_sections.png      
+    features:
+        - Form groups
 
   - type: section
     name: Responsive forms
@@ -115,9 +118,7 @@ blocks:
 
     contents:
       - type: wide image
-        src: ./assets/form_error.png
-    redlines:
-      - Alert message
+        src: ./assets/form_error.png    
 
   - type: section
     name: Redlines
@@ -146,6 +147,8 @@ blocks:
         src: ./assets/redlines_form_error.png
       - type: wide image
         src: ./assets/redlines_form_fancy.png
+    redlines:
+      - Basic form
 
   - type: two column
     text: |
@@ -160,6 +163,9 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/redlines_form_error.png
+    redlines:
+      - Alert message
+
 
   - type: two column
     text: |
@@ -177,7 +183,8 @@ blocks:
     contents:
         - type: wide image
           src: ./assets/redlines_form_sections.png
-
+    redlines:
+        - Form groups
 
 
 changelog:
