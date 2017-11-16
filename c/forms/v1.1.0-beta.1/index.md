@@ -58,13 +58,13 @@ blocks:
       Instructions for filling out the form.
 
       ### Alert message
-      See [error handling](#Error-handling)section for more details.
+      See [error handling](#error-handling) section for more details.
 
       ### Input fields
       One or more input field from the input component may be include in the form. Input fields can be laid out in one "or" multiple columns within the form.
 
       ### Buttons
-      This button should start out as a [default button](/design/c/buttons/v2.2.2/#buttons--default-button) and become a [primary](/design/c/buttons/v2.2.2/#buttons--primary-button) or [CTA](/design/c/buttons/v2.2.2/#buttons--cta-button) button once the form has been completely filled out.
+      This button should start out as a [default button](http://uxframework.pearson.com/c/buttons/v2.2.2/#buttons--default-button) and become a [primary](http://uxframework.pearson.com/c/buttons/v2.2.2/#buttons--primary-button) or [CTA](http://uxframework.pearson.com/c/buttons/v2.2.2/#buttons--cta-button) button once the form has been completely filled out.
 
       If the form is broken up into multiple pages, use a "Continue" or "Next" button to advance in the form series. Maintain the same Form Name between each page. You should also include some UI for returning to previous steps in the process, where possible.
 
@@ -114,11 +114,14 @@ blocks:
     text: |
       Individual input fields should present their own errors following the styles dictated in the [inputs components](http://pearson-higher-ed.github.io/design/c/inputs/#information-error-text). Fields with errors should always be accompanied by error text, unless a top level error message is sufficient to understand and fix the problems.
 
-      Top Level Errors relevant to the form as a whole may be presented above the first input and below the form name. Refer to [alerts components](http://http://pearson-higher-ed.github.io/design/c/alerts/)  
+      Top Level Errors relevant to the form as a whole may be presented above the first input and below the form name. Refer to [alerts components](http://uxframework.pearson.com/c/alerts/)  
 
     contents:
       - type: wide image
-        src: ./assets/form_error.png    
+        src: ./assets/form_error.png   
+
+    features:
+      - Alert message
 
   - type: section
     name: Redlines
