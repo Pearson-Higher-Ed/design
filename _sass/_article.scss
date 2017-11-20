@@ -187,4 +187,37 @@
   p + ol {
     margin-top: 12px;
   }
+
+  .uikit-buttons {
+    margin-bottom: 24px;
+
+    a {
+      width: 100%;
+      text-align: center;
+    }
+    a + a {
+      margin-top: 12px;
+    }
+
+    @include pe-responsive-breakpoint(sm) {
+      a {
+        width: 300px;
+      }
+      a + a {
+        display: block;
+      }
+    }
+
+    @include pe-responsive-breakpoint(md) {
+      a {
+        width: auto;
+      }
+
+      a + a {
+        display: inline-block;
+        margin-top: 0;
+        margin-left: 16px;
+      }
+    }
+  }
 }
