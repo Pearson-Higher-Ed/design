@@ -7,16 +7,17 @@ in_footer: true
 ---
 
 
-When designing Pearson applications, follow these basic principles:
+**Disclaimer:** We are currently working to update the following content which won't be released till 2018, please contact the UX Framework for the latest progress.
 
-Disclaimer: We are working on updating the principles in 2018, so expect changes in the near future.
+
+Follow these principles when designing for Pearson applications:
 
 
 ##Approachable
 
 Our designs should be pleasant, friendly, and welcoming, and of course, accessible across all devices and technologies.
 
-*Example: Duolingo*
+[*Example: Duolingo*](https://www.duolingo.com/)
 
 
 ##Empowering
