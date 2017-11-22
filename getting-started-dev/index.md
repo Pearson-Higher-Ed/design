@@ -81,11 +81,16 @@ Development specific requirements will eventually be added to the [Library Membe
  one principle to keep in mind is that components should not do any data fetching themselves, rather they should expect
  data to be passed through eventing or properties.
 
+## QA Contribution
+[ux-test-platform][ux-test-platform] is the UX Test Framework for UXF components. Read the [Contribute to UX Test Framework][testframework] to learn about the process to contribute to the Test framework. Once your QA submits the PR, it will be reviewed, approved and merged by UXF(PDA) QA members.
+
 [creation]: {{site.baseurl}}/component-creation-guide
 [ghubreadme]: https://github.com/Pearson-Higher-Ed/elements-sdk#adding-icons
 [spec]: {{site.baseurl}}/membership-spec
 [oprinciples]: https://origami.pearsoned.com/docs/overview/principles/
 [eprinciples]: https://github.com/Pearson-Higher-Ed/docs/blob/master/origami-contributions.md
+[ux-test-platform]: https://github.com/Pearson-Higher-Ed/ux-test-platform
+[testframework]:https://github.com/Pearson-Higher-Ed/ux-test-platform/blob/rebrand/docs/contribute-to-ux-test-platform.md
 
 ## Other Important Links
 
