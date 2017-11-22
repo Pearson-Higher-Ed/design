@@ -9,6 +9,8 @@ in_footer: true
 
 When designing Pearson applications, follow these basic principles:
 
+Disclaimer: We are working on updating the principles in 2018, so expect changes in the near future.
+
 
 ##Approachable
 
