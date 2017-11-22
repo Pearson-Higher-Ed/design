@@ -32,6 +32,8 @@ dependencies:
     version: 3.0.1
   - name: Alerts
     version: 2.0.3
+  - name: Grid
+    version: 1.0.1
 
 tagline: |
   Provides standard structure and behavior for multiple input forms.
@@ -61,7 +63,7 @@ blocks:
       See [error handling](#error-handling) section for more details.
 
       ### Input fields
-      One or more input field from the input component may be include in the form. Input fields can be laid out in one "or" multiple columns within the form.
+      One or more input field from the input component may be include in the form. Input fields can be laid out in one "or" multiple columns within the form, and snap to the columns within the [grid](/c/grid/v1.0.1/#rd-grid)
 
       ### Buttons
       This button should start out as a [default button](http://uxframework.pearson.com/c/buttons/v2.2.2/#buttons--default-button) and become a [primary](http://uxframework.pearson.com/c/buttons/v2.2.2/#buttons--primary-button) or [CTA](http://uxframework.pearson.com/c/buttons/v2.2.2/#buttons--cta-button) button once the form has been completely filled out.
@@ -94,7 +96,7 @@ blocks:
 
   - type: two column
     text: |
-      Mobile responsive is sharing the same spec as the desktop version. Except that it is one column style only. All the input fields will be stacked and cover 100% of the form width.
+      Mobile responsive is sharing the same spec as the desktop version. The content will reflows base on the [breakpoints](http://uxframework.pearson.com/c/breakpoints/).
 
     contents:
     - type: narrow image
@@ -141,7 +143,8 @@ blocks:
       Buttons
       : - Use [large button](/design/c/buttons/v2.2.2/#buttons--large-button)
 
-      * Fancy input style form is sharing the same spec as basic input style form.
+      Input style
+      : - Fancy input style form is sharing the same spec as basic input style form.
 
     contents:
       - type: wide image
