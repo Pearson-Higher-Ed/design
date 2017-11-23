@@ -18,6 +18,8 @@ people:
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1O7YP1xc9QtHbVB4sugeWG585RXJbNZIT81H5EBPH9ps/edit?usp=sharing
+  - name: .sketch mockup
+    link: ./assets/forms.sketch
 
 dependencies:
   - name: Typography
@@ -25,11 +27,13 @@ dependencies:
   - name: Buttons
     version: 2.2.2
   - name: Inputs
-    version: 2.1.0
+    version: 2.2.0
   - name: Colors
     version: 3.0.1
   - name: Alerts
     version: 2.0.3
+  - name: Grid
+    version: 1.0.1
 
 tagline: |
   Provides standard structure and behavior for multiple input forms.
@@ -55,14 +59,14 @@ blocks:
       ### Form instructions
       Instructions for filling out the form.
 
-      ### Alert messages
-      See error handling for more details.
+      ### Alert message
+      See [error handling](#error-handling) section for more details.
 
       ### Input fields
-      One or more input fields from the input component may be included in the form. Currently, these will all occupy 100% of the form width and stack with 36px of spacing between them.
+      One or more input field from the input component may be include in the form. Input fields can be laid out in one "or" multiple columns within the form, and snap to the columns within the [grid](/c/grid/v1.0.1/#rd-grid)
 
       ### Buttons
-      This button should start out as a [default button](/design/c/buttons/v2.2.2/#buttons--default-button) and become a [primary](/design/c/buttons/v2.2.2/#buttons--primary-button) or [CTA](/design/c/buttons/v2.2.2/#buttons--cta-button) button once the form has been completely filled out.
+      This button should start out as a [default button](http://uxframework.pearson.com/c/buttons/v2.2.2/#buttons--default-button) and become a [primary](http://uxframework.pearson.com/c/buttons/v2.2.2/#buttons--primary-button) or [CTA](http://uxframework.pearson.com/c/buttons/v2.2.2/#buttons--cta-button) button once the form has been completely filled out.
 
       If the form is broken up into multiple pages, use a "Continue" or "Next" button to advance in the form series. Maintain the same Form Name between each page. You should also include some UI for returning to previous steps in the process, where possible.
 
@@ -70,7 +74,9 @@ blocks:
       - type: wide image
         src: ./assets/form_basic.png
         caption: A two-column style form showing all the principal components
-
+    features:
+        - Basic form
+        - Alert message
 
   - type: section
     name: Form groups
@@ -81,14 +87,16 @@ blocks:
 
     contents:
     - type: wide image
-      src: ./assets/form_basic_sections.png
+      src: ./assets/form_basic_sections.png      
+    features:
+        - Form groups
 
   - type: section
     name: Responsive forms
 
   - type: two column
     text: |
-      Mobile responsive is sharing the same spec as the desktop version. Except that it is one column style only.
+      Mobile responsive is sharing the same spec as the desktop version. The content will reflows base on the [breakpoints](http://uxframework.pearson.com/c/breakpoints/).
 
     contents:
     - type: narrow image
@@ -108,11 +116,14 @@ blocks:
     text: |
       Individual input fields should present their own errors following the styles dictated in the [inputs components](http://pearson-higher-ed.github.io/design/c/inputs/#information-error-text). Fields with errors should always be accompanied by error text, unless a top level error message is sufficient to understand and fix the problems.
 
-      Top Level Errors relevant to the form as a whole may be presented above the first input and below the form name. Refer to [alerts components](http://http://pearson-higher-ed.github.io/design/c/alerts/)  
+      Top Level Errors relevant to the form as a whole may be presented above the first input and below the form name. Refer to [alerts components](http://uxframework.pearson.com/c/alerts/)  
 
     contents:
       - type: wide image
-        src: ./assets/form_error.png
+        src: ./assets/form_error.png   
+
+    features:
+      - Alert message
 
   - type: section
     name: Redlines
@@ -123,40 +134,70 @@ blocks:
       Typography
       : - Form name is [Section UI Heading](/design/c/typography/v2.0.0-beta.7/#rd-ui-headings-section-basic), defaults to basic
 
-      Spacing - Medium devices or above
+      Spacing
       : - 36px between Form Name and first input field
         - 36px between all inputs (this includes space dedicated for one line of error text)
         - 52px between the last input and the Next/Submit button
-        - For 2 column style, 20px between input fields
-        - For multiple sections form, 16px above horizontal line and 26px below.
-        - For form with alert, 24px above and below the alert and form title/first input field.
-        - For form with formation text, 24px above and below the information text and form title/first input field.
-
-      Spacing - Small and extra small devices
-      : - Sharing same spec as the medium devices.
-
-      Horizontal line
-      : - 1px [Concrete](/design/c/colors/v2.1.0/#rd-concrete)
+        - For form with information text, 24px above and below the information text and form title/first input field.
 
       Buttons
       : - Use [large button](/design/c/buttons/v2.2.2/#buttons--large-button)
 
-      * Fancy input style form is sharing the same spec as basic input style form.
+      Input style
+      : - Fancy input style form is sharing the same spec as basic input style form.
 
     contents:
       - type: wide image
         src: ./assets/redlines_form_basic.png
       - type: wide image
-        src: ./assets/redlines_form_sections.png
-      - type: wide image
         src: ./assets/redlines_form_error.png
       - type: wide image
         src: ./assets/redlines_form_fancy.png
+    redlines:
+      - Basic form
+
+  - type: two column
+    text: |
+
+      Typography
+      : - Section name is [Section UI Heading](/design/c/typography/v2.0.0-beta.7/#rd-ui-headings-section-basic), defaults to basic
+
+      Spacing
+      : - 24px between the form name and the alert.
+        - 24px between the alert and first input.
+
+    contents:
       - type: wide image
-        src: ./assets/redlines_form_mobile.png
+        src: ./assets/redlines_form_error.png
+    redlines:
+      - Alert message
+
+
+  - type: two column
+    text: |
+
+      Typography
+      : - Section name is [Section UI Heading](/design/c/typography/v2.0.0-beta.7/#rd-ui-headings-section-basic), defaults to basic
+
+      Spacing
+      : - 16px between Section name and horizontal line.
+        - 36px between horizontal line and first input.
+
+      Horizontal line
+      : - 1px [Concrete](/design/c/colors/v2.1.0/#rd-concrete)
+
+    contents:
+        - type: wide image
+          src: ./assets/redlines_form_sections.png
+    redlines:
+        - Form groups
 
 
 changelog:
+  - version: 1.1.0-beta.1
+    changes: |
+      - UPDATED: Delete responsive spec
+      - Adding: feature links
   - version: 1.0.0-beta.4
     changes: |
       - UPDATED: Change X-large buttons to large buttons
