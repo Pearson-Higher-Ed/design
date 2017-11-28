@@ -34,6 +34,9 @@ dependencies:
     version: 2.0.3
   - name: Grid
     version: 1.0.1
+  - name: Breakpoints
+    version: 1.0.0
+
 
 tagline: |
   Provides standard structure and behavior for multiple input forms.
@@ -63,7 +66,7 @@ blocks:
       See [error handling](#error-handling) section for more details.
 
       ### Input fields
-      One or more input field from the input component may be include in the form. Input fields can be laid out in one "or" multiple columns within the form, and snap to the columns within the [grid](/c/grid/v1.0.1/#rd-grid)
+      One or more input field from the input component may be include in the form. Input fields can be laid out in one "or" multiple columns within the form, and snap to the columns within the [grid](/c/grid/v1.0.1/#rd-grid).
 
       ### Buttons
       This button should start out as a [default button](http://uxframework.pearson.com/c/buttons/v2.2.2/#buttons--default-button) and become a [primary](http://uxframework.pearson.com/c/buttons/v2.2.2/#buttons--primary-button) or [CTA](http://uxframework.pearson.com/c/buttons/v2.2.2/#buttons--cta-button) button once the form has been completely filled out.
@@ -132,16 +135,17 @@ blocks:
     text: |
 
       Typography
-      : - Form name is [Section UI Heading](/design/c/typography/v2.0.0-beta.7/#rd-ui-headings-section-basic), defaults to basic
+      : - Form name is [Section UI Heading](/design/c/typography/v2.0.0-beta.7/#rd-ui-headings-section-basic), defaults to basic.
 
       Spacing
-      : - 36px between Form Name and first input field
-        - 36px between all inputs (this includes space dedicated for one line of error text)
-        - 52px between the last input and the Next/Submit button
+      : - 36px between Form Name and first input field.
+        - 36px between all inputs (this includes space dedicated for one line of error text).
+        - 52px between the last input and the Next/Submit button.
         - For form with information text, 24px above and below the information text and form title/first input field.
+        - For side by side input fields, reference to the [gutter size](/c/grid/v1.0.1/#rd-grid).
 
       Buttons
-      : - Use [large button](/design/c/buttons/v2.2.2/#buttons--large-button)
+      : - Use [large button](/design/c/buttons/v2.2.2/#buttons--large-button).
 
       Input style
       : - Fancy input style form is sharing the same spec as basic input style form.
@@ -149,8 +153,6 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/redlines_form_basic.png
-      - type: wide image
-        src: ./assets/redlines_form_error.png
       - type: wide image
         src: ./assets/redlines_form_fancy.png
     redlines:
@@ -160,7 +162,7 @@ blocks:
     text: |
 
       Typography
-      : - Section name is [Section UI Heading](/design/c/typography/v2.0.0-beta.7/#rd-ui-headings-section-basic), defaults to basic
+      : - Section name is [Section UI Heading](/design/c/typography/v2.0.0-beta.7/#rd-ui-headings-section-basic), defaults to basic.
 
       Spacing
       : - 24px between the form name and the alert.
@@ -197,7 +199,8 @@ changelog:
   - version: 1.1.0-beta.1
     changes: |
       - UPDATED: Delete responsive spec
-      - Adding: feature links
+      - Adding: Feature links
+      - UPDATE: Adding dependencies Grid and Breakpoints
   - version: 1.0.0-beta.4
     changes: |
       - UPDATED: Change X-large buttons to large buttons
