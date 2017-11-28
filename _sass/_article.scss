@@ -1,7 +1,7 @@
 .article {
 
   h1 {
-    margin-bottom: 28px;
+    margin-bottom: 40px;
   }
 
   .parent {
@@ -126,6 +126,7 @@
   h2 {
     @extend .pe-title, .pe-label--bold;
     margin-top: 100px;
+    margin-bottom: 20px;
 
     & + h3 {
       margin-top: 12px;
@@ -133,7 +134,8 @@
   }
   h3 {
     @extend .pe-title, .pe-title--small;
-    margin-top: 80px;
+    margin-top: 20px;
+    margin-bottom: 12px;
 
     & + h4 {
       margin-top: 12px;
@@ -163,6 +165,10 @@
     ul {
       @extend .pe-list, .pe-styled-lists--unordered;
     }
+  }
+
+  img {
+    width: 100%;
   }
 
   img.wide {
