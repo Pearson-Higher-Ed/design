@@ -13,8 +13,8 @@ people:
     email: van.yang@pearson.com
 implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
 downloads:
-  - name: Pearson_icons_symbols_1.7.sketch
-    link: ./assets/Pearson_icons_symbols_1.7.sketch
+  - name: Pearson_icons_symbols_1.8.sketch
+    link: ./assets/Pearson_icons_symbols_1.8.sketch
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/15RLoDS-Qlu_Qz1W8UNuiHu3OtdNZ8kzKm_7jecoP5So/edit?usp=sharing
 dependencies:
@@ -60,6 +60,7 @@ blocks:
           | ![](./assets/icons24/archive-24-2x.png) | archive-18 | archive-24 |
           | ![](./assets/icons24/ban-24-2x.png) | ban-18 | ban-24 |
           | ![](./assets/icons24/book-24-2x.png) | book-18 | book-24 |
+          | ![](./assets/icons24/breadcrumb-24-2x.png) | breadcrumb-18 | breadcrumb-24 |
           | ![](./assets/icons24/calendar-24-2x.png) | calendar-18 | calendar-24 |
           | ![](./assets/icons24/camera-24-2x.png) | camera-18 | camera-24 |
           | ![](./assets/icons24/camera-video-24-2x.png) | camera-video-18 | camera-video-24 |
@@ -89,6 +90,7 @@ blocks:
           | ![](./assets/icons24/image-24-2x.png) | image-18 | image-24 |
           | ![](./assets/icons24/info-fill-24-2x.png) | info-fill-18 | info-fill-24 |
           | ![](./assets/icons24/info-outline-24-2x.png) | info-outline-18 | info-outline-24 |
+          | ![](./assets/icons24/link-24-2x.png) | link-18 | link-24 |
           | ![](./assets/icons24/note-24-2x.png) | note-18 | note-24 |
           | ![](./assets/icons24/notification-24-2x.png) | notification-18 | notification-24 |
           | ![](./assets/icons24/print-24-2x.png) | print-18 | print-24 |
@@ -103,6 +105,7 @@ blocks:
       - Archive
       - Ban
       - Book
+      - Breadcrumb
       - Calendar
       - Camera
       - Camera-video
@@ -131,6 +134,7 @@ blocks:
       - Image
       - Info-fill
       - Info-outline
+      - Link
       - Note
       - Notification
       - Print
@@ -179,6 +183,8 @@ blocks:
           | ![](./assets/icons24/checkbox-off-24-2x.png) | checkbox-off-18 | checkbox-off-24 |
           | ![](./assets/icons24/checkbox-on-24-2x.png) | checkbox-on-18 | checkbox-on-24 |
           | ![](./assets/icons24/checkbox-tristate-24-2x.png) | checkbox-tristate-18 | checkbox-tristate-24 |
+          | ![](./assets/icons24/dropdown-close-24-2x.png) | dropdown-close-18 | dropdown-close-24 |
+          | ![](./assets/icons24/dropdown-open-24-2x.png) | dropdown-open-18 | dropdown-open-24 |
           | ![](./assets/icons24/dropdown-close-sm-24-2x.png) | dropdown-close-sm-18 | dropdown-close-sm-24 |
           | ![](./assets/icons24/dropdown-open-sm-24-2x.png) | dropdown-open-sm-18 | dropdown-open-sm-24 |
           | ![](./assets/icons24/favorite-off-24-2x.png) | favorite-off-18 | favorite-off-24 |
@@ -285,7 +291,7 @@ changelog:
   - version: 2.4.0-beta.1
     changes: |
       - ADDED: Icon recommendations for desktop web apps and mobile apps
-      - REMOVED: Dropdown-close and Dropdown-open
+      - NEW ICONS: Breadcrumb, Link
   - version: 2.3.0-beta.2
     changes: |
       - ADDED: Feature links
