@@ -9,9 +9,19 @@
 			<div class="content">
 				<h1>UX Framework</h1>
 
-				<p>UX Framework is a unified UI language with guidance and resources for creating a cohesive user experience for Pearson applications.</p>
+				<p class="pe-label pe-label--large">A design system that empowers teams to build better products, faster</p>
 
-				<div class="links"><a href="{{site.baseurl}}/introduction-to-ux-framework">Learn more</a></div>
+				<div class="search-container">
+					<input type="text" name="search" class="pe-textInput--basic" placeholder="Search for components..."autocomplete="off">
+					<svg role="img"
+			       aria-labelledby="r2"
+			       focusable="false"
+			       class="pe-icon--search-sm-18">
+			    <title id="r2">Search the component library</title>
+			    <use xlink:href="#search-sm-18"></use>
+			  </svg>
+					<div class="dropdown"></div>
+				</div>
 			</div>
 		</div>
 
@@ -48,6 +58,186 @@
 			</ul>
 		</footer>
 	</div>
+
+	<script type="text/javascript">
+
+		var componentData = [
+			{% for page in site.pages %}
+
+			{% if page.section != 'Components' or
+			 			page.status != 'active'%}
+				{% continue %}
+			{% endif %}
+
+			{
+				name: '{{page.title}}',
+				version: '{{page.version}}',
+				status: '{{page.status}}',
+				url: '{{page.url}}',
+				features: [
+					{% for block in page.blocks %}
+						{% for feature in block.features %}
+						'{{feature}}',
+						{% endfor %}
+					{% endfor %}
+				]
+			},
+			{% endfor %}
+		]
+		var named = _.chain(componentData)
+								 .sortBy('version')
+								 .groupBy('name')
+								 .value()
+
+		var toggleDropdown = (function() {
+			var dropdown = document.querySelector('.search-container .dropdown')
+			return function(state) {
+				switch (state) {
+					case 'closed':
+						dropdown.classList.remove('open')
+						break;
+					case 'open':
+						dropdown.classList.add('open')
+						break;
+					default:
+						dropdown.classList.toggle('open')
+				}
+			}
+		})()
+
+		var buildResult = function(result) {
+			var resultNode = document.createDocumentFragment()
+			var resultDiv = document.createElement('div')
+			resultDiv.classList.add('result')
+
+			var link = document.createElement('a')
+			link.href = result.url
+			resultDiv.appendChild(link)
+
+			var heading = document.createElement('h5')
+			heading.textContent = result.name
+			link.appendChild(heading)
+
+			var version = document.createElement('p')
+			version.textContent = 'Version ' + result.version
+			link.appendChild(version)
+
+			resultNode.appendChild(resultDiv)
+			return resultNode
+		}
+
+		var selectedResult = "lemons"
+
+		var populateDropdown = (function(){
+			var dropdown = document.querySelector('.search-container .dropdown')
+			return function(contents) {
+				dropdown.innerHTML = ''
+				selectedResult = contents.firstElementChild
+				dropdown.appendChild(contents)
+				if (selectedResult) {
+					selectedResult.classList.add('selected')
+				}
+			}
+		})()
+
+		document
+			.querySelector('.top input')
+			.addEventListener('input', function(e) {
+				var newVal = e.target.value
+
+				if (newVal.length == 0) {
+					toggleDropdown('closed')
+				} else {
+					toggleDropdown('open')
+				}
+
+				var results = fuzzysort.go(
+					newVal,
+					componentData,
+					{
+						limit: 5,
+						key: 'name'
+					}
+				)
+
+				var resultsNode = document.createDocumentFragment()
+				results.forEach(result => {
+					resultsNode.appendChild(buildResult(result.obj))
+				})
+				populateDropdown(resultsNode)
+			})
+
+		var arrowDownDropdown = function() {
+			if (selectedResult.nextElementSibling) {
+				selectedResult.classList.remove('selected')
+				selectedResult = selectedResult.nextElementSibling
+				selectedResult.classList.add('selected')
+			}
+		}
+
+		var arrowUpDropdown = function() {
+			if (selectedResult.previousElementSibling) {
+				selectedResult.classList.remove('selected')
+				selectedResult = selectedResult.previousElementSibling
+				selectedResult.classList.add('selected')
+			}
+		}
+
+		var selectCurrentDropdown = function() {
+			window.location.href = selectedResult.children[0].href
+		}
+
+		document
+			.querySelector('.top input')
+			.addEventListener('keydown', function(e) {
+				switch (e.keyCode) {
+					case 40:
+						e.preventDefault()
+						arrowDownDropdown()
+						break
+					case 38:
+						e.preventDefault()
+						arrowUpDropdown()
+						break
+					case 13:
+						selectCurrentDropdown()
+				}
+			})
+
+		document
+			.querySelector('.top input')
+			.addEventListener('blur', function(e) {
+				toggleDropdown('closed')
+			})
+
+		document
+			.querySelector('.top input')
+			.addEventListener('focus', function(e) {
+				toggleDropdown('open')
+			})
+
+		document
+			.querySelector('.top .dropdown')
+			.addEventListener('mouseover', function(e) {
+				if (!e.target.matches('div.result')) { return }
+				if (e.target == selectedResult) { return }
+
+				selectedResult.classList.remove('selected')
+				selectedResult = e.target
+				selectedResult.classList.add('selected')
+			})
+
+		window.addEventListener('pageshow', function(e) {
+			if (e.persisted) {
+				selectedResult = null
+				populateDropdown(null)
+			}
+		})
+
+		// window.addEventListener('pagehide', function(e) {
+		// 	alert(e)
+		// })
+	</script>
 
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
