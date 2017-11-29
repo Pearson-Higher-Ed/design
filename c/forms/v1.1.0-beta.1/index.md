@@ -76,7 +76,7 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/form_basic.png
-        caption: A two-column style form showing all the principal components
+        caption: Example of basic form showing all the principal components
     features:
         - Basic form
         - Alert message
@@ -124,7 +124,6 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/form_error.png   
-
     features:
       - Alert message
 
