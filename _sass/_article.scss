@@ -134,8 +134,8 @@
   }
   h3 {
     @extend .pe-title, .pe-title--small;
-    margin-top: 20px;
-    margin-bottom: 12px;
+    margin-top: 24px;
+    margin-bottom: 8px;
 
     & + h4 {
       margin-top: 12px;
@@ -169,6 +169,7 @@
 
   img {
     width: 100%;
+    margin-top:20px;
   }
 
   img.wide {
