@@ -82,7 +82,7 @@ Development specific requirements will eventually be added to the [Library Membe
  data to be passed through eventing or properties.
 
 ## QA Contribution
-[Ux-test-platform][ux-test-platform] is the UX Test Framework for UXF components. Read the [Contribute to UX Test Framework][testframework] to learn about the process to contribute to the Test framework. Once your QA submits the PR, it will be reviewed, approved and merged by UXF(PDA) QA members.
+[Ux-test-platform][ux-test-platform] is the UX Test Framework for UXF components. Read the [Contribute to UX Test Framework][testframework] to learn about the process to contribute to the Test framework. Once your QA submits the PR, it will be reviewed, approved and merged by UXF (PDA) QA members.
 
 [creation]: {{site.baseurl}}/component-creation-guide
 [ghubreadme]: https://github.com/Pearson-Higher-Ed/elements-sdk#adding-icons
