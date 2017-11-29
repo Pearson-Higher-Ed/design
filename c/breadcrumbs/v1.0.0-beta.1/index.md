@@ -16,6 +16,8 @@ implemented: https://github.com/Pearson-Higher-Ed/elements-sdk
 downloads:
   - name: Sketch
     link: ./assets/breadcrumbs_1.0.sketch
+  - name: UXD Accessibility Checklist
+    link: https://docs.google.com/a/pearson.com/document/d/1CkiA8PtZ23itHbAuc_LczZk5ulojSp6G95aE8lUyFL8/edit?usp=sharing
 dependencies:
   - name: Colors
     version: 3.0.1
