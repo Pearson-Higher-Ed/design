@@ -20,6 +20,12 @@
     @include _sidebarOpen;
   }
 
+  &.narrow-show {
+    @media (min-width: 1200px) {
+      @include _sidebarOpen;
+    }
+  }
+
   @media (min-width: 1460px) {
     @include _sidebarOpen;
   }
@@ -157,6 +163,13 @@
 }
 
 .top-level-content {
+
+  &.narrow-show {
+    @media (min-width: 1200px) {
+      margin-left: 240px;
+    }
+  }
+  
   @media (min-width: 1460px) {
     margin-left: 240px;
   }

@@ -140,7 +140,7 @@ body.home {
         padding: 80px 60px;
         float: left;
       }
-      @include pe-responsive-breakpoint(lg) {
+      @include pe-responsive-breakpoint(xl) {
         padding: 80px 100px;
       }
     }
@@ -170,7 +170,7 @@ body.home {
           bottom: 0;
         }
       }
-      @include pe-responsive-breakpoint(lg) {
+      @include pe-responsive-breakpoint(xl) {
         padding: 0 100px;
       }
     }
