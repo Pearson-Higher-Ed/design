@@ -40,11 +40,11 @@ We follow [semantic versioning](https://semver.org/) for managing our updates. I
 
 ## Working with engineering
 
-![](/img/features link@2.png)
-
 Each component includes a pre-built package of code for developers to incorporate the design into the final product. You don’t have to redline your use of a component. Simply note which component it is. For example, you can just point out that a button is a **large default button**, rather than creating the redlines for it.
 
-Let the developers know what component you are referring to by sharing the link to that specific feature.
+Let the developers know what component you are referring to by directing them to the specifications on the UX Framework website. You can do this by sharing  the unique link to a feature by clicking "copy link" as shown bellow:
+
+![](/img/features link@2.png)
 
 
 
