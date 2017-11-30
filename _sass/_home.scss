@@ -120,7 +120,7 @@ body.home {
     margin-top: 40px;
     padding-bottom: 40px;
     position: relative;
-    border-bottom: 2px solid $pe-color-digital-marine-turquoise;
+    border-bottom: 1px solid $pe-color-concrete;
 
     h2 {
       @extend .pe-page-title;
@@ -178,17 +178,68 @@ body.home {
     @include clearfix;
   }
 
+  .uikit {
+    width: 90%;
+    margin: 100px auto;
 
-  .contact {
-    text-align: center;
-    padding: 80px 10px;
+    @include pe-responsive-breakpoint(lg) {
+      max-width: 960px;
+    }
 
-    .address {
-      @extend .pe-page-title;
-      margin-top: 28px;
+    .header {
+      display: table;
+    }
+
+    h2 {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .button-container {
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 40px;
+    }
+
+    img {
+      width: 100%;
+      margin-top: 32px;
+      border: 1px solid $pe-color-alto;
     }
   }
 
+  .contact {
+    padding: 80px 10px;
+    border-top: 1px solid $pe-color-concrete;
+    border-bottom: 1px solid $pe-color-concrete;
+
+    h2 {
+      text-align: center;
+    }
+
+    ul {
+      width: 600px;
+      margin: 32px auto 0;
+    }
+  }
+
+  .newsletter {
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+
+    &:before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0.6;
+      background: url($baseurl + "/img/mailstripe.svg") -76px top repeat-x;
+    }
+  }
 
   footer {
     margin: 20px 0 80px;
