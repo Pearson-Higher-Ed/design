@@ -68,12 +68,43 @@
 		</section>
 
 		<footer>
-			<ul>
+			<section>
+				<h3>Learn</h3>
+				<ul class="pe-list pe-list--unstyled">
+					<li><a href="{{site.baseurl}}/introduction">Introduction</a></li>
+					<li><a href="{{site.baseurl}}/principles">Principles</a></li>
+					<li><a href="{{site.baseurl}}/updates">Updates</a></li>
+					<li><a href="{{site.baseurl}}/status">Component Status</a></li>
+					<li><a href="{{site.baseurl}}/membership-spec">Component quality checklist</a></li>
+					<li><a href="{{site.baseurl}}/contact">Contact</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Explore</h3>
+				<ul class="pe-list pe-list--unstyled">
+					<li><a href="{{site.baseurl}}/">Components</a></li>
+					<li><a href="{{site.baseurl}}/">Voice and tone</a></li>
+					<li><a href="{{site.baseurl}}/">Accessibility</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Build</h3>
+				<ul class="pe-list pe-list--unstyled">
+					<li><a href="{{site.baseurl}}/getting-started-design">Designer's guide</a></li>
+					<li><a href="{{site.baseurl}}/getting-started-dev">Developer's guide</a></li>
+					<li><a href="{{site.baseurl}}/UIKit">UI Kit</a></li>
+					<li><a href="{{site.baseurl}}/resources">Resources</a></li>
+				</ul>
+			</section>
+
+			<!-- <ul>
 				{% assign navigation = site.pages | where: "in_footer", true  %}
 				{% for page in navigation %}
 					<li><a href="{{page.url}}">{{page.title}}</a></li>
 				{% endfor %}
-			</ul>
+			</ul> -->
 		</footer>
 	</div>
 
