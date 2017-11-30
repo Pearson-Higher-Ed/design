@@ -12,7 +12,7 @@ UX Framework is Pearson’s design system. We provide guidelines, tools, and res
 * TOC
 {:toc}
 
-##UX Framework Components
+## UX Framework Components
 Our components are designed to be...
 
 - **Universal**
@@ -38,7 +38,7 @@ Our components are designed to be...
    Each component is flexible and adapts as device size changes to optimize the experience.
 
 
-## The benefits
+## Benefits
 
 
 - **Bridging the gap between design and engineering**
@@ -59,11 +59,9 @@ Our components are designed to be...
    Consuming the code package make updates much more efficient at a global scale. Rapid iteration allows the product to evolve and improve faster.
 
 
-##Our process
+## Process
 
-The UX Framework library will adapt to the needs of Pearson’s products as they evolve over time.
-
-Here is the process for making updates to components:
+Our designs evolves over time as we improve the usability and quality of the components. Here is our process for updating the components:
 
 
 1. A consumer emails the UXF Design Team (uxf-design@pearson.com) with a brief description of the needs.
