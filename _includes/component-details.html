@@ -348,6 +348,38 @@
             {% when 'text' %}
             <div class="text-content pe-copy">{{item.content | markdownify}}</div>
 
+            {% when 'palette' %}
+            <div class="colors">
+              {% for color in page.palettes[item.palette] %}
+                {% assign color_data = page.colors[color] %}
+                <div class="color" data-state="open" data-border="{% if color_data.use_border %}true{% else %}false{% endif %}">
+                  <div class="bar {% if color_data.use_border %}border{% endif %}" style="background-color: #{{color_data.hex}};">
+                    <div class="name {% if color_data.use_border %}border{% endif %}" style="transform: translateY(70px);">
+                      <p>{{color}}</p>
+                      <p>#{{color_data.hex}}</p>
+                    </div>
+                  </div>
+                  <div class="details">
+                    <h5>Primary Uses</h5>
+                    <div class="uses">{% if color_data.uses %}{{color_data.uses | markdownify}}{% endif %}</div>
+
+                    <h5>A11y Complements</h5>
+                    <div class="complements">
+                      {% for complement in color_data.a11y_complements %}
+                        {% assign comp_data = page.colors[complement] %}
+                        <div class="complement">
+                          <div class="complement_swatch {% if comp_data.use_border %}border{% endif %}" style="background-color: #{{comp_data.hex}}"></div>
+                          <p>{{complement}}</p>
+                        </div>
+                      {% else %}
+                        <div class="complement"><p>No complements meet accessibility requirements</p></div>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+
             {% when 'colors' %}
             <div class="colors">
               {% for color in item.colors %}
