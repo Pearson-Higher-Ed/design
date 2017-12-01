@@ -52,6 +52,38 @@
 			<img src="{{site.baseurl}}/UIKit/assets/UI Kit.png" alt="Components available in the library">
 		</section>
 
+		<section class="colors">
+			<div class="heading">
+				<h2>Colors</h2>
+				<a href="{{site.baseurl}}/c/colors">View usage guidelines</a>
+			</div>
+
+			{% for page in site.pages %}
+				{% unless page.title == 'Colors' %}{% continue %}{% endunless %}
+				{% unless page.status == 'active' %}{% continue %}{% endunless %}
+				{% if page.version contains 'beta' %}{% continue %}{% endif %}
+
+				{% assign latest_colors = page %}
+			{% endfor %}
+
+			{% assign borders = "White,White Gray" | split: "," %}
+
+			<div class="palettes">
+				{% for palette in latest_colors.palettes %}
+				<div class="palette">
+					<h3>{{ palette[0] }}</h3>
+						{% for color in palette[1] %}
+							<div class="color">
+								<div class="swatch{% if borders contains color %} border{% endif %}" style="background-color: #{{latest_colors.colors[color].hex}};"></div>
+								<div>{{color}}</div>
+								<div>#{{latest_colors.colors[color].hex}}</div>
+							</div>
+						{% endfor %}
+					</div>
+					{% endfor %}
+			</div>
+		</section>
+
 		<section class="contact">
 			<h2>Questions or Feedback?</h2>
 			<ul class="pe-list pe-list--unordered pe-copy pe-copy--large">

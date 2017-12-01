@@ -208,6 +208,68 @@ body.home {
     }
   }
 
+  .colors {
+    border-top: 1px solid $pe-color-concrete;
+    padding: 100px 0;
+
+    .heading,
+    .palettes {
+      width: 90%;
+      margin: 0 auto;
+
+      @include pe-responsive-breakpoint(lg) {
+        max-width: 960px;
+      }
+    }
+
+    .heading {
+      h2, a {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      a {
+        margin-left: 20px;
+        @extend .pe-label, .pe-label--large;
+      }
+    }
+
+    .palettes {
+      h3 {
+        @extend .pe-title, .pe-title--small, .pe-bold;
+        margin-bottom: 16px;
+      }
+
+      .palette {
+        @include clearfix;
+        margin-top: 40px;
+      }
+
+      .color {
+        float: left;
+
+        & + .color {
+          margin-left: 20px;
+        }
+      }
+
+      .swatch {
+        width: 176px;
+        height: 28px;
+        margin-bottom: 8px;
+
+        &.border {
+          border: 1px solid $pe-color-alto;
+        }
+      }
+
+      .swatch + div,
+      .swatch + div + div {
+        @extend .pe-label, .pe-label--small;
+      }
+    }
+  }
+
   .contact {
     padding: 80px 10px;
     border-top: 1px solid $pe-color-concrete;
