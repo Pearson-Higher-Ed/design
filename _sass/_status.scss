@@ -28,6 +28,10 @@
     width: 100%;
   }
 
+  img {
+    width: 100%;
+  }
+
   table {
     clear: both;
     width: 100%;
@@ -38,6 +42,11 @@
       background-color: $pe-color-digital-ice-blue;
 
       tr:last-child th {
+        font-weight: normal;
+      }
+
+      .status-description {
+        @extend .pe-label, .pe-label--small;
         font-weight: normal;
       }
     }

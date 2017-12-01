@@ -4,7 +4,9 @@ layout: article
 section: use
 ---
 
-{% include uikit-download.html type='cta' btn_size='xlarge' %} <a class="pe-btn--btn_xlarge" href="https://sketch.cloud/s/qepzy/all/page-1/ui-kit" target="_blank" style="margin-left: 16px;">View Fullscreen</a>
+<div class="uikit-buttons">
+  {% include uikit-download.html type='cta' btn_size='xlarge' %} <a class="pe-btn--btn_xlarge" href="https://sketch.cloud/s/qepzy/all/page-1/ui-kit" target="_blank">View Fullscreen</a>
+</div>
 
 
 
