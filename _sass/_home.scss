@@ -300,6 +300,7 @@ body.home {
       left: 0;
       opacity: 0.6;
       background: url($baseurl + "/img/mailstripe.svg") -76px top repeat-x;
+      z-index: -1;
     }
   }
 }
