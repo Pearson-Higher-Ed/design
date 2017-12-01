@@ -238,19 +238,18 @@ body.home {
       h3 {
         @extend .pe-title, .pe-title--small, .pe-bold;
         margin-bottom: 16px;
+        margin-left: 10px;
       }
 
       .palette {
         @include clearfix;
         margin-top: 40px;
+        margin-left: -10px;
       }
 
       .color {
         float: left;
-
-        & + .color {
-          margin-left: 20px;
-        }
+        margin: 0 10px 12px;
       }
 
       .swatch {
