@@ -6,7 +6,7 @@ section: learn
 in_footer: true
 ---
 
-UX Framework is Pearson’s design system. We provide guidelines, tools, and resources to help designers and developers create better user experience more efficiently.
+UX Framework is Pearson’s design system. We provide guidelines, tools, and resources to help designers and developers create better user experiences, more efficiently.
 
 
 * TOC
