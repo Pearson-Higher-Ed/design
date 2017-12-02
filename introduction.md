@@ -55,7 +55,7 @@ Our components are designed to be...
 Our designs evolve over time as we improve the usability and quality of the components. Here is our process for updating the components:
 
 
-1. A consumer emails the UXF Design Team (uxf-design@pearson.com) with a brief description of the needs.
+1. A consumer emails the [UXF Design Team](uxf-design@pearson.com) with a brief description of the needs.
 2. The UX Framework Design Team collaborates with that consumer to design the new functionality or modify the existing component and create documentation for reuse.
-3. The design goes through the governance review to ensure it meets the requirements from the [Component Quality Checklist!]({{site.baseurl}}/membership-spec).
-4. The UX Framework Development Team or the consumer builds the functionality and create documentation for reuse.
+3. The design goes through the governance review to ensure it meets the requirements from the [Component Quality Checklist]({{site.baseurl}}/membership-spec).
+4. The UX Framework Development Team or the consumer builds the functionality and creates the documentation for reuse.
