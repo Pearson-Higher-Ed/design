@@ -79,7 +79,7 @@ blocks:
         caption: Example of basic form showing all the principal components
     features:
         - Basic form
-        - Alert message
+        
 
   - type: section
     name: Form groups
@@ -125,7 +125,7 @@ blocks:
     - type: wide image
       src: ./assets/form_error.png   
     features:
-      - Alert message
+        - Alert message
 
   - type: section
     name: Redlines
