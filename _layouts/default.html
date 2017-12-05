@@ -245,10 +245,20 @@
 				}
 			})
 
+
+		var mousedownInsideDropdown = false
+		document
+			.querySelector('.top .dropdown')
+			.addEventListener('mousedown', function(e) {
+				mousedownInsideDropdown = true
+			})
 		document
 			.querySelector('.top input')
 			.addEventListener('blur', function(e) {
-				toggleDropdown('closed')
+				if (!mousedownInsideDropdown) {
+					toggleDropdown('closed')
+				}
+				mousedownInsideDropdown = false
 			})
 
 		document
