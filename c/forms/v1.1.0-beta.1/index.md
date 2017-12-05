@@ -66,7 +66,7 @@ blocks:
       See [error handling](#error-handling) section for more details.
 
       ### Input fields
-      One or more input field from the input component may be include in the form. Input fields can be laid out in one "or" multiple columns within the form, and snap to the columns within the [grid](/c/grid/v1.0.1/#rd-grid).
+      One or more input fields from the input component may be included in the form. Input fields can be laid out in one column or multiple columns within the form and snapped to the columns within the [grid](/c/grid/v1.0.1/#rd-grid).
 
       ### Buttons
       This button should start out as a [default button](http://uxframework.pearson.com/c/buttons/v2.2.2/#buttons--default-button) and become a [primary](http://uxframework.pearson.com/c/buttons/v2.2.2/#buttons--primary-button) or [CTA](http://uxframework.pearson.com/c/buttons/v2.2.2/#buttons--cta-button) button once the form has been completely filled out.
@@ -99,7 +99,7 @@ blocks:
 
   - type: two column
     text: |
-      Mobile responsive is sharing the same spec as the desktop version. The content will reflows base on the [breakpoints](http://uxframework.pearson.com/c/breakpoints/).
+      Mobile responsive forms share the same specs as the desktop version (see the Redlines section). However, content in mobile forms readjusts based on the [breakpoints](http://uxframework.pearson.com/c/breakpoints/).
 
     contents:
     - type: narrow image
@@ -122,8 +122,8 @@ blocks:
       Top Level Errors relevant to the form as a whole may be presented above the first input and below the form name. Refer to [alerts components](http://uxframework.pearson.com/c/alerts/)  
 
     contents:
-      - type: wide image
-        src: ./assets/form_error.png   
+    - type: wide image
+      src: ./assets/form_error.png   
     features:
       - Alert message
 
