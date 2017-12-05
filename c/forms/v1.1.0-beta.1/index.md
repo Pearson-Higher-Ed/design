@@ -66,7 +66,7 @@ blocks:
       See [error handling](#error-handling) section for more details.
 
       ### Input fields
-      One or more input fields from the input component may be included in the form. Input fields can be laid out in one column or multiple columns within the form and snapped to the columns within the [grid](/c/grid/v1.0.1/#rd-grid).
+      When there are multiple input fields in a row, use the page [grid](/c/grid/v1.0.1/#rd-grid). to define the spacing between.
 
       ### Buttons
       This button should start out as a [default button](http://uxframework.pearson.com/c/buttons/v2.2.2/#buttons--default-button) and become a [primary](http://uxframework.pearson.com/c/buttons/v2.2.2/#buttons--primary-button) or [CTA](http://uxframework.pearson.com/c/buttons/v2.2.2/#buttons--cta-button) button once the form has been completely filled out.
@@ -79,7 +79,7 @@ blocks:
         caption: Example of basic form showing all the principal components
     features:
         - Basic form
-        
+
 
   - type: section
     name: Form groups
@@ -99,7 +99,7 @@ blocks:
 
   - type: two column
     text: |
-      Mobile responsive forms share the same specs as the desktop version (see the Redlines section). However, content in mobile forms readjusts based on the [breakpoints](http://uxframework.pearson.com/c/breakpoints/).
+      The width of the form adjusts to the width of the [viewport](http://uxframework.pearson.com/c/breakpoints/).
 
     contents:
     - type: narrow image
