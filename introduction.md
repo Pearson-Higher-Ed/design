@@ -12,11 +12,13 @@ UX Framework is Pearson’s design system. We provide guidelines, tools, and res
 * TOC
 {:toc}
 
-## UX Framework components
+## Components
+The primary tool provided by the Framework is a library of standardized UI Components which can be used as building blocks when designing products. See the Designer [Overview](/overview) for more information on how to use the library.
+
 Our components are designed to be...
 
 - **Universal**  
-   Each component reflects the needs of Pearson as a whole, and is designed with the greater global community in mind.
+  Each component reflects the needs of Pearson as a whole, and is designed with the greater global community in mind.
 
 
 - **Consistent**  
