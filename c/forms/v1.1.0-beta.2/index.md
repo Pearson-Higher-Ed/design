@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Forms
 section: Components
-version: 1.1.0-beta.1
-status: deprecated
+version: 1.1.0-beta.2
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -117,9 +117,9 @@ blocks:
 
   - type: two column
     text: |
-      Individual input fields should present their own errors following the styles dictated in the [inputs components](http://pearson-higher-ed.github.io/design/c/inputs/#information-error-text). Fields with errors should always be accompanied by error text, unless a top level error message is sufficient to understand and fix the problems.
+      Individual input fields should present their own errors following the styles dictated in the [Inputs component](/c/inputs). Fields with errors should always be accompanied by error text, unless a top level error message is sufficient to understand and fix the problems.
 
-      Top Level Errors relevant to the form as a whole may be presented above the first input and below the form name. Refer to [alerts components](http://uxframework.pearson.com/c/alerts/)  
+      Top Level Errors relevant to the form as a whole may be presented above the first input and below the form name. Refer to the [Alerts component](/c/alerts/).
 
     contents:
     - type: wide image
@@ -195,17 +195,20 @@ blocks:
 
 
 changelog:
+  - version: 1.1.0-beta.2
+    changes: |
+      - FIXED:
   - version: 1.1.0-beta.1
     changes: |
       - UPDATED: Delete responsive spec
-      - Adding: Feature links
+      - ADDED: Feature links
       - UPDATE: Adding dependencies Grid and Breakpoints
   - version: 1.0.0-beta.4
     changes: |
       - UPDATED: Change X-large buttons to large buttons
-      - Adding Fancy style input form spec
+      - ADDED: Fancy style input form spec
       - UPDATED: Change input style to basic
-      - Adding responsive form
+      - ADDED: responsive form
   - version: 1.0.0-beta.3
     changes: |
       - UPDATED: Error images to match latest input error style
