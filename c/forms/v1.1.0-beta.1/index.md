@@ -66,7 +66,7 @@ blocks:
       See [error handling](#error-handling) section for more details.
 
       ### Input fields
-      When there are multiple input fields in a row, use the page [grid](/c/grid/v1.0.1/#rd-grid). to define the spacing between.
+      When there are multiple input fields in a row, use the page [grid](/c/grid/v1.0.1/#rd-grid) to define the spacing between.
 
       ### Buttons
       This button should start out as a [default button](http://uxframework.pearson.com/c/buttons/v2.2.2/#buttons--default-button) and become a [primary](http://uxframework.pearson.com/c/buttons/v2.2.2/#buttons--primary-button) or [CTA](http://uxframework.pearson.com/c/buttons/v2.2.2/#buttons--cta-button) button once the form has been completely filled out.
