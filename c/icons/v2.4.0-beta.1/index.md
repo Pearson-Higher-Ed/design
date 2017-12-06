@@ -16,7 +16,7 @@ downloads:
   - name: Pearson_icons_symbols_1.8.sketch
     link: ./assets/Pearson_icons_symbols_1.8.sketch
   - name: UXD Accessibility Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/15RLoDS-Qlu_Qz1W8UNuiHu3OtdNZ8kzKm_7jecoP5So/edit?usp=sharing
+    link: https://docs.google.com/a/pearson.com/document/d/1_GgUlsE5WLej0Ujf1oTeZvft2xLSEJnK-Jsqht_rmZg/edit?usp=sharing
 
 dependencies:
   - name: Colors
@@ -293,6 +293,7 @@ changelog:
     changes: |
       - ADDED: Icon recommendations for desktop web apps and mobile apps
       - NEW ICONS: Breadcrumb, Link
+      - FIXED: Copy in the example image for Name Guide
   - version: 2.3.0-beta.2
     changes: |
       - ADDED: Feature links
