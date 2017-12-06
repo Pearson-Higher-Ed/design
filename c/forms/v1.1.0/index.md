@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Forms
 section: Components
-version: 1.1.0-beta.2
-status: deprecated
+version: 1.1.0
+status: active
 implemented: false
 people:
   - role: Product Owner
@@ -204,11 +204,9 @@ blocks:
 
 
 changelog:
-  - version: 1.1.0-beta.2
+  - version: 1.1.0
     changes: |
       - FIXED: Cleaned up documentation, redlines, feature links, etc.
-  - version: 1.1.0-beta.1
-    changes: |
       - UPDATED: Delete responsive spec
       - ADDED: Feature links
       - UPDATE: Adding dependencies Grid and Breakpoints
@@ -224,6 +222,6 @@ changelog:
   - version: 1.0.0-beta.2
     changes: |
       - FIXED: References to other components, cleaned up documentation in general
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: Initial version.
 ---
