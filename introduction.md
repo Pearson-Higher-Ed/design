@@ -4,6 +4,7 @@ title: Introduction
 shortname: Introduction
 section: learn
 in_footer: true
+order: 1
 ---
 
 UX Framework is Pearson’s design system. We provide guidelines, tools, and resources to help designers and developers build a cohesive user experience across the products, more efficiently.

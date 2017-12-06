@@ -23,6 +23,9 @@
   &.narrow-show {
     @media (min-width: 1200px) {
       @include _sidebarOpen;
+      button {
+        display: none;
+      }
     }
   }
 
@@ -57,7 +60,7 @@
   }
 
   .sidebar-toc {
-    padding: 0 36px;
+    padding: 0 32px;
     height: calc(100% - 58px);
     overflow-y: auto;
 
@@ -69,7 +72,7 @@
     // Set the top level items to be bold
     & > ul > li {
       @extend .pe-label--small, .pe-label--bold;
-      margin-top: 20px;
+      margin-top: 10px;
 
       & li {
         font-weight: normal;
@@ -169,7 +172,7 @@
       margin-left: 240px;
     }
   }
-  
+
   @media (min-width: 1460px) {
     margin-left: 240px;
   }

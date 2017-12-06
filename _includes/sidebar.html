@@ -62,11 +62,10 @@
   {% assign contribute_pages = contribute_pages | sort: 'order' %}
   {% assign component_pages = component_pages | sort: 'title' %}
 
-
   <div class="sidebar-toc">
     <ul>
       <li>
-        Learn
+        UX Framework
         <ul>
           {% for page in learn_pages %}
             <li><a href="{{site.baseurl}}{{page.url}}">{% if page.shortname %}{{page.shortname}}{% else %}{{page.title}}{% endif %}</a></li>
@@ -74,20 +73,16 @@
         </ul>
       </li>
       <li>
-        Use
+        <a href="{{site.basurl}}/UIKit">UI Kit</a>
+      </li>
+      <li>
+        Designer's Guide
         <ul>
-          {% for page in use_pages %}
-            <li><a href="{{site.baseurl}}{{page.url}}">{% if page.shortname %}{{page.shortname}}{% else %}{{page.title}}{% endif %}</a></li>
-          {% endfor %}
+          <li><a href="{{site.baseurl}}/overview">Overview</a></li>
         </ul>
       </li>
       <li>
-        Contribute
-        <ul>
-          {% for page in contribute_pages %}
-            <li><a href="{{site.baseurl}}{{page.url}}">{% if page.shortname %}{{page.shortname}}{% else %}{{page.title}}{% endif %}</a></li>
-          {% endfor %}
-        </ul>
+        <a href="{{site.baseurl}}/getting-started-dev">Developer's Guide</a>
       </li>
       <li>
         Components
@@ -115,7 +110,6 @@
       </li>
     </ul>
   </div>
-
 </div>
 
 <div class="ultimate-header {% if include.invisible %}invisible{% endif %}">

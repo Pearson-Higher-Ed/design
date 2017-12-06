@@ -4,6 +4,7 @@ title: Design Principles
 shortname: Design Principles
 section: learn
 in_footer: true
+order: 2
 ---
 
 Dec 15, 2017
