@@ -28,7 +28,7 @@ The components in this file is currently outdated. We are working on getting it 
 ![](./assets/UI Kit.png){:.wide}
 {:style="margin-top: 40px;"}
 
-## Download Previous Versions
+## Download previous versions
 
 
 ### [v1.4.0](./files/Pearson UI Kit 1.4.0.sketch)
