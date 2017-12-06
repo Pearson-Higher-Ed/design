@@ -17,6 +17,7 @@ downloads:
     link: ./assets/Pearson_icons_symbols_1.8.sketch
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/15RLoDS-Qlu_Qz1W8UNuiHu3OtdNZ8kzKm_7jecoP5So/edit?usp=sharing
+
 dependencies:
   - name: Colors
     version: 3.0.1
