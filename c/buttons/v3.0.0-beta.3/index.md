@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Buttons
 section: Components
-version: 3.0.0-beta.2
-status: deprecated
+version: 3.0.0-beta.3
+status: active
 implemented: false
 people:
   - role: Designer
@@ -195,7 +195,7 @@ blocks:
         - Border is 1px [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
 
       Hover/Active
-      : - Forthcoming
+      : - Border becomes 1px Graphite (#505759)
 
       Disabled
       : - Background becomes [Moonlight](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--moonlight)
@@ -261,11 +261,11 @@ blocks:
       ### Tertiary button
 
       Normal
-      : - Background is [White Gray](http://uxframework.pearson.com/c/colors/v3.0.1/#colors--white-gray)
+      : - Background is [Moonlight](http://uxframework.pearson.com/c/colors/v3.0.1/#colors--moonlight)
         - Text is Graphite (#505759)
 
       Hover
-      : - Forthcoming
+      : - Background becomes #ededed
 
       Disabled
       : - No disabled state
@@ -275,18 +275,14 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/redline_types_tertiary@2.png
-
-  # - type: two column
-  #   text: |
-  #     ### Button Spacing
-  #     Buttons are 16px apart by default
-  #
-  #   contents:
-  #     - type: wide image
-  #       src: ./assets/redline_distance@2.png
+    redlines:
+      - Tertiary Button
 
 changelog:
-
+  - version: 3.0.0-beta.3
+    changes: |
+      - CHANGED: Hover styles for tertiary and default buttons
+      - CHANGED: Background on tertiary buttons to Moonlight
   - version: 3.0.0-beta.2
     changes: |
       - CHANGED: Large button size to 36px
