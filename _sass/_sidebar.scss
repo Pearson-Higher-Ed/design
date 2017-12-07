@@ -98,7 +98,7 @@
 .ultimate-header {
   @extend .pe-title--small;
   color: $pe-color-white;
-  padding: 16px 36px;
+  padding: 9px 36px;
   background-color: $pe-color-ink-blue;
   position: fixed;
   top: 0;
@@ -123,8 +123,25 @@
     background: none;
   }
 
-  .contact {
+  .left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .right {
     float: right;
+
+    .search-container {
+      display: inline-block;
+      margin-right: 20px;
+    }
+  }
+
+  .contact {
     color: $pe-color-white;
     text-decoration: none;
 

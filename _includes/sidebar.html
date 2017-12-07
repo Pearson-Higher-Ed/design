@@ -113,23 +113,43 @@
 </div>
 
 <div class="ultimate-header {% if include.invisible %}invisible{% endif %}">
-  <img class="burger" src="{{site.baseurl}}/assets/burger.svg"> {% unless include.invisible %}{{page.title}}{% endunless %}
+  <div class="left">
+    <img class="burger" src="{{site.baseurl}}/assets/burger.svg"> {% unless include.invisible %}{{page.title}}{% endunless %}
+  </div>
 
   {% unless include.invisible %}
-    <a href="{{site.baseurl}}/contact" class="contact">
-      <svg style="vertical-align:baseline"
-        aria-hidden="true"
-        focusable="false"
-        class="pe-icon--email-18">
+    <div class="right">
+      <div class="search-container">
+        <input type="text" name="search" class="pe-textInput--basic" placeholder="Search for components..."autocomplete="off">
+        <svg role="img"
+             aria-labelledby="r2"
+             focusable="false"
+             class="pe-icon--search-sm-18">
+          <title id="r2">Search the component library</title>
+          <use xlink:href="#search-sm-18"></use>
+        </svg>
+        <div class="dropdown"></div>
+      </div>
+
+      <a href="{{site.baseurl}}/contact" class="contact">
+        <svg role="img"
+             style="vertical-align:baseline"
+             aria-labelledby="contact332"
+             focusable="false"
+             class="pe-icon--email-18">
+          <title id="contact332">Contact Us</title>
           <use xlink:href="#email-18"></use>
-      </svg>
-      <span class="text"> Questions or comments?</span></a>
+        </svg>
+      </a>
+    </div>
   {% endunless %}
 </div>
 
 <div class="overlay" data-sidebar-closer="true"></div>
 
 <script type="text/javascript">
+  initDropdown(document.querySelector('.ultimate-header .search-container'))
+
   var sidebar = document.querySelector('.sidebar')
     , overlay = document.querySelector('.overlay');
   var closeSidebar = function() {
