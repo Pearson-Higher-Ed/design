@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Breadcrumbs
 section: Components
-version: 1.0.0-beta.1
-status: deprecated
+version: 1.0.0-beta.2
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -54,7 +54,7 @@ blocks:
 
   - type: two column
     text: |
-      ###Breadcrumbs With Page Title
+      ### Breadcrumbs With Page Title
       A breadcrumbs trail is typically rendered as follows. Note the end of the trail, the page currently being viewed is displayed as a non-link.
 
       A greater-than sign (>) serves as hierarchy separator, as in the format of Parent page > Child page.
@@ -66,7 +66,7 @@ blocks:
 
   - type: two column
     text: |
-      ###Breadcrumbs With No Page Title
+      ### Breadcrumbs With No Page Title
       If page has a title, do not include the title in the breadcrumbs to avoid redundancy.
 
     contents:
@@ -76,7 +76,7 @@ blocks:
 
   - type: two column
     text: |
-      ###Mobile or Single Level Directory
+      ### Mobile or Single Level Directory
       Provide a link back to previous page.
 
     contents:
@@ -89,7 +89,7 @@ blocks:
 
   - type: two column
     text: |
-      ###Location
+      ### Location
       Location based breadcrumbs are static and show the user where the page is located in the website's hierarchy. Best used for navigation schemes that have multiple levels (usually more than two levels).
 
     contents:
@@ -99,7 +99,7 @@ blocks:
 
   - type: two column
     text: |
-      ###Path
+      ### Path
       Path based breadcrumbs display the pages the user has visited before arriving on the current page.
 
     contents:
@@ -109,7 +109,7 @@ blocks:
 
   - type: two column
     text: |
-      ###Attribute
+      ### Attribute
       Attribute based breadcrumbs give information that categorizes the current page.
 
     contents:
@@ -155,6 +155,9 @@ blocks:
         src: ./assets/breadcrumbs-redlines-2x.png
 
 changelog:
+  - version: 1.0.0-beta.2
+    changes: |
+      - CHANGED: Page titles are displayed in larger font
   - version: 1.0.0-beta.1
     changes: Initial version
 
