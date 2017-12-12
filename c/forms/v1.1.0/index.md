@@ -210,18 +210,6 @@ changelog:
       - UPDATED: Delete responsive spec
       - ADDED: Feature links
       - UPDATE: Adding dependencies Grid and Breakpoints
-  - version: 1.0.0-beta.4
-    changes: |
-      - UPDATED: Change X-large buttons to large buttons
-      - ADDED: Fancy style input form spec
-      - UPDATED: Change input style to basic
-      - ADDED: responsive form
-  - version: 1.0.0-beta.3
-    changes: |
-      - UPDATED: Error images to match latest input error style
-  - version: 1.0.0-beta.2
-    changes: |
-      - FIXED: References to other components, cleaned up documentation in general
   - version: 1.0.0
     changes: Initial version.
 ---
