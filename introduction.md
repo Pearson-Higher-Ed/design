@@ -19,21 +19,21 @@ Our components are designed to be:
 
 
 - **Universal**  
-  Reflect the needs of Pearson as a whole, keeping in mind, the greater global community.
+  Reflect the needs of Pearson as a whole, keeping in mind, the greater global community
 
 
 - **Consistent**  
-   Follow a consistent visual style and are defined by a set of shared principles.
+   Follow a consistent visual style and are defined by a set of shared principles
 
 
 - **Usable**  
-   Intuitive and easy to use for performing tasks effectively.
+   Intuitive and easy to use for performing tasks effectively
 
 - **Accessible**  
-   Comply with the Pearson Accessibility Guidelines to ensure the user interface is  accessible to everyone, including people with disabilities.
+   Comply with the Pearson Accessibility Guidelines to ensure the user interface is  accessible to everyone, including people with disabilities
 
 - **Responsive**  
-   Flexible and adaptive to optimize the user experience on different devices.
+   Flexible and adaptive to optimize the user experience on different devices
 
 
 ## Benefits
