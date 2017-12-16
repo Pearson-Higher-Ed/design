@@ -13,7 +13,7 @@ UX Framework is Pearson’s design system. We provide guidelines, tools, and res
 {:toc}
 
 ## Components
-The UX Framework components are a collection of standardized UI elements and patterns for building a product. See the [designer’s guidelines]({{site.baseurl}}/overview) for more information on how to use the components.
+The UX Framework components are a collection of standardized UI elements and patterns for building products. See the [designer’s guidelines]({{site.baseurl}}/overview) for more information on how to use the components.
 
 Our components are designed to be:
 
@@ -54,14 +54,16 @@ Our components are designed to be:
 
 ![](/img/Process@2.png)
 
+Here are the steps for adding new components or modifying existing components as our library grows:
+
 1. **Request**   
 A consumer emails the [UXF Design Team](mailto:uxf-design@pearson.com) with a brief description of the needs.
 
 2. **Design**  
-The UX Framework Design Team collaborates with that consumer to design the new functionality or modify the existing component and create documentation for reuse.
+The UX Framework Design Team collaborates with that consumer to design the new functionality or modify existing components. Then, we document the design and usage guidelines on the site.
 
 3. **Review**  
-The design goes through the governance review to ensure it meets the requirements from the [Component Quality Checklist]({{site.baseurl}}/membership-spec).
+The design goes through the governance review to ensure it meets a set of requirements from the [Component Quality Checklist]({{site.baseurl}}/membership-spec)to ensure the quality.
 
 4. **Develop**  
-The UX Framework Development Team or the consumer builds the functionality and creates the documentation for reuse.
+The UX Framework Development Team collaborates with the consumer to build the functionality or modify existing components. Then, we release the code repository for people to reuse.
