@@ -43,22 +43,22 @@ Example: UI elements such as toasts, rollover states, and refresh functionality 
 
 - **Empower me**  
 Uplift and motivate users when they take a wrong turn or feel like things aren’t working the way they should. Surprise them with moments of accomplishment.  
-The tone of Pearson messaging should be uplifting and encouraging.
+Example: The tone of Pearson messaging should be uplifting and encouraging.
 
 ##Meaningful
 
-- **Listen to me**
+- **Listen to me**  
 Lead with user insights. A solid understanding of user needs and learning objectives should guide design decisions.  
 Example: Validating a specific function or feature through research and testing.
 
-- **Include me**
+- **Include me**  
 Consider and accommodate the diversity of our learners. Look beyond the idea of an average learner in a typical setting. Design by default for accessibility and inclusivity at all ages, stages and level of capability.  
 Example: Supporting the ability to access Pearson anywhere, anytime, by anyone.
 
-- **Build trust with me**
-Consistency and patterns help users make sense of the experience, building their familiarity and trust over time. Once established, follow standards, guidelines, and best practices. But keep an eye out for situations that sometimes call for breaking a rule.
+- **Build trust with me**  
+Consistency and patterns help users make sense of the experience, building their familiarity and trust over time. Once established, follow standards, guidelines, and best practices. But keep an eye out for situations that sometimes call for breaking a rule.  
 Example: Don’t conform to trends and gimmicks - do what feels right for the brand and the user.  
 
 See [the presentation](https://docs.google.com/presentation/d/10mxa5vTw4Uwj7hxLtkKKrtmFsE1G6JrynI-JL-lWNgc/edit#slide=id.g23ba321e10_0_500):
 
-![](/img/Experience Design Principles.png)
+[![](/img/Experience Design Principles.png)](https://docs.google.com/presentation/d/10mxa5vTw4Uwj7hxLtkKKrtmFsE1G6JrynI-JL-lWNgc/edit#slide=id.g23ba321e10_0_500)
