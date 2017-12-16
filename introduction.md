@@ -52,9 +52,11 @@ Our components are designed to be:
 
 ## Process
 
-![](/img/Process@2.png)
 
 Here are the steps for adding new components or modifying existing components as our library grows:
+
+![](/img/Process@2.png)
+
 
 1. **Request**   
 A consumer emails the [UXF Design Team](mailto:uxf-design@pearson.com) with a brief description of the needs.
