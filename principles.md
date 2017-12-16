@@ -8,7 +8,7 @@ in_footer: true
 
 Dec 15, 2017
 
-Experience Design Principles are critical; they align us as a team, they help articulate the fundamental goals that all decisions can be measured against, and they keep the various teams moving as an integrated whole. [Learn more](https://neo.pearson.com/people/USCHED2/blog/2017/12/13/17-accomplishments-experience-design-principles) about how we defined the principles.
+Experience Design Principles are critical. They align us as a team, help articulate the fundamental goals that all decisions can be measured against, and keep the various teams moving as an integrated whole. [Learn more](https://neo.pearson.com/people/USCHED2/blog/2017/12/13/17-accomplishments-experience-design-principles) about how we defined the principles.
 
 
 
