@@ -31,7 +31,7 @@ Example: Create clear way-finding so users understand where they are in the expe
 
 
 
-##Inspired
+## Inspired
 - **Get me started**  
 As the saying goes, you only get one chance to make a first impression—so make it count. Onboarding (to a product, to a purchase, to a learning sequence) sets expectations
 for the relationship.  
@@ -45,7 +45,7 @@ Example: UI elements such as toasts, rollover states, and refresh functionality 
 Uplift and motivate users when they take a wrong turn or feel like things aren’t working the way they should. Surprise them with moments of accomplishment.  
 Example: The tone of Pearson messaging should be uplifting and encouraging.
 
-##Meaningful
+## Meaningful
 
 - **Listen to me**  
 Lead with user insights. A solid understanding of user needs and learning objectives should guide design decisions.  
