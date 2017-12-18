@@ -2,7 +2,7 @@
   "name": "design",
   "private": true,
   "dependencies": {
-    "fuzzysort": "^1.0.2",
+    "fuzzysort": "^1.0.3",
     "pearson-compounds": "^0.13.0",
     "pearson-elements": "^1.0.0",
     "react": "^15.6.1",

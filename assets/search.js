@@ -5,8 +5,7 @@ var componentData = [
   {% for page in site.pages %}
 
   {% if page.section != 'Components' or
-        page.status != 'active' or
-        page.version contains 'beta' %}
+        page.status != 'active' %}
     {% continue %}
   {% endif %}
 
