@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Accordion
 section: Components
-version: 1.0.0-beta.1
-status: deprecated
+version: 1.0.0-beta.2
+status: active
 implemented: false
 people:
 implementation:
@@ -16,13 +16,13 @@ downloads:
     link: ./assets/application-header.mockup.ai
 
 tagline: |
-  Presents important feedback or information to users either in response to their actions or upon page load.
+  Presents information in a space-efficient format where user's can expand the specific content they are interested in.
 features:
-  - Modes for page load and dynamic presentation
-  - Animated presentation
-  - Error, information, and confirmation styles
+  - Standard trigger guidance
+  - General layout guidance
+  - Two standard interaction methods
 usage_guidelines: |
-  Simple confirmation acknowledgements that don't require additional detail should just use a confirmation button. If an error occurs or additional information is needed to clarify then the appropriate alert style may be dynamically presented.
+  Accordions are a good choice for sets of content which should be easily accessible but not necessarily immediately visible. Users are enabled to drill into the specific content they are interested in.
 
 blocks:
   - type: section
@@ -54,7 +54,28 @@ blocks:
       - type: wide image
         src: ./assets/headings.png
 
+  - type: section
+    name: Auto-collapsing
+
+  - type: two column
+    text: |
+      By default accordions allow any number and combination of sections to be open at the same time. This can be good for short content or situations where users would want to compare information from multiple sections.
+
+      If it would be confusing or unwieldy to have more than one section open the accordion can auto-collapse sections so that only one is open at any time.
+    contents:
+      - type: narrow image
+        src: ./assets/default.interaction.png
+        caption: The default interaction allows multiple sections to be open simultaneously.
+      - type: narrow image
+        src: ./assets/auto.collapse.interaction.png
+        caption: This can be changed to automatically close other sections when the user opens a new section.
+
+
 changelog:
+  - version: 1.0.0-beta.2
+    changes: |
+      - REMOVED: Incorrect usage guidelines
+      - ADDED: Documentation around Auto-collapsing
   - version: 1.0.0-beta.1
     changes: Initial version
 ---
