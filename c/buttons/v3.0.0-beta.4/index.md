@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Buttons
 section: Components
-version: 3.0.0-beta.3
-status: deprecated
+version: 3.0.0-beta.4
+status: active
 implemented: false
 people:
   - role: Designer
@@ -14,7 +14,7 @@ people:
 implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
 downloads:
   - name: UXD Accessibility Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/1eSGAoNb7F1A8iA_DqLQfSP_TxzuV0V2yTAK8ksDeQBU/edit?usp=sharing
+    link: https://docs.google.com/a/pearson.com/document/d/1xUcybzPNQYuWmKSZy-LcdAFhGkOrJvmGpVJUwtW_EAs/edit?usp=sharing
   - name: Sketch
     link: ./assets/Buttons.sketch
 
@@ -34,23 +34,23 @@ blocks:
 
   - type: two column
     text: |
-      There are three types of buttons:
+      There are four types of buttons:
 
-      * __Default button__ is your basic button, it can appear multiple times in a given group.
+      * __CTA button__ is your Call To Action button. It is the single most important action on the page and takes higher priority over the Primary button type. It should be used only in specific instances such as the Sign-In process. It can only be used once per page.
 
       * __Primary button__ indicates the main call to action and should only appear once per group of buttons.
 
-      * __CTA button__ is your Call To Action button. It is the single most important action on the page and takes higher priority over the Primary button type. It should be used only in specific instances such as the Sign-In process. It can only be used once per page.
+      * __Default button__ is your basic button, it can appear multiple times in a given group. Note that it is transparent so you are responsible for using it over a contrast compliant background.
 
       * __Tertiary button__ is for reduced importance actions which should be de-emphasized compared to the default button type.
     contents:
       - type: wide image
         src: ./assets/types@2.png
     features:
-      - Tertiary Button
-      - Default Button
-      - Primary Button
       - CTA Button
+      - Primary Button
+      - Default Button
+      - Tertiary Button
 
   - type: section
     name: Size
@@ -122,7 +122,7 @@ blocks:
             - Avoid excessive use of exclamation points (!).
 
   - type: section
-    name: Disabled Buttons
+    name: Disabled buttons
 
   - type: two column
     text: |
@@ -184,33 +184,27 @@ blocks:
       - Large Button
       - Extra Large Button
 
-
   - type: two column
     text: |
-      ### Default buttons
+      ### CTA button (Call To Action)
 
       Normal
-      : - Background is transparent
-        - Text is Graphite (#505759)
-        - Border is 1px [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
+      : - Background is [Sunshine Yellow](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--sunshine-yellow)
+        - Text is [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal)
 
       Hover/Active
-      : - Border becomes 1px Graphite (#505759)
+      : - Background becomes [Sunflower Yellow](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--sunflower-yellow)
 
       Disabled
-      : - Background becomes [Moonlight](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--moonlight)
-        - Text is [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
-        - No border
+      : - No disabled state
 
       Focus
       : - Browser default style
-
     contents:
       - type: wide image
-        src: ./assets/redline_types_default@2.png
+        src: ./assets/redline_types_cta@2.png
     redlines:
-      - Default Button
-
+      - CTA Button
 
   - type: two column
     text: |
@@ -236,25 +230,28 @@ blocks:
 
   - type: two column
     text: |
-      ### CTA button (Call To Action)
+      ### Default buttons
 
       Normal
-      : - Background is [Sunshine Yellow](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--sunshine-yellow)
-        - Text is [Charcoal](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--charcoal)
+      : - Background is transparent
+        - Text is Graphite (#505759)
+        - Border is 1px [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
 
       Hover/Active
-      : - Background becomes [Sunflower Yellow](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--sunflower-yellow)
+      : - Border becomes 1px Graphite (#505759)
 
       Disabled
-      : - No disabled state
+      : - Background becomes [Moonlight](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--moonlight)
+        - Text is [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
+        - No border
 
       Focus
       : - Browser default style
     contents:
       - type: wide image
-        src: ./assets/redline_types_cta@2.png
+        src: ./assets/redline_types_default@2.png
     redlines:
-      - CTA Button
+      - Default Button
 
   - type: two column
     text: |
@@ -279,6 +276,11 @@ blocks:
       - Tertiary Button
 
 changelog:
+  - version: 3.0.0-beta.4
+    changes: |
+      - FIXED: Typos
+      - UPDATED: Accessibility checklist
+      - CHANGED: Order of button types
   - version: 3.0.0-beta.3
     changes: |
       - CHANGED: Hover styles for tertiary and default buttons
