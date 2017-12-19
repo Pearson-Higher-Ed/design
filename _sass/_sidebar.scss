@@ -23,6 +23,9 @@
   &.narrow-show {
     @media (min-width: 1200px) {
       @include _sidebarOpen;
+      button {
+        display: none;
+      }
     }
   }
 
@@ -57,7 +60,7 @@
   }
 
   .sidebar-toc {
-    padding: 0 36px;
+    padding: 0 32px;
     height: calc(100% - 58px);
     overflow-y: auto;
 
@@ -69,7 +72,7 @@
     // Set the top level items to be bold
     & > ul > li {
       @extend .pe-label--small, .pe-label--bold;
-      margin-top: 20px;
+      margin-top: 10px;
 
       & li {
         font-weight: normal;
@@ -95,14 +98,21 @@
 .ultimate-header {
   @extend .pe-title--small;
   color: $pe-color-white;
-  padding: 16px 36px;
+  padding: 9px 16px;
   background-color: $pe-color-ink-blue;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
+  height: 54px;
+  box-sizing: border-box;
   transition: left 0.3s;
   z-index: 26;
+
+  @include pe-responsive-breakpoint(md) {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
 
   .burger {
     margin-right: 12px;
@@ -120,8 +130,40 @@
     background: none;
   }
 
+  .left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .right {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+
+    @include pe-responsive-breakpoint(md) {
+      float: right;
+      transform: none;
+      right: auto;
+      top: auto;
+      position: static;
+    }
+
+    .search-container {
+      display: none;
+      margin-right: 20px;
+
+      @include pe-responsive-breakpoint(md) {
+        display: inline-block;
+      }
+    }
+  }
+
   .contact {
-    float: right;
     color: $pe-color-white;
     text-decoration: none;
 
@@ -130,9 +172,11 @@
     }
 
     svg {
-      position: relative;
-      top: 2px;
-      margin-right: 4px;
+      @include pe-responsive-breakpoint(md) {
+        position: relative;
+        top: 2px;
+        margin-right: 4px;
+      }
     }
 
     .text {
@@ -169,7 +213,7 @@
       margin-left: 240px;
     }
   }
-  
+
   @media (min-width: 1460px) {
     margin-left: 240px;
   }

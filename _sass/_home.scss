@@ -14,98 +14,34 @@ body.home {
       }
 
       .search-container {
-        width: 300px;
         margin: 32px auto 0;
-        position: relative;
-
-        @include pe-responsive-breakpoint(sm) {
-          width: 400px;
-        }
-
-        input {
-          width: 100%;
-          box-sizing: border-box;
-          background-color: rgba(255, 255, 255, 0.2);
-          color: $pe-color-white;
-          padding-right: 40px;
-
-          &:focus {
-            box-shadow: 0 0 5px 0 $pe-color-white;
-            border-color: $pe-color-white;
-          }
-
-          &::placeholder {
-            color: $pe-color-white-gray;
-          }
-        }
-
-        svg {
-          color: $pe-color-white;
-          position: absolute;
-          right: 12px;
-          top: 9px;
-        }
-
-        .dropdown {
-          width: 100%;
-          background-color: white;
-          display: none;
-          position: absolute;
-          z-index: 50;
-          box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
-          border-radius: 0 0 3px 3px;
-
-          &.open {
-            display: block;
-          }
-
-          .result {
-            text-align: left;
-            padding: 12px;
-
-            h5 {
-              color: $pe-color-charcoal;
-              @extend .pe-label, .pe-label--large;
-              margin: 0;
-            }
-
-            a {
-              text-decoration: none;
-            }
-
-            p {
-              color: $pe-color-medium-gray;
-              @extend .pe-label;
-              margin: 0;
-            }
-
-            & + .result {
-              border-top: 1px solid $pe-color-concrete;
-            }
-
-            &.selected {
-              background-color: $pe-color-digital-pearson-blue;
-              h5, p {
-                color: $pe-color-white;
-              }
-            }
-
-            &:last-child {
-              border-radius: 0 0 3px 3px;
-            }
-          }
-        }
       }
     }
 
-    h1 {
-      @extend .pe-page-title;
+    .pearson {
+      text-transform: uppercase;
+      @extend .pe-title, .pe-bold;
       color: $pe-color-white;
-      margin-bottom: 24px;
+    }
+
+    h1 {
+      font: 600 36px/48px 'Open Sans';
+      text-transform: uppercase;
+      color: $pe-color-white;
+      margin-bottom: 8px;
+
+      @include pe-responsive-breakpoint(sm) {
+        font: 600 48px/66px 'Open Sans';
+      }
+
+      @include pe-responsive-breakpoint(md) {
+        font: 600 62px/84px 'Open Sans';
+      }
     }
 
     p {
       color: $pe-color-white;
+      @extend .pe-copy, .pe-copy--large;
     }
 
     .links {
@@ -125,6 +61,12 @@ body.home {
     h2 {
       @extend .pe-page-title;
       margin-bottom: 28px;
+
+      // TODO: replace with mixin if elements-sdk ever supports
+      @include pe-responsive-breakpoint(xs to sm) {
+        font-size: 28px;
+        line-height: 38px;
+      }
     }
 
     & > div {
@@ -198,7 +140,10 @@ body.home {
     .button-container {
       display: table-cell;
       vertical-align: middle;
-      padding-left: 40px;
+      padding-left: 20px;
+      @include pe-responsive-breakpoint(md) {
+        padding-left: 40px;
+      }
     }
 
     img {
@@ -223,10 +168,8 @@ body.home {
     }
 
     .heading {
-      h2, a {
-        display: inline-block;
-        vertical-align: middle;
-      }
+      display: flex;
+      align-items: center;
 
       a {
         margin-left: 20px;
@@ -280,11 +223,21 @@ body.home {
 
     h2 {
       text-align: center;
+
+      // TODO: replace with mixin if elements-sdk ever supports
+      @include pe-responsive-breakpoint(xs to sm) {
+        font-size: 28px;
+        line-height: 38px;
+      }
     }
 
     ul {
-      width: 600px;
       margin: 32px auto 0;
+      color: $pe-color-medium-gray;
+
+      @include pe-responsive-breakpoint(md) {
+        width: 600px;
+      }
     }
   }
 
@@ -304,6 +257,14 @@ body.home {
       opacity: 0.6;
       background: url($baseurl + "/img/mailstripe.svg") -76px top repeat-x;
       z-index: -1;
+    }
+
+    h2 {
+      // TODO: replace with mixin if elements-sdk ever supports
+      @include pe-responsive-breakpoint(xs to sm) {
+        font-size: 28px;
+        line-height: 38px;
+      }
     }
   }
 }
