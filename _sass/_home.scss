@@ -45,6 +45,12 @@ body.home {
     h2 {
       @extend .pe-page-title;
       margin-bottom: 28px;
+
+      // TODO: replace with mixin if elements-sdk ever supports
+      @include pe-responsive-breakpoint(xs to sm) {
+        font-size: 28px;
+        line-height: 38px;
+      }
     }
 
     & > div {
@@ -118,7 +124,10 @@ body.home {
     .button-container {
       display: table-cell;
       vertical-align: middle;
-      padding-left: 40px;
+      padding-left: 20px;
+      @include pe-responsive-breakpoint(md) {
+        padding-left: 40px;
+      }
     }
 
     img {
@@ -143,10 +152,8 @@ body.home {
     }
 
     .heading {
-      h2, a {
-        display: inline-block;
-        vertical-align: middle;
-      }
+      display: flex;
+      align-items: center;
 
       a {
         margin-left: 20px;
@@ -200,12 +207,21 @@ body.home {
 
     h2 {
       text-align: center;
+
+      // TODO: replace with mixin if elements-sdk ever supports
+      @include pe-responsive-breakpoint(xs to sm) {
+        font-size: 28px;
+        line-height: 38px;
+      }
     }
 
     ul {
-      width: 600px;
       margin: 32px auto 0;
       color: $pe-color-medium-gray;
+
+      @include pe-responsive-breakpoint(md) {
+        width: 600px;
+      }
     }
   }
 
@@ -225,6 +241,14 @@ body.home {
       opacity: 0.6;
       background: url($baseurl + "/img/mailstripe.svg") -76px top repeat-x;
       z-index: -1;
+    }
+
+    h2 {
+      // TODO: replace with mixin if elements-sdk ever supports
+      @include pe-responsive-breakpoint(xs to sm) {
+        font-size: 28px;
+        line-height: 38px;
+      }
     }
   }
 }
