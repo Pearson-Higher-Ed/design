@@ -98,14 +98,21 @@
 .ultimate-header {
   @extend .pe-title--small;
   color: $pe-color-white;
-  padding: 9px 36px;
+  padding: 9px 16px;
   background-color: $pe-color-ink-blue;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
+  height: 54px;
+  box-sizing: border-box;
   transition: left 0.3s;
   z-index: 26;
+
+  @include pe-responsive-breakpoint(md) {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
 
   .burger {
     margin-right: 12px;
@@ -133,11 +140,26 @@
   }
 
   .right {
-    float: right;
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+
+    @include pe-responsive-breakpoint(md) {
+      float: right;
+      transform: none;
+      right: auto;
+      top: auto;
+      position: static;
+    }
 
     .search-container {
-      display: inline-block;
+      display: none;
       margin-right: 20px;
+
+      @include pe-responsive-breakpoint(md) {
+        display: inline-block;
+      }
     }
   }
 
@@ -150,9 +172,11 @@
     }
 
     svg {
-      position: relative;
-      top: 2px;
-      margin-right: 4px;
+      @include pe-responsive-breakpoint(md) {
+        position: relative;
+        top: 2px;
+        margin-right: 4px;
+      }
     }
 
     .text {
