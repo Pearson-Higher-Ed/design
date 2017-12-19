@@ -148,17 +148,19 @@
 <div class="overlay" data-sidebar-closer="true"></div>
 
 <script type="text/javascript">
+  {% unless include.invisible %}
   initDropdown(document.querySelector('.ultimate-header .search-container'))
+  {% endunless %}
 
   var sidebar = document.querySelector('.sidebar')
     , overlay = document.querySelector('.overlay');
   var closeSidebar = function() {
-    sidebar.classList.remove('open');
-    overlay.classList.remove('open');
+    sidebar.classList.remove('open')
+    overlay.classList.remove('open')
   };
   var openSidebar = function() {
-    sidebar.classList.add('open');
-    overlay.classList.add('open');
+    sidebar.classList.add('open')
+    overlay.classList.add('open')
   }
 
   document.querySelector('.burger').addEventListener('click', function(event) {
