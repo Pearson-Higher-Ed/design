@@ -60,7 +60,6 @@
   }
 
   .sidebar-toc {
-    padding: 0 32px;
     height: calc(100% - 58px);
     overflow-y: auto;
 
@@ -72,24 +71,25 @@
     // Set the top level items to be bold
     & > ul > li {
       @extend .pe-label--small, .pe-label--bold;
-      margin-top: 10px;
+      margin-top: 6px;
+      margin-bottom: -4px;
+      padding:  4px 12px 4px 32px;
 
       & li {
         font-weight: normal;
         padding: 4px 12px;
-        margin-left: -12px;
-        margin-right: -12px;
         margin-top: 4px;
       }
     }
 
-    & > ul > li > ul {
-      margin-left: 12px;
+    & > ul > li > ul > li {
+      margin-left: -32px;
+      margin-right: -12px;
+      padding-left: 44px;
     }
 
     .selected {
-      font-weight: bolder;
-
+      @extend .pe-label--bold;
       background-color: $pe-color-moonlight;
     }
   }
