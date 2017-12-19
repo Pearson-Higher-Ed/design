@@ -18,14 +18,30 @@ body.home {
       }
     }
 
-    h1 {
-      @extend .pe-page-title;
+    .pearson {
+      text-transform: uppercase;
+      @extend .pe-title, .pe-bold;
       color: $pe-color-white;
-      margin-bottom: 24px;
+    }
+
+    h1 {
+      font: 600 36px/48px 'Open Sans';
+      text-transform: uppercase;
+      color: $pe-color-white;
+      margin-bottom: 8px;
+
+      @include pe-responsive-breakpoint(sm) {
+        font: 600 48px/66px 'Open Sans';
+      }
+
+      @include pe-responsive-breakpoint(md) {
+        font: 600 62px/84px 'Open Sans';
+      }
     }
 
     p {
       color: $pe-color-white;
+      @extend .pe-copy, .pe-copy--large;
     }
 
     .links {
