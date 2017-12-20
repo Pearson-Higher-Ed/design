@@ -1,6 +1,19 @@
 body.home {
   background-color: $pe-color-white;
 
+
+  table {
+    margin: auto;
+    margin-top: 28px;
+    max-width: 960px;
+  }
+
+  th, td {
+      border: 1px solid #c7c7c7;
+      background: white;
+      padding: 16px;
+  }
+
   .top {
     padding: 100px 10px 80px;
     text-align: center;
