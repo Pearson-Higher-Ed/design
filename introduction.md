@@ -31,7 +31,7 @@ Our components are designed to be:
    Intuitive and easy to use for performing tasks effectively
 
 - **Accessible**  
-   Comply with the Pearson Accessibility Guidelines to ensure the user interface is  accessible to everyone, including people with disabilities
+   Comply with the [Pearson Accessibility Guidelines](https://www.pearson.com/us/accessibility.html) to ensure the user interface is  accessible to everyone, including people with disabilities
 
 - **Responsive**  
    Flexible and adaptive to optimize the user experience on different devices
@@ -48,7 +48,7 @@ Our components are designed to be:
    Having multiple designers working together on a project could easily lead to a disjointed user experience. Following a unified design system keeps the design consistent throughout the user journey.
 
 - **Enables teams to focus on solving greater problems**  
-   Designers will have more room for creativity and innovation with more time freed up from nudging pixels. Developers will be able to work more efficiently using the code package that enables updates at a global scale. With greater efficiency, teams can truly be agile.
+   Designers will have more room for creativity and innovation with more time freed up from nudging pixels. Developers will be able to work more efficiently by using the code package that enables updates at a global scale. With greater efficiency, teams can truly be agile.
 
 
 ## Process
@@ -60,13 +60,13 @@ Here are the steps for adding new components or modifying existing components as
 
 
 1. **Request**   
-A consumer emails the [UXF Design Team](mailto:uxf-design@pearson.com) with a brief description of the needs.
+A consumer emails the [UX Framework (UXF) Design Team](mailto:uxf-design@pearson.com) with a brief description of the needs.
 
 2. **Design**  
-The UX Framework Design Team collaborates with that consumer to design the new functionality or modify existing components. Then, we document the design and usage guidelines on the site.
+The UXF Design Team collaborates with that consumer to design the new functionality or modify existing component, and then document the design as well as the guidelines on the site.
 
 3. **Review**  
-The design goes through the governance review to ensure it meets a set of requirements from the [Component Quality Checklist]({{site.baseurl}}/membership-spec)to ensure the quality.
+The design goes through the governance review to ensure it meets a set of requirements from the [Component Quality Checklist]({{site.baseurl}}/membership-spec).
 
 4. **Develop**  
-The UX Framework Development Team collaborates with the consumer to build the functionality or modify existing components. Then, we release the code repository for people to reuse.
+The UXF Development Team collaborates with the consumer to build the functionality or modify existing component, and then release the code repository for people to reuse.
