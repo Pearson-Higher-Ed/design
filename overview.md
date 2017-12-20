@@ -28,14 +28,18 @@ The component versions on this website refer to the design itself, which has no 
 
 We follow [semantic versioning](https://semver.org/) for managing our updates. Incrementing each number implies different level of updates:
 
-* __Major -__ Making incompatible design changes  
-   It’s likely that this change would affect how the component is placed in your mockup. In this case, you would need to adjust other UI elements on the page to accommodate this change.  
+* __Major__: Making incompatible design changes
+
+   It’s likely that this change would affect how the component is placed in your mockup. In this case, you would need to adjust other UI elements on the page to accommodate this change.
+
    _Example: Changing the height of the large button from 36px to 50px_
 
-* __Minor -__ Adding backwards-compatible functionalities  
+* __Minor__: Adding backwards-compatible functionalities
+
    _Example: Adding the default button style to the library_
-   
-* __Patch -__ Making backwards-compatible bug fixes  
+
+* __Patch__: Making backwards-compatible bug fixes
+
    _Example: Fixing a typo in the usage guidelines for buttons_
 
 

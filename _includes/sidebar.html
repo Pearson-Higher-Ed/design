@@ -67,21 +67,25 @@
       <li>
         UX Framework
         <ul>
-          {% for page in learn_pages %}
-            <li><a href="{{site.baseurl}}{{page.url}}">{% if page.shortname %}{{page.shortname}}{% else %}{{page.title}}{% endif %}</a></li>
+          {% for lpage in learn_pages %}
+            <li {% if page.url == lpage.url %}class="selected"{% endif %}>
+              <a href="{{site.baseurl}}{{lpage.url}}">{% if lpage.shortname %}{{lpage.shortname}}{% else %}{{lpage.title}}{% endif %}</a>
+            </li>
           {% endfor %}
         </ul>
       </li>
-      <li>
+      <li {% if page.url == '/UIKit/' %}class="selected"{% endif %}>
         <a href="{{site.basurl}}/UIKit">UI Kit</a>
       </li>
       <li>
         Designer's Guide
         <ul>
-          <li><a href="{{site.baseurl}}/overview">Overview</a></li>
+          <li {% if page.url == '/overview/' %}class="selected"{% endif %}>
+            <a href="{{site.baseurl}}/overview">Overview</a>
+          </li>
         </ul>
       </li>
-      <li>
+      <li {% if page.url == '/getting-started-dev/' %}class="selected "{% endif %}>
         <a href="{{site.baseurl}}/getting-started-dev">Developer's Guide</a>
       </li>
       <li>
