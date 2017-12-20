@@ -115,6 +115,17 @@
     }
   }
 
+
+  table {
+    margin-top: 60px;
+  }
+
+  th, td {
+      border-bottom: 1px solid #c7c7c7;
+      background: white;
+      padding: 8px;
+  }
+
   p {
     @extend .pe-copy;
     @extend .pe-paragraph;
