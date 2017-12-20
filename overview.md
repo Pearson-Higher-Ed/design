@@ -24,10 +24,9 @@ __Note:__ If what’s in the UI Kit doesn’t match what’s on the UX Framework
 
 ## Understanding versions
 
-![](/img/semantic versioning@2.png)
-
 We follow [semantic versioning](https://semver.org/) for managing our updates. Each number implies different level of updates and impact to the user.
 
+![](/img/semantic versioning@2.png)
 
 |  | Description | Example |
 | --- | --- | --- |
