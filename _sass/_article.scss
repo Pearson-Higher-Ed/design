@@ -143,6 +143,12 @@
   }
   h4 { @extend .pe-label, .pe-label--large; }
 
+  .pe-list {
+    li p + p:last-child {
+      margin-bottom: 18px;
+    }
+  }
+
   ul {
     @extend .pe-list, .pe-styled-lists--unordered;
 
