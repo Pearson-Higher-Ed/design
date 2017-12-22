@@ -41,12 +41,10 @@ Our components are designed to be:
 
 
 - **Helps designers and developers communicate more effectively**  
-   By using a shared language for the features and configurations, we are able to bridge the gap between design and development.  
-
+   By using a shared language for the features and configurations, we are able to bridge the gap between design and development.
 
 - **Creates a more coherent user experience**  
    Having multiple designers working together on a project could easily lead to a disjointed user experience. Following a unified design system keeps the design consistent throughout the user journey.
-   
 
 - **Enables teams to focus on solving greater problems**  
    Designers will have more room for creativity and innovation with more time freed up from nudging pixels. Developers will be able to work more efficiently by using the code package that enables updates at a global scale. With greater efficiency, teams can truly be agile.
@@ -63,10 +61,8 @@ Here are the steps for adding new components or modifying existing components as
 1. **Request**   
 A consumer emails the [UX Framework (UXF) Design Team](mailto:uxf-design@pearson.com) with a brief description of the needs.
 
-
 2. **Design**  
-The UXF Design Team collaborates with that consumer to design the new functionality or modify existing component, and then document the design as well as the guidelines on the site.  
-
+The UXF Design Team collaborates with that consumer to design the new functionality or modify existing component, and then document the design as well as the guidelines on the site.
 
 3. **Review**  
 The design goes through the governance review to ensure it meets a set of requirements from the [Component Quality Checklist]({{site.baseurl}}/membership-spec).
