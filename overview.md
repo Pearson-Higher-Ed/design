@@ -1,6 +1,6 @@
 ---
 layout: article
-title: Overview
+title: Designer's Guide
 section: use
 in_footer: true
 ---

@@ -1,7 +1,7 @@
 ---
 layout: article
-title: Principles
-shortname: Principles
+title: Design Principles
+shortname: Design Principles
 section: learn
 in_footer: true
 order: 2
