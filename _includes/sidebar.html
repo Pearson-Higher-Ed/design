@@ -77,17 +77,16 @@
       <li {% if page.url == '/UIKit/' %}class="selected"{% endif %}>
         <a href="{{site.basurl}}/UIKit">UI Kit</a>
       </li>
-      <li>
-        Designer's Guide
-        <ul>
-          <li {% if page.url == '/overview/' %}class="selected"{% endif %}>
-            <a href="{{site.baseurl}}/overview">Overview</a>
-          </li>
-        </ul>
+
+      <li {% if page.url == '/overview/' %}class="selected "{% endif %}>
+        <a href="{{site.baseurl}}/overview">Designer's Guide</a>
       </li>
+
       <li {% if page.url == '/getting-started-dev/' %}class="selected "{% endif %}>
         <a href="{{site.baseurl}}/getting-started-dev">Developer's Guide</a>
       </li>
+
+
       <li>
         Components
         <ul>
