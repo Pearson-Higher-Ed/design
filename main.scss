@@ -2,6 +2,8 @@
 # So Jekyll sees this file
 ---
 
+$baseurl: "{{site.baseurl}}";
+
 $pe-fonts-path: "./fonts/";
 @import "../node_modules/pearson-elements/scss/elements";
 
@@ -18,6 +20,7 @@ $pe-fonts-path: "./fonts/";
 @import "contact";
 @import "status";
 @import "sidebar";
+@import "search";
 
 html {
   font-size: 0.875rem;

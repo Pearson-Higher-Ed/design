@@ -1,27 +1,62 @@
 body.home {
   background-color: $pe-color-white;
 
+
+  table {
+    margin: auto;
+    margin-top: 28px;
+    max-width: 960px;
+  }
+
+  th, td {
+      border: 1px solid #c7c7c7;
+      background: white;
+      padding: 16px;
+  }
+
   .top {
-    padding: 100px 10px;
+    padding: 100px 10px 80px;
     text-align: center;
-    background: url("./img/backer.png") center center no-repeat;
+    background: url("./img/backer.png") top center no-repeat;
     background-size: cover;
 
     .content {
       margin: 0 auto;
       @include pe-responsive-breakpoint(md) {
-        max-width: 500px;
+        max-width: 600px;
+      }
+
+      .search-container {
+        margin: 32px auto 0;
       }
     }
 
-    h1 {
-      @extend .pe-page-title;
+    .pearson {
+      text-transform: uppercase;
+      @extend .pe-title, .pe-bold;
       color: $pe-color-white;
-      margin-bottom: 24px;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font: 600 36px/48px 'Open Sans';
+      text-transform: uppercase;
+      color: $pe-color-white;
+      margin-bottom: 8px;
+      letter-spacing: 4px;
+
+      @include pe-responsive-breakpoint(sm) {
+        font: 600 48px/66px 'Open Sans';
+      }
+
+      @include pe-responsive-breakpoint(md) {
+        font: 600 62px/84px 'Open Sans';
+      }
     }
 
     p {
       color: $pe-color-white;
+      @extend .pe-copy, .pe-copy--large;
     }
 
     .links {
@@ -32,15 +67,25 @@ body.home {
   }
 
 
+  #subscribe_button {
+    margin-top: 40px;
+  }
+
   .main-heroes {
     margin-top: 40px;
     padding-bottom: 40px;
     position: relative;
-    border-bottom: 2px solid $pe-color-digital-marine-turquoise;
+    border-bottom: 1px solid $pe-color-concrete;
 
     h2 {
       @extend .pe-page-title;
       margin-bottom: 28px;
+
+      // TODO: replace with mixin if elements-sdk ever supports
+      @include pe-responsive-breakpoint(xs to sm) {
+        font-size: 28px;
+        line-height: 38px;
+      }
     }
 
     & > div {
@@ -56,7 +101,7 @@ body.home {
         padding: 80px 60px;
         float: left;
       }
-      @include pe-responsive-breakpoint(lg) {
+      @include pe-responsive-breakpoint(xl) {
         padding: 80px 100px;
       }
     }
@@ -86,7 +131,7 @@ body.home {
           bottom: 0;
         }
       }
-      @include pe-responsive-breakpoint(lg) {
+      @include pe-responsive-breakpoint(xl) {
         padding: 0 100px;
       }
     }
@@ -94,39 +139,151 @@ body.home {
     @include clearfix;
   }
 
+  .uikit {
+    width: 90%;
+    margin: 100px auto;
 
-  .contact {
-    text-align: center;
-    padding: 80px 10px;
+    @include pe-responsive-breakpoint(lg) {
+      max-width: 960px;
+    }
 
-    .address {
-      @extend .pe-page-title;
-      margin-top: 28px;
+    .header {
+      display: table;
+    }
+
+    h2 {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .button-container {
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 20px;
+      @include pe-responsive-breakpoint(md) {
+        padding-left: 40px;
+      }
+    }
+
+    img {
+      width: 100%;
+      margin-top: 32px;
+      border: 1px solid $pe-color-alto;
     }
   }
 
+  .colors {
+    border-top: 1px solid $pe-color-concrete;
+    padding: 100px 0;
 
-  footer {
-    margin: 20px 0 80px;
+    .heading,
+    .palettes {
+      width: 90%;
+      margin: 0 auto;
+
+      @include pe-responsive-breakpoint(lg) {
+        max-width: 960px;
+      }
+    }
+
+    .heading {
+      display: flex;
+      align-items: center;
+
+      a {
+        margin-left: 20px;
+        @extend .pe-label, .pe-label--large;
+      }
+    }
+
+    .palettes {
+      h3 {
+        @extend .pe-title, .pe-title--small, .pe-bold;
+        margin-bottom: 16px;
+        margin-left: 10px;
+      }
+
+      .palette {
+        @include clearfix;
+        margin-top: 40px;
+        margin-left: -10px;
+      }
+
+      .color {
+        float: left;
+        margin: 0 10px 12px;
+        width: 40%;
+        @include pe-responsive-breakpoint(sm) {
+          width: 172px;
+        }
+      }
+
+      .swatch {
+        width: 100%;
+        height: 28px;
+        margin-bottom: 8px;
+
+        &.border {
+          border: 1px solid $pe-color-alto;
+        }
+      }
+
+      .swatch + div,
+      .swatch + div + div {
+        @extend .pe-label, .pe-label--small;
+      }
+    }
+  }
+
+  .contact {
+    padding: 80px 10px;
+    border-top: 1px solid $pe-color-concrete;
+    border-bottom: 1px solid $pe-color-concrete;
+
+    h2 {
+      text-align: center;
+
+      // TODO: replace with mixin if elements-sdk ever supports
+      @include pe-responsive-breakpoint(xs to sm) {
+        font-size: 28px;
+        line-height: 38px;
+      }
+    }
 
     ul {
-      list-style-type: none;
-      text-align: center;
-      padding: 0;
+      margin: 32px auto 0;
+      color: $pe-color-medium-gray;
+
+      @include pe-responsive-breakpoint(md) {
+        width: 600px;
+      }
+    }
+  }
+
+  .newsletter {
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+
+    &:before {
+      content: ' ';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0.6;
+      background: url($baseurl + "/img/mailstripe.svg") -76px top repeat-x;
+      z-index: -1;
     }
 
-    li + li {
-      margin-top: 12px;
-    }
-
-    a {
-      text-decoration: none;
-      color: $pe-color-charcoal;
-      @extend .pe-label, .pe-label--small, .pe-label--bold;
-    }
-
-    a:hover {
-      text-decoration: underline;
+    h2 {
+      // TODO: replace with mixin if elements-sdk ever supports
+      @include pe-responsive-breakpoint(xs to sm) {
+        font-size: 28px;
+        line-height: 38px;
+      }
     }
   }
 }

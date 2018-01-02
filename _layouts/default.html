@@ -2,24 +2,35 @@
 <html class="core">
 {% include header.html %}
 <body class="home">
-	{% include sidebar.html invisible=true %}
+	{% include sidebar.html invisible=true narrow_show=true %}
 
-	<div class="top-level-content">
+	<div class="top-level-content narrow-show">
 		<div class="top">
 			<div class="content">
+				<p class="pearson">Pearson</p>
 				<h1>UX Framework</h1>
 
-				<p>UX Framework is a unified UI language with guidance and resources for creating a cohesive user experience for Pearson applications.</p>
+				<p class="pe-label pe-label--large">A design system that empowers teams to build better products, faster</p>
 
-				<div class="links"><a href="{{site.baseurl}}/introduction-to-ux-framework">Learn more</a></div>
+				<div class="search-container">
+					<input type="text" name="search" class="pe-textInput--basic" placeholder="Search for components..."autocomplete="off">
+					<svg role="img"
+				       aria-labelledby="r2"
+				       focusable="false"
+				       class="pe-icon--search-sm-18">
+				    <title id="r2">Search the component library</title>
+				    <use xlink:href="#search-sm-18"></use>
+				  </svg>
+					<div class="dropdown"></div>
+				</div>
 			</div>
 		</div>
 
 		<div class="main-heroes">
 			<div class="design-hero">
-				<h2>Design UI Kit 1.4.0</h2>
+				<h2>Design UI Kit 1.5.0</h2>
 
-				<p>Updated on Oct. 26, 2017</p>
+				<p>Updated on Dec. 5, 2017</p>
 				<p>Start working in Sketch with ready-made UI components such as colors, buttons, and more! To see how a component works and behaves, please refer to the usage guidelines on this site.</p>
 
 				{% include uikit-download.html %}
@@ -34,20 +45,77 @@
 			</div>
 		</div>
 
-		<section class="contact">
-			<p>Questions or feedback? Check out the <a href="{{site.baseurl}}/contact">discussion board</a> or start a new thread by emailing us here:</p>
-			<p class="address"><a href="mailto:elemental-discuss@pearson.com">elemental-discuss@pearson.com</a></p>
+		<section class="uikit">
+			<div class="header">
+				<h2>Components</h2>
+				<div class="button-container"><a href="https://sketch.cloud/s/1Kw3O/all/page-1/ui-kit" target="_blank" class="pe-btn__primary--btn_large">View Fullscreen</a></div>
+			</div>
+			<img src="{{site.baseurl}}/UIKit/assets/UI Kit.png" alt="Components available in the library">
 		</section>
 
-		<footer>
-			<ul>
-				{% assign navigation = site.pages | where: "in_footer", true  %}
-				{% for page in navigation %}
-					<li><a href="{{page.url}}">{{page.title}}</a></li>
-				{% endfor %}
-			</ul>
-		</footer>
+		<section class="colors">
+			<div class="heading">
+				<h2>Colors</h2>
+				<a href="{{site.baseurl}}/c/colors">View usage guidelines</a>
+			</div>
+
+			{% for page in site.pages %}
+				{% unless page.title == 'Colors' %}{% continue %}{% endunless %}
+				{% unless page.status == 'active' %}{% continue %}{% endunless %}
+				{% if page.version contains 'beta' %}{% continue %}{% endif %}
+
+				{% assign latest_colors = page %}
+			{% endfor %}
+
+			{% assign borders = "White,White Gray" | split: "," %}
+
+			<div class="palettes">
+				{% for palette in latest_colors.palettes %}
+				<div class="palette">
+					<h3>{{ palette[0] }}</h3>
+						{% for color in palette[1] %}
+							<div class="color">
+								<div class="swatch{% if borders contains color %} border{% endif %}" style="background-color: #{{latest_colors.colors[color].hex}};"></div>
+								<div>{{color}}</div>
+								<div>#{{latest_colors.colors[color].hex}}</div>
+							</div>
+						{% endfor %}
+					</div>
+					{% endfor %}
+			</div>
+		</section>
+
+		<section class="contact">
+			<h2 class="pe-page-title">Questions or Feedback?</h2>
+			<table>
+				<tr>
+					<th>UXF Design Team</th>
+					<td><a href="mailto:uxf-design@pearson.com" target="_blank">uxf-design@pearson.com</a>  OR  <a href="https://pearsondesign.slack.com/messages/C1BSBNVS9" target="_blank">Slack Channel:#uxframework</a></td>
+				</tr>
+				<tr>
+					<th>UXF Development Team</th>
+					<td><a href="mailto:uxf-development@pearson.com" target="_blank">uxf-development@pearson.com</a>  OR  <a href="https://pearson.hipchat.com/chat/room/2931720" target="_blank">HiptChat: UXF Help (PDA)</a></td>
+				</tr>
+				<tr>
+					<th>UXF Accessibility</th>
+					<td><a href="https://www.hipchat.com/gihhgSA1x" target="_blank">HipChat: Accessibility Help</a></td>
+				</tr>
+				<tr>
+					<th>UXF Discussion</th>
+					<td><a href="/contact">Go to Discussion</a></td>
+				</tr>
+			</table>
+		</section>
+
+		<section class="newsletter">
+			<h2 class="pe-page-title">Subscribe to our monthly newsletter!</h2>
+			<a href="https://groups.google.com/a/pearson.com/forum/#!forum/uxf-newsletter/join" target="_blank" class="pe-btn__primary--btn_large" id="subscribe_button">Subscribe</a>
+		</section>
 	</div>
+
+	<script type="text/javascript">
+		initDropdown(document.querySelector('.top .search-container'))
+	</script>
 
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

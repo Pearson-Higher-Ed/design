@@ -22,3 +22,11 @@ node_modules/react-dom/*
 !node_modules/react-dom/dist
 node_modules/react-dom/dist/*
 !node_modules/react-dom/dist/react-dom.min.js
+
+!node_modules/underscore
+node_modules/underscore/*
+!node_modules/underscore/underscore-min.js
+
+!node_modules/fuzzysort
+node_modules/fuzzysort/*
+!node_modules/fuzzysort/fuzzysort.js

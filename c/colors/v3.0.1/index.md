@@ -146,6 +146,28 @@ colors:
       - Charcoal
       - Ink Blue
 
+palettes:
+  Primary Palette:
+    - Digital Pearson Blue
+    - Ink Blue
+    - White
+    - White Gray
+  Secondary Palette:
+    - Sunshine Yellow
+    - Sunflower Yellow
+    - Digital Ice Blue
+    - Digital Marine Turquoise
+  Neutral Palette:
+    - Charcoal
+    - Medium Gray
+    - Concrete
+    - Alto
+    - Moonlight
+  Conditional Palette:
+    - Strawberry Red
+    - Digital Grass Green
+    - Hot Pink
+
 blocks:
   - type: section
     name: Primary Palette
@@ -155,12 +177,8 @@ blocks:
     text: |
       Contains the main brand colors and standard backgrounds.
     contents:
-      - type: colors
-        colors:
-          - Digital Pearson Blue
-          - Ink Blue
-          - White
-          - White Gray
+      - type: palette
+        palette: Primary Palette
     features:
       - Digital Pearson Blue
       - Ink Blue
@@ -174,12 +192,8 @@ blocks:
     text: |
       Additional brand colors that accent the page in specific circumstances.
     contents:
-      - type: colors
-        colors:
-          - Sunshine Yellow
-          - Sunflower Yellow
-          - Digital Ice Blue
-          - Digital Marine Turquoise
+      - type: palette
+        palette: Secondary Palette
     features:
       - Sunshine Yellow
       - Sunflower Yellow
@@ -193,13 +207,8 @@ blocks:
     text: |
       Basic grays used for text, buttons, divider lines, etc.
     contents:
-      - type: colors
-        colors:
-          - Charcoal
-          - Medium Gray
-          - Concrete
-          - Alto
-          - Moonlight
+      - type: palette
+        palette: Neutral Palette
     features:
       - Charcoal
       - Medium Gray
@@ -214,11 +223,8 @@ blocks:
     text: |
       Colors that only appear under certain conditions, like success or error states.
     contents:
-      - type: colors
-        colors:
-          - Strawberry Red
-          - Digital Grass Green
-          - Hot Pink
+      - type: palette
+        palette: Conditional Palette
     features:
       - Strawberry Red
       - Digital Grass Green

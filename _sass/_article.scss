@@ -1,7 +1,7 @@
 .article {
 
   h1 {
-    margin-bottom: 28px;
+    margin-bottom: 40px;
   }
 
   .parent {
@@ -115,6 +115,17 @@
     }
   }
 
+
+  table {
+    margin-top: 28px;
+  }
+
+  th, td {
+      border-bottom: 1px solid #c7c7c7;
+      background: white;
+      padding: 16px;
+  }
+
   p {
     @extend .pe-copy;
     @extend .pe-paragraph;
@@ -126,6 +137,7 @@
   h2 {
     @extend .pe-title, .pe-label--bold;
     margin-top: 100px;
+    margin-bottom: 20px;
 
     & + h3 {
       margin-top: 12px;
@@ -133,13 +145,20 @@
   }
   h3 {
     @extend .pe-title, .pe-title--small;
-    margin-top: 80px;
+    margin-top: 24px;
+    margin-bottom: 8px;
 
     & + h4 {
       margin-top: 12px;
     }
   }
   h4 { @extend .pe-label, .pe-label--large; }
+
+  .pe-list {
+    li p + p:last-child {
+      margin-bottom: 18px;
+    }
+  }
 
   ul {
     @extend .pe-list, .pe-styled-lists--unordered;
@@ -165,6 +184,11 @@
     }
   }
 
+  img {
+    width: 100%;
+    margin-top:20px;
+  }
+
   img.wide {
     width: 100%;
 
@@ -179,5 +203,38 @@
   p + ul,
   p + ol {
     margin-top: 12px;
+  }
+
+  .uikit-buttons {
+    margin-bottom: 24px;
+
+    a {
+      width: 100%;
+      text-align: center;
+    }
+    a + a {
+      margin-top: 12px;
+    }
+
+    @include pe-responsive-breakpoint(sm) {
+      a {
+        width: 300px;
+      }
+      a + a {
+        display: block;
+      }
+    }
+
+    @include pe-responsive-breakpoint(md) {
+      a {
+        width: auto;
+      }
+
+      a + a {
+        display: inline-block;
+        margin-top: 0;
+        margin-left: 16px;
+      }
+    }
   }
 }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="140px" height="24px" viewBox="0 0 140 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="140" height="24"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Mask"></g>
+            <g mask="url(#mask-2)">
+                <g transform="translate(-90.000000, -44.000000)">
+                    <rect id="Rectangle-Copy-10" fill="#DB0020" transform="translate(144.857930, 73.892659) rotate(45.000000) translate(-144.857930, -73.892659) " x="134.85793" y="-20.6073414" width="20" height="189"></rect>
+                    <rect id="Rectangle-Copy-12" fill="#DB0020" transform="translate(284.857930, 73.892659) rotate(45.000000) translate(-284.857930, -73.892659) " x="274.85793" y="-20.6073414" width="20" height="189"></rect>
+                    <rect id="Rectangle-Copy-14" fill="#047A9C" transform="translate(214.195008, 73.892659) rotate(45.000000) translate(-214.195008, -73.892659) " x="204.195008" y="-20.6073414" width="20" height="189"></rect>
+                    <rect id="Rectangle-Copy-15" fill="#047A9C" transform="translate(73.892659, 73.892659) rotate(45.000000) translate(-73.892659, -73.892659) " x="63.8926586" y="-20.6073414" width="20" height="189"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
