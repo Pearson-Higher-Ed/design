@@ -141,7 +141,7 @@
         <div class="dependencies">
           <p><span class="pe-label pe-label--bold">Dependencies</span></p>
           {% for dependency in page.dependencies %}
-            <p><a href="{{site.baseurl}}/c/{{dependency.name | slugify}}/v{{dependency.version}}">{{dependency.name}}@^{{dependency.version}}</a></p>
+            <p><a href="{{site.baseurl}}/c/{{dependency.name | slugify}}/v{{dependency.version}}">{{dependency.name}} v{{dependency.version}}</a></p>
           {% endfor %}
           {% unless page.dependencies and page.dependencies != empty %}
             <p>None</p>
@@ -160,8 +160,8 @@
             {% endfor %}
           {% endif %}
 
-          <p><span class="pe-label pe-label--bold">Downloads</span></p>
-          <p><a href="{{a11y}}">UX Accessibility Checklist</a></p>
+          <p><span class="pe-label pe-label--bold">Documents</span></p>
+          <p><a href="{{a11y}}">Component Quality Checklist</a></p>
           {% if page.sketch %}
             {% assign sketch_file = page.sketch %}
           {% else %}
@@ -174,7 +174,7 @@
           {% endif %}
 
           {% if sketch_file %}
-            <p><a href="{{ sketch_file }}">Individual Sketch File</a></p>
+            <p><a href="{{ sketch_file }}">Documentation Assets (Sketch)</a></p>
           {% endif %}
         </div>
 
