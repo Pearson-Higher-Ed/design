@@ -12,7 +12,7 @@ people:
 tagline:
 usage_guidelines:
 features:
-dependencies:
+dependencies: #If not dependency, just delete everything inside "dependencies"
   - name:
     version:
 documents:
@@ -20,8 +20,6 @@ documents:
     link:
   - name: Documentation Assets (Sketch)
     link:
-
-
 
 
 blocks:
@@ -33,7 +31,8 @@ blocks:
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis tincidunt dolor. Curabitur dignissim orci facilisis erat imperdiet, vel malesuada neque rhoncus. Sed congue venenatis lectus in rutrum.
     contents:
       - type: wide image
-        src:
+        src: #Example:./assets/buttons.png
+        caption:
     features:
       - Feature A
 
@@ -42,17 +41,18 @@ blocks:
 
   - type: two column
     text: |
-      ### Size
+      ### Sizes
       Large
-      : - width: 99px
-        - height: 99px
+      : - Width: 99px
+        - Height: 99px
 
       Small
-      : - width: 9px
-        - height: 9px
+      : - Width: 9px
+        - Height: 9px
     contents:
       - type: wide image
-        src: <!-- Example:./assets/buttons.png -->
+        src: #Example:./assets/buttons.png
+        caption:
     redlines:
       - Feature A
 
