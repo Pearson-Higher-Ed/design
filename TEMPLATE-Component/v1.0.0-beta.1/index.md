@@ -12,7 +12,7 @@ people:
 tagline:
 usage_guidelines:
 features:
-dependencies: #If not dependency, just delete everything inside "dependencies"
+dependencies: # If no dependency, just delete everything inside "dependencies"
   - name:
     version:
 documents:
@@ -31,7 +31,7 @@ blocks:
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis tincidunt dolor. Curabitur dignissim orci facilisis erat imperdiet, vel malesuada neque rhoncus. Sed congue venenatis lectus in rutrum.
     contents:
       - type: wide image
-        src: #Example:./assets/buttons.png
+        src: # Example:./assets/buttons.png
         caption:
     features:
       - Feature A
@@ -51,7 +51,7 @@ blocks:
         - Height: 9px
     contents:
       - type: wide image
-        src: #Example:./assets/buttons.png
+        src: # Example:./assets/buttons.png
         caption:
     redlines:
       - Feature A
