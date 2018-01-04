@@ -13,10 +13,12 @@ tagline:
 usage_guidelines:
 features:
 dependencies: # If no dependency, just delete everything inside "dependencies"
-  - name:
-    version:
+  - name: Component Y
+    version: 9.9.9
 documents:
   - name: Component Quality Checklist
+    link:
+  - name: UX Accessibility Checklist
     link:
   - name: Documentation Assets (Sketch)
     link:
