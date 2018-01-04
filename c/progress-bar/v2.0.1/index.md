@@ -7,10 +7,10 @@ section: Components
 title: Progress Bar
 
 # Status of the component (e.g. experimental, deprecated, etc.)
-status: deprecated
+status: active
 
 # Version (follow the component versioning guide)
-version: 2.0.0
+version: 2.0.1
 
 # List the people involved
 people:
@@ -116,6 +116,9 @@ blocks:
       : - Track is 4px wide
         - Progress fill is 12px wide
 
+      Spacing
+      : - Track is 8px below the label
+
       Colors
       : - Track is [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
         - Fill is [Digital Marine Turquoise](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--digital-marine-turquoise)
@@ -139,6 +142,10 @@ blocks:
 # Required. List out each version of the component and the changes made. Make
 # sure to follow the component versioning guide.
 changelog:
+  - version: 2.0.1
+    changes: |
+      - ADDED: Missing spacing details to redlines
+
   - version: 2.0.0
     changes: |
       - CHANGED: Rebranded visual style
