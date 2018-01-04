@@ -5,7 +5,7 @@ section: Components
 sdk: stand_alone
 redirect_from: /docs/ui-components/modal/
 version: 2.0.3
-status: active
+status: deprecated
 implemented: true
 implementation: https://github.com/Pearson-Higher-Ed/modal/
 people:
