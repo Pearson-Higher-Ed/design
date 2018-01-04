@@ -135,6 +135,8 @@ blocks:
 
         [Interact with the prototype](https://pearson.invisionapp.com/share/BPDUFEYWZ#/257173380_prototype_Modal_with_actions_scrolling_mobile)
 
+        (Note modals with actions will default to scrolling the whole page if there isn't enough vertical space to show the content along with the sticky header/footer. This supports accessibility users who may zoom in significantly on the screen.)
+
       * __Modal without action:__ Scrolling page
 
 
@@ -148,6 +150,9 @@ blocks:
         src: ./assets/Prototype_modal_mobile_without_actions.mp4
         caption: Modal without actions (Mobile)
 
+
+  - type: section
+    name: Usage guidelines
 
   - type: two column
     text: |
@@ -280,7 +285,7 @@ blocks:
       ### Scrolling Modals
       When the modal content exceeds the height of the viewport the scrollable area will automatically expand to include just enough space for scrolling, without scrolling the page below.
 
-      * __Modal with buttons:__ sticky buttons
+      * __Modal with buttons:__ sticky buttons (note responsive exception below)
       * __Modal without buttons:__ page scroll
 
   - type: two column
@@ -296,6 +301,9 @@ blocks:
 
       Focus Behavior
       : - For sticky buttons, the scrollable area must be focusable and scrollable via the keyboard
+
+      Responsive Behavior
+      : - The sticky header/footer should be disabled and a standard page scroll used if the viewport height is 400px or less
 
     contents:
       - type: wide image
@@ -338,6 +346,7 @@ changelog:
   - version: 2.0.4
     changes: |
       - FIXED: Scrolling behavior of modal actions on a vertically constrained or zoomed in screen
+      - CHANGED: Organization of usage guidelines
   - version: 2.0.3
     changes: |
       - UPDATED: UI copy in the example images
