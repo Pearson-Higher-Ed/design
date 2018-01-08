@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Buttons
 section: Components
-version: 3.0.0-beta.5
-status: deprecated
+version: 3.0.0
+status: active
 implemented: false
 people:
   - role: Designer
@@ -284,29 +284,10 @@ blocks:
       - Tertiary Button
 
 changelog:
-  - version: 3.0.0-beta.5
+  - version: 3.0.0
     changes: |
-      - ADDED: Section advising on proper background contrast
-  - version: 3.0.0-beta.4
-    changes: |
-      - FIXED: Typos
-      - UPDATED: Accessibility checklist
-      - CHANGED: Order of button types
-  - version: 3.0.0-beta.3
-    changes: |
-      - CHANGED: Hover styles for tertiary and default buttons
-      - CHANGED: Background on tertiary buttons to Moonlight
-  - version: 3.0.0-beta.2
-    changes: |
-      - CHANGED: Large button size to 36px
-      - ADDED: Extra large button size
-      - ADDED: Initial redlines
-      - CHANGED: Text color to graphite for default and tertiary buttons
-  - version: 3.0.0-beta.1
-    changes: |
-      - CHANGED: Large button size to 40px
-      - REMOVED: Extra large button size
-      - CHANGED: Button visual styling
+      - CHANGED: Button visual styling to match GLP work
+      - CHANGED: Text color to graphite for default buttons
       - ADDED: Tertiary button type
   - version: 2.2.2
     changes: |
