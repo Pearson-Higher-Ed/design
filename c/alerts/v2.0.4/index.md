@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Alerts
 section: Components
-version: 2.0.3
-status: deprecated
+version: 2.0.4
+status: active
 implemented: true
 people:
   - role: Product Owner
@@ -41,10 +41,34 @@ usage_guidelines: |
 
 blocks:
   - type: section
-    name: Static Global Alert
+    name: Global Alert
 
   - type: two column
     text: |
+      The global alert can appear either statically on page load or dynamically in response to use action.
+
+  - type: two column
+    text: |
+      ### Global alert positioning
+      The global alert is positioned in the upper left corner on desktop screens.
+
+      This ensures the alert is noticeable for screen magnification users.
+    contents:
+      - type: wide image
+        src: ./assets/position.desktop.png
+        border: true
+
+  - type: two column
+    text: |
+      For narrower screens the alert takes up the full width.
+    contents:
+      - type: narrow image
+        src: ./assets/alert_mobile_over.png
+        border: true
+
+  - type: two column
+    text: |
+      ### Static global alerts
       When a message is displayed upon page load the alert will appear anchored in the upper left corner of the viewport or if on a mobile device the message will appear across the top of the viewport. (It will stay in place as the user scrolls the page.)  Text in the upper left corner of desktop devices (rather than center) will help ensure screen magnification users do not miss the message upon page load.
 
       This type of alert can always be dismissed by clicking on the close icon.
@@ -61,18 +85,7 @@ blocks:
 
   - type: two column
     text: |
-      At responsive sizes the alert occupies the top part of the viewport.
-    contents:
-      - type: narrow image
-        src: ./assets/alert_mobile_over.png
-        caption: Responsive popover alert.
-        border: true
-
-  - type: section
-    name: Dynamic Global Alert
-
-  - type: two column
-    text: |
+      ### Dynamic global alerts
       Alerts can also appear dynamically in response to user actions like submitting a form, choosing an option, or completing an assignment. In this case the alert will animate down from the top.
 
       Try to use this alert style sparingly, as it is fairly interruptive. For keyboard interactions, focus will automatically move from where the user is working to this element.
@@ -107,6 +120,13 @@ blocks:
         border: true
     features:
       - Inline Alert
+
+  - type: section
+    name: Timeouts
+
+  - type: two column
+    text: |
+      A common pattern with alerts like this is to have the alert automatically dismiss itself after a set timeout. This can be problematic from an accessibility perspective, however, as users may need more time to notice, read, or interact with the alert. For this reason the alert component only supports manual alert dismissal.
 
   - type: section
     name: Variants
@@ -223,6 +243,10 @@ blocks:
 
 
 changelog:
+  - version: 2.0.4
+    person: Parker Malenke
+    changes: |
+      - CHANGED: Documentation to be clearer about positioning and timeout rules and explain the accessibility considerations in more detail
   - version: 2.0.3
     changes: |
       - ADDED: Feature links
