@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Buttons
 section: Components
-version: 3.0.0-beta.4
-status: deprecated
+version: 3.0.0-beta.5
+status: active
 implemented: false
 people:
   - role: Designer
@@ -71,6 +71,14 @@ blocks:
       - Large Button
       - Small Button
 
+  - type: section
+    name: Color contrast
+
+  - type: two column
+    text: |
+      Buttons and their text must be sufficiently contrasty against the background color. Be especially careful with default and tertiary buttons that the page background color is contrast compliant with the default's text color or the tertiary's gray background color.
+
+      Refer to the [Color component](/c/colors) for information on contrast-compliant pairings.
 
   - type: section
     name: Button placement
@@ -276,6 +284,9 @@ blocks:
       - Tertiary Button
 
 changelog:
+  - version: 3.0.0-beta.5
+    changes: |
+      - ADDED: Section advising on proper background contrast
   - version: 3.0.0-beta.4
     changes: |
       - FIXED: Typos
@@ -291,14 +302,12 @@ changelog:
       - ADDED: Extra large button size
       - ADDED: Initial redlines
       - CHANGED: Text color to graphite for default and tertiary buttons
-
   - version: 3.0.0-beta.1
     changes: |
       - CHANGED: Large button size to 40px
       - REMOVED: Extra large button size
       - CHANGED: Button visual styling
       - ADDED: Tertiary button type
-
   - version: 2.2.2
     changes: |
       - FIXED: UI text in the example image
