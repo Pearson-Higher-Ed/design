@@ -62,33 +62,31 @@
   {% assign contribute_pages = contribute_pages | sort: 'order' %}
   {% assign component_pages = component_pages | sort: 'title' %}
 
-
   <div class="sidebar-toc">
     <ul>
       <li>
-        Learn
+        UX Framework
         <ul>
-          {% for page in learn_pages %}
-            <li><a href="{{site.baseurl}}{{page.url}}">{% if page.shortname %}{{page.shortname}}{% else %}{{page.title}}{% endif %}</a></li>
+          {% for lpage in learn_pages %}
+            <li {% if page.url == lpage.url %}class="selected"{% endif %}>
+              <a href="{{site.baseurl}}{{lpage.url}}">{% if lpage.shortname %}{{lpage.shortname}}{% else %}{{lpage.title}}{% endif %}</a>
+            </li>
           {% endfor %}
         </ul>
       </li>
-      <li>
-        Use
-        <ul>
-          {% for page in use_pages %}
-            <li><a href="{{site.baseurl}}{{page.url}}">{% if page.shortname %}{{page.shortname}}{% else %}{{page.title}}{% endif %}</a></li>
-          {% endfor %}
-        </ul>
+      <li {% if page.url == '/UIKit/' %}class="selected"{% endif %}>
+        <a href="{{site.basurl}}/UIKit">UI Kit</a>
       </li>
-      <li>
-        Contribute
-        <ul>
-          {% for page in contribute_pages %}
-            <li><a href="{{site.baseurl}}{{page.url}}">{% if page.shortname %}{{page.shortname}}{% else %}{{page.title}}{% endif %}</a></li>
-          {% endfor %}
-        </ul>
+
+      <li {% if page.url == '/overview/' %}class="selected "{% endif %}>
+        <a href="{{site.baseurl}}/overview">Designer's Guide</a>
       </li>
+
+      <li {% if page.url == '/getting-started-dev/' %}class="selected "{% endif %}>
+        <a href="{{site.baseurl}}/getting-started-dev">Developer's Guide</a>
+      </li>
+
+
       <li>
         Components
         <ul>
@@ -115,36 +113,57 @@
       </li>
     </ul>
   </div>
-
 </div>
 
 <div class="ultimate-header {% if include.invisible %}invisible{% endif %}">
-  <img class="burger" src="{{site.baseurl}}/assets/burger.svg"> {% unless include.invisible %}{{page.title}}{% endunless %}
+  <div class="left">
+    <img class="burger" src="{{site.baseurl}}/assets/burger.svg"> {% unless include.invisible %}{{page.title}}{% endunless %}
+  </div>
 
   {% unless include.invisible %}
-    <a href="{{site.baseurl}}/contact" class="contact">
-      <svg style="vertical-align:baseline"
-        aria-hidden="true"
-        focusable="false"
-        class="pe-icon--email-18">
+    <div class="right">
+      <div class="search-container">
+        <input type="text" name="search" class="pe-textInput--basic" placeholder="Search for components..."autocomplete="off">
+        <svg role="img"
+             aria-labelledby="r2"
+             focusable="false"
+             class="pe-icon--search-sm-18">
+          <title id="r2">Search the component library</title>
+          <use xlink:href="#search-sm-18"></use>
+        </svg>
+        <div class="dropdown"></div>
+      </div>
+
+      <a href="{{site.baseurl}}/contact" class="contact">
+        <svg role="img"
+             style="vertical-align:baseline"
+             aria-labelledby="contact332"
+             focusable="false"
+             class="pe-icon--email-18">
+          <title id="contact332">Contact Us</title>
           <use xlink:href="#email-18"></use>
-      </svg>
-      <span class="text"> Questions or Comments?</span></a>
+        </svg>
+      </a>
+    </div>
   {% endunless %}
 </div>
 
 <div class="overlay" data-sidebar-closer="true"></div>
 
 <script type="text/javascript">
+  {% unless include.invisible %}
+  initDropdown(document.querySelector('.ultimate-header .search-container'))
+  {% endunless %}
+
   var sidebar = document.querySelector('.sidebar')
     , overlay = document.querySelector('.overlay');
   var closeSidebar = function() {
-    sidebar.classList.remove('open');
-    overlay.classList.remove('open');
+    sidebar.classList.remove('open')
+    overlay.classList.remove('open')
   };
   var openSidebar = function() {
-    sidebar.classList.add('open');
-    overlay.classList.add('open');
+    sidebar.classList.add('open')
+    overlay.classList.add('open')
   }
 
   document.querySelector('.burger').addEventListener('click', function(event) {

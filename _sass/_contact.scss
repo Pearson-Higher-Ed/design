@@ -14,6 +14,16 @@
       height: 100%;
     }
 
+    table {
+      margin-top: 28px;
+    }
+
+    th, td {
+        border-bottom: 1px solid #c7c7c7;
+        background: white;
+        padding: 16px;
+    }
+
     .wrapper {
       margin: 136px 10px 100px;
       max-width: 1170px;

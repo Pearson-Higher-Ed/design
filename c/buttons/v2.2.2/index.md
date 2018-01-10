@@ -3,7 +3,7 @@ layout: component-yaml
 title: Buttons
 section: Components
 version: 2.2.2
-status: active
+status: deprecated
 implemented: true
 people:
   - role: Designer

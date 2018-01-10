@@ -1,6 +1,6 @@
 ---
 title: Component status
 layout: status
-section: use
+section: learn
 order: 4
 ---

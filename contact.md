@@ -1,7 +1,7 @@
 ---
 title: Contact Us
 layout: contact
-section: use
-order: 3
+section: learn
+order: 6
 in_footer: true
 ---
