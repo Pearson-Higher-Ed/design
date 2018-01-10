@@ -1,11 +1,11 @@
 ---
 ---
-
 var componentData = [
   {% for page in site.pages %}
 
   {% if page.section != 'Components' or
-        page.status != 'active' %}
+        page.status != 'active' or
+        page.private == true %}
     {% continue %}
   {% endif %}
 

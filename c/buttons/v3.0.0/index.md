@@ -5,6 +5,7 @@ section: Components
 version: 3.0.0
 status: active
 implemented: false
+private: true
 people:
   - role: Designer
     name: Parker Malenke
@@ -285,6 +286,7 @@ blocks:
 
 changelog:
   - version: 3.0.0
+    person: Parker Malenke
     changes: |
       - CHANGED: Button visual styling to match GLP work
       - CHANGED: Text color to graphite for default buttons

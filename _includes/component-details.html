@@ -42,10 +42,6 @@
     {% endunless %}
   {% endif %}
 
-  {% if page.rebranded %}
-    <div class="banner warn">This component is part of a larger rebranding project. Please <a href="{{site.baseurl}}/contact">coordinate with the framework team</a> before consuming it.</div>
-  {% endif %}
-
 
   <div class="blocks">
     <div class="block article_header">
@@ -161,7 +157,12 @@
           {% endif %}
 
           <p><span class="pe-label pe-label--bold">Documents</span></p>
-          <p><a href="{{a11y}}">Component Quality Checklist</a></p>
+          <p><a href="{{a11y}}">UX Accessibility Checklist</a></p>
+
+          {% if page.quality_checklist %}
+            <p><a href="{{page.quality_checklist}}"></a></p>
+          {% endif %}
+
           {% if page.sketch %}
             {% assign sketch_file = page.sketch %}
           {% else %}
@@ -489,6 +490,9 @@
           <h3 class="pe-title"><a href="{% if include.beta or include.in_dir %}.{% endif %}./v{{change.version}}">{{change.version}}</a></h3>
         {% else %}
           <h3 class="pe-title">{{change.version}}</h3>
+        {% endif %}
+        {% if change.person %}
+          <p class="pe-label pe-label--small">{{change.person}}</p>
         {% endif %}
         {{change.changes | markdownify}}
       {% endfor %}

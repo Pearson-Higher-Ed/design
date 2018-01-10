@@ -9,7 +9,7 @@
 
     {% assign versions = (site.pages | where: "title", page.title) %}
     {% for version in versions %}
-      {% if version.version contains "beta" or version.version == nil %}
+      {% if version.version contains "beta" or version.version == nil or version.private == true %}
       {% else %}
         {% assign semver = (version.version | split: '.') %}
         {% assign major = (semver[0] | round) %}
