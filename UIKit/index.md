@@ -7,7 +7,7 @@ section: use
 <!-- HEY, DON'T FORGET UPDATE <includes/uikit-download.html> AND THE HOMEPAGE!!!! -->
 
 <div class="uikit-buttons">
-  {% include uikit-download.html type='cta' btn_size='xlarge' %} <a class="pe-btn--btn_xlarge" href="https://sketch.cloud/s/1Kw3O/all/page-1/ui-kit" target="_blank">View Fullscreen</a>
+  {% include uikit-download.html type='cta' btn_size='xlarge' %} <a class="pe-btn--btn_xlarge" href="https://sketch.cloud/s/25Wbe/p/page-1/ui-kit" target="_blank">View Fullscreen</a>
 </div>
 
 
