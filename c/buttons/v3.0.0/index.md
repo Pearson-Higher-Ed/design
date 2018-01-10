@@ -5,6 +5,7 @@ section: Components
 version: 3.0.0
 status: active
 implemented: false
+private: true
 people:
   - role: Designer
     name: Parker Malenke
