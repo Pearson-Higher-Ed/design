@@ -491,6 +491,9 @@
         {% else %}
           <h3 class="pe-title">{{change.version}}</h3>
         {% endif %}
+        {% if change.person %}
+          <p class="pe-label pe-label--small">{{change.person}}</p>
+        {% endif %}
         {{change.changes | markdownify}}
       {% endfor %}
     </div>
