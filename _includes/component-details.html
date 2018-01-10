@@ -158,6 +158,11 @@
 
           <p><span class="pe-label pe-label--bold">Documents</span></p>
           <p><a href="{{a11y}}">UX Accessibility Checklist</a></p>
+
+          {% if page.quality_checklist %}
+            <p><a href="{{page.quality_checklist}}"></a></p>
+          {% endif %}
+
           {% if page.sketch %}
             {% assign sketch_file = page.sketch %}
           {% else %}
