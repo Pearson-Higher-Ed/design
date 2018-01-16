@@ -10,7 +10,7 @@
 
     {% assign versions = (site.pages | where: "title", page.title) %}
     {% for version in versions %}
-      {% if version.version == nil %}
+      {% if version.version == nil or version.private == true %}
       {% elsif version.version contains "beta" %}
 
         {% assign semver = (version.version | split: '.') %}
