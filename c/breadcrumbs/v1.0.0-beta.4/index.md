@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Breadcrumbs
 section: Components
-version: 1.0.0-beta.3
+version: 1.0.0-beta.4
 status: active
 people:
   - role: Product Owner
