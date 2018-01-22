@@ -1,5 +1,5 @@
 ---
-title: UI Kit v1.6.0
+title: UI Kit v1.7.0
 layout: article
 section: use
 ---
@@ -7,15 +7,14 @@ section: use
 <!-- HEY, DON'T FORGET UPDATE <includes/uikit-download.html> AND THE HOMEPAGE!!!! -->
 
 <div class="uikit-buttons">
-  {% include uikit-download.html type='cta' btn_size='xlarge' %} <a class="pe-btn--btn_xlarge" href="https://sketch.cloud/s/25Wbe/p/page-1/ui-kit" target="_blank">View Fullscreen</a>
+  {% include uikit-download.html type='cta' btn_size='xlarge' %} <a class="pe-btn--btn_xlarge" href="https://sketch.cloud/s/DP7x4/all/page-1/ui-kit" target="_blank">View Fullscreen</a>
 </div>
 
 
 
-Jan 3, 2018
+Jan 21, 2018
 
- * Inputs: Added Select Inputs
- * Progress Bar: NEW
+ * Breadcrumbs: NEW
 
 
 This Sketch file contains all the components from the UX Framework to help you start designing. It is updated frequently. If you see any discrepancies between the UI Kit and the website, please [let us know so we can fix it]({{site.baseurl}}/contact).
@@ -30,6 +29,12 @@ The components in this file is currently outdated. We are working on getting it 
 {:style="margin-top: 40px;"}
 
 ## Download previous versions
+
+### [v1.6.0](./files/Pearson UI Kit 1.6.0.sketch)
+Jan 3, 2018
+
+ * Inputs: Added Select Inputs
+ * Progress Bar: NEW
 
 ### [v1.5.0](./files/Pearson UI Kit 1.5.0.sketch)
 Dec 5, 2017

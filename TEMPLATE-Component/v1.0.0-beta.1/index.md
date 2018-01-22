@@ -7,7 +7,7 @@ status: active # Might go away in the future
 implemented: false
 implementation: # PDA team's responsibility
 tagline: # What is this component? What does it do?
-usage_guidelines: # For very important things
+usage_guidelines: # For very important directions only
 dependencies: # If no dependency, delete everything under "dependencies" including "- name:" and "version:"
   - name: Component Y
     version: 9.9.9
