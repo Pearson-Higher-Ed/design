@@ -41,7 +41,7 @@ blocks:
     text: |
       Breadcrumbs are used primarily to give users a secondary means of navigating a website. They provide a trail of links for the user to follow back to the starting or entry point. Typically, breadcrumbs display a hierarchy of the current page in relation to the website's structure.
 
-      Note: Images used on this page are scale up to make them easier read, go to the redlines section below for specification.
+      Note: Images used on this page are scaled up to make them easier read, go to the redlines section below for specification.
 
     contents:
       - type: wide image
