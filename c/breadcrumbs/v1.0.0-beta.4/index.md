@@ -25,13 +25,10 @@ dependencies:
   - name: Typography
     version: 2.1.1
 
-tagline: Use breadcrumbs to help users keep track of their locations within a website. This is a visual style guide for standard breadcrumbs trail.
+tagline: Use breadcrumbs to help users keep track of their locations within a website.
 
-features:
-  - Usage
-  - Rendering
-  - Placement
-  - Redlines
+usage_guidelines: |
+  This component is a visual style guide only.
 
 blocks:
   - type: section
