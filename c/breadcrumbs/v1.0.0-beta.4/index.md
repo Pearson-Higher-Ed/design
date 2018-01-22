@@ -3,7 +3,7 @@ layout: component-yaml
 title: Breadcrumbs
 section: Components
 version: 1.0.0-beta.4
-status: active
+status: deprecated
 implemented: https://github.com/Pearson-Higher-Ed/elements-sdk
 downloads:
   - name: Sketch
