@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Breadcrumbs
 section: Components
-version: 1.0.0-beta.4
+version: 1.0.0
 status: active
 implemented: https://github.com/Pearson-Higher-Ed/elements-sdk
 
@@ -114,7 +114,7 @@ blocks:
         src: ./assets/breadcrumbs-redlines-2x.png
 
 changelog:
-  - version: 1.0.0-beta.4
+  - version: 1.0.0
     person: Van Yang
     changes: |
       - INITIAL VERSION
