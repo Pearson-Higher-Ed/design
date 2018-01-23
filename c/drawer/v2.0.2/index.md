@@ -112,6 +112,7 @@ blocks:
       Icons
       : - Close icon is [Remove-sm-24](http://pearson-higher-ed.github.io/design/c/icons/v2.3.0-beta.2/#icons--remove-sm)
         - A focused icon will use the standard browser outline for focus
+        - Touch target: 44 x 44px
 
       Shadow
       : - box-shadow of 5px blur, rgba(199,199,199,0.70) color
@@ -207,7 +208,7 @@ changelog:
   - version: 2.0.2
     person: Linda Tsai
     changes: |
-    - ADDED: Specification for touch target sizes
+      - ADDED: Specification for touch target sizes
   - version: 2.0.1
     changes: |
       - ADDED: Feature links
