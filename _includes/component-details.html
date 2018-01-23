@@ -164,7 +164,7 @@
           {% endif %}
 
           {% if page.sketch %}
-            {% assign sketch_file = page.sketch %}
+            {% capture sketch_file %}{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{page.sketch}}{% endcapture %}
           {% else %}
             {% for download in page.downloads %}
               {% if download.link contains '.sketch' %}
