@@ -225,6 +225,17 @@
         {% endif %}
       </div>
 
+      {% when 'full page image' %}
+      <div class="fullpage">
+        <div class="text">
+          {% if block.text %}<div class="caption">{{block.text | markdownify}}</div>{% endif %}
+        </div>
+        <div class="image fullpage-img">
+          <div class="media {% if block.border %}border{% endif %}">
+            <img src="{% if include.beta or include.in_dir %}../{% endif %}v{{page.version}}/{{block.src}}" />
+          </div>
+        </div>
+      </div>
 
       {% when 'two column' or 'two_column' %}
       <div class="two_column">
