@@ -1,0 +1,26 @@
+.fullpage {
+  @include pe-responsive-breakpoint(xl) {
+    @include make-grid-parent;
+  }
+
+  .text {
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    @include pe-responsive-breakpoint(xl) {
+      @include make-grid-child(4);
+    }
+  }
+
+  .image.fullpage-img {
+    margin-bottom: 60px;
+
+    @include pe-responsive-breakpoint(xl) {
+      @include make-grid-child(12);
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
