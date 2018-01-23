@@ -3,7 +3,7 @@ layout: component-yaml
 title: Component X # Plural, sentence case, remember to update folder name
 section: Components
 version: 1.0.0-beta.1
-status: active # Might go away in the future
+status: active # Linda to consult with Parker. Might go away in the future?
 implemented: false
 implementation: # PDA team's responsibility
 tagline: # What is this component? What does it do?
@@ -27,13 +27,20 @@ blocks:
   - type: two column
     text: |
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis tincidunt dolor. Curabitur dignissim orci facilisis erat imperdiet, vel malesuada neque rhoncus. Sed congue venenatis lectus in rutrum.
+
     contents:
-      - type: wide image
+      - type: wide image # Options: wide image, narrow image
         src: # Example:./assets/buttons.png (Export at x2)
         border: # "True"
         caption:
     features:
       - Feature A # Add this to the Redlines section
+
+  - type: full page image
+    src: # Example:./assets/buttons.png (Export at x2)
+    border: # "True"
+    caption:
+
 
   - type: section
     name: Redlines
