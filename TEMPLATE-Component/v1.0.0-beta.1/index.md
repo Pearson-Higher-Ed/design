@@ -3,7 +3,7 @@ layout: component-yaml
 title: Component X # Plural, sentence case, remember to update folder name
 section: Components
 version: 1.0.0-beta.1
-status: active # Parker: May revisit in the next version
+status: active # Mark the latest version (both published and beta) as active. Mark previous versions as "deprecated"
 implemented: false
 implementation: # PDA team's responsibility
 tagline: # What is this component? What does it do?
