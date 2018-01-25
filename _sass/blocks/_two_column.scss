@@ -56,6 +56,16 @@
     }
   }
 
+  .pe-list {
+    li p + p:last-child {
+      margin-bottom: 18px;
+    }
+
+    ol p + p:last-child {
+      margin-bottom: 18px;
+    }
+  }
+
   // Redline styles
   dl {
     @include clearfix;
