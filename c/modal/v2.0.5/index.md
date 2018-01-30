@@ -126,11 +126,14 @@ blocks:
       * __Modals with actions:__
 
         In this case, the buttons will be sticky to the bottom of the viewport making sure that they are visible to the users upfront. Users scroll inside the modal to access more content.
-        See [prototype](https://pearson.invisionapp.com/share/BPDUFEYWZ#/257173380_prototype_Modal_with_actions_scrolling_mobile)
+
+        Note that the modal will default to scrolling the whole page when the vertical space is insufficient (under 400px) even if there are buttons. This is to support users who may have to zoom in significantly.
 
       * __Modal without actions:__
 
         In this case, the modal will extend “below the fold” so that users know there is more content to scroll through. This is called “page scroll” as opposed to the in-modal scroll.
+
+    # Prototype: https://pearson.invisionapp.com/share/BPDUFEYWZ#/257173380_prototype_Modal_with_actions_scrolling_mobile)
 
 
     contents:
@@ -240,7 +243,8 @@ blocks:
         - Opacity: 60%
 
       Focus behavior
-      : - Follow [the default behaviors for "X" defined in the drawer](/c/drawer/)
+      : - Modals retain focus, including keyboard focus, until a certain action has been taken.
+        - Follow [the default behaviors for "X" defined in the drawer](/c/drawer/)
         - Follow [the default behaviors for buttons](/c/buttons/)
 
       __Use the native modal for native mobile apps.__ The specs in this documentation is for responsive web mobile design.
@@ -262,7 +266,7 @@ blocks:
       ### Scrolling Modals
       When the content exceeds the height of the viewport, the modal will become scrollable. The scrolling behavior differs depending on the scenarios:
 
-      * __Modal with actions:__ Sticky buttons
+      * __Modal with actions:__ Sticky buttons (with exceptions specified below under "responsive behavior")
       * __Modal without actions:__ Page scroll
 
   - type: two column
