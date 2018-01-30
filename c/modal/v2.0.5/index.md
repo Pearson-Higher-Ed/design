@@ -128,7 +128,7 @@ blocks:
         In this case, the buttons will be sticky to the bottom of the viewport making sure that they are visible to the users upfront. Users scroll inside the modal to access more content.
         See [prototype](https://pearson.invisionapp.com/share/BPDUFEYWZ#/257173380_prototype_Modal_with_actions_scrolling_mobile)
 
-      * __Modal without action:__
+      * __Modal without actions:__
 
         In this case, the modal will extend “below the fold” so that users know there is more content to scroll through. This is called “page scroll” as opposed to the in-modal scroll.
 
@@ -197,7 +197,7 @@ blocks:
 
       - Medium device (md) and up (768px <= viewport)
       - Small device (sm) (480px <= viewport < 768px)
-      - Extra small device (xs) (viewport < 480px)
+      - Extra small device (xs) (320px <= viewport < 480px)
 
 
   - type: two column
@@ -260,10 +260,10 @@ blocks:
     text: |   
 
       ### Scrolling Modals
-      When the modal content exceeds the height of the viewport the scrollable area will automatically expand to include just enough space for scrolling, without scrolling the page below.
+      When the content exceeds the height of the viewport, the modal will become scrollable. The scrolling behavior differs depending on the scenarios:
 
-      * __Modal with buttons:__ sticky buttons (note responsive exception below)
-      * __Modal without buttons:__ page scroll
+      * __Modal with actions:__ Sticky buttons
+      * __Modal without actions:__ Page scroll
 
   - type: two column
     text: |   
