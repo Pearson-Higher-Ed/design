@@ -4,18 +4,10 @@ title: Modal
 section: Components
 sdk: stand_alone
 redirect_from: /docs/ui-components/modal/
-version: 2.0.4
+version: 2.0.5
 status: active
 implemented: true
 implementation: https://github.com/Pearson-Higher-Ed/modal/
-people:
-  - role: Designer
-    name: Van Yang
-    email: van.yang@pearson.com
-  - role: Designer
-    name: Linda Tsai
-    email: linda.tsai@pearson.com
-
 dependencies:
   - name: Buttons
     version: 2.2.1
@@ -27,7 +19,6 @@ dependencies:
     version: 2.3.0
   - name: Breakpoints
     version: 1.0.2
-
 
 downloads:
   - name: UX Accessibility Checklist
@@ -55,23 +46,20 @@ blocks:
       * __Asking for feedback__ E.g., "How would you rate this tutorial?"
 
 
-      Use them sparingly as they are interruptive. For screen reader users, it is especially frustrating because they’ll lose their place in the application.
+      Use them sparingly as they are interruptive. Modals can be particularly frustrating for screen reader users because these users will lose their place in the application.
 
     features:
       - Basic Modal
-
 
     contents:
       - type: wide image
         src: ./assets/modal_desktop_with_actions.png
 
-
   - type: two column
     text: |
 
       ### Modals vs. alerts
-      It’s easy to confuse [alerts](/design/c/alerts/) with modals. Modals interrupt users by blocking the current view while alerts coexist on the page and do not stop the user flow. Don’t use modals when alerts are more appropriate as modals are intrusive.
-
+      It’s easy to confuse [alerts](/c/alerts/) with modals. Modals interrupt users by blocking the current view while alerts coexist on the page and do not stop the user flow. Don’t use modals when alerts are more appropriate as modals are intrusive.
 
   - type: section
     name: Components
@@ -81,9 +69,17 @@ blocks:
 
       Modals contains three parts:
 
-      * __Header__ is optional. Designers should use their best judgment to create a clear message. Note that even if a visual title is not provided some sort of name needs to be given to development so it can be coded in for screen reader access.
+      * __Header__ (Optional)
+
+        Users should be able to understand the choices based on the header and button label. If header is applied, make the question or statement clear followed by an explanation in the content area. Avoid apologies or ambiguity such as “Be careful!” or “Are you sure?”.
+
+        Note that when there is no header, designer should still provide a name for the modal to the developers because a screen reader user would need this.
+
       * __Content__
-      * __Actions__ are optional. When there isn’t a button, you must include the “X” as a way to dismiss the modals to meet accessibility requirements.
+
+      * __Actions__ (Optional)
+
+        When there’s no actions, you must include the “X” as a way to dismiss the modals to meet accessibility requirements.
 
     contents:
       - type: wide image
@@ -101,7 +97,6 @@ blocks:
     text: |
 
       ### Dismissing the modal
-      Modals retain focus, including keyboard focus, until a certain action has been taken. Provide a visible and focusable way to close the modal.
 
       Here are two different approaches:
 
@@ -111,7 +106,7 @@ blocks:
 
       * __Modals without actions__
 
-        For less critical content, meaning it won’t make much difference if users ignore the content, then you don’t need to include buttons. Users can simply click the “X” or click outside the modal to dismiss it. For example, a modal that displays additional information about a teacher to help students choose a class doesn’t need action buttons.
+        If the modal content is not as critical to the users, then you don’t need buttons. Users can simply click the “X” or anywhere outside the modal to close it. For example, a modal that displays additional information about an instructor to help students choose a class doesn’t need buttons.
 
 
     contents:
@@ -125,19 +120,17 @@ blocks:
 
   - type: two column
     text: |
-      ### Scrolling Modals
-      When the modal content exceeds the height of the viewport the scrollable area will automatically expand to include just enough space for scrolling, without scrolling the page below.
+      ### Scrolling
+      When the content exceeds the height of the viewport, the modal will become scrollable. The scrolling behavior differs depending on the scenarios:
 
+      * __Modals with actions:__
 
-      * __Modals with actions:__ Sticky buttons
+        In this case, the buttons will be sticky to the bottom of the viewport making sure that they are visible to the users upfront. Users scroll inside the modal to access more content.
+        See [prototype](https://pearson.invisionapp.com/share/BPDUFEYWZ#/257173380_prototype_Modal_with_actions_scrolling_mobile)
 
-        The buttons must be accessible upfront so that users know that they are expected to take an action.
+      * __Modal without action:__
 
-        [Interact with the prototype](https://pearson.invisionapp.com/share/BPDUFEYWZ#/257173380_prototype_Modal_with_actions_scrolling_mobile)
-
-        (Note modals with actions will default to scrolling the whole page if there isn't enough vertical space to show the content along with the sticky header/footer. This supports accessibility users who may zoom in significantly on the screen.)
-
-      * __Modal without action:__ Scrolling page
+        In this case, the modal will extend “below the fold” so that users know there is more content to scroll through. This is called “page scroll” as opposed to the in-modal scroll.
 
 
     contents:
@@ -152,14 +145,12 @@ blocks:
 
 
   - type: section
-    name: Usage guidelines
+    name: Design guidelines
 
   - type: two column
     text: |
-
       ### Don't allow modals launching modals
       Launching a modal within a modal adds complexity and confusion for the users. Look for alternative solutions such as creating a separate page for the task.
-
 
       ### Avoid long content
       Modals are not designed for displaying long content, especially when we want the users to actually read the content. Consider in-line expansion within the originating page or displaying the information on a separate page for a better user experience.
@@ -167,34 +158,22 @@ blocks:
       ### Avoid nested scroll within a modal
       On narrow devices, there isn't enough horizontal room for a scrolling area inside modal if the modal happens to exceed the viewport as well. This would become a usability issue.
 
-
-  - type: section
-    name: Actions
-
   - type: two column
     text: |
-
       ### Button placement
-
-      See the [buttons component](/design/c/buttons/) for how to place the buttons.
+      See [buttons](/c/buttons/) for how to place the buttons.
       Avoid having more than two buttons in a modal to keep it simple for users.
 
     contents:
       - type: wide image
         src: ./assets/modal_button_types.png
 
-
   - type: section
-    name: Responsive Behavior
+    name: Responsive behavior
 
   - type: two column
     text: |
-
-
-      The layout changes at the following breakpoints. The modal has a more compact spacing, wider buttons, and smaller font size for header text on narrower devices.
-
-      - 768px
-      - 480px
+      The modal adjusts itself on different devices to optimize the user experience. The modal becomes narrower and have a more compact layout on smaller devices. For more details, see the [redlines](/c/modal/#redlines).
 
       For native mobile apps, use the native modal. The guideline in this documentation is for responsive web mobile design.
 
@@ -214,7 +193,7 @@ blocks:
     text: |
 
       ### Responsive Behavior
-      They layout of the modal changes at different [breakpoints](/design/c/breakpoints/):
+      They layout of the modal changes at different [breakpoints](/c/breakpoints/):
 
       - Medium device (md) and up (768px <= viewport)
       - Small device (sm) (480px <= viewport < 768px)
@@ -229,42 +208,40 @@ blocks:
         - sm: 440px
         - xs: Auto
 
-      Margin
-      : - md and up: 60px
-        - sm: 20px
-        - xs: 20px
+      Distance between the modal and the edge of the viewport
+      : - minimum distance: 20px
 
       Spacing
       : - md devices have a more generous spacing (see illustration on the right)
         - sm and xs devices have a more compact layout (see illustration on the left)
 
       Header text
-      : - md: [Large Section UI Heading](/design/c/typography/v2.1.1/#typography--large-section-ui-heading) 24px
-        - sm and xs: [Basic Section UI Heading](/design/c/typography/v2.1.1/#typography--basic-section-ui-heading) 20px
-        - [Charcoal](/design/c/colors/v3.0.1/#colors--charcoal)
+      : - md: [Large Section UI Heading](/c/typography/v2.1.1/#typography--large-section-ui-heading) 24px
+        - sm and xs: [Basic Section UI Heading](/c/typography/v2.1.1/#typography--basic-section-ui-heading) 20px
+        - [Charcoal](/c/colors/v3.0.1/#colors--charcoal)
 
       Content text
-      : - [Basic Body Copy](/design/c/typography/v2.1.1/#typography--basic-body-copy) 14px
-        - [Charcoal](/design/c/colors/v3.0.1/#colors--charcoal)
+      : - [Basic Body Copy](/c/typography/v2.1.1/#typography--basic-body-copy) 14px
+        - [Charcoal](/c/colors/v3.0.1/#colors--charcoal)
 
       Border Radius
       : - 2px
 
       Button
-      : - [Primary Buttons](/design/c/buttons/v2.2.1/#buttons--primary-button) [(Large)](/design/c/buttons/v2.2.1/#buttons--large-button)
+      : - [Primary Buttons](/c/buttons/v2.2.1/#buttons--primary-button) [(Large)](/c/buttons/v2.2.1/#buttons--large-button)
 
       "X" icon
-      : - Size: [remove-sm-24](/design/c/icons/v2.3.0/#icons--remove-sm)
+      : - Size: [remove-sm-24](/c/icons/v2.3.0/#icons--remove-sm)
         - Touch target: 44x44px
-        - [Medium Gray](/design/c/colors/v3.0.1/#colors--medium-gray)
+        - [Medium Gray](/c/colors/v3.0.1/#colors--medium-gray)
 
       Overlay
-      : - [Charcoal](/design/c/colors/v3.0.1/#colors--charcoal)
+      : - [Charcoal](/c/colors/v3.0.1/#colors--charcoal)
         - Opacity: 60%
 
       Focus behavior
-      : - Follow [the default behaviors for "X" defined in the drawer](/design/c/drawer/)
-        - Follow [the default behaviors for buttons](/design/c/buttons/)
+      : - Follow [the default behaviors for "X" defined in the drawer](/c/drawer/)
+        - Follow [the default behaviors for buttons](/c/buttons/)
 
       __Use the native modal for native mobile apps.__ The specs in this documentation is for responsive web mobile design.
 
@@ -297,7 +274,7 @@ blocks:
 
       Line
       : - Thickness: 1px
-        - [Concrete](/design/c/colors/v3.0.1/#colors--concrete)
+        - [Concrete](/c/colors/v3.0.1/#colors--concrete)
 
       Focus Behavior
       : - For sticky buttons, the scrollable area must be focusable and scrollable via the keyboard
@@ -343,6 +320,12 @@ blocks:
 
 
 changelog:
+  - version: 2.0.5
+    person: Linda Tsai
+    changes: |
+      - REFINED: Content to make it more clear and concise
+      - CHANGED: The minimum margin on the top and bottom of the modal to be 20px
+      - FIXED: Broken links
   - version: 2.0.4
     changes: |
       - FIXED: Scrolling behavior of modal actions on a vertically constrained or zoomed in screen

@@ -4,10 +4,18 @@ title: Modal
 section: Components
 sdk: stand_alone
 redirect_from: /docs/ui-components/modal/
-version: 2.0.5
+version: 2.0.4
 status: deprecated
 implemented: true
 implementation: https://github.com/Pearson-Higher-Ed/modal/
+people:
+  - role: Designer
+    name: Van Yang
+    email: van.yang@pearson.com
+  - role: Designer
+    name: Linda Tsai
+    email: linda.tsai@pearson.com
+
 dependencies:
   - name: Buttons
     version: 2.2.1
@@ -19,6 +27,7 @@ dependencies:
     version: 2.3.0
   - name: Breakpoints
     version: 1.0.2
+
 
 downloads:
   - name: UX Accessibility Checklist
@@ -334,11 +343,6 @@ blocks:
 
 
 changelog:
-  - version: 2.0.5
-    person: Linda Tsai
-    changes: |
-      - CHANGED: Edited content to make it more clear and concise
-      - CHANGED: Defined the min margin on the top and bottom of the modal
   - version: 2.0.4
     changes: |
       - FIXED: Scrolling behavior of modal actions on a vertically constrained or zoomed in screen
