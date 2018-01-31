@@ -73,7 +73,7 @@ blocks:
 
         Users should be able to understand the choices based on the header and button label. If header is applied, make the question or statement clear followed by an explanation in the content area. Avoid apologies or ambiguity such as “Be careful!” or “Are you sure?”.
 
-        Note that when there is no header, designer should still provide a name for the modal to the developers because a screen reader user would need this.
+        Note that when there is no header, designer should still provide a name for the modal to the developers because a screen reader user would need this for accessibility reasons.
 
       * __Content__
 
@@ -195,7 +195,7 @@ blocks:
   - type: two column
     text: |
 
-      ### Responsive Behavior
+      ### Responsive behavior
       They layout of the modal changes at different [breakpoints](/c/breakpoints/):
 
       - Medium device (md) and up (768px <= viewport)
@@ -211,8 +211,8 @@ blocks:
         - sm: 440px
         - xs: Auto
 
-      Distance between the modal and the edge of the viewport
-      : - minimum distance: 20px
+      Margin (Distance between the modal and the window)
+      : - Minimum: 20px
 
       Spacing
       : - md devices have a more generous spacing (see illustration on the right)
@@ -263,7 +263,7 @@ blocks:
   - type: two column
     text: |   
 
-      ### Scrolling Modals
+      ### Scrolling modals
       When the content exceeds the height of the viewport, the modal will become scrollable. The scrolling behavior differs depending on the scenarios:
 
       * __Modal with actions:__ Sticky buttons (with exceptions specified below under "responsive behavior")
@@ -301,7 +301,7 @@ blocks:
   - type: two column
     text: |  
 
-      ### Responsive Buttons  
+      ### Buttons are responsive
 
       - __md and up:__ Default (fixed padding)
       - __sm & xs:__ Expanded (filling up the full width of the container)
