@@ -3,7 +3,7 @@ layout: component-yaml
 title: Drawer
 section: Components
 sdk: stand_alone
-version: 2.0.2
+version: 2.0.3
 rebranded: true
 status: active
 implemented: true
@@ -205,6 +205,10 @@ blocks:
         - ease-in-out
 
 changelog:
+  - version: 2.0.3
+    person: Linda Tsai
+    changes: |
+      - ADDED: Specification for touch target sizes around the BACK arrow and text
   - version: 2.0.2
     person: Linda Tsai
     changes: |
