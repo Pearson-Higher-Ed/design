@@ -2,9 +2,9 @@
 layout: component-yaml
 title: Typography
 section: Components
-version: 2.1.1
+version: 2.1.2
 rebranded: true
-status: deprecated
+status: active
 implemented: true
 people:
   - role: Product Owner
@@ -253,6 +253,9 @@ blocks:
       * `<sub>, <sup>`
       * `<mark>`
       * `<code>, <kbd>`
+
+      #### Link underlines
+      By default links have an underline which is good for situations when the links are surrounded by static text. For situations where there is a group of links without any nearby static text it can be visually cleaner to reverse the behavior: link text has no underline to start and an underline is added on hover. In all cases the same color scheme should be used for normal vs hovered links.
     contents:
       - type: narrow image
         src: ./assets/inline.1.png
@@ -533,6 +536,7 @@ blocks:
       : - Generic link = [Digital Pearson Blue](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--digital-pearson-blue) and underline
         - Hover link = [Ink Blue](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--ink-blue), no underline
         - Focus states use the default browser style, and also adopt the hover style
+        - In cases where links appear separately from static text the underline behavior can be reversed (i.e. normal link = no underline, hover = underline)
 
       `<mark>`
       : - [Sunshine Yellow](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--sunshine-yellow) background-color
@@ -592,6 +596,9 @@ blocks:
 
 
 changelog:
+  - version: 2.1.2
+    changes: |
+      - CLARIFIED: Link underline usage
   - version: 2.1.1
     changes: |
       - ADDED: Feature links
