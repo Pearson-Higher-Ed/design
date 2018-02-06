@@ -4,7 +4,7 @@ title: Typography
 section: Components
 version: 2.1.1
 rebranded: true
-status: active
+status: deprecated
 implemented: true
 people:
   - role: Product Owner

@@ -15,7 +15,6 @@
       </div>
 
       <h2 id="design-requirements">Design Requirements</h2>
-
       {% for section in page.design_reqs %}
       <div class="reqs">
         <h3 id="{{section.name | slugify}}">{{section.name}}</h3>
@@ -30,9 +29,8 @@
               <use xlink:href="#checkbox-off-18"></use>
             </svg>
           </div>
-          <div class="item">
+          <div>
             <div class="label">{{req.req | markdownify}}</div>
-
             <div class="explanation">
               {% for extra in req.extras %}
                 {{extra.content | markdownify}}
@@ -45,7 +43,8 @@
       </div>
       {% endfor %}
 
-
+<br/>
+<br/>
       <h2 id="dev-requirements">Development Requirements</h2>
       {% for section in page.dev_reqs %}
       <div class="reqs">
@@ -53,31 +52,22 @@
         {% if section.description %}<div class="description">{{section.description | markdownify}}</div>{% endif %}
 
         {% for req in section.reqs %}
-        <div class="req">
+        <div class="req" {% unless req.extras %}data-no-explanation="true"{% endunless %}>
+          <div class="icon">
+            <svg style="vertical-align:baseline"
+                 aria-hidden="true"
+                 focusable="false"
+                 class="pe-icon--checkbox-off-18">
+              <use xlink:href="#checkbox-off-18"></use>
+            </svg>
+          </div>
           <div>
-            {{req.req | markdownify}}
-            {% if req.type == 'mandatory' %}
-              <span class="required">Mandatory</span>
-            {% else if req.type == 'suggested' %}
-              <span class="should">Strongly Recommended</span>
-            {% endif %}
-          </div>
+            <div class="label">{{req.req | markdownify}}</div>
 
-          {% for extra in req.extras %}
-          <div class="explanation">
-            <button class="heading">{{extra.name}}</button>
-            <div class="content">{{extra.content | markdownify}}</div>
-          </div>
-          {% endfor %}
-
-          <div class="approvers">
-            <button class="heading">Approvers</button>
-            <div class="content">
-              <ul>
-                {% for approver in req.approvers %}
-                <li>{{approver}}</li>
-                {% endfor %}
-              </ul>
+            <div class="explanation">
+              {% for extra in req.extras %}
+                {{extra.content | markdownify}}
+              {% endfor %}
             </div>
           </div>
         </div>
