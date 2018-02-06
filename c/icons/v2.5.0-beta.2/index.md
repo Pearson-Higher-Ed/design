@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Icons
 section: Components
-version: 2.5.0-beta.1
-status: deprecated
+version: 2.5.0-beta.2
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -87,7 +87,6 @@ blocks:
           | ![](./assets/icons24/file-pdf-24-2x.png) | file-pdf-18 | file-pdf-24 |
           | ![](./assets/icons24/file-powerpoint-24-2x.png) | file-powerpoint-18 | file-powerpoint-24 |
           | ![](./assets/icons24/file-word-24-2x.png) | file-word-18 | file-word-24 |
-          | ![](./assets/icons24/flip-card-24-2x.png) | flip-card-18 | flip-card-24 |
           | ![](./assets/icons24/font-lg-24-2x.png) | font-lg-18 | font-lg-24 |
           | ![](./assets/icons24/font-sm-24-2x.png) | font-sm-18 | font-sm-24 |
           | ![](./assets/icons24/font-setting-24-2x.png) | font-setting-18 | font-setting-24 |
@@ -309,6 +308,9 @@ blocks:
           src: ./assets/touch-target.png
 
 changelog:
+  - version: 2.5.0-beta.2
+    changes: |
+      - NEW ICONS: flip-card
   - version: 2.5.0-beta.1
     changes: |
       - NEW ICONS: adobe-acrobat, comment, download, upload, file-excel, file-pdf, file-powerpoint, file-word, flip-card, shopping-cart
