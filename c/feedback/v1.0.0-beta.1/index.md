@@ -33,14 +33,17 @@ dependencies:
     version: 1.1.0
 
 tagline: |
-  This component allows users to provide general and contextual feedback. The feedback component is associated with APIs created by Gary Hatton’s team.
+  This component lets users provide general and targeted feedback. This component is pointed to the Feedback API endpoints created by Gary Hatton’s team.
 usage_guidelines: |
-  Any feedback should follow the structure and behavior laid out in this component. Basic elements of the feedback component consist of a question, binary answer and/or comment box and system feedback via alerts.
+  To collect user feedback, follow the structure and behavior described in this component. The feedback component includes the following sets of basic elements:
 
+  * Comment box
+  * Question, Yes or No response, and alert
+  * Question, Yes or No response, comment box, and alerts
 features:
-  - General feedback with only comment box
-  - Contextual feedback with binary answer
-  - Contextual feedback with binary answer and comment box
+  - General feedback with only a comment box
+  - Targeted feedback with Yes or No response
+  - Targeted feedback with Yes or No response and comment box
 
 blocks:
   - type: section
@@ -52,20 +55,18 @@ blocks:
 
     contents:
       - type: narrow image
-        src: ./assets/help-list-2x.png
-      - type: narrow image
-        src: ./assets/help-detail-2x.png
+        src: ./assets/Contextual_Feedback_CommentBox.jpg
 
 
 
   - type: section
-    name: Contextual feedback with binary answer
+    name: Targeted feedback with Yes or No response
 
   - type: two column
     text: |
-      For contextual feedback where a binary answer is required, use "Yes" and "No".
+      This feedback feature lets you ask a question targeted at obtaining feedback for selected content(for example, a selected help topic). The user response requires either Yes or No.
 
-      Follow up with system status in alert message.
+      "Note: Follow up with an alert message to acknowledge that the feedback was received."
 
     contents:
       - type: narrow image
@@ -75,13 +76,13 @@ blocks:
 
 
   - type: section
-    name: Contextual feedback with binary answer and comment box
+    name: Targeted feedback with Yes or No response and comment box
 
   - type: two column
     text: |
-      For contextual feedback that combines binary answer and positive/negative sentiment, use "Yes/No" and comment box.
+      This feedback feature lets you add a comment field to the previous targeted feedback user flow. Use its elements when you want to get more information to better understand the Yes or No response.
 
-      Follow up with system status in alert message.
+      "Note: Follow up with an alert message to acknowledge that the feedback was received."
 
     contents:
     - type: narrow image
@@ -108,7 +109,7 @@ blocks:
       Typography
       : - Question title is a [UI Text - Bold](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-bold)
 
-      Multiple Line Text
+      Input
       : - Uses the [Multiple line text]
 
       Button
@@ -125,8 +126,7 @@ blocks:
       Button
       : - [Primary Buttons](/c/buttons/v2.2.1/#buttons--primary-button)
 
-      Alert
-      : - Uses the [Inline Alert](http://uxframework.pearson.com/c/alerts/v2.0.3/#alerts--inline-alert) style, typically in the [Warning/Error variant](http://uxframework.pearson.com/c/alerts/v2.0.3/#alerts--warning-error-alert)
+
 
     contents:
       - type: wide image
