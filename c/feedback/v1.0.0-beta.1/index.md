@@ -66,7 +66,7 @@ blocks:
     text: |
       This feedback feature lets you ask a question targeted at obtaining feedback for selected content(for example, a selected help topic). The user response requires either Yes or No.
 
-      "Note: Follow up with an alert message to acknowledge that the feedback was received."
+      Note: Follow up with an alert message to acknowledge that the feedback was received.
 
     contents:
       - type: narrow image
@@ -82,7 +82,7 @@ blocks:
     text: |
       This feedback feature lets you add a comment field to the previous targeted feedback user flow. Use its elements when you want to get more information to better understand the Yes or No response.
 
-      "Note: Follow up with an alert message to acknowledge that the feedback was received."
+      Note: Follow up with an alert message to acknowledge that the feedback was received.
 
     contents:
     - type: narrow image
@@ -123,10 +123,14 @@ blocks:
     text: |
       ### Contextual feedback with binary answer
 
+      Typography
+      : - Question title is a [UI Text - Bold](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-bold)
+
       Button
       : - [Primary Buttons](/c/buttons/v2.2.1/#buttons--primary-button)
 
-
+      Alert
+      : - Uses the [Inline Alert](http://uxframework.pearson.com/c/alerts/v2.0.3/#alerts--inline-alert) style
 
     contents:
       - type: wide image
@@ -141,14 +145,14 @@ blocks:
       Typography
       : - Question title is a [UI Text - Bold](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-bold)
 
-      Multiple Line Text
+      Input
       : - Uses the [Multiple line text]
 
       Button
       : - [Primary Buttons](/c/buttons/v2.2.1/#buttons--primary-button)
 
       Alert
-      : - Uses the [Inline Alert](http://uxframework.pearson.com/c/alerts/v2.0.3/#alerts--inline-alert) style, typically in the [Warning/Error variant](http://uxframework.pearson.com/c/alerts/v2.0.3/#alerts--warning-error-alert)
+      : - Uses the [Inline Alert](http://uxframework.pearson.com/c/alerts/v2.0.3/#alerts--inline-alert) style
 
     contents:
       - type: wide image
