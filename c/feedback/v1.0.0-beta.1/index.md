@@ -55,7 +55,7 @@ blocks:
 
     contents:
       - type: narrow image
-        src: ./assets/Contextual_Feedback_CommentBox.jpg
+        src: ./assets/Contextual_Feedback_CommentBox@2x.jpg
 
 
 
@@ -70,9 +70,9 @@ blocks:
 
     contents:
       - type: narrow image
-        src: ./assets/Contextual_Feedback_YN.jpg
+        src: ./assets/Contextual_Feedback_YN@2x.jpg
       - type: narrow image
-        src: ./assets/Contextual_Feedback_SuccessMessage.jpg
+        src: ./assets/Contextual_Feedback_SuccessMessage@2x.jpg
 
 
   - type: section
@@ -86,11 +86,11 @@ blocks:
 
     contents:
     - type: narrow image
-      src: ./assets/Contextual_Feedback_YN.jpg
+      src: ./assets/Contextual_Feedback_YN@2x.jpg
     - type: narrow image
-      src: ./assets/Contextual_Feedback_CommentBox.jpg
+      src: ./assets/Contextual_Feedback_CommentBox@2x.jpg
     - type: narrow image
-      src: ./assets/Contextual_Feedback_SuccessMessage.jpg
+      src: ./assets/Contextual_Feedback_SuccessMessage@2x.jpg
 
 
   - type: section
@@ -117,7 +117,7 @@ blocks:
 
     contents:
       - type: wide image
-        src: ./assets/Redline-01.jpg
+        src: ./assets/Redline-01@2x.jpg
 
   - type: two column
     text: |
@@ -134,9 +134,9 @@ blocks:
 
     contents:
       - type: wide image
-        src: ./assets/Redline-01.jpg
+        src: ./assets/Redline-01@2x.jpg
       - type: wide image
-        src: ./assets/Redline-03.jpg
+        src: ./assets/Redline-03@2x.jpg
 
   - type: two column
     text: |
@@ -156,11 +156,11 @@ blocks:
 
     contents:
       - type: wide image
-        src: ./assets/Redline-01.jpg
+        src: ./assets/Redline-01@2x.jpg
       - type: wide image
-        src: ./assets/Redline-02.jpg
+        src: ./assets/Redline-02@2x.jpg
       - type: wide image
-        src: ./assets/Redline-03.jpg
+        src: ./assets/Redline-03@2x.jpg
 
 
 changelog:
