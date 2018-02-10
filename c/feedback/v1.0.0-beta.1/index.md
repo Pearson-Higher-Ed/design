@@ -16,11 +16,7 @@ downloads:
   - name: UX Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1YjPJz6ZJgG6m4iJvtTFYuhIBGVuefHpzYx3H_lPU-vo/edit?usp=sharing
   - name: .sketch
-    link: ./assets/contextual-help.mockup.sketch
-  - name: .ai
-    link: ./assets/contextual-help.mockup.ai
-  - name: Authoring Guidelines
-    https: https://docs.google.com/document/d/1tQVifP2ynJhHlg7R-Odk2Ej1qQxMs0SQ67fYzTlYjM8/edit?ts=578397b6
+    link: ./assets/Feedback-1.0
 
 dependencies:
   - name: Drawer
@@ -33,13 +29,13 @@ dependencies:
     version: 1.1.0
 
 tagline: |
-  This component lets users provide general and targeted feedback. This component is pointed to the Feedback API endpoints created by Gary Hatton’s team.
+  This component lets users provide general and targeted feedback. This component must point to the Feedback API provided by the Social and Engagement team.
 usage_guidelines: |
   To collect user feedback, follow the structure and behavior described in this component. The feedback component includes the following sets of basic elements:
 
   * Comment box
   * Question, Yes or No response, and alert
-  * Question, Yes or No response, comment box, and alerts
+  * Question, Yes or No response, comment box, and alert
 features:
   - General feedback with only a comment box
   - Targeted feedback with Yes or No response
