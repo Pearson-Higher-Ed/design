@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Layout
 section: Components
-version: 1.0.0-beta.3
-status: deprecated
+version: 1.0.0-beta.4
+status: active
 people:
   - role: Designer
     name: Parker Malenke
@@ -85,7 +85,7 @@ blocks:
 
       2. In addition to the tags, you can add additional descriptions to the sections.
 
-          This is typically not necessary for simple layouts, especially if there is only 1 of each type of tag. However, if there are duplicated sections (like two navigation regions) then an additional description (an "ARIA" label) is helpful. For example, you may have "site" for the main page navigation then "pagination" for page navigation at the bottom of the page.
+          This is typically not necessary for simple layouts, especially if there is only 1 of each type of tag. However, if there are duplicated sections (like two navigation regions) then an additional description (an "ARIA" label) is helpful. For example, you may have "site" for the main page navigation then "pagination" for page navigation at the bottom of the page. Speak with a developer if you're unsure about duplicate regions.
     contents:
       - type: wide image
         src: ./assets/regions.png
@@ -136,11 +136,61 @@ blocks:
     features:
       - Triple Content Zone
 
+  - type: section
+    name: Sketch Settings
+
+  - type: two column
+    text: |
+      For designing in sketch, you can set the layout guide to the following settings to match the dimensions specified by this component.
+
+      For screens 1220px or wider:
+
+      - Columns: enabled
+      - Total Width: 1140px
+      - Offset: click "Center" button after all other settings configured
+      - Number of Columns: 12
+      - Gutter on outside: disabled
+      - Gutter Width: 40px
+      - Column Width: 58px
+    contents:
+      - type: wide image
+        src: ./assets/sketch.settings.png
+        border: true
+
+  - type: section
+    name: Redlines
+
+  - type: two column
+    text: |
+      Container
+      : - Maximum width of 1140px
+        - Always horizontally centered
+
+      Container Margins
+      : - ≥ 40px at [Large and Extra Large](/design/c/breakpoints/v1.0.0/#rd-large) breakpoints
+        - 20px at [Small and Medium](/design/c/breakpoints/v1.0.0/#rd-medium) breakpoints
+        - 10px at Extra Small breakpoints
+
+      Gutters
+      : - 40px at [Medium](/design/c/breakpoints/v1.0.0/#rd-medium) and larger breakpoints
+        - 20px at [Small](/design/c/breakpoints/v1.0.0/#rd-small) breakpoints
+        - 10px at [Extra Small](/design/c/breakpoints/v1.0.0/#rd-extra-small) breakpoints
+
+      Columns
+      : - Equal widths, size determined by remaining space after accounting for the container width and gutter size
+    contents:
+      - type: wide image
+        src: ./assets/illustration.png
 
 
 
 
 changelog:
+  - version: 1.0.0-beta.4
+    changes: |
+      - UPDATED: Visual style of example images
+      - ADDED: Sketch layout settings guide
+      - ADDED: Redlines
   - version: 1.0.0-beta.3
     changes: |
       - ADDED: Navigation region guidance
