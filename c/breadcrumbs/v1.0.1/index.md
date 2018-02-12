@@ -2,7 +2,7 @@
 layout: component-yaml
 title: Breadcrumbs
 section: Components
-version: 1.0.0-beta.5
+version: 1.0.1
 status: active
 people:
   - role: Product Owner
@@ -123,21 +123,12 @@ blocks:
         src: ./assets/breadcrumbs-redlines-2x.png
 
 changelog:
-  - version: 1.0.0-beta.5
+  - version: 1.0.1
     changes: |
       - ADDED: underlined link style on hover
-  - version: 1.0.0-beta.4
+  - version: 1.0.0
+    person: Van Yang
     changes: |
-      - CHANGED: Placement image to include a mobile screen
-      - ADDED: Images are scale up description
-  - version: 1.0.0-beta.3
-    changes: |
-      - CHANGED: Page titles are displayed in bold font
-      - REMOVED: Path and attribute based breadcrumbs
-  - version: 1.0.0-beta.2
-    changes: |
-      - CHANGED: Page titles are displayed in larger font
-  - version: 1.0.0-beta.1
-    changes: Initial version
+      - INITIAL VERSION
 
 ---
