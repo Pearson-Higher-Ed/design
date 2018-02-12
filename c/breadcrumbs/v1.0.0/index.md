@@ -3,7 +3,7 @@ layout: component-yaml
 title: Breadcrumbs
 section: Components
 version: 1.0.0
-status: active
+status: deprecated
 implemented: https://github.com/Pearson-Higher-Ed/elements-sdk
 
 a11y_checklist: https://docs.google.com/a/pearson.com/document/d/1CkiA8PtZ23itHbAuc_LczZk5ulojSp6G95aE8lUyFL8/edit?usp=sharing  https://drive.google.com/drive/u/1/folders/0B7rSuWUVXiuLa3R5RjRCN0lBTlE
