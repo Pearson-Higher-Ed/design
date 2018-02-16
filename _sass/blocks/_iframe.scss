@@ -1,0 +1,20 @@
+.live-example {
+    border-top: 2px solid $pe-color-alto;
+    padding-top: 60px;
+  
+    h2:before {
+      display: block;
+      content: " ";
+      margin-top: -60px;
+      height: 60px;
+      visibility: hidden;
+    }
+
+    iframe{
+      width: 100%;
+      height: auto;
+      border: 1px solid $pe-color-alto;
+      background-color: #ffffff;
+      margin-bottom: 60px;
+    }
+}

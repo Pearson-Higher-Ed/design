@@ -39,6 +39,10 @@ usage_guidelines: |
   Use this component when the options listed represent actions or navigation destinations. Prefer the standard [select inputs](/design/c/inputs/#select) for all other use cases.
 
 blocks:
+  - type: live example
+    name: Live examples
+    link: http://45.55.127.237/pearson-glp-pl/patterns/00-ui-kit-05-dropdown-01-dropdown/00-ui-kit-05-dropdown-01-dropdown.rendered.html
+    
   - type: section
     name: Dropdown menu
 

@@ -29,6 +29,10 @@ features:
 usage_guidelines:
 
 blocks:
+  - type: live example
+    name: Live examples
+    link: http://45.55.127.237/pearson-glp-pl/patterns/00-ui-kit-04-buttons-07-sizes/00-ui-kit-04-buttons-07-sizes.rendered.html
+
   - type: section
     name: Types
 

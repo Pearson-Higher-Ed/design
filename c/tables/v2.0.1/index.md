@@ -42,6 +42,10 @@ downloads:
     link: ./assets/tables.sketch
 
 blocks:
+  - type: live example
+    name: Live examples
+    link: http://45.55.127.237/pearson-glp-pl/patterns/00-ui-kit-19-tables-02-sortable/00-ui-kit-19-tables-02-sortable.rendered.html
+
   - type: section
     name: Basic Table
 

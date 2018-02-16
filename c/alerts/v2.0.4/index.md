@@ -40,6 +40,10 @@ usage_guidelines: |
   Use global alerts for messages which are time sensitive but dismissible. The inline alerts may be used in this manner, or to provide more persistent information that relates to a particular region of the page.
 
 blocks:
+  - type: live example
+    name: Live examples
+    link: http://45.55.127.237/pearson-glp-pl/patterns/00-ui-kit-21-alerts-03-error/00-ui-kit-21-alerts-03-error.rendered.html
+
   - type: section
     name: Global Alert
 

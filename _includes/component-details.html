@@ -225,6 +225,12 @@
         {% endif %}
       </div>
 
+      {% when 'live example' %}
+      <div class="live-example">
+        <h2 class="pe-title pe-bold" id="{{block.name | slugify}}">{{block.name}}</h2>
+        <iframe src="{{block.link}}"></iframe>
+      </div>
+
       {% when 'full page image' %}
       <div class="fullpage">
         <div class="text">
