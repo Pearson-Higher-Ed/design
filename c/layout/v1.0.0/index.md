@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Layout
 section: Components
-version: 1.0.0-beta.4
-status: deprecated
+version: 1.0.0
+status: active
 people:
   - role: Designer
     name: Parker Malenke
@@ -186,17 +186,6 @@ blocks:
 
 
 changelog:
-  - version: 1.0.0-beta.4
-    changes: |
-      - UPDATED: Visual style of example images
-      - ADDED: Sketch layout settings guide
-      - ADDED: Redlines
-  - version: 1.0.0-beta.3
-    changes: |
-      - ADDED: Navigation region guidance
-  - version: 1.0.0-beta.2
-    changes: |
-      - UPDATED: Example image for clarity
-  - version: 1.0.0-beta.1
+  - version: 1.0.0
     changes: Initial version.
 ---

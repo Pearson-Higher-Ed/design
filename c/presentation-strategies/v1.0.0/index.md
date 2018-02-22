@@ -3,7 +3,7 @@ layout: component-yaml
 title: Presentation Strategies
 section: Components
 version: 1.0.0
-status: active
+status: deprecated
 implemented: false
 people:
   - role: Product Owner
