@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Icons
 section: Components
-version: 2.4.0
-status: deprecated
+version: 2.5.0
+status: active
 people:
   - role: Product Owner
     name: Joe Macaluso
@@ -13,8 +13,8 @@ people:
     email: van.yang@pearson.com
 implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
 downloads:
-  - name: Pearson_icons_symbols_1.8.sketch
-    link: ./assets/Pearson_icons_symbols_1.8.sketch
+  - name: Pearson_icons_symbols_1.9.sketch
+    link: ./assets/Pearson_icons_symbols_1.9.sketch
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1_GgUlsE5WLej0Ujf1oTeZvft2xLSEJnK-Jsqht_rmZg/edit?usp=sharing
 
@@ -58,6 +58,7 @@ blocks:
         content: |
           | General |      |      |
           | :-----: | :--- | :--- |
+          | ![](./assets/icons24/adobe-acrobat-24-2x.png) | adobe-acrobat-18 | adobe-acrobat-24 |
           | ![](./assets/icons24/archive-24-2x.png) | archive-18 | archive-24 |
           | ![](./assets/icons24/ban-24-2x.png) | ban-18 | ban-24 |
           | ![](./assets/icons24/book-24-2x.png) | book-18 | book-24 |
@@ -72,15 +73,20 @@ blocks:
           | ![](./assets/icons24/chevron-next-24-2x.png) | chevron-next-18 | chevron-next-24 |
           | ![](./assets/icons24/chevron-back-sm-24-2x.png) | chevron-back-sm-18 | chevron-back-sm-24 |
           | ![](./assets/icons24/chevron-next-sm-24-2x.png) | chevron-next-sm-18 | chevron-next-sm-24 |
-          | ![](./assets/icons24/point-back-24-2x.png) | point-back-18 | point-back-24 |
-          | ![](./assets/icons24/point-next-24-2x.png) | point-next-18 | point-next-24 |
+          | ![](./assets/icons24/comment-24-2x.png) | comment-18 | comment-24 |
           | ![](./assets/icons24/clock-24-2x.png) | clock-18 | clock-24 |
           | ![](./assets/icons24/delete-24-2x.png) | delete-18 | delete-24 |
           | ![](./assets/icons24/desktop-24-2x.png) | desktop-18 | desktop-24 |
+          | ![](./assets/icons24/download-24-2x.png) | download-18 | download-24 |
+          | ![](./assets/icons24/upload-24-2x.png) | upload-18 | upload-24 |
           | ![](./assets/icons24/edit-24-2x.png) | edit-18 | edit-24 |
           | ![](./assets/icons24/ellipsis-24-2x.png) | ellipsis-18 | ellipsis-24 |
           | ![](./assets/icons24/email-24-2x.png) | email-18 | email-24 |
           | ![](./assets/icons24/file-24-2x.png) | file-18 | file-24 |
+          | ![](./assets/icons24/file-excel-24-2x.png) | file-excel-18 | file-excel-24 |
+          | ![](./assets/icons24/file-pdf-24-2x.png) | file-pdf-18 | file-pdf-24 |
+          | ![](./assets/icons24/file-powerpoint-24-2x.png) | file-powerpoint-18 | file-powerpoint-24 |
+          | ![](./assets/icons24/file-word-24-2x.png) | file-word-18 | file-word-24 |
           | ![](./assets/icons24/font-lg-24-2x.png) | font-lg-18 | font-lg-24 |
           | ![](./assets/icons24/font-sm-24-2x.png) | font-sm-18 | font-sm-24 |
           | ![](./assets/icons24/font-setting-24-2x.png) | font-setting-18 | font-setting-24 |
@@ -94,15 +100,19 @@ blocks:
           | ![](./assets/icons24/link-24-2x.png) | link-18 | link-24 |
           | ![](./assets/icons24/note-24-2x.png) | note-18 | note-24 |
           | ![](./assets/icons24/notification-24-2x.png) | notification-18 | notification-24 |
+          | ![](./assets/icons24/point-back-24-2x.png) | point-back-18 | point-back-24 |
+          | ![](./assets/icons24/point-next-24-2x.png) | point-next-18 | point-next-24 |
           | ![](./assets/icons24/print-24-2x.png) | print-18 | print-24 |
           | ![](./assets/icons24/remove-lg-24-2x.png) | remove-lg-18 | remove-lg-24 |
           | ![](./assets/icons24/remove-sm-24-2x.png) | remove-sm-18 | remove-sm-24 |
           | ![](./assets/icons24/search-lg-24-2x.png) | search-lg-18 | search-lg-24 |
           | ![](./assets/icons24/search-sm-24-2x.png) | search-sm-18 | search-sm-24 |
           | ![](./assets/icons24/settings-24-2x.png) | settings-18 | settings-24 |
+          | ![](./assets/icons24/shopping-cart-24-2x.png) | shopping-cart-18 | shopping-cart-24 |
           | ![](./assets/icons24/tip-24-2x.png) | tip-18 | tip-24 |
           | ![](./assets/icons24/warning-24-2x.png) | warning-18 | warning-24
     features:
+      - Adobe Acrobat
       - Archive
       - Ban
       - Book
@@ -117,14 +127,19 @@ blocks:
       - Chevron-next
       - Chevron-back-sm
       - Chevron-next-sm
-      - Point-back
-      - Point-next
+      - Comment
       - Clock
       - Delete
+      - Download
+      - Upload
       - Edit
       - Ellipsis
       - Email
       - File
+      - File-Excel
+      - File-PDF
+      - File-Powerpoint
+      - File-Word
       - Font-lg
       - Font-sm
       - Font-setting
@@ -138,12 +153,15 @@ blocks:
       - Link
       - Note
       - Notification
+      - Point-back
+      - Point-next
       - Print
       - Remove-lg
       - Remove-sm
       - Search-lg
       - Search-sm
       - Settings
+      - Shopping Cart
       - Tip
       - Warning
 
@@ -289,6 +307,9 @@ blocks:
           src: ./assets/touch-target.png
 
 changelog:
+  - version: 2.5.0
+    changes: |
+      - NEW ICONS: adobe-acrobat, comment, download, upload, file-excel, file-pdf, file-powerpoint, file-word, shopping-cart
   - version: 2.4.0
     changes: |
       - ADDED: Icon recommendations for desktop web apps and mobile apps
