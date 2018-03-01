@@ -126,7 +126,7 @@ blocks:
             - Avoid excessive use of exclamation points (!).
 
   - type: section
-    name: Disabled Buttons
+    name: Disabled buttons
 
   - type: two column
     text: |
@@ -262,7 +262,8 @@ blocks:
   - type: two column
     text: |
       ### Button Spacing
-      Buttons are 16px apart by default
+      Horizontal spacing: 16px
+      Vertical spacing: 12px
 
     contents:
       - type: wide image
