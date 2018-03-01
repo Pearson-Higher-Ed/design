@@ -92,7 +92,7 @@ blocks:
 
       ### Buttons stack up when they don’t fit
 
-      Button labels should be as concise as possible - one or two words. However, in the case where multiple buttons just can’t fit in one row, stacking the buttons (not the label inside the buttons) is preferred.
+      Button labels should be as concise as possible - one or two words. However, in the case where multiple buttons just can’t fit in one row, stacking the buttons is preferred.
 
     contents:
       - type: narrow image
@@ -262,8 +262,8 @@ blocks:
   - type: two column
     text: |
       ### Button Spacing
-      Horizontal spacing: 16px
-      Vertical spacing: 12px
+      * Horizontal spacing: 16px
+      * Vertical spacing: 12px
 
     contents:
       - type: wide image
