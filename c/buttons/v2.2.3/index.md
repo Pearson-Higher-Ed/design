@@ -87,6 +87,19 @@ blocks:
       - type: wide image
         src: ./assets/button_placement_example.png
 
+  - type: two column
+    text: |  
+
+      ### Buttons stack up when they don’t fit
+
+      Button labels should be as concise as possible - one or two words. However, in the case where multiple buttons just can’t fit in one row, stacking the buttons (not the label inside the buttons) is preferred.
+
+    contents:
+      - type: narrow image
+        src: ./assets/stacked buttons_do.png
+      - type: narrow image
+        src: ./assets/stacked buttons_dont.png
+
   - type: section
     name: Button labels
 
