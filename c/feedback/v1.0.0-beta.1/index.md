@@ -2,7 +2,6 @@
 layout: component-yaml
 title: Feedback
 section: Components
-redirect_from: /docs/ui-components/contextual-help/
 version: 1.0.0-beta.1
 status: active
 implemented: false
@@ -11,6 +10,8 @@ people:
     name: Alex Johnson
   - role: Designer
     name: Tony Nguyen
+  - role: UX Writer
+    name: Carole Balawender
 
 downloads:
   - name: UX Accessibility Checklist
@@ -29,32 +30,17 @@ dependencies:
     version: 1.1.0
 
 tagline: |
-  This component lets users provide general and targeted feedback. This component must point to the Feedback API provided by the Social and Engagement team.
+  This component lets users provide targeted feedback. This component must point to the Feedback API provided by the Social and Engagement team.
 usage_guidelines: |
   To collect user feedback, follow the structure and behavior described in this component. The feedback component includes the following sets of basic elements:
 
-  * Comment box
   * Question, Yes or No response, and alert
   * Question, Yes or No response, comment box, and alert
 features:
-  - General feedback with only a comment box
   - Targeted feedback with Yes or No response
   - Targeted feedback with Yes or No response and comment box
 
 blocks:
-  - type: section
-    name: General Feedback
-
-  - type: two column
-    text: |
-      Displays feedback...
-
-    contents:
-      - type: narrow image
-        src: ./assets/Contextual_Feedback_CommentBox@2x.jpg
-
-
-
   - type: section
     name: Targeted feedback with Yes or No response
 
@@ -91,29 +77,6 @@ blocks:
 
   - type: section
     name: Redlines
-
-  - type: two column
-    text: |
-      ### General
-
-      Container
-      : - Modal
-
-      Spacing
-      : - 25px margin above article title and below article excerpt
-
-      Typography
-      : - Question title is a [UI Text - Bold](/design/c/typography/v2.0.0-beta.9/#rd-ui-text-bold)
-
-      Input
-      : - Uses the [Multiple line text]
-
-      Button
-      : - [Primary Buttons](/c/buttons/v2.2.1/#buttons--primary-button)
-
-    contents:
-      - type: wide image
-        src: ./assets/Redline-01@2x.jpg
 
   - type: two column
     text: |
