@@ -138,6 +138,7 @@ blocks:
         src: ./assets/double-input-default.png
         caption: Default state of double input field date picker (start/end).
 
+  - type: two column
     text: |
       ### Start Date Focus w/o Selection
       When the user interacts with the start date input field, it gains focus and the calendar appears.
