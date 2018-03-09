@@ -15,7 +15,6 @@ people:
   - role: Designer
     name: Van Yang
     email: van.yang@pearson.com
-implementation: https://www.npmjs.com/package/pearson-elements
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1_v_Kv57A9blAQ1K7qEThcizcLAygdD1B_nl2LJ5TzqA/edit?usp=sharing

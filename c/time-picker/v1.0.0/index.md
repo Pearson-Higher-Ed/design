@@ -134,6 +134,7 @@ blocks:
         src: ./assets/double-input-time-default.png
         caption: Default state of double input field time picker (start/end).
 
+  - type: two column
     text: |
       ### Start Time Focus w/o Selection
       When the user interacts with the start time input field, it gains focus and the dropdown appears.
