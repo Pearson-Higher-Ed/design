@@ -112,7 +112,7 @@ blocks:
         caption: Loading indicator redlines.
 
       - type: narrow image
-        src: ./assets/spinner.png
+        src: ./assets/Spinner.png
         caption: Spinner detail.
 
       - type: narrow image

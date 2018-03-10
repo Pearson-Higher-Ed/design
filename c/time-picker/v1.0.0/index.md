@@ -124,18 +124,6 @@ blocks:
 
   - type: two column
     text: |
-      This type of time picker is to be used for choosing a range with specific start and end times (ex. course beginning and end).
-
-      ### Default State
-      The default state of the first time input (start) initially behaves the same way as a single time input field.
-
-    contents:
-      - type: wide image
-        src: ./assets/double-input-time-default.png
-        caption: Default state of double input field time picker (start/end).
-
-  - type: two column
-    text: |
       ### Start Time Focus w/o Selection
       When the user interacts with the start time input field, it gains focus and the dropdown appears.
 

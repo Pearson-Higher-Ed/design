@@ -128,18 +128,6 @@ blocks:
 
   - type: two column
     text: |
-      This type of date picker is to be used for choosing a range with specific start and end dates (ex. course beginning and end).
-
-      ### Default State
-      The default state of the first date input (start) initially behaves the same way as a single date input field.
-
-    contents:
-      - type: wide image
-        src: ./assets/double-input-default.png
-        caption: Default state of double input field date picker (start/end).
-
-  - type: two column
-    text: |
       ### Start Date Focus w/o Selection
       When the user interacts with the start date input field, it gains focus and the calendar appears.
 

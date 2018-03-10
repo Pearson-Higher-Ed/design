@@ -59,7 +59,7 @@ blocks:
 
     contents:
       - type: wide image
-        src: ./assets/Input_states.png       
+        src: ./assets/Inputs_states.png       
 
   - type: section
     name: Inputs (single line)
@@ -87,7 +87,7 @@ blocks:
 
     contents:
       - type: wide image
-        src: ./assets/Input_multiline.png
+        src: ./assets/Inputs_multiline.png
 
   - type: section
     name: Select
@@ -103,7 +103,7 @@ blocks:
 
     contents:
       - type: narrow image
-        src: ./assets/Input_select.png
+        src: ./assets/Inputs_select.png
         caption: Closed and opened select.
 
   - type: section
@@ -119,7 +119,7 @@ blocks:
 
     contents:
       - type: narrow image
-        src: ./assets/Input_radiobutton.png
+        src: ./assets/Inputs_radiobutton.png
         caption: Various radio button states.
 
   - type: section
@@ -135,7 +135,7 @@ blocks:
 
     contents:
       - type: narrow image
-        src: ./assets/Input_checkbox.png
+        src: ./assets/Inputs_checkbox.png
         caption: Various checkbox states.
 
   - type: section
@@ -148,22 +148,22 @@ blocks:
       **Usage** Only label in the minority case (for example, if 6 fields are required and 2 are optional, only indicate the optional fields).
     contents:
       - type: narrow image
-        src: ./assets/Input_optional_1.png
+        src: ./assets/Inputs_optional_1.png
         caption: Required and Optional label
       - type: narrow image
-        src: ./assets/Input_optional_2.png
+        src: ./assets/Inputs_optional_2.png
         caption: Example using (optional)label in a form
 
   - type: two column
     text: |
-      ## Error Inputs State##
+      ## Error Inputs State ##
       **Error** is used when a field has been filled out incorrectly. This state should always be paired with an explanatory message.
 
       **Focused Error** appears when the user focuses an input with an error.
 
     contents:
       - type: wide image
-        src: ./assets/Input_error.png
+        src: ./assets/Inputs_error.png
 
   - type: two column
     text: |
@@ -171,7 +171,7 @@ blocks:
       Information/description text below the inputs.
     contents:    
         - type: narrow image
-          src: ./assets/Input_info.png
+          src: ./assets/Inputs_info.png
 
 
 
@@ -184,7 +184,7 @@ blocks:
 
     contents:
     - type: narrow image
-      src: ./assets/Input_icon.png
+      src: ./assets/Inputs_icon.png
 
   - type: section
     name: Redlines
