@@ -2,6 +2,17 @@ var fs = require('fs')
 var yaml = require('js-yaml')
 var marked = require('marked')
 
+function slugify(text)
+{
+  return text.toString().toLowerCase()
+    .replace(/\s+/g, '-')           // Replace spaces with -
+    .replace(/\.+/g, '-')           // Replace . with -
+    .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+    .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+    .replace(/^-+/, '')             // Trim - from start of text
+    .replace(/-+$/, '');            // Trim - from end of text
+}
+
 // read in parent IDs
 var parentIDs = JSON.parse(fs.readFileSync('./component_ids.json'))
 var folderIDs = JSON.parse(fs.readFileSync('./folder_ids.json'))
@@ -113,6 +124,15 @@ Object.keys(data).forEach(component => {
             )
             return mem
           }, {})
+        },
+        related: {
+          dependencies: {
+            '@model': 'EntryModel',
+            matchBy: 'slug',
+            matchValue: version.dependencies && version.dependencies.map(dep => {
+              return slugify(`${dep.name}-v${dep.version}`)
+            })
+          }
         }
       }
     })
