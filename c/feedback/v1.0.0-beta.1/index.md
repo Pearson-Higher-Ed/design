@@ -56,7 +56,6 @@ blocks:
       - type: narrow image
         src: ./assets/Contextual_Feedback_SuccessMessage@2x.jpg
 
-
   - type: section
     name: Targeted feedback with Yes or No response and comment box
 
@@ -73,7 +72,6 @@ blocks:
       src: ./assets/Contextual_Feedback_CommentBox@2x.jpg
     - type: narrow image
       src: ./assets/Contextual_Feedback_SuccessMessage@2x.jpg
-
 
   - type: section
     name: Redlines
@@ -120,7 +118,6 @@ blocks:
         src: ./assets/Redline-02@2x.jpg
       - type: wide image
         src: ./assets/Redline-03@2x.jpg
-
 
 changelog:
   - version: 1.0.0-beta.1
