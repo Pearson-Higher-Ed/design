@@ -7,6 +7,13 @@ _site
 .jekyll-metadata
 .bundle/config
 
+# exporter stuff
+assets.json
+component_ids.json
+components.json
+folder_ids.json
+versions.json
+
 node_modules/*
 !node_modules/pearson-elements
 !node_modules/pearson-compounds

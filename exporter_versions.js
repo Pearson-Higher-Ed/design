@@ -98,6 +98,18 @@ function blockData(block, folder) {
 
 Object.keys(data).forEach(component => {
   data[component].forEach(version => {
+
+    var a11y_checklist = ""
+    var sketch_file = ""
+    version.downloads && version.downloads.forEach((doc) => {
+      if (doc.name.indexOf('ccessib') !== -1) {
+        a11y_checklist = doc.link
+      }
+      if (doc.name.indexOf('.sketch')) {
+        sketch_file = doc.link
+      }
+    })
+
     versions.push({
       '@model': 'EntryModel',
       attributes: {
@@ -113,6 +125,7 @@ Object.keys(data).forEach(component => {
           tagline: marked(String(version.tagline || "")),
           description: marked(String(version.description || "")),
           usageGuidelines: marked(String(version.usage_guidelines || "")),
+          accessibilityChecklist: version.a11y_checklist || a11y_checklist,
           features: version.features && version.features.reduce((mem, feature, i) => {
             mem[`row${i+1}`] = {col1: feature}
             return mem
