@@ -1,6 +1,10 @@
 var fs = require('fs')
 var yaml = require('js-yaml')
-var marked = require('marked')
+// var marked = require('marked')
+var Remarkable = require('remarkable')
+var md = new Remarkable('full')
+var marked = function(text) { return md.render(text) }
+var cheerio = require('cheerio')
 
 function slugify(text)
 {
@@ -48,7 +52,51 @@ folders.forEach(folder => {
 
 // Create version json file
 var versions = []
-function blockData(block, folder) {
+
+function textToRedlinesHTML(text) {
+  if (!text) return ''
+  var $ = cheerio.load(marked(text))
+  var $table = cheerio.load('<table><tbody></tbody></table>')
+  $('dl').each(function() {
+    var $ownTable = $table('table').clone()
+    $(this).children().each(function() {
+      if ($(this).is('dt')) {
+        $ownTable
+          .find('tbody')
+          .first()
+          .append(`<tr><td>${$(this).html()}</td></tr>`)
+      } else if ($(this).is('dd')) {
+        $(this).find('li').each(function(i) {
+          if (i === 0) {
+            $ownTable
+              .find('tr')
+              .last()
+              .append(`<td>${$(this).html()}</td>`)
+          } else {
+            $ownTable
+              .find('tbody')
+              .first()
+              .append(`<tr><td></td><td>${$(this).html()}</td>`)
+          }
+        })
+      }
+    })
+    $(this).replaceWith($ownTable)
+  })
+  return $.html()
+}
+
+function blockData(block, folder, redlines) {
+  if (redlines) {
+    return {
+      type: 'redlines',
+      enabled: 1,
+      fields: {
+        explanation: textToRedlinesHTML(block.text)
+      }
+    }
+  }
+
   switch (block.type) {
     case 'two column':
     case 'two_column':
@@ -110,6 +158,7 @@ Object.keys(data).forEach(component => {
       }
     })
 
+    var intoRedlines = false
     versions.push({
       '@model': 'EntryModel',
       attributes: {
@@ -126,14 +175,18 @@ Object.keys(data).forEach(component => {
           description: marked(String(version.description || "")),
           usageGuidelines: marked(String(version.usage_guidelines || "")),
           accessibilityChecklist: version.a11y_checklist || a11y_checklist,
-          features: version.features && version.features.reduce((mem, feature, i) => {
-            mem[`row${i+1}`] = {col1: feature}
+          features: version.features && version.features.reduce((mem, f, i) => {
+            mem[`row${i+1}`] = {col1: f}
             return mem
           }, {}),
           blocks: version.blocks && version.blocks.reduce((mem, block, i) => {
+            if (block.name && block.name.toLowerCase() === 'redlines') {
+              intoRedlines = true
+            }
             mem[`new${i+1}`] = blockData(
               block,
-              `${component}-v${version.version}`
+              `${component}-v${version.version}`,
+              intoRedlines
             )
             return mem
           }, {})
@@ -142,8 +195,8 @@ Object.keys(data).forEach(component => {
           dependencies: {
             '@model': 'EntryModel',
             matchBy: 'slug',
-            matchValue: version.dependencies && version.dependencies.map(dep => {
-              return slugify(`${dep.name}-v${dep.version}`)
+            matchValue: version.dependencies && version.dependencies.map(d => {
+              return slugify(`${d.name}-v${d.version}`)
             })
           }
         }
