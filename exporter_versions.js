@@ -92,7 +92,12 @@ function blockData(block, folder, redlines) {
       type: 'redlines',
       enabled: 1,
       fields: {
-        explanation: textToRedlinesHTML(block.text)
+        explanation: textToRedlinesHTML(block.text),
+        describedFeatures:
+          block.redlines && block.redlines.reduce((mem, f, i) => {
+            mem[`row${i+1}`] = {col1: f}
+            return mem
+          }, {})
       }
     }
   }
@@ -179,6 +184,18 @@ Object.keys(data).forEach(component => {
             mem[`row${i+1}`] = {col1: f}
             return mem
           }, {}),
+          changelog:
+            version.changelog && version.changelog.reduce((mem, chg, i) => {
+              mem[`new${i+1}`] = {
+                type: 'change',
+                enabled: 1,
+                fields: {
+                  version: chg.version,
+                  changes: marked(chg.changes)
+                }
+              }
+              return mem
+            }, {}),
           blocks: version.blocks && version.blocks.reduce((mem, block, i) => {
             if (block.name && block.name.toLowerCase() === 'redlines') {
               intoRedlines = true
@@ -205,7 +222,8 @@ Object.keys(data).forEach(component => {
   })
 })
 
+console.log(versions.length)
 fs.writeFileSync(
   'versions.json',
-  JSON.stringify(versions)
+  JSON.stringify(versions.slice(2, 3))
 )
