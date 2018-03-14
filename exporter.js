@@ -48,7 +48,19 @@ folders.forEach(folder => {
 
 // Write top level components file
 var components = Object.keys(data).map(key => {
-  return {component_name: key}
+  var representative = data[key][0]
+  return {
+    '@model': 'EntryModel',
+    attributes: {
+      sectionId: 3,
+      typeId: 3,
+      enabled: true,
+      slug: key
+    },
+    content: {
+      title: representative.title
+    }
+  }
 })
 fs.writeFileSync(
   'components.json',
