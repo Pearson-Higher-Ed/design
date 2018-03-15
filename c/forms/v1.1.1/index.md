@@ -2,19 +2,9 @@
 layout: component-yaml
 title: Forms
 section: Components
-version: 1.1.0
-status: deprecated
+version: 1.1.1
+status: active
 implemented: false
-people:
-  - role: Product Owner
-    name: Joe Macaluso
-    email: joe.macaluso@pearson.com
-  - role: Designer
-    name: Lynn Chang
-    email: lynn.chang@pearson.com
-  - role: Designer
-    name: Parker Malenke
-    email: parker.malenke@pearson.com
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1O7YP1xc9QtHbVB4sugeWG585RXJbNZIT81H5EBPH9ps/edit?usp=sharing
@@ -204,6 +194,9 @@ blocks:
 
 
 changelog:
+  - version: 1.1.1
+    changes: |
+      - ENHANCED: The accessibility of the error message for color blind users by adding an icon in front of the error message under the input field
   - version: 1.1.0
     changes: |
       - FIXED: Cleaned up documentation, redlines, feature links, etc.
