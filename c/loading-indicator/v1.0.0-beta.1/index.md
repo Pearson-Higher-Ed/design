@@ -18,7 +18,7 @@ dependencies:
   - name: Icons
     version: 1.2.0-beta.1
   - name: Colors
-    version: 2.0.0-beta.7
+    version: 2.0.0-beta.6
   - name: Typography
     version: 2.0.0-beta.9
 downloads:

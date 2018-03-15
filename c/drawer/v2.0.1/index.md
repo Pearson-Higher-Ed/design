@@ -76,7 +76,8 @@ blocks:
     contents:
       - type: wide image
         src: ./assets/detail.view.2x.png
-    features: Detail View
+    features:
+      - Detail View
 
   - type: two column
     text: |

@@ -21,8 +21,6 @@ downloads:
 dependencies:
   - name: Inputs
     version: 1.0.0
-  - name: Type-ahead
-    version:
 
 tagline: This component defines the standard visual style for the institution lookup.
 features:

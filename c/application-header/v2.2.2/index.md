@@ -29,7 +29,7 @@ dependencies:
   - name: Colors
     version: 3.0.1
   - name: Typography
-    version: 2.0.1
+    version: 2.0.0
   - name: Breakpoints
     version: 1.0.2
   - name: Icons

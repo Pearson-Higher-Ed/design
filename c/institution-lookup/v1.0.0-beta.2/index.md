@@ -23,12 +23,10 @@ downloads:
 dependencies:
   - name: Inputs
     version: 1.0.0
-  - name: Type-ahead
-    version: 
 
 tagline: This component defines the standard visual style for the institution lookup.
 features:
-  - Dropdown, scrollable listing of alphabetized institutions 
+  - Dropdown, scrollable listing of alphabetized institutions
   - Filtered by type-ahead functionality
   - Stateful, will show pre-selected values first
   - Sorted by geography, by ip. (e.g. OX in the U.S. may place Oxnard College high in the results, while in the U.K. it may place Oxford high.)
@@ -42,7 +40,7 @@ blocks:
   - type: two column
     text: |
       ###Anonymous and First Time
-      The user's initial (or an anonymous user's) view of the institution lookup will be a search field with the place holder text 'Institution or School'. This is also true if there are no values available, or none associated with an account. 
+      The user's initial (or an anonymous user's) view of the institution lookup will be a search field with the place holder text 'Institution or School'. This is also true if there are no values available, or none associated with an account.
 
       ###Affiliated Institution
       If the user is signed in, and there is at least one institution or school associated with the user's account, the control will then be displayed as a select box with the primary or only institution displayed as the default value.
