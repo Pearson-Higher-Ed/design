@@ -17,9 +17,7 @@ downloads:
   - name: UX Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1YjPJz6ZJgG6m4iJvtTFYuhIBGVuefHpzYx3H_lPU-vo/edit?usp=sharing
   - name: .sketch
-    link: ./assets/contextual-help.mockup.sketch
-  - name: .ai
-    link: ./assets/contextual-help.mockup.ai
+    link: ./assets/contextual-help.sketch
   - name: Authoring Guidelines
     https: https://docs.google.com/document/d/1tQVifP2ynJhHlg7R-Odk2Ej1qQxMs0SQ67fYzTlYjM8/edit?ts=578397b6
 

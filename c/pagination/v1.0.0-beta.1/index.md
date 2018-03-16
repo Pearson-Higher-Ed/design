@@ -19,7 +19,7 @@ downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1zMbyMPRZcVNGwx13Tkhb4bjhPQq-s3YtQxf7D0LHZyw/edit?usp=sharing
   - name: .sketch mockup
-    link: ./assets/pagination.sketch
+    link: ./assets/pagenation.sketch
 
 dependencies:
   - name: Typography

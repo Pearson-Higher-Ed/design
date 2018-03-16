@@ -21,7 +21,7 @@ downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/19r4uvPAZpmXRwT_krIr9MqHLYC-Vgjah2kPDi9PYaQA/edit?usp=sharing
   - name: Sketch
-    link: ./assets/buttons.2.0.0-beta.3.sketch
+    link: ./assets/buttons.mockup.sketch
 
 dependencies:
   - name: Colors

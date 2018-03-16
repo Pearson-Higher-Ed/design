@@ -22,7 +22,7 @@ downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/16--ARmN5JSXsDR20y-LnUo7wkLcZvIL0jq7DJZTR8wI/edit?usp=sharing
   - name: .sketch Mockups
-    link: ./assets/tab_nav_2.0.0-beta3.sketch
+    link: ./assets/tab_nav_.sketch
 
 dependencies:
   - name: Colors

@@ -13,7 +13,7 @@ downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1MFgXC2WVyNs-R6HiGu5pEcdvSlANmMNhf2DHWl6M49w/edit?usp=sharing
   - name: Sketch
-    link: ./assets/couch.mark.mockup.sketch
+    link: ./assets/coach.mark.mockup.sketch
 
 dependencies:
   - name: colors

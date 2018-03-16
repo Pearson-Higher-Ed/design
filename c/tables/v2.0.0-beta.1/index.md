@@ -34,8 +34,6 @@ dependencies:
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1Gf0yr4nsNXLBJIFEHFDVYeI6495Nrwa1caKgvaM-7Bs/edit?usp=sharing
-  - name: .sketch mockup
-    link: ./assets/tables.mockup.sketch
 
 blocks:
   - type: section

@@ -17,10 +17,8 @@ people:
     email: parker.malenke@pearson.com
 
 downloads:
-  - name: time_picker_1.1.sketch
-    link: ./assets/time_picker_1.1.sketch
-  - name: UXD Accessibility Checklist
-    link: https://docs.google.com/a/pearson.com/document/d/1siRLI8HrYohEylaF0SgRStw8bQZCe89OGMZaaOReE10/edit?usp=sharing
+  - name: time-picker-1.1.sketch
+    link: ./assets/time-picker-1.1.sketch
 
 dependencies:
   - name: Inputs

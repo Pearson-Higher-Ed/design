@@ -16,8 +16,6 @@ implementation:
 downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1mO6K4RV0GKQzrLp1PpHibzrsnIVq0ImdPZ1ZISlWZ1o/edit?usp=sharing
-  - name: .sketch mockup
-    link: ./assets/application-header.mockup.sketch
 
 dependencies:
   - name: Typography

@@ -11,9 +11,7 @@ downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1Uhkqt3gyK7cVDKkEeUcgXfO1GjYLwk5qp_2Gu8CcKhc/edit?usp=sharing
   - name: .sketch mockup
-    link: ./assets/application-header.mockup.sketch
-  - name: .ai mockup
-    link: ./assets/application-header.mockup.ai
+    link: ./assets/accordion.sketch
 
 tagline: |
   Presents information in a space-efficient format where user's can expand the specific content they are interested in.

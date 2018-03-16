@@ -17,9 +17,7 @@ downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1Uhkqt3gyK7cVDKkEeUcgXfO1GjYLwk5qp_2Gu8CcKhc/edit?usp=sharing
   - name: Sketch
-    link: ./assets/couch.mark.mockup.sketch
-  - name: Illustrator TBD
-    link:
+    link: ./assets/coach.mark.mockup.sketch
 
 tagline: |
   This component informs the user of a new feature, nudges a user to use a feature or guides the user through a multistep process.
