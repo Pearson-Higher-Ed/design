@@ -2,11 +2,15 @@
   "name": "design",
   "private": true,
   "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
     "fuzzysort": "^1.0.3",
+    "js-yaml": "^3.11.0",
     "pearson-compounds": "^0.13.0",
     "pearson-elements": "^1.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "remarkable": "^1.7.1",
+    "toposort": "^1.0.6",
     "underscore": "^1.8.3"
   }
 }
