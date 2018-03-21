@@ -1,10 +1,10 @@
 var fs = require('fs')
 var yaml = require('js-yaml')
-// var marked = require('marked')
 var Remarkable = require('remarkable')
 var md = new Remarkable('full')
 var marked = function(text) { return md.render(text) }
 var cheerio = require('cheerio')
+var toposort = require('toposort')
 
 function slugify(text)
 {
@@ -20,6 +20,7 @@ function slugify(text)
 // read in parent IDs
 var parentIDs = JSON.parse(fs.readFileSync('./component_ids.json'))
 var folderIDs = JSON.parse(fs.readFileSync('./folder_ids.json'))
+var sketchFolderIDs = JSON.parse(fs.readFileSync('./folder_ids_sketch.json'))
 
 // Create core data structure
 var data = {}
@@ -83,7 +84,7 @@ function textToRedlinesHTML(text) {
     })
     $(this).replaceWith($ownTable)
   })
-  return $.html()
+  return $('body').html()
 }
 
 function blockData(block, folder, redlines) {
@@ -98,6 +99,26 @@ function blockData(block, folder, redlines) {
             mem[`row${i+1}`] = {col1: f}
             return mem
           }, {})
+      },
+      related: {
+        illustrations: {
+          '@model': 'AssetModel',
+          matchBy: 'filename',
+          matchValue: block.contents && block.contents.map(item => {
+            if (
+              item.type.indexOf('image') !== -1 ||
+              item.type.indexOf('video') !== -1
+            ) {
+              return item.src.split('/').pop()
+            } else {
+              return null
+            }
+          }).filter(Boolean),
+          matchCriteria: {
+            source: 'component_assets',
+            folderId: folderIDs[folder]
+          }
+        }
       }
     }
   }
@@ -109,7 +130,11 @@ function blockData(block, folder, redlines) {
         type: 'twoColumn',
         enabled: 1,
         fields: {
-          text: marked(String(block.text || ""))
+          text: marked(String(block.text || "")),
+          features: block.features && block.features.reduce((mem, f, i) => {
+            mem[`row${i+1}`] = {col1: f}
+            return mem
+          }, {})
         }
       }
 
@@ -153,12 +178,12 @@ Object.keys(data).forEach(component => {
   data[component].forEach(version => {
 
     var a11y_checklist = ""
-    var sketch_file = ""
+    var sketch_file = version.sketch || ""
     version.downloads && version.downloads.forEach((doc) => {
       if (doc.name.indexOf('ccessib') !== -1) {
         a11y_checklist = doc.link
       }
-      if (doc.name.indexOf('.sketch')) {
+      if (doc.link && doc.link.indexOf('.sketch') !== -1) {
         sketch_file = doc.link
       }
     })
@@ -170,7 +195,9 @@ Object.keys(data).forEach(component => {
         sectionId: 3,
         typeId: 5,
         enabled: true,
-        parentId: parentIDs[component]
+        parentId: parentIDs[component],
+        // will be set by craft but adding here to build graph for topo sorting:
+        _slug: slugify(`${version.title}-v${version.version}`)
       },
       content: {
         fields: {
@@ -197,14 +224,37 @@ Object.keys(data).forEach(component => {
               return mem
             }, {}),
           blocks: version.blocks && version.blocks.reduce((mem, block, i) => {
-            if (block.name && block.name.toLowerCase() === 'redlines') {
-              intoRedlines = true
+            if (block.contents && block.contents[0].type == 'code') {
+              mem[`new${i+1}`] = {
+                type: 'codeSnippet',
+                enabled: 1,
+                fields: {
+                  snippetText: marked(String(block.text || "")),
+                  snippetCode: block.contents[0].content
+                }
+              }
+              return mem
             }
+
+            if (block.contents && block.contents[0].type == 'text') {
+              mem[`new${i+1}`] = {
+                type: 'text',
+                enabled: 1,
+                fields: {
+                  introText: marked(String(block.text || "")),
+                  mainText: marked(String(block.contents[0].content))
+                }
+              }
+            }
+
             mem[`new${i+1}`] = blockData(
               block,
               `${component}-v${version.version}`,
               intoRedlines
             )
+            if (block.name && block.name.toLowerCase() === 'redlines') {
+              intoRedlines = true
+            }
             return mem
           }, {})
         },
@@ -215,6 +265,15 @@ Object.keys(data).forEach(component => {
             matchValue: version.dependencies && version.dependencies.map(d => {
               return slugify(`${d.name}-v${d.version}`)
             })
+          },
+          sketchFile: {
+            '@model': 'AssetModel',
+            matchBy: 'filename',
+            matchValue: [sketch_file.split('/').pop()],
+            matchCriteria: {
+              source: 'sketchFiles',
+              folderId: sketchFolderIDs[`${component}-v${version.version}`]
+            }
           }
         }
       }
@@ -222,8 +281,19 @@ Object.keys(data).forEach(component => {
   })
 })
 
-console.log(versions.length)
-fs.writeFileSync(
-  'versions.json',
-  JSON.stringify(versions.slice(2, 3))
-)
+var nodes = []
+var edges = []
+var versionMap = {}
+versions.forEach(version => {
+  versionMap[version.attributes._slug] = version
+  nodes.push(version.attributes._slug)
+
+  if (version.content.related.dependencies.matchValue) {
+    version.content.related.dependencies.matchValue.forEach(dep => {
+      edges.push([version.attributes._slug, dep])
+    })
+  }
+})
+
+var sorted = toposort.array(nodes, edges).reverse().map(k => versionMap[k])
+fs.writeFileSync('versions.json', JSON.stringify(sorted.slice(0, 10)))

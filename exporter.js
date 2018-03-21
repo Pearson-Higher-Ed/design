@@ -134,3 +134,47 @@ Object.values(data).forEach(versions => {
     })
   })
 })
+
+
+// write sketch files to file
+var sketch = []
+Object.values(data).forEach(vs => {
+  vs.forEach(v => {
+    var sketchFile
+    var url = '/c/' +
+              v.slug +
+              '/v' +
+              v.version
+    if (v.sketch) {
+      sketchFile = v.sketch
+    } else {
+      v.downloads && v.downloads.forEach(d => {
+        if (d.link && d.link.indexOf('.sketch') !== -1) {
+          sketchFile = d.link
+        }
+      })
+    }
+
+    if (!sketchFile) return
+
+    var req = http.request({
+      hostname: 'uxframework.pearson.com',
+      path: encodeURI(`${url}/${sketchFile}`),
+      method: 'HEAD'
+    }, res => {
+      if (res.statusCode >= 300) {
+        console.log(`[${res.statusCode}] ${v.title} ${v.version} ${encodeURI(`${url}${sketchFile}`)}`)
+      }
+    })
+    req.end()
+
+    sketch.push({
+      filename: `http://uxframework.pearson.com${url}/${sketchFile}`,
+      folder: slugify(v.title) + '-v' + v.version
+    })
+  })
+})
+fs.writeFileSync(
+  'sketch.json',
+  JSON.stringify(sketch)
+)
