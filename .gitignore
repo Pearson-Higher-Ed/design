@@ -13,6 +13,8 @@ component_ids.json
 components.json
 folder_ids.json
 versions.json
+sketch.json
+folder_ids_sketch.json
 
 node_modules/*
 !node_modules/pearson-elements
