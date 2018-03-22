@@ -93,9 +93,6 @@ blocks:
       For simple binary confirmation feedback, this type of button is sufficient—an additional alert or message is unnecessary.  Use Digital Grass Green #038238 from the Conditional Palette in the Colors specification.
     contents:
       - type: narrow video
-        src: ./assets/confirmation.short.mov
-        caption: The loading indicator should appear for at least 500ms to provide the proper context.
-      - type: narrow video
         src: ./assets/confirmation.long.mov
         caption: If the action takes longer than 500ms then the loader is displayed until the action completes.
 
@@ -104,9 +101,6 @@ blocks:
       ### Error style
       If the action failed to complete, there is an error state for the button which should be paired with an explanatory alert.  Use Strawberry Red #DB0020 from the Conditional Palette in the Colors specification.
     contents:
-      - type: narrow video
-        src: ./assets/error.short.mov
-        caption: If the action results in an error that can be presented within the button context as well. Make sure to pair this with an explanatory alert.
 
   - type: section
     name: Link Style Buttons
