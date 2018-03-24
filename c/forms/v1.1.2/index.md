@@ -3,7 +3,7 @@ layout: component-yaml
 title: Forms
 section: Components
 version: 1.1.1
-status: deprecated
+status: active
 implemented: false
 downloads:
   - name: UXD Accessibility Checklist
