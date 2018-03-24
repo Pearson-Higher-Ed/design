@@ -196,7 +196,7 @@ blocks:
 changelog:
   - version: 1.1.2
     changes: |
-      - REPLACED: The small warning icon in front of the error message from font format to a Sketch file
+      - REPLACED: The warning icon from font format to sketch file
   - version: 1.1.1
     changes: |
       - ENHANCED: The accessibility of the error message for color blind users by adding an icon in front of the error message under the input field
