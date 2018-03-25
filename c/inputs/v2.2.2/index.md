@@ -315,7 +315,9 @@ blocks:
       : - Label is [Medium Gray](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--medium-gray)
         - Border is 1px solid [Strawberry Red](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--strawberry-red)
         - Error text is [Small UI Text](http://pearson-higher-ed.github.io/design/c/typography/v2.1.1/#typography--small-ui-text) in [Strawberry Red](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--strawberry-red)
-        - Error text is 3px below the field
+        - Error text is 3px below the field and 4px to the right of the warning icon
+        - Icon: warning-sm-18
+        - Icon is 1px below the input field
 
       Error (focused)
       : - [Strawberry Red](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--strawberry-red) shadow with 4px blur
@@ -376,8 +378,11 @@ blocks:
       Error
       : - Label is [Concrete](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--concrete)
         - Error text is [Strawberry Red](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--strawberry-red)
-        - Error text is 3px below the underline
+        - Error text is 3px below input field and 4px to the right of the warning icon
         - Underline is 1px solid [Strawberry Red](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--strawberry-red)
+        - Icon: warning-sm-18
+        - Icon is 1px below the input field
+
 
       Error (focused)
       : - Underline is 4px solid [Strawberry Red](http://pearson-higher-ed.github.io/design/c/colors/v3.0.1/#colors--strawberry-red)
