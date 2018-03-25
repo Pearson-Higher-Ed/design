@@ -2,8 +2,8 @@
 layout: component-yaml
 title: Inputs
 section: Components
-status: deprecated
-version: 2.2.1
+status: active
+version: 2.2.2
 rebranded: true
 implementation: https://github.com/Pearson-Higher-Ed/elements-sdk
 people:
@@ -575,6 +575,10 @@ blocks:
       - Phone Number Input
 
 changelog:
+  - version: 2.2.2
+    changes: |
+      - REPLACED: The warning icon from font format to sketch file
+      - SPECIFIED: Redline for error message and the warning icon
   - version: 2.2.1
     changes: |
       - ENHANCED: The accessibility of the error message for color blind users by adding an icon in front of the error message under the input field
