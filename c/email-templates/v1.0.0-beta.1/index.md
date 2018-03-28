@@ -18,7 +18,7 @@ people:
 implementation: https://bitbucket.pearson.com/login?next=/projects/PROTO/repos/idam-email-templates/browse/README.md
 downloads:
   - name: Sketch
-    link: ./assets/Email Template_5.sketch
+    link: ./assets/Email-Template_5.sketch
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/document/d/1eTnQ9XujqAWiv_YU4Fct1e1XXSmyA-ikNSHzJQ7hnzc/edit
 
