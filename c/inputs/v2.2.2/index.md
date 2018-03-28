@@ -39,7 +39,7 @@ downloads:
   - name: UXD Accessibility Checklist
     link: https://docs.google.com/a/pearson.com/document/d/1AI3oAtEYhGvIH0YkbbU1FJXeO30u2jHd5M80RvqqGiE/edit?usp=sharing
   - name: .sketch mockup
-    link: ./assets/inputs 2.sketch
+    link: ./assets/inputs.sketch
 
 blocks:
 
