@@ -1,5 +1,5 @@
 ---
-title: UI Kit v1.8.0
+title: UI Kit v1.9.0
 layout: article
 section: use
 ---
@@ -7,14 +7,15 @@ section: use
 <!-- HEY, DON'T FORGET UPDATE <includes/uikit-download.html> AND THE HOMEPAGE!!!! -->
 
 <div class="uikit-buttons">
-  {% include uikit-download.html type='cta' btn_size='xlarge' %} <a class="pe-btn--btn_xlarge" href="https://sketch.cloud/s/L49kQ/all/page-1/ui-kit" target="_blank">Preview</a>
+  {% include uikit-download.html type='cta' btn_size='xlarge' %} <a class="pe-btn--btn_xlarge" href="https://sketch.cloud/s/1OZWp/all/page-1/ui-kit" target="_blank">Preview</a>
 </div>
 
 
 
-Feb 23, 2018
+Apr 24, 2018
 
- * Icons: Added "adobe-acrobat", "comment", "download", "upload", "file-excel", "file-pdf", "file-powerpoint", "file-word", "shopping-cart"
+ * Icons: Added "paperclip", "bold", "italic", "number-list", "warning-sm", "link-out" Icons
+ * Input: Enhanced accessibility by adding a warning icon in front of the error messages
 
 
 This Sketch file contains all the components from the UX Framework to help you start designing. It is updated frequently. If you see any discrepancies between the UI Kit and the website, please [let us know so we can fix it]({{site.baseurl}}/contact).
@@ -29,6 +30,11 @@ The components in this file is currently outdated. We are working on getting it 
 {:style="margin-top: 40px;"}
 
 ## Download previous versions
+
+### [v1.8.0](./files/Pearson UI Kit 1.8.0.sketch)
+Feb 23, 2018
+
+* Icons: Added “adobe-acrobat”, “comment”, “download”, “upload”, “file-excel”, “file-pdf”, “file-powerpoint”, “file-word”, “shopping-cart”
 
 ### [v1.7.0](./files/Pearson UI Kit 1.7.0.sketch)
 Jan 21, 2018
