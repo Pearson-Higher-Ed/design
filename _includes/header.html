@@ -4,12 +4,15 @@
 	<title>{{ page.title }} - {{ site.name }}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+<link rel="canonical" href="https://uxframework.pearson.com{{ page.url }}">
+	<script type="text/javascript">
+		location="https://uxframework.pearson.com{{ page.url }}"
+	</script>
+
 	<link rel="shortcut icon" href="favicon.ico" />
 
 	<link href="{{ site.baseurl }}/main.css" rel="stylesheet" />
-	<script type="text/javascript">
-		console.log('{{ site.baseurl }}', '{{ page.url }}')
-	</script>
+
 	<script src="{{site.baseurl}}/node_modules/react/dist/react.min.js"></script>
 	<script src="{{site.baseurl}}/node_modules/react-dom/dist/react-dom.min.js"></script>
 	<script src="{{site.baseurl}}/node_modules/underscore/underscore-min.js" charset="utf-8"></script>
